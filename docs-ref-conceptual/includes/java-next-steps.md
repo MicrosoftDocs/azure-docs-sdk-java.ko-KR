@@ -1,0 +1,1 @@
+Azure에서 Java 앱을 만들고 배포하는 방법에 대한 자세한 내용은 [Java 개발자 센터](https://docs.microsoft.com/java/api)를 참조하세요.

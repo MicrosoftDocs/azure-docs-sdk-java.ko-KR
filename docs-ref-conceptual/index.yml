@@ -1,0 +1,81 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Java 개발자용 Azure
+metadata:
+  document_id: 1152a217-eb0e-45e9-b01b-bd27080d615e
+  title: 'Java 개발자용 Azure - 자습서, API, 참조'
+  description: Java 개발자를 위한 훌륭한 자습서 및 도구를 찾아볼 수 있는 아래 리소스를 사용하여 Azure에서 앱 개발을 시작합니다.
+  keywords: 'Azure, Java, SDK, API, Maven, Spring'
+  author: rloutlaw
+  ms.author: routlaw
+  manager: douge
+  ms.date: 07/13/2017
+  ms.topic: article
+  ms.prod: azure
+  ms.technology: azure
+  ms.devlang: java
+  ms.service: multiple
+sections:
+  - items:
+      - type: markdown
+        text: |
+          Java 개발자를 위한 훌륭한 자습서 및 도구를 찾아볼 수 있는 아래 리소스를 사용하여 Azure에서 앱 개발을 시작합니다.
+  - items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 2
+        items:
+          - href: 'https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-java'
+            html: <p>Azure에 첫 번째 웹앱 배포</p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
+            title: 시작
+          - href: 'https://azure.microsoft.com/resources/samples/?platform=java&view=azure-java'
+            html: <p>Java를 사용하는 Azure 샘플 코드</p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_code-samples.svg'
+            title: 코드 샘플
+          - href: java-azure-tools.md
+            html: <p>개발자 도구</p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_download-install.svg'
+            title: SDK &amp; 도구
+          - href: java-sdk-azure-install.md
+            html: <p>Java용 Azure 라이브러리</p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_api-reference.svg'
+            title: API 참조
+  - title: 5분 빠른 시작
+    items:
+      - type: paragraph
+        text: Azure 서비스를 사용하여 Java 앱을 빌드하는 방법을 알아봅니다.
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 2
+        items:
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/app-service-web.svg'
+            title: Azure에 첫 번째 웹앱 배포
+            href: 'https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-java'
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/MySQL.svg'
+            title: Azure Database for MySQL에 연결
+            href: 'https://docs.microsoft.com/azure/mysql/connect-java'
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/CosmosDB_rgb_ui_lighttheme.svg'
+            title: Cosmos DB로 웹앱 빌드
+            href: 'https://docs.microsoft.com/azure/cosmos-db/create-documentdb-java'
+          - image:
+              src: 'https://docs.microsoft.com/java/docs-ref-conceptual/media/jenkins_logo.svg'
+            title: Jenkins®로 App Service에 CI/CD
+            href: 'https://docs.microsoft.com/azure/jenkins/java-deploy-webapp-tutorial'
+  - title: 샘플
+    items:
+      - type: list
+        style: unordered
+        items:
+          - html: '<a href="https://github.com/Azure-Samples/mysql-spring-boot-todo">Spring Boot 및 MySQL을 사용하여 웹앱 만들기(영문)</a>'
+          - html: '<a href="https://azure.microsoft.com/resources/samples/storage-blob-java-getting-started/">Java를 사용하여 Azure Blob Storage 시작(영문)</a>'
+          - html: '<a href="https://azure.microsoft.com/resources/samples/azure-cosmos-db-mongodb-java-getting-started/">MongoDB API를 사용하여 Azure Cosmos DB에 연결(영문)</a>'

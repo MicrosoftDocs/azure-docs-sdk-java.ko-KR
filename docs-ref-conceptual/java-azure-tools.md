@@ -1,0 +1,53 @@
+---
+title: "Azure Java 개발자용 도구 | Microsoft Docs"
+description: "Azure에서 작업하는 Java 개발자를 위한 IDE 통합, 에뮬레이터, 리소스 탐색기 및 명령줄 인터페이스입니다."
+author: rloutlaw
+manager: douge
+ms.assetid: b55923b7-d60a-460d-b77c-af5fac67f1cc
+ms.devlang: java
+ms.topic: article
+ms.service: Azure
+ms.technology: Azure
+ms.date: 4/10/2017
+ms.author: routlaw;asirveda
+ms.openlocfilehash: 01fe31f2c59810f972875331d49ce5130755c8f2
+ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/28/2017
+---
+# <a name="azure-tools-for-java-developers"></a>Java 개발자용 Azure 도구
+
+## <a name="client-and-management-libraries"></a>클라이언트 및 관리 라이브러리
+
+Java용 Azure 라이브러리를 사용하여 서비스에 연결하고 응용 프로그램에서 Azure 리소스를 관리합니다. 이 종속성을 *pom.xml* 프로젝트에 추가하여 관리 라이브러리를 Maven 프로젝트로 가져옵니다.
+
+```XML
+<dependency>
+    <groupId>com.microsoft.azure</groupId>
+    <artifactId>azure</artifactId>
+    <version>1.1.2</version>
+</dependency>
+```
+
+Java용 Azure 라이브러리와 함께 [라이브러리의 전체 목록](java-sdk-azure-install.md) 및 [시작](java-sdk-azure-get-started.md)을 봅니다.
+
+## <a name="eclipse-and-intellij-plugins"></a>Eclipse 및 IntelliJ 플러그 인
+
+[Eclipse](https://docs.microsoft.com/azure/azure-toolkit-for-eclipse) 및 [IntelliJ](https://docs.microsoft.com/azure/azure-toolkit-for-intellij)용 Azure 도구 키트를 사용하여 Azure 리소스를 관리하고 IDE에서 앱을 배포합니다.   
+
+![Azure 탐색기를 보여 주는 IntelliJ 도구 키트](media/intelliJ-azure-explorer.png)
+
+[Eclipse용 Azure 도구 키트 시작](https://docs.microsoft.com/azure/app-service-web/app-service-web-eclipse-create-hello-world-web-app) | [IntelliJ용 Azure 도구 키트 시작](https://docs.microsoft.com/azure/app-service-web/app-service-web-intellij-create-hello-world-web-app) 
+
+## <a name="azure-cli-20"></a>Azure CLI 2.0
+
+Azure 2.0 CLI는 Azure 리소스를 관리하는 명령줄 환경을 제공합니다. [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview)을 실행하는 브라우저에서 사용하거나 macOS, Linux 및 Windows에서 [설치](https://docs.microsoft.com/cli/azure/install-azure-cli)하고 명령줄에서 실행할 수 있습니다.
+
+[Azure CLI 2.0 시작](https://docs.microsoft.com/cli/azure/get-started-with-azure-cli)
+
+## <a name="azure-storage-explorer"></a>Azure Storage 탐색기 
+
+바탕 화면에서 Azure 저장소 계정, 컨테이너 및 Blob/파일을 관리합니다. Azure Storage 탐색기는 현재 미리 보기로 있으며 Windows, macOS 및 Linux에서 작동합니다.
+
+[Azure 저장소 탐색기 시작](https://docs.microsoft.com/azure/vs-azure-tools-storage-manage-with-storage-explorer)
