@@ -10,11 +10,11 @@ ms.service: Azure
 ms.technology: Azure
 ms.date: 4/10/2017
 ms.author: routlaw;asirveda
-ms.openlocfilehash: 01fe31f2c59810f972875331d49ce5130755c8f2
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: ce0b003cc7c48c8690f4236547ddec36e6ea9d53
+ms.sourcegitcommit: ae39830d5a54fedceac78d8df1718e77741e03fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="azure-tools-for-java-developers"></a>Java 개발자용 Azure 도구
 
@@ -26,7 +26,7 @@ Java용 Azure 라이브러리를 사용하여 서비스에 연결하고 응용 �
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure</artifactId>
-    <version>1.1.2</version>
+    <version>1.2.1</version>
 </dependency>
 ```
 
@@ -34,7 +34,7 @@ Java용 Azure 라이브러리와 함께 [라이브러리의 전체 목록](java-
 
 ## <a name="eclipse-and-intellij-plugins"></a>Eclipse 및 IntelliJ 플러그 인
 
-[Eclipse](https://docs.microsoft.com/azure/azure-toolkit-for-eclipse) 및 [IntelliJ](https://docs.microsoft.com/azure/azure-toolkit-for-intellij)용 Azure 도구 키트를 사용하여 Azure 리소스를 관리하고 IDE에서 앱을 배포합니다.   
+[Eclipse](eclipse/azure-toolkit-for-eclipse.md) 및 [IntelliJ](intellij/azure-toolkit-for-intellij.md)용 Azure 도구 키트를 사용하여 Azure 리소스를 관리하고 IDE에서 앱을 배포합니다.   
 
 ![Azure 탐색기를 보여 주는 IntelliJ 도구 키트](media/intelliJ-azure-explorer.png)
 
