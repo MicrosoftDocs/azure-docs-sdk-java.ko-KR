@@ -18,6 +18,16 @@
       href: java-sdk-azure-get-started.md
     - name: 도구
       href: java-azure-tools.md
+      items:
+        - name: IntelliJ
+          href: intellij/azure-toolkit-for-intellij.md
+        - name: '(예: Eclipse'
+          href: eclipse/azure-toolkit-for-eclipse.md
+        - name: Maven 플러그 인
+          href: 'https://github.com/Microsoft/azure-maven-plugins'
+          items:
+            - name: Azure 웹앱
+              href: 'https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin'
     - name: Java 자습서
       items:
         - name: Spring Boot + MySQL
