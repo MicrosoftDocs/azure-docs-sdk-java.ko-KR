@@ -1,0 +1,30 @@
+- name: IntelliJ용 Azure 도구 키트
+  href: azure-toolkit-for-intellij.md
+  items:
+    - name: 설치
+      href: azure-toolkit-for-intellij-installation.md
+    - name: 시작
+      href: /azure/app-service-web/app-service-web-intellij-create-hello-world-web-app
+      maintainContext: true
+    - name: 자습서
+      items:
+        - name: Linux 컨테이너에서 Hello World 웹앱 배포
+          href: azure-toolkit-for-intellij-hello-world-web-app-linux.md
+        - name: Azure VM에 컨테이너 배포
+          href: azure-toolkit-for-intellij-publish-as-docker-container.md
+        - name: Azure App Service에 웹앱 배포
+          href: azure-toolkit-for-intellij-publish-spring-boot-docker-app.md
+    - name: 사용 방법
+      items:
+        - name: 인증 설정
+          href: azure-toolkit-for-intellij-sign-in-instructions.md
+        - name: Azure 리소스 관리
+          items:
+            - name: 가상 컴퓨터
+              href: azure-toolkit-for-intellij-managing-virtual-machines-using-azure-explorer.md
+            - name: 저장소 계정
+              href: azure-toolkit-for-intellij-managing-storage-accounts-using-azure-explorer.md
+            - name: Azure Redis 캐시(영문)
+              href: azure-toolkit-for-intellij-managing-redis-caches-using-azure-explorer.md
+    - name: 릴리스 정보
+      href: azure-toolkit-for-intellij-whats-new.md
