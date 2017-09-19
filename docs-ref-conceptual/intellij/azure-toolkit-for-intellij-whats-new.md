@@ -73,7 +73,7 @@ IntelliJ용 Azure 도구 키트 - 2016년 4월 릴리스에는 다음과 같은 
 
 <!-- URL List -->
 
-[Eclipse용 Azure 도구 키트]: ../eclipse/azure-toolkit-for-eclipse.md
+[Eclipse용 Azure 도구 키트 설치]: ../eclipse/azure-toolkit-for-eclipse.md
 
 [IntelliJ용 Azure 도구 키트에 대한 Azure 로그인 지침]: ./azure-toolkit-for-intellij-sign-in-instructions.md
 [IntelliJ용 Azure 도구 키트를 사용하여 웹앱을 Docker 컨테이너로 게시하는 방법]: ./azure-toolkit-for-intellij-publish-as-docker-container.md

@@ -52,7 +52,7 @@ mvn package
 mvn tomcat7:run-war
 ```
 
-웹 브라우저를 열고 http://localhost:8080으로 이동하여 앱을 미리 봅니다.
+웹 브라우저를 열고 http://localhost:8080 으로 이동하여 앱을 미리 봅니다.
 
   ![Java 샘플 앱의 Hello World 출력](media/maven-quickstart/java-app-hello-world-output.png)
 
