@@ -117,7 +117,7 @@ Azure Storage 계정, 크기 및 가격 책정에 대한 자세한 내용은 다
 [Azure 저장소 계정 정보]: /azure/storage/storage-create-storage-account
 [Azure Storage 복제]: /azure/storage/storage-redundancy
 [Azure Storage 확장성 및 성능 목표]: /azure/storage/storage-scalability-targets
-[컨테이너, BLOB, 메타데이터 이름 지정 및 참조]: http://go.microsoft.com/fwlink/?LinkId=255555
+[컨테이너, BLOB 및 메타데이터 이름 지정 및 참조]: http://go.microsoft.com/fwlink/?LinkId=255555
 
 [Azure의 Windows 저장소 계정 크기]: /azure/virtual-machines/virtual-machines-windows-sizes
 [Azure의 Linux 저장소 계정 크기]: /azure/virtual-machines/virtual-machines-linux-sizes
