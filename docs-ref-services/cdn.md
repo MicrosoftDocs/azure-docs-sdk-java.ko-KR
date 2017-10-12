@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: cdn
-ms.openlocfilehash: db9fb8a9a8f9f21061f1e16b77e3145d1fb1b119
-ms.sourcegitcommit: ae39830d5a54fedceac78d8df1718e77741e03fa
+ms.openlocfilehash: 91df958d2d78fb4fd959c228b28c6ae003716be6
+ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="azure-cdn-libraries-for-java"></a>Java용 Azure CDN 라이브러리
 
@@ -35,7 +35,7 @@ Azure CDN을 시작하려면 [Azure CDN 시작](/azure/cdn/cdn-create-new-endpoi
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-mgmt-cdn</artifactId>
-    <version>1.2.1</version>
+    <version>1.3.0</version>
 </dependency>
 ```   
 
