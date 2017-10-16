@@ -53,12 +53,16 @@ sections:
       - type: list
         style: cards
         className: cardsM
-        columns: 2
+        columns: 3
         items:
           - image:
               src: 'https://docs.microsoft.com/azure/media/index/app-service-web.svg'
             title: Azure에 첫 번째 웹앱 배포
             href: 'https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-java'
+          - image:
+              src: 'https://docs.microsoft.com/en-us/azure/media/index/azurefunctions.svg'
+            title: Java 서버를 사용하지 않는 함수 만들기
+            href: 'https://docs.microsoft.com/azure/azure-functions/functions-create-first-java-maven'
           - image:
               src: 'https://docs.microsoft.com/azure/media/index/MySQL.svg'
             title: Azure Database for MySQL에 연결
