@@ -12,13 +12,13 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 09/11/2017
+ms.date: 10/19/2017
 ms.author: robmcm
-ms.openlocfilehash: 44d2ade8a0900b60222f06dfb9f93c1df17228c8
-ms.sourcegitcommit: 256044d7cbce16dcb8dc4e195d0f63c10cb44d4e
+ms.openlocfilehash: cb79f4c10cdaf5597106590b7aaf36dec266391f
+ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-intellij"></a>IntelliJ용 Azure Explorer를 사용하여 저장소 계정 관리
 
@@ -68,7 +68,7 @@ Azure Explorer를 사용하여 저장소 컨테이너를 만들려면 다음을 
 
    ![Blob 컨테이너 만들기 명령][CC01]
 
-2. **Blob 컨테이너 만들기** 대화 상자에서 컨테이너의 이름을 지정하고 **확인**을 클릭합니다. 저장소 컨테이너 이름 지정에 대한 자세한 내용은 [컨테이너, BLOB, 메타데이터 이름 지정 및 참조]를 참조하세요.
+2. **Blob 컨테이너 만들기** 대화 상자에서 컨테이너의 이름을 지정하고 **확인**을 클릭합니다. 저장소 컨테이너 이름 지정에 대한 자세한 내용은 [컨테이너, BLOB 및 메타데이터 이름 지정 및 참조]를 참조하세요.
 
    ![저장소 컨테이너 만들기 대화 상자][CC02]
 
@@ -118,7 +118,7 @@ Azure Storage 계정, 크기 및 가격 책정에 대한 자세한 내용은 다
 [Azure 저장소 계정 정보]: /azure/storage/storage-create-storage-account
 [Azure Storage 복제]: /azure/storage/storage-redundancy
 [Azure Storage 확장성 및 성능 목표]: /azure/storage/storage-scalability-targets
-[컨테이너, BLOB, 메타데이터 이름 지정 및 참조]: http://go.microsoft.com/fwlink/?LinkId=255555
+[컨테이너, BLOB 및 메타데이터 이름 지정 및 참조]: http://go.microsoft.com/fwlink/?LinkId=255555
 
 [Azure의 Windows 저장소 계정 크기]: /azure/virtual-machines/virtual-machines-windows-sizes
 [Azure의 Linux 저장소 계정 크기]: /azure/virtual-machines/virtual-machines-linux-sizes
