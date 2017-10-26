@@ -4,7 +4,7 @@
     - name: 설치
       href: azure-toolkit-for-intellij-installation.md
     - name: 시작
-      href: /azure/app-service-web/app-service-web-intellij-create-hello-world-web-app
+      href: azure-toolkit-for-intellij-create-hello-world-web-app.md
       maintainContext: true
     - name: 자습서
       items:
@@ -27,4 +27,4 @@
             - name: Azure Redis 캐시(영문)
               href: azure-toolkit-for-intellij-managing-redis-caches-using-azure-explorer.md
     - name: 릴리스 정보
-      href: azure-toolkit-for-intellij-whats-new.md
+      href: 'https://github.com/Microsoft/azure-tools-for-java/releases'
