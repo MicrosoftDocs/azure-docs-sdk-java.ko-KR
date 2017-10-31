@@ -14,16 +14,21 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 09/11/2017
 ms.author: robmcm;asirveda;martinsawicki
-ms.openlocfilehash: 31af7e6494f978f341e1f99a30117c57ef30a05b
-ms.sourcegitcommit: 256044d7cbce16dcb8dc4e195d0f63c10cb44d4e
+ms.openlocfilehash: ed21f4308b2f6e45f022608a2ba32fe7db6922d3
+ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="whats-new-in-the-azure-toolkit-for-eclipse"></a>Eclipse용 Azure 도구 키트의 새로운 기능
 
 ## <a name="azure-toolkit-for-eclipse-releases"></a>Eclipse 릴리스용 Azure 도구 키트
 이 문서는 다양한 릴리스 정보 및 Eclipse용 Azure 도구 키트에 대한 최신 업데이트를 포함합니다.
+
+> [!NOTE]
+> 최신 정보는 다음 웹 페이지를 참조하세요.
+> 
+> <https://github.com/Microsoft/azure-tools-for-java/releases>
 
 > [!NOTE]
 > IntelliJ IDE용 Azure 도구 키트도 있습니다. 자세한 내용은 [IntelliJ용 Azure 도구 키트]를 참조하세요.
@@ -37,7 +42,7 @@ Eclipse용 Azure 도구 키트 - 2017년 4월 릴리스에는 다음과 같은 �
 * **Docker 컨테이너를 사용한 게시**: 이제 Eclipse용 Azure 도구 키트를 사용하여 웹 응용 프로그램을 Docker 컨테이너로 게시할 수 있습니다. 자세한 내용은 [Eclipse용 Azure 도구 키트를 사용하여 웹앱을 Docker 컨테이너로 게시하는 방법]을 참조하세요.
 * **저장소 계정 관리**: Eclipse용 Azure 도구 키트에서는 이제 Azure 탐색기 보기에서 저장소 계정을 관리하도록 지원합니다. 자세한 내용은 [Eclipse용 Azure 탐색기를 사용하여 저장소 계정 관리]를 참조하세요.
 * **가상 컴퓨터 관리**: Eclipse용 Azure 도구 키트에서는 이제 Azure 탐색기 보기에서 가상 컴퓨터를 관리하도록 지원합니다. 자세한 내용은 [Eclipse용 Azure 탐색기를 사용하여 Virtual Machines 관리]를 참조하세요.
-* **원격 디버깅 지원 제거**. Azure App Service의 Java 웹앱에 대한 원격 디버깅 기능이 Eclipse용 Azure 도구 키트에서 제거되었습니다. 도구 키트 사용 시 발생하는 몇 가지 문제를 해결하기 위해 제거가 필요했습니다 .
+* **원격 디버깅 지원 제거**. Azure App Service의 Java 웹앱에 대한 원격 디버깅 기능이 Eclipse용 Azure 도구 키트에서 제거되었습니다. 도구 키트 사용 시 발생하는 몇 가지 문제를 해결하기 위해 제거가 필요했습니다.
 
 ### <a name="august-26-2016"></a>2016년 8월 26일
 Eclipse용 Azure 도구 키트 - 2016년 8월 릴리스에는 다음과 같은 향상된 기능이 포함되어 있습니다.

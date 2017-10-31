@@ -12,18 +12,23 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 09/11/2017
+ms.date: 10/19/2017
 ms.author: robmcm;asirveda;martinsawicki
-ms.openlocfilehash: 861ceb148976faff1f40055094c463171bdfb4b0
-ms.sourcegitcommit: 256044d7cbce16dcb8dc4e195d0f63c10cb44d4e
+ms.openlocfilehash: 3e3d22cc5720346e31a096adfd935b2712aac4e9
+ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="whats-new-in-the-azure-toolkit-for-intellij"></a>IntelliJ용 Azure 도구 키트의 새로운 기능
 
 ## <a name="azure-toolkit-for-intellij-releases"></a>IntelliJ용 Azure 도구 키트 릴리스
 이 문서는 다양한 릴리스 정보 및 IntelliJ용 Azure 도구 키트에 대한 최신 업데이트를 포함합니다.
+
+> [!NOTE]
+> 최신 정보는 다음 웹 페이지를 참조하세요.
+> 
+> <https://github.com/Microsoft/azure-tools-for-java/releases>
 
 > [!NOTE]
 > Azure Toolkit for Eclipse IDE이기도합니다. 자세한 내용은 [Eclipse용 Azure 도구 키트 설치]를 참조하세요.
@@ -36,7 +41,7 @@ IntelliJ용 Azure 도구 키트 - 2017년 4월 릴리스에는 다음과 같은 
 * **향상된 Azure 로그인 환경**: IntelliJ용 Azure 도구 키트에서는 이제 Azure 계정에 로그인하는 두 가지 방법인 *대화형* 및 *자동*을 지원합니다. 자세한 내용은 [IntelliJ용 Azure 도구 키트에 대한 Azure 로그인 지침]을 참조하세요.
 * **Docker 컨테이너를 사용한 게시**: 이제 IntelliJ용 Azure 도구 키트를 사용하여 웹 응용 프로그램을 Docker 컨테이너로 게시할 수 있습니다. 자세한 내용은 [IntelliJ용 Azure 도구 키트를 사용하여 웹앱을 Docker 컨테이너로 게시하는 방법]을 참조하세요.
 * **저장소 계정 관리**: IntelliJ용 Azure 도구 키트에서는 이제 Azure 탐색기 보기에서 저장소 계정을 관리하도록 지원합니다. 자세한 내용은 [IntelliJ용 Azure 탐색기를 사용하여 저장소 계정 관리]를 참조하세요.
-* **관리:** IntelliJ용 Azure 도구 키트에서는 이제 Azure 탐색기 보기에서 가상 컴퓨터를 관리하도록 지원합니다. 자세한 내용은 [IntelliJ용 Azure 탐색기를 사용하여 Virtual Machines 관리]를 참조하세요.
+*  **관리**: IntelliJ용 Azure 도구 키트에서는 이제 Azure 탐색기 보기에서 가상 컴퓨터를 관리하도록 지원합니다. 자세한 내용은 [IntelliJ용 Azure 탐색기를 사용하여 Virtual Machines 관리]를 참조하세요.
 * **원격 디버깅 지원 제거**. Azure App Service의 Java 웹앱에 대한 원격 디버깅 기능이 IntelliJ용 Azure 도구 키트에서 제거되었습니다. 도구 키트 사용 시 발생하는 몇 가지 문제를 해결하기 위해 제거가 필요했습니다.
 
 ### <a name="august-26-2016"></a>2016년 8월 26일
