@@ -41,7 +41,7 @@ IntelliJ용 Azure 도구 키트 - 2017년 4월 릴리스에는 다음과 같은 
 * **향상된 Azure 로그인 환경**: IntelliJ용 Azure 도구 키트에서는 이제 Azure 계정에 로그인하는 두 가지 방법인 *대화형* 및 *자동*을 지원합니다. 자세한 내용은 [IntelliJ용 Azure 도구 키트에 대한 Azure 로그인 지침]을 참조하세요.
 * **Docker 컨테이너를 사용한 게시**: 이제 IntelliJ용 Azure 도구 키트를 사용하여 웹 응용 프로그램을 Docker 컨테이너로 게시할 수 있습니다. 자세한 내용은 [IntelliJ용 Azure 도구 키트를 사용하여 웹앱을 Docker 컨테이너로 게시하는 방법]을 참조하세요.
 * **저장소 계정 관리**: IntelliJ용 Azure 도구 키트에서는 이제 Azure 탐색기 보기에서 저장소 계정을 관리하도록 지원합니다. 자세한 내용은 [IntelliJ용 Azure 탐색기를 사용하여 저장소 계정 관리]를 참조하세요.
-*  **관리**: IntelliJ용 Azure 도구 키트에서는 이제 Azure 탐색기 보기에서 가상 컴퓨터를 관리하도록 지원합니다. 자세한 내용은 [IntelliJ용 Azure 탐색기를 사용하여 Virtual Machines 관리]를 참조하세요.
+* **관리**: IntelliJ용 Azure 도구 키트에서는 이제 Azure 탐색기 보기에서 가상 컴퓨터를 관리하도록 지원합니다. 자세한 내용은 [IntelliJ용 Azure 탐색기를 사용하여 Virtual Machines 관리]를 참조하세요.
 * **원격 디버깅 지원 제거**. Azure App Service의 Java 웹앱에 대한 원격 디버깅 기능이 IntelliJ용 Azure 도구 키트에서 제거되었습니다. 도구 키트 사용 시 발생하는 몇 가지 문제를 해결하기 위해 제거가 필요했습니다.
 
 ### <a name="august-26-2016"></a>2016년 8월 26일
