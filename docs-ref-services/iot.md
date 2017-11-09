@@ -11,15 +11,15 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: iot-hub
-ms.openlocfilehash: b386612741e222fcaeb7b6c38753d0cb7d616239
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: c1af3dae0fe37eb4919db02da87beed193c547a7
+ms.sourcegitcommit: acc83bb537d77568b2a5427479d6354d6ae30885
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 11/03/2017
 ---
 # <a name="azure-iot-libraries-for-java"></a>Java용 Azure IoT 라이브러리
 
-[Azure IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-what-is-iot-hub)를 사용하여 IoT(사물 인터넷) 자산을 연결, 모니터링 및 제어합니다.
+[Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub/iot-hub-what-is-iot-hub)를 사용하여 IoT(사물 인터넷) 자산을 연결, 모니터링 및 제어합니다.
 
 Azure IoT Hub를 시작하려면 [Java를 사용하여 IoT Hub에 장치 연결](/azure/iot-hub/iot-hub-java-java-getstarted)을 참조하세요.
 
