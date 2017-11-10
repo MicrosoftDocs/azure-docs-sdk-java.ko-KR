@@ -4,12 +4,12 @@ title: Java 개발자용 Azure
 metadata:
   document_id: 1152a217-eb0e-45e9-b01b-bd27080d615e
   title: 'Java 개발자용 Azure - 자습서, API, 참조'
-  description: Java 개발자를 위한 훌륭한 자습서 및 도구를 찾아볼 수 있는 아래 리소스를 사용하여 Azure에서 앱 개발을 시작합니다.
+  description: Java 개발자를 위한 이러한 유용한 자습서 및 도구를 사용하여 클라우드에서 앱을 개발하기 시작합니다.
   keywords: 'Azure, Java, SDK, API, Maven, Spring'
   author: rloutlaw
   ms.author: routlaw
   manager: douge
-  ms.date: 07/13/2017
+  ms.date: 11/02/2017
   ms.topic: article
   ms.prod: azure
   ms.technology: azure
@@ -19,14 +19,14 @@ sections:
   - items:
       - type: markdown
         text: |
-          Java 개발자를 위한 훌륭한 자습서 및 도구를 찾아볼 수 있는 아래 리소스를 사용하여 Azure에서 앱 개발을 시작합니다.
+          이러한 자습서, 도구 및 라이브러리를 사용하여 클라우드에서 Java 앱을 개발하기 시작합니다.
   - items:
       - type: list
         style: cards
         className: cardsM
         columns: 2
         items:
-          - href: 'https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-java'
+          - href: 'https://docs.microsoft.com/azure/app-service/app-service-web-deploy-spring-boot-app-with-maven-plugin'
             html: <p>Azure에 첫 번째 웹앱 배포</p>
             image:
               src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
@@ -58,7 +58,7 @@ sections:
           - image:
               src: 'https://docs.microsoft.com/azure/media/index/app-service-web.svg'
             title: Azure에 첫 번째 웹앱 배포
-            href: 'https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-java'
+            href: 'https://docs.microsoft.com/azure/app-service/app-service-web-deploy-spring-boot-app-with-maven-plugin'
           - image:
               src: 'https://docs.microsoft.com/en-us/azure/media/index/azurefunctions.svg'
             title: Java 서버를 사용하지 않는 함수 만들기
@@ -77,7 +77,7 @@ sections:
             href: 'https://docs.microsoft.com/azure/jenkins/java-deploy-webapp-tutorial'
   - title: 샘플
     items:
-      - type: list
+      - type: listgit check
         style: unordered
         items:
           - html: '<a href="https://github.com/Azure-Samples/mysql-spring-boot-todo">Spring Boot 및 MySQL을 사용하여 웹앱 만들기(영문)</a>'
