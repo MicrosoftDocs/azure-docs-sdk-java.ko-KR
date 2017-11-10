@@ -10,17 +10,17 @@ ms.devlang: java
 ms.topic: reference
 ms.technology: Azure
 ms.date: 3/06/2016
-ms.openlocfilehash: 015cb0615c28711ebb8feb5cea584a8a3779fa54
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: 924ccf9bdaad4bc635f133adbcfcc8f797d06644
+ms.sourcegitcommit: acc83bb537d77568b2a5427479d6354d6ae30885
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/03/2017
 ---
 # <a name="release-notes"></a>릴리스 정보 
 
 ## <a name="october-5-2017---130"></a>2017년 10월 5일 - 1.3.0 
 
-버전 1.3.0은 이전 릴리스에서 일반 가용성(안정적인) 단계에 도달하는 서비스 및 기능 사용을 위해 이전 버전과의 이전 버전 호환성이 제공됩니다.
+버전 1.3.0은 이전 릴리스에서 일반 가용성(안정적인) 단계에 도달하도록 서비스 및 기능을 사용하기 위해 이전 버전과 호환 가능합니다.
 
 해당 서비스에 대한 미리 보기 버전의 모든 주요 변경 내용은 @Beta 주석으로 표시됩니다.
 
@@ -32,15 +32,15 @@ ms.lasthandoff: 10/09/2017
 
 - 비동기 메서드
 - 이전에 베타 버전이었던 모든 CDN 메서드
-- 이전에 베타 버전이었던 모든 응용 프로그램 게이트웨이 메서드 및 인터페이스
+- 이전에 베타 버전이었던 모든 Application Gateway 메서드 및 인터페이스
 
  라이브러리의 일부는 여전히 미리 보기로 있습니다. 라이브러리의 현재 상태에 대해 아래 표를 참조하세요.
 
 서비스 또는 기능 | GA로 사용 가능 | 미리 보기로 사용 가능 
 ---------|---------|---------|-
-계산  | 가상 컴퓨터 및 VM 확장, 가상 컴퓨터 확장 집합, 관리 디스크   | Azure 컨테이너 서비스, Azure 컨테이너 레지스트리 
-저장소   |  저장소 계정       |    암호화     
-SQL 데이터베이스  | 데이터베이스, 방화벽, 탄력적 풀              
+Compute  | 가상 컴퓨터 및 VM 확장, 가상 컴퓨터 확장 집합, 관리 디스크   | Azure 컨테이너 서비스, Azure 컨테이너 레지스트리 
+저장소   |  Storage 계정       |    암호화     
+SQL Database  | 데이터베이스, 방화벽, 탄력적 풀              
 네트워킹    |  가상 네트워크, 네트워크 인터페이스, IP 주소, 라우팅 테이블, 네트워크 보안 그룹, DNS, Traffic Manager, 응용 프로그램 게이트웨이  |    부하 분산 장치, 네트워크 피어링, Virtual Network 게이트웨이, 네트워크 감시자 
 더 많은 서비스    |  리소스 관리자, Key Vault, Redis, CDN, Batch       |  웹앱, 함수 앱, Service Bus, Graph RBAC, Cosmos DB, 검색  
 기본 사항     |   인증 - 코어, 비동기 메서드, 관리되는 서비스 ID      |      |
