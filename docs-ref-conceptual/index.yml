@@ -64,9 +64,9 @@ sections:
             title: Java 서버를 사용하지 않는 함수 만들기
             href: 'https://docs.microsoft.com/azure/azure-functions/functions-create-first-java-maven'
           - image:
-              src: 'https://docs.microsoft.com/azure/media/index/MySQL.svg'
-            title: Azure Database for MySQL에 연결
-            href: 'https://docs.microsoft.com/azure/mysql/connect-java'
+              src: 'https://docs.microsoft.com/javascript/azure/media/k8s_logo.svg'
+            title: Kubernetes에 배포
+            href: 'https://docs.microsoft.com/azure/container-service/kubernetes/container-service-deploy-spring-boot-app-on-kubernetes'
           - image:
               src: 'https://docs.microsoft.com/azure/media/index/CosmosDB_rgb_ui_lighttheme.svg'
             title: Cosmos DB로 웹앱 빌드
@@ -77,7 +77,7 @@ sections:
             href: 'https://docs.microsoft.com/azure/jenkins/java-deploy-webapp-tutorial'
   - title: 샘플
     items:
-      - type: listgit check
+      - type: list
         style: unordered
         items:
           - html: '<a href="https://github.com/Azure-Samples/mysql-spring-boot-todo">Spring Boot 및 MySQL을 사용하여 웹앱 만들기(영문)</a>'
