@@ -12,13 +12,13 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 09/11/2017
+ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 64b9fefd202128eb0afc95be720619fd6e534958
-ms.sourcegitcommit: 256044d7cbce16dcb8dc4e195d0f63c10cb44d4e
+ms.openlocfilehash: 010f959b4a381fc625914620c282ef0452f525a9
+ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="managing-redis-caches-using-the-azure-explorer-for-eclipse"></a>Eclipse용 Azure 탐색기를 사용하여 Redis Cache 관리
 
@@ -96,7 +96,7 @@ Azure Redis Cache, 구성 설정 및 가격 책정에 대한 자세한 내용은
 * [Redis Cache 가격]
 * [Azure Redis Cache 구성 방법]
 
-[!INCLUDE [azure-toolkit-additional-resources](../includes/azure-toolkit-additional-resources.md)]
+[!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 
 <!-- URL List -->
 

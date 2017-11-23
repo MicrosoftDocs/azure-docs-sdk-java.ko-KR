@@ -12,13 +12,13 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 10/19/2017
+ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: cb79f4c10cdaf5597106590b7aaf36dec266391f
-ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
+ms.openlocfilehash: f37ae653286af1e36d730bda713527caa7504ac0
+ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-intellij"></a>IntelliJ용 Azure Explorer를 사용하여 저장소 계정 관리
 
@@ -34,13 +34,13 @@ Azure Explorer를 사용하여 저장소 계정을 만들려면 다음을 수행
 
 1. [IntelliJ용 Azure 도구 키트에 대한 로그인 지침]을 사용하여 Azure 계정에 로그인합니다. 
 
-2. **Azure Explorer** 보기에서 **Azure** 노드를 확장하고 **저장소 계정**을 마우스 오른쪽 단추로 클릭한 후 **저장소 계정 만들기**를 클릭합니다.
+2. **Azure Explorer** 보기에서 **Azure** 노드를 확장하고 **Storage 계정**을 마우스 오른쪽 단추로 클릭한 후 **Storage 계정 만들기**를 클릭합니다.
 
-   ![저장소 계정 만들기 명령][CS01]
+   ![Storage 계정 만들기 명령][CS01]
 
-3. **저장소 계정 만들기** 대화 상자에서 다음 옵션을 지정합니다.
+3. **Storage 계정 만들기** 대화 상자에서 다음 옵션을 지정합니다.
 
-   ![새 저장소 계정 만들기 대화 상자][CS02]
+   ![새 Storage 계정 만들기 대화 상자][CS02]
 
    * **이름**: 새 저장소 계정의 이름을 지정합니다.
 
@@ -100,7 +100,7 @@ Azure Explorer를 사용하여 저장소 계정을 삭제하려면 다음을 수
 
 Azure Storage 계정, 크기 및 가격 책정에 대한 자세한 내용은 다음 리소스를 참조하세요.
 
-* [Microsoft Azure 저장소 소개]
+* [Microsoft Azure Storage 소개]
 * [Azure 저장소 계정 정보]
 * Azure Storage 계정 크기
   * [Azure의 Windows 저장소 계정 크기]
@@ -109,12 +109,12 @@ Azure Storage 계정, 크기 및 가격 책정에 대한 자세한 내용은 다
   * [Windows 저장소 계정 가격 책정]
   * [Linux 저장소 계정 가격 책정]
 
-[!INCLUDE [azure-toolkit-additional-resources](../includes/azure-toolkit-additional-resources.md)]
+[!INCLUDE [azure-toolkit-for-intellij-additional-resources](../includes/azure-toolkit-for-intellij-additional-resources.md)]
 
 <!-- URL List -->
 
 [IntelliJ용 Azure 도구 키트에 대한 로그인 지침]: ./azure-toolkit-for-intellij-sign-in-instructions.md
-[Microsoft Azure 저장소 소개]: /azure/storage/storage-introduction
+[Microsoft Azure Storage 소개]: /azure/storage/storage-introduction
 [Azure 저장소 계정 정보]: /azure/storage/storage-create-storage-account
 [Azure Storage 복제]: /azure/storage/storage-redundancy
 [Azure Storage 확장성 및 성능 목표]: /azure/storage/storage-scalability-targets

@@ -12,13 +12,13 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 10/19/2017
+ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 792e80fc5812430a02ba4b208c003365e400304b
-ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
+ms.openlocfilehash: d0fe2a90fd12d2badf277659c7ce4ee768f6943c
+ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-intellij"></a>IntelliJ용 Azure Explorer를 사용하여 Virtual Machines 관리
 
@@ -85,13 +85,13 @@ Azure Explorer를 사용하여 가상 컴퓨터를 만들려면 다음을 수행
 
        ![연결된 리소스 창][CR07]
 
-   * **저장소 계정**: 가상 컴퓨터를 저장하는 데 사용할 저장소 계정을 지정합니다. 기존 저장소 계정을 사용하거나 새 저장소 계정을 만들 수 있습니다. **새로 만들기**를 선택하면 다음 대화 상자가 표시됩니다.
+   * **Storage 계정**: 가상 컴퓨터를 저장하는 데 사용할 Storage 계정을 지정합니다. 기존 저장소 계정을 사용하거나 새 저장소 계정을 만들 수 있습니다. **새로 만들기**를 선택하면 다음 대화 상자가 표시됩니다.
 
-      ![저장소 계정 만들기 대화 상자][CR05]
+      ![Storage 계정 만들기 대화 상자][CR05]
 
-   * **가상 네트워크** 및 **서브넷**: 가상 컴퓨터가 연결될 가상 네트워크 및 서브넷을 지정합니다. 기존 네트워크 및 서브넷을 사용하거나 새 네트워크 및 서브넷을 만들 수 있습니다. **새로 만들기**를 선택하는 경우 다음과 같은 대화 상자가 나타납니다.
+   * **Virtual Network** 및 **서브넷**: 가상 컴퓨터가 연결될 가상 네트워크 및 서브넷을 지정합니다. 기존 네트워크 및 서브넷을 사용하거나 새 네트워크 및 서브넷을 만들 수 있습니다. **새로 만들기**를 선택하는 경우 다음과 같은 대화 상자가 나타납니다.
 
-      ![가상 네트워크 만들기 대화 상자][CR06]
+      ![Virtual Network 만들기 대화 상자][CR06]
 
    * **공용 IP 주소**: 가상 컴퓨터에 대한 외부 연결 IP 주소를 지정합니다. 새 IP 주소를 만들도록 선택하거나, 가상 컴퓨터에 공용 IP 주소가 없는 경우 **(없음)**을 선택할 수 있습니다. 
 
@@ -151,7 +151,7 @@ Azure 가상 컴퓨터 크기 및 가격 책정에 대한 자세한 내용은 �
   * [Windows 가상 컴퓨터 가격 책정]
   * [Linux 가상 컴퓨터 가격 책정]
 
-[!INCLUDE [azure-toolkit-additional-resources](../includes/azure-toolkit-additional-resources.md)]
+[!INCLUDE [azure-toolkit-for-intellij-additional-resources](../includes/azure-toolkit-for-intellij-additional-resources.md)]
 
 <!-- URL List -->
 

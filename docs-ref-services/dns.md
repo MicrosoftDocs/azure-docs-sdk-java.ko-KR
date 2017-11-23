@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: dns
-ms.openlocfilehash: c29403713b1271091b7c37b796a0e8d65a337a7d
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: adac8e21a401bc91490b92fc5ccf90443eea569f
+ms.sourcegitcommit: f6bf497d9b98f0608aefacf1e914d8be52964234
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="azure-traffic-manager-libraries-for-java"></a>Java용 Azure Traffic Manager 라이브러리
 
@@ -60,3 +60,5 @@ rootDnsZone = rootDnsZone.update()
 [Azure DNS를 사용하여 도메인 호스팅 및 관리](https://github.com/Azure-Samples/dns-java-host-and-manage-your-domains)
 
 앱에서 사용할 수 있는 [Azure DNS용 Java 샘플 코드](https://azure.microsoft.com/resources/samples/?platform=java&term=dns)를 추가로 탐색합니다.
+
+<!---Loc Comment: Please, refer to conversation section to check the issue. Thanks.--->

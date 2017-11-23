@@ -12,13 +12,13 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 09/11/2017
+ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: f7526a49e8ba6432d6bf6af54a725a285a61fc07
-ms.sourcegitcommit: 256044d7cbce16dcb8dc4e195d0f63c10cb44d4e
+ms.openlocfilehash: 41bb9b8009c0cbae01fec42c56d6a74d84cc166b
+ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-eclipse"></a>Eclipse용 Azure Explorer를 사용하여 가상 컴퓨터 관리
 
@@ -74,19 +74,19 @@ Azure Explorer를 사용하여 가상 컴퓨터를 만들려면 다음을 수행
 
 1. **다음**을 누릅니다.
 
-1. **새 저장소 계정 만들기** 창에서 다음 정보를 입력합니다.
+1. **새 Storage 계정 만들기** 창에서 다음 정보를 입력합니다.
 
    * **리소스 그룹**: 가상 컴퓨터에 사용할 리소스 그룹을 지정합니다. 다음 옵션 중 하나를 선택합니다.
       * **새로 만들기**: 새 리소스 그룹을 만들도록 지정합니다.
       * **기존 그룹 사용**: Azure 계정에 이미 연결된 리소스 그룹을 선택할 것임을 지정합니다.
 
-      ![새 저장소 계정 만들기 대화 상자][CR05]
+      ![새 Storage 계정 만들기 대화 상자][CR05]
 
-   * **저장소 계정**: 가상 컴퓨터를 저장하는 데 사용할 저장소 계정을 지정합니다. 기존 저장소 계정을 사용하거나 새 저장소 계정을 만들 수 있습니다.
+   * **Storage 계정**: 가상 컴퓨터를 저장하는 데 사용할 Storage 계정을 지정합니다. 기존 저장소 계정을 사용하거나 새 저장소 계정을 만들 수 있습니다.
 
-   * **가상 네트워크** 및 **서브넷**: 가상 컴퓨터가 연결될 가상 네트워크 및 서브넷을 지정합니다. 기존 네트워크 및 서브넷을 사용하거나 새 네트워크 및 서브넷을 만들 수 있습니다. **새로 만들기**를 선택하는 경우 다음과 같은 대화 상자가 표시됩니다.
+   * **Virtual Network** 및 **서브넷**: 가상 컴퓨터가 연결될 가상 네트워크 및 서브넷을 지정합니다. 기존 네트워크 및 서브넷을 사용하거나 새 네트워크 및 서브넷을 만들 수 있습니다. **새로 만들기**를 선택하는 경우 다음과 같은 대화 상자가 표시됩니다.
 
-      ![새 가상 네트워크 만들기 대화 상자][CR06]
+      ![새 Virtual Network 만들기 대화 상자][CR06]
 
 1. **연결된 리소스** 창에서 다음 정보를 입력합니다.
 
@@ -151,7 +151,7 @@ Azure 가상 컴퓨터 크기 및 가격 책정에 대한 자세한 내용은 �
   * [Windows 가상 컴퓨터 가격 책정]
   * [Linux 가상 컴퓨터 가격 책정]
 
-[!INCLUDE [azure-toolkit-additional-resources](../includes/azure-toolkit-additional-resources.md)]
+[!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 
 <!-- URL List -->
 

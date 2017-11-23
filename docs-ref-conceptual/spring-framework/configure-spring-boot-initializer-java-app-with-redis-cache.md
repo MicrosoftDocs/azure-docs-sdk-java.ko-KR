@@ -13,13 +13,13 @@ ms.workload: na
 ms.tgt_pltfrm: cache-redis
 ms.devlang: java
 ms.topic: article
-ms.date: 10/11/2017
+ms.date: 11/01/2017
 ms.author: robmcm;zhijzhao;yidon
-ms.openlocfilehash: ce8202b48c6759a80560616492eab018434e9307
-ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
+ms.openlocfilehash: c5e9a9214762e014e463dd3277671fc56237d4a0
+ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="how-to-configure-a-spring-boot-initializer-app-to-use-redis-cache"></a>Redis Cache를 사용하도록 Spring Boot Initializer 앱을 구성하는 방법
 
@@ -118,10 +118,19 @@ ms.lasthandoff: 10/24/2017
 
    ![application.properties 파일 편집][RE02]
 
-   > [!NOTE]
-   >
-   > SSL을 활성화하는 Jedis와 같은 다른 Redis 클라이언트를 사용하는 경우 *application.properties* 파일에서 포트 6380을 지정합니다. 자세한 내용은 [Java와 함께 Azure Redis Cache를 사용하는 방법][Redis Cache with Java]을 참조하세요.
-   >
+   > [!NOTE] 
+   > 
+   > SSL을 활성화하는 Jedis와 같은 다른 Redis 클라이언트를 사용하는 경우 *application.properties* 파일에서 포트 6380을 지정합니다. 예:
+   > 
+   > ```yaml
+   > spring.redis.host=myspringbootcache.redis.cache.windows.net
+   > spring.redis.password=57686f6120447564652c2049495320526f636b73=
+   > spring.redis.ssl=true
+   > spring.redis.port=6380
+   > ```
+   > 
+   > 자세한 내용은 [Java와 함께 Azure Redis Cache를 사용하는 방법][Redis Cache with Java]을 참조하세요. 
+   > 
 
 1. *application.properties* 파일을 저장하고 닫습니다.
 

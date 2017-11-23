@@ -13,13 +13,13 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: java
 ms.topic: article
-ms.date: 10/11/2017
+ms.date: 11/01/2017
 ms.author: asirveda;robmcm
-ms.openlocfilehash: 5a0f13e1883c1de1adb72c450c55dcb38b1520b9
-ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
+ms.openlocfilehash: 7a4234aefd4eb33f80c1978fb84721f2dbcb2e4f
+ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="deploy-a-spring-boot-application-to-the-azure-app-service"></a>Azure App Service에 Spring Boot 응용 프로그램 배포
 
@@ -110,7 +110,7 @@ ms.lasthandoff: 10/24/2017
 
 1. 웹앱을 만든 후 **App Services** 메뉴 아이콘을 클릭한 다음 새로 만든 웹앱을 클릭합니다.
 
-   ![웹앱 나열][AZ06]
+   ![Web Apps 나열][AZ06]
 
 1. 웹앱이 표시되면 다음 단계를 사용하여 Java 버전을 지정합니다.
 

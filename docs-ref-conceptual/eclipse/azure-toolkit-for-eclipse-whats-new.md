@@ -12,13 +12,13 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 09/11/2017
+ms.date: 11/01/2017
 ms.author: robmcm;asirveda;martinsawicki
-ms.openlocfilehash: ed21f4308b2f6e45f022608a2ba32fe7db6922d3
-ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
+ms.openlocfilehash: 128995cfd9122bbd6e32f2a31c35f206b5108ad6
+ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="whats-new-in-the-azure-toolkit-for-eclipse"></a>Eclipse용 Azure 도구 키트의 새로운 기능
 
@@ -40,7 +40,7 @@ Eclipse용 Azure 도구 키트 - 2017년 4월 릴리스에는 다음과 같은 �
 
 * **향상된 Azure 로그인 환경**: Eclipse용 Azure 도구 키트에서는 이제 Azure 계정에 로그인하는 두 가지 방법인 *대화형* 및 *자동*을 지원합니다. 자세한 내용은 [Eclipse용 Azure 도구 키트에 대한 Azure 로그인 지침]을 참조하세요.
 * **Docker 컨테이너를 사용한 게시**: 이제 Eclipse용 Azure 도구 키트를 사용하여 웹 응용 프로그램을 Docker 컨테이너로 게시할 수 있습니다. 자세한 내용은 [Eclipse용 Azure 도구 키트를 사용하여 웹앱을 Docker 컨테이너로 게시하는 방법]을 참조하세요.
-* **저장소 계정 관리**: Eclipse용 Azure 도구 키트에서는 이제 Azure 탐색기 보기에서 저장소 계정을 관리하도록 지원합니다. 자세한 내용은 [Eclipse용 Azure 탐색기를 사용하여 저장소 계정 관리]를 참조하세요.
+* **Storage 계정 관리**: Eclipse용 Azure 도구 키트에서는 이제 Azure 탐색기 보기에서 Storage 계정을 관리하도록 지원합니다. 자세한 내용은 [Eclipse용 Azure 탐색기를 사용하여 Storage 계정 관리]를 참조하세요.
 * **가상 컴퓨터 관리**: Eclipse용 Azure 도구 키트에서는 이제 Azure 탐색기 보기에서 가상 컴퓨터를 관리하도록 지원합니다. 자세한 내용은 [Eclipse용 Azure 탐색기를 사용하여 Virtual Machines 관리]를 참조하세요.
 * **원격 디버깅 지원 제거**. Azure App Service의 Java 웹앱에 대한 원격 디버깅 기능이 Eclipse용 Azure 도구 키트에서 제거되었습니다. 도구 키트 사용 시 발생하는 몇 가지 문제를 해결하기 위해 제거가 필요했습니다.
 
@@ -52,7 +52,7 @@ Eclipse용 Azure 도구 키트 - 2016년 8월 릴리스에는 다음과 같은 �
   * 저장소 계정에 ZIP 파일로 업로드하면 자신만의 JDK 배포를 지정할 수도 있습니다.
 * **Azure Explorer 보기 향상**:
   * Azure의 새로운 Resource Manager 모델을 사용한 가상 컴퓨터 관리 지원: IDE를 벗어나지 않고 리소스 관리자 기반 가상 컴퓨터를 나열하고, 만들고, 삭제할 수 있습니다.
-  * Azure의 Resource Manager를 사용한 저장소 계정 BLOB 관리 지원은 “기본” 저장소 계정을 관리하는 기존 기능을 보완합니다.
+  * Azure의 Resource Manager를 사용한 Storage 계정 BLOB 관리 지원은 “기본” Storage 계정을 관리하는 기존 기능을 보완합니다.
 * **SQL Server용 Microsoft JDBC Driver 6.0**. 이 업데이트는 Microsoft SQL Server(v6.0)용 최신 JDBC 드라이버를 포함하며, 이제 Java 프로젝트에 손쉽게 추가할 수 있는 라이브러리로 포함되기 때문에 이전 버전을 대체합니다.
 
 ### <a name="june-29-2016"></a>2016년 6월 29일
@@ -63,7 +63,7 @@ Eclipse용 Azure 도구 키트 - 2016년 6월 릴리스에는 다음과 같은 �
 * **Azure SDK v2.9.1에 대한 지원**. 이제 Azure SDK 최신 버전은 Eclipse용 Azure 도구 키트에 필요한 최소 구성 요소입니다.
 * **통합된 샘플**. 이제 Eclipse용 Azure 도구 키트가 몇 가지 샘플 응용 프로그램을 갖추어 개발자가 사용할 수 있습니다.
 * **HDInsight 도구 통합**. 이제 Azure의 HDInsight 도구는 Eclipse용 Azure 도구 키트와 함께 제공됩니다. 자세한 내용은 [Eclipse용 HDInsight 도구 플러그 인]을 참조하세요.
-* **Java 웹앱의 원격 디버깅**. 이제 Eclipse용 Azure 도구 키트는 Azure 앱 서비스에서 Java 웹앱의 원격 디버깅을 지원합니다.
+* **Java Web Apps의 원격 디버깅**. 이제 Eclipse용 Azure 도구 키트는 Azure App Service에서 Java 웹앱의 원격 디버깅을 지원합니다.
 * **Eclipse Luna 릴리스에 대한 지원.** 최소한의 새로운 Eclipse IDE 버전은 Luna입니다.
 
 ### <a name="april-12-2016"></a>2016년 4월 12일
@@ -77,7 +77,7 @@ Eclipse용 Azure 도구 키트 - 2016년 4월 릴리스에는 다음과 같은 �
 Eclipse용 Azure 도구 키트 - 2016년 3월 릴리스에는 다음과 같은 향상 기능이 포함되어 있습니다.
 
 * **간단한 Java 응용 프로그램의 빠른 배포 지원**. Eclipse용 Azure 도구 키트는 Azure 웹앱 컨테이너에 간단한 Java 응용 프로그램의 빠른 배포를 지원하므로 이제는 Java 응용 프로그램 배포를 몇 분이 아닌 몇 초만에 할 수 있습니다.
-* **Azure 탐색기 보기를 사용한 웹앱 관리 지원**. 이제 도구 키트의 Azure 탐색기 보기를 통해 Azure 웹앱을 나열하고 시작하고 중지할 수 있습니다.
+* **Azure 탐색기 보기를 사용한 웹앱 관리 지원**. 이제 도구 키트의 Azure 탐색기 보기를 통해 Azure Web Apps를 나열하고 시작하고 중지할 수 있습니다.
 * **업데이트된 Tomcat, Jetty 및 Zulu OpenJDK 배포판**. Eclipse용 Azure 도구 키트는 Azure 클라우드 서비스로의 Java 배포를 위해 업데이트된 버전의 Tomcat, Jetty 및 Zulu OpenJDK를 지원합니다.
 
 ### <a name="january-4-2016"></a>2016년 1월 4일
@@ -116,7 +116,7 @@ Eclipse용 Azure 도구 키트 - 2015년 5월 릴리스에는 다음과 같은 �
 ### <a name="march-9-2015"></a>2015년 3월 9일
 Eclipse용 Azure 도구 키트 - 2015년 3월 릴리스에는 다음과 같은 향상 기능이 포함되어 있습니다.
 
-* **Mac, Ubuntu 및 추가 Linux 버전에 대한 지원**. Eclipse용 Azure 도구 키트의 이 릴리스는 Mac OS 및 여러 Unix 플랫폼이 대한 지원을 추가하므로 개발자는 Windows 이외의 운영 체제에서 실행되는 Eclipse에서 Azure 클라우드 서비스(PaaS)에 Java 프로젝트를 만들고 구성하고 게시하는 도구 키트를 설치할 수 있습니다.
+* **Mac, Ubuntu 및 추가 Linux 버전에 대한 지원**. Eclipse용 Azure 도구 키트의 이 릴리스는 Mac OS 및 여러 Unix 플랫폼이 대한 지원을 추가하므로 개발자는 Windows 이외의 운영 체제에서 실행되는 Eclipse에서 Azure Cloud Services(PaaS)에 Java 프로젝트를 만들고 구성하고 게시하는 도구 키트를 설치할 수 있습니다.
 
 > [!NOTE]
 > 이 기능은 미리 보기이며 프로덕션 환경에서 사용하지 않는 것이 좋습니다. 고객 지원 서비스 수준 규약(SLA)은 없지만 모든 피드백은 환영합니다.
@@ -133,7 +133,7 @@ Eclipse용 Azure 도구 키트 - 2015년 1월 릴리스에는 다음과 같은 �
 
 * **IBM® WebSphere® Application Server Liberty Core에 대한 지원**. 이 릴리스는 도구 키트를 Azure에 배포할 수 있는 지원되는 응용 프로그램 서버 목록에 IBM WebSphere Application Server Liberty Core를 추가합니다. 이 최신 추가는 다양한 버전의 Tomcat, Jetty, JBoss 및 GlassFish가 이미 포함되어 있는 도구 키트로 &quot;기본적으로&quot; 지원되는 현재 응용 프로그램 서버 목록을 확장합니다.
 * **Application Insights SDK의 포함**. 이 새롭게 출시된 클라이언트 API 라이브러리(v0.9.0)는 Java 용 Azure 라이브러리 패키지에 포함되었습니다.
-* **업데이트된 Java용 Azure 라이브러리 패키지**. 이 업데이트는 새로 출시된 Application Insights SDK v 0.9.0 뿐만 아니라 Java v0.7.0 및 저장소 클라이언트 API v2.0.0용 Azure 라이브러리를 포함합니다.
+* **업데이트된 Java용 Azure 라이브러리 패키지**. 이 업데이트는 새로 출시된 Application Insights SDK v 0.9.0 뿐만 아니라 Java v0.7.0 및 Storage 클라이언트 API v2.0.0용 Azure 라이브러리를 포함합니다.
 
 ### <a name="november-12-2014"></a>2014년 11월 12일
 Eclipse용 Azure 도구 키트 - 2014년 11월 릴리스에는 다음과 같은 향상 기능이 포함되어 있습니다.
@@ -184,7 +184,7 @@ Eclipse용 Azure 도구 키트 - 2014년 6월 릴리스는 다음과 같은 향�
 ### <a name="february-6-2014"></a>2014년 2월 6일
 2014년 2월 - Eclipse용 Azure 플러그 인 미리 보기가 출시되었습니다. 이 업데이트는 2013년 10월 미리 보기 이후의 새 기능, 버그 수정 및 일부 피드백 기반 유용성 향상 기능을 포함합니다.
 
-* **SSL 오프로딩에 대한 지원.** SSL(Secure Sockets Layer) 오프로딩은 기능으로 추가되었으며 Java 응용 프로그램 서버에서 SSL을 구성하지 않고 Azure의 Java 배포에서 HTTPS(Hypertext Transfer Protocol Secure) 지원을 손쉽게 사용할 수 있습니다. 이는 특히 세션 선호도 및/또는 인증된 통신 시나리오에 관련됩니다. 예를 들어 도구 키트에서 이미 지원되는 액세스 제어 서비스(ACS) 필터를 사용하는 경우입니다. 자세한 내용은 [SSL 오프로딩] 및 [SSL 오프로딩을 사용하는 방법]을 참조하세요.
+* **SSL 오프로딩에 대한 지원.** SSL(Secure Sockets Layer) 오프로딩은 기능으로 추가되었으며 Java 응용 프로그램 서버에서 SSL을 구성하지 않고 Azure의 Java 배포에서 HTTPS(Hypertext Transfer Protocol Secure) 지원을 손쉽게 사용할 수 있습니다. 이는 특히 세션 선호도 및/또는 인증된 통신 시나리오에 관련됩니다. 예를 들어 도구 키트에서 이미 지원되는 Access Control Service(ACS) 필터를 사용하는 경우입니다. 자세한 내용은 [SSL 오프로딩] 및 [SSL 오프로딩을 사용하는 방법]을 참조하세요.
 * **GlassFish 4는 이제 인식된 응용 프로그램 서버입니다.** **Azure 배포 프로젝트** 대화 상자의 **서버** 탭에서 컴퓨터에서 GlassFish 4 설치 디렉터리를 선택하는 경우 플러그 인은 이제 이를 자동으로 감지하고 이미 목록에 있는 GlassFish OSE 3 버전과 유사하게 자동으로 GlassFish OSE 4를 배포할 수 있습니다.
 * **Azul Zulu OpenJDK 패키지 업데이트 45.** 이 릴리스와 함께 효과적으로 Azul Systems의 Zulu(Openjdk v7 패키지) 업데이트 45를 사용할 수 있습니다. 이전에 제공되었던 업데이트 40 및 업데이트 25 이외의 것입니다.
 * **개인 끝점 포트를 위한 '자동'에 대한 지원.** Azure가 해당 끝점에 자동으로 포트를 할당하도록 입력 끝점 및 내부 끝점에 대해 자동으로 개인 포트를 설정할 수 있습니다. 이전에는 특정 포트 번호만 할당할 수 있었습니다.
@@ -223,7 +223,7 @@ Eclipse용 Azure 도구 키트 - 2014년 6월 릴리스는 다음과 같은 향�
 ### <a name="july-3-2013"></a>2013년 7월 3일
 2013년 7월 - Eclipse용 Azure 플러그 인 미리 보기가 출시되었습니다. 이 업데이트는 2013년 5월 미리 보기 이후의 새 기능, 버그 수정 및 일부 피드백 기반 유용성 향상 기능을 포함합니다.
 
-* **새 저장소 계정을 만드는 기능.** **새로 만들기** 단추가 **저장소 계정 추가** 대화 상자에 추가되었습니다. 이 옵션을 사용하면 Azure 관리 포털에 로그인할 필요 없이 Eclipse 플러그 인 내에서 저장소 계정을 만들 수 있습니다. (이 기능을 사용하려면 Azure 구독이 있어야 합니다.) 새 저장소 계정 만들기에 대한 자세한 내용은 [새 저장소 계정 만들기]를 참조하세요.
+* **새 저장소 계정을 만드는 기능.** **새로 만들기** 단추가 **Storage 계정 추가** 대화 상자에 추가되었습니다. 이 옵션을 사용하면 Azure 관리 포털에 로그인할 필요 없이 Eclipse 플러그 인 내에서 저장소 계정을 만들 수 있습니다. (이 기능을 사용하려면 Azure 구독이 있어야 합니다.) 새 저장소 계정 만들기에 대한 자세한 내용은 [새 저장소 계정 만들기]를 참조하세요.
 * **JDK 및 서버의 자동 배포 및 캐싱에 사용되는 저장소 계정에 대한 새로운 &quot;(자동)&quot; 옵션.** JDK 및 응용 프로그램 서버에 대해 **자동으로 업로드**를 사용하는 경우 JDK 및 응용 프로그램 서버를 업로드하거나 Azure 캐싱을 사용할 때 사용하도록 URL 및 저장소 계정에 대해 **(자동)**을 지정할 수 있습니다. 그런 다음 이러한 기능은 **Azure 게시** 대화 상자에서 선택한 것과 동일한 저장소 계정을 자동으로 사용합니다. 새로운 [Eclipse에서 Azure용 Hello World 응용 프로그램 만들기] 옵션을 사용하도록 **(자동)** 자습서가 업데이트되었습니다.
 * **Azure 서비스 끝점을 설정하는 기능.** 응용 프로그램이 글로벌 Azure 플랫폼에서 배포되고 관리되는지, 중국의 21Vianet에서 운영하는 Azure인지, 개인 Azure 플랫폼인지 결정하는 서비스 끝점을 지정합니다. 자세한 내용은 [Azure 서비스 끝점]을 참조하세요.
 * **대규모 배포는 로컬 저장소 리소스를 지정할 수 있습니다.** 배포가 너무 커서 기본 approot 폴더에 들어가지 않는 경우 이제 로컬 저장소 리소스를 JDK 및 응용 프로그램 서버의 배포 대상으로 지정할 수 있습니다. 자세한 내용은 [대규모 배포]를 참조하세요.
@@ -234,7 +234,7 @@ Eclipse용 Azure 도구 키트 - 2014년 6월 릴리스는 다음과 같은 향�
 2013년 5월 - Eclipse용 Azure 플러그 인 미리 보기가 출시되었습니다. 필수 구성 요소이며 플러그 인을 설치할 때 자동으로 다운로드되는 Azure SDK 2.0의 출시와 함께 제공되는 주요 업데이트입니다. 이 릴리스는 2013년 2월 미리 보기 이후의 새 기능, 버그 수정 및 일부 피드백 기반 유용성 향상 기능을 포함합니다.
 
 * **Azure 저장소로 JDK 및 응용 프로그램 서버 자동 업로드 및 Azure 저장소에서 배포.** 배포 패키지에 포함하거나 사용자가 수동으로 업로드하는 대신 필요할 때 지정된 Azure 저장소 계정에 선택한 JDK 및 응용 프로그램 서버를 자동으로 업로드하고 해당 위치에서 이러한 구성 요소를 배포하는 새로운 옵션입니다. 이 일반적 요청 기능은 특히 초보자를 위해 JDK 및 서버 구성 요소 배포의 용이성을 크게 향상시킬 수 있습니다. 이러한 옵션을 사용하는 연습의 경우 [Eclipse에서 Azure용 Hello World 응용 프로그램 만들기]를 참조하세요.
-* **중앙 집중식 저장소 계정 추적 및 더 쉽게 저장소 계정을 참조하는 기능(드롭다운 컨트롤을 통해).** 이는 JDK 및 서버 구성 요소 배포, 캐싱과 같은 저장소를 사용하는 여러 기능에 적용됩니다. 자세한 내용은 [Azure 저장소 계정 목록]을 참조하세요.
+* **중앙 집중식 저장소 계정 추적 및 더 쉽게 저장소 계정을 참조하는 기능(드롭다운 컨트롤을 통해).** 이는 JDK 및 서버 구성 요소 배포, 캐싱과 같은 저장소를 사용하는 여러 기능에 적용됩니다. 자세한 내용은 [Azure Storage 계정 목록]을 참조하세요.
 * **클라우드에 게시 마법사에서 간소화된 원격 액세스 설정.** 원격 액세스를 활성화하도록 사용자 이름 및 암호를 입력하거나 원격 액세스를 비활성화 상태로 유지하도록 비워 둡니다.
 * **Java 라이브러리용 Azure 라이브러리 패키지에 대한 업데이트.** 이는 [Microsoft Azure 클라이언트 API]를 참조하세요.
 * **Windows Server 2012에서 고정 세션에 대한 지원.** 이전에 고정 세션은 Windows Server 2008 R2 에서만 작동했지만 이제는 두 클라우드 운영 체제 대상은 세션 선호도를 지원합니다.
@@ -294,7 +294,7 @@ Eclipse용 Azure 도구 키트 - 2014년 6월 릴리스는 다음과 같은 향�
   * 이러한 Azure 도구 모음 단추의 대부분은 [Eclipse에서 Azure용 Hello World 응용 프로그램 만들기]에서 사용됩니다.
 * **Java용 Azure 라이브러리:** 이제 Eclipse에서 Java 라이브러리용 Azure 라이브러리에 대한 단일 패키지의 일부로 사용할 수 있습니다. 플러그 인 설치를 제공하고 필수 종속성을 포함합니다. Java 프로젝트에 라이브러리에 대한 참조를 추가하고 별도로 어떤 항목도 다운로드할 필요가 없습니다. 자세한 내용은 [Eclipse용 Azure 도구 키트 설치]를 참조하세요.
 * **플러그 인 설치 중 SQL Server용 Microsoft JDBC 드라이버 4.0 사용 가능:** 새 플러그 인을 설치하는 동안 최신 버전의 SQL Server용 Microsoft JDBC 드라이버를 설치할 수 있습니다.
-* **플러그 인 설치 중 Azure 액세스 제어 서비스 필터 사용 가능:** 도구 키트에 Eclipse 라이브러리로 포함된 이 새 구성 요소를 통해 Java 웹 응용 프로그램에서 Google, Live.com, yahoo!와 같은 다양한 ID 공급자를 사용하여 Azure ACS(액세스 제어 서비스) 인증을 원활하게 활용할 수 있습니다. 사용자가 직접 인증 논리를 작성할 필요가 없고 몇 가지 옵션을 구성하고 필터가 ACS를 사용하여 사용자가 로그인을 하도록 두면 됩니다. 요청 개체 내의 필터로 응용 프로그램에 반환되므로 사용자에게 ID를 기반으로 한 리소스에 대한 액세스를 주는 코드 작성에 주력할 수 있습니다. ACS 필터 사용에 대한 자습서는 [Eclipse를 사용하여 Azure 액세스 제어 서비스로 웹 사용자를 인증하는 방법]을 참조하세요.
+* **플러그 인 설치 중 Azure Access Control Service 필터 사용 가능:** 도구 키트에 Eclipse 라이브러리로 포함된 이 새 구성 요소를 통해 Java 웹 응용 프로그램에서 Google, Live.com, yahoo!와 같은 다양한 ID 공급자를 사용하여 Azure ACS(Access Control Service) 인증을 원활하게 활용할 수 있습니다. 사용자가 직접 인증 논리를 작성할 필요가 없고 몇 가지 옵션을 구성하고 필터가 ACS를 사용하여 사용자가 로그인을 하도록 두면 됩니다. 요청 개체 내의 필터로 응용 프로그램에 반환되므로 사용자에게 ID를 기반으로 한 리소스에 대한 액세스를 주는 코드 작성에 주력할 수 있습니다. ACS 필터 사용에 대한 자습서는 [Eclipse를 사용하여 Azure 액세스 제어 서비스로 웹 사용자를 인증하는 방법]을 참조하세요.
 * **Azure SDK 1.7 필수 구성 요소의 자동 검색:** 새 Azure 배포 프로젝트를 만들 때 아직 설치되지 않은 경우 Azure SDK 1.7이 자동으로 다운로드됩니다.
 * **인스턴스 끝점:** 부하 분산된 역할 인스턴스와의 통신을 위한 직접 포트 끝점 액세스를 허용합니다. [끝점 속성] 페이지를 통해 사용 가능한 끝점 UI를 통해 인스턴스 끝점을 추가할 수 있습니다. 이렇게 하면 다중 인스턴스 배포로 시나리오의 클라우드에서 실행 중인 특정 계산 인스턴스에 대한 원격 디버깅 및 JMX 진단을 사용할 수 있습니다. 
 * **구성 요소 UI:** 고급 사용자가 프로젝트의 개별 Azure 역할과 Java 응용 프로그램 프로젝트와 같은 기타 외부 리소스 간 프로젝트 종속성을 쉽게 설정하고 배포 논리를 쉽게 설명할 수 있도록 합니다. 자세한 내용은 [구성 요소 속성]을 참조하세요.
@@ -316,7 +316,7 @@ Eclipse용 Azure 도구 키트 - 2014년 6월 릴리스는 다음과 같은 향�
 
 ## <a name="next-steps"></a>다음 단계
 
-[!INCLUDE [azure-toolkit-additional-resources](../includes/azure-toolkit-additional-resources.md)]
+[!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 
 <!-- URL List -->
 
@@ -325,14 +325,14 @@ Eclipse용 Azure 도구 키트 - 2014년 6월 릴리스는 다음과 같은 향�
 
 [Eclipse용 Azure 도구 키트에 대한 Azure 로그인 지침]: azure-toolkit-for-eclipse-sign-in-instructions.md
 [Eclipse용 Azure 도구 키트를 사용하여 웹앱을 Docker 컨테이너로 게시하는 방법]: ./azure-toolkit-for-eclipse-publish-as-docker-container.md
-[Eclipse용 Azure 탐색기를 사용하여 저장소 계정 관리]: ./azure-toolkit-for-eclipse-managing-storage-accounts-using-azure-explorer.md
+[Eclipse용 Azure 탐색기를 사용하여 Storage 계정 관리]: ./azure-toolkit-for-eclipse-managing-storage-accounts-using-azure-explorer.md
 [Eclipse용 Azure 탐색기를 사용하여 Virtual Machines 관리]: ./azure-toolkit-for-eclipse-managing-virtual-machines-using-azure-explorer.md
 
 [Azure Java Developer Center]: https://docs.microsoft.com/java/azure
 
 [Zulu OpenJDK용 Azul Systems 웹 페이지]: http://go.microsoft.com/fwlink/?LinkId=402457
 [Azure 서비스 끝점]: http://go.microsoft.com/fwlink/?LinkID=699526
-[Azure 저장소 계정 목록]: http://go.microsoft.com/fwlink/?LinkID=699528
+[Azure Storage 계정 목록]: http://go.microsoft.com/fwlink/?LinkID=699528
 [구성 요소 속성]: http://go.microsoft.com/fwlink/?LinkID=699525#components_properties
 [Eclipse에서 Azure용 Hello World 응용 프로그램 만들기]: http://go.microsoft.com/fwlink/?LinkID=699533
 [Eclipse에서 Azure 응용 프로그램 디버깅]: http://go.microsoft.com/fwlink/?LinkID=699535
