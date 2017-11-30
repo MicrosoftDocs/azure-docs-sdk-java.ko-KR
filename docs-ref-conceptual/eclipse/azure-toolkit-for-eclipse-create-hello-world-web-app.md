@@ -1,5 +1,5 @@
 ---
-title: "Eclipse를 사용하여 기본 Azure Web App 만들기"
+title: "Eclipse를 사용하여 Azure용 Hello World 웹앱 만들기"
 description: "이 자습서에서는Eclipse용 Azure 도구 키트를 사용하여 Azure용 Hello World 웹앱을 만드는 방법을 보여 줍니다."
 services: app-service
 documentationcenter: java
@@ -12,39 +12,59 @@ ms.workload: web
 ms.tgt_pltfrm: multiple
 ms.devlang: java
 ms.topic: article
-ms.date: 10/19/2017
+ms.date: 11/15/2017
 ms.author: robmcm;asirveda
-ms.openlocfilehash: dcab31ad99fb79a91374d95c2b8b0d9d10346f5f
-ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
+ms.openlocfilehash: 7b82be727798a1edb58d99fe0d6b43e498e22a92
+ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="create-a-basic-azure-web-app-using-eclipse"></a>Eclipse를 사용하여 기본 Azure Web App 만들기
-이 자습서에서는 [Eclipse용 Azure 도구 키트]를 사용하여 기본 Hello World 응용 프로그램을 만들고 Azure에 웹앱으로 배포하는 방법을 보여 줍니다. 기본 JSP 예제는 편의를 위해 표시되지만 Azure 배포가 관련되는 한, 유사한 단계는 Java 서블릿에 적합합니다.
+# <a name="create-a-hello-world-web-app-for-azure-using-eclipse"></a>Eclipse를 사용하여 Azure용 Hello World 웹앱 만들기
+
+이 자습서에서는 [Eclipse용 Azure 도구 키트]를 사용하여 기본 Hello World 응용 프로그램을 만들고 Azure에 웹앱으로 배포하는 방법을 보여 줍니다.
+
+> [!NOTE]
+>
+> [IntelliJ용 Azure 도구 키트]를 사용하는 이 문서의 버전에 대한 내용은 [IntelliJ를 사용하여 Azure용 Hello World 웹앱 만들기][intellij-hello-world]를 참조하세요.
+>
+
+> [!IMPORTANT]
+> 
+> Eclipse용 Azure 도구 키트는 2017년 8월에 다른 워크플로로 업데이트되었습니다. 이 문서에서는 Eclipse용 Azure 도구 키트 버전 3.0.7 이상을 사용하여 Hello World 웹앱을 만드는 방법을 설명합니다. 도구 키트 버전 3.0.6 이하를 사용하는 경우 [레거시 도구 키트를 사용하여 Eclipse에서 Azure용 Hello World 웹앱 만들기][Legacy Version]의 단계를 수행해야 합니다.
+> 
 
 이 자습서를 완료한 경우 웹 브라우저에서 응용 프로그램을 보면 다음 그림과 같이 표시됩니다.
 
-![Hello World 앱의 미리 보기][01]
+![Hello World 앱의 미리 보기][browse-web-app]
 
 [!INCLUDE [azure-toolkit-for-eclipse-prerequisites](../includes/azure-toolkit-for-eclipse-prerequisites.md)]
 
-## <a name="to-create-a-hello-world-application"></a>Hello World 응용 프로그램을 만들려면
-먼저 java 프로젝트를 만듭니다.
+## <a name="create-a-new-web-app-project"></a>새 웹앱 프로젝트 만들기
 
-1. Eclipse를 시작하고 메뉴에서 **File**, **New**, **Dynamic Web Project**를 차례로 클릭합니다. (**File**, **New**를 차례로 클릭한 후 **Dynamic Web Project**가 사용 가능한 프로젝트로 표시되지 않는 경우 **File**, **New**, **Project...**를 차례로 클릭한 후 **Web**을 확장하고 **Dynamic Web Project**를 클릭한 후 **Next**를 클릭합니다.)
+1. Eclipse를 시작하고, [Eclipse용 Azure 도구 키트에 대한 Azure 로그인 지침][eclipse-sign-in-instructions] 문서의 지침을 사용하여 Azure 계정에 로그인합니다.
+
+1. **파일**, **새로 만들기**, **동적 웹 프로젝트**를 차례로 클릭합니다. (**File**, **New**를 차례로 클릭한 후 **Dynamic Web Project**가 사용 가능한 프로젝트로 표시되지 않는 경우 **File**, **New**, **Project...**를 차례로 클릭한 후 **Web**을 확장하고 **Dynamic Web Project**를 클릭한 후 **Next**를 클릭합니다.)
+
+   ![새로운 동적 웹 프로젝트 만들기][file-new-dynamic-web-project]
 
 2. 이 자습서에서는 프로젝트의 이름을 **MyWebApp**으로 지정합니다. 화면이 다음과 유사하게 나타납니다.
    
-   ![새로운 동적 웹 프로젝트 만들기][02]
+   ![새 동적 웹 프로젝트 속성][dynamic-web-project-properties]
 
-3. **Finish**를 클릭합니다.
+3. **마침**을 클릭합니다.
 
 4. Eclipse의 Project Explorer 뷰 내에서 **MyWebApp**을 확장합니다. **WebContent**를 마우스 오른쪽 단추로 클릭하고 **New**를 클릭한 후 **JSP File**을 클릭합니다.
 
+   ![새 JSP 파일 만들기][create-new-jsp-file]
+
 5. **새 JSP 파일** 대화 상자에서 **index.jsp** 파일의 이름을 지정하고 부모 폴더를 **MyWebApp/WebContent**로 유지한 후 **다음**을 클릭합니다.
 
+   ![새 JSP 파일 대화 상자][new-jsp-file-dialog]
+
 6. **JSP 템플릿 선택** 대화 상자에서 이 자습서의 목적에 따라, **새 JSP 파일(html)**을 선택한 후 **마침**을 클릭합니다.
+
+   ![JSP 템플릿 선택][select-jsp-template]
 
 7. Eclipse에서 index.jsp 파일이 열리면 **Hello World!**를 동적으로 표시하도록 텍스트를 추가합니다. 기존 `<body>` 요소 내. 업데이트된 `<body>` 콘텐츠는 다음 예제와 유사하게 표시됩니다.
    
@@ -54,166 +74,71 @@ ms.lasthandoff: 10/24/2017
 
 8. index.jsp를 저장합니다.
 
-## <a name="to-deploy-your-application-to-an-azure-web-app-container"></a>Azure Web App 컨테이너에 응용 프로그램을 배포하려면
-몇 가지 방법으로 Azure에 Java 웹 응용 프로그램을 배포할 수 있습니다. 이 자습서에서는 가장 간단한 방법 중 하나를 설명합니다. 즉, 특별한 프로젝트 형식이나 추가 도구 없이 Azure 웹앱 컨테이너에 응용 프로그램을 배포하는 방법을 설명합니다. JDK 및 웹 컨테이너 소프트웨어는 Azure에서 제공되므로 별도로 업로드할 필요가 없습니다. Java 웹앱만 있으면 됩니다. 따라서 응용 프로그램 게시 프로세스에 걸리는 시간이 몇 분이 아니라 몇 초입니다.
+## <a name="deploy-your-web-app-to-azure"></a>Azure에 웹앱 배포
 
-1. Eclipse의 프로젝트 탐색기에서 **MyWebApp**을 마우스 오른쪽 단추로 클릭합니다.
-
-2. 상황에 맞는 메뉴에서 **Azure**를 선택하고 **Azure 웹앱으로 게시...**를 클릭합니다.
+1. Eclipse의 Project Explorer 보기 내에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **Azure**, **Azure Web App으로 게시**를 차례로 선택합니다.
    
-   ![Azure 웹앱으로 게시][03]
-   
-   또는 프로젝트 탐색기에서 웹 응용 프로그램 프로젝트를 선택한 상태로 도구 모음에서 **게시** 드롭다운 단추를 클릭하고 다음에서 **Azure 웹앱으로 게시**를 선택할 수 있습니다.
-   
-   ![Azure 웹앱으로 게시][14]
+   ![Azure 웹앱으로 게시][publish-as-azure-web-app]
 
-3. Eclipse에서 Azure에 로그인하지 않은 경우 Azure 계정으로 로그인하라는 메시지가 표시됩니다.
-   
-   ![Azure 로그인 대화 상자][04]
-   
-   Azure 계정이 여러 개 있으면 로그인 프로세스 중에 일부 메시지가 동일한 것이더라도 두 번 이상 표시될 수 있습니다. 이 경우 로그인 지침에 따라 계속 진행합니다.
+1. **웹앱 배포** 대화 상자가 나타나면 다음 옵션 중 하나를 선택할 수 있습니다.
 
-4. Azure 계정에 성공적으로 로그인하면 **구독 관리** 대화 상자에는 자격 증명과 연결된 구독 목록이 표시됩니다. 여러 구독이 나열된 경우 특정 하위 집합만 사용하려면 선택적으로 사용할 구독을 선택 취소할 수 있습니다. 구독을 선택했으면 **닫기**를 클릭합니다.
-   
-   ![구독 대화 상자 관리][05]
+   * 기존 웹앱이 있으면 기존 웹앱을 선택합니다.
 
-5. **Azure 웹앱 컨테이너에 배포** 대화 상자가 나타나는 경우 이전에 만든 웹앱 컨테이너가 표시됩니다. 컨테이너를 만들지 않은 경우에는 목록이 비어 있습니다.
-   
-   ![Azure 웹앱 컨테이너에 배포 대화 상자][06]
+      ![앱 서비스 선택][select-app-service]
 
-6. 이전에 Azure 웹앱 컨테이너를 만들지 않은 경우 또는 응용 프로그램을 새 컨테이너에 게시하려는 경우 다음 단계를 사용합니다. 그렇지 않으면 기존 웹앱 컨테이너를 선택하고 아래의 7단계로 건너뜁니다.
-   
-   a. **새로 만들기...**
-      
-      ![Azure 웹앱 컨테이너에 배포 대화 상자][15]
+   * **새 웹앱 만들기**를 클릭합니다.
 
-   b. **새 웹앱 컨테이너** 대화 상자가 표시됩니다.
-      
-      ![새 웹앱 컨테이너 대화 상자][07a]
+      ![App Service 만들기][create-app-service]
 
-   c. 웹앱 컨테이너에 **DNS 레이블**을 입력합니다. 이렇게 하면 Azure에서 웹 응용 프로그램에 대한 호스트 URL의 리프 DNS 레이블을 형성합니다. (이름은 사용 가능해야 하며, Azure 웹앱 명명 요구 사항을 준수해야 합니다.)
+      **App Service 만들기** 대화 상자에서 웹앱에 대한 필수 정보를 지정한 후 **만들기**를 클릭합니다.
 
-   d. **웹 컨테이너** 드롭다운 메뉴에서 응용 프로그램에 적절한 소프트웨어를 선택합니다.
-      
-      현재, Tomcat 8, Tomcat 7, Jetty 9 중에서 선택할 수 있습니다. 선택한 소프트웨어의 최근 배포는 Azure에서 제공되며, Oracle에서 만들고 Azure에서 제공되는 JDK 8의 최근 배포에서 실행됩니다.
+      ![App Service 만들기 대화 상자][create-app-service-dialog]
 
-   e. **구독** 드롭다운 메뉴에서 이 배포에 사용할 구독을 선택합니다.
+1. 웹앱을 선택한 다음 **배포**를 클릭합니다.
 
-   f. **리소스 그룹** 드롭다운 메뉴에서 웹앱을 연결할 리소스 그룹을 선택합니다. (Azure 리소스 그룹을 사용하여 함께 삭제할 수 있도록 관련된 리소스를 그룹화할 수 있습니다.)
-      
-      기존 리소스 그룹(있는 경우)을 선택하고 아래 g 단계로 건너뛰거나 이들 단계를 통해 새 리소스 그룹을 만들 수 있습니다.
-      
-      * **새로 만들기...**
-      * **새 리소스 그룹** 대화 상자가 표시됩니다.
-        
-          ![새 리소스 그룹 대화 상자][08]
-      * **이름** 텍스트 상자에서 새 리소스 그룹의 이름을 지정합니다.
-      * **지역** 드롭다운 메뉴에서 리소스 그룹에 적합한 Azure 데이터 센터 위치를 선택합니다.
-      * 선택 사항: 기본적으로 Java 8 최신 배포판은 Azure가 자동으로 웹앱 컨테이너에 JVM으로 설치합니다. 그러나 웹앱에서 요구하는 경우 JVM의 다른 버전 및 배포판을 지정할 수 있습니다. 웹앱에 대한 JDK를 지정하려면 **JDK** 탭을 클릭하고 다음 옵션 중 하나를 선택합니다.
-         * **Azure Web Apps에서 제공하는 기본 JDK 배포**: 이 옵션을 선택하면 Java 8 최신 배포판이 배포됩니다.
-         * **Azure에 제공되는 타사 JDK 배포**: 이 옵션을 선택하면 Microsoft Azure에서 제공하는 JDK 목록에서 선택할 수 있습니다.
-         * **이 다운로드 위치에서 나의 고유한 JDK 배포**: 이 옵션을 선택하면 사용자 고유의 JDK 배포판을 지정할 수 있으며, 사용자 고유의 배포판을 ZIP 파일로 패키지하여 공개적으로 이용 가능한 다운로드 위치 또는 사용자가 액세스 권한을 갖고 있는 Azure Storage 계정에 업로드해야 합니다.
-          
-         ![새 웹앱 컨테이너 대화 상자][07b]
+   ![앱 서비스 배포][deploy-app-service]
 
-   g. **확인**을 클릭합니다.
+1. 웹앱이 성공적으로 배포되면 도구 키트가 **게시됨** 상태 **Azure 활동 로그**를 표시하며, 이것은 배포된 웹앱의 URL에 대한 하이퍼링크입니다.
 
-   h. **앱 서비스 계획** 드롭다운 메뉴에 선택한 리소스 그룹과 연결된 앱 서비스 계획이 나열됩니다. (App Service 계획은 웹앱의 위치, 가격 책정 계층, 계산 인스턴스 크기 등의 정보를 지정합니다. App Service 계획 하나를 여러 Web Apps에 사용할 수 있기 때문에 App Service 계획은 특정 웹앱 배포와는 별도로 관리됩니다.)
-      
-       You can select an existing App Service Plan (if you have any) and skip to step h below, or use the following these steps to create a new App Service Plan:
-      
-      * **새로 만들기...**
-      * **새 앱 서비스 계획** 대화 상자가 표시됩니다.
-        
-          ![새 App Service 계획 대화 상자][09]
-      * **이름** 텍스트 상자에서 새 앱 서비스 계획의 이름을 지정합니다.
-      * **위치** 드롭다운 메뉴에서 계획에 적합한 Azure 데이터 센터 위치를 선택합니다.
-      * **가격 책정 계층** 드롭다운 메뉴에서 계획에 적합한 가격 책정을 선택합니다. 테스트 목적으로 **무료**를 선택할 수 있습니다.
-      * **인스턴스 크기** 드롭다운 메뉴에서 계획에 적절한 인스턴스 크기를 선택합니다. 테스트 목적으로 **Small**을 선택할 수 있습니다.
+   ![게시 상태][publish-status]
 
-   i. 위 단계를 모두 완료한 경우 New Web App Container 대화 상자가 다음 그림과 유사하게 표시됩니다.
-      
-      ![새 웹앱 컨테이너 대화 상자][10]
+1. 상태 메시지에 제공된 링크를 사용하여 웹앱으로 이동할 수 있습니다.
 
-   j. **확인** 을 클릭하여 새 웹앱 컨테이너 만들기를 완료합니다.
-       
-      웹 앱 컨테이너의 목록이 새로 고쳐지도록 몇 초 간 기다리고 나면 새로 만든 웹 앱 컨테이너를 목록에서 선택할 수 있게 됩니다.
+   ![웹앱 찾아보기][browse-web-app]
 
-7. 이제 Azure에 웹앱의 초기 배포를 완료할 준비가 되었습니다.
-   
-   ![Azure 웹앱 컨테이너에 배포 대화 상자][11]
-   
-   **확인** 을 클릭하여 선택한 웹앱 컨테이너에 Java 응용 프로그램을 배포합니다.
-   
-   기본적으로 응용 프로그램은 응용 프로그램 서버의 하위 디렉터리로 배포됩니다. 루트 응용 프로그램으로 배포하려면 **확인**을 클릭하기 전에 **루트에 배포** 확인란을 선택합니다.
+1. Azure에 웹앱을 게시한 후에는 마우스 오른쪽 단추로 앱을 클릭하고 상황에 맞는 메뉴에서 옵션 중 하나를 선택하여 앱을 관리할 수 있습니다. 예를 들어 웹앱을 **시작**, **중지** 또는 **삭제**할 수 있습니다.
 
-8. 이제 웹앱의 배포 상태를 나타내는 **Azure 동작 로그** 보기를 확인합니다.
-   
-   ![Azure 동작 로그][12]
-   
-   Azure에 웹앱을 배포하는 프로세스는 몇 초 내에 완료됩니다. 응용 프로그램이 준비되면 **게시됨** in the **게시됨** 이라는 링크가 표시됩니다. 이 링크를 클릭하면 배포된 웹앱의 홈 페이지로 이동합니다.
-
-## <a name="updating-your-web-app"></a>웹앱 업데이트
-실행 중인 기존 Azure 웹앱을 빠르고 쉽게 업데이트할 수 있으며, 두 가지 업데이트 옵션이 있습니다.
-
-* 기존 Java 웹앱의 배포를 업데이트할 수 있습니다.
-* 동일한 웹앱 컨테이너에 추가 Java 응용 프로그램을 게시할 수 있습니다.
-
-두 경우 모두 프로세스는 동일하며 몇 초만 소요됩니다.
-
-1. Eclipse Project Explorer에서 업데이트하거나 기존 웹앱 컨테이너에 추가할 Java 응용 프로그램을 마우스 오른쪽 단추로 클릭합니다.
-
-2. 상황에 맞는 메뉴가 나타나면 **Azure**를 선택한 다음 **Azure 웹앱으로 게시...**를 선택합니다.
-
-3. 이전에 이미 로그인했으므로 기존 웹앱 컨테이너 목록이 표시됩니다. Java 응용 프로그램을 게시하거나 다시 게시할 컨테이너를 선택하고 **확인**을 클릭합니다.
-
-몇 초 후 **Azure 동작 로그** 보기에 업데이트된 배포가 **게시됨**으로 표시되고, 웹 브라우저에서 업데이트된 응용 프로그램을 확인할 수 있습니다.
-
-## <a name="starting-stopping-or-restarting-an-existing-web-app"></a>기존 웹앱 시작, 중지 또는 다시 시작
-기존 Azure 웹앱 컨테이너(여기에 배포된 모든 Java 응용 프로그램 포함)를 시작 또는 중지하려면 **Azure 탐색기** 보기를 사용하면 됩니다.
-
-**Azure 탐색기** 보기가 열려 있지 않은 경우 Eclipse에서 **Window** 메뉴를 클릭한 다음 **보기 표시**, **기타...**, **Azure**, **Azure 탐색기**를 차례로 클릭합니다. 이전에 로그인하지 않은 경우 로그인하라는 메시지가 나타납니다.
-
-**Azure 탐색기** 보기가 표시되면 다음 단계에 따라 웹앱을 시작하거나 중지합니다. 
-
-1. **Azure** 노드를 확장합니다.
-
-2. **웹앱** 노드를 확장합니다. 
-
-3. 원하는 웹앱을 마우스 오른쪽 단추로 클릭합니다.
-
-4. 상황에 맞는 메뉴가 나타나면 **시작**, **중지** 또는 **다시 시작**을 클릭합니다. 메뉴 선택 항목은 상황별로 변경되므로 실행 중인 웹앱만 중지하고, 현재 실행되고 있지 않은 웹앱만 시작할 수 있습니다.
-   
-   ![기존 웹앱 중지][13]
+   ![앱 서비스 관리][manage-app-service]
 
 ## <a name="next-steps"></a>다음 단계
 
-[!INCLUDE [azure-toolkit-additional-resources](../includes/azure-toolkit-additional-resources.md)]
+[!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 
-Azure 웹앱 만들기에 대한 자세한 내용은 [웹앱 개요]를 참조하세요.
+Azure Web Apps 만들기에 대한 자세한 내용은 [Web Apps 개요]를 참조하세요.
 
 <!-- URL List -->
 
 [Eclipse용 Azure 도구 키트]: azure-toolkit-for-eclipse.md
-[웹앱 개요]: /azure/app-service/app-service-web-overview
+[IntelliJ용 Azure 도구 키트]: ../intellij/azure-toolkit-for-intellij.md
+[intellij-hello-world]: ../intellij/azure-toolkit-for-intellij-create-hello-world-web-app.md
+[Web Apps 개요]: /azure/app-service/app-service-web-overview
 [Apache Tomcat]: http://tomcat.apache.org/
 [Jetty]: http://www.eclipse.org/jetty/
+[Legacy Version]: azure-toolkit-for-eclipse-create-hello-world-web-app-legacy-version.md
 
 <!-- IMG List -->
 
-[01]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/01-Web-Page.png
-[02]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/02-Dynamic-Web-Project.png
-[03]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/03-Context-Menu.png
-[04]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/04-Log-In-Dialog.png
-[05]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/05-Manage-Subscriptions-Dialog.png
-[06]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/06-Deploy-To-Azure-Web-Container.png
-[07a]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/07a-New-Web-App-Container-Dialog.png
-[07b]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/07b-New-Web-App-Container-Dialog.png
-[08]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/08-New-Resource-Group-Dialog.png
-[09]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/09-New-Service-Plan-Dialog.png
-[10]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/10-Completed-Web-App-Container-Dialog.png
-[11]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/11-Completed-Deploy-Dialog.png
-[12]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/12-Activity-Log-View.png
-[13]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/13-Azure-Explorer-Web-App.png
-[14]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/14-publishDropdownButton.png
-[15]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/15-New-Azure-Web-Container.png
+[browse-web-app]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/browse-web-app.png
+[file-new-dynamic-web-project]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/file-new-dynamic-web-project.png
+[dynamic-web-project-properties]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/dynamic-web-project-properties.png
+[create-new-jsp-file]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/create-new-jsp-file.png
+[new-jsp-file-dialog]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/new-jsp-file-dialog.png
+[select-jsp-template]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/select-jsp-template.png
+[publish-as-azure-web-app]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/publish-as-azure-web-app.png
+[deploy-web-app-dialog]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/deploy-web-app-dialog.png
+[select-app-service]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/select-app-service.png
+[create-app-service-dialog]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/create-app-service-dialog.png
+[publish-status]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/publish-status.png
+[create-app-service]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/create-app-service.png
+[deploy-app-service]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/deploy-app-service.png
+[manage-app-service]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/manage-app-service.png

@@ -3,25 +3,25 @@
   items:
     - name: 시작
       items:
-        - name: Azure App Service에 Spring Boot 응용 프로그램 배포
+        - name: Azure App Service에 Spring Boot 앱 배포
           href: deploy-spring-boot-java-web-app-on-azure.md
-        - name: Azure Web Apps의 Maven 플러그 인을 사용하여 Spring Boot 앱을 Azure에 배포하는 방법
+        - name: Azure Web Apps의 Maven 플러그 인을 사용하여 Azure에 Spring Boot 앱 배포
           href: deploy-spring-boot-java-app-with-maven-plugin.md
     - name: 자습서
       items:
         - name: Azure Container Service에서 Kubernetes에 Spring Boot 앱 배포
           href: deploy-spring-boot-java-app-on-kubernetes.md
-        - name: Azure Container Service에서 Linux에 Spring Boot Web App 배포
+        - name: Azure Container Service에서 Linux에 Spring Boot 웹앱 배포
           href: deploy-spring-boot-java-app-on-linux.md
         - name: Fabric8 Maven 플러그인을 사용하여 Spring Boot 앱 배포
           href: deploy-spring-boot-java-app-using-fabric8-maven-plugin.md
     - name: 사용 방법
       items:
-        - name: Redis Cache를 사용하도록 Spring Boot Initializer 앱을 구성하는 방법
+        - name: Redis Cache를 사용하여 Spring Boot Initializer 앱 구성
           href: configure-spring-boot-initializer-java-app-with-redis-cache.md
-        - name: Azure DB Cosmos DocumentDB API에서 Spring Boot Starter를 사용하는 방법
+        - name: Azure Cosmos DB에 Spring Boot Starter 사용
           href: configure-spring-boot-starter-java-app-with-cosmos-db.md
-        - name: Azure Web Apps의 Maven 플러그 인을 사용하여 컨테이너화된 Spring Boot 앱을 Azure에 배포하는 방법
+        - name: Azure Web Apps의 Maven 플러그 인을 사용하여 Azure에 컨테이너화된 Spring Boot 앱 배포
           href: deploy-containerized-spring-boot-java-app-with-maven-plugin.md
-        - name: Azure Web Apps의 Maven 플러그 인을 사용하여 Azure Container Registry의 Spring Boot 앱을 Azure App Service에 배포하는 방법
+        - name: Azure Web Apps의 Maven 플러그 인을 사용하여 Azure App Service에 Azure Container Registry의 Spring Boot 앱 배포
           href: deploy-spring-boot-java-app-from-container-registry-using-maven-plugin.md

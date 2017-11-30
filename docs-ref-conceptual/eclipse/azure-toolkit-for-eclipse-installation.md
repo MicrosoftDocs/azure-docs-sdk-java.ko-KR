@@ -12,17 +12,24 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 09/11/2017
+ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 59a8bfb6ab4db8ea8c6c9025ca3ced8a13192628
-ms.sourcegitcommit: 256044d7cbce16dcb8dc4e195d0f63c10cb44d4e
+ms.openlocfilehash: 1f06b02a4c0b23d98ecd394d42f41f7148b6c8e8
+ms.sourcegitcommit: 062e07cbd42cda74f02c82b933ce90da646a50a0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="installing-the-azure-toolkit-for-eclipse"></a>Eclipse용 Azure 도구 키트 설치
 
-Eclipse용 Azure 도구 키트는 Eclipse 개발 환경에서 Azure 응용 프로그램을 쉽게 작성, 개발, 테스트 및 배포할 수 있는 템플릿과 기능을 제공합니다. Eclipse용 Azure 도구 키트는 오픈 소스 프로젝트입니다. 소스 코드는 <https://github.com/microsoft/azure-tools-for-java>의 MIT 라이선스 아래에서 확인할 수 있습니다.
+Eclipse용 Azure 도구 키트는 Eclipse 개발 환경에서 Azure 응용 프로그램을 쉽게 작성, 개발, 테스트 및 배포할 수 있는 템플릿과 기능을 제공합니다.
+
+> [!NOTE] 
+> 
+> Eclipse용 Azure 도구 키트는 다음 URL에 있는 GitHub의 프로젝트 사이트를 통해 MIT 라이선스에 따라 소스 코드 사용이 허가된 오픈 소스 프로젝트입니다. 
+> 
+> <https://github.com/microsoft/azure-tools-for-java> 
+> 
 
 다음 단계는 Eclipse용 Azure 도구 키트를 설치하는 방법을 보여줍니다.
 
@@ -42,17 +49,17 @@ Eclipse용 Azure 도구 키트는 Eclipse 개발 환경에서 Azure 응용 프�
    
    ![Eclipse용 Azure 도구 키트 설치][02]
 
-1. **Azure Toolkit for Eclipse**를 확장하면 다음 예제처럼 항목의 목록이 표시됩니다.
-   
-   * **Application Insights Plugin for Java**: 이 구성 요소는 응용 프로그램 및 서버 인스턴스에 대해 Azure의 원격 분석 로깅 및 분석 서비스를 사용할 수 있도록 합니다.
-   * **Azure Access Control Services Filter**:이 구성 요소는 Azure ACS에서 응용 프로그램 사용자를 인증하도록 하고 Single Sign-On 시나리오를 사용하도록 하고 응용 프로그램에서 ID 논리를 외부화합니다.
-   * **Azure Common Plugin**: 이 구성 요소는 다른 도구 키트 구성 요소에 필요한 공통 기능을 제공합니다.
-   * **Azure Explorer for Eclipse**: 이 구성 요소는 다른 도구 키트 구성 요소에 필요한 공통 기능을 제공합니다.
-   * **Azure Plugin for Eclipse with Java**: 이 구성 요소는 Eclipse에서 및 명령줄을 통해 Microsoft Azure 클라우드용 Java 응용 프로그램을 빌드, 테스트 및 배포하도록 지원하는 프로젝트를 개발할 수 있도록 합니다.
-   * **Azure Web Apps Plugin with Java**: 이 구성 요소는 Microsoft Azure 웹앱 컨테이너에 Java 웹 응용 프로그램을 배포할 수 있도록 지원합니다.
-   * **Microsoft JDBC Driver 4.2 for SQL Server**: 이 구성 요소는 SQL Server용 JDBC API와 Java Platform Enterprise Edition 8용 Microsoft Azure SQL 데이터베이스를 제공합니다.
-   * **Package for Apache Qpid Client Libraries for JMS**: 이 구성 요소는 응용 프로그램이 Microsoft Azure 내에서 AMQP 메시징을 사용할 수 있도록 Apache Qpid 프로젝트의 JMS 클라이언트 구성 요소를 제공합니다.
-   * **Package for Microsoft Azure Libraries for Java**: 이 구성 요소는 저장소, 서비스 버스, 서비스 런타임 등의 Microsoft Azure 서비스에 액세스하기 위한 API를 제공합니다.
+1. **Eclipse용 Azure 도구 키트**를 확장하면 설치되는 구성 요소 목록이 표시되며, 다음은 그 예입니다.
+
+   | 기능 | 설명 | 
+   |---|---| 
+   | **Java용 Application Insights 플러그 인** | 응용 프로그램 및 서버 인스턴스에 Azure 원격 분석 로깅 및 분석 서비스를 사용할 수 있게 해줍니다. | 
+   | **Azure 공통 플러그 인** | 다른 도구 키트 구성 요소에 필요한 공통 기능을 제공합니다. | 
+   | **Eclipse용 Azure Container 도구** | .WAR을 docker 컴퓨터의 Docker 컨테이너로 빌드 및 배포할 수 있게 해줍니다. | 
+   | **Eclipse용 Azure 컨테이너** | .WAR 또는 .JAR 아티팩트를 Azure 가상 머신에 Docker 컨테이너로 배포할 수 있게 해줍니다. | 
+   | **Eclipse용 Azure 탐색기** | Azure 리소스를 관리할 수 있는 탐색기 스타일의 인터페이스를 제공합니다. | 
+   | **SQL Server용 Microsoft JDBC Driver 6.1** | SQL Server용 JDBC API와 Java Platform Enterprise Edition 8용 Microsoft Azure SQL Database를 제공합니다. | 
+   | **Java용 Microsoft Azure 라이브러리 패키지** | 저장소, service bus, 서비스 런타임 등의 Microsoft Azure 서비스에 액세스하기 위한 API를 제공합니다. | 
 
 1. **다음**을 누릅니다. (도구 키트를 설치하는 동안 비정상적인 지연이 발생하는 경우에는 **Contact all update sites during install to find required software** 가 선택되어 있지 않은지 확인합니다.)
 
@@ -74,7 +81,7 @@ Eclipse용 Azure 도구 키트는 Eclipse 개발 환경에서 Azure 응용 프�
 
 ## <a name="next-steps"></a>다음 단계
 
-[!INCLUDE [azure-toolkit-additional-resources](../includes/azure-toolkit-additional-resources.md)]
+[!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 
 <!-- URL List -->
 

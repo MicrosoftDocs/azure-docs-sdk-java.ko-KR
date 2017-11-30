@@ -13,20 +13,20 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: java
 ms.topic: article
-ms.date: 10/11/2017
+ms.date: 11/01/2017
 ms.author: yuwzho;robmcm
 ms.custom: 
-ms.openlocfilehash: 4a1ed7f4bfe7f3fe9483e5822912035eded72887
-ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
+ms.openlocfilehash: 6c0e0e233b44b2b54e869b443edf3a255e7fbfb4
+ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="deploy-a-spring-boot-app-using-the-fabric8-maven-plugin"></a>Fabric8 Maven 플러그인을 사용하여 Spring Boot 앱 배포
 
 **[Fabric8]**은 개발자들이 Linux 컨테이너에서 응용 프로그램을 만들 수 있게 지원하는 **[Kubernetes]** 기반 오픈 소스 솔루션입니다.
 
-이 자습서에서는 Maven용 Fabric8 플러그인을 사용하여 [ACS(Azure Container Service)]에서 응용 프로그램을 개발하고 Linux 호스트에 배포하는 방법을 설명합니다.
+이 자습서에서는 Maven용 Fabric8 플러그인을 사용하여 [AKS(Azure Container Service)]에서 응용 프로그램을 개발하고 Linux 호스트에 배포하는 방법을 설명합니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -78,7 +78,7 @@ ms.lasthandoff: 10/24/2017
    mvn clean package spring-boot:run
    ```
 
-1. http://localhost:8080 으로 이동하거나 다음 `curl` 명령을 사용하여 웹앱을 테스트합니다.
+1. http://localhost:8080 으로 이동하거나 다음`curl` 명령을 사용하여 웹앱을 테스트합니다.
    ```shell
    curl http://localhost:8080
    ```
@@ -524,7 +524,7 @@ Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대�
 <!-- URL List -->
 
 [Azure CLI(명령줄 인터페이스)]: /cli/azure/overview
-[ACS(Azure Container Service)]: https://azure.microsoft.com/services/container-service/
+[AKS(Azure Container Service)]: https://azure.microsoft.com/services/container-service/
 [Azure Java 개발자 센터]: https://azure.microsoft.com/develop/java/
 [Azure portal]: https://portal.azure.com/
 [Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal

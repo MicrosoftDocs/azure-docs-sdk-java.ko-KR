@@ -13,14 +13,14 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: java
 ms.topic: article
-ms.date: 10/11/2017
+ms.date: 11/01/2017
 ms.author: asirveda;robmcm
 ms.custom: mvc
-ms.openlocfilehash: 44c20e9084d53fa366137fc191726aaa4be177f2
-ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
+ms.openlocfilehash: 7f72a0eaeb932b400cd12a3ccc43706e890aebf6
+ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-container-service"></a>Azure Container Service의 Kubernetes 클러스터에 Spring Boot 응용 프로그램 배포
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 10/24/2017
 
 **[Kubernetes]** 및  **[Docker]**는 개발자가 컨테이너에서 실행 중인 응용 프로그램의 배포, 확장 및 관리를 자동화하는 데 도움이 되는 오픈 소스 솔루션입니다.
 
-이 자습서에서는 이러한 두 가지 인기 있는 오픈 소스 기술을 결합하여 Spring Boot 응용 프로그램을 개발하고 Microsoft Azure에 배포하는 과정을 안내합니다. 좀 더 구체적으로 말하면 응용 프로그램 개발을 위해 *[Spring Boot]* , 컨테이너 배포를 위해  *[Kubernetes]* 및 응용 프로그램을 호스트하기 위해 [ACS(Azure Container Service)]를 사용합니다.
+이 자습서에서는 이러한 두 가지 인기 있는 오픈 소스 기술을 결합하여 Spring Boot 응용 프로그램을 개발하고 Microsoft Azure에 배포하는 과정을 안내합니다. 좀 더 구체적으로 말하면 응용 프로그램 개발을 위해 *[Spring Boot]*, 컨테이너 배포를 위해 *[Kubernetes]* 및 응용 프로그램을 호스트하기 위해 [AKS(Azure Container Service)]를 사용합니다.
 
 ### <a name="prerequisites"></a>필수 조건
 
@@ -75,7 +75,7 @@ ms.lasthandoff: 10/24/2017
    mvn package spring-boot:run
    ```
 
-1. Http://localhost:8080으로 이동하거나 다음 `curl` 명령을 사용하여 웹앱을 테스트합니다.
+1. http://localhost:8080 으로 이동하거나 다음`curl` 명령을 사용하여 웹앱을 테스트합니다.
    ```
    curl http://localhost:8080
    ```
@@ -189,7 +189,7 @@ ms.lasthandoff: 10/24/2017
 >
 > `docker push wingtiptoysregistry.azurecr.io/gs-spring-boot-docker`
 
-## <a name="create-a-kubernetes-cluster-on-acs-using-the-azure-cli"></a>Azure CLI를 사용하여 ACS에서 Kubernetes 클러스터 만들기
+## <a name="create-a-kubernetes-cluster-on-aks-using-the-azure-cli"></a>Azure CLI를 사용하여 AKS에서 Kubernetes 클러스터 만들기
 
 1. Azure Container Service에서 Kubernetes 클러스터를 만듭니다. 다음 명령은 *wingtiptoys-containerservice*를 클러스터 이름으로 사용하고 *wingtiptoys-kubernetes*를 DNS 접두어로 사용하여 *wingtiptoys-kubernetes* 리소스 그룹에 *kubernetes* 클러스터를 만듭니다.
    ```azurecli
@@ -326,7 +326,7 @@ Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대�
 <!-- URL List -->
 
 [Azure CLI(명령줄 인터페이스)]: /cli/azure/overview
-[ACS(Azure Container Service)]: https://azure.microsoft.com/services/container-service/
+[AKS(Azure Container Service)]: https://azure.microsoft.com/services/container-service/
 [Azure Java 개발자 센터]: https://azure.microsoft.com/develop/java/
 [Azure portal]: https://portal.azure.com/
 [Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal

@@ -12,20 +12,20 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 10/19/2017
+ms.date: 11/01/2017
 ms.author: robmcm;asirveda
-ms.openlocfilehash: d3f91a7b501adfd9496991e955024298b637b90d
-ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
+ms.openlocfilehash: f94900ab5fa25a5d9dac19f665705b970db7c8b7
+ms.sourcegitcommit: 062e07cbd42cda74f02c82b933ce90da646a50a0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="azure-toolkit-for-eclipse"></a>Eclipse용 Azure 도구 키트
-Eclipse용 Azure 도구 키트는 Eclipse IDE(통합 개발 환경)에서 Azure 응용 프로그램을 쉽게 작성, 개발, 테스트 및 배포할 수 있는 템플릿과 기능을 제공합니다. [프로젝트 사이트의 MIT 라이선스](https://github.com/microsoft/azure-tools-for-java)에 따라 소스 코드 사용이 허가되는 오픈 소스 프로젝트입니다.
+Eclipse용 Azure 도구 키트는 Eclipse IDE(통합 개발 환경)에서 Azure 응용 프로그램을 쉽게 작성, 개발, 테스트 및 배포할 수 있는 템플릿과 기능을 제공합니다.
 
 > [!NOTE]
-> IntelliJ IDE용 Azure 도구 키트도 있습니다. 자세한 내용은 [IntelliJ용 Azure 도구 키트](../intellij/azure-toolkit-for-intellij.md)를 참조하세요.
 > 
+> IntelliJ IDE용 Azure 도구 키트도 있습니다. 자세한 내용은 [IntelliJ용 Azure 도구 키트](../intellij/azure-toolkit-for-intellij.md)를 참조하세요.
 > 
 
 ## <a name="get-started-with-the-azure-toolkit-for-eclipse"></a>Eclipse용 Azure 도구 키트 시작
@@ -67,7 +67,12 @@ Eclipse용 Azure 도구 키트에 대한 자세한 내용은 다음 페이지를
 
 Azure에서 Java를 사용하는 방법에 대한 자세한 내용은 [Azure Java 개발자 센터](https://azure.microsoft.com/develop/java/) 및 [Visual Studio Team Services용 Java 도구](https://java.visualstudio.com/)를 참조하세요.
 
-<!-- [!INCLUDE [azure-toolkit-additional-resources](../includes/azure-toolkit-additional-resources.md)] -->
+<!-- [!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)] -->
+
+> [!NOTE]
+> 
+> Eclipse용 Azure 도구 키트는 [프로젝트 사이트의 MIT 라이선스](https://github.com/microsoft/azure-tools-for-java)에 따라 소스 코드 사용이 허가된 오픈 소스 프로젝트입니다.
+> 
 
 <!-- URL List -->
 

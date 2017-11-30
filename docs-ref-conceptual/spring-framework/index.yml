@@ -18,49 +18,29 @@ metadata:
 sections:
   - items:
       - type: markdown
-        text: |
-          [Spring Framework](http://spring.io/)는 Java 개발자가 엔터프라이즈 수준의 응용 프로그램을 만드는 데 도움이 되는 오픈 소스 솔루션입니다. 해당 플랫폼을 기반으로 하여 빌드되는 인기 있는 프로젝트 중 하나가 [Spring Boot](https://projects.spring.io/spring-boot/)입니다. 이 프로젝트는 독립 실행형 Java 응용 프로그램을 만드는 간단한 방법을 제공합니다. 개발자는 이러한 기술을 Microsoft Azure와 결합하여 강력한 클라우드 기반 응용 프로그램을 만들 수 있습니다.
-          Spring Boot을 시작하는 개발자를 도우려면 <https://github.com/spring-guides/>에서 몇 가지 샘플 Spring Boot 패키지를 사용할 있습니다. 기본 Spring Boot 프로젝트 목록에서 선택하는 것 외에도 **[Spring Initializr]**를 통해 사용자 지정 Spring Boot 응용 프로그램을 만들기 시작하는 개발자에게 도움을 줍니다.
+        text: '[Spring Framework](http://spring.io/)는 Java 개발자가 엔터프라이즈 수준 응용 프로그램을 만드는 데 도움이 되는 오픈 소스 솔루션이며, 해당 플랫폼 맨 위에 빌드되는 인기 있는 프로젝트 중 하나가 [Spring Boot](https://projects.spring.io/spring-boot/)입니다. 이 프로젝트는 독립 실행형 Java 응용 프로그램을 만들기 위한 간단한 방법을 제공합니다. 이 웹 사이트의 정보를 사용하면 개발자는 이러한 기술을 Microsoft Azure와 결합하여 강력한 클라우드 기반 응용 프로그램을 만들 수 있습니다.'
   - title: 시작
     items:
-      - type: paragraph
+      - type: markdown
         text: 다음 리소스를 사용하여 Microsoft Azure로 Spring Framework를 사용하여 앱 개발을 시작하십시오.
       - type: list
-        style: cards
-        className: cardsM
-        columns: 2
+        style: unordered
         items:
-          - href: deploy-spring-boot-java-web-app-on-azure.md
-            html: <p>Azure App Service에 Spring Boot 응용 프로그램 배포</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
-            title: Azure App Service에 Spring Boot 응용 프로그램 배포
-          - href: 'https://spring.io/'
-            html: <p>Spring Framework</p>
-            image:
-              src: 'https://docs.microsoft.com/java/azure/spring-framework/media/index/i_spring_logo.png'
-            title: Spring Framework
+          - html: <a href="/java/azure/spring-framework/deploy-spring-boot-java-web-app-on-azure">Azure App Service에 Spring Boot 앱 배포</a>
+          - html: <a href="/java/azure/spring-framework/deploy-spring-boot-java-app-with-maven-plugin">Azure Web Apps의 Maven 플러그 인을 사용하여 Azure에 Spring Boot 앱 배포</a>
   - title: 공식적인 Spring 설명서
     items:
       - type: list
-        style: cards
-        className: cardsM
-        columns: 2
+        style: unordered
         items:
-          - href: 'https://spring.io/docs'
-            html: <p>Spring 알아보기</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_reference.svg'
-            title: Spring 알아보기
-          - href: 'https://spring.io/docs/reference'
-            html: <p>참조 설명서</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_api-reference.svg'
-            title: 참조 설명서
+          - html: '<a href="https://spring.io/">Spring Framework</a>'
+          - html: '<a href="https://spring.io/docs">Spring 알아보기</a>'
+          - html: '<a href="https://spring.io/docs/reference">참조 설명서</a>'
   - title: 샘플
     items:
       - type: list
         style: unordered
         items:
+          - html: '<a href="https://start.spring.io/">Spring Initializr</a>'
           - html: '<a href="https://github.com/spring-guides/">Spring 가이드</a>'
           - html: '<a href="https://github.com/Microsoft/azure-spring-boot/">Azure용 Spring Boot Starters</a>'
