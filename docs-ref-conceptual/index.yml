@@ -37,15 +37,15 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_code-samples.svg'
             title: 코드 샘플
           - href: java-azure-tools.md
-            html: <p>개발자 도구</p>
+            html: <p>IDE 플러그 인 &amp; 도구</p>
             image:
               src: 'https://docs.microsoft.com/media/common/i_download-install.svg'
-            title: IDE 플러그 인 &amp; 도구
+            title: 'IntelliJ, Maven, Eclipse 및 VS 코드 플러그 인'
           - href: java-sdk-azure-install.md
-            html: <p>Java용 Azure 라이브러리</p>
+            html: <p>API 참조</p>
             image:
               src: 'https://docs.microsoft.com/media/common/i_api-reference.svg'
-            title: API 참조
+            title: Java용 Azure 라이브러리
   - title: 5분 빠른 시작
     items:
       - type: paragraph
