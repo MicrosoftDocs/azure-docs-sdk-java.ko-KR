@@ -1,18 +1,16 @@
-## <a name="prerequisites"></a><span data-ttu-id="96d1a-101">필수 조건</span><span class="sxs-lookup"><span data-stu-id="96d1a-101">Prerequisites</span></span>
-<span data-ttu-id="96d1a-102">이 문서의 단계를 완료하려면 다음 소프트웨어 구성 요소가 필요한 Eclipse용 Azure 도구 키트를 설치해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="96d1a-102">To complete the steps in his article, you will need to install the Azure Toolkit for Eclipse, which requires the following software components:</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="c0232-101">필수 조건</span><span class="sxs-lookup"><span data-stu-id="c0232-101">Prerequisites</span></span>
+<span data-ttu-id="c0232-102">이 문서의 단계를 완료하려면 다음 소프트웨어 구성 요소가 필요한 Eclipse용 Azure 도구 키트를 설치해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0232-102">To complete the steps in his article, you will need to install the Azure Toolkit for Eclipse, which requires the following software components:</span></span>
 
-* <span data-ttu-id="96d1a-103">Eclipse IDE for Java EE Developers, Mars 이상.</span><span class="sxs-lookup"><span data-stu-id="96d1a-103">Eclipse IDE for Java EE Developers, Mars, or later.</span></span> <span data-ttu-id="96d1a-104">[Eclipse 웹 사이트](http://www.eclipse.org/downloads/)에서 다운로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="96d1a-104">You can download it from the [Eclipse website](http://www.eclipse.org/downloads/).</span></span>
-
-* <span data-ttu-id="96d1a-105">JDK(Java Developer Kit) 버전 1.8 이상</span><span class="sxs-lookup"><span data-stu-id="96d1a-105">A Java Developer Kit (JDK), version 1.8 or later.</span></span>
-
-* <span data-ttu-id="96d1a-106">운영 체제</span><span class="sxs-lookup"><span data-stu-id="96d1a-106">An operating system.</span></span> <span data-ttu-id="96d1a-107">Eclipse용 Azure 도구 키트는 다음 운영 체제에서 테스트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="96d1a-107">The Azure Toolkit for Eclipse has been tested on the following operating systems:</span></span>
+* <span data-ttu-id="c0232-103">Eclipse IDE for Java EE Developers, Mars 이상.</span><span class="sxs-lookup"><span data-stu-id="c0232-103">Eclipse IDE for Java EE Developers, Mars, or later.</span></span> <span data-ttu-id="c0232-104">[Eclipse 웹 사이트](http://www.eclipse.org/downloads/)에서 다운로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0232-104">You can download it from the [Eclipse website](http://www.eclipse.org/downloads/).</span></span>
+* <span data-ttu-id="c0232-105">JDK(Java Developer Kit) 버전 1.8 이상</span><span class="sxs-lookup"><span data-stu-id="c0232-105">A Java Developer Kit (JDK), version 1.8 or later.</span></span>
+* <span data-ttu-id="c0232-106">운영 체제</span><span class="sxs-lookup"><span data-stu-id="c0232-106">An operating system.</span></span> <span data-ttu-id="c0232-107">Eclipse용 Azure 도구 키트는 다음 운영 체제에서 테스트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c0232-107">The Azure Toolkit for Eclipse has been tested on the following operating systems:</span></span>
   
-  * <span data-ttu-id="96d1a-108">Windows 10, Windows 8.1, Windows 8 및 Windows 7</span><span class="sxs-lookup"><span data-stu-id="96d1a-108">Windows 10, Windows 8.1, Windows 8, and Windows 7</span></span>
-  * <span data-ttu-id="96d1a-109">Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 및 Windows Server 2008</span><span class="sxs-lookup"><span data-stu-id="96d1a-109">Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008</span></span>
-  * <span data-ttu-id="96d1a-110">[Mac OS X](http://www.apple.com/osx) 버전 "Yosemite" 이상</span><span class="sxs-lookup"><span data-stu-id="96d1a-110">[Mac OS X](http://www.apple.com/osx) version "Yosemite" and later</span></span>
-  * <span data-ttu-id="96d1a-111">[Ubuntu Linux](http://www.ubuntu.com) 버전 14, 15 및 16</span><span class="sxs-lookup"><span data-stu-id="96d1a-111">[Ubuntu Linux](http://www.ubuntu.com) version 14, 15, and 16</span></span>
+  * <span data-ttu-id="c0232-108">Windows 10, Windows 8.1, Windows 8 및 Windows 7</span><span class="sxs-lookup"><span data-stu-id="c0232-108">Windows 10, Windows 8.1, Windows 8, and Windows 7</span></span>
+  * <span data-ttu-id="c0232-109">Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 및 Windows Server 2008</span><span class="sxs-lookup"><span data-stu-id="c0232-109">Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008</span></span>
+  * <span data-ttu-id="c0232-110">[Mac OS X](http://www.apple.com/osx) 버전 "Yosemite" 이상</span><span class="sxs-lookup"><span data-stu-id="c0232-110">[Mac OS X](http://www.apple.com/osx) version "Yosemite" and later</span></span>
+  * <span data-ttu-id="c0232-111">[Ubuntu Linux](http://www.ubuntu.com) 버전 14, 15 및 16</span><span class="sxs-lookup"><span data-stu-id="c0232-111">[Ubuntu Linux](http://www.ubuntu.com) version 14, 15, and 16</span></span>
 
-<span data-ttu-id="96d1a-112">자세한 내용은 Eclipse Marketplace의 [Eclipse용 Azure 도구 키트](http://marketplace.eclipse.org/content/azure-toolkit-eclipse) 페이지에서 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="96d1a-112">For more information, see the [Azure Toolkit for Eclipse](http://marketplace.eclipse.org/content/azure-toolkit-eclipse) page at the Eclipse Marketplace.</span></span>
+<span data-ttu-id="c0232-112">자세한 내용은 Eclipse Marketplace의 [Eclipse용 Azure 도구 키트](http://marketplace.eclipse.org/content/azure-toolkit-eclipse) 페이지에서 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c0232-112">For more information, see the [Azure Toolkit for Eclipse](http://marketplace.eclipse.org/content/azure-toolkit-eclipse) page at the Eclipse Marketplace.</span></span>
 
 <!--
 > [!IMPORTANT]
