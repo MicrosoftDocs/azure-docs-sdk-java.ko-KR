@@ -14,11 +14,11 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 11/01/2017
 ms.author: robmcm;asirveda;martinsawicki
-ms.openlocfilehash: 128995cfd9122bbd6e32f2a31c35f206b5108ad6
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.openlocfilehash: 666401b88c937909dc01d74fe204bb0099ebf55c
+ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="whats-new-in-the-azure-toolkit-for-eclipse"></a>Eclipse용 Azure 도구 키트의 새로운 기능
 
@@ -328,7 +328,7 @@ Eclipse용 Azure 도구 키트 - 2014년 6월 릴리스는 다음과 같은 향�
 [Eclipse용 Azure 탐색기를 사용하여 Storage 계정 관리]: ./azure-toolkit-for-eclipse-managing-storage-accounts-using-azure-explorer.md
 [Eclipse용 Azure 탐색기를 사용하여 Virtual Machines 관리]: ./azure-toolkit-for-eclipse-managing-virtual-machines-using-azure-explorer.md
 
-[Azure Java Developer Center]: https://docs.microsoft.com/java/azure
+[Azure for Java Developers]: https://docs.microsoft.com/java/azure
 
 [Zulu OpenJDK용 Azul Systems 웹 페이지]: http://go.microsoft.com/fwlink/?LinkId=402457
 [Azure 서비스 끝점]: http://go.microsoft.com/fwlink/?LinkID=699526

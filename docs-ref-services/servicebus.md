@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: service-bus
-ms.openlocfilehash: f7c2b1fd35fbb9dbdc782577c3464b7a38977254
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: 6fccbc76a3600e2bbe43e4332c6146d2be81b6c9
+ms.sourcegitcommit: fcf1189ede712ae30f8c7626bde50c9b8bb561bc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="service-bus-libraries-for-java"></a>Java용 Service Bus 라이브러리
 
@@ -29,7 +29,7 @@ Service Bus 기능은 비교 가능하며, 종종 고급 온-프레미스 레거
 
 Service Bus Premium은 간단하고 용량 지향적인 가격 책정 모델 및 상용 온-프레미스 브로커보다 훨씬 낮은 전체 비용으로 예측 가능한 성능을 제공하는 각 테넌트에 예약된 전용 용량을 갖추고서 완전하게 관리되는 제품입니다. 많은 고객을 위해 Service Bus Premium은 현재 연결된 워크로드가 클라우드에서 실행되지 않는 경우에도 전용 온-프레미스 메시지 클러스터를 대체할 수 있습니다. 
 
-[메시지 설명서 섹션](https://docs.microsoft.com/en-us/azure/service-bus-messaging/)에서 Service Bus 개념에 대해 자세히 알아보세요. 
+[메시지 설명서 섹션](https://docs.microsoft.com/azure/service-bus-messaging/)에서 Service Bus 개념에 대해 자세히 알아보세요. 
 
 Java 개발자를 위해 Service Bus는 Microsoft에서 지원하는 기본 API를 제공하며, Apache Qpid Proton의 JMS 공급자와 같은 AMQP 1.0 규격 라이브러리와 함께 사용할 수도 있습니다.
 

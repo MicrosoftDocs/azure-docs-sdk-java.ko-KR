@@ -14,11 +14,11 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 11/01/2017
 ms.author: robmcm;asirveda;martinsawicki
-ms.openlocfilehash: 40d93306b840736bd7eb860933cdbfe03c82691c
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.openlocfilehash: 14d9b4630546dbcb16506834678b86fa56a69c76
+ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="whats-new-in-the-azure-toolkit-for-intellij"></a>IntelliJ용 Azure 도구 키트의 새로운 기능
 
@@ -41,7 +41,7 @@ IntelliJ용 Azure 도구 키트 - 2017년 4월 릴리스에는 다음과 같은 
 * **향상된 Azure 로그인 환경**: IntelliJ용 Azure 도구 키트에서는 이제 Azure 계정에 로그인하는 두 가지 방법인 *대화형* 및 *자동*을 지원합니다. 자세한 내용은 [IntelliJ용 Azure 도구 키트에 대한 Azure 로그인 지침]을 참조하세요.
 * **Docker 컨테이너를 사용한 게시**: 이제 IntelliJ용 Azure 도구 키트를 사용하여 웹 응용 프로그램을 Docker 컨테이너로 게시할 수 있습니다. 자세한 내용은 [IntelliJ용 Azure 도구 키트를 사용하여 웹앱을 Docker 컨테이너로 게시하는 방법]을 참조하세요.
 * **Storage 계정 관리**: IntelliJ용 Azure 도구 키트에서는 이제 Azure 탐색기 보기에서 Storage 계정을 관리하도록 지원합니다. 자세한 내용은 [IntelliJ용 Azure 탐색기를 사용하여 Storage 계정 관리]를 참조하세요.
-* **관리**: IntelliJ용 Azure 도구 키트에서는 이제 Azure 탐색기 보기에서 가상 컴퓨터를 관리하도록 지원합니다. 자세한 내용은 [IntelliJ용 Azure 탐색기를 사용하여 Virtual Machines 관리]를 참조하세요.
+*  **관리**: IntelliJ용 Azure 도구 키트에서는 이제 Azure 탐색기 보기에서 가상 컴퓨터를 관리하도록 지원합니다. 자세한 내용은 [IntelliJ용 Azure 탐색기를 사용하여 Virtual Machines 관리]를 참조하세요.
 * **원격 디버깅 지원 제거**. Azure App Service의 Java 웹앱에 대한 원격 디버깅 기능이 IntelliJ용 Azure 도구 키트에서 제거되었습니다. 도구 키트 사용 시 발생하는 몇 가지 문제를 해결하기 위해 제거가 필요했습니다.
 
 ### <a name="august-26-2016"></a>2016년 8월 26일
@@ -85,6 +85,6 @@ IntelliJ용 Azure 도구 키트 - 2016년 4월 릴리스에는 다음과 같은 
 [IntelliJ용 Azure 탐색기를 사용하여 Storage 계정 관리]: ./azure-toolkit-for-intellij-managing-storage-accounts-using-azure-explorer.md
 [IntelliJ용 Azure 탐색기를 사용하여 Virtual Machines 관리]: ./azure-toolkit-for-intellij-managing-virtual-machines-using-azure-explorer.md
 
-[Azure Java Developer Center]: https://docs.microsoft.com/java/azure
+[Azure for Java Developers]: https://docs.microsoft.com/java/azure
 
 [IntelliJ용 HDInsight 도구 플러그 인]: /azure/hdinsight/hdinsight-apache-spark-intellij-tool-plugin
