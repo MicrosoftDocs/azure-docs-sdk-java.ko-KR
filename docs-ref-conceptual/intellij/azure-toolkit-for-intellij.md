@@ -14,11 +14,11 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 11/01/2017
 ms.author: robmcm;asirveda
-ms.openlocfilehash: 630bb80190b8821778d1855d5edf5f943b14d6d1
-ms.sourcegitcommit: 062e07cbd42cda74f02c82b933ce90da646a50a0
+ms.openlocfilehash: 4b24b5c776cb951a093515de9c11c30ea97f3a50
+ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="azure-toolkit-for-intellij"></a>IntelliJ용 Azure 도구 키트
 IntelliJ용 Azure 도구 키트는 IntelliJ IDE(통합 개발 환경)에서 Azure 응용 프로그램을 쉽게 작성, 개발, 테스트 및 배포할 수 있는 템플릿과 기능을 제공합니다.
@@ -65,7 +65,7 @@ IntelliJ용 Azure 도구 키트에 대한 자세한 내용은 다음 페이지�
 
 * [JetBrains Plugins Repository의 IntelliJ용 Azure 도구 키트](https://plugins.jetbrains.com/plugin/8053-azure-toolkit-for-intellij)
 
-Azure에서 Java를 사용하는 방법에 대한 자세한 내용은 [Azure Java 개발자 센터](https://azure.microsoft.com/develop/java/) 및 [Visual Studio Team Services용 Java 도구](https://java.visualstudio.com/)를 참조하세요.
+Azure에서 Java를 사용하는 방법에 대한 자세한 내용은 [Java 개발자용 Azure](https://docs.microsoft.com/java/azure/) 및 [Visual Studio Team Services용 Java 도구](https://java.visualstudio.com/)를 참조하세요.
 
 > [!NOTE]
 > 
@@ -76,7 +76,7 @@ Azure에서 Java를 사용하는 방법에 대한 자세한 내용은 [Azure Jav
 
 <!-- URL List -->
 
-[Azure Java Developer Center]: https://azure.microsoft.com/develop/java/
+[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
 [Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 
 <!-- Temporarily Deprecated URLs -->

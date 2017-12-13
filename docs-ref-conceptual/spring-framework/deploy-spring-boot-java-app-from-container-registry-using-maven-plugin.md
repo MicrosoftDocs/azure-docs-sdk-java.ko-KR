@@ -6,31 +6,30 @@ documentationcenter: java
 author: rmcmurray
 manager: routlaw
 editor: 
-keywords: Spring, Spring Boot, Spring Framework, Maven
 ms.assetid: 
 ms.service: multiple
 ms.workload: web
 ms.tgt_pltfrm: multiple
 ms.devlang: java
 ms.topic: article
-ms.date: 11/01/2017
+ms.date: 12/01/2017
 ms.author: robmcm;kevinzha
-ms.openlocfilehash: 548c294bd576b00b62994c09d82ec21ad72f4dbd
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.openlocfilehash: 7fa375ca805ddd037173f9dbd26b6631021e60a3
+ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a>Azure Web Apps의 Maven 플러그 인을 사용하여 Azure Container Registry의 Spring Boot 앱을 Azure App Service에 배포하는 방법
 
-**[Spring Framework]**는 Java 개발자가 웹, 모바일 및 API 응용 프로그램을 만들 수 있는 인기 있는 오픈 소스 프레임워크입니다. 이 자습서에서는 Spring을 사용하여 빠르게 시작하기 위한 규칙 기반 접근법인 [Spring Boot]를 사용하여 만든 샘플 앱을 사용합니다.
-
-이 문서에서는 Azure Container Registry에 샘플 Spring Boot 응용 프로그램을 배포하고 Azure Web Apps의 Maven 플러그 인을 사용하여 Azure App Service에 응용 프로그램을 배포하는 방법을 보여줍니다.
+이 문서에서는 Azure Container Registry에 샘플 [Spring Boot] 응용 프로그램을 배포하고 Azure Web Apps용 Maven 플러그인을 사용하여 Azure App Service에 응용 프로그램을 배포하는 방법을 보여줍니다.
 
 > [!NOTE]
->
+> 
+> [Apache Maven](http://maven.apache.org/)에서 Azure Web Apps용 Maven 플러그인은 Maven 프로젝트에 Azure App Service의 원활한 통합을 제공하고 Azure App Service에 웹앱을 배포하는 개발자를 위한 프로세스를 간소화합니다.
+> 
 > Azure Web Apps의 Maven 플러그 인은 현재 미리 보기로 사용할 수 있습니다. 지금은 FTP 게시만 지원되지만 향후에 기능이 추가될 계획입니다.
->
+> 
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -94,7 +93,7 @@ ms.lasthandoff: 11/18/2017
 
 > [!NOTE]
 >
-> Docker를 로컬에서 사용하는 경우 포트 2375의 localhost에 연결할 수 없다는 오류가 표시될 수 있습니다. 이 경우 TLS 없이 로컬에서 Docker를 사용하도록 설정해야 할 수 있습니다. 이렇게 하려면 Docker 설정을 열고 **Expose Docker Daemon on TCP://localhost:2375 without TLS**(TLS 없이 TCP://localhost:2375에서 Docker 데몬 노출)을 선택하십시오.
+> Docker를 로컬에서 사용하는 경우 포트 2375의 localhost에 연결할 수 없다는 오류가 표시될 수 있습니다. 이 경우 TLS 없이 로컬에서 Docker를 사용하도록 설정해야 할 수 있습니다. 이렇게 하려면 Docker 설정을 열고 **TLS 없이 TCP://localhost:2375에 데몬 노출** 옵션을 선택합니다.
 >
 > ![로컬 TCP 포트 2375에서 Docker 데몬 노출][TL01]
 
@@ -383,7 +382,7 @@ Maven은 Azure에 웹앱을 배포합니다. 웹앱이 아직 없는 경우 생�
 
 [Azure CLI(명령줄 인터페이스)]: /cli/azure/overview
 [Azure Container Service (AKS)]: https://azure.microsoft.com/services/container-service/
-[Azure Java Developer Center]: https://azure.microsoft.com/develop/java/
+[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
 [Azure Portal]: https://portal.azure.com/
 [Azure Web Apps의 Maven 플러그 인]: https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin
 [Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal

@@ -10,27 +10,13 @@ ms.service: Azure
 ms.technology: Azure
 ms.date: 4/10/2017
 ms.author: routlaw;asirveda
-ms.openlocfilehash: ff3ea805daefb3c0a413b109e431d2235a5dc5b8
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: 425d4c3a5a347e4706e9c37ebd7247cf0d8c9846
+ms.sourcegitcommit: f0dadb22efb191182c3b79dcaa97a76cfcdcc324
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="azure-tools-for-java-developers"></a>Java 개발자용 Azure 도구
-
-## <a name="client-and-management-libraries"></a>클라이언트 및 관리 라이브러리
-
-Java용 Azure 라이브러리를 사용하여 서비스에 연결하고 응용 프로그램에서 Azure 리소스를 관리합니다. 이 종속성을 *pom.xml* 프로젝트에 추가하여 관리 라이브러리를 Maven 프로젝트로 가져옵니다.
-
-```XML
-<dependency>
-    <groupId>com.microsoft.azure</groupId>
-    <artifactId>azure</artifactId>
-    <version>1.3.0</version>
-</dependency>
-```
-
-Java용 Azure 라이브러리와 함께 [라이브러리의 전체 목록](java-sdk-azure-install.md) 및 [시작](java-sdk-azure-get-started.md)을 봅니다.
 
 ## <a name="eclipse-and-intellij-plugins"></a>Eclipse 및 IntelliJ 플러그 인
 
@@ -39,6 +25,13 @@ Java용 Azure 라이브러리와 함께 [라이브러리의 전체 목록](java-
 ![Azure 탐색기를 보여 주는 IntelliJ 도구 키트](media/intelliJ-azure-explorer.png)
 
 [Eclipse용 Azure 도구 키트 시작](https://docs.microsoft.com/azure/app-service-web/app-service-web-eclipse-create-hello-world-web-app) | [IntelliJ용 Azure 도구 키트 시작](https://docs.microsoft.com/azure/app-service-web/app-service-web-intellij-create-hello-world-web-app) 
+
+## <a name="visual-studio-code"></a>Visual Studio Code
+
+VS Code는 가벼우면서 강력한 코드 편집기로, MacOS, Windows, Linux에 사용할 수 있습니다. VS Code는 프로젝트 지원, 코드 완성, 디버깅, 린팅, 탐색을 제공하는 여러 확장을 통해 간단한 최신 Java 개발 워크플로를 지원합니다.
+
+[VS Code 및 Java 시작](https://code.visualstudio.com/docs/java)
+[VS Code용 Java 확장 팩](https://code.visualstudio.com/docs/java/extensions)  
 
 ## <a name="azure-cli-20"></a>Azure CLI 2.0
 
@@ -50,4 +43,4 @@ Azure 2.0 CLI는 Azure 리소스를 관리하는 명령줄 환경을 제공합�
 
 바탕 화면에서 Azure 저장소 계정, 컨테이너 및 Blob/파일을 관리합니다. Azure Storage 탐색기는 현재 미리 보기로 있으며 Windows, macOS 및 Linux에서 작동합니다.
 
-[Azure 저장소 탐색기 시작](https://docs.microsoft.com/azure/vs-azure-tools-storage-manage-with-storage-explorer)
+[Azure Storage 탐색기 시작](https://docs.microsoft.com/azure/vs-azure-tools-storage-manage-with-storage-explorer)

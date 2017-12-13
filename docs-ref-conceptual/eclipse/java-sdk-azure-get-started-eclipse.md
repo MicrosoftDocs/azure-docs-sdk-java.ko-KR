@@ -1,39 +1,37 @@
 ---
-title: "Java용 Azure 라이브러리 시작"
-description: "Azure 클라우드 리소스를 만들어 연결하여 Java 응용 프로그램에서 사용하는 방법에 대해 알아봅니다."
+title: "Eclipse를 사용하여 Java용 Azure 시작"
+description: "Azure 구독을 사용하여 Java용 Azure 라이브러리의 기본적인 사용을 시작합니다."
 keywords: "Azure, Java, SDK, API, 인증, 시작"
-author: rloutlaw
-ms.author: routlaw
-manager: douge
-ms.date: 04/16/2017
+author: roygara
+ms.author: v-rogara
+manager: timlt
+ms.date: 10/30/2017
 ms.topic: get-started-article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: multiple
-ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
-ms.openlocfilehash: 69c75984f6274b5423614bd51c40957d3d509802
-ms.sourcegitcommit: 1f6a80e067a8bdbbb4b2da2e2145fda73d5fe65a
+ms.openlocfilehash: 1c1ef7b8646824c5c8bfcbbf5e0507c95ac1ee79
+ms.sourcegitcommit: fcf1189ede712ae30f8c7626bde50c9b8bb561bc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/01/2017
 ---
-# <a name="get-started-with-cloud-development-using-the-azure-libraries-for-java"></a>Java용 Azure 라이브러리를 사용한 클라우드 개발 시작
+# <a name="get-started-with-the-azure-libraries-using-eclipse"></a>Eclipse를 사용하여 Azure 라이브러리 시작
 
-이 가이드에서는 Java에서 Azure 개발을 위한 개발 환경 설정을 안내합니다. 그런 다음 몇 가지 Azure 리소스를 만들고 연결하여 파일 업로드, 웹 응용 프로그램 배포 같은 기본 작업을 수행합니다. 마치고 나면 자체 Java 응용 프로그램에서 Azure Services를 사용할 수 있습니다.
+이 가이드에서는 개발 환경 설정과 Java용 Azure 라이브러리 사용을 안내합니다. Azure를 통해 인증하는 서비스 주체를 만들고 구독에서 Azure 리소스를 만들어 사용하는 특정 샘플 코드를 실행하게 됩니다. Eclipse 사용은 Azure를 통한 Java 개발에서 선택 사항입니다. Maven 통합이 있는 모든 IDE가 작동합니다. 또는 IDE를 사용하지 않으려면 Mave을 사용하여 명령줄에서 코드를 실행할 수 있습니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
 - Azure 계정. 계정이 없으면 [체험 계정을 얻습니다](https://azure.microsoft.com/free/).
 - [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) 또는 [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2)
-- [Java 8](https://www.azul.com/downloads/zulu/)(Azure Cloud Shell에 포함되어 있음)
-- [Maven 3](http://maven.apache.org/download.cgi)(Azure Cloud Shell에 포함되어 있음)
+- [Eclipse](http://www.eclipse.org/downloads/)의 안정적인 최신 버전 
 
 ## <a name="set-up-authentication"></a>인증 설정
 
-이 자습서에서 샘플 코드를 실행하려면 Azure 구독에 대한 읽기 및 만들기 권한이 Java 응용 프로그램에 필요합니다. 서비스 사용자를 만들고 해당 자격 증명을 사용하여 실행되도록 응용 프로그램을 구성합니다. 서비스 사용자는 앱에서 실행하는 데 필요한 권한만 부여하는 ID와 연결되는 비대화형 계정을 만드는 방법을 제공합니다.
+이 자습서에서 샘플 코드를 실행하려면 Azure 구독에 대한 읽기 및 만들기 권한이 Java 응용 프로그램에 필요합니다. 서비스 사용자를 만들고 해당 자격 증명을 사용하여 실행되도록 응용 프로그램을 구성합니다. 서비스 주체는 앱에서 실행하는 데 필요한 권한만 부여하는 ID와 연결되는 비대화형 계정을 만드는 방법을 제공합니다.
 
-[Azure CLI 2.0을 사용하여 서비스 사용자를 만들고](/cli/azure/create-an-azure-service-principal-azure-cli) 출력을 캡처합니다. 암호 인수에 `MY_SECURE_PASSWORD` 대신 [보안 암호](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy)를 제공합니다. 암호는 8~16자이고 다음 4개 기준 중 3개 이상에 부합해야 합니다.
+계정 자격 증명을 직접 사용하지 않고 구독에서 리소스를 만들어 업데이트하기 위해 [서비스 주체를 만들어](/cli/azure/create-an-azure-service-principal-azure-cli) 코드 권한을 부여합니다. 출력을 캡처할 수 있는지 확인합니다. 암호 인수에 `MY_SECURE_PASSWORD` 대신 [보안 암호](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy)를 제공합니다. 암호는 8~16자이고 다음 4개 기준 중 3개 이상에 부합해야 합니다.
 
 * 소문자 포함
 * 대문자 포함
@@ -80,7 +78,7 @@ graphURL=https\://graph.windows.net/
 
 코드에서 읽을 수 있는 시스템의 안전한 위치에 이 파일을 저장합니다. 향후 코드에서 이 파일을 사용할 수 있으므로 이 문서에서 응용 프로그램의 외부에 저장해 두는 것이 좋습니다.
 
-셸에서 인증 파일의 전체 경로가 포함된 `AZURE_AUTH_LOCATION` 환경 변수를 설정합니다.   
+셸에서 인증 파일의 전체 경로가 포함된 `AZURE_AUTH_LOCATION` 환경 변수를 설정합니다.
 
 ```bash
 export AZURE_AUTH_LOCATION=/Users/raisa/azureauth.properties
@@ -97,16 +95,13 @@ Windows 환경에서 작업할 경우 변수를 시스템 속성에 추가합니
 > [!NOTE]
 > 이 가이드에서는 Maven 빌드 도구를 사용하여 샘플 코드를 빌드하고 실행하지만, Gradle과 같은 다른 빌드 도구도 Java용 Azure 라이브러리에서 작동합니다. 
 
-명령줄에서 시스템의 새 디렉터리에 Maven 프로젝트를 만듭니다.
+Eclipse를 열고 **파일** -> **새로 만들기**를 선택합니다. 표시되는 새 창에서 Maven 폴더를 열고 Maven 프로젝트를 선택합니다. 
 
-```
-mkdir java-azure-test
-cd java-azure-test
-mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp  \ 
--DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
-```
+다음 화면에서 선택 항목을 기본값으로 두고 **다음**을 선택합니다. 아키타입과 관련하여 이 화면에 대해 같은 작업을 수행합니다.
 
-이렇게 하면 `testAzureApp` 폴더 아래에 기본 Maven 프로젝트를 만듭니다. `pom.xml` 프로젝트에 다음 항목을 추가하여 이 자습서의 샘플 코드에서 사용되는 라이브러리를 가져옵니다.
+groupID, ArtifactID 등을 묻는 화면이 나타납니다. groupID에 "com.fabrikam"을 입력하고 원하는 artifactID에 "AzureApp"을 입력합니다.
+
+이제 pom.xml 파일을 엽니다. `dependencies` 태그 내에 다음 코드를 추가합니다.
 
 ```XML
 <dependency>
@@ -126,25 +121,23 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp  \
 </dependency>
 ```
 
-최상위 `project` 요소 아래에 `build` 항목을 추가하여 [maven-exec-plugin](http://www.mojohaus.org/exec-maven-plugin/)을 통해 샘플을 실행합니다.
-
-```XML
-<build>
-    <plugins>
-        <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>exec-maven-plugin</artifactId>
-            <configuration>
-                <mainClass>com.fabrikam.testAzureApp.AzureApp</mainClass>
-            </configuration>
-        </plugin>
-    </plugins>
-</build>
- ```
+이제 pom.xml을 저장합니다. 그러면 Eclipse에서 지정된 모든 종속성을 다운로드하라는 메시지가 표시됩니다. 이 작업은 시간이 걸릴 수 있습니다.
    
+## <a name="install-the-azure-toolkit-for-eclipse"></a>Eclipse용 Azure 도구 키트 설치
+
+[Azure 도구 키트](azure-toolkit-for-eclipse.md)는 웹앱이나 API를 프로그래밍 방식으로 설치하지만 현재 다른 개발 유형에는 사용하고 있지 않은 경우에 필요합니다. 다음은 설치 프로세스에 대한 요약입니다. 자세한 절차는 [Eclipse용 Azure 도구 키트 설치](azure-toolkit-for-eclipse.md)를 참조하세요.
+
+**도움말** 메뉴를 선택하고 **새 소프트웨어 설치**를 선택합니다.
+
+**작업:** 필드에 `http://dl.microsoft.com/eclipse`를 입력하고 Enter를 누릅니다.
+
+그런 다음 **Java용 Azure 도구 키트** 옆의 확인란을 선택하고 **필요한 소프트웨어를 설치하는 동안 모든 업데이트 사이트 문의** 확인란의 선택을 취소합니다. 이제 다음을 선택합니다.
+
 ## <a name="create-a-linux-virtual-machine"></a>Linux 가상 컴퓨터 만들기
 
 프로젝트의 `src/main/java` 디렉터리에 `AzureApp.java`라는 새 파일을 만들고 다음 코드 블록에 붙여넣습니다. `userName` 및 `sshKey` 변수를 컴퓨터에 대한 실제 값으로 업데이트합니다. 이 코드에서는 미국 동부 Azure 지역에서 실행되는 `sampleResourceGroup` 리소스 그룹에 `testLinuxVM`이라는 새 Linux VM을 만듭니다.
+
+`sshkey`를 만들기 위해 Azure Cloud Shell을 열고 `ssh-keygen -t rsa -b 2048`을 입력합니다. 파일 이름을 지정하고 .public 파일에 액세스하여 키를 가져옵니다. 이 키는 다음 코드에서 사용하며 복사하여 `sshKey` 변수에 붙여 넣습니다.
 
 ```java
 package com.fabrikam.AzureApp;
@@ -153,6 +146,7 @@ import com.microsoft.azure.management.Azure;
 import com.microsoft.azure.management.compute.VirtualMachine;
 import com.microsoft.azure.management.compute.KnownLinuxVirtualMachineImage;
 import com.microsoft.azure.management.compute.VirtualMachineSizeTypes;
+import com.microsoft.azure.management.appservice.PricingTier;
 import com.microsoft.azure.management.appservice.WebApp;
 import com.microsoft.azure.management.storage.StorageAccount;
 import com.microsoft.azure.management.storage.SkuName;
@@ -172,6 +166,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.List;
 
 public class AzureApp {
 
@@ -212,13 +207,8 @@ public class AzureApp {
 }
 ```
 
-명령줄에서 샘플을 실행합니다.
 
-```
-mvn compile exec:java
-```
-
-SDK에서 기본 호출을 Azure REST API로 설정하여 가상 컴퓨터 및 해당 리소스를 구성할 때 콘솔에서 일부 REST 요청과 응답이 표시됩니다. 프로그램이 완료되면 Azure CLI 2.0을 사용하여 구독의 가상 컴퓨터를 확인합니다.
+SDK에서 기본 호출을 Azure REST API로 설정하여 가상 머신 및 해당 리소스를 구성할 때 콘솔에서 일부 REST 요청과 응답이 표시됩니다. 프로그램이 완료되면 Azure CLI 2.0을 사용하여 구독의 가상 컴퓨터를 확인합니다.
 
 ```azurecli-interactive
 az vm list --resource-group sampleVmResourceGroup
@@ -266,16 +256,11 @@ az group delete --name sampleVmResourceGroup
 
 Maven을 사용하기 전에 다음 코드를 실행합니다.
 
-```
-mvn clean compile exec:java
-```
-
 CLI를 사용하여 응용 프로그램을 가리키는 브라우저를 엽니다.
 
 ```azurecli-interactive
 az appservice web browse --resource-group sampleWebResourceGroup --name YOUR_APP_NAME
 ```
-
 배포를 확인한 후 구독에서 웹앱을 제거하고 계획합니다.
 
 ```azurecli-interactive
@@ -365,61 +350,57 @@ az group delete --name sampleSqlResourceGroup
 `AzureApp.java`의 현재 main 메서드를 아래 코드로 바꿉니다. 이 코드에서는 [Azure 저장소 계정](https://docs.microsoft.com/azure/storage/storage-introduction)을 만든 다음 Java용 Azure Storage 라이브러리를 사용하여 클라우드에 새 텍스트 파일을 만듭니다.
 
 ```java
-public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    try {
+        try {
 
-        // use the properties file with the service principal information to authenticate
-        // change the name of the environment variable if you used a different name in the previous step
-        final File credFile = new File(System.getenv("AZURE_AUTH_LOCATION"));
-        Azure azure = Azure.configure()
-                .withLogLevel(LogLevel.BASIC)
-                .authenticate(credFile)
-                .withDefaultSubscription();
+            // use the properties file with the service principal information to authenticate
+            // change the name of the environment variable if you used a different name in the previous step
+            final File credFile = new File(System.getenv("AZURE_AUTH_LOCATION"));
+            Azure azure = Azure.configure()
+                    .withLogLevel(LogLevel.BASIC)
+                    .authenticate(credFile)
+                    .withDefaultSubscription();
 
-        // create a new storage account
-        String storageAccountName = SdkContext.randomResourceName("st",8);
-        StorageAccount storage = azure.storageAccounts().define(storageAccountName)
-                    .withRegion(Region.US_WEST2)
-                    .withNewResourceGroup("sampleStorageResourceGroup")
-                    .create();
+            // create a new storage account
+            String storageAccountName = SdkContext.randomResourceName("st",8);
+            StorageAccount storage = azure.storageAccounts().define(storageAccountName)
+                        .withRegion(Region.US_WEST2)
+                        .withNewResourceGroup("sampleStorageResourceGroup")
+                        .create();
 
-        // create a storage container to hold the file
-        List<StorageAccountKey> keys = storage.getKeys();
-        final String storageConnection = "DefaultEndpointsProtocol=https;"
-                + "AccountName=" + storage.name()
-                + ";AccountKey=" + keys.get(0).value()
-                + ";EndpointSuffix=core.windows.net";
+            // create a storage container to hold the files
+            List<StorageAccountKey> keys = storage.getKeys();
+            final String storageConnection = "DefaultEndpointsProtocol=https;"
+                   + "AccountName=" + storage.name()
+                   + ";AccountKey=" + keys.get(0).value()
+                    + ";EndpointSuffix=core.windows.net";
 
-        CloudStorageAccount account = CloudStorageAccount.parse(storageConnection);
-        CloudBlobClient serviceClient = account.createCloudBlobClient();
+            CloudStorageAccount account = CloudStorageAccount.parse(storageConnection);
+            CloudBlobClient serviceClient = account.createCloudBlobClient();
 
-        // Container name must be lower case.
-        CloudBlobContainer container = serviceClient.getContainerReference("helloazure");
-        container.createIfNotExists();
+            // Container name must be lower case.
+            CloudBlobContainer container = serviceClient.getContainerReference("helloazure");
+            container.createIfNotExists();
 
-        // Make the container public
-        BlobContainerPermissions containerPermissions = new BlobContainerPermissions();
-        containerPermissions.setPublicAccess(BlobContainerPublicAccessType.CONTAINER);
-        container.uploadPermissions(containerPermissions);
+            // Make the container public
+            BlobContainerPermissions containerPermissions = new BlobContainerPermissions();
+            containerPermissions.setPublicAccess(BlobContainerPublicAccessType.CONTAINER);
+            container.uploadPermissions(containerPermissions);
 
-        // write a blob to the container
-        CloudBlockBlob blob = container.getBlockBlobReference("helloazure.txt");
-        blob.uploadText("hello Azure");
+            // write a blob to the container
+            CloudBlockBlob blob = container.getBlockBlobReference("helloazure.txt");
+            blob.uploadText("hello Azure");
 
-    } catch (Exception e) {
-        System.out.println(e.getMessage());
-        e.printStackTrace();
-    }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
     }
 }
 ```
 
 명령줄에서 샘플을 실행합니다.
-
-```
-mvn clean compile exec:java
-```
 
 Azure Portal 또는 [Azure Storage 탐색기](https://docs.microsoft.com/azure/vs-azure-tools-storage-explorer-blobs)를 사용하여 저장소 계정에서 `helloazure.txt` 파일을 찾아볼 수 있습니다.
 
@@ -431,7 +412,7 @@ az group delete --name sampleStorageResourceGroup
 
 ## <a name="explore-more-samples"></a>더 많은 샘플 탐색
 
-Java용 Azure 관리 라이브러리를 사용하여 리소스를 관리하고 작업을 자동화하는 방법에 대한 자세한 내용은 [가상 컴퓨터](java-sdk-azure-virtual-machine-samples.md), [웹앱](java-sdk-azure-web-apps-samples.md) 및 [SQL 데이터베이스](java-sdk-azure-sql-database-samples.md)에 대한 샘플 코드를 참조하세요.
+Java용 Azure 관리 라이브러리를 사용하여 리소스를 관리하고 작업을 자동화하는 방법에 대한 자세한 내용은 [가상 컴퓨터](../java-sdk-azure-virtual-machine-samples.md), [웹앱](../java-sdk-azure-web-apps-samples.md) 및 [SQL 데이터베이스](../java-sdk-azure-sql-database-samples.md)에 대한 샘플 코드를 참조하세요.
 
 ## <a name="reference-and-release-notes"></a>참조 및 릴리스 정보
 

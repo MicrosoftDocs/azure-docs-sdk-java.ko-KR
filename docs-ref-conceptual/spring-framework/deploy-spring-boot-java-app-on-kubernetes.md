@@ -6,25 +6,22 @@ documentationcenter: java
 author: rmcmurray
 manager: routlaw
 editor: 
-keywords: Spring, Spring Boot, Spring Framework, Kubernetes
 ms.assetid: 
 ms.service: multiple
 ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: java
 ms.topic: article
-ms.date: 11/01/2017
+ms.date: 12/01/2017
 ms.author: asirveda;robmcm
 ms.custom: mvc
-ms.openlocfilehash: 7f72a0eaeb932b400cd12a3ccc43706e890aebf6
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.openlocfilehash: ee8d5fecc31df427645c1552e27996592eaf27af
+ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-container-service"></a>Azure Container Service의 Kubernetes 클러스터에 Spring Boot 응용 프로그램 배포
-
-**[Spring Framework]**는 Java 개발자가 웹, 모바일 및 API 응용 프로그램을 만들 수 있는 인기 있는 오픈 소스 프레임워크입니다. 이 자습서에서는 Spring을 사용하여 빠르게 시작하기 위한 규칙 기반 접근법인 [Spring Boot]를 사용하여 만든 샘플 앱을 사용합니다.
 
 **[Kubernetes]** 및  **[Docker]**는 개발자가 컨테이너에서 실행 중인 응용 프로그램의 배포, 확장 및 관리를 자동화하는 데 도움이 되는 오픈 소스 솔루션입니다.
 
@@ -300,7 +297,7 @@ Azure에서 Spring Boot를 사용 하는 방법에 대한 자세한 내용은 �
 * [Azure App Service에 Spring Boot 응용 프로그램 배포](deploy-spring-boot-java-web-app-on-azure.md)
 * [Azure Container Service에서 Linux에 Spring Boot 응용 프로그램 배포](deploy-spring-boot-java-app-on-linux.md)
 
-Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Azure Java 개발자 센터] 및 [Visual Studio Team Services용 Java 도구]를 참조하세요.
+Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 개발자용 Azure] 및 [Visual Studio Team Services용 Java 도구]를 참조하세요.
 
 Spring Boot on Docker 샘플 프로젝트에 대한 자세한 내용은 [ 시작]을 참조하세요.
 
@@ -327,7 +324,7 @@ Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대�
 
 [Azure CLI(명령줄 인터페이스)]: /cli/azure/overview
 [AKS(Azure Container Service)]: https://azure.microsoft.com/services/container-service/
-[Azure Java 개발자 센터]: https://azure.microsoft.com/develop/java/
+[Java 개발자용 Azure]: https://docs.microsoft.com/java/azure/
 [Azure portal]: https://portal.azure.com/
 [Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal
 [Linux에서 Azure Web App에 대한 사용자 지정 Docker 이미지 사용]: /azure/app-service-web/app-service-linux-using-custom-docker-image

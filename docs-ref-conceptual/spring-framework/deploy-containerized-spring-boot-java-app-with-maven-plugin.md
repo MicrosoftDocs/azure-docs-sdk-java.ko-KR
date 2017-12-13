@@ -6,31 +6,30 @@ documentationcenter: java
 author: rmcmurray
 manager: routlaw
 editor: 
-keywords: Spring, Spring Boot, Spring Framework, Maven
 ms.assetid: 
 ms.service: app-service
 ms.workload: web
 ms.tgt_pltfrm: multiple
 ms.devlang: java
 ms.topic: article
-ms.date: 11/01/2017
+ms.date: 12/01/2017
 ms.author: robmcm;kevinzha
-ms.openlocfilehash: 5bc0eb96586cac2be54065a2c1d8edefe2a21f57
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.openlocfilehash: 1ab19a4805884773239c4d99090b9e117b3859cd
+ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-containerized-spring-boot-app-to-azure"></a>Azure Web Apps의 Maven 플러그 인을 사용하여 컨테이너화된 Spring Boot 앱을 Azure에 배포하는 방법
 
-[Apache Maven](http://maven.apache.org/)에서 [Azure Web Apps의 Maven 플러그 인](https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin)은 Maven 프로젝트에 Azure App Service의 원활한 통합을 제공하고 Azure App Service에 웹앱을 배포하는 개발자를 위한 프로세스를 간소화합니다.
-
-이 문서에서는 Azure Web Apps의 Maven 플러그 인을 사용하여 Azure App Services에 Docker 컨테이너의 샘플 Spring Boot 응용 프로그램을 배포하는 방법을 보여줍니다.
+이 문서에서는 [Azure Web Apps용 Maven 플러그인](https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin)을 사용하여 Azure App Services에 Docker 컨테이너의 샘플 Spring Boot 응용 프로그램을 배포하는 방법을 보여 줍니다.
 
 > [!NOTE]
->
+> 
+> [Apache Maven](http://maven.apache.org/)에서 Azure Web Apps용 Maven 플러그인은 Maven 프로젝트에 Azure App Service의 원활한 통합을 제공하고 Azure App Service에 웹앱을 배포하는 개발자를 위한 프로세스를 간소화합니다.
+> 
 > Azure Web Apps의 Maven 플러그 인은 현재 미리 보기로 사용할 수 있습니다. 지금은 FTP 게시만 지원되지만 향후에 기능이 추가될 계획입니다.
->
+> 
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -319,7 +318,7 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 <!-- URL List -->
 
 [Azure CLI(명령줄 인터페이스)]: /cli/azure/overview
-[Azure Java Developer Center]: https://azure.microsoft.com/develop/java/
+[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
 [Azure Portal]: https://portal.azure.com/
 [Docker]: https://www.docker.com/
 [Maven용 Docker 플러그 인]: https://github.com/spotify/docker-maven-plugin

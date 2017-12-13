@@ -4,9 +4,9 @@
     - name: Java 빠른 시작
       expanded: true
       items:
-        - name: 웹앱
+        - name: Web Apps
           href: /azure/app-service-web/app-service-web-get-started-java
-        - name: SQL 데이터베이스
+        - name: SQL Database
           href: /azure/sql-database/sql-database-connect-query-java
         - name: MySQL
           href: /azure/mysql/connect-java
@@ -14,20 +14,31 @@
           href: /azure/postgresql/connect-java
         - name: Cosmos DB
           href: /azure/cosmos-db/create-documentdb-java
-    - name: Java 시작
-      href: java-sdk-azure-get-started.md
+        - name: Java용 Azure 라이브러리
+          items:
+            - name: Maven
+              href: java-sdk-azure-get-started.md
+            - name: '(예: Eclipse'
+              href: eclipse/java-sdk-azure-get-started-eclipse.md
+            - name: Intellij
+              href: intellij/java-sdk-azure-get-started-intellij.md
     - name: 도구
+      expanded: true
       href: java-azure-tools.md
       items:
+        - name: Spring
+          href: /java/azure/spring-framework/index
         - name: IntelliJ
           href: intellij/azure-toolkit-for-intellij.md
         - name: '(예: Eclipse'
           href: eclipse/azure-toolkit-for-eclipse.md
-        - name: Maven 플러그 인
+        - name: Maven
           href: 'https://github.com/Microsoft/azure-maven-plugins'
           items:
-            - name: Azure 웹앱
+            - name: Azure Web Apps
               href: 'https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin'
+        - name: Azure의 Spring
+          href: spring-framework/index.yml
     - name: Java 자습서
       items:
         - name: Spring Boot + MySQL
@@ -64,7 +75,7 @@
           href: java-sdk-azure-virtual-machine-samples.md
         - name: 웹 앱
           href: java-sdk-azure-web-apps-samples.md
-        - name: SQL 데이터베이스
+        - name: SQL Database
           href: java-sdk-azure-sql-database-samples.md
         - name: 보안
           href: java-sdk-azure-security-samples.md

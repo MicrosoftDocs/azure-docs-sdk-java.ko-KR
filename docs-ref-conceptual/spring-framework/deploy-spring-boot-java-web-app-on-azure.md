@@ -6,26 +6,23 @@ documentationcenter: java
 author: rmcmurray
 manager: routlaw
 editor: 
-keywords: Spring, Spring Boot, Spring Framework
 ms.assetid: 
 ms.service: multiple
 ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: java
 ms.topic: article
-ms.date: 11/01/2017
+ms.date: 12/01/2017
 ms.author: asirveda;robmcm
-ms.openlocfilehash: 7a4234aefd4eb33f80c1978fb84721f2dbcb2e4f
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.openlocfilehash: b520cc80360f8162c929bb2cc88c24311a7e20f8
+ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="deploy-a-spring-boot-application-to-the-azure-app-service"></a>Azure App Service에 Spring Boot 응용 프로그램 배포
 
-**[Spring Framework]**는 Java 개발자가 엔터프라이즈 수준 응용 프로그램을 만드는 데 도움이 되는 오픈 소스 솔루션이며, 해당 플랫폼 맨 위에 빌드되는 인기 있는 프로젝트 중 하나가 [Spring Boot]입니다. 이 프로젝트는 독립 실행형 Java 응용 프로그램을 만들기 위한 간단한 방법을 제공합니다.
-
-이 자습서에서는 샘플 Spring Boot 시작하기 웹앱 만들어 [Azure App Service]에 배포하는 방법을 안내합니다.
+이 자습서에서는 샘플 [Spring Boot] 시작하기 웹앱을 만들어 [Azure App Service]에 배포하는 방법을 안내합니다.
 
 ### <a name="prerequisites"></a>필수 조건
 
@@ -199,7 +196,7 @@ Azure에서 Spring Boot 응용 프로그램을 사용 하는 방법에 대한 �
 
 * [Azure Container Service의 Kubernetes 클러스터에 Spring Boot 응용 프로그램 배포](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Azure Java 개발자 센터] 및 [Visual Studio Team Services용 Java 도구]를 참조하세요.
+Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 개발자용 Azure] 및 [Visual Studio Team Services용 Java 도구]를 참조하세요.
 
 FTP를 사용하여 Azure에 웹앱을 배포하는 방법에 대한 자세한 내용은 [FTP/S를 사용하여 Azure App Service에 앱 배포]를 참조하세요.
 
@@ -213,7 +210,7 @@ Spring Boot 샘플 프로젝트에 대한 자세한 내용은 [Spring Boot 시�
 
 [Azure App Service]: https://azure.microsoft.com/services/app-service/
 [Azure Container Service]: https://azure.microsoft.com/services/container-service/
-[Azure Java 개발자 센터]: https://azure.microsoft.com/develop/java/
+[Java 개발자용 Azure]: https://docs.microsoft.com/java/azure/
 [Azure Portal]: https://portal.azure.com/
 [Azure App Service에서 웹앱 구성]: /azure/app-service/web-sites-configure
 [FTP/S를 사용하여 Azure App Service에 앱 배포]: https://docs.microsoft.com/azure/app-service/app-service-deploy-ftp
