@@ -12,11 +12,11 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
-ms.openlocfilehash: 69c75984f6274b5423614bd51c40957d3d509802
-ms.sourcegitcommit: 1f6a80e067a8bdbbb4b2da2e2145fda73d5fe65a
+ms.openlocfilehash: 2f40fa22244e5ffa3be76d4de579959dcb5591d6
+ms.sourcegitcommit: 0676cbb530207544090c1fd051a2f09760873cd8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="get-started-with-cloud-development-using-the-azure-libraries-for-java"></a>Java용 Azure 라이브러리를 사용한 클라우드 개발 시작
 
@@ -135,7 +135,7 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp  \
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>exec-maven-plugin</artifactId>
             <configuration>
-                <mainClass>com.fabrikam.testAzureApp.AzureApp</mainClass>
+                <mainClass>com.fabrikam.AzureApp</mainClass>
             </configuration>
         </plugin>
     </plugins>
@@ -144,10 +144,10 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp  \
    
 ## <a name="create-a-linux-virtual-machine"></a>Linux 가상 컴퓨터 만들기
 
-프로젝트의 `src/main/java` 디렉터리에 `AzureApp.java`라는 새 파일을 만들고 다음 코드 블록에 붙여넣습니다. `userName` 및 `sshKey` 변수를 컴퓨터에 대한 실제 값으로 업데이트합니다. 이 코드에서는 미국 동부 Azure 지역에서 실행되는 `sampleResourceGroup` 리소스 그룹에 `testLinuxVM`이라는 새 Linux VM을 만듭니다.
+프로젝트의 `src/main/java/com/fabirkam` 디렉터리에 `AzureApp.java`라는 새 파일을 만들고 다음 코드 블록에 붙여넣습니다. `userName` 및 `sshKey` 변수를 컴퓨터에 대한 실제 값으로 업데이트합니다. 이 코드에서는 미국 동부 Azure 지역에서 실행되는 `sampleResourceGroup` 리소스 그룹에 `testLinuxVM`이라는 새 Linux VM을 만듭니다.
 
 ```java
-package com.fabrikam.AzureApp;
+package com.fabrikam;
 
 import com.microsoft.azure.management.Azure;
 import com.microsoft.azure.management.compute.VirtualMachine;
