@@ -14,6 +14,8 @@
           href: /azure/postgresql/connect-java
         - name: Cosmos DB
           href: /azure/cosmos-db/create-documentdb-java
+        - name: Blob 저장소
+          href: /azure/storage/blobs/storage-quickstart-blobs-java
         - name: Java용 Azure 라이브러리
           items:
             - name: Maven
@@ -71,7 +73,7 @@
           href: /azure/app-service-web/app-service-web-deploy-spring-boot-app-with-maven-plugin
     - name: Java 샘플 코드
       items:
-        - name: 가상 컴퓨터
+        - name: 가상 머신
           href: java-sdk-azure-virtual-machine-samples.md
         - name: 웹 앱
           href: java-sdk-azure-web-apps-samples.md
