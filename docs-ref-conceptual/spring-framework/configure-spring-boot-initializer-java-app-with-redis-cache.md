@@ -1,6 +1,6 @@
 ---
-title: "Redis Cache를 사용하도록 Spring Boot Initializer 앱을 구성하는 방법"
-description: "Azure Redis Cache를 사용하도록 Spring Initializer를 사용하여 만든 Spring Boot 응용 프로그램을 구성하는 방법에 대해 알아봅니다."
+title: "Azure Redis Cache를 사용하도록 Spring Boot Initializer 앱 구성"
+description: "Spring Initializer를 사용하여 만든 Spring Boot 응용 프로그램을 구성하여 Azure Redis Cache를 사용하여 클라우드에서 Redis를 사용합니다."
 services: redis-cache
 documentationcenter: java
 author: rmcmurray
@@ -14,23 +14,21 @@ ms.devlang: java
 ms.topic: article
 ms.date: 12/01/2017
 ms.author: robmcm;zhijzhao;yidon
-ms.openlocfilehash: e46a90413321845cb94d72fff893e42aa2353491
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: c029a1518584a953c96870110f7ab3b79409f8ca
+ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/04/2018
 ---
-# <a name="how-to-configure-a-spring-boot-initializer-app-to-use-redis-cache"></a>Redis Cache를 사용하도록 Spring Boot Initializer 앱을 구성하는 방법
+# <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a>Azure Redis Cache를 사용하여 클라우드에서 Redis를 사용하도록 Spring Boot Initializer 앱 구성
 
-## <a name="overview"></a>개요
-
-이 문서에서는 Azure Portal을 사용하여 Redis Cache를 만들고, **[Spring Initializr]**를 사용하여 사용자 지정 응용 프로그램을 만든 다음 Redis Cache를 사용하여 데이터를 저장하고 검색하는 Java 웹 응용 프로그램을 만드는 방법을 설명합니다.
+이 문서에서는 Azure Portal을 사용하여 클라우드에서 Redis Cache를 만들고, **[Spring Initializr]**를 사용하여 사용자 지정 응용 프로그램을 만든 다음 Redis Cache를 사용하여 데이터를 저장하고 검색하는 Java 웹 응용 프로그램을 만드는 방법을 설명합니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
 이 문서의 단계를 수행하기 위해 다음 필수 구성 요소가 필요합니다.
 
-* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [무료 Azure 계정]에 등록할 수 있습니다.
+* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정{]에 등록할 수 있습니다.
 * [JDK(Java Development Kit)](http://www.oracle.com/technetwork/java/javase/downloads/), 버전 1.7 이상
 * [Apache Maven](http://maven.apache.org/), 버전 3.0 이상
 
@@ -63,11 +61,11 @@ ms.lasthandoff: 12/06/2017
 
 1. <https://portal.azure.com/>의 Azure Portal로 이동하고 **+새로 만들기**의 항목을 클릭합니다.
 
-   ![Azure 포털][AZ01]
+   ![Azure portal][AZ01]
 
 1. **데이터베이스**를 클릭하고 **Redis Cache**를 클릭합니다.
 
-   ![Azure 포털][AZ02]
+   ![Azure portal][AZ02]
 
 1. **새 Redis Cache** 페이지에서 다음 정보를 지정합니다.
 
@@ -82,15 +80,15 @@ ms.lasthandoff: 12/06/2017
 
    이러한 옵션을 지정한 경우 **만들기**를 클릭하여 캐시를 만듭니다.
 
-   ![Azure 포털][AZ03]
+   ![Azure portal][AZ03]
 
 1. 캐시가 완료되면 Azure **대시보드**뿐만 아니라 **모든 리소스** 및 **Redis Caches** 페이지에서도 나열된 것을 확인할 수 있습니다. 해당 위치 중 하나에서 캐시를 클릭하여 캐시의 속성 페이지를 열 수 있습니다.
 
-   ![Azure 포털][AZ04]
+   ![Azure portal][AZ04]
 
 1. 캐시의 속성 목록이 포함된 페이지가 표시되면 **액세스 키**를 클릭하고 캐시의 액세스 키를 복사합니다.
 
-   ![Azure 포털][AZ05]
+   ![Azure portal][AZ05]
 
 ## <a name="configure-your-custom-spring-boot-to-use-your-redis-cache"></a>Redis Cache를 사용하도록 사용자 지정 Spring Boot 구성
 
@@ -115,7 +113,7 @@ ms.lasthandoff: 12/06/2017
 
    > [!NOTE] 
    > 
-   > SSL을 활성화하는 Jedis와 같은 다른 Redis 클라이언트를 사용하는 경우 *application.properties* 파일에서 포트 6380을 지정합니다. 예:
+   > SSL을 활성화하는 Jedis와 같은 다른 Redis 클라이언트를 사용하는 경우 *application.properties* 파일에서 포트 6380을 지정합니다. 예: 
    > 
    > ```yaml
    > spring.redis.host=myspringbootcache.redis.cache.windows.net
@@ -210,7 +208,7 @@ Azure에서 Java로 Redis Cache를 시작하는 방법에 대한 자세한 내�
 <!-- URL List -->
 
 [Java 개발자용 Azure]: https://docs.microsoft.com/java/azure/
-[무료 Azure 계정]: https://azure.microsoft.com/pricing/free-trial/
+[체험판 Azure 계정{]: https://azure.microsoft.com/pricing/free-trial/
 [Visual Studio Team Services용 Java 도구]: https://java.visualstudio.com/
 [MSDN 구독자 혜택]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/

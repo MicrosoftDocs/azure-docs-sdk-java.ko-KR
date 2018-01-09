@@ -1,6 +1,6 @@
 ---
-title: "Azure App Service에 Spring Boot 응용 프로그램 배포"
-description: "이 자습서는 개발자에게 Azure App Service에 Spring Boot 시작하기 웹앱을 배포하는 단계를 안내합니다."
+title: "Azure App Service로 클라우드에 Spring Boot 응용 프로그램 배포"
+description: "이 자습서는 개발자에게 Azure App Service를 사용하는 클라우드에 Spring Boot 시작하기 웹앱을 배포하는 단계를 안내합니다."
 services: app-service
 documentationcenter: java
 author: rmcmurray
@@ -14,13 +14,13 @@ ms.devlang: java
 ms.topic: article
 ms.date: 12/01/2017
 ms.author: asirveda;robmcm
-ms.openlocfilehash: b520cc80360f8162c929bb2cc88c24311a7e20f8
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: 4dba6a6cbce2c8f6d4956717b3358c4e5b501e71
+ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/04/2018
 ---
-# <a name="deploy-a-spring-boot-application-to-the-azure-app-service"></a>Azure App Service에 Spring Boot 응용 프로그램 배포
+# <a name="deploy-a-spring-boot-application-to-the-cloud-with-azure-app-service"></a>Azure App Service로 클라우드에 Spring Boot 응용 프로그램 배포
 
 이 자습서에서는 샘플 [Spring Boot] 시작하기 웹앱을 만들어 [Azure App Service]에 배포하는 방법을 안내합니다.
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 12/06/2017
 
 이 자습서의 단계를 완료하려면 다음이 필요합니다.
 
-* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [무료 Azure 계정]에 등록할 수 있습니다.
+* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정{]에 등록할 수 있습니다.
 * 최신 [JDK(Java Developer Kit)]
 * Apache의 [Maven] 빌드 도구(버전 3)
 * [Git] 클라이언트
@@ -87,7 +87,7 @@ ms.lasthandoff: 12/06/2017
 
 1. Azure Portal의 계정에 로그인한 후 **App Services** 메뉴 아이콘을 클릭합니다.
    
-   ![Azure 포털][AZ01]
+   ![Azure portal][AZ01]
 
 1. **App Services** 페이지가 표시되면 **+ 추가**를 클릭하여 새 App Service를 만듭니다.
 
@@ -113,13 +113,13 @@ ms.lasthandoff: 12/06/2017
 
    a. **응용 프로그램 설정** 메뉴 항목을 클릭합니다.
 
-   b. Java 버전으로 **Java 8**을 선택합니다.
+   나. Java 버전으로 **Java 8**을 선택합니다.
 
-   c. 부 Java 버전으로 **가장 최근 항목**을 선택합니다.
+   다. 부 Java 버전으로 **가장 최근 항목**을 선택합니다.
 
    d. 웹 컨테이너로 **최신 Tomcat 8.5**를 선택합니다. (이 컨테이너는 실제로 사용되지 않습니다. Azure는 Spring Boot 응용 프로그램의 컨테이너를 사용합니다.)
 
-   e. **Save**를 클릭합니다.
+   e. **저장**을 클릭합니다.
 
    ![응용 프로그램 설정][AZ07]
 
@@ -127,9 +127,9 @@ ms.lasthandoff: 12/06/2017
 
    a. **배포 자격 증명** 메뉴 항목을 클릭합니다.
 
-   b. 사용자 이름 및 암호를 지정합니다.
+   나. 사용자 이름 및 암호를 지정합니다.
 
-   c. **Save**를 클릭합니다.
+   다. **저장**을 클릭합니다.
 
    ![배포 자격 증명 지정][AZ08]
 
@@ -137,7 +137,7 @@ ms.lasthandoff: 12/06/2017
 
    a. **배포 자격 증명** 메뉴 항목을 클릭합니다.
 
-   b. 전체 FTP 사용자 이름 및 URL을 복사하고 이 자습서의 다음 섹션을 위해 저장합니다.
+   나. 전체 FTP 사용자 이름 및 URL을 복사하고 이 자습서의 다음 섹션을 위해 저장합니다.
 
    ![FTP URL 및 자격 증명][AZ09]
 
@@ -160,7 +160,7 @@ ms.lasthandoff: 12/06/2017
    </configuration>
    ```
 
-1. *web.config* 파일을 시스템에 저장한 후 이 자습서의 이전 섹션에 나온 URL, 사용자 이름 및 암호를 사용하여 FTP를 통해 웹앱에 연결합니다. 예:
+1. *web.config* 파일을 시스템에 저장한 후 이 자습서의 이전 섹션에 나온 URL, 사용자 이름 및 암호를 사용하여 FTP를 통해 웹앱에 연결합니다. 예: 
    ```
    ftp
    open waws-prod-sn0-000.ftp.azurewebsites.windows.net
@@ -168,7 +168,7 @@ ms.lasthandoff: 12/06/2017
    pass ********
    ```
 
-1. 원격 디렉터리를 웹앱의 루트 폴더(*/site/wwwroot*)로 변경한 다음 Spring Boot 응용 프로그램의 JAR 파일과 앞에서의 *web.config*를 복사합니다. 예:
+1. 원격 디렉터리를 웹앱의 루트 폴더(*/site/wwwroot*)로 변경한 다음 Spring Boot 응용 프로그램의 JAR 파일과 앞에서의 *web.config*를 복사합니다. 예: 
    ```
    cd site/wwwroot
    put gs-spring-boot-0.1.0.jar
@@ -214,7 +214,7 @@ Spring Boot 샘플 프로젝트에 대한 자세한 내용은 [Spring Boot 시�
 [Azure Portal]: https://portal.azure.com/
 [Azure App Service에서 웹앱 구성]: /azure/app-service/web-sites-configure
 [FTP/S를 사용하여 Azure App Service에 앱 배포]: https://docs.microsoft.com/azure/app-service/app-service-deploy-ftp
-[무료 Azure 계정]: https://azure.microsoft.com/pricing/free-trial/
+[체험판 Azure 계정{]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [JDK(Java Developer Kit)]: http://www.oracle.com/technetwork/java/javase/downloads/
 [Visual Studio Team Services용 Java 도구]: https://java.visualstudio.com/

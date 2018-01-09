@@ -1,6 +1,6 @@
 ---
 title: "Eclipse용 Azure 도구 키트"
-description: "Eclipse용 Azure 도구 키트에 대해 알아봅니다."
+description: "Eclipse용 Azure 도구 키트 플러그 인을 통해 클라우드 응용 프로그램을 만들어 Azure에 배포하는 방법에 대해 알아봅니다."
 services: 
 documentationcenter: java
 author: rmcmurray
@@ -14,14 +14,15 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 11/01/2017
 ms.author: robmcm;asirveda
-ms.openlocfilehash: 1cd0430a6649b1c979da5650b4d817bfb35b5f8c
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: 21b757f961096970b7560beac9f15f216f072516
+ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="azure-toolkit-for-eclipse"></a>Eclipse용 Azure 도구 키트
-Eclipse용 Azure 도구 키트는 Eclipse IDE(통합 개발 환경)에서 Azure 응용 프로그램을 쉽게 작성, 개발, 테스트 및 배포할 수 있는 템플릿과 기능을 제공합니다.
+
+Eclipse용 Azure 도구 키트는 Eclipse IDE(통합 개발 환경) 내부에서 클라우드 응용 프로그램을 쉽게 작성, 개발, 테스트 및 Azure에 배포할 수 있는 템플릿과 기능을 제공합니다.
 
 > [!NOTE]
 > 
@@ -55,7 +56,7 @@ Eclipse용 Azure 도구 키트는 Eclipse IDE(통합 개발 환경)에서 Azure 
 
 * [Eclipse용 Azure Explorer를 사용하여 저장소 계정 관리](azure-toolkit-for-eclipse-managing-storage-accounts-using-azure-explorer.md)
 
-* [Eclipse용 Azure Explorer를 사용하여 가상 컴퓨터 관리](azure-toolkit-for-eclipse-managing-virtual-machines-using-azure-explorer.md)
+* [Eclipse용 Azure Explorer를 사용하여 가상 머신 관리](azure-toolkit-for-eclipse-managing-virtual-machines-using-azure-explorer.md)
 
 ## <a name="next-steps"></a>다음 단계
 
