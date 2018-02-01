@@ -14,11 +14,11 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 3db8bf06892ca6c53cf93ee4ce151549044806d1
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.openlocfilehash: ed63d73e8a0c89af14613b1b1a880f1d40495b8d
+ms.sourcegitcommit: 558d875e9a255deb5b83b3f1646bd1dd9eee0a0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>IntelliJ용 Azure 도구 키트를 사용하여 웹앱을 Docker 컨테이너로 게시
 
@@ -58,23 +58,23 @@ Docker 컨테이너는 웹 응용 프로그램을 배포하는 데 널리 사용
 
    a. **Docker 이미지 이름** 상자에서 Docker 호스트에 사용할 고유한 이름을 입력합니다. (마법사에서 이름을 자동으로 만들지만 사용자가 수정할 수 있습니다.) 
 
-   b. **호스트** 영역에 사용자가 이미 만든 Docker 호스트가 표시됩니다. 다음 중 하나를 수행합니다. 
+   나. **호스트** 영역에 사용자가 이미 만든 Docker 호스트가 표시됩니다. 다음 중 하나를 수행합니다. 
       * 기존 Docker 호스트가 있는 경우 웹앱을 해당 호스트에 배포할 수 있습니다.
       * Docker 호스트를 만들려면 녹색 더하기 기호(**+**)를 클릭합니다.  
        **Docker 호스트 만들기** 대화 상자가 열립니다. 
 
       ![Azure에 Docker 컨테이너 배포 마법사][PUB04a]
 
-4. **새 가상 컴퓨터 구성** 창에서 Docker 호스트에 대한 다음 정보를 제공합니다. (마법사에서 대부분의 정보를 자동으로 생성하지만 사용자가 수정할 수 있습니다.) 
+4. **새 가상 머신 구성** 창에서 Docker 호스트에 대한 다음 정보를 제공합니다. (마법사에서 대부분의 정보를 자동으로 생성하지만 사용자가 수정할 수 있습니다.) 
 
    a. **이름** 상자에서 Docker 호스트에 사용할 고유한 이름을 입력합니다. (이전에 지정한 Docker 이미지 이름과 다릅니다.) 
     
-   b. **구독** 상자에서 호스트에 사용하는 Azure 구독을 입력합니다. 
+   나. **구독** 상자에서 호스트에 사용하는 Azure 구독을 입력합니다. 
       
-   c. **지역** 상자에서 호스트가 배치될 지리적 지역을 입력합니다.
+   다. **지역** 상자에서 호스트가 배치될 지리적 지역을 입력합니다.
       
    d. **OS 및 크기** 탭에서 다음을 수행합니다.      
-      * **호스트 OS**: 호스트를 포함할 가상 컴퓨터의 운영 체제를 입력합니다. 
+      * **호스트 OS**: 호스트를 포함할 가상 머신의 운영 체제를 입력합니다. 
       * **크기**: 호스트의 가상 컴퓨터 크기를 입력합니다.   
        
    e. **리소스 그룹** 탭에서 다음 중 하나를 선택합니다.      
@@ -89,7 +89,7 @@ Docker 컨테이너는 웹 응용 프로그램을 배포하는 데 널리 사용
       * **새 저장소 계정**: 호스트에 사용할 저장소 계정을 만듭니다.
       * **기존 저장소 계정**: Azure 계정에서 기존 저장소 계정을 지정합니다.
        
-5. **다음**을 누릅니다.  
+5. **다음**을 클릭합니다.  
      **로그인 자격 증명 및 포트 설정 구성** 창이 열립니다.
 
       ![로그인 자격 증명 및 포트 설정 구성 창][PUB05]
@@ -105,32 +105,32 @@ Docker 컨테이너는 웹 응용 프로그램을 배포하는 데 널리 사용
 
         a. **VM 자격 증명** 탭에서 Docker 호스트의 가상 컴퓨터 로그인 자격 증명에 대한 다음 정보를 제공합니다. * **Username**: 가상 컴퓨터 로그인 자격 증명에 대한 사용자 이름을 입력합니다.
              * **암호** 및 **확인**: 가상 컴퓨터 로그인 자격 증명에 사용할 암호를 입력합니다.
-             * **SSH**: Docker 호스트에 사용할 SSH(Secure Shell) 설정을 입력합니다. 다음 옵션 중 하나를 선택할 수 있습니다. * **None**: 가상 컴퓨터가 SSH 연결을 허용하지 않도록 지정합니다.
+             * **SSH**: Docker 호스트에 사용할 SSH(Secure Shell) 설정을 입력합니다. 다음 옵션 중 하나를 선택할 수 있습니다. * **None**: 가상 머신이 SSH 연결을 허용하지 않도록 지정합니다.
                 * **자동 생성**: SSH를 통해 연결하는 데 필요한 설정을 자동으로 만듭니다.
                 * **디렉터리에서 가져오기**: 이전에 저장된 SSH 설정 집합을 포함하는 디렉터리를 지정할 수 있습니다. 디렉터리에 다음 두 파일이 포함되어야 합니다.
                 
                   * *id_rsa*: Contains the RSA identification for a user.
                   * *id_rsa.pub*: Contains the RSA public key that is used for authentication.
             
-        b. **Docker 데몬 액세스** 탭에서 다음 정보를 제공합니다.
+        나. **Docker 데몬 액세스** 탭에서 다음 정보를 제공합니다.
 
-          ![Docker 호스트 만들기][PUB06]
+         ![Docker 호스트 만들기][PUB06]
     
-             * **Docker Daemon port**: Enter the unique TCP port for your Docker host.
-             * **TLS Security**: Enter the Transport Layer Security settings for your Docker host. You can choose from the following options:
-                * **None**: Specifies that your virtual machine does not allow TLS connections.
-                * **Auto-generate**: Automatically creates the requisite settings for connecting via TLS.
-                * **Import from directory**: Specifies a directory that contains a set of previously saved TLS settings. The directory must contain the following six files: 
-                   * *ca.pem* and *ca-key.pem*: Contain the certificate and public key for the TLS Certificate Authority.
-                   * *cert.pem* and *key.pem*: Contain client certificate and public key which will be used for TLS authentication.
-                   * *server.pem* and *server-key.pem*: Contain the client certificate and public key that is used for TLS authentication.
+           * **Docker 디먼 포트**: Docker 호스트의 고유한 TCP 포트를 입력합니다.
+           * **TLS 보안**: Docker 호스트의 전송 계층 보안 설정을 입력합니다. 다음 옵션 중에서 선택할 수 있습니다.
+                * **없음**: 가상 컴퓨터에서 TLS 연결을 허용하지 않게 지정합니다.
+                * **자동 생성**: TLS를 통해 연결하는 데 필요한 설정을 자동으로 만듭니다.
+                * **디렉터리에서 가져오기**: 이전에 저장된 TLS 설정 집합을 포함하는 디렉터리를 지정합니다. 디렉터리에 다음 여섯 개의 파일이 포함되어야 합니다. 
+                   * *ca.pem* 및 *ca-key.pem*: TLS 인증 기관의 인증서와 공개 키가 포함되어 있습니다.
+                   * *cert.pem* 및 *key.pem*: TLS 인증에 사용할 클라이언트 인증서와 공개 키가 포함되어 있습니다.
+                   * *server.pem* 및 *server-key.pem*: TLS 인증에 사용할 클라이언트 인증서와 공개 키가 포함되어 있습니다.
 
 7. 필요한 정보를 입력한 후 **마침**을 클릭합니다.  
     **Azure에 Docker 컨테이너 배포** 마법사가 다시 나타납니다.
 
    ![Azure에 Docker 컨테이너 배포 마법사][PUB07]
 
-8. **다음**을 누릅니다.  
+8. **다음**을 클릭합니다.  
     **만들 Docker 컨테이너 구성** 창이 열립니다.
 
    ![만들 Docker 컨테이너 구성 창][PUB08]
@@ -139,7 +139,7 @@ Docker 컨테이너는 웹 응용 프로그램을 배포하는 데 널리 사용
 
    a. **Docker 컨테이너 이름** 상자에서 Docker 컨테이너에 사용할 고유한 이름을 입력합니다.
 
-   b. 다음 Docker 이미지 중 하나를 선택합니다. 
+   나. 다음 Docker 이미지 중 하나를 선택합니다. 
 
       * **미리 정의된 Docker 이미지**: Azure에서 기존 Docker 이미지를 지정합니다. 
 
@@ -151,7 +151,7 @@ Docker 컨테이너는 웹 응용 프로그램을 배포하는 데 널리 사용
         > [!NOTE]
         > 고유 Dockerfile을 배포하려는 개발자를 위한 고급 기능입니다. 그러나 이 기능은 Dockerfile을 올바르게 빌드하기 위해 이 옵션을 사용하는 개발자에 따라 달라집니다. Azure 도구 키트는 사용자 지정 Dockerfile에 있는 콘텐츠의 유효성을 검사하지 않으므로, Dockerfile에 문제가 있으면 배포에 실패할 수 있습니다. 또한 Azure 도구 키트에서는 사용자 지정 Dockerfile에 웹앱 아티팩트가 포함되어야 하므로 HTTP 연결을 열려고 시도합니다. 개발자가 다른 아티팩트 형식을 게시하는 경우 배포 후에 무해한 오류가 표시될 수도 있습니다.
 
-   c. **포트 설정** 상자에서 Docker 컨테이너에 사용할 고유한 TCP 포트 바인딩을 입력합니다. 
+   다. **포트 설정** 상자에서 Docker 컨테이너에 사용할 고유한 TCP 포트 바인딩을 입력합니다. 
 
 10. 앞의 단계를 완료한 후 **마침**을 클릭합니다. 
 
