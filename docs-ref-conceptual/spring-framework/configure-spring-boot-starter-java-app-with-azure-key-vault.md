@@ -14,11 +14,11 @@ ms.devlang: java
 ms.topic: article
 ms.date: 11/29/2017
 ms.author: robmcm
-ms.openlocfilehash: 8b35a972a00c995730dfa59b1b6a47fab7716b76
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: 165a108147ef5ef7575820bbb6c2ee526888f722
+ms.sourcegitcommit: 558d875e9a255deb5b83b3f1646bd1dd9eee0a0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>Azure Key Vault에 Spring Boot Starter를 사용하는 방법
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/06/2017
 
 이 문서의 단계를 수행하기 위해 다음 필수 구성 요소가 필요합니다.
 
-* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [무료 Azure 계정]에 등록할 수 있습니다.
+* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정{]에 등록할 수 있습니다.
 * [JDK(Java Development Kit)](http://www.oracle.com/technetwork/java/javase/downloads/), 버전 1.7 이상
 * [Apache Maven](http://maven.apache.org/), 버전 3.0 이상
 
@@ -85,8 +85,9 @@ ms.lasthandoff: 12/06/2017
        }
      }
    ]
+   ```
 
-1. Specify the GUID for the account you want to use with Azure; for example:
+1. 다음 예제처럼 Azure에 사용하려는 계정의 GUID를 지정합니다.
 
    ```azurecli
    az account set -s ssssssss-ssss-ssss-ssss-ssssssssssss
@@ -98,7 +99,7 @@ ms.lasthandoff: 12/06/2017
    ```azurecli
    az group create --name wingtiptoysresources --location westus
    ```
-   여기서,
+   위치:
    | 매개 변수 | 설명 |
    |---|---|
    | `name` | 리소스 그룹의 고유한 이름을 지정합니다. |
@@ -143,7 +144,7 @@ ms.lasthandoff: 12/06/2017
    ```azurecli
    az keyvault create --name wingtiptoyskeyvault --resource-group wingtiptoysresources --location westus --enabled-for-deployment true --enabled-for-disk-encryption true --enabled-for-template-deployment true --sku standard --query properties.vaultUri
    ```
-   여기서,
+   위치:
    | 매개 변수 | 설명 |
    |---|---|
    | `name` | 키 자격 증명 모음의 고유한 이름을 지정합니다. |
@@ -164,7 +165,7 @@ ms.lasthandoff: 12/06/2017
    ```azurecli
    az keyvault set-policy --name wingtiptoyskeyvault --secret-permission set get list delete --spn "iiiiiiii-iiii-iiii-iiii-iiiiiiiiiiii"
    ```
-   여기서,
+   위치:
    | 매개 변수 | 설명 |
    |---|---|
    | `name` | 앞의 키 자격 증명 모음 이름을 지정합니다. |
@@ -193,7 +194,7 @@ ms.lasthandoff: 12/06/2017
    ```azurecli
    az keyvault secret set --vault-name "wingtiptoyskeyvault" --name "connectionString" --value "jdbc:sqlserver://SERVER.database.windows.net:1433;database=DATABASE;"
    ```
-   여기서,
+   위치:
    | 매개 변수 | 설명 |
    |---|---|
    | `vault-name` | 앞의 키 자격 증명 모음 이름을 지정합니다. |
@@ -235,7 +236,7 @@ ms.lasthandoff: 12/06/2017
    azure.keyvault.client-id=iiiiiiii-iiii-iiii-iiii-iiiiiiiiiiii
    azure.keyvault.client-key=pppppppp-pppp-pppp-pppp-pppppppppppp
    ```
-   여기서,
+   위치:
    | 매개 변수 | 설명 |
    |---|---|
    | `azure.keyvault.uri` | 키 자격 증명 모음을 만든 URI를 지정합니다. |
@@ -287,7 +288,7 @@ ms.lasthandoff: 12/06/2017
 
    ![Spring Boot 응용 프로그램 빌드 상태][build-application-01]
 
-1. Maven에서 Spring Boot 응용 프로그램을 실행합니다. 응용 프로그램이 키 자격 증명 모음의 연결 문자열을 표시합니다. 예:
+1. Maven에서 Spring Boot 응용 프로그램을 실행합니다. 응용 프로그램이 키 자격 증명 모음의 연결 문자열을 표시합니다. 예: 
 
    ```bash
    mvn spring-boot:run
@@ -316,7 +317,7 @@ Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 
 [Key Vault 설명서]: /azure/key-vault/
 [Azure Key Vault 시작]: /azure/key-vault/key-vault-get-started
 [Java 개발자용 Azure]: https://docs.microsoft.com/java/azure/
-[무료 Azure 계정]: https://azure.microsoft.com/pricing/free-trial/
+[체험판 Azure 계정{]: https://azure.microsoft.com/pricing/free-trial/
 [Visual Studio Team Services용 Java 도구]: https://java.visualstudio.com/
 [MSDN 구독자 혜택]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
