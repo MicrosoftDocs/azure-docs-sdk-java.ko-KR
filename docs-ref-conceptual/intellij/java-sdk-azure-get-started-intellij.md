@@ -2,48 +2,52 @@
 title: "Intellij를 사용하여 Java용 Azure 시작"
 description: "Azure 구독을 사용하여 Java용 Azure 라이브러리의 기본적인 사용을 시작합니다."
 keywords: "Azure, Java, SDK, API, 인증, 시작"
+services: 
+documentationcenter: java
 author: roygara
-ms.author: v-rogara
 manager: timlt
-ms.date: 10/30/2017
-ms.topic: get-started-article
-ms.prod: azure
-ms.technology: azure
+editor: 
+ms.assetid: 
+ms.author: v-rogara
+ms.date: 02/01/2018
 ms.devlang: java
+ms.prod: azure
 ms.service: multiple
-ms.openlocfilehash: 1e10a7c5a46ed0e36143fd4a99decc037c04e1fe
-ms.sourcegitcommit: fcf1189ede712ae30f8c7626bde50c9b8bb561bc
+ms.topic: get-started-article
+ms.technology: azure
+ms.openlocfilehash: 0a059366f7cdc139dcb5a8e7e9ca78254384d19e
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="get-started-with-the-azure-libraries-using-intellij"></a><span data-ttu-id="f69e8-104">Intellij를 사용하여 Azure 라이브러리 시작</span><span class="sxs-lookup"><span data-stu-id="f69e8-104">Get started with the Azure libraries using Intellij</span></span>
+# <a name="get-started-with-the-azure-libraries-using-intellij"></a><span data-ttu-id="ccf1f-104">Intellij를 사용하여 Azure 라이브러리 시작</span><span class="sxs-lookup"><span data-stu-id="ccf1f-104">Get started with the Azure libraries using Intellij</span></span>
 
-<span data-ttu-id="f69e8-105">이 가이드에서는 개발 환경 설정과 Java 용 Azure 라이브러리 사용을 안내합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-105">This guide walks you through setting up a development environment and using the Azure libraries for Java.</span></span> <span data-ttu-id="f69e8-106">Azure를 통해 인증하는 서비스 주체를 만들고 구독에서 Azure 리소스를 만들어 사용하는 특정 샘플 코드를 실행하게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-106">You'll create a service principal to authenticate with Azure and run some sample code that creates and uses Azure resources in your subscription.</span></span> <span data-ttu-id="f69e8-107">Intellij 사용은 Azure를 통한 Java 개발에서 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-107">Using Intellij is optional for Java development with Azure.</span></span> <span data-ttu-id="f69e8-108">Maven 통합이 있는 모든 IDE가 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-108">Any IDE that has Maven integration works.</span></span> <span data-ttu-id="f69e8-109">또는 IDE를 사용하지 않으려면 Mave을 사용하여 명령줄에서 코드를 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-109">Alternatively, you can run your code from the commandline using Maven if you prefer not to use any IDE.</span></span>
+<span data-ttu-id="ccf1f-105">이 가이드에서는 개발 환경 설정과 Java 용 Azure 라이브러리 사용을 안내합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-105">This guide walks you through setting up a development environment and using the Azure libraries for Java.</span></span> <span data-ttu-id="ccf1f-106">Azure를 통해 인증하는 서비스 주체를 만들고 구독에서 Azure 리소스를 만들어 사용하는 특정 샘플 코드를 실행하게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-106">You'll create a service principal to authenticate with Azure and run some sample code that creates and uses Azure resources in your subscription.</span></span> <span data-ttu-id="ccf1f-107">Intellij 사용은 Azure를 통한 Java 개발에서 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-107">Using Intellij is optional for Java development with Azure.</span></span> <span data-ttu-id="ccf1f-108">Maven 통합이 있는 모든 IDE가 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-108">Any IDE that has Maven integration works.</span></span> <span data-ttu-id="ccf1f-109">또는 IDE를 사용하지 않으려면 Mave을 사용하여 명령줄에서 코드를 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-109">Alternatively, you can run your code from the commandline using Maven if you prefer not to use any IDE.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="f69e8-110">필수 조건</span><span class="sxs-lookup"><span data-stu-id="f69e8-110">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="ccf1f-110">필수 조건</span><span class="sxs-lookup"><span data-stu-id="ccf1f-110">Prerequisites</span></span>
 
-- <span data-ttu-id="f69e8-111">Azure 계정.</span><span class="sxs-lookup"><span data-stu-id="f69e8-111">An Azure account.</span></span> <span data-ttu-id="f69e8-112">계정이 없으면 [체험 계정을 얻습니다](https://azure.microsoft.com/free/).</span><span class="sxs-lookup"><span data-stu-id="f69e8-112">If you don't have one, [get a free trial](https://azure.microsoft.com/free/)</span></span>
-- <span data-ttu-id="f69e8-113">[Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) 또는 [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2)</span><span class="sxs-lookup"><span data-stu-id="f69e8-113">[Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) or [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).</span></span>
-- <span data-ttu-id="f69e8-114">[Intellij](https://www.jetbrains.com/idea/)의 안정적인 최신 버전</span><span class="sxs-lookup"><span data-stu-id="f69e8-114">The latest stable version of [Intellij](https://www.jetbrains.com/idea/)</span></span>
+- <span data-ttu-id="ccf1f-111">Azure 계정.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-111">An Azure account.</span></span> <span data-ttu-id="ccf1f-112">계정이 없으면 [체험 계정을 얻습니다](https://azure.microsoft.com/free/).</span><span class="sxs-lookup"><span data-stu-id="ccf1f-112">If you don't have one, [get a free trial](https://azure.microsoft.com/free/)</span></span>
+- <span data-ttu-id="ccf1f-113">[Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) 또는 [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2)</span><span class="sxs-lookup"><span data-stu-id="ccf1f-113">[Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) or [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).</span></span>
+- <span data-ttu-id="ccf1f-114">[Intellij](https://www.jetbrains.com/idea/)의 안정적인 최신 버전</span><span class="sxs-lookup"><span data-stu-id="ccf1f-114">The latest stable version of [Intellij](https://www.jetbrains.com/idea/)</span></span>
 
-## <a name="set-up-authentication"></a><span data-ttu-id="f69e8-115">인증 설정</span><span class="sxs-lookup"><span data-stu-id="f69e8-115">Set up authentication</span></span>
+## <a name="set-up-authentication"></a><span data-ttu-id="ccf1f-115">인증 설정</span><span class="sxs-lookup"><span data-stu-id="ccf1f-115">Set up authentication</span></span>
 
-<span data-ttu-id="f69e8-116">이 자습서에서 샘플 코드를 실행하려면 Azure 구독에 대한 읽기 및 만들기 권한이 Java 응용 프로그램에 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-116">Your Java application needs read and create permissions in your Azure subscription to run the sample code in this tutorial.</span></span> <span data-ttu-id="f69e8-117">서비스 사용자를 만들고 해당 자격 증명을 사용하여 실행되도록 응용 프로그램을 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-117">Create a service principal and configure your application to run with its credentials.</span></span> <span data-ttu-id="f69e8-118">서비스 주체는 앱에서 실행하는 데 필요한 권한만 부여하는 ID와 연결되는 비대화형 계정을 만드는 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-118">Service principals provide a way to create a non-interactive account associated with your identity to which you grant only the privileges your app needs to run.</span></span>
+<span data-ttu-id="ccf1f-116">이 자습서에서 샘플 코드를 실행하려면 Azure 구독에 대한 읽기 및 만들기 권한이 Java 응용 프로그램에 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-116">Your Java application needs read and create permissions in your Azure subscription to run the sample code in this tutorial.</span></span> <span data-ttu-id="ccf1f-117">서비스 사용자를 만들고 해당 자격 증명을 사용하여 실행되도록 응용 프로그램을 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-117">Create a service principal and configure your application to run with its credentials.</span></span> <span data-ttu-id="ccf1f-118">서비스 주체는 앱에서 실행하는 데 필요한 권한만 부여하는 ID와 연결되는 비대화형 계정을 만드는 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-118">Service principals provide a way to create a non-interactive account associated with your identity to which you grant only the privileges your app needs to run.</span></span>
 
-<span data-ttu-id="f69e8-119">계정 자격 증명을 직접 사용하지 않고 구독에서 리소스를 만들어 업데이트하기 위해 [서비스 주체를 만들어](/cli/azure/create-an-azure-service-principal-azure-cli) 코드 권한을 부여합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-119">[Create a service principal](/cli/azure/create-an-azure-service-principal-azure-cli) to grant your code permission to create and update resources in your subscription without using your account credentials directly.</span></span> <span data-ttu-id="f69e8-120">출력을 캡처할 수 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-120">Make sure to capture the output.</span></span> <span data-ttu-id="f69e8-121">암호 인수에 `MY_SECURE_PASSWORD` 대신 [보안 암호](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy)를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-121">Provide a [secure password](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy) in the password argument instead of `MY_SECURE_PASSWORD`.</span></span> <span data-ttu-id="f69e8-122">암호는 8~16자이고 다음 4개 기준 중 3개 이상에 부합해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-122">Your password must be 8 to 16 characters and match at least 3 out of the 4 following criteria:</span></span>
+<span data-ttu-id="ccf1f-119">계정 자격 증명을 직접 사용하지 않고 구독에서 리소스를 만들어 업데이트하기 위해 [서비스 주체를 만들어](/cli/azure/create-an-azure-service-principal-azure-cli) 코드 권한을 부여합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-119">[Create a service principal](/cli/azure/create-an-azure-service-principal-azure-cli) to grant your code permission to create and update resources in your subscription without using your account credentials directly.</span></span> <span data-ttu-id="ccf1f-120">출력을 캡처할 수 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-120">Make sure to capture the output.</span></span> <span data-ttu-id="ccf1f-121">암호 인수에 `MY_SECURE_PASSWORD` 대신 [보안 암호](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy)를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-121">Provide a [secure password](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy) in the password argument instead of `MY_SECURE_PASSWORD`.</span></span> <span data-ttu-id="ccf1f-122">암호는 8~16자이고 다음 4개 기준 중 3개 이상에 부합해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-122">Your password must be 8 to 16 characters and match at least 3 out of the 4 following criteria:</span></span>
 
-* <span data-ttu-id="f69e8-123">소문자 포함</span><span class="sxs-lookup"><span data-stu-id="f69e8-123">Include lowercase characters</span></span>
-* <span data-ttu-id="f69e8-124">대문자 포함</span><span class="sxs-lookup"><span data-stu-id="f69e8-124">Include uppercase characters</span></span>
-* <span data-ttu-id="f69e8-125">숫자 포함</span><span class="sxs-lookup"><span data-stu-id="f69e8-125">Include numbers</span></span>
-* <span data-ttu-id="f69e8-126">@ # $ % ^ & *-_! 기호 중 하나 포함</span><span class="sxs-lookup"><span data-stu-id="f69e8-126">Include one of the following symbols: @ # $ % ^ & * - _ !</span></span> <span data-ttu-id="f69e8-127">+ = [ ] { } | \ : ‘ , .</span><span class="sxs-lookup"><span data-stu-id="f69e8-127">+ = [ ] { } | \ : ‘ , .</span></span> <span data-ttu-id="f69e8-128">?</span><span class="sxs-lookup"><span data-stu-id="f69e8-128">?</span></span> <span data-ttu-id="f69e8-129">/ \` ~ “ ( ) ;</span><span class="sxs-lookup"><span data-stu-id="f69e8-129">/ \` ~ “ ( ) ;</span></span>
+* <span data-ttu-id="ccf1f-123">소문자 포함</span><span class="sxs-lookup"><span data-stu-id="ccf1f-123">Include lowercase characters</span></span>
+* <span data-ttu-id="ccf1f-124">대문자 포함</span><span class="sxs-lookup"><span data-stu-id="ccf1f-124">Include uppercase characters</span></span>
+* <span data-ttu-id="ccf1f-125">숫자 포함</span><span class="sxs-lookup"><span data-stu-id="ccf1f-125">Include numbers</span></span>
+* <span data-ttu-id="ccf1f-126">@ # $ % ^ & \*-_! 기호 중 하나 포함</span><span class="sxs-lookup"><span data-stu-id="ccf1f-126">Include one of the following symbols: @ # $ % ^ & \* - _ !</span></span> <span data-ttu-id="ccf1f-127">+ = [ ] { } | \ : ‘ , .</span><span class="sxs-lookup"><span data-stu-id="ccf1f-127">+ = [ ] { } | \ : ‘ , .</span></span> <span data-ttu-id="ccf1f-128">?</span><span class="sxs-lookup"><span data-stu-id="ccf1f-128">?</span></span> <span data-ttu-id="ccf1f-129">/ \` ~ “ ( ) ;</span><span class="sxs-lookup"><span data-stu-id="ccf1f-129">/ \` ~ “ ( ) ;</span></span>
 
 
 ```azurecli-interactive
 az ad sp create-for-rbac --name AzureJavaTest --password "MY_SECURE_PASSWORD"
 ```
 
-<span data-ttu-id="f69e8-130">다음 형식으로 답장 제공:</span><span class="sxs-lookup"><span data-stu-id="f69e8-130">Which gives you a reply in the following format:</span></span>
+<span data-ttu-id="ccf1f-130">다음 형식으로 답장 제공:</span><span class="sxs-lookup"><span data-stu-id="ccf1f-130">Which gives you a reply in the following format:</span></span>
 
 ```json
 {
@@ -55,7 +59,7 @@ az ad sp create-for-rbac --name AzureJavaTest --password "MY_SECURE_PASSWORD"
 }
 ```
 
-<span data-ttu-id="f69e8-131">다음으로 시스템의 텍스트 파일에 다음 예제를 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-131">Next, copy the following into a text file on your system:</span></span>
+<span data-ttu-id="ccf1f-131">다음으로 시스템의 텍스트 파일에 다음 예제를 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-131">Next, copy the following into a text file on your system:</span></span>
 
 ```text
 # sample management library properties file
@@ -69,39 +73,39 @@ authURL=https\://login.windows.net/
 graphURL=https\://graph.windows.net/
 ```
 
-<span data-ttu-id="f69e8-132">상위 4개 값을 다음과 같이 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-132">Replace the top four values with the following:</span></span>
+<span data-ttu-id="ccf1f-132">상위 4개 값을 다음과 같이 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-132">Replace the top four values with the following:</span></span>
 
-- <span data-ttu-id="f69e8-133">subscription: Azure CLI 2.0에서 `az account show`의 *id* 값을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-133">subscription: use the *id* value from `az account show` in the Azure CLI 2.0.</span></span>
-- <span data-ttu-id="f69e8-134">client: 서비스 사용자 출력에서 가져온 출력의 *appId* 값을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-134">client: use the *appId* value from the output taken from a service principal output.</span></span>
-- <span data-ttu-id="f69e8-135">key: 서비스 사용자 출력의 *password* 값을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-135">key: use the *password* value from the service principal output.</span></span>
-- <span data-ttu-id="f69e8-136">tenant: 서비스 사용자 출력의 *tenant* 값을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-136">tenant: use the *tenant* value from the service principal output.</span></span>
+- <span data-ttu-id="ccf1f-133">subscription: Azure CLI 2.0에서 `az account show`의 *id* 값을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-133">subscription: use the *id* value from `az account show` in the Azure CLI 2.0.</span></span>
+- <span data-ttu-id="ccf1f-134">client: 서비스 사용자 출력에서 가져온 출력의 *appId* 값을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-134">client: use the *appId* value from the output taken from a service principal output.</span></span>
+- <span data-ttu-id="ccf1f-135">key: 서비스 사용자 출력의 *password* 값을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-135">key: use the *password* value from the service principal output.</span></span>
+- <span data-ttu-id="ccf1f-136">tenant: 서비스 사용자 출력의 *tenant* 값을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-136">tenant: use the *tenant* value from the service principal output.</span></span>
 
-<span data-ttu-id="f69e8-137">코드에서 읽을 수 있는 시스템의 안전한 위치에 이 파일을 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-137">Save this file in a secure location on your system where your code can read it.</span></span> <span data-ttu-id="f69e8-138">향후 코드에서 이 파일을 사용할 수 있으므로 이 문서에서 응용 프로그램의 외부에 저장해 두는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-138">You may use this file for future code so it's recommended to store it somewhere external to the application in this article.</span></span> 
+<span data-ttu-id="ccf1f-137">코드에서 읽을 수 있는 시스템의 안전한 위치에 이 파일을 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-137">Save this file in a secure location on your system where your code can read it.</span></span> <span data-ttu-id="ccf1f-138">향후 코드에서 이 파일을 사용할 수 있으므로 이 문서에서 응용 프로그램의 외부에 저장해 두는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-138">You may use this file for future code so it's recommended to store it somewhere external to the application in this article.</span></span> 
 
-<span data-ttu-id="f69e8-139">셸에서 인증 파일의 전체 경로가 포함된 `AZURE_AUTH_LOCATION` 환경 변수를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-139">Set an environment variable `AZURE_AUTH_LOCATION` with the full path to the authentication file in your shell.</span></span>  
+<span data-ttu-id="ccf1f-139">셸에서 인증 파일의 전체 경로가 포함된 `AZURE_AUTH_LOCATION` 환경 변수를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-139">Set an environment variable `AZURE_AUTH_LOCATION` with the full path to the authentication file in your shell.</span></span>  
 
 ```bash
 export AZURE_AUTH_LOCATION=/Users/raisa/azureauth.properties
 ```
 
-<span data-ttu-id="f69e8-140">Windows 환경에서 작업할 경우 변수를 시스템 속성에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-140">If you're working in a windows environment, add the variable to your system properties.</span></span> <span data-ttu-id="f69e8-141">PowerShell 열고 두 번째 변수를 파일 경로를 바꾼 후 다음 명령을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-141">Open PowerShell and, after replacing the second variable with the path to your file, enter the following command:</span></span>
+<span data-ttu-id="ccf1f-140">Windows 환경에서 작업할 경우 변수를 시스템 속성에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-140">If you're working in a windows environment, add the variable to your system properties.</span></span> <span data-ttu-id="ccf1f-141">PowerShell 열고 두 번째 변수를 파일 경로를 바꾼 후 다음 명령을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-141">Open PowerShell and, after replacing the second variable with the path to your file, enter the following command:</span></span>
 
 ```powershell
 [Environment]::SetEnvironmentVariable("AZURE_AUTH_LOCATION", "C:\<fullpath>\azureauth.properties", "Machine")
 ```
 
-## <a name="create-a-new-maven-project"></a><span data-ttu-id="f69e8-142">새 Maven 프로젝트 만들기</span><span class="sxs-lookup"><span data-stu-id="f69e8-142">Create a new Maven project</span></span>
+## <a name="create-a-new-maven-project"></a><span data-ttu-id="ccf1f-142">새 Maven 프로젝트 만들기</span><span class="sxs-lookup"><span data-stu-id="ccf1f-142">Create a new Maven project</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="f69e8-143">이 가이드에서는 Maven 빌드 도구를 사용하여 샘플 코드를 빌드하고 실행하지만, Gradle과 같은 다른 빌드 도구도 Java용 Azure 라이브러리에서 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-143">This guide uses Maven build tool to build and run the sample code, but other build tools such as Gradle also work with the Azure libraries for Java.</span></span> 
+> <span data-ttu-id="ccf1f-143">이 가이드에서는 Maven 빌드 도구를 사용하여 샘플 코드를 빌드하고 실행하지만, Gradle과 같은 다른 빌드 도구도 Java용 Azure 라이브러리에서 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-143">This guide uses Maven build tool to build and run the sample code, but other build tools such as Gradle also work with the Azure libraries for Java.</span></span> 
 
-<span data-ttu-id="f69e8-144">Intellij를 열고 파일 > 새로 만들기 > 프로젝트...를 선택합니다. 그러면 다음 화면으로 진행합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-144">Open Intellij, select File > New > Project... Then proceed to the next screen.</span></span>
+<span data-ttu-id="ccf1f-144">Intellij를 열고 파일 > 새로 만들기 > 프로젝트...를 선택합니다. 그러면 다음 화면으로 진행합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-144">Open Intellij, select File > New > Project... Then proceed to the next screen.</span></span>
 
-<span data-ttu-id="f69e8-145">GroupID에 "com.fabrikam"을 입력하고 원하는 아티팩트 ID를 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-145">Enter "com.fabrikam" for the groupID and enter an artifactID of your choice.</span></span>
+<span data-ttu-id="ccf1f-145">GroupID에 "com.fabrikam"을 입력하고 원하는 아티팩트 ID를 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-145">Enter "com.fabrikam" for the groupID and enter an artifactID of your choice.</span></span>
 
-<span data-ttu-id="f69e8-146">마지막 화면으로 진행하고 프로젝트 만들기를 만칩니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-146">Proceed to the final screen and finish creating the project.</span></span>
+<span data-ttu-id="ccf1f-146">마지막 화면으로 진행하고 프로젝트 만들기를 만칩니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-146">Proceed to the final screen and finish creating the project.</span></span>
 
-<span data-ttu-id="f69e8-147">이제 pom.xml 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-147">Now, open the pom.xml file.</span></span> <span data-ttu-id="f69e8-148">그리고 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-148">And add the following code:</span></span>
+<span data-ttu-id="ccf1f-147">이제 pom.xml 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-147">Now, open the pom.xml file.</span></span> <span data-ttu-id="ccf1f-148">그리고 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-148">And add the following code:</span></span>
 
 ```XML
 <dependencies>
@@ -123,23 +127,23 @@ export AZURE_AUTH_LOCATION=/Users/raisa/azureauth.properties
 </dependencies>
 ```
 
-<span data-ttu-id="f69e8-149">pom.xml을 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-149">Save the pom.xml.</span></span>
+<span data-ttu-id="ccf1f-149">pom.xml을 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-149">Save the pom.xml.</span></span>
    
-## <a name="install-the-azure-toolkit-for-intellij"></a><span data-ttu-id="f69e8-150">IntelliJ용 Azure 도구 키트를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-150">Install the azure toolkit for Intellij</span></span>
+## <a name="install-the-azure-toolkit-for-intellij"></a><span data-ttu-id="ccf1f-150">IntelliJ용 Azure 도구 키트를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-150">Install the azure toolkit for Intellij</span></span>
 
-<span data-ttu-id="f69e8-151">[Azure 도구 키트](azure-toolkit-for-intellij-installation.md)는 웹앱이나 API를 프로그래밍 방식으로 설치하지만 현재 다른 개발 유형에는 사용하고 있지 않은 경우에 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-151">The [Azure toolkit](azure-toolkit-for-intellij-installation.md) is necessary if you're going to be deploying web apps or APIs programmatically but is not currently used for any other kinds of development.</span></span> <span data-ttu-id="f69e8-152">다음은 설치 프로세스에 대한 요약입니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-152">The following is a summary of the installation process.</span></span> <span data-ttu-id="f69e8-153">자세한 절차는 [IntelliJ용 Azure 도구 키트 설치](azure-toolkit-for-intellij-installation.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f69e8-153">For detailed stpes, visit [Installing the Azure Toolkit for IntelliJ](azure-toolkit-for-intellij-installation.md).</span></span>
+<span data-ttu-id="ccf1f-151">[Azure 도구 키트](azure-toolkit-for-intellij-installation.md)는 웹앱이나 API를 프로그래밍 방식으로 설치하지만 현재 다른 개발 유형에는 사용하고 있지 않은 경우에 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-151">The [Azure toolkit](azure-toolkit-for-intellij-installation.md) is necessary if you're going to be deploying web apps or APIs programmatically but is not currently used for any other kinds of development.</span></span> <span data-ttu-id="ccf1f-152">다음은 설치 프로세스에 대한 요약입니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-152">The following is a summary of the installation process.</span></span> <span data-ttu-id="ccf1f-153">자세한 절차는 [IntelliJ용 Azure 도구 키트 설치](azure-toolkit-for-intellij-installation.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-153">For detailed stpes, visit [Installing the Azure Toolkit for IntelliJ](azure-toolkit-for-intellij-installation.md).</span></span>
 
-<span data-ttu-id="f69e8-154">**파일** 메뉴를 선택한 다음 **설정...**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-154">Select the **File** menu and then select **Settings...**.</span></span> 
+<span data-ttu-id="ccf1f-154">**파일** 메뉴를 선택한 다음 **설정...**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-154">Select the **File** menu and then select **Settings...**.</span></span> 
 
-<span data-ttu-id="f69e8-155">**저장소 찾아보기...** 를 선택하고 “Azure”를 검색한 다음 **Intellij용 Azure 도구 키트**를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-155">Select **Browse repositories...** and then search "Azure" and install the **Azure toolkit for Intellij**.</span></span>
+<span data-ttu-id="ccf1f-155">**저장소 찾아보기...** 를 선택하고 “Azure”를 검색한 다음 **Intellij용 Azure 도구 키트**를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-155">Select **Browse repositories...** and then search "Azure" and install the **Azure toolkit for Intellij**.</span></span>
 
-<span data-ttu-id="f69e8-156">Intellij를 다시 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-156">Restart Intellij.</span></span>
+<span data-ttu-id="ccf1f-156">Intellij를 다시 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-156">Restart Intellij.</span></span>
 
-## <a name="create-a-linux-virtual-machine"></a><span data-ttu-id="f69e8-157">Linux 가상 컴퓨터 만들기</span><span class="sxs-lookup"><span data-stu-id="f69e8-157">Create a Linux virtual machine</span></span>
+## <a name="create-a-linux-virtual-machine"></a><span data-ttu-id="ccf1f-157">Linux 가상 머신 만들기</span><span class="sxs-lookup"><span data-stu-id="ccf1f-157">Create a Linux virtual machine</span></span>
 
-<span data-ttu-id="f69e8-158">프로젝트의 `src/main/java` 디렉터리에 `AzureApp.java`라는 새 파일을 만들고 다음 코드 블록에 붙여넣습니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-158">Create a new file named `AzureApp.java` in the project's `src/main/java` directory and paste in the following block of code.</span></span> <span data-ttu-id="f69e8-159">`userName` 및 `sshKey` 변수를 컴퓨터에 대한 실제 값으로 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-159">Update the `userName` and `sshKey` variables with real values for your machine.</span></span> <span data-ttu-id="f69e8-160">이 코드에서는 미국 동부 Azure 지역에서 실행되는 `sampleResourceGroup` 리소스 그룹에 `testLinuxVM`이라는 새 Linux VM을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-160">The code creates a new Linux VM with name `testLinuxVM` in a resource group `sampleResourceGroup` running in the US East Azure region.</span></span>
+<span data-ttu-id="ccf1f-158">프로젝트의 `src/main/java` 디렉터리에 `AzureApp.java`라는 새 파일을 만들고 다음 코드 블록에 붙여넣습니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-158">Create a new file named `AzureApp.java` in the project's `src/main/java` directory and paste in the following block of code.</span></span> <span data-ttu-id="ccf1f-159">`userName` 및 `sshKey` 변수를 컴퓨터에 대한 실제 값으로 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-159">Update the `userName` and `sshKey` variables with real values for your machine.</span></span> <span data-ttu-id="ccf1f-160">이 코드에서는 미국 동부 Azure 지역에서 실행되는 `sampleResourceGroup` 리소스 그룹에 `testLinuxVM`이라는 새 Linux VM을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-160">The code creates a new Linux VM with name `testLinuxVM` in a resource group `sampleResourceGroup` running in the US East Azure region.</span></span>
 
-<span data-ttu-id="f69e8-161">`sshkey`를 만들기 위해 Azure Cloud Shell을 열고 `ssh-keygen -t rsa -b 2048`을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-161">In order to create an `sshkey`, open the azure cloud shell and enter `ssh-keygen -t rsa -b 2048`.</span></span> <span data-ttu-id="f69e8-162">파일 이름을 입력하고 .public 파일에 액세스하여 키를 가져옵니다. 이 키는 다음 코드에서 사용하며 복사하여 `sshKey` 변수에 붙여 넣습니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-162">Enter a name for your file and then access the .public file to get the key, which you use in the following code, copy and paste it all into your variable `sshKey`.</span></span>
+<span data-ttu-id="ccf1f-161">`sshkey`를 만들기 위해 Azure Cloud Shell을 열고 `ssh-keygen -t rsa -b 2048`을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-161">In order to create an `sshkey`, open the azure cloud shell and enter `ssh-keygen -t rsa -b 2048`.</span></span> <span data-ttu-id="ccf1f-162">파일 이름을 입력하고 .public 파일에 액세스하여 키를 가져옵니다. 이 키는 다음 코드에서 사용하며 복사하여 `sshKey` 변수에 붙여 넣습니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-162">Enter a name for your file and then access the .public file to get the key, which you use in the following code, copy and paste it all into your variable `sshKey`.</span></span>
 
 ```java
 
@@ -209,21 +213,21 @@ public class AzureApp {
 ```
 
 
-<span data-ttu-id="f69e8-163">SDK에서 기본 호출을 Azure REST API로 설정하여 가상 컴퓨터 및 해당 리소스를 구성할 때 콘솔에서 일부 REST 요청과 응답이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-163">You'll see some REST requests and responses in the console as the SDK makes the underlying calls to the Azure REST API to configure the virtual machine and its resources.</span></span> <span data-ttu-id="f69e8-164">프로그램이 완료되면 Azure CLI 2.0을 사용하여 구독의 가상 컴퓨터를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-164">When the program finishes, verify the virtual machine in your subscription with the Azure CLI 2.0:</span></span>
+<span data-ttu-id="ccf1f-163">SDK에서 기본 호출을 Azure REST API로 설정하여 가상 머신 및 해당 리소스를 구성할 때 콘솔에서 일부 REST 요청과 응답이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-163">You'll see some REST requests and responses in the console as the SDK makes the underlying calls to the Azure REST API to configure the virtual machine and its resources.</span></span> <span data-ttu-id="ccf1f-164">프로그램이 완료되면 Azure CLI 2.0을 사용하여 구독의 가상 머신을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-164">When the program finishes, verify the virtual machine in your subscription with the Azure CLI 2.0:</span></span>
 
 ```azurecli-interactive
 az vm list --resource-group sampleVmResourceGroup
 ```
 
-<span data-ttu-id="f69e8-165">코드가 작동하는지 확인했으면 CLI를 사용하여 VM과 해당 리소스를 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-165">Once you've verified that the code worked, use the CLI to delete the VM and its resources.</span></span>
+<span data-ttu-id="ccf1f-165">코드가 작동하는지 확인했으면 CLI를 사용하여 VM과 해당 리소스를 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-165">Once you've verified that the code worked, use the CLI to delete the VM and its resources.</span></span>
 
 ```azurecli-interactive
 az group delete --name sampleVmResourceGroup
 ```
 
-## <a name="deploy-a-web-app-from-a-github-repo"></a><span data-ttu-id="f69e8-166">GitHub 리포지토리에서 웹앱 배포</span><span class="sxs-lookup"><span data-stu-id="f69e8-166">Deploy a web app from a GitHub repo</span></span>
+## <a name="deploy-a-web-app-from-a-github-repo"></a><span data-ttu-id="ccf1f-166">GitHub 리포지토리에서 웹앱 배포</span><span class="sxs-lookup"><span data-stu-id="ccf1f-166">Deploy a web app from a GitHub repo</span></span>
 
-<span data-ttu-id="f69e8-167">`AzureApp.java`의 main 메서드를 아래 코드로 바꾸고, 이 코드를 실행하기 전에 `appName` 변수를 고유한 값으로 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-167">Replace the main method in `AzureApp.java` with the one below, updating the `appName` variable to a unique value before running the code.</span></span> <span data-ttu-id="f69e8-168">이 코드에서는 공용 GitHub 리포지토리의 `master` 분기에 있는 웹 응용 프로그램을 체험 가격 책정 계층에서 실행되는 새 [Azure App Service 웹앱](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview)으로 배포합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-168">This code deploys a web application from the `master` branch in a public GitHub repo into a new [Azure App Service Web App](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview) running in the free pricing tier.</span></span>
+<span data-ttu-id="ccf1f-167">`AzureApp.java`의 main 메서드를 아래 코드로 바꾸고, 이 코드를 실행하기 전에 `appName` 변수를 고유한 값으로 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-167">Replace the main method in `AzureApp.java` with the one below, updating the `appName` variable to a unique value before running the code.</span></span> <span data-ttu-id="ccf1f-168">이 코드에서는 공용 GitHub 리포지토리의 `master` 분기에 있는 웹 응용 프로그램을 체험 가격 책정 계층에서 실행되는 새 [Azure App Service 웹앱](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview)으로 배포합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-168">This code deploys a web application from the `master` branch in a public GitHub repo into a new [Azure App Service Web App](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview) running in the free pricing tier.</span></span>
 
 ```java
     public static void main(String[] args) {
@@ -255,23 +259,23 @@ az group delete --name sampleVmResourceGroup
     }
 ```
 
-<span data-ttu-id="f69e8-169">Maven을 사용하기 전에 다음 코드를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-169">Run the code as before using Maven:</span></span>
+<span data-ttu-id="ccf1f-169">Maven을 사용하기 전에 다음 코드를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-169">Run the code as before using Maven:</span></span>
 
-<span data-ttu-id="f69e8-170">CLI를 사용하여 응용 프로그램을 가리키는 브라우저를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-170">Open a browser pointed to the application using the CLI:</span></span>
+<span data-ttu-id="ccf1f-170">CLI를 사용하여 응용 프로그램을 가리키는 브라우저를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-170">Open a browser pointed to the application using the CLI:</span></span>
 
 ```azurecli-interactive
 az appservice web browse --resource-group sampleWebResourceGroup --name YOUR_APP_NAME
 ```
-<span data-ttu-id="f69e8-171">배포를 확인한 후 구독에서 웹앱을 제거하고 계획합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-171">Remove the web app and plan from your subscription once you've verified the deployment.</span></span>
+<span data-ttu-id="ccf1f-171">배포를 확인한 후 구독에서 웹앱을 제거하고 계획합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-171">Remove the web app and plan from your subscription once you've verified the deployment.</span></span>
 
 ```azurecli-interactive
 az group delete --name sampleWebResourceGroup
 ```
 
-## <a name="connect-to-an-azure-sql-database"></a><span data-ttu-id="f69e8-172">Azure SQL Database에 연결</span><span class="sxs-lookup"><span data-stu-id="f69e8-172">Connect to an Azure SQL database</span></span>
+## <a name="connect-to-an-azure-sql-database"></a><span data-ttu-id="ccf1f-172">Azure SQL Database에 연결</span><span class="sxs-lookup"><span data-stu-id="ccf1f-172">Connect to an Azure SQL database</span></span>
 
-<span data-ttu-id="f69e8-173">`AzureApp.java`의 현재 main 메서드를 `dbPassword` 변수에 대한 실제 값을 설정하는 아래 코드로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-173">Replace the current main method in `AzureApp.java` with the code below, setting a real value for the `dbPassword` variable.</span></span>
-<span data-ttu-id="f69e8-174">이 코드에서는 원격 액세스를 허용하는 방화벽 규칙이 있는 새 SQL 데이터베이스를 만든 다음 SQL Database JBDC 드라이버를 사용하여 연결합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-174">This code creates a new SQL database with a firewall rule allowing remote access,  and then connects to it using the SQL Database JBDC driver.</span></span> 
+<span data-ttu-id="ccf1f-173">`AzureApp.java`의 현재 main 메서드를 `dbPassword` 변수에 대한 실제 값을 설정하는 아래 코드로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-173">Replace the current main method in `AzureApp.java` with the code below, setting a real value for the `dbPassword` variable.</span></span>
+<span data-ttu-id="ccf1f-174">이 코드에서는 원격 액세스를 허용하는 방화벽 규칙이 있는 새 SQL 데이터베이스를 만든 다음 SQL Database JBDC 드라이버를 사용하여 연결합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-174">This code creates a new SQL database with a firewall rule allowing remote access,  and then connects to it using the SQL Database JBDC driver.</span></span> 
 
 ```java
 
@@ -334,21 +338,21 @@ az group delete --name sampleWebResourceGroup
         }
     }
 ```
-<span data-ttu-id="f69e8-175">명령줄에서 샘플을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-175">Run the sample from the command line:</span></span>
+<span data-ttu-id="ccf1f-175">명령줄에서 샘플을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-175">Run the sample from the command line:</span></span>
 
 ```
 mvn clean compile exec:java
 ```
 
-<span data-ttu-id="f69e8-176">그런 다음 CLI를 사용하여 리소스를 정리합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-176">Then clean up the resources using the CLI:</span></span>
+<span data-ttu-id="ccf1f-176">그런 다음 CLI를 사용하여 리소스를 정리합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-176">Then clean up the resources using the CLI:</span></span>
 
 ```azurecli-interactive
 az group delete --name sampleSqlResourceGroup
 ```
 
-## <a name="write-a-blob-into-a-new-storage-account"></a><span data-ttu-id="f69e8-177">새 저장소 계정에 Blob 쓰기</span><span class="sxs-lookup"><span data-stu-id="f69e8-177">Write a blob into a new storage account</span></span>
+## <a name="write-a-blob-into-a-new-storage-account"></a><span data-ttu-id="ccf1f-177">새 저장소 계정에 Blob 쓰기</span><span class="sxs-lookup"><span data-stu-id="ccf1f-177">Write a blob into a new storage account</span></span>
 
-<span data-ttu-id="f69e8-178">`AzureApp.java`의 현재 main 메서드를 아래 코드로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-178">Replace the current main method in `AzureApp.java` with the code below.</span></span> <span data-ttu-id="f69e8-179">이 코드에서는 [Azure 저장소 계정](https://docs.microsoft.com/azure/storage/storage-introduction)을 만든 다음 Java용 Azure Storage 라이브러리를 사용하여 클라우드에 새 텍스트 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-179">This code creates an [Azure storage account](https://docs.microsoft.com/azure/storage/storage-introduction) and then uses the Azure Storage libraries for Java to create a new text file in the cloud.</span></span>
+<span data-ttu-id="ccf1f-178">`AzureApp.java`의 현재 main 메서드를 아래 코드로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-178">Replace the current main method in `AzureApp.java` with the code below.</span></span> <span data-ttu-id="ccf1f-179">이 코드에서는 [Azure 저장소 계정](https://docs.microsoft.com/azure/storage/storage-introduction)을 만든 다음 Java용 Azure Storage 라이브러리를 사용하여 클라우드에 새 텍스트 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-179">This code creates an [Azure storage account](https://docs.microsoft.com/azure/storage/storage-introduction) and then uses the Azure Storage libraries for Java to create a new text file in the cloud.</span></span>
 
 ```java
 public static void main(String[] args) {
@@ -401,24 +405,24 @@ public static void main(String[] args) {
 }
 ```
 
-<span data-ttu-id="f69e8-180">명령줄에서 샘플을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-180">Run the sample from the command line:</span></span>
+<span data-ttu-id="ccf1f-180">명령줄에서 샘플을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-180">Run the sample from the command line:</span></span>
 
-<span data-ttu-id="f69e8-181">Azure Portal 또는 [Azure Storage 탐색기](https://docs.microsoft.com/azure/vs-azure-tools-storage-explorer-blobs)를 사용하여 저장소 계정에서 `helloazure.txt` 파일을 찾아볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-181">You can browse for the `helloazure.txt` file in your storage account through the Azure portal or with [Azure Storage Explorer](https://docs.microsoft.com/azure/vs-azure-tools-storage-explorer-blobs).</span></span>
+<span data-ttu-id="ccf1f-181">Azure Portal 또는 [Azure Storage 탐색기](https://docs.microsoft.com/azure/vs-azure-tools-storage-explorer-blobs)를 사용하여 저장소 계정에서 `helloazure.txt` 파일을 찾아볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-181">You can browse for the `helloazure.txt` file in your storage account through the Azure portal or with [Azure Storage Explorer](https://docs.microsoft.com/azure/vs-azure-tools-storage-explorer-blobs).</span></span>
 
-<span data-ttu-id="f69e8-182">CLI를 사용하여 저장소 계정을 정리합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-182">Clean up the storage account using the CLI:</span></span>
+<span data-ttu-id="ccf1f-182">CLI를 사용하여 저장소 계정을 정리합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-182">Clean up the storage account using the CLI:</span></span>
 
 ```azurecli-interactive
 az group delete --name sampleStorageResourceGroup
 ```
 
-## <a name="explore-more-samples"></a><span data-ttu-id="f69e8-183">더 많은 샘플 탐색</span><span class="sxs-lookup"><span data-stu-id="f69e8-183">Explore more samples</span></span>
+## <a name="explore-more-samples"></a><span data-ttu-id="ccf1f-183">더 많은 샘플 탐색</span><span class="sxs-lookup"><span data-stu-id="ccf1f-183">Explore more samples</span></span>
 
-<span data-ttu-id="f69e8-184">Java용 Azure 관리 라이브러리를 사용하여 리소스를 관리하고 작업을 자동화하는 방법에 대한 자세한 내용은 [가상 컴퓨터](../java-sdk-azure-virtual-machine-samples.md), [웹앱](../java-sdk-azure-web-apps-samples.md) 및 [SQL 데이터베이스](../java-sdk-azure-sql-database-samples.md)에 대한 샘플 코드를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f69e8-184">To learn more about how to use the Azure management libraries for Java to manage resources and automate tasks, see our sample code for [virtual machines](../java-sdk-azure-virtual-machine-samples.md), [web apps](../java-sdk-azure-web-apps-samples.md) and [SQL database](../java-sdk-azure-sql-database-samples.md).</span></span>
+<span data-ttu-id="ccf1f-184">Java용 Azure 관리 라이브러리를 사용하여 리소스를 관리하고 작업을 자동화하는 방법에 대한 자세한 내용은 [가상 머신](../java-sdk-azure-virtual-machine-samples.md), [웹앱](../java-sdk-azure-web-apps-samples.md) 및 [SQL 데이터베이스](../java-sdk-azure-sql-database-samples.md)에 대한 샘플 코드를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-184">To learn more about how to use the Azure management libraries for Java to manage resources and automate tasks, see our sample code for [virtual machines](../java-sdk-azure-virtual-machine-samples.md), [web apps](../java-sdk-azure-web-apps-samples.md) and [SQL database](../java-sdk-azure-sql-database-samples.md).</span></span>
 
-## <a name="reference-and-release-notes"></a><span data-ttu-id="f69e8-185">참조 및 릴리스 정보</span><span class="sxs-lookup"><span data-stu-id="f69e8-185">Reference and release notes</span></span>
+## <a name="reference-and-release-notes"></a><span data-ttu-id="ccf1f-185">참조 및 릴리스 정보</span><span class="sxs-lookup"><span data-stu-id="ccf1f-185">Reference and release notes</span></span>
 
-<span data-ttu-id="f69e8-186">[참조](http://docs.microsoft.com/java/api)는 모든 패키지에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-186">A [reference](http://docs.microsoft.com/java/api) is available for all packages.</span></span>
+<span data-ttu-id="ccf1f-186">[참조](http://docs.microsoft.com/java/api)는 모든 패키지에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-186">A [reference](http://docs.microsoft.com/java/api) is available for all packages.</span></span>
 
-## <a name="get-help-and-give-feedback"></a><span data-ttu-id="f69e8-187">도움말 가져오기 및 피드백 제공</span><span class="sxs-lookup"><span data-stu-id="f69e8-187">Get help and give feedback</span></span>
+## <a name="get-help-and-give-feedback"></a><span data-ttu-id="ccf1f-187">도움말 가져오기 및 피드백 제공</span><span class="sxs-lookup"><span data-stu-id="ccf1f-187">Get help and give feedback</span></span>
 
-<span data-ttu-id="f69e8-188">[Stack Overflow(영문)](http://stackoverflow.com/questions/tagged/azure+java)의 커뮤니티에 질문을 게시합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-188">Post questions to the community on [Stack Overflow](http://stackoverflow.com/questions/tagged/azure+java).</span></span> <span data-ttu-id="f69e8-189">[GitHub 프로젝트](https://github.com/Azure/azure-sdk-for-java)에서 Java용 Azure 라이브러리에 대한 버그 및 열기 문제를 보고합니다.</span><span class="sxs-lookup"><span data-stu-id="f69e8-189">Report bugs and open issues against the Azure libraries for Java on the [project GitHub](https://github.com/Azure/azure-sdk-for-java).</span></span>
+<span data-ttu-id="ccf1f-188">[Stack Overflow(영문)](http://stackoverflow.com/questions/tagged/azure+java)의 커뮤니티에 질문을 게시합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-188">Post questions to the community on [Stack Overflow](http://stackoverflow.com/questions/tagged/azure+java).</span></span> <span data-ttu-id="ccf1f-189">[GitHub 프로젝트](https://github.com/Azure/azure-sdk-for-java)에서 Java용 Azure 라이브러리에 대한 버그 및 열기 문제를 보고합니다.</span><span class="sxs-lookup"><span data-stu-id="ccf1f-189">Report bugs and open issues against the Azure libraries for Java on the [project GitHub](https://github.com/Azure/azure-sdk-for-java).</span></span>

@@ -7,55 +7,55 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: multiple
-ms.workload: na
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: robmcm
-ms.openlocfilehash: ba5829407d03d275784a3a458d88ea47ac8494b8
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: multiple
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: na
+ms.openlocfilehash: 678d4b279cecb83c95b3bf0f6bcdf1581924aa62
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="spring-boot-starters-for-azure"></a><span data-ttu-id="04e46-103">Azure용 Spring Boot Starter</span><span class="sxs-lookup"><span data-stu-id="04e46-103">Spring Boot Starters for Azure</span></span>
+# <a name="spring-boot-starters-for-azure"></a><span data-ttu-id="1693d-103">Azure용 Spring Boot Starter</span><span class="sxs-lookup"><span data-stu-id="1693d-103">Spring Boot Starters for Azure</span></span>
 
-<span data-ttu-id="04e46-104">이 문서에서는 Microsoft Azure 작업을 위해 Java 개발자에게 통합 기능을 제공하는 [Spring Initializr]의 여러 Spring Boot Starter에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="04e46-104">This article describes the various Spring Boot Starters for the [Spring Initializr] that provide Java developers with integration features for working with Microsoft Azure.</span></span>
+<span data-ttu-id="1693d-104">이 문서에서는 Microsoft Azure 작업을 위해 Java 개발자에게 통합 기능을 제공하는 [Spring Initializr]의 여러 Spring Boot Starter에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="1693d-104">This article describes the various Spring Boot Starters for the [Spring Initializr] that provide Java developers with integration features for working with Microsoft Azure.</span></span>
 
 ![Azure Spring Boot Starter][spring-boot-starters]
 
-<span data-ttu-id="04e46-106">현재 다음 Spring Boot Starter를 Azure에 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="04e46-106">The following Spring Boot Starters are currently available for Azure:</span></span>
+<span data-ttu-id="1693d-106">현재 다음 Spring Boot Starter를 Azure에 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1693d-106">The following Spring Boot Starters are currently available for Azure:</span></span>
 
-* <span data-ttu-id="04e46-107">**[Azure Support](#azure-support)**</span><span class="sxs-lookup"><span data-stu-id="04e46-107">**[Azure Support](#azure-support)**</span></span>
+* <span data-ttu-id="1693d-107">**[Azure Support](#azure-support)**</span><span class="sxs-lookup"><span data-stu-id="1693d-107">**[Azure Support](#azure-support)**</span></span>
 
-   <span data-ttu-id="04e46-108">Azure Services(예: Service Bus, Storage, Active Directory 등)에 대한 자동 구성 지원을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="04e46-108">Provides auto-configuration support for Azure Services; e.g. Service Bus, Storage, Active Directory, etc.</span></span>
+   <span data-ttu-id="1693d-108">Azure Services(예: Service Bus, Storage, Active Directory 등)에 대한 자동 구성 지원을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="1693d-108">Provides auto-configuration support for Azure Services; e.g. Service Bus, Storage, Active Directory, etc.</span></span>
 
-* <span data-ttu-id="04e46-109">**[Azure Active Directory](#azure-active-directory)**</span><span class="sxs-lookup"><span data-stu-id="04e46-109">**[Azure Active Directory](#azure-active-directory)**</span></span>
+* <span data-ttu-id="1693d-109">**[Azure Active Directory](#azure-active-directory)**</span><span class="sxs-lookup"><span data-stu-id="1693d-109">**[Azure Active Directory](#azure-active-directory)**</span></span>
 
-   <span data-ttu-id="04e46-110">인증을 위해 Spring Security와 Azure Active Directory의 통합 지원을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="04e46-110">Provides integration support for Spring Security with Azure Active Directory for authentication.</span></span>
+   <span data-ttu-id="1693d-110">인증을 위해 Spring Security와 Azure Active Directory의 통합 지원을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="1693d-110">Provides integration support for Spring Security with Azure Active Directory for authentication.</span></span>
 
-* <span data-ttu-id="04e46-111">**[Azure Key Vault](#azure-key-vault)**</span><span class="sxs-lookup"><span data-stu-id="04e46-111">**[Azure Key Vault](#azure-key-vault)**</span></span>
+* <span data-ttu-id="1693d-111">**[Azure Key Vault](#azure-key-vault)**</span><span class="sxs-lookup"><span data-stu-id="1693d-111">**[Azure Key Vault](#azure-key-vault)**</span></span>
 
-   <span data-ttu-id="04e46-112">Azure Key Vault Secrets와의 통합을 위한 Spring 값 주석 처리 지원을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="04e46-112">Provides Spring value annotation support for integration with Azure Key Vault Secrets.</span></span>
+   <span data-ttu-id="1693d-112">Azure Key Vault Secrets와의 통합을 위한 Spring 값 주석 처리 지원을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="1693d-112">Provides Spring value annotation support for integration with Azure Key Vault Secrets.</span></span>
 
-* <span data-ttu-id="04e46-113">**[Azure Storage](#azure-storage)**</span><span class="sxs-lookup"><span data-stu-id="04e46-113">**[Azure Storage](#azure-storage)**</span></span>
+* <span data-ttu-id="1693d-113">**[Azure Storage](#azure-storage)**</span><span class="sxs-lookup"><span data-stu-id="1693d-113">**[Azure Storage](#azure-storage)**</span></span>
 
-   <span data-ttu-id="04e46-114">Azure Storage 서비스에 대한 Spring Boot 지원을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="04e46-114">Provides Spring Boot support for Azure Storage services.</span></span>
+   <span data-ttu-id="1693d-114">Azure Storage 서비스에 대한 Spring Boot 지원을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="1693d-114">Provides Spring Boot support for Azure Storage services.</span></span>
 
 <a name="azure-support"></a>
-## <a name="azure-support"></a><span data-ttu-id="04e46-115">Azure Support</span><span class="sxs-lookup"><span data-stu-id="04e46-115">Azure Support</span></span>
+## <a name="azure-support"></a><span data-ttu-id="1693d-115">Azure Support</span><span class="sxs-lookup"><span data-stu-id="1693d-115">Azure Support</span></span>
 
-<span data-ttu-id="04e46-116">이 Spring Boot Starter는 Azure Services(예: Service Bus, Storage, Active Directory, Cosmos DB, Key Vault)에 대한 자동 구성 지원을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="04e46-116">This Spring Boot Starter provides auto-configuration support for Azure Services; for example: Service Bus, Storage, Active Directory, Cosmos DB, Key Vault, etc.</span></span>
+<span data-ttu-id="1693d-116">이 Spring Boot Starter는 Azure Services(예: Service Bus, Storage, Active Directory, Cosmos DB, Key Vault)에 대한 자동 구성 지원을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="1693d-116">This Spring Boot Starter provides auto-configuration support for Azure Services; for example: Service Bus, Storage, Active Directory, Cosmos DB, Key Vault, etc.</span></span>
 
-<span data-ttu-id="04e46-117">이 스타터가 제공하는 여러 Azure 기능을 사용하는 방법의 예는 다음을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="04e46-117">For examples of how to use the various Azure features that are provided by this starter, see the following:</span></span>
+<span data-ttu-id="1693d-117">이 스타터가 제공하는 여러 Azure 기능을 사용하는 방법의 예는 다음을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1693d-117">For examples of how to use the various Azure features that are provided by this starter, see the following:</span></span>
 
-* <span data-ttu-id="04e46-118"><https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples></span><span class="sxs-lookup"><span data-stu-id="04e46-118"><https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples></span></span>
+* <span data-ttu-id="1693d-118"><https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples></span><span class="sxs-lookup"><span data-stu-id="1693d-118"><https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples></span></span>
 
-<span data-ttu-id="04e46-119">이 스타터를 Spring Boot 프로젝트에 추가할 때는 *pom.xml* 파일에서 다음을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="04e46-119">When you add this starter to a Spring Boot project, the following changes are made to the *pom.xml* file:</span></span>
+<span data-ttu-id="1693d-119">이 스타터를 Spring Boot 프로젝트에 추가할 때는 *pom.xml* 파일에서 다음을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="1693d-119">When you add this starter to a Spring Boot project, the following changes are made to the *pom.xml* file:</span></span>
 
-* <span data-ttu-id="04e46-120">다음 속성을 `<properties>` 요소에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="04e46-120">The following property is added to `<properties>` element:</span></span>
+* <span data-ttu-id="1693d-120">다음 속성을 `<properties>` 요소에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="1693d-120">The following property is added to `<properties>` element:</span></span>
 
    ```xml
    <properties>
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/06/2017
    </properties>
    ```
 
-* <span data-ttu-id="04e46-121">기본 `spring-boot-starter` 종속성은 다음으로 바뀝니다.</span><span class="sxs-lookup"><span data-stu-id="04e46-121">The default `spring-boot-starter` dependency is replaced with the following:</span></span>
+* <span data-ttu-id="1693d-121">기본 `spring-boot-starter` 종속성은 다음으로 바뀝니다.</span><span class="sxs-lookup"><span data-stu-id="1693d-121">The default `spring-boot-starter` dependency is replaced with the following:</span></span>
 
    ```xml
    <dependency>
@@ -73,7 +73,7 @@ ms.lasthandoff: 12/06/2017
    </dependency>
    ```
 
-* <span data-ttu-id="04e46-122">다음 섹션이 파일에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="04e46-122">The following section is added to the file:</span></span>
+* <span data-ttu-id="1693d-122">다음 섹션이 파일에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="1693d-122">The following section is added to the file:</span></span>
 
    ```xml
    <dependencyManagement>
@@ -90,17 +90,17 @@ ms.lasthandoff: 12/06/2017
    ```
 
 <a name="azure-active-directory"></a>
-## <a name="azure-active-directory"></a><span data-ttu-id="04e46-123">Azure Active Directory</span><span class="sxs-lookup"><span data-stu-id="04e46-123">Azure Active Directory</span></span>
+## <a name="azure-active-directory"></a><span data-ttu-id="1693d-123">Azure Active Directory</span><span class="sxs-lookup"><span data-stu-id="1693d-123">Azure Active Directory</span></span>
 
-<span data-ttu-id="04e46-124">이 Spring Boot Starter는 인증을 위해 Azure Active Directory와의 통합을 제공하기 위해 Spring Security에 대한 자동 구성 지원을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="04e46-124">This Spring Boot Starter provides auto-configuration support for Spring Security in order to provide integration with Azure Active Directory for authentication.</span></span>
+<span data-ttu-id="1693d-124">이 Spring Boot Starter는 인증을 위해 Azure Active Directory와의 통합을 제공하기 위해 Spring Security에 대한 자동 구성 지원을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="1693d-124">This Spring Boot Starter provides auto-configuration support for Spring Security in order to provide integration with Azure Active Directory for authentication.</span></span>
 
-<span data-ttu-id="04e46-125">이 스타터가 제공하는 Azure Active Directory 기능을 사용하는 방법의 예는 다음을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="04e46-125">For examples of how to use the Azure Active Directory features that are provided by this starter, see the following:</span></span>
+<span data-ttu-id="1693d-125">이 스타터가 제공하는 Azure Active Directory 기능을 사용하는 방법의 예는 다음을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1693d-125">For examples of how to use the Azure Active Directory features that are provided by this starter, see the following:</span></span>
 
-* <span data-ttu-id="04e46-126"><https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples/azure-active-directory-spring-boot-sample></span><span class="sxs-lookup"><span data-stu-id="04e46-126"><https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples/azure-active-directory-spring-boot-sample></span></span>
+* <span data-ttu-id="1693d-126"><https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples/azure-active-directory-spring-boot-sample></span><span class="sxs-lookup"><span data-stu-id="1693d-126"><https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples/azure-active-directory-spring-boot-sample></span></span>
 
-<span data-ttu-id="04e46-127">이 스타터를 Spring Boot 프로젝트에 추가할 때는 *pom.xml* 파일에서 다음을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="04e46-127">When you add this starter to a Spring Boot project, the following changes are made to the *pom.xml* file:</span></span>
+<span data-ttu-id="1693d-127">이 스타터를 Spring Boot 프로젝트에 추가할 때는 *pom.xml* 파일에서 다음을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="1693d-127">When you add this starter to a Spring Boot project, the following changes are made to the *pom.xml* file:</span></span>
 
-* <span data-ttu-id="04e46-128">다음 속성을 `<properties>` 요소에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="04e46-128">The following property is added to `<properties>` element:</span></span>
+* <span data-ttu-id="1693d-128">다음 속성을 `<properties>` 요소에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="1693d-128">The following property is added to `<properties>` element:</span></span>
 
    ```xml
    <properties>
@@ -109,7 +109,7 @@ ms.lasthandoff: 12/06/2017
    </properties>
    ```
 
-* <span data-ttu-id="04e46-129">기본 `spring-boot-starter` 종속성은 다음으로 바뀝니다.</span><span class="sxs-lookup"><span data-stu-id="04e46-129">The default `spring-boot-starter` dependency is replaced with the following:</span></span>
+* <span data-ttu-id="1693d-129">기본 `spring-boot-starter` 종속성은 다음으로 바뀝니다.</span><span class="sxs-lookup"><span data-stu-id="1693d-129">The default `spring-boot-starter` dependency is replaced with the following:</span></span>
 
    ```xml
    <dependency>
@@ -118,7 +118,7 @@ ms.lasthandoff: 12/06/2017
    </dependency>
    ```
 
-* <span data-ttu-id="04e46-130">다음 섹션이 파일에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="04e46-130">The following section is added to the file:</span></span>
+* <span data-ttu-id="1693d-130">다음 섹션이 파일에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="1693d-130">The following section is added to the file:</span></span>
 
    ```xml
    <dependencyManagement>
@@ -135,17 +135,17 @@ ms.lasthandoff: 12/06/2017
    ```
 
 <a name="azure-key-vault"></a>
-## <a name="azure-key-vault"></a><span data-ttu-id="04e46-131">Azure Key Vault</span><span class="sxs-lookup"><span data-stu-id="04e46-131">Azure Key Vault</span></span>
+## <a name="azure-key-vault"></a><span data-ttu-id="1693d-131">Azure Key Vault</span><span class="sxs-lookup"><span data-stu-id="1693d-131">Azure Key Vault</span></span>
 
-<span data-ttu-id="04e46-132">이 Spring Boot Starter는 Azure Key Vault Secrets와의 통합을 위한 Spring 값 주석 처리 지원을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="04e46-132">This Spring Boot Starter provides Spring value annotation support for integration with Azure Key Vault Secrets.</span></span>
+<span data-ttu-id="1693d-132">이 Spring Boot Starter는 Azure Key Vault Secrets와의 통합을 위한 Spring 값 주석 처리 지원을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="1693d-132">This Spring Boot Starter provides Spring value annotation support for integration with Azure Key Vault Secrets.</span></span>
 
-<span data-ttu-id="04e46-133">이 스타터가 제공하는 Azure Key Vault 기능을 사용하는 방법의 예는 다음을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="04e46-133">For examples of how to use the Azure Key Vault features that are provided by this starter, see the following:</span></span>
+<span data-ttu-id="1693d-133">이 스타터가 제공하는 Azure Key Vault 기능을 사용하는 방법의 예는 다음을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1693d-133">For examples of how to use the Azure Key Vault features that are provided by this starter, see the following:</span></span>
 
-* <span data-ttu-id="04e46-134"><https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples/azure-keyvault-secrets-spring-boot-sample></span><span class="sxs-lookup"><span data-stu-id="04e46-134"><https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples/azure-keyvault-secrets-spring-boot-sample></span></span>
+* <span data-ttu-id="1693d-134"><https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples/azure-keyvault-secrets-spring-boot-sample></span><span class="sxs-lookup"><span data-stu-id="1693d-134"><https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples/azure-keyvault-secrets-spring-boot-sample></span></span>
 
-<span data-ttu-id="04e46-135">이 스타터를 Spring Boot 프로젝트에 추가할 때는 *pom.xml* 파일에서 다음을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="04e46-135">When you add this starter to a Spring Boot project, the following changes are made to the *pom.xml* file:</span></span>
+<span data-ttu-id="1693d-135">이 스타터를 Spring Boot 프로젝트에 추가할 때는 *pom.xml* 파일에서 다음을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="1693d-135">When you add this starter to a Spring Boot project, the following changes are made to the *pom.xml* file:</span></span>
 
-* <span data-ttu-id="04e46-136">다음 속성을 `<properties>` 요소에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="04e46-136">The following property is added to `<properties>` element:</span></span>
+* <span data-ttu-id="1693d-136">다음 속성을 `<properties>` 요소에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="1693d-136">The following property is added to `<properties>` element:</span></span>
 
    ```xml
    <properties>
@@ -154,7 +154,7 @@ ms.lasthandoff: 12/06/2017
    </properties>
    ```
 
-* <span data-ttu-id="04e46-137">기본 `spring-boot-starter` 종속성은 다음으로 바뀝니다.</span><span class="sxs-lookup"><span data-stu-id="04e46-137">The default `spring-boot-starter` dependency is replaced with the following:</span></span>
+* <span data-ttu-id="1693d-137">기본 `spring-boot-starter` 종속성은 다음으로 바뀝니다.</span><span class="sxs-lookup"><span data-stu-id="1693d-137">The default `spring-boot-starter` dependency is replaced with the following:</span></span>
 
    ```xml
    <dependency>
@@ -163,7 +163,7 @@ ms.lasthandoff: 12/06/2017
    </dependency>
    ```
 
-* <span data-ttu-id="04e46-138">다음 섹션이 파일에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="04e46-138">The following section is added to the file:</span></span>
+* <span data-ttu-id="1693d-138">다음 섹션이 파일에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="1693d-138">The following section is added to the file:</span></span>
 
    ```xml
    <dependencyManagement>
@@ -180,19 +180,19 @@ ms.lasthandoff: 12/06/2017
    ```
 
 <a name="azure-storage"></a>
-## <a name="azure-storage"></a><span data-ttu-id="04e46-139">Azure Storage</span><span class="sxs-lookup"><span data-stu-id="04e46-139">Azure Storage</span></span>
+## <a name="azure-storage"></a><span data-ttu-id="1693d-139">Azure Storage</span><span class="sxs-lookup"><span data-stu-id="1693d-139">Azure Storage</span></span>
 
-<span data-ttu-id="04e46-140">이 Spring Boot Starter는 Azure Storage services에 대한 Spring Boot 통합 지원을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="04e46-140">This Spring Boot Starter provides Spring Boot integration support for Azure Storage services.</span></span>
+<span data-ttu-id="1693d-140">이 Spring Boot Starter는 Azure Storage services에 대한 Spring Boot 통합 지원을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="1693d-140">This Spring Boot Starter provides Spring Boot integration support for Azure Storage services.</span></span>
 
-<span data-ttu-id="04e46-141">이 스타터가 제공하는 Azure Storage 기능을 사용하는 방법의 예는 다음을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="04e46-141">For examples of how to use the Azure Storage features that are provided by this starter, see the following:</span></span>
+<span data-ttu-id="1693d-141">이 스타터가 제공하는 Azure Storage 기능을 사용하는 방법의 예는 다음을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1693d-141">For examples of how to use the Azure Storage features that are provided by this starter, see the following:</span></span>
 
-* [<span data-ttu-id="04e46-142">Azure Storage에 Spring Boot Starter를 사용하는 방법</span><span class="sxs-lookup"><span data-stu-id="04e46-142">How to use the Spring Boot Starter for Azure Storage</span></span>](configure-spring-boot-starter-java-app-with-azure-storage.md)
+* [<span data-ttu-id="1693d-142">Azure Storage에 Spring Boot Starter를 사용하는 방법</span><span class="sxs-lookup"><span data-stu-id="1693d-142">How to use the Spring Boot Starter for Azure Storage</span></span>](configure-spring-boot-starter-java-app-with-azure-storage.md)
 
-* <span data-ttu-id="04e46-143"><https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples/azure-storage-spring-boot-sample></span><span class="sxs-lookup"><span data-stu-id="04e46-143"><https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples/azure-storage-spring-boot-sample></span></span>
+* <span data-ttu-id="1693d-143"><https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples/azure-storage-spring-boot-sample></span><span class="sxs-lookup"><span data-stu-id="1693d-143"><https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples/azure-storage-spring-boot-sample></span></span>
 
-<span data-ttu-id="04e46-144">이 스타터를 Spring Boot 프로젝트에 추가할 때는 *pom.xml* 파일에서 다음을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="04e46-144">When you add this starter to a Spring Boot project, the following changes are made to the *pom.xml* file:</span></span>
+<span data-ttu-id="1693d-144">이 스타터를 Spring Boot 프로젝트에 추가할 때는 *pom.xml* 파일에서 다음을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="1693d-144">When you add this starter to a Spring Boot project, the following changes are made to the *pom.xml* file:</span></span>
 
-* <span data-ttu-id="04e46-145">다음 속성을 `<properties>` 요소에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="04e46-145">The following property is added to `<properties>` element:</span></span>
+* <span data-ttu-id="1693d-145">다음 속성을 `<properties>` 요소에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="1693d-145">The following property is added to `<properties>` element:</span></span>
 
    ```xml
    <properties>
@@ -201,7 +201,7 @@ ms.lasthandoff: 12/06/2017
    </properties>
    ```
 
-* <span data-ttu-id="04e46-146">기본 `spring-boot-starter` 종속성은 다음으로 바뀝니다.</span><span class="sxs-lookup"><span data-stu-id="04e46-146">The default `spring-boot-starter` dependency is replaced with the following:</span></span>
+* <span data-ttu-id="1693d-146">기본 `spring-boot-starter` 종속성은 다음으로 바뀝니다.</span><span class="sxs-lookup"><span data-stu-id="1693d-146">The default `spring-boot-starter` dependency is replaced with the following:</span></span>
 
    ```xml
    <dependency>
@@ -210,7 +210,7 @@ ms.lasthandoff: 12/06/2017
    </dependency>
    ```
 
-* <span data-ttu-id="04e46-147">다음 섹션이 파일에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="04e46-147">The following section is added to the file:</span></span>
+* <span data-ttu-id="1693d-147">다음 섹션이 파일에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="1693d-147">The following section is added to the file:</span></span>
 
    ```xml
    <dependencyManagement>
@@ -226,13 +226,13 @@ ms.lasthandoff: 12/06/2017
    </dependencyManagement>
    ```
 
-## <a name="next-steps"></a><span data-ttu-id="04e46-148">다음 단계</span><span class="sxs-lookup"><span data-stu-id="04e46-148">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="1693d-148">다음 단계</span><span class="sxs-lookup"><span data-stu-id="1693d-148">Next steps</span></span>
 
-<span data-ttu-id="04e46-149">Azure에서 [Spring Boot] 응용 프로그램을 사용하는 방법에 대한 자세한 내용은 [Azure의 Spring]을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="04e46-149">For more information about using [Spring Boot] applications on Azure, see [Spring on Azure].</span></span>
+<span data-ttu-id="1693d-149">Azure에서 [Spring Boot] 응용 프로그램을 사용하는 방법에 대한 자세한 내용은 [Azure의 Spring]을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1693d-149">For more information about using [Spring Boot] applications on Azure, see [Spring on Azure].</span></span>
 
-<span data-ttu-id="04e46-150">Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 개발자용 Azure] 및 [Visual Studio Team Services용 Java 도구]를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="04e46-150">For more information about using Azure with Java, see the [Azure for Java Developers] and the [Java Tools for Visual Studio Team Services].</span></span>
+<span data-ttu-id="1693d-150">Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 개발자용 Azure] 및 [Visual Studio Team Services용 Java 도구]를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1693d-150">For more information about using Azure with Java, see the [Azure for Java Developers] and the [Java Tools for Visual Studio Team Services].</span></span>
 
-<span data-ttu-id="04e46-151">자체 Spring Boot 응용 프로그램을 시작하는 데 도움이 필요하면 https://start.spring.io/에서 **Spring Initializr**를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="04e46-151">For help with getting started with your own Spring Boot applications, see the **Spring Initializr** at https://start.spring.io/.</span></span>
+<span data-ttu-id="1693d-151">자체 Spring Boot 응용 프로그램을 시작하는 데 도움이 필요하면 https://start.spring.io/에서 **Spring Initializr**를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1693d-151">For help with getting started with your own Spring Boot applications, see the **Spring Initializr** at https://start.spring.io/.</span></span>
 
 <!-- URL List -->
 
