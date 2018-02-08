@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: multiple
-ms.workload: na
-ms.tgt_pltfrm: multiple
-ms.devlang: Java
-ms.topic: article
-ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: b715ffb97a4ca2b13e8020d354341139be4be45b
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.date: 02/01/2018
+ms.devlang: Java
+ms.service: multiple
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: na
+ms.openlocfilehash: 046ae0428d50a7f173f5ad15be53ffd8e66c11c5
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="managing-redis-caches-using-the-azure-explorer-for-intellij"></a>IntelliJ용 Azure 탐색기를 사용하여 Redis Cache 관리
 
@@ -44,9 +44,9 @@ IntelliJ용 Azure 도구 키트의 일부인 Azure 탐색기는 IntelliJ IDE 내
 
    a. **DNS 이름**: 새 Redis Cache에 대한 DNS 하위 도메인을 지정합니다. 이 주소는 ".redis.cache.windows.net" 앞에 추가됩니다(예: *wingtiptoys.redis.cache.windows.net*).
 
-   b. **구독**: 새 Redis Cache에 사용할 Azure 구독을 지정합니다.
+   나. **구독**: 새 Redis Cache에 사용할 Azure 구독을 지정합니다.
 
-   c. **리소스 그룹**: Redis Cache에 대한 리소스 그룹을 지정합니다. 다음 옵션 중 하나를 선택해야 합니다. 
+   다. **리소스 그룹**: Redis Cache에 대한 리소스 그룹을 지정합니다. 다음 옵션 중 하나를 선택해야 합니다. 
       * **새로 만들기**: 새 리소스 그룹을 만들도록 지정합니다. 
       * **기존 그룹 사용**: Azure 계정과 연결된 리소스 그룹 목록에서 선택하도록 지정합니다. 
 

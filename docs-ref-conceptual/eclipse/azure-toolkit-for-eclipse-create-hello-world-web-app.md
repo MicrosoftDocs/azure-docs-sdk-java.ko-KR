@@ -7,18 +7,18 @@ author: selvasingh
 manager: routlaw
 editor: 
 ms.assetid: 20d41e88-9eab-462e-8ee3-89da71e7a33f
-ms.service: app-service
-ms.workload: web
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 11/15/2017
 ms.author: robmcm;asirveda
-ms.openlocfilehash: 7b82be727798a1edb58d99fe0d6b43e498e22a92
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: app-service
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: web
+ms.openlocfilehash: bec94e65951330c933e0173fd580c3578e759c18
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-eclipse"></a>Eclipse를 사용하여 Azure용 Hello World 웹앱 만들기
 
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/18/2017
    
    ![새 동적 웹 프로젝트 속성][dynamic-web-project-properties]
 
-3. **마침**을 클릭합니다.
+3. **Finish**를 클릭합니다.
 
 4. Eclipse의 Project Explorer 뷰 내에서 **MyWebApp**을 확장합니다. **WebContent**를 마우스 오른쪽 단추로 클릭하고 **New**를 클릭한 후 **JSP File**을 클릭합니다.
 

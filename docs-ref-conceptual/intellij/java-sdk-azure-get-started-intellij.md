@@ -2,20 +2,24 @@
 title: "Intellij를 사용하여 Java용 Azure 시작"
 description: "Azure 구독을 사용하여 Java용 Azure 라이브러리의 기본적인 사용을 시작합니다."
 keywords: "Azure, Java, SDK, API, 인증, 시작"
+services: 
+documentationcenter: java
 author: roygara
-ms.author: v-rogara
 manager: timlt
-ms.date: 10/30/2017
-ms.topic: get-started-article
-ms.prod: azure
-ms.technology: azure
+editor: 
+ms.assetid: 
+ms.author: v-rogara
+ms.date: 02/01/2018
 ms.devlang: java
+ms.prod: azure
 ms.service: multiple
-ms.openlocfilehash: 1e10a7c5a46ed0e36143fd4a99decc037c04e1fe
-ms.sourcegitcommit: fcf1189ede712ae30f8c7626bde50c9b8bb561bc
+ms.topic: get-started-article
+ms.technology: azure
+ms.openlocfilehash: 0a059366f7cdc139dcb5a8e7e9ca78254384d19e
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="get-started-with-the-azure-libraries-using-intellij"></a>Intellij를 사용하여 Azure 라이브러리 시작
 
@@ -135,7 +139,7 @@ pom.xml을 저장합니다.
 
 Intellij를 다시 시작합니다.
 
-## <a name="create-a-linux-virtual-machine"></a>Linux 가상 컴퓨터 만들기
+## <a name="create-a-linux-virtual-machine"></a>Linux 가상 머신 만들기
 
 프로젝트의 `src/main/java` 디렉터리에 `AzureApp.java`라는 새 파일을 만들고 다음 코드 블록에 붙여넣습니다. `userName` 및 `sshKey` 변수를 컴퓨터에 대한 실제 값으로 업데이트합니다. 이 코드에서는 미국 동부 Azure 지역에서 실행되는 `sampleResourceGroup` 리소스 그룹에 `testLinuxVM`이라는 새 Linux VM을 만듭니다.
 
@@ -209,7 +213,7 @@ public class AzureApp {
 ```
 
 
-SDK에서 기본 호출을 Azure REST API로 설정하여 가상 컴퓨터 및 해당 리소스를 구성할 때 콘솔에서 일부 REST 요청과 응답이 표시됩니다. 프로그램이 완료되면 Azure CLI 2.0을 사용하여 구독의 가상 컴퓨터를 확인합니다.
+SDK에서 기본 호출을 Azure REST API로 설정하여 가상 머신 및 해당 리소스를 구성할 때 콘솔에서 일부 REST 요청과 응답이 표시됩니다. 프로그램이 완료되면 Azure CLI 2.0을 사용하여 구독의 가상 머신을 확인합니다.
 
 ```azurecli-interactive
 az vm list --resource-group sampleVmResourceGroup
@@ -413,7 +417,7 @@ az group delete --name sampleStorageResourceGroup
 
 ## <a name="explore-more-samples"></a>더 많은 샘플 탐색
 
-Java용 Azure 관리 라이브러리를 사용하여 리소스를 관리하고 작업을 자동화하는 방법에 대한 자세한 내용은 [가상 컴퓨터](../java-sdk-azure-virtual-machine-samples.md), [웹앱](../java-sdk-azure-web-apps-samples.md) 및 [SQL 데이터베이스](../java-sdk-azure-sql-database-samples.md)에 대한 샘플 코드를 참조하세요.
+Java용 Azure 관리 라이브러리를 사용하여 리소스를 관리하고 작업을 자동화하는 방법에 대한 자세한 내용은 [가상 머신](../java-sdk-azure-virtual-machine-samples.md), [웹앱](../java-sdk-azure-web-apps-samples.md) 및 [SQL 데이터베이스](../java-sdk-azure-sql-database-samples.md)에 대한 샘플 코드를 참조하세요.
 
 ## <a name="reference-and-release-notes"></a>참조 및 릴리스 정보
 

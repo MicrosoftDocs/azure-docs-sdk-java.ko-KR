@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: multiple
-ms.workload: na
-ms.tgt_pltfrm: multiple
-ms.devlang: Java
-ms.topic: article
-ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: a6127a43509766101e22ac4c21e66344fd231138
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.date: 02/01/2018
+ms.devlang: Java
+ms.service: multiple
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: na
+ms.openlocfilehash: 7b493097e94580df42efcfb8c56736e1f179b280
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-eclipse"></a>Eclipse용 Azure Explorer를 사용하여 저장소 계정 관리
 
@@ -100,7 +100,7 @@ Azure Explorer를 사용하여 저장소 계정을 삭제하려면 다음을 수
 
 Azure Storage 계정, 크기 및 가격 책정에 대한 자세한 내용은 다음 리소스를 참조하세요.
 
-* [Microsoft Azure Storage 소개]
+* [Microsoft Azure 저장소 소개]
 * [Azure 저장소 계정 정보]
 * Azure Storage 계정 크기
   * [Azure의 Windows 저장소 계정 크기]
@@ -113,7 +113,7 @@ Azure Storage 계정, 크기 및 가격 책정에 대한 자세한 내용은 다
 
 <!-- URL List -->
 
-[Microsoft Azure Storage 소개]: /azure/storage/storage-introduction
+[Microsoft Azure 저장소 소개]: /azure/storage/storage-introduction
 [Azure 저장소 계정 정보]: /azure/storage/storage-create-storage-account
 [Azure Storage 복제]: /azure/storage/storage-redundancy
 [Azure Storage 확장성 및 성능 목표]: /azure/storage/storage-scalability-targets

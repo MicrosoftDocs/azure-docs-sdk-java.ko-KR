@@ -7,19 +7,19 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: multiple
-ms.workload: na
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: asirveda;robmcm
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: multiple
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: na
 ms.custom: mvc
-ms.openlocfilehash: ee8d5fecc31df427645c1552e27996592eaf27af
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: 9eb37f302835ea40e92b5212d5bbc305d1311bc4
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-container-service"></a>Azure Container Service의 Kubernetes 클러스터에 Spring Boot 응용 프로그램 배포
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/06/2017
 
 > [!NOTE]
 >
-> 이 자습서의 가상화 요구 사항으로 인해 가상 컴퓨터에는 이 문서의 단계를 따를 수 없습니다. 따라서 가상화 기능이 사용하도록 설정된 물리적 컴퓨터를 사용해야 합니다.
+> 이 자습서의 가상화 요구 사항으로 인해 가상 머신에는 이 문서의 단계를 따를 수 없습니다. 따라서 가상화 기능이 사용하도록 설정된 물리적 컴퓨터를 사용해야 합니다.
 >
 
 ## <a name="create-the-spring-boot-on-docker-getting-started-web-app"></a>Spring Boot on Docker 시작 웹앱 만들기
@@ -112,8 +112,8 @@ ms.lasthandoff: 12/06/2017
 
    ```json
    {
-  "name": "password",
-  "value": "AbCdEfGhIjKlMnOpQrStUvWxYz"
+     "name": "password",
+     "value": "AbCdEfGhIjKlMnOpQrStUvWxYz"
    }
    ```
 
@@ -227,9 +227,9 @@ ms.lasthandoff: 12/06/2017
 
    a. **Specify app details below**를 선택합니다.
 
-   b. **App name**에 Spring Boot 응용 프로그램 이름을 입력합니다(예: "*gs-spring-boot-docker*").
+   나. **App name**에 Spring Boot 응용 프로그램 이름을 입력합니다(예: "*gs-spring-boot-docker*").
 
-   c. **Container image**에 대해 이전의 로그인 서버 및 컨테이너 이미지를 입력합니다(예: "*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*").
+   다. **Container image**에 대해 이전의 로그인 서버 및 컨테이너 이미지를 입력합니다(예: "*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*").
 
    d. **Service**에 대해 **External**을 선택합니다.
 
@@ -257,7 +257,7 @@ ms.lasthandoff: 12/06/2017
 
 1. 명령 프롬프트를 엽니다.
 
-1. `kubectl run` 명령을 사용하여 Kubernetes 클러스터에서 컨테이너를 실행합니다. Kubernetes의 앱에 대한 서비스 이름 및 전체 이미지 이름을 지정합니다. 예:
+1. `kubectl run` 명령을 사용하여 Kubernetes 클러스터에서 컨테이너를 실행합니다. Kubernetes의 앱에 대한 서비스 이름 및 전체 이미지 이름을 지정합니다. 예: 
    ```
    kubectl run gs-spring-boot-docker --image=wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest
    ```
@@ -267,7 +267,7 @@ ms.lasthandoff: 12/06/2017
 
    * `--image` 매개 변수는 결합된 로그인 서버 및 이미지 이름을 `wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest`로 지정합니다.
 
-1. `kubectl expose` 명령을 사용하여 Kubernetes 클러스터를 외부에 노출합니다. 서비스 이름, 앱에 액세스하는 데 사용되는 공용 TCP 포트 및 앱이 수신 대기하는 내부 대상 포트를 지정합니다. 예:
+1. `kubectl expose` 명령을 사용하여 Kubernetes 클러스터를 외부에 노출합니다. 서비스 이름, 앱에 액세스하는 데 사용되는 공용 TCP 포트 및 앱이 수신 대기하는 내부 대상 포트를 지정합니다. 예: 
    ```
    kubectl expose deployment gs-spring-boot-docker --type=LoadBalancer --port=80 --target-port=8080
    ```
@@ -318,7 +318,7 @@ Kubernetes 웹 사이트에는 개인 레지스트리에서 이미지를 사용�
 * [네임스페이스]
 * [개인 레지스트리에서 이미지 끌어오기]
 
-Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대한 추가 예제를 보려면 [Linux에서 Azure Web App에 대한 사용자 지정 Docker 이미지 사용]을 참조하세요.
+Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대한 추가 예제를 보려면 [Azure Web App on Linux에 대한 사용자 지정 Docker 이미지 사용]을 참조하세요.
 
 <!-- URL List -->
 
@@ -327,7 +327,7 @@ Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대�
 [Java 개발자용 Azure]: https://docs.microsoft.com/java/azure/
 [Azure portal]: https://portal.azure.com/
 [Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal
-[Linux에서 Azure Web App에 대한 사용자 지정 Docker 이미지 사용]: /azure/app-service-web/app-service-linux-using-custom-docker-image
+[Azure Web App on Linux에 대한 사용자 지정 Docker 이미지 사용]: /azure/app-service-web/app-service-linux-using-custom-docker-image
 [Docker]: https://www.docker.com/
 [무료 Azure 계정]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/

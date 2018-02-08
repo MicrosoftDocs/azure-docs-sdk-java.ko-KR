@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: multiple
-ms.workload: na
-ms.tgt_pltfrm: multiple
-ms.devlang: Java
-ms.topic: article
-ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 65fbdc32824c2b6312929f4888844d1673101ac8
-ms.sourcegitcommit: 062e07cbd42cda74f02c82b933ce90da646a50a0
+ms.date: 02/01/2018
+ms.devlang: Java
+ms.service: multiple
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: na
+ms.openlocfilehash: 4228352efa4354bfe4969c1a5ecd3f3b40483f85
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>IntelliJ용 Azure 도구 키트를 사용하여 Spring Boot 앱을 Docker 컨테이너로 게시
 
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/21/2017
 
    ![JDK 지정][CL12]
 
-1. **마침**을 클릭합니다.
+1. **Finish**를 클릭합니다.
 
    ![마침 단추][CL13]
 
@@ -138,15 +138,15 @@ Spring Boot 앱을 게시하려면 배포 준비된 아티팩트를 만들어야
 
       ![매니페스트 만들기 단추 클릭][ART04a]
 
-   b. 아티팩트에 대한 기본 경로를 선택한 다음 **확인**을 클릭합니다.
+   나. 아티팩트에 대한 기본 경로를 선택한 다음 **확인**을 클릭합니다.
 
       ![아티팩트 경로 지정][ART04b]
 
-   c. 줄임표 **...**를 클릭하여 기본 클래스를 찾습니다.
+   다. 줄임표 **...**를 클릭하여 기본 클래스를 찾습니다.
 
       ![기본 클래스 찾기][ART04c]
 
-   ㄹ. 기본 클래스를 선택한 다음 **확인**을 클릭합니다.
+   d. 기본 클래스를 선택한 다음 **확인**을 클릭합니다.
 
       ![기본 클래스 지정][ART04d]
 
@@ -180,17 +180,17 @@ IntelliJ는 프로젝트 도구 창에서 Spring Boot 앱에 대한 완료된 �
 
    ![Docker 컨테이너로 게시 명령][PU01]
 
-1. **Azure에서 Docker 컨테이너 배포** 대화 상자가 표시되는 경우 기존 Docker 호스트가 표시됩니다. 기존 호스트에 배포하도록 선택하는 경우 4단계로 건너뛸 수 있습니다. 그렇지 않으면 다음 단계에 따라 호스트를 만듭니다.
+1. **Azure에서 Docker 컨테이너 배포** 대화 상자가 표시되는 경우 기존 Docker 호스트가 표시됩니다. 기존 호스트에 배포하려는 경우 4단계로 건너뛸 수 있습니다. 그렇지 않으면 다음 단계에 따라 호스트를 만듭니다.
 
    a. 녹색 더하기(**+**) 기호를 클릭합니다.
 
       ![새 Docker 호스트 추가][PU02]
 
-   b. **Create Docker Host** 대화 상자가 표시되면 기본값을 그대로 허용하도록 선택하거나 새 Docker 호스트에 대한 사용자 지정 설정을 지정할 수 있습니다. 다양한 설정에 대한 자세한 설명은 [IntelliJ용 Azure 도구 키트를 사용하여 웹앱을 Docker 컨테이너로 게시][Publish Container with Azure Toolkit]를 참조하세요. 사용할 설정을 지정하면 **다음**을 클릭합니다.
+   나. **Create Docker Host** 대화 상자가 표시되면 기본값을 그대로 허용하도록 선택하거나 새 Docker 호스트에 대한 사용자 지정 설정을 지정할 수 있습니다. 다양한 설정에 대한 자세한 설명은 [IntelliJ용 Azure 도구 키트를 사용하여 웹앱을 Docker 컨테이너로 게시][Publish Container with Azure Toolkit]를 참조하세요. 사용할 설정을 지정하면 **다음**을 클릭합니다.
 
       ![Docker 호스트 옵션 지정][PU03a]
 
-   c. Azure Key Vault에서 기존 로그인 자격 증명을 사용하도록 선택하거나 새 Docker 로그인 자격 증명을 입력하도록 선택할 수 있습니다. 옵션을 지정하면 **마침**을 클릭합니다.
+   다. Azure Key Vault에서 기존 로그인 자격 증명을 사용하도록 선택하거나 새 Docker 로그인 자격 증명을 입력하도록 선택할 수 있습니다. 옵션을 지정하면 **마침**을 클릭합니다.
 
       ![Docker 호스트 자격 증명 지정][PU03b]
 
@@ -202,11 +202,11 @@ IntelliJ는 프로젝트 도구 창에서 Spring Boot 앱에 대한 완료된 �
 
    a. Docker 컨테이너를 호스팅할 컨테이너에 대한 사용자 지정 이름을 지정하도록 선택하거나 기본값을 적용할 수 있습니다.
 
-   b. *[외부 포트]*:*[내부 포트]* 구문을 사용하여 Docker 호스트에 대한 TCP 포트를 입력합니다. 예를 들어 **80:8080**은 80 외부 포트 및 8080 기본 내부 Spring Boot 포트를 지정합니다.
+   나. *[외부 포트]*:*[내부 포트]* 구문을 사용하여 Docker 호스트에 대한 TCP 포트를 입력합니다. 예를 들어 **80:8080**은 80 외부 포트 및 8080 기본 내부 Spring Boot 포트를 지정합니다.
    
       내부 포트를 사용자 지정한 경우(예: application.yml 파일 편집) Azure에서 올바른 라우팅을 수행할 포트 번호를 지정해야 합니다.
 
-   c. 이러한 옵션을 구성했으면 **마침**을 클릭합니다.
+   다. 이러한 옵션을 구성했으면 **마침**을 클릭합니다.
 
    ![Azure에 Docker 컨테이너 배포][PU05]
 

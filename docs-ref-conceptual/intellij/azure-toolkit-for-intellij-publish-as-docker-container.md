@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: multiple
-ms.workload: na
-ms.tgt_pltfrm: multiple
-ms.devlang: Java
-ms.topic: article
-ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: ed63d73e8a0c89af14613b1b1a880f1d40495b8d
-ms.sourcegitcommit: 558d875e9a255deb5b83b3f1646bd1dd9eee0a0d
+ms.date: 02/01/2018
+ms.devlang: Java
+ms.service: multiple
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: na
+ms.openlocfilehash: f92040b34b9897d9feea8d2ec5e8748e75fff7f7
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>IntelliJ용 Azure 도구 키트를 사용하여 웹앱을 Docker 컨테이너로 게시
 
@@ -114,16 +114,16 @@ Docker 컨테이너는 웹 응용 프로그램을 배포하는 데 널리 사용
             
         나. **Docker 데몬 액세스** 탭에서 다음 정보를 제공합니다.
 
-         ![Docker 호스트 만들기][PUB06]
+          ![Docker 호스트 만들기][PUB06]
     
-           * **Docker 디먼 포트**: Docker 호스트의 고유한 TCP 포트를 입력합니다.
-           * **TLS 보안**: Docker 호스트의 전송 계층 보안 설정을 입력합니다. 다음 옵션 중에서 선택할 수 있습니다.
-                * **없음**: 가상 컴퓨터에서 TLS 연결을 허용하지 않게 지정합니다.
-                * **자동 생성**: TLS를 통해 연결하는 데 필요한 설정을 자동으로 만듭니다.
-                * **디렉터리에서 가져오기**: 이전에 저장된 TLS 설정 집합을 포함하는 디렉터리를 지정합니다. 디렉터리에 다음 여섯 개의 파일이 포함되어야 합니다. 
-                   * *ca.pem* 및 *ca-key.pem*: TLS 인증 기관의 인증서와 공개 키가 포함되어 있습니다.
-                   * *cert.pem* 및 *key.pem*: TLS 인증에 사용할 클라이언트 인증서와 공개 키가 포함되어 있습니다.
-                   * *server.pem* 및 *server-key.pem*: TLS 인증에 사용할 클라이언트 인증서와 공개 키가 포함되어 있습니다.
+             * **Docker Daemon port**: Enter the unique TCP port for your Docker host.
+             * **TLS Security**: Enter the Transport Layer Security settings for your Docker host. You can choose from the following options:
+                * **None**: Specifies that your virtual machine does not allow TLS connections.
+                * **Auto-generate**: Automatically creates the requisite settings for connecting via TLS.
+                * **Import from directory**: Specifies a directory that contains a set of previously saved TLS settings. The directory must contain the following six files: 
+                   * *ca.pem* and *ca-key.pem*: Contain the certificate and public key for the TLS Certificate Authority.
+                   * *cert.pem* and *key.pem*: Contain client certificate and public key which will be used for TLS authentication.
+                   * *server.pem* and *server-key.pem*: Contain the client certificate and public key that is used for TLS authentication.
 
 7. 필요한 정보를 입력한 후 **마침**을 클릭합니다.  
     **Azure에 Docker 컨테이너 배포** 마법사가 다시 나타납니다.

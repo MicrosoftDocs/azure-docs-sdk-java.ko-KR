@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: storage
-ms.workload: storage
-ms.tgt_pltfrm: na
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: yungez;robmcm
-ms.openlocfilehash: 0979c810711a01464c0b2c6e12a582a3f5eefef1
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: storage
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.workload: storage
+ms.openlocfilehash: 50c8475c66250c8e872849007349277fd3fe797b
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-storage"></a>Azure Storage에 Spring Boot Starter를 사용하는 방법
 
@@ -106,7 +106,7 @@ ms.lasthandoff: 12/06/2017
    ```azurecli
    az group create --name wingtiptoysresources --location westus
    ```
-   여기서,
+   위치:
    | 매개 변수 | 설명 |
    |---|---|
    | `name` | 리소스 그룹의 고유한 이름을 지정합니다. |
@@ -131,7 +131,7 @@ ms.lasthandoff: 12/06/2017
    ```azurecli
    az storage account create --name wingtiptoysstorage --resource-group wingtiptoysresources --location westus --sku Standard_LRS
    ```
-   여기서,
+   위치:
    | 매개 변수 | 설명 |
    |---|---|
    | `name` | 저장소 계정에 고유한 이름을 지정합니다. |
@@ -160,7 +160,7 @@ ms.lasthandoff: 12/06/2017
    ```azurecli
    az storage account show-connection-string --name wingtiptoysstorage --resource-group wingtiptoysresources
    ```
-   여기서,
+   위치:
    | 매개 변수 | 설명 |
    | ---|---|
    | `name` | 이전 단계에서 만든 저장소 계정의 고유 이름을 지정합니다. |

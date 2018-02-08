@@ -7,18 +7,18 @@ author: selvasingh
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: app-service
-ms.workload: web
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 11/15/2017
 ms.author: robmcm;asirveda
-ms.openlocfilehash: aa0db81ffc9ff3fe44cf3d58a5b77ee447cdb1d1
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: app-service
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: web
+ms.openlocfilehash: ebe98a604b52dc9a4b5a47cbf65a4c68a5c86fe3
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-intellij"></a>레거시 IntelliJ용 도구 키트를 사용하여 Azure용 Hello World 웹앱 만들기
 
@@ -86,9 +86,9 @@ ms.lasthandoff: 11/18/2017
 
    a. **프로젝트 설정** 목록에서 **아티팩트**를 클릭합니다.
 
-   b. **이름** 상자에서 아티팩트 이름에 공백 또는 특수 문자가 포함되지 않도록 이름을 변경합니다. 이 작업은 해당 이름이 URI(Uniform Resource Identifier)에 사용되기 때문에 필요합니다.
+   나. **이름** 상자에서 아티팩트 이름에 공백 또는 특수 문자가 포함되지 않도록 이름을 변경합니다. 이 작업은 해당 이름이 URI(Uniform Resource Identifier)에 사용되기 때문에 필요합니다.
 
-   c. **형식**을 **웹 응용 프로그램: 보관**으로 변경합니다.
+   다. **형식**을 **웹 응용 프로그램: 보관**으로 변경합니다.
 
    d. **확인**을 클릭하여 프로젝트 구조 대화 상자를 닫습니다.
 
@@ -118,11 +118,11 @@ ms.lasthandoff: 11/18/2017
       
       ![앱 컨테이너 추가][10]
 
-   b. 다음 몇 개 단계에서 사용되는 **새 웹앱 컨테이너** 대화 상자가 표시됩니다.
+   나. 다음 몇 개 단계에서 사용되는 **새 웹앱 컨테이너** 대화 상자가 표시됩니다.
       
       ![새 앱 컨테이너][11a]
    
-   c. 웹앱 컨테이너에 **DNS 레이블**을 입력합니다. 이렇게 하면 Azure에서 웹 응용 프로그램에 대한 호스트 URL의 리프 DNS 레이블을 형성합니다. 이름은 사용 가능해야 하며, Azure 웹앱 명명 요구 사항을 준수해야 합니다.
+   다. 웹앱 컨테이너에 **DNS 레이블**을 입력합니다. 이렇게 하면 Azure에서 웹 응용 프로그램에 대한 호스트 URL의 리프 DNS 레이블을 형성합니다. 이름은 사용 가능해야 하며, Azure 웹앱 명명 요구 사항을 준수해야 합니다.
 
    d. **웹 컨테이너** 드롭다운 메뉴에서 응용 프로그램에 적절한 소프트웨어를 선택합니다.
       

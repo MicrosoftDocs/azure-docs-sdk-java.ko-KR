@@ -7,18 +7,18 @@ author: selvasingh
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: app-service
-ms.workload: web
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 11/15/2017
 ms.author: robmcm;asirveda
-ms.openlocfilehash: 0483eba17337087fab8e7f9344ebd9967390a8a8
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: app-service
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: web
+ms.openlocfilehash: 8b831f4545be9162d28f8ba86eb7271ffa4391af
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-eclipse"></a>레거시 Eclipse용 도구 키트를 사용하여 Azure용 Hello World 웹앱 만들기
 
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/18/2017
    
    ![새로운 동적 웹 프로젝트 만들기][02]
 
-3. **마침**을 클릭합니다.
+3. **Finish**를 클릭합니다.
 
 4. Eclipse의 **Project Explorer** 뷰 내에서 **MyWebApp**을 확장합니다. **WebContent**를 마우스 오른쪽 단추로 클릭하고 **New**를 클릭한 후 **JSP File**을 클릭합니다.
 
@@ -100,11 +100,11 @@ ms.lasthandoff: 11/18/2017
       
       ![Azure 웹앱 컨테이너에 배포 대화 상자][15]
 
-   b. **새 웹앱 컨테이너** 대화 상자가 표시됩니다.
+   나. **새 웹앱 컨테이너** 대화 상자가 표시됩니다.
       
       ![새 웹앱 컨테이너 대화 상자][07a]
 
-   c. 웹앱 컨테이너에 **DNS 레이블**을 입력합니다. 이렇게 하면 Azure에서 웹 응용 프로그램에 대한 호스트 URL의 리프 DNS 레이블을 형성합니다. (이름은 사용 가능해야 하며, Azure 웹앱 명명 요구 사항을 준수해야 합니다.)
+   다. 웹앱 컨테이너에 **DNS 레이블**을 입력합니다. 이렇게 하면 Azure에서 웹 응용 프로그램에 대한 호스트 URL의 리프 DNS 레이블을 형성합니다. (이름은 사용 가능해야 하며, Azure 웹앱 명명 요구 사항을 준수해야 합니다.)
 
    d. **웹 컨테이너** 드롭다운 메뉴에서 응용 프로그램에 적절한 소프트웨어를 선택합니다.
       
