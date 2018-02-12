@@ -7,30 +7,30 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: active-directory
-ms.workload: identity
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: robmcm
-ms.openlocfilehash: a999e33674ea01e776db10186e8af83ce157ef20
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: active-directory
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: identity
+ms.openlocfilehash: cf1cad0b87626058f7204a6565d09fb8901b7ce4
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-active-directory"></a>Azure Active Directory에 Spring Boot Starter를 사용하는 방법
 
 ## <a name="overview"></a>개요
 
-이 문서에서는 Azure Active Directory용 Spring Boot Starter인 **[Spring Initializr]**를 통한 앱 만들기를 보여 줍니다.
+이 문서에서는 Azure Active Directory(Azure AD)용 Spring Boot Starter를 사용하는 **[Spring Initializr]**를 통한 앱 만들기를 보여 줍니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
-이 문서의 단계를 수행하기 위해 다음 필수 구성 요소가 필요합니다.
+이 문서의 단계를 완료하려면 다음 필수 구성 요소가 필요합니다.
 
-* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [무료 Azure 계정]에 등록할 수 있습니다.
+* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정{]에 등록할 수 있습니다.
 * [JDK(Java Development Kit)](http://www.oracle.com/technetwork/java/javase/downloads/), 버전 1.7 이상
 * [Apache Maven](http://maven.apache.org/), 버전 3.0 이상
 
@@ -143,12 +143,12 @@ ms.lasthandoff: 12/06/2017
    # Specifies the list of Active Directory groups to use for authentication:
    azure.activedirectory.activeDirectoryGroups=Users
    ```
-   여기서,
-   매개 변수 | 설명
-   ---|---|---
-   `azure.activedirectory.clientId` | 앞의 **응용 프로그램 ID**를 포함합니다.
-   `azure.activedirectory.clientSecret` | 앞에서 완료한 앱 등록의 키 값을 포함합니다.
-   `azure.activedirectory.activeDirectoryGroups` | 인증에 사용할 Active Directory 그룹 목록을 포함합니다.
+   위치:
+   | 매개 변수 | 설명 |
+   |---|---|
+   | `azure.activedirectory.clientId` | 앞의 **응용 프로그램 ID**를 포함합니다. |
+   | `azure.activedirectory.clientSecret` | 앞에서 완료한 앱 등록의 키 값을 포함합니다. |
+   | `azure.activedirectory.activeDirectoryGroups` | 인증에 사용할 Active Directory 그룹 목록을 포함합니다. |
 
 
 1. *application.properties* 파일을 저장하고 닫습니다.
@@ -222,7 +222,7 @@ ms.lasthandoff: 12/06/2017
    mvn clean package
    ```
 
-   ![][build-application]
+   ![사용 중인 응용 프로그램 빌드][build-application]
 
 1. Maven을 사용하여 Spring Boot 응용 프로그램을 빌드하고 실행합니다. 예:
 
@@ -230,8 +230,6 @@ ms.lasthandoff: 12/06/2017
    mvn clean package
    mvn spring-boot:run
    ```
-
-
 
 1. 응용 프로그램이 빌드되고 Maven에서 시작된 후 웹 브라우저에서 <http://localhost:8080>을 엽니다.
 
@@ -256,7 +254,7 @@ Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 
 [Azure Active Directory 설명서]: /azure/active-directory/
 [Get started with Azure AD]: /azure/active-directory/get-started-azure-ad
 [Java 개발자용 Azure]: https://docs.microsoft.com/java/azure/
-[무료 Azure 계정]: https://azure.microsoft.com/pricing/free-trial/
+[체험판 Azure 계정{]: https://azure.microsoft.com/pricing/free-trial/
 [Visual Studio Team Services용 Java 도구]: https://java.visualstudio.com/
 [MSDN 구독자 혜택]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/

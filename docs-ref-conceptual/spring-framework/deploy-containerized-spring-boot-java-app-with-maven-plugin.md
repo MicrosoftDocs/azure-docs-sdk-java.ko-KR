@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: app-service
-ms.workload: web
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: robmcm;kevinzha
-ms.openlocfilehash: 1ab19a4805884773239c4d99090b9e117b3859cd
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: app-service
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: web
+ms.openlocfilehash: 515cf350f32fc8252644e7022846cc2c9d264ed0
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-containerized-spring-boot-app-to-azure"></a>Azure Web Apps의 Maven 플러그 인을 사용하여 컨테이너화된 Spring Boot 앱을 Azure에 배포하는 방법
 
@@ -33,9 +33,9 @@ ms.lasthandoff: 12/06/2017
 
 ## <a name="prerequisites"></a>필수 조건
 
-이 자습서의 단계를 완료하려면 다음 필수 구성 요소가 필요합니다.
+이 자습서의 단계를 완료하려면 다음 필수 조건이 필요합니다.
 
-* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [무료 Azure 계정]에 등록할 수 있습니다.
+* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정{]에 등록할 수 있습니다.
 * [Azure CLI(명령줄 인터페이스)]
 * 최신 [JDK(Java Development Kit)], 버전 1.7 이상
 * Apache의 [Maven] 빌드 도구(버전 3)
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/06/2017
 
 > [!NOTE]
 >
-> 이 자습서의 가상화 요구 사항으로 인해 가상 컴퓨터에는 이 문서의 단계를 따를 수 없습니다. 따라서 가상화 기능이 사용하도록 설정된 물리적 컴퓨터를 사용해야 합니다.
+> 이 자습서의 가상화 요구 사항으로 인해 가상 머신에는 이 문서의 단계를 따를 수 없습니다. 따라서 가상화 기능이 사용하도록 설정된 물리적 컴퓨터를 사용해야 합니다.
 >
 
 ## <a name="clone-the-sample-spring-boot-on-docker-web-app"></a>Docker 웹앱에 샘플 Spring Boot 복제
@@ -105,7 +105,11 @@ ms.lasthandoff: 12/06/2017
    ```shell
    az ad sp create-for-rbac --name "uuuuuuuu" --password "pppppppp"
    ```
-   여기서 `uuuuuuuu`는 사용자 이름이고 `pppppppp`는 서비스 사용자에 대한 암호입니다.
+   위치:
+   | 매개 변수 | 설명 |
+   |---|---|
+   | `uuuuuuuu` | 서비스 주체에 대한 사용자 이름을 지정합니다. |
+   | `pppppppp` | 서비스 주체에 대한 암호를 지정합니다. |
 
 1. Azure는 다음 예제와 유사한 JSON로 응답합니다.
    ```json
@@ -148,14 +152,14 @@ ms.lasthandoff: 12/06/2017
       </server>
    </servers>
    ```
-   여기서,
-   요소 | 설명
-   ---|---|---
-   `<id>` | Azure에 웹앱을 배포할 때 Maven을 사용하여 보안 설정을 조회하는 고유한 이름을 지정합니다.
-   `<client>` | 서비스 사용자의 `appId` 값을 포함합니다.
-   `<tenant>` | 서비스 사용자의 `tenant` 값을 포함합니다.
-   `<key>` | 서비스 사용자의 `password` 값을 포함합니다.
-   `<environment>` | 대상 Azure 클라우드 환경을 정의합니다. 이 예에서는 `AZURE`입니다. (환경의 전체 목록은 [Azure Web Apps의 Maven 플러그 인] 설명서에서 제공됩니다.)
+   위치:
+   | 요소 | 설명 |
+   |---|---|
+   | `<id>` | Azure에 웹앱을 배포할 때 Maven을 사용하여 보안 설정을 조회하는 고유한 이름을 지정합니다. |
+   | `<client>` | 서비스 사용자의 `appId` 값을 포함합니다. |
+   | `<tenant>` | 서비스 사용자의 `tenant` 값을 포함합니다. |
+   | `<key>` | 서비스 사용자의 `password` 값을 포함합니다. |
+   | `<environment>` | 대상 Azure 클라우드 환경을 정의합니다. 이 예에서는 `AZURE`입니다. (환경의 전체 목록은 [Azure Web Apps의 Maven 플러그 인] 설명서에서 제공됩니다.) |
 
 1. *settings.xml* 파일을 저장하고 닫습니다.
 
@@ -218,14 +222,14 @@ Docker 계정이 있는 경우 Docker 컨테이너 이미지를 로컬에서 빌
 
 Maven 플러그 인에 대해 수정할 수 있는 여러 값이 있으며 이러한 각 요소에 대한 자세한 설명을 [Azure Web Apps의 Maven 플러그 인] 설명서에서 사용할 수 있습니다. 즉, 이 문서에서 강조 표시된 값은 여러 개입니다.
 
-요소 | 설명
----|---|---
-`<version>` | [Azure Web Apps의 Maven 플러그 인] 버전을 지정합니다. [Maven 중앙 리포지토리](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22)에 나열된 버전을 검사하여 최신 버전을 사용하고 있는지 확인해야 합니다.
-`<authentication>` | Azure에 대한 인증 정보를 지정합니다. 이 예제에서는 `azure-auth`이 포함된 `<serverId>` 요소를 포함합니다. Maven에서는 해당 값을 사용하여 이 문서의 이전 섹션에 정의된 Maven *settings.xml* 파일에서 Azure 서비스 주체 값을 조회합니다.
-`<resourceGroup>` | 대상 리소스 그룹, 즉, 이 예에서 `maven-plugin`을 지정합니다. 리소스 그룹이 아직 존재하지 않는 경우 배포 중에 만들어집니다.
-`<appName>` | 웹앱에 대한 대상 이름을 지정합니다. 이 예제에서는 대상 이름은 `maven-linux-app-${maven.build.timestamp}`이며 이 예제에서 충돌을 피하기 위해 여기에 `${maven.build.timestamp}` 접미사가 추가됩니다. (타임스탬프는 선택 사항입니다. 앱 이름에 대한 고유한 문자열을 지정할 수 있습니다.)
-`<region>` | 대상 지역을 지정합니다. 이 예제에서는 `westus`입니다. (전체 목록은 [Azure Web Apps의 Maven 플러그 인] 설명서에서 제공됩니다.)
-`<appSettings>` | Maven에 대한 고유한 설정을 지정하여 Azure에 웹앱을 배포할 때 사용합니다. 이 예제에서 `<property>` 요소는 앱에 대한 포트를 지정하는 자식 요소의 이름/값 쌍을 포함합니다.
+| 요소 | 설명 |
+|---|---|
+| `<version>` | [Azure Web Apps의 Maven 플러그 인] 버전을 지정합니다. [Maven 중앙 리포지토리](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22)에 나열된 버전을 검사하여 최신 버전을 사용하고 있는지 확인해야 합니다. |
+| `<authentication>` | Azure에 대한 인증 정보를 지정합니다. 이 예제에서는 `azure-auth`이 포함된 `<serverId>` 요소를 포함합니다. Maven에서는 해당 값을 사용하여 이 문서의 이전 섹션에 정의된 Maven *settings.xml* 파일에서 Azure 서비스 주체 값을 조회합니다. |
+| `<resourceGroup>` | 대상 리소스 그룹, 즉, 이 예에서 `maven-plugin`을 지정합니다. 리소스 그룹이 아직 존재하지 않는 경우 배포 중에 만들어집니다. |
+| `<appName>` | 웹앱에 대한 대상 이름을 지정합니다. 이 예제에서는 대상 이름은 `maven-linux-app-${maven.build.timestamp}`이며 이 예제에서 충돌을 피하기 위해 여기에 `${maven.build.timestamp}` 접미사가 추가됩니다. (타임스탬프는 선택 사항입니다. 앱 이름에 대한 고유한 문자열을 지정할 수 있습니다.) |
+| `<region>` | 대상 지역을 지정합니다. 이 예제에서는 `westus`입니다. (전체 목록은 [Azure Web Apps의 Maven 플러그 인] 설명서에서 제공됩니다.) |
+| `<appSettings>` | Maven에 대한 고유한 설정을 지정하여 Azure에 웹앱을 배포할 때 사용합니다. 이 예제에서 `<property>` 요소는 앱에 대한 포트를 지정하는 자식 요소의 이름/값 쌍을 포함합니다. |
 
 > [!NOTE]
 >
@@ -322,7 +326,7 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 [Azure Portal]: https://portal.azure.com/
 [Docker]: https://www.docker.com/
 [Maven용 Docker 플러그 인]: https://github.com/spotify/docker-maven-plugin
-[무료 Azure 계정]: https://azure.microsoft.com/pricing/free-trial/
+[체험판 Azure 계정{]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
 [Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/

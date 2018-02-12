@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: key-vault
-ms.workload: identity
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 11/29/2017
 ms.author: robmcm
-ms.openlocfilehash: 165a108147ef5ef7575820bbb6c2ee526888f722
-ms.sourcegitcommit: 558d875e9a255deb5b83b3f1646bd1dd9eee0a0d
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: key-vault
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: identity
+ms.openlocfilehash: 52e7dc3f84ea96f22d8e478a597452c76ed8bf22
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>Azure Key Vault에 Spring Boot Starter를 사용하는 방법
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/01/2018
 
 ## <a name="prerequisites"></a>필수 조건
 
-이 문서의 단계를 수행하기 위해 다음 필수 구성 요소가 필요합니다.
+이 문서의 단계를 완료하려면 다음 필수 구성 요소가 필요합니다.
 
 * Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정{]에 등록할 수 있습니다.
 * [JDK(Java Development Kit)](http://www.oracle.com/technetwork/java/javase/downloads/), 버전 1.7 이상
@@ -85,9 +85,8 @@ ms.lasthandoff: 02/01/2018
        }
      }
    ]
-   ```
 
-1. 다음 예제처럼 Azure에 사용하려는 계정의 GUID를 지정합니다.
+1. Specify the GUID for the account you want to use with Azure; for example:
 
    ```azurecli
    az account set -s ssssssss-ssss-ssss-ssss-ssssssssssss
@@ -124,9 +123,10 @@ ms.lasthandoff: 02/01/2018
    ```shell
    az ad sp create-for-rbac --name "wingtiptoysuser"
    ```
+   위치:
    | 매개 변수 | 설명 |
    |---|---|
-   | `id` | 앞의 응용 프로그램 등록에서 GUID를 지정합니다. |
+   | `name` | Azure 서비스 주체에 대한 이름을 지정합니다. |
 
    Azure CLI 가 *appId* 및 *암호*가 포함된 JSON 상태 메시지를 반환합니다. 이 항목은 나중에 클라이언트 ID와 클라이언트 암호로 사용됩니다. 예를 들어 다음과 같습니다.
 
@@ -170,7 +170,7 @@ ms.lasthandoff: 02/01/2018
    |---|---|
    | `name` | 앞의 키 자격 증명 모음 이름을 지정합니다. |
    | `secret-permission` | 키 자격 증명 모음에 대해 [보안 정책](https://docs.microsoft.com/en-us/cli/azure/keyvault)을 지정합니다. |
-   | `object-id` | 앞의 응용 프로그램 등록에서 GUID를 지정합니다. |
+   | `spn` | 앞의 응용 프로그램 등록에서 GUID를 지정합니다. |
 
    Azure CLI가 다음 예제처럼 보안 정책 만들기 결과를 표시합니다.  
 

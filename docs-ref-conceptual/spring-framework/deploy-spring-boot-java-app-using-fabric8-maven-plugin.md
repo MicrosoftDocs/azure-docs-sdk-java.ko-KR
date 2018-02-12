@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: multiple
-ms.workload: na
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: yuwzho;robmcm
-ms.openlocfilehash: 6e33c43d3fb4b63cff1f1c7c04cbf9523aa97770
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: multiple
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: na
+ms.openlocfilehash: 396d0ecfb051109924f09ae8b5d9b8074e49c404
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="deploy-a-spring-boot-app-using-the-fabric8-maven-plugin"></a>Fabric8 Maven 플러그인을 사용하여 Spring Boot 앱 배포
 
@@ -28,9 +28,9 @@ ms.lasthandoff: 12/06/2017
 
 ## <a name="prerequisites"></a>필수 조건
 
-이 자습서의 단계를 완료하려면 다음 필수 구성 요소가 필요합니다.
+이 자습서의 단계를 완료하려면 다음 필수 조건이 필요합니다.
 
-* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [무료 Azure 계정]에 등록할 수 있습니다.
+* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정{]에 등록할 수 있습니다.
 * [Azure CLI(명령줄 인터페이스)]
 * 최신 [JDK(Java Developer Kit)]
 * Apache의 [Maven] 빌드 도구(버전 3)
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/06/2017
 
 > [!NOTE]
 >
-> 이 자습서의 가상화 요구 사항으로 인해 가상 컴퓨터에는 이 문서의 단계를 따를 수 없습니다. 따라서 가상화 기능이 사용하도록 설정된 물리적 컴퓨터를 사용해야 합니다.
+> 이 자습서의 가상화 요구 사항으로 인해 가상 머신에는 이 문서의 단계를 따를 수 없습니다. 따라서 가상화 기능이 사용하도록 설정된 물리적 컴퓨터를 사용해야 합니다.
 >
 
 ## <a name="create-the-spring-boot-on-docker-getting-started-web-app"></a>Spring Boot on Docker 시작 웹앱 만들기
@@ -141,7 +141,7 @@ ms.lasthandoff: 12/06/2017
    ```azurecli
    az group create --name=wingtiptoys-kubernetes --location=westeurope
    ```
-   여기서,  
+   위치:  
       * *wingtiptoys-kubernetes*는 리소스 그룹의 고유한 이름입니다.  
       * *westeurope*은 응용 프로그램의 적합한 지리적 위치입니다.  
 
@@ -167,7 +167,7 @@ ms.lasthandoff: 12/06/2017
    ```azurecli 
    az acs create --orchestrator-type kubernetes --resource-group wingtiptoys-kubernetes --name wingtiptoys-cluster --generate-ssh-keys --dns-prefix=wingtiptoys
    ```
-   여기서,  
+   위치:  
       * *wingtiptoys kubernetes*는 이 문서의 앞부분에 나온 리소스 그룹의 이름입니다.  
       * *wingtiptoys-cluster*는 Kubernetes클러스터의 고유한 이름입니다.
       * *wingtiptoys*는 응용 프로그램의 고유한 DNS 이름입니다.
@@ -253,10 +253,12 @@ ms.lasthandoff: 12/06/2017
    ```azurecli
    az acr create --admin-enabled --resource-group wingtiptoys-kubernetes --location westeurope --name wingtiptoysregistry --sku Basic
    ```
-   여기서,  
-      * *wingtiptoys kubernetes*는 이 문서의 앞부분에 나온 리소스 그룹의 이름입니다.  
-      * *wingtiptoysregistry*은 개인 레지스트리의 고유 이름입니다.
-      * *westeurope*은 응용 프로그램의 적합한 지리적 위치입니다.  
+   위치:
+   | 매개 변수 | 설명 |
+   |---|---|
+   | `wingtiptoys-kubernetes` | 이 문서의 앞부분에 나온 리소스 그룹의 이름을 지정합니다. |
+   | `wingtiptoysregistry` | 개인 레지스트리에 고유한 이름을 지정합니다. |
+   | `westeurope` | 응용 프로그램의 적합한 지리적 위치를 지정합니다. |
 
    Azure CLI가 다음 예제처럼 레지스트리 만들기 결과를 표시합니다.  
 
@@ -411,7 +413,7 @@ ms.lasthandoff: 12/06/2017
               - name: mysecrets
       ```
 
-   b. 다음과 같은 콘텐츠가 포함된 **secrets.yml** 파일을 만듭니다.
+   나. 다음과 같은 콘텐츠가 포함된 **secrets.yml** 파일을 만듭니다.
       ```yaml
       apiVersion: v1
       kind: Secret
@@ -423,7 +425,7 @@ ms.lasthandoff: 12/06/2017
       type: kubernetes.io/dockercfg
       ```
 
-   c. 다음과 같은 콘텐츠가 포함된 **service.yml** 파일을 만듭니다.
+   다. 다음과 같은 콘텐츠가 포함된 **service.yml** 파일을 만듭니다.
       ```yaml
       apiVersion: v1
       kind: Service
@@ -517,7 +519,7 @@ Spring Boot on Docker 샘플 프로젝트에 대한 자세한 정보는 [Spring 
 
 간단한 Spring Boot 응용 프로그램을 만들기 시작하는 방법에 대한 자세한 내용은 <https://start.spring.io/>에서 Spring Initializr를 참조하세요.
 
-Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대한 추가 예제를 보려면 [Linux에서 Azure Web App에 대한 사용자 지정 Docker 이미지 사용]을 참조하세요.
+Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대한 추가 예제를 보려면 [Azure Web App on Linux에 대한 사용자 지정 Docker 이미지 사용]을 참조하세요.
 
 <!-- URL List -->
 
@@ -526,10 +528,10 @@ Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대�
 [Java 개발자용 Azure]: https://docs.microsoft.com/java/azure/
 [Azure portal]: https://portal.azure.com/
 [Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal
-[Linux에서 Azure Web App에 대한 사용자 지정 Docker 이미지 사용]: /azure/app-service-web/app-service-linux-using-custom-docker-image
+[Azure Web App on Linux에 대한 사용자 지정 Docker 이미지 사용]: /azure/app-service-web/app-service-linux-using-custom-docker-image
 [Docker]: https://www.docker.com/
 [Fabric8]: https://fabric8.io/
-[무료 Azure 계정]: https://azure.microsoft.com/pricing/free-trial/
+[체험판 Azure 계정{]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [JDK(Java Developer Kit)]: http://www.oracle.com/technetwork/java/javase/downloads/
 [Visual Studio Team Services용 Java 도구]: https://java.visualstudio.com/
