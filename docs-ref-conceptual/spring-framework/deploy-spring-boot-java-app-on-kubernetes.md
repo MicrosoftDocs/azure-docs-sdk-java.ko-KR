@@ -56,7 +56,7 @@ ms.lasthandoff: 02/03/2018
    cd /users/robert/SpringBoot
    ```
 
-1. [ 시작] 샘플 프로젝트를 디렉터리에 복제합니다.
+1. [ 시작] 샘플 프로젝트를 디렉터리에 복제합니다. 
    ```
    git clone https://github.com/spring-guides/gs-spring-boot-docker.git
    ```
