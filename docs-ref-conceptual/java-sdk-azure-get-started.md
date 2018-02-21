@@ -12,11 +12,11 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
-ms.openlocfilehash: 2f40fa22244e5ffa3be76d4de579959dcb5591d6
-ms.sourcegitcommit: 0676cbb530207544090c1fd051a2f09760873cd8
+ms.openlocfilehash: f069183c96cdc42d590d2e58a5a6a500be5ab69a
+ms.sourcegitcommit: 720c2eaf66532d277015610ec375c71e934d9ee6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="get-started-with-cloud-development-using-the-azure-libraries-for-java"></a>Java용 Azure 라이브러리를 사용한 클라우드 개발 시작
 
@@ -86,10 +86,10 @@ graphURL=https\://graph.windows.net/
 export AZURE_AUTH_LOCATION=/Users/raisa/azureauth.properties
 ```
 
-Windows 환경에서 작업할 경우 변수를 시스템 속성에 추가합니다. PowerShell 열고 두 번째 변수를 파일 경로를 바꾼 후 다음 명령을 입력합니다.
+Windows 환경에서 작업할 경우 변수를 시스템 속성에 추가합니다. 관리자 권한으로 PowerShell 창을 열고 두 번째 변수를 파일 경로로 바꾼 후 다음 명령을 입력합니다.
 
 ```powershell
-[Environment]::SetEnvironmentVariable("AZURE_AUTH_LOCATION", "C:\<fullpath>\azureauth.properties", "Machine")
+setx AZURE_AUTH_LOCATION "C:\<fullpath>\azureauth.properties" /m
 ```
 
 ## <a name="create-a-new-maven-project"></a>새 Maven 프로젝트 만들기
@@ -142,7 +142,7 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp  \
 </build>
  ```
    
-## <a name="create-a-linux-virtual-machine"></a>Linux 가상 컴퓨터 만들기
+## <a name="create-a-linux-virtual-machine"></a>Linux 가상 머신 만들기
 
 프로젝트의 `src/main/java/com/fabirkam` 디렉터리에 `AzureApp.java`라는 새 파일을 만들고 다음 코드 블록에 붙여넣습니다. `userName` 및 `sshKey` 변수를 컴퓨터에 대한 실제 값으로 업데이트합니다. 이 코드에서는 미국 동부 Azure 지역에서 실행되는 `sampleResourceGroup` 리소스 그룹에 `testLinuxVM`이라는 새 Linux VM을 만듭니다.
 
@@ -218,7 +218,7 @@ public class AzureApp {
 mvn compile exec:java
 ```
 
-SDK에서 기본 호출을 Azure REST API로 설정하여 가상 컴퓨터 및 해당 리소스를 구성할 때 콘솔에서 일부 REST 요청과 응답이 표시됩니다. 프로그램이 완료되면 Azure CLI 2.0을 사용하여 구독의 가상 컴퓨터를 확인합니다.
+SDK에서 기본 호출을 Azure REST API로 설정하여 가상 머신 및 해당 리소스를 구성할 때 콘솔에서 일부 REST 요청과 응답이 표시됩니다. 프로그램이 완료되면 Azure CLI 2.0을 사용하여 구독의 가상 머신을 확인합니다.
 
 ```azurecli-interactive
 az vm list --resource-group sampleVmResourceGroup
@@ -431,7 +431,7 @@ az group delete --name sampleStorageResourceGroup
 
 ## <a name="explore-more-samples"></a>더 많은 샘플 탐색
 
-Java용 Azure 관리 라이브러리를 사용하여 리소스를 관리하고 작업을 자동화하는 방법에 대한 자세한 내용은 [가상 컴퓨터](java-sdk-azure-virtual-machine-samples.md), [웹앱](java-sdk-azure-web-apps-samples.md) 및 [SQL 데이터베이스](java-sdk-azure-sql-database-samples.md)에 대한 샘플 코드를 참조하세요.
+Java용 Azure 관리 라이브러리를 사용하여 리소스를 관리하고 작업을 자동화하는 방법에 대한 자세한 내용은 [가상 머신](java-sdk-azure-virtual-machine-samples.md), [웹앱](java-sdk-azure-web-apps-samples.md) 및 [SQL 데이터베이스](java-sdk-azure-sql-database-samples.md)에 대한 샘플 코드를 참조하세요.
 
 ## <a name="reference-and-release-notes"></a>참조 및 릴리스 정보
 

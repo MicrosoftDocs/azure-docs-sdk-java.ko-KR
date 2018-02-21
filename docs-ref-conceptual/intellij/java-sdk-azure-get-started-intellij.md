@@ -15,11 +15,11 @@ ms.prod: azure
 ms.service: multiple
 ms.topic: get-started-article
 ms.technology: azure
-ms.openlocfilehash: 0a059366f7cdc139dcb5a8e7e9ca78254384d19e
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: 5c122b09d9d431ddcec667e61230eb53968c52e7
+ms.sourcegitcommit: 720c2eaf66532d277015610ec375c71e934d9ee6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="get-started-with-the-azure-libraries-using-intellij"></a>Intellij를 사용하여 Azure 라이브러리 시작
 
@@ -88,10 +88,10 @@ graphURL=https\://graph.windows.net/
 export AZURE_AUTH_LOCATION=/Users/raisa/azureauth.properties
 ```
 
-Windows 환경에서 작업할 경우 변수를 시스템 속성에 추가합니다. PowerShell 열고 두 번째 변수를 파일 경로를 바꾼 후 다음 명령을 입력합니다.
+Windows 환경에서 작업할 경우 변수를 시스템 속성에 추가합니다. 관리자 권한으로 PowerShell 창을 열고 두 번째 변수를 파일 경로로 바꾼 후 다음 명령을 입력합니다.
 
 ```powershell
-[Environment]::SetEnvironmentVariable("AZURE_AUTH_LOCATION", "C:\<fullpath>\azureauth.properties", "Machine")
+setx AZURE_AUTH_LOCATION "C:\<fullpath>\azureauth.properties" /m
 ```
 
 ## <a name="create-a-new-maven-project"></a>새 Maven 프로젝트 만들기
