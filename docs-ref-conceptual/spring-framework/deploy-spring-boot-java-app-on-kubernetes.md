@@ -56,7 +56,7 @@ ms.lasthandoff: 02/03/2018
    cd /users/robert/SpringBoot
    ```
 
-1. [ 시작] 샘플 프로젝트를 디렉터리에 복제합니다.
+1. [Spring Boot on Docker 시작] 샘플 프로젝트를 디렉터리에 복제합니다.
    ```
    git clone https://github.com/spring-guides/gs-spring-boot-docker.git
    ```
@@ -299,7 +299,7 @@ Azure에서 Spring Boot를 사용 하는 방법에 대한 자세한 내용은 �
 
 Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 개발자용 Azure] 및 [Visual Studio Team Services용 Java 도구]를 참조하세요.
 
-Spring Boot on Docker 샘플 프로젝트에 대한 자세한 내용은 [ 시작]을 참조하세요.
+Spring Boot on Docker 샘플 프로젝트에 대한 자세한 내용은 [Spring Boot on Docker 시작] 을 참조하세요.
 
 다음 링크는 Spring Boot 응용 프로그램을 만드는 방법에 대한 추가 정보를 제공합니다.
 
@@ -338,7 +338,7 @@ Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대�
 [Maven]: http://maven.apache.org/
 [MSDN 구독자 혜택]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
-[ 시작]: https://github.com/spring-guides/gs-spring-boot-docker
+[Spring Boot on Docker 시작]: https://github.com/spring-guides/gs-spring-boot-docker
 [Spring Framework]: https://spring.io/
 [Pod에 대한 서비스 계정 구성]: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
 [네임스페이스]: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
