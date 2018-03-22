@@ -1,7 +1,7 @@
 ---
-title: "Java용 Azure Event Hub 라이브러리"
-description: "Java용 Event Hub 라이브러리에 대한 참조 설명서"
-keywords: "Azure, Java, SDK, API, 이벤트 허브, IoT, 스트림 처리"
+title: Java용 Azure Event Hub 라이브러리
+description: Java용 Event Hub 라이브러리에 대한 참조 설명서
+keywords: Azure, Java, SDK, API, 이벤트 허브, IoT, 스트림 처리
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: event-hub
-ms.openlocfilehash: 8e5b032624862ffbef18c718abf4fa29359b3e67
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: 076906ff3cafcb4eba97b0a022e5214d7834517c
+ms.sourcegitcommit: 02b70b9f5d34415c337601f0b818f7e0985fd884
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="azure-event-hub-libraries-for-java"></a>Java용 Azure Event Hub 라이브러리
 
@@ -40,7 +40,7 @@ Event Hubs 클라이언트 라이브러리를 사용하여 Azure Event Hub에 �
 </dependency>
 ```   
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 이벤트 허브에 이벤트를 보냅니다.
 
@@ -54,7 +54,7 @@ ehClient.sendSync(sendEvent);
 ```
 
 > [!div class="nextstepaction"]
-> [클라이언트 API 탐색](/java/api/overview/azure/eventhub/clientlibrary)
+> [클라이언트 API 탐색](/java/api/overview/azure/eventhub/client)
 
 
 ## <a name="samples"></a>샘플
