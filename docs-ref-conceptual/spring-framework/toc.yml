@@ -1,4 +1,4 @@
-- name: Azure의 Spring
+- name: Azure 문서의 Spring
   href: ./index.yml
   items:
     - name: 시작 가이드
@@ -37,7 +37,7 @@
           href: 'https://github.com/Azure-Samples/mysql-spring-boot-todo'
         - name: Spring Initializr
           href: 'https://start.spring.io/'
-    - name: 참조
+    - name: 참고 자료
       items:
         - name: Spring Framework
           href: 'https://spring.io/'
