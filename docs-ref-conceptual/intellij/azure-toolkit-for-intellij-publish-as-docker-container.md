@@ -1,12 +1,12 @@
 ---
-title: "IntelliJ용 Azure 도구 키트를 사용하여 Docker 컨테이너 게시"
-description: "IntelliJ용 Azure 도구 키트를 사용하여 Docker 컨테이너로 Microsoft Azure에 웹앱을 게시하는 방법을 알아봅니다."
-services: 
+title: IntelliJ용 Azure 도구 키트를 사용하여 Docker 컨테이너 게시
+description: IntelliJ용 Azure 도구 키트를 사용하여 Docker 컨테이너로 Microsoft Azure에 웹앱을 게시하는 방법을 알아봅니다.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -14,11 +14,11 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: f92040b34b9897d9feea8d2ec5e8748e75fff7f7
-ms.sourcegitcommit: 381a865f2849be8e3044d24cd4b3b54e9bbb7abc
+ms.openlocfilehash: 64cefc1ace5d0377dea25fdbdc83d8dada31ddf7
+ms.sourcegitcommit: ed130145f9e5c2d803791d96bb118023175e644a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>IntelliJ용 Azure 도구 키트를 사용하여 웹앱을 Docker 컨테이너로 게시
 
@@ -103,27 +103,43 @@ Docker 컨테이너는 웹 응용 프로그램을 배포하는 데 널리 사용
 
       * **새 로그인 자격 증명**: 새 로그인 자격 증명 집합을 만듭니다. 이 옵션을 선택하는 경우 다음을 수행합니다.
 
-        a. **VM 자격 증명** 탭에서 Docker 호스트의 가상 컴퓨터 로그인 자격 증명에 대한 다음 정보를 제공합니다. * **Username**: 가상 컴퓨터 로그인 자격 증명에 대한 사용자 이름을 입력합니다.
-             * **암호** 및 **확인**: 가상 컴퓨터 로그인 자격 증명에 사용할 암호를 입력합니다.
-             * **SSH**: Docker 호스트에 사용할 SSH(Secure Shell) 설정을 입력합니다. 다음 옵션 중 하나를 선택할 수 있습니다. * **None**: 가상 머신이 SSH 연결을 허용하지 않도록 지정합니다.
-                * **자동 생성**: SSH를 통해 연결하는 데 필요한 설정을 자동으로 만듭니다.
-                * **디렉터리에서 가져오기**: 이전에 저장된 SSH 설정 집합을 포함하는 디렉터리를 지정할 수 있습니다. 디렉터리에 다음 두 파일이 포함되어야 합니다.
-                
-                  * *id_rsa*: Contains the RSA identification for a user.
-                  * *id_rsa.pub*: Contains the RSA public key that is used for authentication.
-            
-        나. **Docker 데몬 액세스** 탭에서 다음 정보를 제공합니다.
+    a. **VM 자격 증명** 탭에서 Docker 호스트의 가상 컴퓨터 로그인 자격 증명에 대해 다음 정보를 제공합니다.
 
-          ![Docker 호스트 만들기][PUB06]
+    * **사용자 이름**: 가상 컴퓨터 로그인 자격 증명의 사용자 이름을 지정합니다.
+
+    * **암호** 및 **확인**: 가상 컴퓨터 로그인 자격 증명에 사용할 암호를 입력합니다.
+
+    * **SSH**: Docker 호스트에 사용할 SSH(Secure Shell) 설정을 입력합니다. 다음 옵션 중 하나를 선택할 수 있습니다.
+
+        * **없음**: 가상 머신에서 SSH 연결을 허용하지 않게 지정합니다.
+
+        * **자동 생성**: SSH를 통해 연결하는 데 필요한 설정을 자동으로 만듭니다.
+
+        * **디렉터리에서 가져오기**: 이전에 저장된 SSH 설정 집합을 포함하는 디렉터리를 지정할 수 있습니다. 디렉터리에 다음 두 파일이 포함되어야 합니다.
+
+            * *id_rsa*: 사용자의 RSA ID가 포함됩니다.
+
+            * *id_rsa.pub*: 인증에 사용되는 RSA 공개 키를 포함합니다.
+
+    나. **Docker 데몬 액세스** 탭에서 다음 정보를 제공합니다.
+
+    ![Docker 호스트 만들기][PUB06]
     
-             * **Docker Daemon port**: Enter the unique TCP port for your Docker host.
-             * **TLS Security**: Enter the Transport Layer Security settings for your Docker host. You can choose from the following options:
-                * **None**: Specifies that your virtual machine does not allow TLS connections.
-                * **Auto-generate**: Automatically creates the requisite settings for connecting via TLS.
-                * **Import from directory**: Specifies a directory that contains a set of previously saved TLS settings. The directory must contain the following six files: 
-                   * *ca.pem* and *ca-key.pem*: Contain the certificate and public key for the TLS Certificate Authority.
-                   * *cert.pem* and *key.pem*: Contain client certificate and public key which will be used for TLS authentication.
-                   * *server.pem* and *server-key.pem*: Contain the client certificate and public key that is used for TLS authentication.
+    * **Docker 디먼 포트**: Docker 호스트의 고유한 TCP 포트를 입력합니다.
+    
+    * **TLS 보안**: Docker 호스트의 전송 계층 보안 설정을 입력합니다. 다음 옵션 중에서 선택할 수 있습니다.
+    
+        * **없음**: 가상 컴퓨터에서 TLS 연결을 허용하지 않게 지정합니다.
+        
+        * **자동 생성**: TLS를 통해 연결하는 데 필요한 설정을 자동으로 만듭니다.
+        
+        * **디렉터리에서 가져오기**: 이전에 저장된 TLS 설정 집합을 포함하는 디렉터리를 지정합니다. 디렉터리에 다음 여섯 개의 파일이 포함되어야 합니다.
+        
+            * *ca.pem* 및 *ca-key.pem*: TLS 인증 기관의 인증서와 공개 키가 포함되어 있습니다.
+            
+            * *cert.pem* 및 *key.pem*: TLS 인증에 사용할 클라이언트 인증서와 공개 키가 포함되어 있습니다.
+            
+            * *server.pem* 및 *server-key.pem*: TLS 인증에 사용할 클라이언트 인증서와 공개 키가 포함되어 있습니다.
 
 7. 필요한 정보를 입력한 후 **마침**을 클릭합니다.  
     **Azure에 Docker 컨테이너 배포** 마법사가 다시 나타납니다.
