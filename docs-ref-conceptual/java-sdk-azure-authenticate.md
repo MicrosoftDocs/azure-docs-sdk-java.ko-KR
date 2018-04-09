@@ -1,7 +1,7 @@
 ---
-title: "Java용 Azure 관리 라이브러리를 사용하여 인증"
-description: "Java용 Azure 관리 라이브러리에 서비스 사용자를 인증합니다."
-keywords: "Azure, Java, SDK, API, Maven, Gradle, 인증, Active Directory, 서비스 사용자"
+title: Java용 Azure 관리 라이브러리를 사용하여 인증
+description: Java용 Azure 관리 라이브러리에 서비스 사용자를 인증합니다.
+keywords: Azure, Java, SDK, API, Maven, Gradle, 인증, Active Directory, 서비스 사용자
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -12,11 +12,11 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: 10f457e3-578b-4655-8cd1-51339226ee7d
-ms.openlocfilehash: dd1273d5fc79f513e8dae5420eb6a6988d327d58
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: 3808c6d56b04f28c84a89a25219e4ec523f87964
+ms.sourcegitcommit: 61030d025614b084e897809e603b2ec79900ec8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="authenticate-with-the-azure-libraries-for-java"></a>Java용 Azure 라이브러리를 사용하여 인증 
 
@@ -42,7 +42,7 @@ final String storageConnection = "DefaultEndpointsProtocol=https;"
         + ";EndpointSuffix=core.windows.net";
 ```
 
-서비스 연결 문자열은 [DocumentDB](https://docs.microsoft.com/azure/documentdb/documentdb-java-application#a-iduseserviceastep-4-using-the-documentdb-service-in-a-java-application), [Redis Cache](https://docs.microsoft.com/azure/redis-cache/cache-java-get-started) 및 [Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-java-how-to-use-queues)와 같은 다른 Azure 서비스를 인증하는 데 사용됩니다. Azure Portal 또는 CLI를 사용하여 연결 문자열을 가져올 수 있습니다.  또한 Java용 Azure 관리 라이브러리를 사용하여 코드에서 연결 문자열을 작성하는 리소스를 쿼리할 수도 있습니다. 
+서비스 연결 문자열은 [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/sql-api-java-application#UseService), [Redis Cache](https://docs.microsoft.com/azure/redis-cache/cache-java-get-started) 및 [Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-java-how-to-use-queues)와 같은 다른 Azure 서비스를 인증하는 데 사용됩니다. Azure Portal 또는 CLI를 사용하여 연결 문자열을 가져올 수 있습니다.  또한 Java용 Azure 관리 라이브러리를 사용하여 코드에서 연결 문자열을 작성하는 리소스를 쿼리할 수도 있습니다. 
 
 예를 들어 다음 코드에서는 관리 라이브러리를 사용하여 저장소 계정 연결 문자열을 만듭니다.
 

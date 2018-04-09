@@ -1,7 +1,7 @@
 ---
-title: "Java용 Azure Cosmos DB 라이브러리"
-description: "Java용 Azure Cosmos DB 클라이언트 라이브러리에 대한 참조 설명서"
-keywords: "Azure, Java, SDK, API, SQL, 데이터베이스, MongoDB, Cosmos DB, NoSQL, DocumentDB"
+title: Java용 Azure Cosmos DB 라이브러리
+description: Java용 Azure Cosmos DB 클라이언트 라이브러리에 대한 참조 설명서
+keywords: Azure, Java, SDK, API, SQL, database, MongoDB, Cosmos DB, NoSQL
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,23 +11,23 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: cosmosdb
-ms.openlocfilehash: 393f57df0ea2076c6ee7045b56883ee088716fad
-ms.sourcegitcommit: 93107ca9ed76a29573a5faf8f39737c85e6bbaff
+ms.openlocfilehash: 845106b773de03aba8dd5edb9a18c6b036cf3215
+ms.sourcegitcommit: 61030d025614b084e897809e603b2ec79900ec8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="azure-cosmos-db-libraries-for-java"></a>Java용 Azure Cosmos DB 라이브러리
 
 ## <a name="overview"></a>개요
 
-[Cosmos DB](/azure/cosmos-db/introduction)를 사용하여 키-값, JSON 문서, 그래프 및 열 형식 데이터를 전 세계에 분산된 데이터베이스에 저장하고 쿼리합니다.
+[Azure Cosmos DB](/azure/cosmos-db/introduction)를 사용하여 키-값, JSON 문서, 그래프 및 열 형식 데이터를 전 세계에 분산된 데이터베이스에 저장하고 쿼리합니다.
 
-Cosmos DB를 시작하려면 [Azure Cosmos DB: Java 및 Azure Portal을 사용하여 API 앱 빌드](/azure/cosmos-db/create-documentdb-java)를 참조하세요.
+Azure Cosmos DB를 시작하려면 [Azure Cosmos DB: Java 및 Azure Portal을 사용하여 API 앱 빌드](/azure/cosmos-db/create-sql-api-java)를 참조하세요.
 
 ## <a name="client-library"></a>클라이언트 라이브러리
 
-[DocumentDB](/azure/cosmos-db/documentdb-introduction) 클라이언트 라이브러리로 Cosmos DB에 연결하여 [SQL 쿼리 구문](/azure/cosmos-db/documentdb-sql-query)으로 JSON 데이터 작업을 수행합니다.
+[SQL API](/azure/cosmos-db/sql-api-introduction) 클라이언트 라이브러리로 Azure Cosmos DB에 연결하여 [SQL 쿼리 구문](/azure/cosmos-db/sql-api-sql-query)으로 JSON 데이터 작업을 수행합니다.
 
 `pom.xml` Maven 파일에 [종속성을 추가](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)하여 프로젝트에서 Cosmos DB 클라이언트 라이브러리를 사용합니다.
 
@@ -39,7 +39,7 @@ Cosmos DB를 시작하려면 [Azure Cosmos DB: Java 및 Azure Portal을 사용�
 </dependency>
 ```
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 SQL 쿼리 구문을 사용하여 Cosmos DB에서 일치하는 JSON 문서를 선택합니다.
 
@@ -65,7 +65,7 @@ List<Document> results = client.queryDocuments("dbs/" + DATABASE_ID + "/colls/" 
 
 [Azure Cosmos DB MongoDB API를 사용하여 Java 앱 개발(영문)][2]   
 [Azure Cosmos DB Graph API를 사용하여 Java 앱 개발(영문)][3]   
-[Azure Cosmos DB DocumentDB API를 사용하여 Java 앱 개발(영문)][4]        
+[Azure Cosmos DB SQL API를 사용하여 Java 앱 개발][4]        
 
 앱에서 사용할 수 있는 [Azure Cosmos DB용 Java 샘플 코드](https://azure.microsoft.com/resources/samples/?platform=java&term=cosmos)를 추가로 탐색합니다.
 
