@@ -1,7 +1,7 @@
 ---
-title: "Java용 Azure Key Vault 라이브러리"
-description: "Java용 Azure Key Vault 라이브러리 개요"
-keywords: "Azure, Java, SDK, API, 키 자격 증명 모음, 보안, 키, 비밀, 자격 증명 모음"
+title: Java용 Azure Key Vault 라이브러리
+description: Java용 Azure Key Vault 라이브러리 개요
+keywords: Azure, Java, SDK, API, 키 자격 증명 모음, 보안, 키, 비밀, 자격 증명 모음
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: keyvault
-ms.openlocfilehash: 51ac51f5436397a0c9f1a4572dcf79a40f10b538
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: 396d02b8bba5878ffb24f5f8994ae29aef36cfdc
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-key-vault-libraries-for-java"></a>Java용 Azure Key Vault 라이브러리
 
@@ -39,18 +39,18 @@ Azure Key Vault를 시작하려면 [Azure Key Vault 시작](/azure/key-vault/key
 </dependency>
 ```   
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 Key Vault에서 [JSON 웹 키](https://tools.ietf.org/html/draft-ietf-jose-json-web-key-18)를 검색합니다.
 
 ```java
 KeyVaultClient kvc = new KeyVaultClient(credentials);
-KeyBundle returnedKeyBundle = getKey(vaultUrl, keyName);
+KeyBundle returnedKeyBundle = kvc.getKey(vaultUrl, keyName);
 JsonWebKey jsonKey = returnedKeyBundle.key();
 ```
 
 > [!div class="nextstepaction"]
-> [클라이언트 API 탐색](/java/api/overview/azure/keyvault/clientlibrary)
+> [클라이언트 API 탐색](/java/api/overview/azure/keyvault/client)
 
 
 ## <a name="management-api"></a>관리 API
@@ -67,7 +67,7 @@ Azure Key Vault 관리 라이브러리를 사용하여 키 자격 증명 모음�
 </dependency>
 ```
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 키 자격 증명 모음에서 비밀을 나열하고 검색하기 위해 `clientId` [서비스 사용자](/azure/azure-resource-manager/resource-group-create-service-principal-portal)를 사용하여 실행되는 응용 프로그램에 권한을 부여합니다. 
 
@@ -83,7 +83,7 @@ vault1 = vault1.update()
 ```
 
 > [!div class="nextstepaction"]
-> [관리 API 탐색](/java/api/overview/azure/keyvault/managementapi)
+> [관리 API 탐색](/java/api/overview/azure/keyvault/management)
 
 
 ## <a name="samples"></a>샘플

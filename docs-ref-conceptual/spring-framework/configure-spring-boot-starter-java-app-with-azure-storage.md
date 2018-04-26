@@ -1,12 +1,12 @@
 ---
-title: "Azure Storage에 Spring Boot Starter를 사용하는 방법"
-description: "Azure Storage 스타터에 Spring Boot Initializer 앱을 구성하는 방법을 알아봅니다."
+title: Azure Storage에 Spring Boot Starter를 사용하는 방법
+description: Azure Storage 스타터에 Spring Boot Initializer 앱을 구성하는 방법을 알아봅니다.
 services: storage
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: yungez;robmcm
 ms.date: 02/01/2018
 ms.devlang: java
@@ -14,11 +14,11 @@ ms.service: storage
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: storage
-ms.openlocfilehash: 50c8475c66250c8e872849007349277fd3fe797b
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: e10ecfb7f6d705aa3ccffc49d354d1019f7f1a0b
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-storage"></a>Azure Storage에 Spring Boot Starter를 사용하는 방법
 
@@ -93,8 +93,9 @@ ms.lasthandoff: 02/03/2018
        }
      }
    ]
+   ```
 
-1. Specify the GUID for the account you want to use with Azure; for example:
+1. 다음 예제처럼 Azure에 사용하려는 계정의 GUID를 지정합니다.
 
    ```azurecli
    az account set -s ssssssss-ssss-ssss-ssss-ssssssssssss

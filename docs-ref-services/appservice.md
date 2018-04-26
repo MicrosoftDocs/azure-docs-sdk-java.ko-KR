@@ -1,7 +1,7 @@
 ---
-title: "Java용 Azure App Service 라이브러리"
-description: "Azure 관리 API를 사용하여 Azure App Service에서 웹앱을 자동으로 배포합니다."
-keywords: "Azure, Java, SDK, API, 웹앱, 모바일, App Service"
+title: Java용 Azure App Service 라이브러리
+description: Azure 관리 API를 사용하여 Azure App Service에서 웹앱을 자동으로 배포합니다.
+keywords: Azure, Java, SDK, API, 웹앱, 모바일, App Service
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: appservice
-ms.openlocfilehash: 7e1d7eed9d8fa8d2f872f2902e2ce3f2b3dab7b6
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: adbb527666553ecc3039ce35c035d017f502c801
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-app-service-libraries-for-java"></a>Java용 Azure App Service 라이브러리
 
@@ -40,9 +40,9 @@ Azure App Service를 시작하려면 [Azure에서 첫 번째 Java 웹앱 만들�
 ```   
 
 > [!div class="nextstepaction"]
-> [관리 API 탐색](/java/api/overview/azure)
+> [관리 API 탐색](/java/api/overview/azure/appservice/management)
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 Docker 이미지에서 Linux에서 실행되는 Azure Web App으로 웹앱을 배포합니다.
 

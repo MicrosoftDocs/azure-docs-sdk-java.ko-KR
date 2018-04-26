@@ -1,7 +1,7 @@
 ---
-title: "Java용 Azure Network 라이브러리"
-description: "Java용 Azure Network 관리 라이브러리에 대한 참조 설명서"
-keywords: "Azure, Java, SDK, API, 네트워킹, 부하 분산, VNet, 서브넷"
+title: Java용 Azure Network 라이브러리
+description: Java용 Azure Network 관리 라이브러리에 대한 참조 설명서
+keywords: Azure, Java, SDK, API, 네트워킹, 부하 분산, VNet, 서브넷
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: networking
-ms.openlocfilehash: 6eed6f45ee239db1286e94f210341febb189378d
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: bb74ccd8826df7b627e0b5f4e4ffd2da44b2642d
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-network-libraries-for-java"></a>Java용 Azure Network 라이브러리
 
@@ -39,7 +39,7 @@ Azure Networking을 시작하려면 [첫 번째 가상 네트워크 만들기](/
 </dependency>
 ```   
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 단일 서브넷이 있는 새 가상 네트워크를 만듭니다.
 
@@ -55,13 +55,13 @@ Network virtualNetwork1 = azure.networks().define(vnetName1)
 ```
 
 > [!div class="nextstepaction"]
-> [관리 API 탐색](/java/api/overview/azure/networking/managementapi)
+> [관리 API 탐색](/java/api/overview/azure/networking/management)
 
 ## <a name="samples"></a>샘플
 
 [가상 네트워크 관리(영문)](https://github.com/Azure-Samples/network-java-manage-virtual-network)   
 [네트워크 인터페이스 관리(영문)](https://github.com/Azure-Samples/network-java-manage-network-interface)   
-[응용 프로그램 게이트웨이 관리(영문)](https://github.com/Azure-Samples/application-gateway-java-manage-simple-application-gateways)   
+[Application Gateway 관리(영문)](https://github.com/Azure-Samples/application-gateway-java-manage-simple-application-gateways)   
 [인터넷 연결 부하 분산 장치 관리(영문)](https://github.com/Azure-Samples/network-java-manage-internet-facing-load-balancers)   
 
 앱에서 사용할 수 있는 [Azure Networking용 Java 샘플 코드](https://azure.microsoft.com/resources/samples/?platform=java&term=network)을 추가로 탐색합니다.

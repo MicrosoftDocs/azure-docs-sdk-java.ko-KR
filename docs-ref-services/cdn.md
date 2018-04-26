@@ -1,7 +1,7 @@
 ---
-title: "Java용 Azure CDN 라이브러리"
-description: "Java용 CDN 관리 라이브러리에 대한 참조 설명서"
-keywords: "Azure, Java, SDK, API, 콘텐츠, 배포, 네트워크, CDN"
+title: Java용 Azure CDN 라이브러리
+description: Java용 CDN 관리 라이브러리에 대한 참조 설명서
+keywords: Azure, Java, SDK, API, 콘텐츠, 배포, 네트워크, CDN
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: cdn
-ms.openlocfilehash: 91df958d2d78fb4fd959c228b28c6ae003716be6
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: 199e9b4b2b2431e23954d24e4adeb4326eb4741c
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-cdn-libraries-for-java"></a>Java용 Azure CDN 라이브러리
 
@@ -39,7 +39,7 @@ Azure CDN을 시작하려면 [Azure CDN 시작](/azure/cdn/cdn-create-new-endpoi
 </dependency>
 ```   
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 CDN 프로필을 만들고, 끝점을 할당하고, CDN에 콘텐츠를 로드합니다.
 
@@ -62,7 +62,7 @@ for (CdnEndpoint endpoint : profile.endpoints().values()) {
 ```
 
 > [!div class="nextstepaction"]
-> [관리 API 탐색](/java/api/overview/azure/cdn/managementapi)
+> [관리 API 탐색](/java/api/overview/azure/cdn/management)
 
 ## <a name="samples"></a>샘플
 

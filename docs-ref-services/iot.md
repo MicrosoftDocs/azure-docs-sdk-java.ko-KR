@@ -1,7 +1,7 @@
 ---
-title: "Java용 Azure IoT Hub 라이브러리"
-description: "Java용 Azure IoT Hub 라이브러리에 대한 참조 설명서"
-keywords: "Azure, Java, SDK, API, 이벤트, IoT, 스트림, 장치, IoT Hub"
+title: Java용 Azure IoT Hub 라이브러리
+description: Java용 Azure IoT Hub 라이브러리에 대한 참조 설명서
+keywords: Azure, Java, SDK, API, 이벤트, IoT, 스트림, 장치, IoT Hub
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: iot-hub
-ms.openlocfilehash: c1af3dae0fe37eb4919db02da87beed193c547a7
-ms.sourcegitcommit: acc83bb537d77568b2a5427479d6354d6ae30885
+ms.openlocfilehash: 5e6a102b062b2fff6b297c7e3dda423d1448bcb0
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-iot-libraries-for-java"></a>Java용 Azure IoT 라이브러리
 
@@ -52,9 +52,9 @@ IoT 장치 라이브러리를 사용하여 클라우드로 메시지를 보내�
 ```
 
 > [!div class="nextstepaction"]
-> [클라이언트 API 탐색](/java/api/overview/azure/iot/clientlibrary)   
+> [클라이언트 API 탐색](/java/api/overview/azure/iot/client)   
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 Azure IoT Hub에서 장치로 메시지를 보냅니다.
 

@@ -1,7 +1,7 @@
 ---
-title: "Java용 Azure DNS 라이브러리"
-description: "Java용 Azure DNS 관리 라이브러리에 대한 참조 설명서"
-keywords: "Azure, Java, SDK, API, 도메인, DNS, 이름, 서비스, 도메인 이름 서비스"
+title: Java용 Azure DNS 라이브러리
+description: Java용 Azure DNS 관리 라이브러리에 대한 참조 설명서
+keywords: Azure, Java, SDK, API, 도메인, DNS, 이름, 서비스, 도메인 이름 서비스
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: dns
-ms.openlocfilehash: adac8e21a401bc91490b92fc5ccf90443eea569f
-ms.sourcegitcommit: f6bf497d9b98f0608aefacf1e914d8be52964234
+ms.openlocfilehash: 2cd8fe7ee4d6a87da32a349fe8f1d2815d3fd36d
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-traffic-manager-libraries-for-java"></a>Java용 Azure Traffic Manager 라이브러리
 
@@ -39,7 +39,7 @@ Azure DNS를 시작하려면 [Azure CLI 2.0을 사용하여 Azure DNS 시작](/a
 </dependency>
 ```   
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 루트 DNS 영역을 만들고 기존 리소스 그룹에 `www` CNAME 레코드를 추가합니다.
 
@@ -53,7 +53,7 @@ rootDnsZone = rootDnsZone.update()
 ```
 
 > [!div class="nextstepaction"]
-> [관리 API 탐색](/java/api/overview/azure/dns/managementapi)
+> [관리 API 탐색](/java/api/overview/azure/dns/management)
 
 ## <a name="samples"></a>샘플
 

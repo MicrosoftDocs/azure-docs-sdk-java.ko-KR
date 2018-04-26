@@ -1,7 +1,7 @@
 ---
-title: "Java용 Azure Active Directory 라이브러리"
-description: "Java용 Azure Active Directory 클라이언트 및 관리 라이브러리에 대한 참조 설명서"
-keywords: "Azure, Java, SDK, API, SQL, 인증 AAD, Active Directory, Graph, OAuth 2.0"
+title: Java용 Azure Active Directory 라이브러리
+description: Java용 Azure Active Directory 클라이언트 및 관리 라이브러리에 대한 참조 설명서
+keywords: Azure, Java, SDK, API, SQL, 인증 AAD, Active Directory, Graph, OAuth 2.0
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: active-directory
-ms.openlocfilehash: 081b8455a6cd8f26ce714328d10ce25ea6a07e3b
-ms.sourcegitcommit: 4b63ecd2c92a9115dfae018618e4e4046b061b3e
+ms.openlocfilehash: 28063a1a4299fd78ba76533d0ffdc0346434eea2
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-active-directory-libraries-for-java"></a>Java용 Azure Active Directory 라이브러리
 
@@ -39,7 +39,7 @@ Azure AD를 시작하려면 [Azure AD에서 Java 웹앱 로그인 및 로그아�
 </dependency>
 ```   
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 Azure Active Directory의 [Graph API](https://docs.microsoft.com/azure/active-directory/develop/active-directory-graph-api)를 사용하여 Active Directory 테넌트에서 사용자에 대한 JWT(JSON Web Token)를 검색합니다. 그런 다음 이 토큰을 사용하여 응용 프로그램 또는 API를 통해 해당 사용자를 인증할 수 있습니다.
 
@@ -69,7 +69,7 @@ System.out.println("ID Token - " + result.getIdToken());
 </dependency>
 ```
 
-### <a name="example"></a>예제 
+### <a name="example"></a>예 
 
 새 서비스 사용자를 만들고 참가자 역할을 지정합니다.
 
@@ -86,7 +86,7 @@ RoleAssignment roleAssignment2 = authenticated.roleAssignments()
 ```
 
 > [!div class="nextstepaction"]
-> [관리 API 탐색](/java/api/overview/azure/activedirectory/managementapi)
+> [관리 API 탐색](/java/api/overview/azure/activedirectory/management)
 
 
 ## <a name="samples"></a>샘플

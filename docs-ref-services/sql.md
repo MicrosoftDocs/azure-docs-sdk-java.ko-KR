@@ -1,7 +1,7 @@
 ---
-title: "Java용 Azure SQL Database 라이브러리"
-description: "관리 API를 사용하여 JDBC 드라이버 또는 Azure SQL Database 관리 인스턴스를 사용하는 Azure SQL Database에 연결합니다."
-keywords: "Azure, Java, SDK, API, SQL, 데이터베이스, JDBC"
+title: Java용 Azure SQL Database 라이브러리
+description: 관리 API를 사용하여 JDBC 드라이버 또는 Azure SQL Database 관리 인스턴스를 사용하는 Azure SQL Database에 연결합니다.
+keywords: Azure, Java, SDK, API, SQL, 데이터베이스, JDBC
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: sql-database
-ms.openlocfilehash: 3ae4015ae57e5eac4dafb30f4a42881986501853
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: 37f7d3caf10e6b709cee2452c63a543d49e0ead8
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-sql-database-libraries-for-java"></a>Java용 Azure SQL Database 라이브러리
 
@@ -40,7 +40,7 @@ Azure SQL Database를 시작하려면 [Azure SQL Database: Java를 사용하여 
 </dependency>
 ```   
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 SQL 데이터베이스에 연결하고 JDBC를 사용하여 테이블의 모든 레코드를 선택합니다.
 
@@ -69,9 +69,9 @@ try {
 ```
 
 > [!div class="nextstepaction"]
-> [관리 API 탐색](/java/api/overview/azure/sql/managementapi)
+> [관리 API 탐색](/java/api/overview/azure/sql/management)
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 SQL Database 리소스를 만들고 방화벽 규칙을 사용하여 IP 주소 범위에 대한 액세스를 제한합니다.
 

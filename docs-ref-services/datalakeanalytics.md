@@ -1,7 +1,7 @@
 ---
-title: "Java용 Azure Data Lake Analytics 라이브러리"
-description: "Java용 Data Lake Analytics 라이브러리에 대한 참조 설명서"
-keywords: "Azure, Java, SDK, API, 빅 데이터, Data Lake"
+title: Java용 Azure Data Lake Analytics 라이브러리
+description: Java용 Data Lake Analytics 라이브러리에 대한 참조 설명서
+keywords: Azure, Java, SDK, API, 빅 데이터, Data Lake
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: data-lake-store
-ms.openlocfilehash: 70cfe1417d460172df0cb753d2b719a635978ca8
-ms.sourcegitcommit: 4b63ecd2c92a9115dfae018618e4e4046b061b3e
+ms.openlocfilehash: c14c89f961951d114362adee4fec6239e78cffb3
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-data-lake-analytics-libraries-for-java"></a>Java용 Azure Data Lake Analytics 라이브러리
 
@@ -40,7 +40,7 @@ Azure Data Lake Analytics를 시작하려면 [Java SDK를 사용하여 Azure Dat
 </dependency>
 ```
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 Data Lake Analytics에 새 U-SQL 작업을 제출합니다.
 
@@ -65,7 +65,7 @@ JobInformation jobInfo = adlaJobClient.getJobOperations().create(accountName, jo
 ```
 
 > [!div class="nextstepaction"]
-> [클라이언트 API 탐색](/java/api/overview/azure/datalakeanalytics/managementapi)
+> [관리 API 탐색](/java/api/overview/azure/datalakeanalytics/management)
 
 ## <a name="samples"></a>샘플
 

@@ -1,7 +1,7 @@
 ---
-title: "Java용 Azure Application Insights 라이브러리"
-description: "Java용 Azure Appplication Insights 관리 API에 대한 참조 설명서"
-keywords: "Azure, Java, SDK, API, AppInsights, 원격 분석, 진단, 추적, 로그, 성능"
+title: Java용 Azure Application Insights 라이브러리
+description: Java용 Azure Appplication Insights 관리 API에 대한 참조 설명서
+keywords: Azure, Java, SDK, API, AppInsights, 원격 분석, 진단, 추적, 로그, 성능
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: appinsights
-ms.openlocfilehash: 9f943dc87d9e9b3e015407eea4dfd2900040da37
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: d881ff66ad806e13f7d2cbafff6ce85c23240304
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-application-insights-libraries-for-java"></a>Java용 Azure Application Insights 라이브러리
 
@@ -39,7 +39,7 @@ Application Insights 클라이언트 라이브러리를 사용하여 앱의 이�
 </dependency>
 ```   
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 새 메트릭 항목을 만들고 해당 값을 기록합니다.
 
@@ -51,7 +51,7 @@ Application Insights 클라이언트 라이브러리를 사용하여 앱의 이�
 ```
 
 > [!div class="nextstepaction"]
-> [클라이언트 API 탐색](/java/api/overview/azure/appinsights/clientlibrary)
+> [클라이언트 API 탐색](/java/api/overview/azure/appinsights/client)
 
 ## <a name="samples"></a>샘플
 

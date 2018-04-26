@@ -1,7 +1,7 @@
 ---
-title: "Java용 Redis Cache 라이브러리"
-description: "Java용 Redis Cache 클라이언트 및 관리 라이브러리에 대한 참조 설명서"
-keywords: "Azure, Java, SDK, API, 캐시, Redis, 웹 캐시, 키-값, 메모리 내"
+title: Java용 Redis Cache 라이브러리
+description: Java용 Redis Cache 클라이언트 및 관리 라이브러리에 대한 참조 설명서
+keywords: Azure, Java, SDK, API, 캐시, Redis, 웹 캐시, 키-값, 메모리 내
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: redis-cache
-ms.openlocfilehash: 6d436c49124fd0a406486e0c7bac4d1605de5d32
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: dd03825d9ae7cba32087f92262d5ef213cf3af0b
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="redis-cache-libraries-for-java"></a>Java용 Redis Cache 라이브러리
 
@@ -40,7 +40,7 @@ Azure Redis Cache에 연결하고, [Jedis](https://github.com/xetorthio/jedis) �
 </dependency>
 ```
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 Azure Redis에 연결하고, 캐시에 문자열을 삽입합니다.
 
@@ -63,7 +63,7 @@ JedisShardInfo shardInfo = new JedisShardInfo("<name>.redis.cache.windows.net", 
 </dependency>
 ```
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 [2노드 표준 계층](https://azure.microsoft.com/services/cache/)에 새 Azure Redis Cache를 만듭니다. 
 
@@ -75,7 +75,7 @@ RedisCache cache = azure.redisCaches().define(redisCacheName1)
 ```
 
 > [!div class="nextstepaction"]
-> [관리 API 탐색](/java/api/overview/azure/rediscache/managementapi)
+> [관리 API 탐색](/java/api/overview/azure/rediscache/management)
 
 ## <a name="samples"></a>샘플
 
