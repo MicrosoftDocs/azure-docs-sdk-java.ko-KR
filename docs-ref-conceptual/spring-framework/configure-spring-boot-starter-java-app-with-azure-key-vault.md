@@ -1,12 +1,12 @@
 ---
-title: "Azure Key Vault에 Spring Boot Starter를 사용하는 방법"
-description: "Azure Key Vault 스타터에 Spring Boot Initializer 앱을 구성하는 방법을 알아봅니다."
+title: Azure Key Vault에 Spring Boot Starter를 사용하는 방법
+description: Azure Key Vault 스타터에 Spring Boot Initializer 앱을 구성하는 방법을 알아봅니다.
 services: key-vault
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: java
@@ -14,17 +14,17 @@ ms.service: key-vault
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 52e7dc3f84ea96f22d8e478a597452c76ed8bf22
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: 1dda697cac80a6cad3ebbbbf8a5a4f18b515dfd8
+ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>Azure Key Vault에 Spring Boot Starter를 사용하는 방법
 
 ## <a name="overview"></a>개요
 
-이 문서에서는 **[Spring Initializr]**를 사용하여 앱을 만드는 방법을 보여 줍니다. 여기서는 Spring Boot Starter를 Azure Key Vault에 사용하여 키 자격 증명 모음에 비밀 형태로 저장된 연결 문자열을 검색합니다.
+이 문서에서는 **[Spring Initializr]** 를 사용하여 앱을 만드는 방법을 보여 줍니다. 여기서는 Spring Boot Starter를 Azure Key Vault에 사용하여 키 자격 증명 모음에 비밀 형태로 저장된 연결 문자열을 검색합니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -85,8 +85,9 @@ ms.lasthandoff: 02/03/2018
        }
      }
    ]
+   ```
 
-1. Specify the GUID for the account you want to use with Azure; for example:
+1. 다음 예제처럼 Azure에 사용하려는 계정의 GUID를 지정합니다.
 
    ```azurecli
    az account set -s ssssssss-ssss-ssss-ssss-ssssssssssss
