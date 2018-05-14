@@ -1,11 +1,11 @@
 ---
-title: "Eclipse용 Azure 도구 키트 설치"
-description: "Eclipse용 Azure 도구 키트 플러그 인을 설치하여 클라우드 응용 프로그램을 만들어 Azure에 배포하는 방법에 대해 알아봅니다."
-services: 
+title: Eclipse용 Azure 도구 키트 설치
+description: Eclipse용 Azure 도구 키트 플러그 인을 설치하여 클라우드 응용 프로그램을 만들어 Azure에 배포하는 방법에 대해 알아봅니다.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: 9e93ff6a-f42b-4d99-b55b-624136b4a730
 ms.author: robmcm
 ms.date: 02/01/2018
@@ -14,11 +14,11 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 81a784a09c07e0ace4d12989c745c80f55cd70cd
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: d5f685fa62ad74c8b8cd842b3667f8161e7c5760
+ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="install-the-azure-toolkit-for-eclipse"></a>Eclipse용 Azure 도구 키트 설치
 
@@ -45,7 +45,7 @@ Eclipse용 Azure 도구 키트는 Eclipse 개발 환경에서 클라우드 응�
 
 1. **Available Software** 대화 상자의 **Work with** 텍스트 상자에 `http://dl.microsoft.com/eclipse/`를 입력하고 **Enter** 키를 누릅니다.
 
-1. **Name** 창에서 **Azure Toolkit for Eclipse**를 선택하고 **Contact all update sites during install to find required software**를 선택하지 않습니다. 화면은 다음과 유사한 모양입니다.
+1. **이름** 창에서 **Java용 Azure 도구 키트**를 선택하고 **Contact all update sites during install to find required software**를 선택하지 않습니다. 화면은 다음과 유사한 모양입니다.
    
    ![Eclipse용 Azure 도구 키트 설치][02]
 

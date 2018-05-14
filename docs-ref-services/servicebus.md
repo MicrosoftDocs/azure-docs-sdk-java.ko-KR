@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: service-bus
-ms.openlocfilehash: 7468d9b920debc778e7e3d298fbcb913add6afdd
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.openlocfilehash: ed830b4f7ffa104174205f75ea2923235029ea80
+ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="service-bus-libraries-for-java"></a>Java용 Service Bus 라이브러리
 
@@ -33,15 +33,18 @@ Service Bus Premium은 간단하고 용량 지향적인 가격 책정 모델 및
 
 Java 개발자를 위해 Service Bus는 Microsoft에서 지원하는 기본 API를 제공하며, Apache Qpid Proton의 JMS 공급자와 같은 AMQP 1.0 규격 라이브러리와 함께 사용할 수도 있습니다.
 
-공식 Service Bus 클라이언트는 [GitHub에서 소스 코드 형식](https://github.com/azure/azure-service-bus-java)으로 사용할 수 있으며, 이진 파일 및 패키지에 포함된 소스는 [Maven Central에서 사용할 수 있습니다](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-servicebus%22). 
-
-
 ## <a name="client-library"></a>클라이언트 라이브러리
 
+공식 Service Bus 클라이언트는 [GitHub에서 소스 코드 형식](https://github.com/azure/azure-service-bus-java)으로 사용할 수 있으며, 이진 파일 및 패키지에 포함된 소스는 [Maven Central에서 사용할 수 있습니다](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-servicebus%22).
+
+**[샘플 코드 리포지토리](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/)에는 다음에 대한 샘플이 포함되어 있습니다.**
+* [QueueClient](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/BasicSendReceiveWithQueueClient.java)를 사용하는 방법
+* [TopicClient 및 SubscriptionClient](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/BasicSendReceiveWithTopicSubscriptionClient.java)를 사용하는 방법
+* Service Bus에서 [MessageSender 및 MessageReceiver](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/SendReceiveWithMessageSenderReceiver.java) 메시지를 사용하는 방법입니다.
 
 Maven 프로젝트의 `pom.xml` 파일에 종속성을 추가하여 자신의 프로젝트에서 라이브러리를 사용합니다. 필요에 따라 버전을 지정합니다.
 
-`pom.xml` Maven 파일에 [종속성을 추가](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)하여 프로젝트에서 클라이언트 라이브러리를 사용합니다.   
+`pom.xml` Maven 파일에 [종속성을 추가](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)하여 프로젝트에서 클라이언트 라이브러리를 사용합니다.
 
 ```XML
 <dependency>
@@ -50,11 +53,6 @@ Maven 프로젝트의 `pom.xml` 파일에 종속성을 추가하여 자신의 �
     <version>1.0.0</version>
 </dependency>
 ```
-
-## <a name="examples"></a>예
-
-[샘플 코드 리포지토리](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/)에는 Service Bus의 [QueueClient](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/BasicSendReceiveWithQueueClient.java), [TopicClient 및 SubscriptionClient](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/BasicSendReceiveWithTopicSubscriptionClient.java), [MessageSender 및 MessageReceiver](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/SendReceiveWithMessageSenderReceiver.java) 메시지에 대한 샘플이 포함되어 있습니다.
-
 
 ```java
 public class BasicSendReceiveWithQueueClient {
@@ -117,11 +115,18 @@ public class BasicSendReceiveWithQueueClient {
 
 > [!div class="nextstepaction"]
 > [클라이언트 API 탐색](/java/api/overview/azure/servicebus/client)
+> [여기에서 더 많은 예제 찾기(자세한 내용은 위를 참조)](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/)
 
 ## <a name="management-api"></a>관리 API
 
 관리 API를 사용하여 네임스페이스, 토픽, 큐 및 구독을 만들고 관리합니다.
 
+**여기에서 몇 가지 예를 찾으세요.**
+* [Service Bus 큐 관리](https://github.com/Azure-Samples/service-bus-java-manage-queue-with-basic-features)
+* [Service Bus 토픽 만들기 및 구독](https://github.com/Azure-Samples/service-bus-java-manage-publish-subscribe-with-basic-features)
+
+**프로젝트에서 관리 API를 사용합니다.**
+\
 `pom.xml` Maven 파일에 [종속성을 추가](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)하여 프로젝트에서 관리 API를 사용합니다.  
 
 ```XML
@@ -134,11 +139,5 @@ public class BasicSendReceiveWithQueueClient {
 
 > [!div class="nextstepaction"]
 > [관리 API 탐색](/java/api/overview/azure/servicebus/management)
-
-
-## <a name="examples"></a>예
-
-[Service Bus 큐 관리(영문)](https://github.com/Azure-Samples/service-bus-java-manage-queue-with-basic-features)
-[Service Bus 토픽 만들기 및 구독(영문)](https://github.com/Azure-Samples/service-bus-java-manage-publish-subscribe-with-basic-features)
 
 앱에서 사용할 수 있는 [Azure Service Bus용 Java 샘플 코드](https://azure.microsoft.com/resources/samples/?platform=java&term=bus)를 추가로 탐색합니다.

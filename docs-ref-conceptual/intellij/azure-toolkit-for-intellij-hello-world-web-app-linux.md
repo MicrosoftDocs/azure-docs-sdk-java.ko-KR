@@ -1,12 +1,12 @@
 ---
-title: "IntelliJ용 Azure 도구 키트를 사용하는 클라우드 내의 Linux 컨테이너에서 실행되는 Hello World 웹앱 배포"
-description: "Linux 컨테이너에서 기본 Hello World 웹앱을 실행하여 IntelliJ용 Azure 도구 키트를 사용하는 클라우드에 배포합니다."
+title: IntelliJ용 Azure 도구 키트를 사용하는 클라우드 내의 Linux 컨테이너에서 실행되는 Hello World 웹앱 배포
+description: Linux 컨테이너에서 기본 Hello World 웹앱을 실행하여 IntelliJ용 Azure 도구 키트를 사용하는 클라우드에 배포합니다.
 services: app-service\web
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -14,11 +14,11 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: c430581a9a67365430d87c1af925c1f4d27eca2b
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: d281f37b027d4011ea2e3106990c5e45b69ebc88
+ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="deploy-a-hello-world-web-app-to-a-linux-container-in-the-cloud-using-the-azure-toolkit-for-intellij"></a>IntelliJ용 Azure 도구 키트를 사용하는 클라우드 내의 Linux 컨테이너에 Hello World 웹앱 배포
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/03/2018
 
 ## <a name="create-a-new-web-app-project"></a>새 웹앱 프로젝트 만들기
 
-1. IntelliJ를 시작하고 [IntelliJ용 Azure 도구 키트에 대한 로그인 지침] 문서의 단계를 사용하여 Azure 계정에 로그인합니다.
+1. IntelliJ를 시작하고 [IntelliJ용 Azure 도구 키트에 대한 로그인 지침](https://docs.microsoft.com/java/azure/intellij/azure-toolkit-for-intellij-sign-in-instructions) 문서의 단계를 사용하여 Azure 계정에 로그인합니다.
 
 1. **파일** 메뉴, **새로 만들기**를 차례로 클릭한 다음 **프로젝트**를 클릭합니다.
    
@@ -97,7 +97,7 @@ ms.lasthandoff: 02/03/2018
 
    ![Docker 지원 추가][add-docker-support]
 
-1. Docker 지원을 추가한 후 프로젝트 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **Azure**를 선택한 다음 **웹앱 실행(Linux)**을 클릭합니다.
+1. Docker 지원을 추가한 후 프로젝트 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **Azure**를 선택한 다음 **웹앱 실행(Linux)** 을 클릭합니다.
 
    ![웹앱 실행(Linux)][run-on-web-app-linux]
 
