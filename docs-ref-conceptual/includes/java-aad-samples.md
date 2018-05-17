@@ -1,10 +1,10 @@
 |  |  |
 |---------|---------|
-| [Azure AD를 Java 웹 응용 프로그램에 통합][1] | Java 웹앱에서 OAuth2 인증을 설정합니다.
-| [웹 응용 프로그램에서 Azure AD Graph API 호출][2] | Azure AD Graph API에서 디렉터리 데이터를 읽고 쿼리를 실행합니다. |
-| [사용자 이름과 암호를 사용하여 Azure AD를 Java 명령줄에 통합][3] | OAuth 2.0을 통해 JWT 액세스 토큰을 얻은 다음 액세스 토큰을 사용하여 Azure AD 보호된 웹 API로 인증합니다. |
-| [Graph API를 사용하여 사용자, 그룹 및 역할 관리][4] | 관리 API를 사용하는 Graph API를 통해 사용자, 그룹, 역할 및 서비스 사용자를 관리합니다. 
-| [서비스 사용자 관리][5] | 응용 프로그램에 대한 서비스 사용자를 만들고, 역할을 할당하고, 서비스 사용자를 사용하여 구독의 리소스에 액세스합니다. | 
+| <span data-ttu-id="74e84-101">[Azure AD를 Java 웹 응용 프로그램에 통합][1]</span><span class="sxs-lookup"><span data-stu-id="74e84-101">[Integrating Azure AD into a Java web application][1]</span></span> | <span data-ttu-id="74e84-102">Java 웹앱에서 OAuth2 인증을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="74e84-102">Set up OAuth2 authentication in a Java web app.</span></span>
+| <span data-ttu-id="74e84-103">[웹 응용 프로그램에서 Azure AD Graph API 호출][2]</span><span class="sxs-lookup"><span data-stu-id="74e84-103">[Calling the Azure AD Graph API in a web application][2]</span></span> | <span data-ttu-id="74e84-104">Azure AD Graph API에서 디렉터리 데이터를 읽고 쿼리를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="74e84-104">Read directory data ane execute queries from the Azure AD Graph API</span></span> |
+| <span data-ttu-id="74e84-105">[사용자 이름과 암호를 사용하여 Azure AD를 Java 명령줄에 통합][3]</span><span class="sxs-lookup"><span data-stu-id="74e84-105">[Integrating Azure AD into a Java command line using username and password][3]</span></span> | <span data-ttu-id="74e84-106">OAuth 2.0을 통해 JWT 액세스 토큰을 얻은 다음 액세스 토큰을 사용하여 Azure AD 보호된 웹 API로 인증합니다.</span><span class="sxs-lookup"><span data-stu-id="74e84-106">Obtain a JWT access token through OAuth 2.0, then use the access token to authenticate with a Azure AD protected web API.</span></span> |
+| <span data-ttu-id="74e84-107">[Graph API를 사용하여 사용자, 그룹 및 역할 관리][4]</span><span class="sxs-lookup"><span data-stu-id="74e84-107">[Manage users, groups, And roles with the Graph API][4]</span></span> | <span data-ttu-id="74e84-108">관리 API를 사용하는 Graph API를 통해 사용자, 그룹, 역할 및 서비스 사용자를 관리합니다.</span><span class="sxs-lookup"><span data-stu-id="74e84-108">Manage users, groups, roles, and service principals with the Graph API using the management API.</span></span> 
+| <span data-ttu-id="74e84-109">[서비스 사용자 관리][5]</span><span class="sxs-lookup"><span data-stu-id="74e84-109">[Manage Service Principals][5]</span></span> | <span data-ttu-id="74e84-110">응용 프로그램에 대한 서비스 사용자를 만들고, 역할을 할당하고, 서비스 사용자를 사용하여 구독의 리소스에 액세스합니다.</span><span class="sxs-lookup"><span data-stu-id="74e84-110">Create a service principal for an application, assign it a role, and use the service principal to access resources in the subscription</span></span> | 
 
 [1]: https://azure.microsoft.com/resources/samples/active-directory-java-webapp-openidconnect/
 [2]: https://azure.microsoft.com/resources/samples/active-directory-java-graphapi-web/
