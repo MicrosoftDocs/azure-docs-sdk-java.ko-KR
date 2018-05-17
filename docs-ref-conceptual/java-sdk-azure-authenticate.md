@@ -12,11 +12,11 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: 10f457e3-578b-4655-8cd1-51339226ee7d
-ms.openlocfilehash: 3808c6d56b04f28c84a89a25219e4ec523f87964
-ms.sourcegitcommit: 61030d025614b084e897809e603b2ec79900ec8d
+ms.openlocfilehash: 1d556955fcc5b73f1ba099a0b846b571ba64ccff
+ms.sourcegitcommit: 107c3c5ed8c6991c751f95bcaf3757220940df9e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="authenticate-with-the-azure-libraries-for-java"></a>Java용 Azure 라이브러리를 사용하여 인증 
 
@@ -90,7 +90,7 @@ Azure azure = Azure
 
 `client`, `tenant` 및 `key`는 [파일 기반 인증](#mgmt-file)에 사용되는 것과 동일한 서비스 사용자 값입니다. `AzureEnvironment.AZURE` 값은 Azure 공용 클라우드에 대한 자격 증명을 만듭니다. 다른 클라우드에 액세스해야 하는 경우 이 값을 다른 값으로 변경합니다(예: `AzureEnvironment.AZURE_GERMANY`).  
 
- 환경 변수 또는 [Key Vault](/azure/key-vault/key-vault-whatis.md)와 같은 비밀 관리 저장소에서 서비스 사용자 값을 읽습니다. 자격 증명이 실수로 버전 제어 기록에 노출되지 않도록 이러한 값은 코드에서 일반 텍스트 문자열로 설정하지 마세요.   
+ 환경 변수 또는 [Key Vault](/azure/key-vault/key-vault-whatis)와 같은 비밀 관리 저장소에서 서비스 사용자 값을 읽습니다. 자격 증명이 실수로 버전 제어 기록에 노출되지 않도록 이러한 값은 코드에서 일반 텍스트 문자열로 설정하지 마세요.   
 
 <a name="mgmt-file"></a>
 
