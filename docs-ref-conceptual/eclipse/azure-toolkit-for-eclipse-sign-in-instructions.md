@@ -1,12 +1,12 @@
 ---
-title: "Eclipse용 Azure 도구 키트에 대한 로그인 지침"
-description: "Eclipse용 Azure 도구 키트를 사용하여 Microsoft Azure에 로그인하는 방법을 알아봅니다."
-services: 
+title: Eclipse용 Azure 도구 키트에 대한 로그인 지침
+description: Eclipse용 Azure 도구 키트를 사용하여 Microsoft Azure에 로그인하는 방법을 알아봅니다.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -14,11 +14,11 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 498a22c455e54b8038169cf4e9f6ac7d7287c0bb
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: eb6099ab0c19bf3588cb7fd668f070771e58fe74
+ms.sourcegitcommit: 8230cf6b15ac51a9f8a209e9b76411a0385029aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="azure-sign-in-instructions-for-the-azure-toolkit-for-eclipse"></a>Eclipse용 Azure 도구 키트에 대한 Azure 로그인 지침
 
@@ -91,7 +91,7 @@ Eclipse를 사용할 때 Azure에서 로그아웃된 경우 Azure 계정으로 �
 
    ![로그인 대화 상자][A02]
 
-1. **인증된 파일 선택** 대화 상자가 나타나면 이전에 만든 자격 증명 파일을 선택한 다음 **선택**을 클릭합니다.
+1. **인증된 파일 선택** 대화 상자가 나타나면 이전에 만든 자격 증명 파일을 선택한 다음 **열기**를 클릭합니다.
 
    ![로그인 대화 상자][A08]
 
