@@ -1,12 +1,12 @@
 ---
-title: "Eclipse용 Azure Explorer를 사용하여 저장소 계정 관리"
-description: "Eclipse용 Azure 탐색기를 사용하여 Azure Storage 계정을 관리하는 방법을 알아봅니다."
-services: 
+title: Eclipse용 Azure Explorer를 사용하여 저장소 계정 관리
+description: Eclipse용 Azure 탐색기를 사용하여 Azure Storage 계정을 관리하는 방법을 알아봅니다.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -14,11 +14,11 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 7b493097e94580df42efcfb8c56736e1f179b280
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: 310d95436189af09f794154f4c9f0e71c47d88c8
+ms.sourcegitcommit: 3d3460289ab6b9165c2cf6a3dd56eafd0692501e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-eclipse"></a>Eclipse용 Azure Explorer를 사용하여 저장소 계정 관리
 
@@ -32,7 +32,7 @@ Eclipse용 Azure 도구 키트의 일부인 Azure Explorer는 Eclipse IDE(통합
 
 Azure Explorer를 사용하여 저장소 계정을 만들려면 다음을 수행합니다.
 
-1. [Eclipse용 Azure 도구 키트에 대한 로그인 지침]을 사용하여 Azure 계정에 로그인합니다.
+1. [Eclipse용 Azure 도구 키트에 대한 로그인 지침](https://docs.microsoft.com/java/azure/eclipse/azure-toolkit-for-eclipse-sign-in-instructions)을 사용하여 Azure 계정에 로그인합니다.
 
 1. **Azure Explorer** 보기에서 **Azure** 노드를 확장하고 **Storage 계정**을 마우스 오른쪽 단추로 클릭한 후 **Storage 계정 만들기**를 클릭합니다.
 

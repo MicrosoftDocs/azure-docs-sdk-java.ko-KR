@@ -1,12 +1,12 @@
 ---
-title: "Eclipse용 Azure Explorer를 사용하여 가상 머신 관리"
-description: "Eclipse용 Azure 탐색기를 사용하여 Azure Virtual Machines를 관리하는 방법을 알아봅니다."
-services: 
+title: Eclipse용 Azure Explorer를 사용하여 가상 머신 관리
+description: Eclipse용 Azure 탐색기를 사용하여 Azure Virtual Machines를 관리하는 방법을 알아봅니다.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -14,11 +14,11 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: a02f8d02f8c5c32091dd106e036b636b1d11cff0
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: ec67ed44ec570da7b826c12a9f8a24a5b0170e99
+ms.sourcegitcommit: 3d3460289ab6b9165c2cf6a3dd56eafd0692501e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-eclipse"></a>Eclipse용 Azure Explorer를 사용하여 가상 머신 관리
 
@@ -32,7 +32,7 @@ Eclipse용 Azure 도구 키트의 일부인 Azure Explorer는 Eclipse IDE(통합
 
 Azure Explorer를 사용하여 가상 머신을 만들려면 다음을 수행합니다.
 
-1. [Eclipse용 Azure 도구 키트에 대한 로그인 지침]을 사용하여 Azure 계정에 로그인합니다.
+1. [Eclipse용 Azure 도구 키트에 대한 로그인 지침](https://docs.microsoft.com/java/azure/eclipse/azure-toolkit-for-eclipse-sign-in-instructions)을 사용하여 Azure 계정에 로그인합니다.
 
 1. **Azure Explorer** 보기에서 **Azure** 노드를 확장하고 **Virtual Machines**를 마우스 오른쪽 단추로 클릭한 후 **VM 만들기**를 클릭합니다.
 
@@ -90,11 +90,11 @@ Azure Explorer를 사용하여 가상 머신을 만들려면 다음을 수행합
 
 1. **연결된 리소스** 창에서 다음 정보를 입력합니다.
 
-   * **공용 IP 주소**: 가상 머신에 대한 외부 연결 IP 주소를 지정합니다. 새 IP 주소를 만들도록 선택하거나, 가상 머신에 공용 IP 주소가 없는 경우 **(없음)**을 선택할 수 있습니다.
+   * **공용 IP 주소**: 가상 머신에 대한 외부 연결 IP 주소를 지정합니다. 새 IP 주소를 만들도록 선택하거나, 가상 머신에 공용 IP 주소가 없는 경우 **(없음)** 을 선택할 수 있습니다.
 
-   * **네트워크 보안 그룹**: 가상 머신에 대한 선택적 네트워킹 방화벽을 지정합니다. 기존 방화벽을 선택하거나, 가상 머신에서 네트워크 방화벽을 사용하지 않을 경우 **(없음)**을 선택할 수 있습니다.
+   * **네트워크 보안 그룹**: 가상 머신에 대한 선택적 네트워킹 방화벽을 지정합니다. 기존 방화벽을 선택하거나, 가상 머신에서 네트워크 방화벽을 사용하지 않을 경우 **(없음)** 을 선택할 수 있습니다.
 
-   * **가용성 집합**: 가상 머신이 속할 선택적 가용성 집합을 지정합니다. 기존 가용성 집합을 선택하거나, 새 가용성 집합을 만들거나, 가상 머신이 가용성 집합에 속하지 않을 경우 **(없음)**을 선택할 수 있습니다.
+   * **가용성 집합**: 가상 머신이 속할 선택적 가용성 집합을 지정합니다. 기존 가용성 집합을 선택하거나, 새 가용성 집합을 만들거나, 가상 머신이 가용성 집합에 속하지 않을 경우 **(없음)** 을 선택할 수 있습니다.
 
    ![연결된 리소스 창][CR07]
 
