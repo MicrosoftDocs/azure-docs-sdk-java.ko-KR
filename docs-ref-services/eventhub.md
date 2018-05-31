@@ -11,11 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: event-hub
-ms.openlocfilehash: 076906ff3cafcb4eba97b0a022e5214d7834517c
-ms.sourcegitcommit: 02b70b9f5d34415c337601f0b818f7e0985fd884
+ms.openlocfilehash: b6646ef27edace4247090e749c9a52cd6a33a82c
+ms.sourcegitcommit: 3d3460289ab6b9165c2cf6a3dd56eafd0692501e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34283027"
 ---
 # <a name="azure-event-hub-libraries-for-java"></a>Java용 Azure Event Hub 라이브러리
 
@@ -30,40 +31,44 @@ Azure Event Hubs를 시작하려면 [Java를 사용하여 Azure Event Hubs에서
 
 Event Hubs 클라이언트 라이브러리를 사용하여 Azure Event Hub에 이벤트를 보내고 Event Hub에서 이벤트를 소비하고 처리합니다.
 
-`pom.xml` Maven 파일에 [종속성을 추가](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)하여 프로젝트에서 클라이언트 라이브러리를 사용합니다.  
-
-```XML
-<dependency>
-    <groupId>com.microsoft.azure</groupId>
-    <artifactId>azure-eventhubs</artifactId>
-    <version>0.14.3</version>
-</dependency>
-```   
+`pom.xml` Maven 파일에 [종속성을 추가](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)하여 프로젝트에서 [클라이언트 라이브러리](https://mvnrepository.com/artifact/com.microsoft.azure/azure-eventhubs)를 사용합니다.
+ 
 
 ## <a name="example"></a>예
 
 이벤트 허브에 이벤트를 보냅니다.
 
 ```java
-ConnectionStringBuilder connStr = new ConnectionStringBuilder(namespaceName, eventHubName,sasKeyName, sasKey);
+final ConnectionStringBuilder connStr = new ConnectionStringBuilder()
+                                            .setNamespaceName(namespaceName)
+                                            .setEventHubName(eventHubName)
+                                            .setSasKeyName(sasKeyName)
+                                            .setSasKey(sasKey);
+final EventHubClient ehClient = EventHubClient.createSync(connStr.toString());
 
-byte[] payloadBytes = "Test AMQP message from JMS".getBytes("UTF-8");
-EventData sendEvent = new EventData(payloadBytes);
-EventHubClient ehClient = EventHubClient.createFromConnectionStringSync(connStr.toString());
+final byte[] payloadBytes = "Test AMQP message".getBytes("UTF-8");
+final EventData sendEvent = new EventData(payloadBytes);
+
 ehClient.sendSync(sendEvent);
 ```
 
+
 > [!div class="nextstepaction"]
-> [클라이언트 API 탐색](/java/api/overview/azure/eventhub/client)
+> [클라이언트 API 탐색](/java/api/overview/azure/eventhubs/client)
+
 
 
 ## <a name="samples"></a>샘플
 
-[JMS를 통해 Event Hub에 쓰기 및 Apache Storm에서 읽기][1]
-[하이브리드 .NET/Java 토폴로지를 사용하여 Event Hubs에서 읽기 및 쓰기][2] 
+[샘플을 사용하여 Event Hub 데이터 평면 API 살펴보기][1]
 
-[1]: https://github.com/Azure-Samples/event-hubs-java-storm-sender-jms-receiver
-[2]: https://github.com/Azure-Samples/hdinsight-dotnet-java-storm-eventhub
+[JMS를 통해 Event Hub에 쓰기 및 Apache Storm에서 읽기][2]
+
+[하이브리드 .NET/Java 토폴로지를 사용하여 Event Hubs에서 읽기 및 쓰기][3] 
+
+[1]: https://github.com/Azure/azure-event-hubs/tree/master/samples/Java
+[2]: https://github.com/Azure-Samples/event-hubs-java-storm-sender-jms-receiver
+[3]: https://github.com/Azure-Samples/hdinsight-dotnet-java-storm-eventhub
 
 앱에서 사용할 수 있는 [Azure Event Hubs용 Java 샘플 코드](https://azure.microsoft.com/resources/samples/?platform=java&term=event)를 추가로 탐색합니다.
 
