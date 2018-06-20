@@ -1,12 +1,12 @@
 ---
-title: "IntelliJ용 Azure Explorer를 사용하여 저장소 계정 관리"
-description: "IntelliJ용 Azure 탐색기를 사용하여 Azure Storage 계정을 관리하는 방법을 알아봅니다."
-services: 
+title: IntelliJ용 Azure Explorer를 사용하여 저장소 계정 관리
+description: IntelliJ용 Azure 탐색기를 사용하여 Azure Storage 계정을 관리하는 방법을 알아봅니다.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954844"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-intellij"></a>IntelliJ용 Azure Explorer를 사용하여 저장소 계정 관리
 

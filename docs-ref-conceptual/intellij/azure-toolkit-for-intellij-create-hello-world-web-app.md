@@ -1,11 +1,11 @@
 ---
-title: "IntelliJ를 사용하여 Azure용 Hello World 웹앱 만들기"
-description: "이 자습서에서는 IntelliJ용 Azure 도구 키트를 사용하여 Azure용 Hello World 웹앱을 만드는 방법을 보여 줍니다."
+title: IntelliJ를 사용하여 Azure용 Hello World 웹앱 만들기
+description: 이 자습서에서는 IntelliJ용 Azure 도구 키트를 사용하여 Azure용 Hello World 웹앱을 만드는 방법을 보여 줍니다.
 services: app-service
 documentationcenter: java
 author: selvasingh
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: 75ce7b36-e3ae-491d-8305-4b42ce37db4e
 ms.author: robmcm;asirveda
 ms.date: 02/01/2018
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954194"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-intellij"></a>IntelliJ를 사용하여 Azure용 Hello World 웹앱 만들기
 
@@ -68,7 +69,7 @@ ms.lasthandoff: 02/03/2018
    
    ![인덱스 페이지 열기][open-index-page]
 
-1. IntelliJ에서 index.jsp 파일이 열리면 **Hello World!**를 동적으로 표시하도록 텍스트를 추가합니다. 기존 `<body>` 요소 내. 업데이트된 `<body>` 콘텐츠는 다음 예제와 유사하게 표시됩니다.
+1. IntelliJ에서 index.jsp 파일이 열리면 **Hello World!** 를 동적으로 표시하도록 텍스트를 추가합니다. 기존 `<body>` 요소 내. 업데이트된 `<body>` 콘텐츠는 다음 예제와 유사하게 표시됩니다.
    
    ```java
    <body><b><% out.println("Hello World!"); %></b></body>

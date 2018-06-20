@@ -1,12 +1,12 @@
 ---
-title: "Fabric8 Maven 플러그인을 사용하여 Spring Boot 앱 배포"
-description: "이 자습서에서는 Apache Maven용 Fabric8 플러그인을 사용하여 Microsoft Azure에 Spring Boot 응용 프로그램을 배포하는 단계를 설명합니다."
+title: Fabric8 Maven 플러그인을 사용하여 Spring Boot 앱 배포
+description: 이 자습서에서는 Apache Maven용 Fabric8 플러그인을 사용하여 Microsoft Azure에 Spring Boot 응용 프로그램을 배포하는 단계를 설명합니다.
 services: container-service
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: yuwzho;robmcm
 ms.date: 02/01/2018
 ms.devlang: java
@@ -19,10 +19,11 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954894"
 ---
 # <a name="deploy-a-spring-boot-app-using-the-fabric8-maven-plugin"></a>Fabric8 Maven 플러그인을 사용하여 Spring Boot 앱 배포
 
-**[Fabric8]**은 개발자들이 Linux 컨테이너에서 응용 프로그램을 만들 수 있게 지원하는 **[Kubernetes]** 기반 오픈 소스 솔루션입니다.
+**[Fabric8]** 은 개발자들이 Linux 컨테이너에서 응용 프로그램을 만들 수 있게 지원하는 **[Kubernetes]** 기반 오픈 소스 솔루션입니다.
 
 이 자습서에서는 Maven용 Fabric8 플러그인을 사용하여 [AKS(Azure Container Service)]에서 응용 프로그램을 개발하고 Linux 호스트에 배포하는 방법을 설명합니다.
 

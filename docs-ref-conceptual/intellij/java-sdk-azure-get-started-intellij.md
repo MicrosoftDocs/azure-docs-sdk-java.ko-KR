@@ -1,13 +1,13 @@
 ---
-title: "Intellij를 사용하여 Java용 Azure 시작"
-description: "Azure 구독을 사용하여 Java용 Azure 라이브러리의 기본적인 사용을 시작합니다."
-keywords: "Azure, Java, SDK, API, 인증, 시작"
-services: 
+title: Intellij를 사용하여 Java용 Azure 시작
+description: Azure 구독을 사용하여 Java용 Azure 라이브러리의 기본적인 사용을 시작합니다.
+keywords: Azure, Java, SDK, API, 인증, 시작
+services: ''
 documentationcenter: java
 author: roygara
 manager: timlt
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: v-rogara
 ms.date: 02/01/2018
 ms.devlang: java
@@ -20,6 +20,7 @@ ms.sourcegitcommit: 720c2eaf66532d277015610ec375c71e934d9ee6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/09/2018
+ms.locfileid: "29065500"
 ---
 # <a name="get-started-with-the-azure-libraries-using-intellij"></a>Intellij를 사용하여 Azure 라이브러리 시작
 
@@ -133,7 +134,7 @@ pom.xml을 저장합니다.
 
 [Azure 도구 키트](azure-toolkit-for-intellij-installation.md)는 웹앱이나 API를 프로그래밍 방식으로 설치하지만 현재 다른 개발 유형에는 사용하고 있지 않은 경우에 필요합니다. 다음은 설치 프로세스에 대한 요약입니다. 자세한 절차는 [IntelliJ용 Azure 도구 키트 설치](azure-toolkit-for-intellij-installation.md)를 참조하세요.
 
-**파일** 메뉴를 선택한 다음 **설정...**을 선택합니다. 
+**파일** 메뉴를 선택한 다음 **설정...** 을 선택합니다. 
 
 **저장소 찾아보기...** 를 선택하고 “Azure”를 검색한 다음 **Intellij용 Azure 도구 키트**를 설치합니다.
 

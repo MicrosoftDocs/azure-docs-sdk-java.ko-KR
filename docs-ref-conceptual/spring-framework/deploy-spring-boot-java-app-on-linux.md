@@ -1,12 +1,12 @@
 ---
-title: "Azure Container Service에서 Linux에 Spring Boot Web App 배포"
-description: "이 자습서에서는 Microsoft Azure에서 Linux Web App으로 Spring Boot 응용 프로그램을 배포하는 단계를 설명합니다."
+title: Azure Container Service에서 Linux에 Spring Boot Web App 배포
+description: 이 자습서에서는 Microsoft Azure에서 Linux Web App으로 Spring Boot 응용 프로그램을 배포하는 단계를 설명합니다.
 services: container-service
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: asirveda;robmcm
 ms.date: 02/01/2018
 ms.devlang: java
@@ -20,6 +20,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954754"
 ---
 # <a name="deploy-a-spring-boot-application-on-linux-in-the-azure-container-service"></a>Azure Container Service에서 Linux에 Spring Boot 응용 프로그램 배포
 
@@ -82,7 +83,7 @@ ms.lasthandoff: 02/03/2018
    curl http://localhost
    ```
 
-1. **Hello Docker World!**라는 메시지가 표시되어야 합니다.
+1. **Hello Docker World!** 라는 메시지가 표시되어야 합니다.
 
    ![로컬로 샘플 앱 찾아보기][SB01]
 

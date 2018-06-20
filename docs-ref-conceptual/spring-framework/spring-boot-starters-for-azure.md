@@ -1,12 +1,12 @@
 ---
-title: "Azure용 Spring Boot Starter"
-description: "이 문서에서는 Azure에 사용할 수 있는 다양한 Spring Boot Starter를 설명 합니다."
-services: 
+title: Azure용 Spring Boot Starter
+description: 이 문서에서는 Azure에 사용할 수 있는 다양한 Spring Boot Starter를 설명 합니다.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954444"
 ---
 # <a name="spring-boot-starters-for-azure"></a>Azure용 Spring Boot Starter
 

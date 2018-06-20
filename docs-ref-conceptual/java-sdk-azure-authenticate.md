@@ -17,6 +17,7 @@ ms.sourcegitcommit: 107c3c5ed8c6991c751f95bcaf3757220940df9e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34050730"
 ---
 # <a name="authenticate-with-the-azure-libraries-for-java"></a>Java용 Azure 라이브러리를 사용하여 인증 
 

@@ -1,7 +1,7 @@
 ---
-title: "Java용 Azure 라이브러리 시작"
-description: "Azure 클라우드 리소스를 만들어 연결하여 Java 응용 프로그램에서 사용하는 방법에 대해 알아봅니다."
-keywords: "Azure, Java, SDK, API, 인증, 시작"
+title: Java용 Azure 라이브러리 시작
+description: Azure 클라우드 리소스를 만들어 연결하여 Java 응용 프로그램에서 사용하는 방법에 대해 알아봅니다.
+keywords: Azure, Java, SDK, API, 인증, 시작
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 720c2eaf66532d277015610ec375c71e934d9ee6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/09/2018
+ms.locfileid: "29065530"
 ---
 # <a name="get-started-with-cloud-development-using-the-azure-libraries-for-java"></a>Java용 Azure 라이브러리를 사용한 클라우드 개발 시작
 

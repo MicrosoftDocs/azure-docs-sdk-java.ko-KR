@@ -1,6 +1,6 @@
 ---
-title: "Java를 사용하여 웹앱 배포 구성 | Microsoft Docs"
-description: "Java용 Azure SDK를 사용하여 Git 또는 FTP Azure App Service 배포를 구성하는 Java 샘플 코드"
+title: Java를 사용하여 웹앱 배포 구성 | Microsoft Docs
+description: Java용 Azure SDK를 사용하여 Git 또는 FTP Azure App Service 배포를 구성하는 Java 샘플 코드
 author: rloutlaw
 manager: douge
 ms.assetid: 833e9c78-1e50-4c23-a611-f73a2f0c2983
@@ -14,6 +14,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21931189"
 ---
 # <a name="configure-azure-app-service-deployment-sources-from-your-java-applications"></a>Java 응용 프로그램에서 Azure App Service 배포 원본 구성
 

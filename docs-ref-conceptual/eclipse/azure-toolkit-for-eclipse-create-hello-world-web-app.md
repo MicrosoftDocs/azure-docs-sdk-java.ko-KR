@@ -19,6 +19,7 @@ ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883650"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-eclipse"></a>Eclipse를 사용하여 Azure용 Hello World 웹앱 만들기
 

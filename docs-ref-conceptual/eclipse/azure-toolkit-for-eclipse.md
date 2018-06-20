@@ -1,11 +1,11 @@
 ---
-title: "Eclipse용 Azure 도구 키트"
-description: "Eclipse용 Azure 도구 키트 플러그 인을 통해 클라우드 응용 프로그램을 만들어 Azure에 배포하는 방법에 대해 알아봅니다."
-services: 
+title: Eclipse용 Azure 도구 키트
+description: Eclipse용 Azure 도구 키트 플러그 인을 통해 클라우드 응용 프로그램을 만들어 Azure에 배포하는 방법에 대해 알아봅니다.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: ef2f3839-2549-4471-9b53-0deb7f4c128b
 ms.author: robmcm;asirveda
 ms.date: 02/01/2018
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954214"
 ---
 # <a name="azure-toolkit-for-eclipse"></a>Eclipse용 Azure 도구 키트
 

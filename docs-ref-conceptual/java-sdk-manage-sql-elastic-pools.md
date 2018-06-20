@@ -1,6 +1,6 @@
 ---
-title: "Java를 사용하여 SQL 데이터베이스 탄력적 풀 관리 | Microsoft Docs"
-description: "Java용 Azure SDK를 사용하여 Azure SQL 데이터베이스를 만들고 구성하는 샘플 코드"
+title: Java를 사용하여 SQL 데이터베이스 탄력적 풀 관리 | Microsoft Docs
+description: Java용 Azure SDK를 사용하여 Azure SQL 데이터베이스를 만들고 구성하는 샘플 코드
 author: rloutlaw
 manager: douge
 ms.assetid: 9b461de8-46bc-4650-8e9e-59531f4e2a53
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21931119"
 ---
 # <a name="manage-azure-sql-databases-in-elastic-pools-from-your-java-applications"></a>Java 응용 프로그램에서 탄력적 풀의 Azure SQL 데이터베이스 관리
 

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 8230cf6b15ac51a9f8a209e9b76411a0385029aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34216027"
 ---
 # <a name="azure-sign-in-instructions-for-the-azure-toolkit-for-eclipse"></a>Eclipse용 Azure 도구 키트에 대한 Azure 로그인 지침
 

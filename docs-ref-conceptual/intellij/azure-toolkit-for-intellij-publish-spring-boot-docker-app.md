@@ -1,12 +1,12 @@
 ---
-title: "IntelliJ용 Azure 도구 키트를 사용하여 Spring Boot 앱을 Docker 컨테이너로 게시"
-description: "IntelliJ용 Azure 도구 키트를 사용하여 Docker 컨테이너로 Microsoft Azure에 웹앱을 게시하는 방법을 알아봅니다."
-services: 
+title: IntelliJ용 Azure 도구 키트를 사용하여 Spring Boot 앱을 Docker 컨테이너로 게시
+description: IntelliJ용 Azure 도구 키트를 사용하여 Docker 컨테이너로 Microsoft Azure에 웹앱을 게시하는 방법을 알아봅니다.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954734"
 ---
 # <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>IntelliJ용 Azure 도구 키트를 사용하여 Spring Boot 앱을 Docker 컨테이너로 게시
 
@@ -142,7 +143,7 @@ Spring Boot 앱을 게시하려면 배포 준비된 아티팩트를 만들어야
 
       ![아티팩트 경로 지정][ART04b]
 
-   다. 줄임표 **...**를 클릭하여 기본 클래스를 찾습니다.
+   다. 줄임표 **...** 를 클릭하여 기본 클래스를 찾습니다.
 
       ![기본 클래스 찾기][ART04c]
 

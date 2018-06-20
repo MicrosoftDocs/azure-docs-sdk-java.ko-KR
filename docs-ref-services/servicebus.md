@@ -16,6 +16,7 @@ ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33887763"
 ---
 # <a name="service-bus-libraries-for-java"></a>Java용 Service Bus 라이브러리
 

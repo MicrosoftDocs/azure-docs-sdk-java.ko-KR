@@ -1,12 +1,12 @@
 ---
-title: "Azure App Service로 클라우드에 Spring Boot 응용 프로그램 배포"
-description: "이 자습서는 개발자에게 Azure App Service를 사용하는 클라우드에 Spring Boot 시작하기 웹앱을 배포하는 단계를 안내합니다."
+title: Azure App Service로 클라우드에 Spring Boot 응용 프로그램 배포
+description: 이 자습서는 개발자에게 Azure App Service를 사용하는 클라우드에 Spring Boot 시작하기 웹앱을 배포하는 단계를 안내합니다.
 services: app-service
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: asirveda;robmcm
 ms.date: 02/01/2018
 ms.devlang: java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954526"
 ---
 # <a name="deploy-a-spring-boot-application-to-the-cloud-with-azure-app-service"></a>Azure App Service로 클라우드에 Spring Boot 응용 프로그램 배포
 
@@ -75,7 +76,7 @@ ms.lasthandoff: 02/03/2018
    curl http://localhost:8080
    ```
 
-1. 다음과 같이 **Greetings from Spring Boot!**라는 메시지가 표시됩니다.
+1. 다음과 같이 **Greetings from Spring Boot!** 라는 메시지가 표시됩니다.
 
    ![샘플 앱 찾아보기][SB01]
 
@@ -184,7 +185,7 @@ ms.lasthandoff: 02/03/2018
    curl http://wingtiptoys-springboot.azurewebsites.net/
    ```
 
-1. 다음과 같이 **Greetings from Spring Boot!**라는 메시지가 표시됩니다.
+1. 다음과 같이 **Greetings from Spring Boot!** 라는 메시지가 표시됩니다.
 
    ![샘플 앱 찾아보기][SB02]
 

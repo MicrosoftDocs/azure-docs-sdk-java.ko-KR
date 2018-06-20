@@ -1,7 +1,7 @@
 ---
-title: "Java SQL Database 샘플용 Azure 관리 라이브러리"
-description: "Java용 Azure 관리 라이브러리를 사용하여 Azure SQL 데이터베이스를 만들고 업데이트하기 위한 샘플 코드를 얻습니다."
-keywords: "Azure, Java, SDK, API, Maven, Gradle, SQL 데이터베이스"
+title: Java SQL Database 샘플용 Azure 관리 라이브러리
+description: Java용 Azure 관리 라이브러리를 사용하여 Azure SQL 데이터베이스를 만들고 업데이트하기 위한 샘플 코드를 얻습니다.
+keywords: Azure, Java, SDK, API, Maven, Gradle, SQL 데이터베이스
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21930779"
 ---
 # <a name="azure-management-libraries-for-java-samples-for-sql-database"></a>Java SQL Database 샘플용 Azure 관리 라이브러리
 

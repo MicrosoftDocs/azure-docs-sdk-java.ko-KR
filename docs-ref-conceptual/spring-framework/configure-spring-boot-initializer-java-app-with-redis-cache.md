@@ -1,12 +1,12 @@
 ---
-title: "Azure Redis Cache를 사용하도록 Spring Boot Initializer 앱 구성"
-description: "Spring Initializer를 사용하여 만든 Spring Boot 응용 프로그램을 구성하여 Azure Redis Cache를 사용하여 클라우드에서 Redis를 사용합니다."
+title: Azure Redis Cache를 사용하도록 Spring Boot Initializer 앱 구성
+description: Spring Initializer를 사용하여 만든 Spring Boot 응용 프로그램을 구성하여 Azure Redis Cache를 사용하여 클라우드에서 Redis를 사용합니다.
 services: redis-cache
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm;zhijzhao;yidon
 ms.date: 02/01/2018
 ms.devlang: java
@@ -19,10 +19,11 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954584"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a>Azure Redis Cache를 사용하여 클라우드에서 Redis를 사용하도록 Spring Boot Initializer 앱 구성
 
-이 문서에서는 Azure Portal을 사용하여 클라우드에서 Redis Cache를 만들고, **[Spring Initializr]**를 사용하여 사용자 지정 응용 프로그램을 만든 다음 Redis Cache를 사용하여 데이터를 저장하고 검색하는 Java 웹 응용 프로그램을 만드는 방법을 설명합니다.
+이 문서에서는 Azure Portal을 사용하여 클라우드에서 Redis Cache를 만들고, **[Spring Initializr]** 를 사용하여 사용자 지정 응용 프로그램을 만든 다음 Redis Cache를 사용하여 데이터를 저장하고 검색하는 Java 웹 응용 프로그램을 만드는 방법을 설명합니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -207,7 +208,7 @@ Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 
 
 Azure에서 Java로 Redis Cache를 시작하는 방법에 대한 자세한 내용은 [Java에서 Azure Redis Cache를 사용하는 방법][Redis Cache with Java]을 참조하세요.
 
-**[Spring Framework]**는 Java 개발자가 엔터프라이즈 수준의 응용 프로그램을 만드는 데 도움이 되는 오픈 소스 솔루션입니다. 해당 플랫폼을 기반으로 하여 빌드되는 인기 있는 프로젝트 중 하나가 [Spring Boot]입니다. 이 프로젝트는 독립 실행형 Java 응용 프로그램을 만드는 간단한 방법을 제공합니다. Spring Boot을 시작하는 개발자를 도우려면 <https://github.com/spring-guides/>에서 몇 가지 샘플 Spring Boot 패키지를 사용할 있습니다. 기본 Spring Boot 프로젝트 목록에서 선택하는 것 외에도 **[Spring Initializr]**를 통해 사용자 지정 Spring Boot 응용 프로그램을 만들기 시작하는 개발자에게 도움을 줍니다.
+**[Spring Framework]** 는 Java 개발자가 엔터프라이즈 수준의 응용 프로그램을 만드는 데 도움이 되는 오픈 소스 솔루션입니다. 해당 플랫폼을 기반으로 하여 빌드되는 인기 있는 프로젝트 중 하나가 [Spring Boot]입니다. 이 프로젝트는 독립 실행형 Java 응용 프로그램을 만드는 간단한 방법을 제공합니다. Spring Boot을 시작하는 개발자를 도우려면 <https://github.com/spring-guides/>에서 몇 가지 샘플 Spring Boot 패키지를 사용할 있습니다. 기본 Spring Boot 프로젝트 목록에서 선택하는 것 외에도 **[Spring Initializr]** 를 통해 사용자 지정 Spring Boot 응용 프로그램을 만들기 시작하는 개발자에게 도움을 줍니다.
 
 <!-- URL List -->
 

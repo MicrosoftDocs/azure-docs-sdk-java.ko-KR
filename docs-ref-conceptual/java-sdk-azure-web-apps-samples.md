@@ -1,7 +1,7 @@
 ---
-title: "Java 웹앱 샘플용 Azure 관리 라이브러리"
-description: "Java용 Azure 관리 라이브러리를 사용하여 App Service에서 호스팅되는 Azure 웹앱을 만들고 업데이트하기 위한 샘플 코드를 얻습니다."
-keywords: "Azure, Java, SDK, API, Maven, Gradle, 웹앱, App Service"
+title: Java 웹앱 샘플용 Azure 관리 라이브러리
+description: Java용 Azure 관리 라이브러리를 사용하여 App Service에서 호스팅되는 Azure 웹앱을 만들고 업데이트하기 위한 샘플 코드를 얻습니다.
+keywords: Azure, Java, SDK, API, Maven, Gradle, 웹앱, App Service
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21930899"
 ---
 # <a name="azure-management-libraries-for-java-samples-for-web-apps"></a>Java 웹앱 샘플용 Azure 관리 라이브러리
 

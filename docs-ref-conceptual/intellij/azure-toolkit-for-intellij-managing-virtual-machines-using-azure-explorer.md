@@ -1,12 +1,12 @@
 ---
-title: "IntelliJ용 Azure Explorer를 사용하여 Virtual Machines 관리"
-description: "IntelliJ용 Azure 탐색기를 사용하여 Azure 가상 머신을 관리하는 방법을 알아봅니다."
-services: 
+title: IntelliJ용 Azure Explorer를 사용하여 Virtual Machines 관리
+description: IntelliJ용 Azure 탐색기를 사용하여 Azure 가상 머신을 관리하는 방법을 알아봅니다.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954874"
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-intellij"></a>IntelliJ용 Azure Explorer를 사용하여 Virtual Machines 관리
 
@@ -93,11 +94,11 @@ Azure Explorer를 사용하여 가상 머신을 만들려면 다음을 수행합
 
       ![Virtual Network 만들기 대화 상자][CR06]
 
-   * **공용 IP 주소**: 가상 머신에 대한 외부 연결 IP 주소를 지정합니다. 새 IP 주소를 만들도록 선택하거나, 가상 머신에 공용 IP 주소가 없는 경우 **(없음)**을 선택할 수 있습니다. 
+   * **공용 IP 주소**: 가상 머신에 대한 외부 연결 IP 주소를 지정합니다. 새 IP 주소를 만들도록 선택하거나, 가상 머신에 공용 IP 주소가 없는 경우 **(없음)** 을 선택할 수 있습니다. 
 
-   * **네트워크 보안 그룹**: 가상 머신에 대한 선택적 네트워킹 방화벽을 지정합니다. 기존 방화벽을 선택하거나, 가상 머신에서 네트워크 방화벽을 사용하지 않을 경우 **(없음)**을 선택할 수 있습니다. 
+   * **네트워크 보안 그룹**: 가상 머신에 대한 선택적 네트워킹 방화벽을 지정합니다. 기존 방화벽을 선택하거나, 가상 머신에서 네트워크 방화벽을 사용하지 않을 경우 **(없음)** 을 선택할 수 있습니다. 
 
-   * **가용성 집합**: 가상 머신이 속할 선택적 가용성 집합을 지정합니다. 기존 가용성 집합을 선택하거나, 새 가용성 집합을 만들거나, 가상 머신이 가용성 집합에 속하지 않을 경우 **(없음)**을 선택할 수 있습니다.
+   * **가용성 집합**: 가상 머신이 속할 선택적 가용성 집합을 지정합니다. 기존 가용성 집합을 선택하거나, 새 가용성 집합을 만들거나, 가상 머신이 가용성 집합에 속하지 않을 경우 **(없음)** 을 선택할 수 있습니다.
 
 9. **Finish**를 클릭합니다.  
     새 가상 머신이 Azure Explorer 도구 창에 나타납니다. 

@@ -1,11 +1,11 @@
 ---
-title: "IntelliJ용 Azure 도구 키트"
-description: "IntelliJ용 Azure 도구 키트에 대해 알아봅니다."
-services: 
+title: IntelliJ용 Azure 도구 키트
+description: IntelliJ용 Azure 도구 키트에 대해 알아봅니다.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: 115a095d-1b70-41d6-adb4-78f24b2a4451
 ms.author: robmcm;asirveda
 ms.date: 02/01/2018
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954794"
 ---
 # <a name="azure-toolkit-for-intellij"></a>IntelliJ용 Azure 도구 키트
 IntelliJ용 Azure 도구 키트는 IntelliJ IDE(통합 개발 환경)에서 Azure 응용 프로그램을 쉽게 작성, 개발, 테스트 및 배포할 수 있는 템플릿과 기능을 제공합니다.

@@ -1,7 +1,7 @@
 ---
-title: "Java용 Azure 관리 라이브러리 릴리스 정보 | Microsoft Docs"
-description: "Java용 Azure 관리 라이브러리에 대한 새 기능과 주요 변경 내용을 확인합니다."
-keywords: "Azure, Java, API, 참조, 정보, 업데이트, 사용 중단"
+title: Java용 Azure 관리 라이브러리 릴리스 정보 | Microsoft Docs
+description: Java용 Azure 관리 라이브러리에 대한 새 기능과 주요 변경 내용을 확인합니다.
+keywords: Azure, Java, API, 참조, 정보, 업데이트, 사용 중단
 author: routlaw
 manager: douge
 ms.assetid: 1f128cf9-f747-4344-84e1-f9964709deb8
@@ -15,6 +15,7 @@ ms.sourcegitcommit: acc83bb537d77568b2a5427479d6354d6ae30885
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/03/2017
+ms.locfileid: "23982165"
 ---
 # <a name="release-notes"></a>릴리스 정보 
 
