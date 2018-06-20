@@ -19,6 +19,7 @@ ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31823806"
 ---
 # <a name="how-to-use-the-spring-boot-starter-with-the-azure-cosmos-db-sql-api"></a><span data-ttu-id="e8cd3-103">Azure Cosmos DB SQL API에서 Spring Boot Starter를 사용하는 방법</span><span class="sxs-lookup"><span data-stu-id="e8cd3-103">How to use the Spring Boot Starter with the Azure Cosmos DB SQL API</span></span>
 

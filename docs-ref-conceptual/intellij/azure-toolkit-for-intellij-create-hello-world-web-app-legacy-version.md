@@ -1,12 +1,12 @@
 ---
-title: "레거시 IntelliJ용 도구 키트를 사용하여 Azure용 Hello World 웹앱 만들기"
-description: "이 자습서에서는 IntelliJ용 Azure 도구 키트 버전 3.0.6 이하를 사용하여 Azure용 Hello World 웹앱을 만드는 방법을 보여 줍니다."
+title: 레거시 IntelliJ용 도구 키트를 사용하여 Azure용 Hello World 웹앱 만들기
+description: 이 자습서에서는 IntelliJ용 Azure 도구 키트 버전 3.0.6 이하를 사용하여 Azure용 Hello World 웹앱을 만드는 방법을 보여 줍니다.
 services: app-service
 documentationcenter: java
 author: selvasingh
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm;asirveda
 ms.date: 02/01/2018
 ms.devlang: java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954784"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-intellij"></a><span data-ttu-id="ef534-103">레거시 IntelliJ용 도구 키트를 사용하여 Azure용 Hello World 웹앱 만들기</span><span class="sxs-lookup"><span data-stu-id="ef534-103">Create a Hello World web app for Azure using the legacy toolkit for IntelliJ</span></span>
 
@@ -64,7 +65,7 @@ ms.lasthandoff: 02/03/2018
    
    ![인덱스 페이지 열기][05c]
 
-6. <span data-ttu-id="ef534-124">IntelliJ에서 index.jsp 파일이 열리면 **Hello World!**를 동적으로 표시하도록 텍스트를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="ef534-124">When your index.jsp file opens in IntelliJ, add in text to dynamically display **Hello World!**</span></span> <span data-ttu-id="ef534-125">기존 `<body>` 요소 내.</span><span class="sxs-lookup"><span data-stu-id="ef534-125">within the existing `<body>` element.</span></span> <span data-ttu-id="ef534-126">업데이트된 `<body>` 콘텐츠는 다음 예제와 유사하게 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="ef534-126">Your updated `<body>` content should resemble the following example:</span></span>
+6. <span data-ttu-id="ef534-124">IntelliJ에서 index.jsp 파일이 열리면 **Hello World!** 를 동적으로 표시하도록 텍스트를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="ef534-124">When your index.jsp file opens in IntelliJ, add in text to dynamically display **Hello World!**</span></span> <span data-ttu-id="ef534-125">기존 `<body>` 요소 내.</span><span class="sxs-lookup"><span data-stu-id="ef534-125">within the existing `<body>` element.</span></span> <span data-ttu-id="ef534-126">업데이트된 `<body>` 콘텐츠는 다음 예제와 유사하게 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="ef534-126">Your updated `<body>` content should resemble the following example:</span></span>
    
    ```java
    <body><b><% out.println("Hello World!"); %></b></body>
@@ -96,7 +97,7 @@ ms.lasthandoff: 02/03/2018
 
 <span data-ttu-id="ef534-148">모듈 설정을 구성한 경우 다음 단계를 사용하여 Azure에 응용 프로그램을 게시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ef534-148">When you have configured your module settings, you can publish your application to Azure by using the following steps:</span></span>
 
-1. <span data-ttu-id="ef534-149">IntelliJ의 Project Explorer에서 **Java-Web-App-On-Azure** 프로젝트를 마우스 오른쪽 단추로 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="ef534-149">In IntelliJ's Project Explorer, right-click the **Java-Web-App-On-Azure** project.</span></span> <span data-ttu-id="ef534-150">상황에 맞는 메뉴가 나타나면 **Azure**를 선택한 다음 **Azure 웹앱으로 게시...**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="ef534-150">When the context menu appears, select **Azure**, and then click **Publish as Azure Web App...**</span></span>
+1. <span data-ttu-id="ef534-149">IntelliJ의 Project Explorer에서 **Java-Web-App-On-Azure** 프로젝트를 마우스 오른쪽 단추로 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="ef534-149">In IntelliJ's Project Explorer, right-click the **Java-Web-App-On-Azure** project.</span></span> <span data-ttu-id="ef534-150">상황에 맞는 메뉴가 나타나면 **Azure**를 선택한 다음 **Azure 웹앱으로 게시...** 를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="ef534-150">When the context menu appears, select **Azure**, and then click **Publish as Azure Web App...**</span></span>
    
    ![Azure 게시 상황에 맞는 메뉴][06]
 
@@ -134,7 +135,7 @@ ms.lasthandoff: 02/03/2018
       
       <span data-ttu-id="ef534-181">기존 리소스 그룹(있는 경우)을 선택하고 아래 g 단계로 건너뛰거나 다음 단계를 통해 새 리소스 그룹을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ef534-181">You can select an existing Resource Group (if you have any) and skip to step g below, or use the following steps to create a new Resource Group:</span></span>
       
-      * <span data-ttu-id="ef534-182">**리소스 그룹** 드롭다운 메뉴에서 **&lt;&lt;새 리소스 그룹 만들기&gt;&gt;**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="ef534-182">Select **&lt;&lt; Create new Resource Group &gt;&gt;** in the **Resource Group** drop-down menu.</span></span>
+      * <span data-ttu-id="ef534-182">**리소스 그룹** 드롭다운 메뉴에서 **&lt;&lt;새 리소스 그룹 만들기&gt;&gt;** 를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="ef534-182">Select **&lt;&lt; Create new Resource Group &gt;&gt;** in the **Resource Group** drop-down menu.</span></span>
       * <span data-ttu-id="ef534-183">**새 리소스 그룹** 대화 상자가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="ef534-183">The **New Resource Group** dialog box will be displayed:</span></span>
         
          ![새 리소스 그룹][12]
@@ -147,7 +148,7 @@ ms.lasthandoff: 02/03/2018
       
       <span data-ttu-id="ef534-192">기존 App Service 계획(있는 경우)을 선택하고 아래 h 단계로 건너뛰거나 다음 단계를 통해 새 App Service 계획을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ef534-192">You can select an existing App Service Plan (if you have any) and skip to step h below, or use the following steps to create a new App Service Plan:</span></span>
       
-      * <span data-ttu-id="ef534-193">**App Service 계획** 드롭다운 메뉴에서 **&lt;&lt;새 App Service 계획 만들기&gt;&gt;**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="ef534-193">Select **&lt;&lt; Create new App Service Plan &gt;&gt;** in the **App Service Plan** drop-down menu.</span></span>
+      * <span data-ttu-id="ef534-193">**App Service 계획** 드롭다운 메뉴에서 **&lt;&lt;새 App Service 계획 만들기&gt;&gt;** 를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="ef534-193">Select **&lt;&lt; Create new App Service Plan &gt;&gt;** in the **App Service Plan** drop-down menu.</span></span>
       * <span data-ttu-id="ef534-194">**새 App Service 계획** 대화 상자가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="ef534-194">The **New App Service Plan** dialog box will be displayed:</span></span>
         
          ![새 App Service 계획][13]
@@ -212,7 +213,7 @@ ms.lasthandoff: 02/03/2018
 <span data-ttu-id="ef534-242">두 경우 모두 프로세스는 동일하며 몇 초만 소요됩니다.</span><span class="sxs-lookup"><span data-stu-id="ef534-242">In either case, the process is identical and takes only a few seconds:</span></span>
 
 1. <span data-ttu-id="ef534-243">IntelliJ Project Explorer에서 업데이트하거나 기존 웹앱 컨테이너에 추가할 Java 응용 프로그램을 마우스 오른쪽 단추로 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="ef534-243">In the IntelliJ project explorer, right-click the Java application you want to update or add to an existing Web App Container.</span></span>
-2. <span data-ttu-id="ef534-244">상황에 맞는 메뉴가 나타나면 **Azure**를 선택한 다음 **Azure 웹앱으로 게시...**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="ef534-244">When the context menu appears, select **Azure** and then **Publish as Azure Web App...**</span></span>
+2. <span data-ttu-id="ef534-244">상황에 맞는 메뉴가 나타나면 **Azure**를 선택한 다음 **Azure 웹앱으로 게시...** 를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="ef534-244">When the context menu appears, select **Azure** and then **Publish as Azure Web App...**</span></span>
 3. <span data-ttu-id="ef534-245">이전에 이미 로그인했으므로 기존 웹앱 컨테이너 목록이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="ef534-245">Since you have already logged in previously, you will see a list of your existing Web App containers.</span></span> <span data-ttu-id="ef534-246">Java 응용 프로그램을 게시하거나 다시 게시할 컨테이너를 선택하고 **확인**을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="ef534-246">Select the one you want to publish or re-publish your Java application to and click **OK**.</span></span>
 
 <span data-ttu-id="ef534-247">몇 초 후 **Azure 동작 로그** 보기에 업데이트된 배포가 **게시됨**으로 표시되고, 웹 브라우저에서 업데이트된 응용 프로그램을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ef534-247">A few seconds later, the **Azure Activity Log** view will show your updated deployment as **Published** and you will be able to verify your updated application in a web browser.</span></span>
@@ -241,9 +242,12 @@ ms.lasthandoff: 02/03/2018
 <!-- URL List -->
 
 [IntelliJ용 Azure 도구 키트]: azure-toolkit-for-intellij.md
+[Azure Toolkit for IntelliJ]: azure-toolkit-for-intellij.md
 [Eclipse용 Azure 도구 키트]: ../eclipse/azure-toolkit-for-eclipse.md
+[Azure Toolkit for Eclipse]: ../eclipse/azure-toolkit-for-eclipse.md
 [eclipse-hello-world]: ../eclipse/azure-toolkit-for-eclipse-create-hello-world-web-app.md
 [Web Apps 개요]: /azure/app-service/app-service-web-overview
+[Web Apps Overview]: /azure/app-service/app-service-web-overview
 [Apache Tomcat]: http://tomcat.apache.org/
 [Jetty]: http://www.eclipse.org/jetty/
 [Updated Version]: azure-toolkit-for-intellij-create-hello-world-web-app.md

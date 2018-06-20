@@ -1,6 +1,6 @@
 ---
-title: "Azure Java 개발자용 도구 | Microsoft Docs"
-description: "Azure에서 작업하는 Java 개발자를 위한 IDE 통합, 에뮬레이터, 리소스 탐색기 및 명령줄 인터페이스입니다."
+title: Azure Java 개발자용 도구 | Microsoft Docs
+description: Azure에서 작업하는 Java 개발자를 위한 IDE 통합, 에뮬레이터, 리소스 탐색기 및 명령줄 인터페이스입니다.
 author: rloutlaw
 manager: douge
 ms.assetid: b55923b7-d60a-460d-b77c-af5fac67f1cc
@@ -15,6 +15,7 @@ ms.sourcegitcommit: f0dadb22efb191182c3b79dcaa97a76cfcdcc324
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/05/2017
+ms.locfileid: "26288312"
 ---
 # <a name="azure-tools-for-java-developers"></a><span data-ttu-id="ca860-103">Java 개발자용 Azure 도구</span><span class="sxs-lookup"><span data-stu-id="ca860-103">Azure tools for Java developers</span></span>
 

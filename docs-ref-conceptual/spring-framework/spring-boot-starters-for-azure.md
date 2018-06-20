@@ -1,12 +1,12 @@
 ---
-title: "Azure용 Spring Boot Starter"
-description: "이 문서에서는 Azure에 사용할 수 있는 다양한 Spring Boot Starter를 설명 합니다."
-services: 
+title: Azure용 Spring Boot Starter
+description: 이 문서에서는 Azure에 사용할 수 있는 다양한 Spring Boot Starter를 설명 합니다.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954444"
 ---
 # <a name="spring-boot-starters-for-azure"></a><span data-ttu-id="1693d-103">Azure용 Spring Boot Starter</span><span class="sxs-lookup"><span data-stu-id="1693d-103">Spring Boot Starters for Azure</span></span>
 
@@ -237,9 +238,12 @@ ms.lasthandoff: 02/03/2018
 <!-- URL List -->
 
 [Java 개발자용 Azure]: https://docs.microsoft.com/java/azure/
+[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
 [Visual Studio Team Services용 Java 도구]: https://java.visualstudio.com/
+[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Azure의 Spring]: https://docs.microsoft.com/java/azure/spring-framework/
+[Spring on Azure]: https://docs.microsoft.com/java/azure/spring-framework/
 [Spring Framework]: https://spring.io/
 [Spring Initializr]: https://start.spring.io/
 

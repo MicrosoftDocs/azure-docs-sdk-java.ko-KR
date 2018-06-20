@@ -1,6 +1,6 @@
 ---
-title: "지역 간에 동시에 VM 만들기 | Microsoft Docs"
-description: "Java용 Azure SDK를 사용하여 여러 Azure 지역 간에 동시에 가상 컴퓨터를 만드는 샘플 코드"
+title: 지역 간에 동시에 VM 만들기 | Microsoft Docs
+description: Java용 Azure SDK를 사용하여 여러 Azure 지역 간에 동시에 가상 컴퓨터를 만드는 샘플 코드
 author: rloutlaw
 manager: douge
 ms.assetid: e5a36699-2d96-4571-84f9-a6af13f3c067
@@ -14,6 +14,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21931199"
 ---
 # <a name="create-virtual-machines-across-multiple-regions-from-your-java-applications"></a><span data-ttu-id="39b43-103">Java 응용 프로그램에서 여러 지역에 가상 컴퓨터 만들기</span><span class="sxs-lookup"><span data-stu-id="39b43-103">Create virtual machines across multiple regions from your Java applications</span></span>
 

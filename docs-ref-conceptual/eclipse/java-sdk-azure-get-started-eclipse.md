@@ -1,12 +1,12 @@
 ---
-title: "Eclipse를 사용하여 Java용 Azure 시작"
-description: "Azure 구독을 사용하여 Java용 Azure 라이브러리의 기본적인 사용을 시작합니다."
-keywords: "Azure, Java, SDK, API, 인증, 시작"
-services: 
+title: Eclipse를 사용하여 Java용 Azure 시작
+description: Azure 구독을 사용하여 Java용 Azure 라이브러리의 기본적인 사용을 시작합니다.
+keywords: Azure, Java, SDK, API, 인증, 시작
+services: ''
 documentationcenter: java
 author: roygara
 manager: timlt
-editor: 
+editor: ''
 ms.author: v-rogara
 ms.date: 02/01/2018
 ms.devlang: java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 720c2eaf66532d277015610ec375c71e934d9ee6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/09/2018
+ms.locfileid: "29065520"
 ---
 # <a name="get-started-with-the-azure-libraries-using-eclipse"></a><span data-ttu-id="9c63b-104">Eclipse를 사용하여 Azure 라이브러리 시작</span><span class="sxs-lookup"><span data-stu-id="9c63b-104">Get started with the Azure libraries using Eclipse</span></span>
 

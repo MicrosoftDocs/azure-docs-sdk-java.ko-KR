@@ -1,6 +1,6 @@
 ---
-title: "Java를 사용하여 Azure 저장소 계정 관리 | Microsoft Docs"
-description: "Java용 Azure SDK를 사용하여 Azure 저장소 계정을 관리하는 샘플 코드"
+title: Java를 사용하여 Azure 저장소 계정 관리 | Microsoft Docs
+description: Java용 Azure SDK를 사용하여 Azure 저장소 계정을 관리하는 샘플 코드
 author: rloutlaw
 manager: douge
 ms.assetid: 49be8b66-3b56-4c10-8f14-9d326d815cb4
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21931059"
 ---
 # <a name="manage-azure-storage-accounts-from-your-java-applications"></a><span data-ttu-id="a31c7-103">Java 응용 프로그램에서 Azure 저장소 계정 관리</span><span class="sxs-lookup"><span data-stu-id="a31c7-103">Manage Azure storage accounts from your Java applications</span></span>
 

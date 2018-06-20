@@ -1,11 +1,11 @@
 ---
-title: "Eclipse용 Azure 도구 키트의 새로운 기능"
-description: "Eclipse용 Azure 도구 키트의 최신 기능에 대해 알아봅니다."
-services: 
+title: Eclipse용 Azure 도구 키트의 새로운 기능
+description: Eclipse용 Azure 도구 키트의 최신 기능에 대해 알아봅니다.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: 16b066ea-aae7-4c30-9a12-fa0c3711b93e
 ms.author: robmcm;asirveda;martinsawicki
 ms.date: 02/01/2018
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954674"
 ---
 # <a name="whats-new-in-the-azure-toolkit-for-eclipse"></a><span data-ttu-id="498f8-103">Eclipse용 Azure 도구 키트의 새로운 기능</span><span class="sxs-lookup"><span data-stu-id="498f8-103">What's new in the Azure Toolkit for Eclipse</span></span>
 
@@ -320,6 +321,7 @@ Azure Plugin for Eclipse - December 2011 CTP has released. New features include:
 <!-- URL List -->
 
 [IntelliJ용 Azure 도구 키트]: ../intellij/azure-toolkit-for-intellij.md
+[Azure Toolkit for IntelliJ]: ../intellij/azure-toolkit-for-intellij.md
 [Installing the Azure Toolkit for Eclipse]: azure-toolkit-for-eclipse-installation.md
 
 [Azure Sign In Instructions for the Azure Toolkit for Eclipse]: azure-toolkit-for-eclipse-sign-in-instructions.md

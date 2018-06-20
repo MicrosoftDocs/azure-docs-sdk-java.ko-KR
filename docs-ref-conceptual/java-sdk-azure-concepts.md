@@ -1,7 +1,7 @@
 ---
-title: "Java 개발자용 Azure 관리 라이브 가이드"
-description: "Azure에서 클라우드 리소스를 관리하기 위해 Java용 Java 관리 라이브러리를 사용하기 위한 패턴 및 개념입니다."
-keywords: "Azure, Java, SDK, API, Maven, Gradle, 인증, Active Directory, 서비스 사용자"
+title: Java 개발자용 Azure 관리 라이브 가이드
+description: Azure에서 클라우드 리소스를 관리하기 위해 Java용 Java 관리 라이브러리를 사용하기 위한 패턴 및 개념입니다.
+keywords: Azure, Java, SDK, API, Maven, Gradle, 인증, Active Directory, 서비스 사용자
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 1f6a80e067a8bdbbb4b2da2e2145fda73d5fe65a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/05/2017
+ms.locfileid: "26184647"
 ---
 # <a name="patterns-and-best-practices-for-development-with-the-azure-libraries-for-java"></a><span data-ttu-id="245cf-104">Java용 Azure 라이브러리를 통한 개발 패턴 및 모범 사례</span><span class="sxs-lookup"><span data-stu-id="245cf-104">Patterns and best practices for development with the Azure libraries for Java</span></span> 
 

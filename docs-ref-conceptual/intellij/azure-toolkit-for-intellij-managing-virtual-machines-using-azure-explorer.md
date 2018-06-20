@@ -1,12 +1,12 @@
 ---
-title: "IntelliJ용 Azure Explorer를 사용하여 Virtual Machines 관리"
-description: "IntelliJ용 Azure 탐색기를 사용하여 Azure 가상 머신을 관리하는 방법을 알아봅니다."
-services: 
+title: IntelliJ용 Azure Explorer를 사용하여 Virtual Machines 관리
+description: IntelliJ용 Azure 탐색기를 사용하여 Azure 가상 머신을 관리하는 방법을 알아봅니다.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954874"
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-intellij"></a><span data-ttu-id="c28fe-103">IntelliJ용 Azure Explorer를 사용하여 Virtual Machines 관리</span><span class="sxs-lookup"><span data-stu-id="c28fe-103">Manage virtual machines by using the Azure Explorer for IntelliJ</span></span>
 
@@ -93,11 +94,11 @@ ms.lasthandoff: 02/03/2018
 
       ![Virtual Network 만들기 대화 상자][CR06]
 
-   * <span data-ttu-id="c28fe-144">**공용 IP 주소**: 가상 머신에 대한 외부 연결 IP 주소를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="c28fe-144">**Public IP address**: Specifies an external-facing IP address for your virtual machine.</span></span> <span data-ttu-id="c28fe-145">새 IP 주소를 만들도록 선택하거나, 가상 머신에 공용 IP 주소가 없는 경우 **(없음)**을 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c28fe-145">You can choose to create a new IP address or, if your virtual machine will not have a public IP address, you can select **(None)**.</span></span> 
+   * <span data-ttu-id="c28fe-144">**공용 IP 주소**: 가상 머신에 대한 외부 연결 IP 주소를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="c28fe-144">**Public IP address**: Specifies an external-facing IP address for your virtual machine.</span></span> <span data-ttu-id="c28fe-145">새 IP 주소를 만들도록 선택하거나, 가상 머신에 공용 IP 주소가 없는 경우 **(없음)** 을 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c28fe-145">You can choose to create a new IP address or, if your virtual machine will not have a public IP address, you can select **(None)**.</span></span> 
 
-   * <span data-ttu-id="c28fe-146">**네트워크 보안 그룹**: 가상 머신에 대한 선택적 네트워킹 방화벽을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="c28fe-146">**Network security group**: Specifies an optional networking firewall for your virtual machine.</span></span> <span data-ttu-id="c28fe-147">기존 방화벽을 선택하거나, 가상 머신에서 네트워크 방화벽을 사용하지 않을 경우 **(없음)**을 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c28fe-147">You can select an existing firewall or, if your virtual machine will not use a network firewall, you can select **(None)**.</span></span> 
+   * <span data-ttu-id="c28fe-146">**네트워크 보안 그룹**: 가상 머신에 대한 선택적 네트워킹 방화벽을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="c28fe-146">**Network security group**: Specifies an optional networking firewall for your virtual machine.</span></span> <span data-ttu-id="c28fe-147">기존 방화벽을 선택하거나, 가상 머신에서 네트워크 방화벽을 사용하지 않을 경우 **(없음)** 을 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c28fe-147">You can select an existing firewall or, if your virtual machine will not use a network firewall, you can select **(None)**.</span></span> 
 
-   * <span data-ttu-id="c28fe-148">**가용성 집합**: 가상 머신이 속할 선택적 가용성 집합을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="c28fe-148">**Availability set**: Specifies an optional availability set that your virtual machine can belong to.</span></span> <span data-ttu-id="c28fe-149">기존 가용성 집합을 선택하거나, 새 가용성 집합을 만들거나, 가상 머신이 가용성 집합에 속하지 않을 경우 **(없음)**을 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c28fe-149">You can select an existing availability set, create a new availability set or, if your virtual machine will not belong to an availability set, select **(None)**.</span></span>
+   * <span data-ttu-id="c28fe-148">**가용성 집합**: 가상 머신이 속할 선택적 가용성 집합을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="c28fe-148">**Availability set**: Specifies an optional availability set that your virtual machine can belong to.</span></span> <span data-ttu-id="c28fe-149">기존 가용성 집합을 선택하거나, 새 가용성 집합을 만들거나, 가상 머신이 가용성 집합에 속하지 않을 경우 **(없음)** 을 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c28fe-149">You can select an existing availability set, create a new availability set or, if your virtual machine will not belong to an availability set, select **(None)**.</span></span>
 
 9. <span data-ttu-id="c28fe-150">**Finish**를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="c28fe-150">Click **Finish**.</span></span>  
     <span data-ttu-id="c28fe-151">새 가상 머신이 Azure Explorer 도구 창에 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="c28fe-151">Your new virtual machine appears in the Azure Explorer tool window.</span></span> 
@@ -156,10 +157,15 @@ ms.lasthandoff: 02/03/2018
 <!-- URL List -->
 
 [IntelliJ용 Azure 도구 키트에 대한 로그인 지침]: ./azure-toolkit-for-intellij-sign-in-instructions.md
+[Sign-in instructions for the Azure Toolkit for IntelliJ]: ./azure-toolkit-for-intellij-sign-in-instructions.md
 [Azure에서 Windows 가상 머신에 대한 크기]: /azure/virtual-machines/virtual-machines-windows-sizes
+[Sizes for Windows virtual machines in Azure]: /azure/virtual-machines/virtual-machines-windows-sizes
 [Azure에서 Linux 가상 머신에 대한 크기]: /azure/virtual-machines/virtual-machines-linux-sizes
+[Sizes for Linux virtual machines in Azure]: /azure/virtual-machines/virtual-machines-linux-sizes
 [Windows 가상 컴퓨터 가격 책정]: /pricing/details/virtual-machines/windows/
+[Windows virtual-machine pricing]: /pricing/details/virtual-machines/windows/
 [Linux 가상 컴퓨터 가격 책정]: /pricing/details/virtual-machines/linux/
+[Linux virtual-machine pricing]: /pricing/details/virtual-machines/linux/
 
 <!-- IMG List -->
 

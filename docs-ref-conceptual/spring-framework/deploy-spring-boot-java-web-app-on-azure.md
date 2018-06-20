@@ -1,12 +1,12 @@
 ---
-title: "Azure App Service로 클라우드에 Spring Boot 응용 프로그램 배포"
-description: "이 자습서는 개발자에게 Azure App Service를 사용하는 클라우드에 Spring Boot 시작하기 웹앱을 배포하는 단계를 안내합니다."
+title: Azure App Service로 클라우드에 Spring Boot 응용 프로그램 배포
+description: 이 자습서는 개발자에게 Azure App Service를 사용하는 클라우드에 Spring Boot 시작하기 웹앱을 배포하는 단계를 안내합니다.
 services: app-service
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: asirveda;robmcm
 ms.date: 02/01/2018
 ms.devlang: java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954526"
 ---
 # <a name="deploy-a-spring-boot-application-to-the-cloud-with-azure-app-service"></a><span data-ttu-id="64ca1-103">Azure App Service로 클라우드에 Spring Boot 응용 프로그램 배포</span><span class="sxs-lookup"><span data-stu-id="64ca1-103">Deploy a Spring Boot application to the cloud with Azure App Service</span></span>
 
@@ -75,7 +76,7 @@ ms.lasthandoff: 02/03/2018
    curl http://localhost:8080
    ```
 
-1. <span data-ttu-id="64ca1-120">다음과 같이 **Greetings from Spring Boot!**라는 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="64ca1-120">You should see the following message displayed: **Greetings from Spring Boot!**</span></span>
+1. <span data-ttu-id="64ca1-120">다음과 같이 **Greetings from Spring Boot!** 라는 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="64ca1-120">You should see the following message displayed: **Greetings from Spring Boot!**</span></span>
 
    ![샘플 앱 찾아보기][SB01]
 
@@ -184,7 +185,7 @@ ms.lasthandoff: 02/03/2018
    curl http://wingtiptoys-springboot.azurewebsites.net/
    ```
 
-1. <span data-ttu-id="64ca1-174">다음과 같이 **Greetings from Spring Boot!**라는 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="64ca1-174">You should see the following message displayed: **Greetings from Spring Boot!**</span></span>
+1. <span data-ttu-id="64ca1-174">다음과 같이 **Greetings from Spring Boot!** 라는 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="64ca1-174">You should see the following message displayed: **Greetings from Spring Boot!**</span></span>
 
    ![샘플 앱 찾아보기][SB02]
 
@@ -211,17 +212,26 @@ ms.lasthandoff: 02/03/2018
 [Azure App Service]: https://azure.microsoft.com/services/app-service/
 [Azure Container Service]: https://azure.microsoft.com/services/container-service/
 [Java 개발자용 Azure]: https://docs.microsoft.com/java/azure/
+[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
 [Azure Portal]: https://portal.azure.com/
+[Azure portal]: https://portal.azure.com/
 [Azure App Service에서 웹앱 구성]: /azure/app-service/web-sites-configure
+[Configure web apps in Azure App Service]: /azure/app-service/web-sites-configure
 [FTP/S를 사용하여 Azure App Service에 앱 배포]: https://docs.microsoft.com/azure/app-service/app-service-deploy-ftp
+[Deploy your app to Azure App Service using FTP/S]: https://docs.microsoft.com/azure/app-service/app-service-deploy-ftp
 [체험판 Azure 계정{]: https://azure.microsoft.com/pricing/free-trial/
+[free Azure account]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [JDK(Java Developer Kit)]: http://www.oracle.com/technetwork/java/javase/downloads/
+[Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
 [Visual Studio Team Services용 Java 도구]: https://java.visualstudio.com/
+[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [Maven]: http://maven.apache.org/
 [MSDN 구독자 혜택]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
+[MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Boot 시작하기]: https://github.com/spring-guides/gs-spring-boot
+[Spring Boot Getting Started]: https://github.com/spring-guides/gs-spring-boot
 [Spring Framework]: https://spring.io/
 
 <!-- IMG List -->

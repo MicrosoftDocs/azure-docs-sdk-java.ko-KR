@@ -1,6 +1,6 @@
 ---
-title: "Java를 사용하여 가상 컴퓨터 확장 집합 관리 | Microsoft Docs"
-description: "Java용 Azure SDK를 사용하여 Azure 가상 컴퓨터 확장 집합을 관리하는 샘플 코드"
+title: Java를 사용하여 가상 컴퓨터 확장 집합 관리 | Microsoft Docs
+description: Java용 Azure SDK를 사용하여 Azure 가상 컴퓨터 확장 집합을 관리하는 샘플 코드
 author: rloutlaw
 manager: douge
 ms.assetid: b55923b7-d60a-460d-b77c-af5fac67f1cc
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21931159"
 ---
 # <a name="manage-azure-virtual-machine-scale-sets-from-your-java-applications"></a><span data-ttu-id="42571-103">Java 응용 프로그램에서 Azure 가상 컴퓨터 확장 집합 관리</span><span class="sxs-lookup"><span data-stu-id="42571-103">Manage Azure virtual machine scale sets from your Java applications</span></span>
 

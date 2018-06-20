@@ -19,6 +19,7 @@ ms.sourcegitcommit: ed130145f9e5c2d803791d96bb118023175e644a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30223380"
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a><span data-ttu-id="01be7-103">IntelliJ용 Azure 도구 키트를 사용하여 웹앱을 Docker 컨테이너로 게시</span><span class="sxs-lookup"><span data-stu-id="01be7-103">Publish a web app as a Docker container by using the Azure Toolkit for IntelliJ</span></span>
 
@@ -205,7 +206,9 @@ ms.lasthandoff: 03/28/2018
 <!-- URL List -->
 
 [Docker 웹 사이트]: https://www.docker.com/
+[Docker website]: https://www.docker.com/
 [아티팩트 구성]: https://www.jetbrains.com/help/idea/2016.1/configuring-artifacts.html
+[Configuring artifacts]: https://www.jetbrains.com/help/idea/2016.1/configuring-artifacts.html
 
 <!-- IMG List -->
 

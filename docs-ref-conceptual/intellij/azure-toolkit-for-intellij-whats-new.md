@@ -1,11 +1,11 @@
 ---
-title: "IntelliJ용 Azure 도구 키트의 새로운 기능"
-description: "IntelliJ용 Azure 도구 키트의 최신 기능에 대해 알아봅니다."
-services: 
+title: IntelliJ용 Azure 도구 키트의 새로운 기능
+description: IntelliJ용 Azure 도구 키트의 최신 기능에 대해 알아봅니다.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: 46ed791f-df59-416a-809e-f52345ad973c
 ms.author: robmcm;asirveda;martinsawicki
 ms.date: 02/01/2018
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954404"
 ---
 # <a name="whats-new-in-the-azure-toolkit-for-intellij"></a><span data-ttu-id="75e4b-103">IntelliJ용 Azure 도구 키트의 새로운 기능</span><span class="sxs-lookup"><span data-stu-id="75e4b-103">What's New in the Azure Toolkit for IntelliJ</span></span>
 
@@ -78,6 +79,7 @@ The Azure Toolkit for IntelliJ - April 2016 release includes the following enhan
 <!-- URL List -->
 
 [Eclipse용 Azure 도구 키트 설치]: ../eclipse/azure-toolkit-for-eclipse.md
+[Azure Toolkit for Eclipse]: ../eclipse/azure-toolkit-for-eclipse.md
 [Azure Sign In Instructions for the Azure Toolkit for IntelliJ]: ./azure-toolkit-for-intellij-sign-in-instructions.md
 [How to publish a Web App as a Docker Container using the Azure Toolkit for IntelliJ]: ./azure-toolkit-for-intellij-publish-as-docker-container.md
 [Managing Storage Accounts using the Azure Explorer for IntelliJ]: ./azure-toolkit-for-intellij-managing-storage-accounts-using-azure-explorer.md

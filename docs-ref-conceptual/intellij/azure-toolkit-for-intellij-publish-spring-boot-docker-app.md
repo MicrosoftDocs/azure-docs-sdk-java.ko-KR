@@ -1,12 +1,12 @@
 ---
-title: "IntelliJ용 Azure 도구 키트를 사용하여 Spring Boot 앱을 Docker 컨테이너로 게시"
-description: "IntelliJ용 Azure 도구 키트를 사용하여 Docker 컨테이너로 Microsoft Azure에 웹앱을 게시하는 방법을 알아봅니다."
-services: 
+title: IntelliJ용 Azure 도구 키트를 사용하여 Spring Boot 앱을 Docker 컨테이너로 게시
+description: IntelliJ용 Azure 도구 키트를 사용하여 Docker 컨테이너로 Microsoft Azure에 웹앱을 게시하는 방법을 알아봅니다.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954734"
 ---
 # <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a><span data-ttu-id="ff207-103">IntelliJ용 Azure 도구 키트를 사용하여 Spring Boot 앱을 Docker 컨테이너로 게시</span><span class="sxs-lookup"><span data-stu-id="ff207-103">Publish a Spring Boot app as a Docker container by using the Azure Toolkit for IntelliJ</span></span>
 
@@ -142,7 +143,7 @@ ms.lasthandoff: 02/03/2018
 
       ![아티팩트 경로 지정][ART04b]
 
-   <span data-ttu-id="ff207-170">다.</span><span class="sxs-lookup"><span data-stu-id="ff207-170">c.</span></span> <span data-ttu-id="ff207-171">줄임표 **...**를 클릭하여 기본 클래스를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="ff207-171">Click the ellipsis (**...**) to locate the main class.</span></span>
+   <span data-ttu-id="ff207-170">다.</span><span class="sxs-lookup"><span data-stu-id="ff207-170">c.</span></span> <span data-ttu-id="ff207-171">줄임표 **...** 를 클릭하여 기본 클래스를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="ff207-171">Click the ellipsis (**...**) to locate the main class.</span></span>
 
       ![기본 클래스 찾기][ART04c]
 
@@ -225,6 +226,7 @@ ms.lasthandoff: 02/03/2018
 [Azure Management Portal]: http://go.microsoft.com/fwlink/?LinkID=512959
 [Azure Sign In for IntelliJ]: ./azure-toolkit-for-intellij-sign-in-instructions.md
 [아티팩트 구성]: https://www.jetbrains.com/help/idea/2016.1/configuring-artifacts.html
+[Configuring Artifacts]: https://www.jetbrains.com/help/idea/2016.1/configuring-artifacts.html
 [Deploy Spring Boot on Linux in AKS]: /azure/container-service/kubernetes/container-service-deploy-spring-boot-app-on-linux
 [Docker]: https://www.docker.com/
 [Publish Container with Azure Toolkit]: ./azure-toolkit-for-intellij-publish-as-docker-container.md
