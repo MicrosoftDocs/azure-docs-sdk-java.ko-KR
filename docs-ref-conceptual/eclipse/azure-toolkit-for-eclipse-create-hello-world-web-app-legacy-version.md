@@ -14,16 +14,16 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 8b831f4545be9162d28f8ba86eb7271ffa4391af
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: 896e7eff389bc7d3ac119d315c50aae505a381da
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954744"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090806"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-eclipse"></a>레거시 Eclipse용 도구 키트를 사용하여 Azure용 Hello World 웹앱 만들기
 
-이 자습서에서는 [Eclipse용 Azure 도구 키트] 버전 3.0.6 이하를 사용하여 기본 Hello World 응용 프로그램을 만들고 Azure에 웹앱으로 배포하는 방법을 보여 줍니다.
+이 자습서에서는 [Eclipse용 Azure 도구 키트 설치] 버전 3.0.6 이하를 사용하여 기본 Hello World 응용 프로그램을 만들고 Azure에 웹앱으로 배포하는 방법을 보여 줍니다.
 
 > [!NOTE]
 >
@@ -117,18 +117,19 @@ ms.locfileid: "28954744"
       
       기존 리소스 그룹(있는 경우)을 선택하고 아래 g 단계로 건너뛰거나 이들 단계를 통해 새 리소스 그룹을 만들 수 있습니다.
       
-      * **새로 만들기...**
-      * **새 리소스 그룹** 대화 상자가 표시됩니다.
+   * **새로 만들기...**
+   * **새 리소스 그룹** 대화 상자가 표시됩니다.
         
-          ![새 리소스 그룹 대화 상자][08]
-      * **이름** 텍스트 상자에서 새 리소스 그룹의 이름을 지정합니다.
-      * **지역** 드롭다운 메뉴에서 리소스 그룹에 적합한 Azure 데이터 센터 위치를 선택합니다.
-      * 선택 사항: 기본적으로 Java 8 최신 배포판은 Azure가 자동으로 웹앱 컨테이너에 JVM으로 설치합니다. 그러나 웹앱에서 요구하는 경우 JVM의 다른 버전 및 배포판을 지정할 수 있습니다. 웹앱에 대한 JDK를 지정하려면 **JDK** 탭을 클릭하고 다음 옵션 중 하나를 선택합니다.
-         * **Azure Web Apps에서 제공하는 기본 JDK 배포**: 이 옵션을 선택하면 Java 8 최신 배포판이 배포됩니다.
-         * **Azure에 제공되는 타사 JDK 배포**: 이 옵션을 선택하면 Microsoft Azure에서 제공하는 JDK 목록에서 선택할 수 있습니다.
-         * **이 다운로드 위치에서 나의 고유한 JDK 배포**: 이 옵션을 선택하면 사용자 고유의 JDK 배포판을 지정할 수 있으며, 사용자 고유의 배포판을 ZIP 파일로 패키지하여 공개적으로 이용 가능한 다운로드 위치 또는 사용자가 액세스 권한을 갖고 있는 Azure Storage 계정에 업로드해야 합니다.
+       ![새 리소스 그룹 대화 상자][08]
+   * **이름** 텍스트 상자에서 새 리소스 그룹의 이름을 지정합니다.
+   * **지역** 드롭다운 메뉴에서 리소스 그룹에 적합한 Azure 데이터 센터 위치를 선택합니다.
+   * 선택 사항: 기본적으로 Java 8 최신 배포판은 Azure가 자동으로 웹앱 컨테이너에 JVM으로 설치합니다. 그러나 웹앱에서 요구하는 경우 JVM의 다른 버전 및 배포판을 지정할 수 있습니다. 웹앱에 대한 JDK를 지정하려면 **JDK** 탭을 클릭하고 다음 옵션 중 하나를 선택합니다.
+     * 
+  **Azure Web Apps에서 제공하는 기본 JDK 배포**: 이 옵션을 선택하면 Java 8 최신 배포판이 배포됩니다.
+     * **Azure에 제공되는 타사 JDK 배포**: 이 옵션을 선택하면 Microsoft Azure에서 제공하는 JDK 목록에서 선택할 수 있습니다.
+     * **이 다운로드 위치에서 나의 고유한 JDK 배포**: 이 옵션을 선택하면 사용자 고유의 JDK 배포판을 지정할 수 있으며, 사용자 고유의 배포판을 ZIP 파일로 패키지하여 공개적으로 이용 가능한 다운로드 위치 또는 사용자가 액세스 권한을 갖고 있는 Azure Storage 계정에 업로드해야 합니다.
           
-         ![새 웹앱 컨테이너 대화 상자][07b]
+       ![새 웹앱 컨테이너 대화 상자][07b]
 
    g. **확인**을 클릭합니다.
 
@@ -210,7 +211,7 @@ Azure Web Apps 만들기에 대한 자세한 내용은 [Web Apps 개요]를 참�
 
 <!-- URL List -->
 
-[Eclipse용 Azure 도구 키트]: azure-toolkit-for-eclipse.md
+[Eclipse용 Azure 도구 키트 설치]: azure-toolkit-for-eclipse.md
 [IntelliJ용 Azure 도구 키트]: ../intellij/azure-toolkit-for-intellij.md
 [intellij-hello-world]: ../intellij/azure-toolkit-for-intellij-create-hello-world-web-app.md
 [Web Apps 개요]: /azure/app-service/app-service-web-overview

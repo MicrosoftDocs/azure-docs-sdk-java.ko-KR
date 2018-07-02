@@ -10,12 +10,12 @@ ms.devlang: java
 ms.topic: reference
 ms.technology: Azure
 ms.date: 3/06/2016
-ms.openlocfilehash: 924ccf9bdaad4bc635f133adbcfcc8f797d06644
-ms.sourcegitcommit: acc83bb537d77568b2a5427479d6354d6ae30885
+ms.openlocfilehash: 0aaa83ceb42192441decb5972baae56fed337fb2
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2017
-ms.locfileid: "23982165"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090686"
 ---
 # <a name="release-notes"></a>릴리스 정보 
 
@@ -35,12 +35,12 @@ ms.locfileid: "23982165"
 - 이전에 베타 버전이었던 모든 CDN 메서드
 - 이전에 베타 버전이었던 모든 Application Gateway 메서드 및 인터페이스
 
- 라이브러리의 일부는 여전히 미리 보기로 있습니다. 라이브러리의 현재 상태에 대해 아래 표를 참조하세요.
+  라이브러리의 일부는 여전히 미리 보기로 있습니다. 라이브러리의 현재 상태에 대해 아래 표를 참조하세요.
 
 서비스 또는 기능 | GA로 사용 가능 | 미리 보기로 사용 가능 
 ---------|---------|---------|-
-Compute  | 가상 컴퓨터 및 VM 확장, 가상 컴퓨터 확장 집합, 관리 디스크   | Azure 컨테이너 서비스, Azure 컨테이너 레지스트리 
-저장소   |  Storage 계정       |    암호화     
+컴퓨팅  | 가상 머신 및 VM 확장, 가상 머신 확장 집합, 관리 디스크   | Azure 컨테이너 서비스, Azure 컨테이너 레지스트리 
+Storage   |  Storage 계정       |    암호화     
 SQL Database  | 데이터베이스, 방화벽, 탄력적 풀              
 네트워킹    |  가상 네트워크, 네트워크 인터페이스, IP 주소, 라우팅 테이블, 네트워크 보안 그룹, DNS, Traffic Manager, 응용 프로그램 게이트웨이  |    부하 분산 장치, 네트워크 피어링, Virtual Network 게이트웨이, 네트워크 감시자 
 더 많은 서비스    |  리소스 관리자, Key Vault, Redis, CDN, Batch       |  웹앱, 함수 앱, Service Bus, Graph RBAC, Cosmos DB, 검색  

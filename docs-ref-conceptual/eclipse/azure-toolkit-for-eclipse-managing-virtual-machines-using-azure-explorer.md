@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: ec67ed44ec570da7b826c12a9f8a24a5b0170e99
-ms.sourcegitcommit: 3d3460289ab6b9165c2cf6a3dd56eafd0692501e
+ms.openlocfilehash: c04f5225f0bb99898f69b26a4782aa57d75c4f22
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34283051"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090672"
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-eclipse"></a>Eclipse용 Azure Explorer를 사용하여 가상 머신 관리
 
@@ -35,33 +35,35 @@ Azure Explorer를 사용하여 가상 머신을 만들려면 다음을 수행합
 
 1. [Eclipse용 Azure 도구 키트에 대한 로그인 지침](https://docs.microsoft.com/java/azure/eclipse/azure-toolkit-for-eclipse-sign-in-instructions)을 사용하여 Azure 계정에 로그인합니다.
 
-1. **Azure Explorer** 보기에서 **Azure** 노드를 확장하고 **Virtual Machines**를 마우스 오른쪽 단추로 클릭한 후 **VM 만들기**를 클릭합니다.
+2. **Azure Explorer** 보기에서 **Azure** 노드를 확장하고 **Virtual Machines**를 마우스 오른쪽 단추로 클릭한 후 **VM 만들기**를 클릭합니다.
 
    ![VM 만들기 명령][CR01]  
 
    **새 Virtual Machine 만들기** 마법사가 열립니다.
 
-1. **구독 선택** 창에서 구독을 선택하고 **다음**을 클릭합니다.
+3. **구독 선택** 창에서 구독을 선택하고 **다음**을 클릭합니다.
 
    ![구독 선택 창][CR02]
 
-1. **Virtual Machine 이미지 선택** 창에서 다음 정보를 입력합니다.
+4. **Virtual Machine 이미지 선택** 창에서 다음 정보를 입력합니다.
 
    * **위치**: 가상 머신을 만들 위치(예: *미국 서부*)를 지정합니다.
 
    * **게시자**: 가상 머신을 만드는 데 사용할 이미지를 만든 게시자를 지정합니다(예: *Microsoft*).
 
-   * **제품**: 선택한 게시자에서 사용할 가상 머신 제품을 지정합니다(예: *JDK*).
+   * 
+  **제품**: 선택한 게시자에서 사용할 가상 머신 제품을 지정합니다(예: *JDK*).
 
-   * **SKU**: 선택한 제품에서 사용할 SKU(Stockkeeping Unit)를 지정합니다(예: *JDK_8*).
+   * 
+  **SKU**: 선택한 제품에서 사용할 SKU(Stockkeeping Unit)를 지정합니다(예: *JDK_8*).
 
    * **버전 번호**: 선택한 SKU에서 사용할 버전을 지정합니다.
 
    ![Virtual Machine 이미지 선택 창][CR03]
 
-1. **다음**을 클릭합니다.
+5. **다음**을 클릭합니다.
 
-1. **Virtual Machine 기본 설정** 창에서 다음 정보를 입력합니다.
+6. **Virtual Machine 기본 설정** 창에서 다음 정보를 입력합니다.
 
    * **Virtual Machine Name**: 새 가상 머신의 이름을 지정합니다. 이름은 문자로 시작하고 문자, 숫자 및 하이픈만 포함해야 합니다.
 
@@ -73,15 +75,15 @@ Azure Explorer를 사용하여 가상 머신을 만들려면 다음을 수행합
 
    ![Virtual Machine 기본 설정 창][CR04]
 
-1. **다음**을 클릭합니다.
+7. **다음**을 클릭합니다.
 
-1. **새 Storage 계정 만들기** 창에서 다음 정보를 입력합니다.
+8. **새 Storage 계정 만들기** 창에서 다음 정보를 입력합니다.
 
    * **리소스 그룹**: 가상 머신에 사용할 리소스 그룹을 지정합니다. 다음 옵션 중 하나를 선택합니다.
-      * **새로 만들기**: 새 리소스 그룹을 만들도록 지정합니다.
-      * **기존 그룹 사용**: Azure 계정에 이미 연결된 리소스 그룹을 선택할 것임을 지정합니다.
+     * **새로 만들기**: 새 리소스 그룹을 만들도록 지정합니다.
+     * **기존 그룹 사용**: Azure 계정에 이미 연결된 리소스 그룹을 선택할 것임을 지정합니다.
 
-      ![새 Storage 계정 만들기 대화 상자][CR05]
+       ![새 Storage 계정 만들기 대화 상자][CR05]
 
    * **Storage 계정**: 가상 머신을 저장하는 데 사용할 Storage 계정을 지정합니다. 기존 저장소 계정을 사용하거나 새 저장소 계정을 만들 수 있습니다.
 
@@ -89,7 +91,7 @@ Azure Explorer를 사용하여 가상 머신을 만들려면 다음을 수행합
 
       ![새 Virtual Network 만들기 대화 상자][CR06]
 
-1. **연결된 리소스** 창에서 다음 정보를 입력합니다.
+9. **연결된 리소스** 창에서 다음 정보를 입력합니다.
 
    * **공용 IP 주소**: 가상 머신에 대한 외부 연결 IP 주소를 지정합니다. 새 IP 주소를 만들도록 선택하거나, 가상 머신에 공용 IP 주소가 없는 경우 **(없음)** 을 선택할 수 있습니다.
 
@@ -99,11 +101,11 @@ Azure Explorer를 사용하여 가상 머신을 만들려면 다음을 수행합
 
    ![연결된 리소스 창][CR07]
 
-1. **Finish**를 클릭합니다.  
+10. **Finish**를 클릭합니다.  
 
-   새 가상 머신이 Azure Explorer 도구 창에 표시됩니다.
+    새 가상 머신이 Azure Explorer 도구 창에 표시됩니다.
 
-   ![새 Virtual Machine][CR08]
+    ![새 Virtual Machine][CR08]
 
 ## <a name="restart-a-virtual-machine-in-eclipse"></a>Eclipse에서 가상 컴퓨터 다시 시작
 

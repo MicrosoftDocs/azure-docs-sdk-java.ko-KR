@@ -1,12 +1,12 @@
 ---
-title: "Azure Web Apps의 Maven 플러그 인을 사용하여 Azure Container Registry의 Spring Boot 앱을 Azure App Service에 배포하는 방법"
-description: "이 자습서는 Maven 플러그 인을 사용하여 Azure App Service에 Azure Container Registry의 Spring Boot 응용 프로그램을 배포하는 단계를 설명합니다."
+title: Azure Web Apps의 Maven 플러그 인을 사용하여 Azure Container Registry의 Spring Boot 앱을 Azure App Service에 배포하는 방법
+description: 이 자습서는 Maven 플러그 인을 사용하여 Azure App Service에 Azure Container Registry의 Spring Boot 응용 프로그램을 배포하는 단계를 설명합니다.
 services: container-registry
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm;kevinzha
 ms.date: 02/01/2018
 ms.devlang: java
@@ -14,11 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 8e8e1b5d599f77edf227d2c187225f6ac530b62b
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: 88eb64c07ad4f480dc2d2c2869e710c0ae910c4d
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090796"
 ---
 # <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a>Azure Web Apps의 Maven 플러그 인을 사용하여 Azure Container Registry의 Spring Boot 앱을 Azure App Service에 배포하는 방법
 
@@ -35,7 +36,7 @@ ms.lasthandoff: 02/03/2018
 
 이 자습서의 단계를 완료하려면 다음 필수 조건이 필요합니다.
 
-* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정{]에 등록할 수 있습니다.
+* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정]에 등록할 수 있습니다.
 * [Azure CLI(명령줄 인터페이스)]
 * 최신 [JDK(Java Development Kit)], 버전 1.7 이상
 * Apache의 [Maven] 빌드 도구(버전 3)
@@ -62,9 +63,9 @@ ms.lasthandoff: 02/03/2018
    cd /users/robert/SpringBoot
    ```
 
-1. [Spring Boot on Docker 시작하기] 샘플 프로젝트를 방금 만든 디렉터리에 복제합니다. 예:
+1. [Spring Boot on Docker 시작] 샘플 프로젝트를 방금 만든 디렉터리에 복제합니다. 예:
    ```shell
-   git clone -b private-registry https://github.com/Microsoft/gs-spring-boot-docker
+   git clone -b private-registry https://github.com/spring-guides/gs-spring-boot-docker
    ```
 
 1. 디렉터리를 완료된 프로젝트로 변경합니다. 예:
@@ -103,23 +104,25 @@ ms.lasthandoff: 02/03/2018
 
 1. 명령 프롬프트를 엽니다.
 
-1. Azure CLI를 사용하여 Azure 계정에 로그인합니다.
+2. Azure CLI를 사용하여 Azure 계정에 로그인합니다.
    ```azurecli
    az login
    ```
    지시에 따라 로그인 프로세스를 완료합니다.
 
-1. Azure 서비스 주체 만들기
+3. Azure 서비스 주체 만들기
    ```azurecli
    az ad sp create-for-rbac --name "uuuuuuuu" --password "pppppppp"
    ```
    위치:
-   | 매개 변수 | 설명 |
-   |---|---|
-   | `uuuuuuuu` | 서비스 주체에 대한 사용자 이름을 지정합니다. |
-   | `pppppppp` | 서비스 주체에 대한 암호를 지정합니다. |
 
-1. Azure는 다음 예제와 유사한 JSON로 응답합니다.
+   | 매개 변수  |                    설명                     |
+   |------------|----------------------------------------------------|
+   | `uuuuuuuu` | 서비스 주체에 대한 사용자 이름을 지정합니다. |
+   | `pppppppp` | 서비스 주체에 대한 암호를 지정합니다.  |
+
+
+4. Azure는 다음 예제와 유사한 JSON로 응답합니다.
    ```json
    {
       "appId": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
@@ -176,7 +179,7 @@ ms.lasthandoff: 02/03/2018
    * `%ProgramFiles%\apache-maven\3.5.0\conf\settings.xml`
    * `$HOME/.m2/settings.xml`
 
-1. 이 문서의 이전 섹션에서 *settings.xml* 파일의 `<servers>` 컬렉션에 Azure Container Registry 액세스 설정을 추가합니다. 예:
+2. 이 문서의 이전 섹션에서 *settings.xml* 파일의 `<servers>` 컬렉션에 Azure Container Registry 액세스 설정을 추가합니다. 예:
 
    ```xml
    <servers>
@@ -188,13 +191,15 @@ ms.lasthandoff: 02/03/2018
    </servers>
    ```
    위치:
-   | 요소 | 설명 |
-   |---|---|
-   | `<id>` | 개인 Azure Container Registry 이름을 포함합니다. |
-   | `<username>` | 개인 Azure Container Registry 이름을 포함합니다. |
+
+   |   요소    |                                 설명                                  |
+   |--------------|------------------------------------------------------------------------------|
+   |    `<id>`    |         개인 Azure Container Registry 이름을 포함합니다.          |
+   | `<username>` |         개인 Azure Container Registry 이름을 포함합니다.          |
    | `<password>` | 이 문서의 이전 섹션에서 검색된 암호를 포함합니다. |
 
-1. *settings.xml* 파일의 `<servers>` 컬렉션에 이 문서의 이전 섹션에 있는 Azure 서비스 주체 설정을 추가합니다. 예:
+
+3. *settings.xml* 파일의 `<servers>` 컬렉션에 이 문서의 이전 섹션에 있는 Azure 서비스 주체 설정을 추가합니다. 예:
 
    ```xml
    <servers>
@@ -210,21 +215,23 @@ ms.lasthandoff: 02/03/2018
    </servers>
    ```
    위치:
-   | 요소 | 설명 |
-   |---|---|
-   | `<id>` | Azure에 웹앱을 배포할 때 Maven을 사용하여 보안 설정을 조회하는 고유한 이름을 지정합니다. |
-   | `<client>` | 서비스 사용자의 `appId` 값을 포함합니다. |
-   | `<tenant>` | 서비스 사용자의 `tenant` 값을 포함합니다. |
-   | `<key>` | 서비스 사용자의 `password` 값을 포함합니다. |
+
+   |     요소     |                                                                                   설명                                                                                   |
+   |-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+   |     `<id>`      |                                Azure에 웹앱을 배포할 때 Maven을 사용하여 보안 설정을 조회하는 고유한 이름을 지정합니다.                                |
+   |   `<client>`    |                                                             서비스 사용자의 `appId` 값을 포함합니다.                                                             |
+   |   `<tenant>`    |                                                            서비스 사용자의 `tenant` 값을 포함합니다.                                                             |
+   |     `<key>`     |                                                           서비스 사용자의 `password` 값을 포함합니다.                                                            |
    | `<environment>` | 대상 Azure 클라우드 환경을 정의합니다. 이 예에서는 `AZURE`입니다. (환경의 전체 목록은 [Azure Web Apps의 Maven 플러그 인] 설명서에서 제공됩니다.) |
 
-1. *settings.xml* 파일을 저장하고 닫습니다.
+
+4. *settings.xml* 파일을 저장하고 닫습니다.
 
 ## <a name="build-your-docker-container-image-and-push-it-to-your-azure-container-registry"></a>Docker 컨테이너 이미지 빌드 및 Azure Container Registry에 푸시
 
 1. Spring Boot 응용 프로그램의 완료된 프로젝트 디렉터리로 이동합니다. (예: "*C:\SpringBoot\gs-spring-boot-docker\complete*" 또는 "*/users/robert/SpringBoot/gs-spring-boot-docker/complete*") 텍스트 편집기를 사용하여 *pom.xml* 파일을 엽니다.
 
-1. *pom.xml* 파일의 `<properties>` 컬렉션을 이 자습서의 이전 섹션에서 사용한 Azure Container Registry의 로그인 서버 값으로 업데이트합니다. 예:
+2. *pom.xml* 파일의 `<properties>` 컬렉션을 이 자습서의 이전 섹션에서 사용한 Azure Container Registry의 로그인 서버 값으로 업데이트합니다. 예:
 
    ```xml
    <properties>
@@ -235,12 +242,14 @@ ms.lasthandoff: 02/03/2018
    </properties>
    ```
    위치:
-   | 요소 | 설명 |
-   |---|---|
-   | `<azure.containerRegistry>` | 개인 Azure Container Registry의 이름을 지정합니다. |
-   | `<docker.image.prefix>` | 개인 컨테이너 레지스트리의 이름에 ".azurecr.io"를 추가하여 파생되는 개인 Azure Container Registry의 URL을 추가합니다. |
 
-1. *pom.xml* 파일에서 Docker 플러그 인의 `<plugin>`이 이 자습서의 이전 단계에서 로그인 서버 주소 및 레지스트리 이름에 대한 올바른 속성을 포함하는지 확인합니다. 예: 
+   |           요소           |                                                                       설명                                                                       |
+   |-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+   | `<azure.containerRegistry>` |                                              개인 Azure Container Registry의 이름을 지정합니다.                                               |
+   |   `<docker.image.prefix>`   | 개인 컨테이너 레지스트리의 이름에 ".azurecr.io"를 추가하여 파생되는 개인 Azure Container Registry의 URL을 추가합니다. |
+
+
+3. *pom.xml* 파일에서 Docker 플러그 인의 `<plugin>`이 이 자습서의 이전 단계에서 로그인 서버 주소 및 레지스트리 이름에 대한 올바른 속성을 포함하는지 확인합니다. 예: 
 
    ```xml
    <plugin>
@@ -263,18 +272,20 @@ ms.lasthandoff: 02/03/2018
    </plugin>
    ```
    위치:
-   | 요소 | 설명 |
-   |---|---|
-   | `<serverId>` | 개인 Azure Container Registry의 이름을 포함하는 속성을 지정합니다. |
+
+   |     요소     |                                       설명                                       |
+   |-----------------|-----------------------------------------------------------------------------------------|
+   |  `<serverId>`   |  개인 Azure Container Registry의 이름을 포함하는 속성을 지정합니다.   |
    | `<registryUrl>` | 개인 Azure Container Registry의 URL을 포함하는 속성을 지정합니다. |
 
-1. Spring Boot 응용 프로그램의 완성된 프로젝트 디렉터리로 이동하고 다음 명령을 실행하여 응용 프로그램을 다시 빌드하고 Azure Container Registry에 컨테이너를 푸시합니다.
+
+4. Spring Boot 응용 프로그램의 완성된 프로젝트 디렉터리로 이동하고 다음 명령을 실행하여 응용 프로그램을 다시 빌드하고 Azure Container Registry에 컨테이너를 푸시합니다.
 
    ```
    mvn package docker:build -DpushImage 
    ```
 
-1. 선택 사항: [Azure Portal]로 이동하고 컨테이너 레지스트리에서 **gs-spring-boot-docker**라는 Docker 컨테이너 이미지가 있는지 확인합니다.
+5. 선택 사항: [Azure Portal]로 이동하고 컨테이너 레지스트리에서 **gs-spring-boot-docker**라는 Docker 컨테이너 이미지가 있는지 확인합니다.
 
    ![Azure Portal에서 컨테이너 확인][CR01]
 
@@ -393,14 +404,14 @@ Maven은 Azure에 웹앱을 배포합니다. 웹앱이 아직 없는 경우 생�
 [Using a custom Docker image for Azure Web App on Linux]: /azure/app-service/containers/tutorial-custom-docker-image
 [Docker]: https://www.docker.com/
 [Maven의 Docker 플러그 인]: https://github.com/spotify/docker-maven-plugin
-[체험판 Azure 계정{]: https://azure.microsoft.com/pricing/free-trial/
+[체험판 Azure 계정]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
 [Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [Maven]: http://maven.apache.org/
 [MSDN 구독자 혜택]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
-[Spring Boot on Docker 시작하기]: https://github.com/spring-guides/gs-spring-boot-docker
+[Spring Boot on Docker 시작]: https://github.com/spring-guides/gs-spring-boot-docker
 [Spring Framework]: https://spring.io/
 
 <!-- IMG List -->

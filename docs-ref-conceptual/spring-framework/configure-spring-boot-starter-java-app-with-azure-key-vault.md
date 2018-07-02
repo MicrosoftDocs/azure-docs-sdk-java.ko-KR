@@ -14,12 +14,12 @@ ms.service: key-vault
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 1dda697cac80a6cad3ebbbbf8a5a4f18b515dfd8
-ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
+ms.openlocfilehash: a2734fc08f2f59f64ba6c6c20ff18d75070b68d5
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883686"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090716"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>Azure Key Vault에 Spring Boot Starter를 사용하는 방법
 
@@ -31,7 +31,7 @@ ms.locfileid: "33883686"
 
 이 문서의 단계를 완료하려면 다음 필수 구성 요소가 필요합니다.
 
-* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정{]에 등록할 수 있습니다.
+* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정]에 등록할 수 있습니다.
 * [JDK(Java Development Kit)](http://www.oracle.com/technetwork/java/javase/downloads/), 버전 1.7 이상
 * [Apache Maven](http://maven.apache.org/), 버전 3.0 이상
 
@@ -101,6 +101,7 @@ ms.locfileid: "33883686"
    az group create --name wingtiptoysresources --location westus
    ```
    위치:
+
    | 매개 변수 | 설명 |
    |---|---|
    | `name` | 리소스 그룹의 고유한 이름을 지정합니다. |
@@ -121,11 +122,12 @@ ms.locfileid: "33883686"
    }
    ```
 
-1. 응용 프로그램 등록에서 Azure 서비스 주체를 만듭니다. 예를 들어 다음과 같습니다.
+2. 응용 프로그램 등록에서 Azure 서비스 주체를 만듭니다. 예를 들어 다음과 같습니다.
    ```shell
    az ad sp create-for-rbac --name "wingtiptoysuser"
    ```
    위치:
+
    | 매개 변수 | 설명 |
    |---|---|
    | `name` | Azure 서비스 주체에 대한 이름을 지정합니다. |
@@ -142,11 +144,12 @@ ms.locfileid: "33883686"
    }
    ```
 
-1. 리소스 그룹에서 새 키 자격 증명 모음을 만듭니다. 예를 들어 다음과 같습니다.
+3. 리소스 그룹에서 새 키 자격 증명 모음을 만듭니다. 예를 들어 다음과 같습니다.
    ```azurecli
    az keyvault create --name wingtiptoyskeyvault --resource-group wingtiptoysresources --location westus --enabled-for-deployment true --enabled-for-disk-encryption true --enabled-for-template-deployment true --sku standard --query properties.vaultUri
    ```
    위치:
+
    | 매개 변수 | 설명 |
    |---|---|
    | `name` | 키 자격 증명 모음의 고유한 이름을 지정합니다. |
@@ -163,11 +166,12 @@ ms.locfileid: "33883686"
    "https://wingtiptoyskeyvault.vault.azure.net"
    ```
 
-1. 앞서 만든 Azure 서비스 주체의 액세스 정책을 설정합니다. 예를 들어 다음과 같습니다.
+4. 앞서 만든 Azure 서비스 주체의 액세스 정책을 설정합니다. 예를 들어 다음과 같습니다.
    ```azurecli
    az keyvault set-policy --name wingtiptoyskeyvault --secret-permission set get list delete --spn "iiiiiiii-iiii-iiii-iiii-iiiiiiiiiiii"
    ```
    위치:
+
    | 매개 변수 | 설명 |
    |---|---|
    | `name` | 앞의 키 자격 증명 모음 이름을 지정합니다. |
@@ -192,11 +196,12 @@ ms.locfileid: "33883686"
    }
    ```
 
-1. 새 키 자격 증명 모음에 비밀을 저장합니다. 예를 들어 다음과 같습니다.
+5. 새 키 자격 증명 모음에 비밀을 저장합니다. 예를 들어 다음과 같습니다.
    ```azurecli
    az keyvault secret set --vault-name "wingtiptoyskeyvault" --name "connectionString" --value "jdbc:sqlserver://SERVER.database.windows.net:1433;database=DATABASE;"
    ```
    위치:
+
    | 매개 변수 | 설명 |
    |---|---|
    | `vault-name` | 앞의 키 자격 증명 모음 이름을 지정합니다. |
@@ -230,24 +235,26 @@ ms.locfileid: "33883686"
 
 1. 앞서 디렉터리에 다운로드한 Spring Boot 프로젝트 아카이브 파일에서 파일을 추출합니다.
 
-1. 프로젝트에서 *src/main/resources* 폴더로 이동하고 텍스트 편집기에서 *application.properties* 파일을 엽니다.
+2. 프로젝트에서 *src/main/resources* 폴더로 이동하고 텍스트 편집기에서 *application.properties* 파일을 엽니다.
 
-1. 이 자습서의 앞부분에서 완료한 단계의 값을 사용하여 키 자격 증명 모음의 값을 추가합니다. 예를 들어 다음과 같습니다.
+3. 이 자습서의 앞부분에서 완료한 단계의 값을 사용하여 키 자격 증명 모음의 값을 추가합니다. 예를 들어 다음과 같습니다.
    ```yaml
    azure.keyvault.uri=https://wingtiptoyskeyvault.vault.azure.net/
    azure.keyvault.client-id=iiiiiiii-iiii-iiii-iiii-iiiiiiiiiiii
    azure.keyvault.client-key=pppppppp-pppp-pppp-pppp-pppppppppppp
    ```
    위치:
-   | 매개 변수 | 설명 |
-   |---|---|
-   | `azure.keyvault.uri` | 키 자격 증명 모음을 만든 URI를 지정합니다. |
-   | `azure.keyvault.client-id` | 서비스 주체를 만들 때 *appId* GUID를 지정합니다. |
+
+   |          매개 변수          |                                 설명                                 |
+   |-----------------------------|-----------------------------------------------------------------------------|
+   |    `azure.keyvault.uri`     |           키 자격 증명 모음을 만든 URI를 지정합니다.           |
+   | `azure.keyvault.client-id`  |  서비스 주체를 만들 때 *appId* GUID를 지정합니다.   |
    | `azure.keyvault.client-key` | 서비스 주체를 만들 때 *암호* GUID를 지정합니다. |
 
-1. 프로젝트의 기본 소스 코드 파일로 이동합니다. 예를 들어 */src/main/java/com/wingtiptoys/secrets*입니다.
 
-1. 텍스트 편집기의 파일에서 *SecretsApplication.java* 같은 응용 프로그램의 기본 Java 파일을 열고 다음 줄을 파일에 추가합니다.
+4. 프로젝트의 기본 소스 코드 파일로 이동합니다. 예를 들어 */src/main/java/com/wingtiptoys/secrets*입니다.
+
+5. 텍스트 편집기의 파일에서 *SecretsApplication.java* 같은 응용 프로그램의 기본 Java 파일을 열고 다음 줄을 파일에 추가합니다.
 
    ```java
    package com.wingtiptoys.secrets;
@@ -274,7 +281,7 @@ ms.locfileid: "33883686"
    ```
    이 코드 예제는 키 자격 증명 모음에서 연결 문자열을 검색하고 명령줄에 표시합니다.
 
-1. Java 파일을 저장하고 닫습니다.
+6. Java 파일을 저장하고 닫습니다.
 
 ## <a name="build-and-test-your-app"></a>앱 빌드 및 테스트
 
@@ -319,7 +326,7 @@ Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 
 [Key Vault 설명서]: /azure/key-vault/
 [Azure Key Vault 시작]: /azure/key-vault/key-vault-get-started
 [Java 개발자용 Azure]: https://docs.microsoft.com/java/azure/
-[체험판 Azure 계정{]: https://azure.microsoft.com/pricing/free-trial/
+[체험판 Azure 계정]: https://azure.microsoft.com/pricing/free-trial/
 [Visual Studio Team Services용 Java 도구]: https://java.visualstudio.com/
 [MSDN 구독자 혜택]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/

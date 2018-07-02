@@ -14,12 +14,12 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: ebe98a604b52dc9a4b5a47cbf65a4c68a5c86fe3
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: efc1dffa248987772827bbe7bc0caa9f10a0b4ef
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954784"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090786"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-intellij"></a>레거시 IntelliJ용 도구 키트를 사용하여 Azure용 Hello World 웹앱 만들기
 
@@ -27,7 +27,7 @@ ms.locfileid: "28954784"
 
 > [!NOTE]
 >
-> [Eclipse용 Azure 도구 키트]를 사용하는 이 문서의 버전에 대한 내용은 [Eclipse를 사용하여 Azure용 Hello World 웹앱 만들기][eclipse-hello-world]를 참조하세요.
+> [Eclipse용 Azure 도구 키트 설치]를 사용하는 이 문서의 버전에 대한 내용은 [Eclipse를 사용하여 Azure용 Hello World 웹앱 만들기][eclipse-hello-world]를 참조하세요.
 >
 
 > [!IMPORTANT]
@@ -161,14 +161,14 @@ ms.locfileid: "28954784"
 
    h. (선택 사항) 기본적으로 Java 8 최신 배포판은 자동으로 Azure에 의해 웹앱 컨테이너에 JVM으로 배포됩니다. 그러나 JVM의 다른 버전 및 배포판을 선택할 수 있습니다. 이렇게 하려면 다음 단계를 수행합니다.
       
-      * **새 웹앱 컨테이너** 대화 상자에서 **JDK** 탭을 클릭합니다.
-      * 다음 두 가지 옵션 중에서 선택할 수 있습니다.
+   * **새 웹앱 컨테이너** 대화 상자에서 **JDK** 탭을 클릭합니다.
+   * 다음 두 가지 옵션 중에서 선택할 수 있습니다.
         
-         * Azure에서 제공하는 기본 JDK 배포
-         * Azure에서 사용할 수 있는 추가 JDK 드롭다운 목록에서 타사 JDK 배포
-         * 사용자 지정 JDK 배포(이 JDK는 ZIP 파일로 패키지된 후 공개적으로 제공되거나 Azure Storage 계정에 제공되어야 함)
+      * Azure에서 제공하는 기본 JDK 배포
+      * Azure에서 사용할 수 있는 추가 JDK 드롭다운 목록에서 타사 JDK 배포
+      * 사용자 지정 JDK 배포(이 JDK는 ZIP 파일로 패키지된 후 공개적으로 제공되거나 Azure Storage 계정에 제공되어야 함)
         
-      ![새 앱 컨테이너 JDK 탭][11b]
+     ![새 앱 컨테이너 JDK 탭][11b]
 
    i. 위 단계를 모두 완료한 경우 New Web App Container 대화 상자가 다음 그림과 유사하게 표시됩니다.
       
@@ -242,7 +242,7 @@ Azure Web Apps 만들기에 대한 자세한 내용은 [Web Apps 개요]를 참�
 <!-- URL List -->
 
 [IntelliJ용 Azure 도구 키트]: azure-toolkit-for-intellij.md
-[Eclipse용 Azure 도구 키트]: ../eclipse/azure-toolkit-for-eclipse.md
+[Eclipse용 Azure 도구 키트 설치]: ../eclipse/azure-toolkit-for-eclipse.md
 [eclipse-hello-world]: ../eclipse/azure-toolkit-for-eclipse-create-hello-world-web-app.md
 [Web Apps 개요]: /azure/app-service/app-service-web-overview
 [Apache Tomcat]: http://tomcat.apache.org/
