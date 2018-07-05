@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: active-directory
-ms.openlocfilehash: 28063a1a4299fd78ba76533d0ffdc0346434eea2
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.openlocfilehash: 4a610e2f0d9fb2e219c42155e2b0cb76fc78b09a
+ms.sourcegitcommit: 5bfb3af5778167500a061157cbd0ad1cede8f90e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31823786"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37799701"
 ---
 # <a name="azure-active-directory-libraries-for-java"></a>Java용 Azure Active Directory 라이브러리
 
@@ -87,14 +87,14 @@ RoleAssignment roleAssignment2 = authenticated.roleAssignments()
 ```
 
 > [!div class="nextstepaction"]
-> [관리 API 탐색](/java/api/overview/azure/activedirectory/management)
+> [관리 API 탐색](/java/api/activedirectory/management)
 
 
 ## <a name="samples"></a>샘플
 
-[그룹, 사용자 및 역할 관리](https://github.com/Azure-Samples/aad-java-browse-graph-and-manage-roles)    
+[그룹, 사용자 및 역할 관리](https://github.com/Azure-Samples/aad-java-manage-users-groups-and-roles)    
 [Java 웹앱에서 사용자 로그인 및 로그아웃(영문)](https://github.com/Azure-Samples/active-directory-java-webapp-openidconnect)    
 [명령줄 앱을 사용하여 Azure AD에서 API 액세스(영문)](https://github.com/Azure-Samples/active-directory-java-native-headless)   
-[Java 웹앱에서 활성 AD Graph API 호출(영문)](https://github.com/Azure-Samples/active-directory-java-graphapi-web/)  
+[Java 웹앱에서 활성 AD Graph API 호출(영문)](https://github.com/Azure-Samples/active-directory-java-webapp-openidconnect)  
 
 앱에서 사용할 수 있는 [Azure AD용 Java 샘플 코드](https://azure.microsoft.com/en-us/resources/samples/?term=active+directory&platform=java)를 추가로 탐색합니다.
