@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 396d0ecfb051109924f09ae8b5d9b8074e49c404
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: f05dca50f84b27f157892d63cda02286c6755795
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954894"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090816"
 ---
 # <a name="deploy-a-spring-boot-app-using-the-fabric8-maven-plugin"></a>Fabric8 Maven 플러그인을 사용하여 Spring Boot 앱 배포
 
@@ -31,7 +31,7 @@ ms.locfileid: "28954894"
 
 이 자습서의 단계를 완료하려면 다음 필수 조건이 필요합니다.
 
-* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정{]에 등록할 수 있습니다.
+* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정]에 등록할 수 있습니다.
 * [Azure CLI(명령줄 인터페이스)]
 * 최신 [JDK(Java Developer Kit)]
 * Apache의 [Maven] 빌드 도구(버전 3)
@@ -77,7 +77,7 @@ ms.locfileid: "28954894"
    mvn clean package spring-boot:run
    ```
 
-1. http://localhost:8080 으로 이동하거나 다음`curl` 명령을 사용하여 웹앱을 테스트합니다.
+1. http://localhost:8080으로 이동하거나 `curl` 명령을 사용하여 웹앱을 테스트합니다.
    ```shell
    curl http://localhost:8080
    ```
@@ -96,7 +96,7 @@ ms.locfileid: "28954894"
    az login
    ```
    지시에 따라 로그인 프로세스를 완료합니다.
-   
+
    Azure CLI가 다음 예제처럼 계정 목록을 표시합니다.
 
    ```json
@@ -255,6 +255,7 @@ ms.locfileid: "28954894"
    az acr create --admin-enabled --resource-group wingtiptoys-kubernetes --location westeurope --name wingtiptoysregistry --sku Basic
    ```
    위치:
+
    | 매개 변수 | 설명 |
    |---|---|
    | `wingtiptoys-kubernetes` | 이 문서의 앞부분에 나온 리소스 그룹의 이름을 지정합니다. |
@@ -285,7 +286,7 @@ ms.locfileid: "28954894"
    }
    ```
 
-1. Azure CLI에서 컨테이너 레지스트리에 대한 암호를 검색합니다.
+2. Azure CLI에서 컨테이너 레지스트리에 대한 암호를 검색합니다.
    ```azurecli
    az acr credential show --name wingtiptoysregistry --query passwords[0]
    ```
@@ -299,10 +300,10 @@ ms.locfileid: "28954894"
    }
    ```
 
-1. Maven 설치에 대한 구성 디렉터리(default ~/.m2/ 또는 C:\Users\username\.m2)로 이동한 후 텍스트 편집기를 사용하여 *settings.xml* 파일을 엽니다.
+3. Maven 설치에 대한 구성 디렉터리(default ~/.m2/ 또는 C:\Users\username\.m2)로 이동한 후 텍스트 편집기를 사용하여 *settings.xml* 파일을 엽니다.
 
-1. Azure Container Registry URL, 사용자 이름 및 암호를 *settings.xml* 파일의 새 `<server>` 컬렉션에 추가합니다.
-`id` 및 `username`은 레지스트리의 이름입니다. 이전 명령의 `password` 값을 사용합니다(따옴표 제외).
+4. Azure Container Registry URL, 사용자 이름 및 암호를 *settings.xml* 파일의 새 `<server>` 컬렉션에 추가합니다.
+   `id` 및 `username`은 레지스트리의 이름입니다. 이전 명령의 `password` 값을 사용합니다(따옴표 제외).
 
    ```xml
    <servers>
@@ -314,9 +315,9 @@ ms.locfileid: "28954894"
    </servers>
    ```
 
-1. Spring Boot 응용 프로그램에 대해 완료된 프로젝트 디렉터리로 이동하고(예: "*C:\SpringBoot\gs-spring-boot-docker\complete*" 또는 "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*") 텍스트 편집기를 사용하여 *pom.xml* 파일을 엽니다.
+5. Spring Boot 응용 프로그램에 대해 완료된 프로젝트 디렉터리로 이동하고(예: "*C:\SpringBoot\gs-spring-boot-docker\complete*" 또는 "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*") 텍스트 편집기를 사용하여 *pom.xml* 파일을 엽니다.
 
-1. *pom.xml* 파일의 `<properties>` 컬렉션을 Azure Container Registry의 로그인 서버 값으로 업데이트합니다.
+6. *pom.xml* 파일의 `<properties>` 컬렉션을 Azure Container Registry의 로그인 서버 값으로 업데이트합니다.
 
    ```xml
    <properties>
@@ -325,7 +326,7 @@ ms.locfileid: "28954894"
    </properties>
    ```
 
-1. *pom.xml* 파일의 `<plugins>` 컬렉션을 업데이트하여 `<plugin>`에 Azure Container Registry의 로그인 서버 주소 및 레지스트리 이름이 포함되도록 합니다.
+7. *pom.xml* 파일의 `<plugins>` 컬렉션을 업데이트하여 `<plugin>`에 Azure Container Registry의 로그인 서버 주소 및 레지스트리 이름이 포함되도록 합니다.
 
    ```xml
    <plugin>
@@ -340,7 +341,7 @@ ms.locfileid: "28954894"
    </plugin>
    ```
 
-1. Spring Boot 응용 프로그램에 대한 완성된 프로젝트 디렉터리로 이동한 후 다음 Maven 명령을 실행하여 Docker 컨테이너를 빌드하고 레지스트리에 이미지를 푸시합니다.
+8. Spring Boot 응용 프로그램에 대한 완성된 프로젝트 디렉터리로 이동한 후 다음 Maven 명령을 실행하여 Docker 컨테이너를 빌드하고 레지스트리에 이미지를 푸시합니다.
 
    ```shell
    mvn package dockerfile:build -DpushImage
@@ -485,13 +486,13 @@ ms.locfileid: "28954894"
    ```
 
    `kubectl`에 다음 예제처럼 내부 및 외부 IP 주소가 표시됩니다.
-   
+
    ```shell
    NAME                    CLUSTER-IP   EXTERNAL-IP   PORT(S)        AGE
    kubernetes              10.0.0.1     <none>        443/TCP        19h
    gs-spring-boot-docker   10.0.242.8   13.65.196.3   80:31215/TCP   3m
    ```
-   
+
    외부 IP 주소를 사용하여 웹 브라우저에 응용 프로그램을 열 수 있습니다.
 
    ![샘플 응용 프로그램을 외부로 찾아보기][SB02]
@@ -532,7 +533,7 @@ Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대�
 [Azure Web App on Linux에 대한 사용자 지정 Docker 이미지 사용]: /azure/app-service-web/app-service-linux-using-custom-docker-image
 [Docker]: https://www.docker.com/
 [Fabric8]: https://fabric8.io/
-[체험판 Azure 계정{]: https://azure.microsoft.com/pricing/free-trial/
+[체험판 Azure 계정]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [JDK(Java Developer Kit)]: http://www.oracle.com/technetwork/java/javase/downloads/
 [Visual Studio Team Services용 Java 도구]: https://java.visualstudio.com/

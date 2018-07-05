@@ -4,22 +4,22 @@ description: Azure Active Directory 스타터에 Spring Boot Initializer 앱을 
 services: active-directory
 documentationcenter: java
 author: rmcmurray
-manager: routlaw
+manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 02/01/2018
+ms.date: 06/20/2018
 ms.devlang: java
 ms.service: active-directory
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: cf1cad0b87626058f7204a6565d09fb8901b7ce4
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: adcbc78cc129daf589bf070741308e4024432e5d
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954684"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090836"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-active-directory"></a>Azure Active Directory에 Spring Boot Starter를 사용하는 방법
 
@@ -31,7 +31,7 @@ ms.locfileid: "28954684"
 
 이 문서의 단계를 완료하려면 다음 필수 구성 요소가 필요합니다.
 
-* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정{]에 등록할 수 있습니다.
+* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정]에 등록할 수 있습니다.
 * [JDK(Java Development Kit)](http://www.oracle.com/technetwork/java/javase/downloads/), 버전 1.7 이상
 * [Apache Maven](http://maven.apache.org/), 버전 3.0 이상
 
@@ -75,13 +75,17 @@ ms.locfileid: "28954684"
 
    ![Azure Active Directory 선택][directory-03]
 
+1. 포털 메뉴에서 **Azure Active Directory**를 선택하고, **속성**을 클릭하여 **디렉터리 ID**를 복사합니다-이는 이 문서의 뒷부분에서 사용 됩니다.
+
+   ![Azure Active Directory ID 복사][directory-13]
+
 ### <a name="add-an-application-registration-for-your-spring-boot-app"></a>Spring Boot 앱에 대한 응용 프로그램 등록 추가
 
 1. 포털 메뉴에서 **Azure Active Directory**를 선택하고 **개요**, **앱 등록**을 차례로 클릭합니다.
 
    ![새 앱 등록 추가][directory-04]
 
-1. **새 응용 프로그램 등록** 을 클릭하고 응용 프로그램 **이름** 을 지정한 다음 **로그온 URL** 에 http://localhost:8080 을 사용하고 **만들기** 를 클릭합니다.
+1. **새 응용 프로그램 등록** 을 클릭하고 응용 프로그램 **이름**을 지정한 다음http://localhost:8080 **로그온 URL**에 사용하고 **만들기**를 클릭합니다.
 
    ![새 앱 등록 만들기][directory-05]
 
@@ -89,7 +93,7 @@ ms.locfileid: "28954684"
 
    ![앱 등록 선택][directory-06]
 
-1. 앱 등록을 위한 페이지에서 나중에 사용하도록 **응용 프로그램 ID**를 복사한 다음 **키**를 클릭합니다.
+1. 앱 등록을 위한 페이지에서 나중에 사용하기 위해 **응용 프로그램 ID**를 복사한 다음, **설정**을 클릭하고, **키**를 클릭합니다.
 
    ![앱 등록 키 만들기][directory-07]
 
@@ -97,7 +101,7 @@ ms.locfileid: "28954684"
 
    ![앱 등록 키 매개 변수 지정][directory-08]
 
-1. 앱 등록을 위한 기본 페이지에서 **필요한 권한**을 클릭합니다.
+1. 앱 등록을 위한 기본 페이지에서 **설정**을 클릭하고 **필요한 권한**을 클릭합니다.
 
    ![앱 등록 필요 권한][directory-09]
 
@@ -113,105 +117,162 @@ ms.locfileid: "28954684"
 
    ![액세스 권한 부여][directory-12]
 
+1. 앱 등록을 위한 기본 페이지에서 **설정**을 클릭하고 **회신 URL**을 클릭합니다.
+
+   ![회신 URL 편집][directory-14]
+
+1. "http://localhost:8080/login/oauth2/code/azure"을 새 회신 URL로 입력하고, **저장**을 클릭합니다.
+
+   ![새 회신 URL 추가][directory-15]
+
 ## <a name="configure-and-compile-your-spring-boot-application"></a>Spring Boot 응용 프로그램 구성 및 컴파일
 
 1. 디렉터리에 다운로드한 프로젝트 아카이브에서 파일을 추출합니다.
 
-1. 프로젝트에서 상위 폴더로 이동하고 텍스트 편집기에서 *pom.xml* 파일을 엽니다.
+2. 프로젝트에서 상위 폴더로 이동하고 텍스트 편집기에서 *pom.xml* 파일을 엽니다.
 
-1. Spring OAuth2 보안의 종속성을 추가합니다. 예를 들면 다음과 같습니다.
+3. Spring OAuth2 보안의 종속성을 추가합니다. 예를 들면 다음과 같습니다.
 
    ```xml
    <dependency>
-      <groupId>org.springframework.security.oauth</groupId>
-      <artifactId>spring-security-oauth2</artifactId>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-oauth2-client</artifactId>
+   </dependency>
+   <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-oauth2-jose</artifactId>
    </dependency>
    ```
 
-1. *pom.xml* 파일을 저장하고 닫습니다.
+4. *pom.xml* 파일을 저장하고 닫습니다.
 
-1. 프로젝트에서 *src/main/resources* 폴더로 이동하고 텍스트 편집기에서 *application.properties* 파일을 엽니다.
+5. 프로젝트에서 *src/main/resources* 폴더로 이동하고 텍스트 편집기에서 *application.properties* 파일을 엽니다.
 
-1. 앞의 값을 사용하여 저장소 계정에 대한 키를 추가합니다. 예를 들어 다음과 같습니다.
+6. 앞의 값을 사용하여 저장소 계정에 대한 키를 추가합니다. 예를 들어 다음과 같습니다.
 
    ```yaml
-   # Specifies your Active Directory Application ID:
-   azure.activedirectory.clientId=11111111-1111-1111-1111-1111111111111111
+   # Specifies your Active Directory ID:
+   azure.activedirectory.tenant-id=22222222-2222-2222-2222-222222222222
 
-   # Specifies your secret key:
-   azure.activedirectory.clientSecret=AbCdEfGhIjKlMnOpQrStUvWxYz==
+   # Specifies your App Registration's Application ID:
+   spring.security.oauth2.client.registration.azure.client-id=11111111-1111-1111-1111-1111111111111111
+
+   # Specifies your App Registration's secret key:
+   spring.security.oauth2.client.registration.azure.client-secret=AbCdEfGhIjKlMnOpQrStUvWxYz==
 
    # Specifies the list of Active Directory groups to use for authentication:
-   azure.activedirectory.activeDirectoryGroups=Users
+   azure.activedirectory.active-directory-groups=Users
    ```
    위치:
+
    | 매개 변수 | 설명 |
    |---|---|
-   | `azure.activedirectory.clientId` | 앞의 **응용 프로그램 ID**를 포함합니다. |
-   | `azure.activedirectory.clientSecret` | 앞에서 완료한 앱 등록의 키 값을 포함합니다. |
-   | `azure.activedirectory.activeDirectoryGroups` | 인증에 사용할 Active Directory 그룹 목록을 포함합니다. |
+   | `azure.activedirectory.tenant-id` | 앞에 나온 Active Directory의 **디렉터리 ID** 포함합니다. |
+   | `spring.security.oauth2.client.registration.azure.client-id` | 앞에서 완료한 앱 등록의 **응용프로그램 ID**를 포함합니다. |
+   | `spring.security.oauth2.client.registration.azure.client-secret` | 앞에서 완료한 앱 등록 키의 **값**을 포함합니다. |
+   | `azure.activedirectory.active-directory-groups` | 인증에 사용할 Active Directory 그룹 목록을 포함합니다. |
 
+   > [!NOTE]
+   > 
+   > *application.properties* 파일에서 사용할 수 있는 값의 전체 목록은 GitHub에서 [Azure Active Directory Spring Boot 샘플][AAD Spring Boot Sample]을 참조합니다.
+   >
 
-1. *application.properties* 파일을 저장하고 닫습니다.
+7. *application.properties* 파일을 저장하고 닫습니다.
 
-1. 응용 프로그램에 대해 Java 소스 폴더에 이름이 *controller*인 폴더를 만듭니다. 예를 들어 *src/main/java/com/wingtiptoys/security/controller*입니다.
+8. 응용 프로그램에 대해 Java 소스 폴더에 이름이 *controller*인 폴더를 만듭니다. 예를 들어 *src/main/java/com/wingtiptoys/security/controller*입니다.
 
-1. *controller* 폴더에 이름이 *HelloController.java*인 새 Java 파일을 만들고 텍스트 편집기에서 엽니다.
+9. *controller* 폴더에 이름이 *HelloController.java*인 새 Java 파일을 만들고 텍스트 편집기에서 엽니다.
 
-1. 다음 코드를 입력한 다음 저장하고 파일을 닫습니다.
+10. 다음 코드를 입력한 다음 저장하고 파일을 닫습니다.
 
    ```java
    package com.wingtiptoys.security;
-   
+
    import org.springframework.web.bind.annotation.RequestMapping;
    import org.springframework.web.bind.annotation.RestController;
-   import org.springframework.boot.SpringApplication;
-   import org.springframework.boot.autoconfigure.SpringBootApplication;
-   
+   import org.springframework.beans.factory.annotation.Autowired;
    import org.springframework.security.access.prepost.PreAuthorize;
-   import org.springframework.security.web.authentication.preauth.PreAuthenticatedAuthenticationToken;
-   
+   import org.springframework.security.oauth2.client.OAuth2AuthorizedClient;
+   import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
+   import org.springframework.ui.Model;
+
    @RestController
    public class HelloController {
+      @Autowired
       @PreAuthorize("hasRole('Users')")
       @RequestMapping("/")
-      public String hello() {
+      public String helloWorld() {
          return "Hello World!";
       }
    }
    ```
+   > [!NOTE]
+   > 
+   > `@PreAuthorize("hasRole('')")` 메서드에 지정한 그룹 이름은 *application.properties* 파일의 `azure.activedirectory.active-directory-groups` 필드에 지정한 그룹 중 하나를 포함해야 합니다.
+   >
 
-1. 응용 프로그램에 대해 Java 소스 폴더에 이름이 *security*인 폴더를 만듭니다. 예를 들어 *src/main/java/com/wingtiptoys/security/security*입니다.
+   > [!NOTE]
+   > 
+   > 다른 요청 매핑에 대한 다른 권한 부여 설정을 지정할 수 있습니다. 예를 들어:
+   >
+   > ``` java
+   > public class HelloController {
+   >    @Autowired
+   >    @PreAuthorize("hasRole('Users')")
+   >    @RequestMapping("/")
+   >    public String helloWorld() {
+   >       return "Hello Users!";
+   >    }
+   >    @PreAuthorize("hasRole('Group1')")
+   >    @RequestMapping("/Group1")
+   >    public String groupOne() {
+   >       return "Hello Group 1 Users!";
+   >    }
+   >    @PreAuthorize("hasRole('Group2')")
+   >    @RequestMapping("/Group2")
+   >    public String groupTwo() {
+   >       return "Hello Group 2 Users!";
+   >    }
+   > }
+   > ```
+   >    
 
-1. *security* 폴더에 이름이 *WebSecurityConfig.java*인 새 Java 파일을 만들고 텍스트 편집기에서 엽니다.
+11. 응용 프로그램에 대해 Java 소스 폴더에 이름이 *security*인 폴더를 만듭니다. 예를 들어 *src/main/java/com/wingtiptoys/security/security*입니다.
 
-1. 다음 코드를 입력한 다음 저장하고 파일을 닫습니다.
+12. *security* 폴더에 이름이 *WebSecurityConfig.java*인 새 Java 파일을 만들고 텍스트 편집기에서 엽니다.
 
-   ```java
-   package com.wingtiptoys.security;
+13. 다음 코드를 입력한 다음 저장하고 파일을 닫습니다.
 
-   import com.microsoft.azure.spring.autoconfigure.aad.AADAuthenticationFilter;
-   import org.springframework.beans.factory.annotation.Autowired;
-   import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
-   import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
-   import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-   import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-   import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-   import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
-   
-   @EnableOAuth2Sso
-   @EnableGlobalMethodSecurity(securedEnabled = true, prePostEnabled = true)
-   
-   public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-      @Autowired
-      private AADAuthenticationFilter aadAuthFilter;
-      @Override
-      protected void configure(HttpSecurity http) throws Exception {
-         http.authorizeRequests().anyRequest().permitAll();
-         http.addFilterBefore(aadAuthFilter, UsernamePasswordAuthenticationFilter.class);
-      }
-   }
-   ```
+    ```java
+    package com.wingtiptoys.security;
+
+    import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+    import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+    import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+    import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+    import org.springframework.security.oauth2.client.oidc.userinfo.OidcUserRequest;
+    import org.springframework.security.oauth2.client.userinfo.OAuth2UserService;
+    import org.springframework.security.oauth2.core.oidc.user.OidcUser;
+
+    @EnableWebSecurity
+    @EnableGlobalMethodSecurity(prePostEnabled = true)
+    public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+        @Autowired
+        private OAuth2UserService<OidcUserRequest, OidcUser> oidcUserService;
+
+        @Override
+        protected void configure(HttpSecurity http) throws Exception {
+            http
+                .authorizeRequests()
+                .anyRequest().authenticated()
+                .and()
+                .oauth2Login()
+                .userInfoEndpoint()
+                .oidcUserService(oidcUserService);
+        }
+    }
+    ```
 
 ## <a name="build-and-test-your-app"></a>앱 빌드 및 테스트
 
@@ -221,18 +282,23 @@ ms.locfileid: "28954684"
 
    ```shell
    mvn clean package
+   mvn spring-boot:run
    ```
 
    ![사용 중인 응용 프로그램 빌드][build-application]
 
-1. Maven을 사용하여 Spring Boot 응용 프로그램을 빌드하고 실행합니다. 예:
+1. 응용프로그램이 Maven에서 빌드 및 시작되고 나면, <http://localhost:8080>을 웹 브라우저에서 엽니다. 사용자 이름 및 암호 입력 메시지가 나타납니다.
 
-   ```shell
-   mvn clean package
-   mvn spring-boot:run
-   ```
+   ![응용프로그램에 로그인][application-login]
 
-1. 응용 프로그램이 빌드되고 Maven에서 시작된 후 웹 브라우저에서 <http://localhost:8080>을 엽니다.
+1. 사용자가 성공적으로 로그인한 후 컨트롤러에서 샘플 "Hello World" 텍스트가 표시됩니다.
+
+   ![로그인 성공][hello-world]
+
+   > [!NOTE]
+   > 
+   > 승인되지 않은 사용자 계정인 경우 **HTTP 403 Unauthorized** 메시지가 나타납니다.
+   >
 
 ## <a name="next-steps"></a>다음 단계
 
@@ -250,17 +316,20 @@ Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 
 
 **[Spring Framework]** 는 Java 개발자가 엔터프라이즈 수준의 응용 프로그램을 만드는 데 도움이 되는 오픈 소스 솔루션입니다. 해당 플랫폼을 기반으로 하여 빌드되는 인기 있는 프로젝트 중 하나가 [Spring Boot]입니다. 이 프로젝트는 독립 실행형 Java 응용 프로그램을 만드는 간단한 방법을 제공합니다. Spring Boot을 시작하는 개발자를 도우려면 <https://github.com/spring-guides/>에서 몇 가지 샘플 Spring Boot 패키지를 사용할 있습니다. 기본 Spring Boot 프로젝트 목록에서 선택하는 것 외에도 **[Spring Initializr]** 를 통해 사용자 지정 Spring Boot 응용 프로그램을 만들기 시작하는 개발자에게 도움을 줍니다.
 
+더 자세한 예제는 Github [Azure Active Directory Spring Boot 샘플][AAD Spring Boot Sample]을 참조합니다.
+
 <!-- URL List -->
 
 [Azure Active Directory 설명서]: /azure/active-directory/
 [Get started with Azure AD]: /azure/active-directory/get-started-azure-ad
 [Java 개발자용 Azure]: https://docs.microsoft.com/java/azure/
-[체험판 Azure 계정{]: https://azure.microsoft.com/pricing/free-trial/
+[체험판 Azure 계정]: https://azure.microsoft.com/pricing/free-trial/
 [Visual Studio Team Services용 Java 도구]: https://java.visualstudio.com/
 [MSDN 구독자 혜택]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/
 [Spring Framework]: https://spring.io/
+[AAD Spring Boot Sample]: https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples/azure-active-directory-spring-boot-backend-sample
 
 <!-- IMG List -->
 
@@ -281,5 +350,10 @@ Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 
 [directory-10]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-10.png
 [directory-11]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-11.png
 [directory-12]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-12.png
+[directory-13]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-13.png
+[directory-14]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-14.png
+[directory-15]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-15.png
 
 [build-application]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/build-application.png
+[application-login]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/application-login.png
+[hello-world]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/hello-world.png

@@ -15,12 +15,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: c3a10a0d6029ba31b13f82907311d9182f98acb6
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: 49d94d11ad6a4e103ded849e477d99f01955c693
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954754"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090866"
 ---
 # <a name="deploy-a-spring-boot-application-on-linux-in-the-azure-container-service"></a>Azure Container Service에서 Linux에 Spring Boot 응용 프로그램 배포
 
@@ -30,7 +30,7 @@ ms.locfileid: "28954754"
 
 이 자습서의 단계를 완료하려면 다음 필수 조건이 필요합니다.
 
-* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정{]에 등록할 수 있습니다.
+* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정]에 등록할 수 있습니다.
 * [Azure CLI(명령줄 인터페이스)]
 * 최신 [JDK(Java Developer Kit)]
 * Apache의 [Maven] 빌드 도구(버전 3)
@@ -57,7 +57,7 @@ ms.locfileid: "28954754"
    cd /users/robert/SpringBoot
    ```
 
-1. [Spring Boot on Docker 시작하기] 샘플 프로젝트를 방금 만든 디렉터리에 복제합니다. 예:
+1. [Spring Boot on Docker 시작] 샘플 프로젝트를 방금 만든 디렉터리에 복제합니다. 예:
    ```
    git clone https://github.com/spring-guides/gs-spring-boot-docker.git
    ```
@@ -193,11 +193,11 @@ ms.locfileid: "28954754"
 
 1. [Azure Portal]을 찾아 로그인합니다.
 
-1. **+ 새로 만들기**의 메뉴 아이콘을 클릭하고 **웹 + 모바일**을 클릭한 다음 **}Web App on Linux**를 클릭합니다.
+2. **+ 새로 만들기**의 메뉴 아이콘을 클릭하고 **웹 + 모바일**을 클릭한 다음 **}Web App on Linux**를 클릭합니다.
    
    ![Azure Portal에서 새로운 웹앱 만들기][LX01]
 
-1. **Web App on Linux** 페이지가 표시되면 다음 정보를 입력합니다.
+3. **Web App on Linux** 페이지가 표시되면 다음 정보를 입력합니다.
 
    a. **앱 이름**에 고유한 이름을 입력합니다. 예: "*wingtiptoyslinux*."
 
@@ -207,19 +207,19 @@ ms.locfileid: "28954754"
 
    d. **컨테이너 구성**을 클릭하고 다음 정보를 입력합니다.
 
-      * **개인 레지스트리**를 선택합니다.
+   * **개인 레지스트리**를 선택합니다.
 
-      * **이미지 및 선택적 태그**: 이전에 사용한 컨테이너 이름을 지정합니다. 예: "*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*"
+   * **이미지 및 선택적 태그**: 이전에 사용한 컨테이너 이름을 지정합니다. 예: "*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*"
 
-      * **서버 URL**: 이전에 사용한 레지스트리 URL을 지정합니다. 예: "*https://wingtiptoysregistry.azurecr.io*"
+   * **서버 URL**: 이전의 레지스트리 URL을 지정합니다. 예: "*<https://wingtiptoysregistry.azurecr.io>*"
 
-      * **로그인 사용자 이름** 및 **암호**: 이전 단계에서 사용한 **액세스 키**의 로그인 자격 증명을 지정합니다.
+   * **로그인 사용자 이름** 및 **암호**: 이전 단계에서 사용한 **액세스 키**의 로그인 자격 증명을 지정합니다.
    
    e. 위의 정보를 모두 입력하면 **확인**을 클릭합니다.
 
    ![웹앱 설정 구성][LX02]
 
-1. **만들기**를 클릭합니다.
+4. **만들기**를 클릭합니다.
 
 > [!NOTE]
 >
@@ -270,7 +270,7 @@ Azure에서 Spring Boot 응용 프로그램을 사용 하는 방법에 대한 �
 
 Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 개발자용 Azure] 및 [Visual Studio Team Services용 Java 도구]를 참조하세요.
 
-Spring Boot on Docker 샘플 프로젝트에 대한 자세한 정보는 [Spring Boot on Docker 시작하기]을 참조하세요.
+Spring Boot on Docker 샘플 프로젝트에 대한 자세한 정보는 [Spring Boot on Docker 시작]을 참조하세요.
 
 자체 Spring Boot 응용 프로그램을 시작하는 데 도움이 필요하면 https://start.spring.io/에서 **Spring Initializr**를 참조하세요.
 
@@ -287,14 +287,14 @@ Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대�
 [Azure Portal을 사용하여 개인 Docker 컨테이너 레지스트리 만들기]: /azure/container-registry/container-registry-get-started-portal
 [Azure Web App on Linux에 대한 사용자 지정 Docker 이미지 사용]: /azure/app-service-web/app-service-linux-using-custom-docker-image
 [Docker]: https://www.docker.com/
-[체험판 Azure 계정{]: https://azure.microsoft.com/pricing/free-trial/
+[체험판 Azure 계정]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [JDK(Java Developer Kit)]: http://www.oracle.com/technetwork/java/javase/downloads/
 [Visual Studio Team Services용 Java 도구]: https://java.visualstudio.com/
 [Maven]: http://maven.apache.org/
 [MSDN 구독자 혜택]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
-[Spring Boot on Docker 시작하기]: https://github.com/spring-guides/gs-spring-boot-docker
+[Spring Boot on Docker 시작]: https://github.com/spring-guides/gs-spring-boot-docker
 [Spring Framework]: https://spring.io/
 
 <!-- IMG List -->
