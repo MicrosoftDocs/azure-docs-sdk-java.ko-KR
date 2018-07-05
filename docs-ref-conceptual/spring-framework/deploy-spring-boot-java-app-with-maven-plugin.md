@@ -5,229 +5,225 @@ services: app-service
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: ''
+editor: brborges
 ms.assetid: ''
-ms.author: robmcm;kevinzha
-ms.date: 02/01/2018
+ms.author: robmcm;kevinzha;brborges
+ms.date: 06/01/2018
 ms.devlang: java
 ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 82cb0da3ce49fa77f888808af14455bf226d5cb0
-ms.sourcegitcommit: 024b3127daf396a17bd43d57642e3534ae87f120
+ms.openlocfilehash: 3610312ed17301131967bd2c047c86656de070e7
+ms.sourcegitcommit: f313c14e92f38c54a3a583270ee85cc928cd39d7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34462753"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34689426"
 ---
-# <a name="deploy-a-spring-boot-app-to-the-cloud-using-the-maven-plugin-for-azure-web-apps"></a><span data-ttu-id="4bebe-103">Azure Web Apps의 Maven 플러그 인을 사용하여 Spring Boot 앱을 클라우드에 배포</span><span class="sxs-lookup"><span data-stu-id="4bebe-103">Deploy a Spring Boot app to the cloud using the Maven Plugin for Azure Web Apps</span></span>
+# <a name="deploy-a-spring-boot-app-to-the-cloud-using-the-maven-plugin-for-azure-app-service"></a><span data-ttu-id="b3d16-103">Azure Apps Service의 Maven 플러그 인을 사용하여 Spring Boot 앱을 클라우드에 배포</span><span class="sxs-lookup"><span data-stu-id="b3d16-103">Deploy a Spring Boot app to the cloud using the Maven Plugin for Azure App Service</span></span>
 
-<span data-ttu-id="4bebe-104">이 문서에서는 Azure Web Apps의 Maven 플러그 인을 사용하여 Azure App Services에 샘플 Spring Boot 응용 프로그램을 배포하는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-104">This article demonstrates using the Maven Plugin for Azure Web Apps to deploy a sample Spring Boot application to Azure App Services.</span></span>
+<span data-ttu-id="b3d16-104">이 문서에서는 Azure App Service Web Apps의 Maven 플러그 인을 사용하여 샘플 Spring Boot 응용 프로그램을 배포하는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-104">This article demonstrates using the Maven Plugin for Azure App Service Web Apps to deploy a sample Spring Boot application.</span></span>
 
 > [!NOTE]
 > 
-> <span data-ttu-id="4bebe-105">[Apache Maven](http://maven.apache.org/)에서 [Azure Web Apps의 Maven 플러그 인](https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin)은 Maven 프로젝트에 Azure App Service의 원활한 통합을 제공하고 Azure App Service에 웹앱을 배포하는 개발자를 위한 프로세스를 간소화합니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-105">The [Maven Plugin for Azure Web Apps](https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin) for [Apache Maven](http://maven.apache.org/) provides seamless integration of Azure App Service into Maven projects, and streamlines the process for developers to deploy web apps to Azure App Service.</span></span>
-> 
-> <span data-ttu-id="4bebe-106">Azure Web Apps의 Maven 플러그 인은 현재 미리 보기로 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-106">The Maven Plugin for Azure Web Apps is currently available as a preview.</span></span> <span data-ttu-id="4bebe-107">지금은 FTP 게시만 지원되지만 향후에 기능이 추가될 계획입니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-107">For now, only FTP publishing is supported, although additional features are planned for the future.</span></span>
-> 
+> <span data-ttu-id="b3d16-105">[Apache Maven](http://maven.apache.org/)에서 Azure Web Apps](https://docs.microsoft.com/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme)용 [Maven 플러그인은 Maven 프로젝트에 Azure App Service의 원활한 통합을 제공하고, 개발자가 Azure App Service에 웹앱을 배포하는 프로세스를 간소화합니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-105">The [Maven Plugin for Azure App Service Web Apps](https://docs.microsoft.com/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme) for [Apache Maven](http://maven.apache.org/) provides seamless integration of Azure App Service into Maven projects, and streamlines the process for developers to deploy web apps to Azure App Service.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="4bebe-108">필수 조건</span><span class="sxs-lookup"><span data-stu-id="4bebe-108">Prerequisites</span></span>
+<span data-ttu-id="b3d16-106">Maven 플러그인을 사용하기 전에 Maven Central에서 사용 가능한 플러그인 최신 버전을 확인합니다: [ ![Maven Central](https://img.shields.io/maven-central/v/com.microsoft.azure/azure-webapp-maven-plugin.svg)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.microsoft.azure%22%20AND%20a%3A%22azure-webapp-maven-plugin%22)</span><span class="sxs-lookup"><span data-stu-id="b3d16-106">Before using the Maven plugin, check on Maven Central for the latest available version of the plugin: [![Maven Central](https://img.shields.io/maven-central/v/com.microsoft.azure/azure-webapp-maven-plugin.svg)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.microsoft.azure%22%20AND%20a%3A%22azure-webapp-maven-plugin%22)</span></span> 
 
-<span data-ttu-id="4bebe-109">이 자습서의 단계를 완료하려면 다음 필수 조건이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-109">In order to complete the steps in this tutorial, you will need to have the following prerequisites:</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="b3d16-107">필수 조건</span><span class="sxs-lookup"><span data-stu-id="b3d16-107">Prerequisites</span></span>
 
-* <span data-ttu-id="4bebe-110">Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정]에 등록할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-110">An Azure subscription; if you don't already have an Azure subscription, you can activate your [MSDN subscriber benefits] or sign up for a [free Azure account].</span></span>
-* <span data-ttu-id="4bebe-111">[Azure CLI(명령줄 인터페이스)]</span><span class="sxs-lookup"><span data-stu-id="4bebe-111">The [Azure Command-Line Interface (CLI)].</span></span>
-* <span data-ttu-id="4bebe-112">최신 [JDK(Java Development Kit)], 버전 1.7 이상</span><span class="sxs-lookup"><span data-stu-id="4bebe-112">An up-to-date [Java Development Kit (JDK)], version 1.7 or later.</span></span>
-* <span data-ttu-id="4bebe-113">Apache의 [Maven] 빌드 도구(버전 3)</span><span class="sxs-lookup"><span data-stu-id="4bebe-113">Apache's [Maven] build tool (Version 3).</span></span>
-* <span data-ttu-id="4bebe-114">[Git] 클라이언트</span><span class="sxs-lookup"><span data-stu-id="4bebe-114">A [Git] client.</span></span>
+<span data-ttu-id="b3d16-108">이 자습서의 단계를 완료하려면 다음 필수 조건이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-108">In order to complete the steps in this tutorial, you will need to have the following prerequisites:</span></span>
 
-## <a name="clone-the-sample-spring-boot-web-app"></a><span data-ttu-id="4bebe-115">샘플 Spring Boot 웹앱 복제</span><span class="sxs-lookup"><span data-stu-id="4bebe-115">Clone the sample Spring Boot web app</span></span>
+* <span data-ttu-id="b3d16-109">Azure 구독; Azure 구독이 아직 없는 경우 [체험판 Azure 계정]에 등록할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-109">An Azure subscription; if you don't already have an Azure subscription, you can sign up for a [free Azure account].</span></span>
+* <span data-ttu-id="b3d16-110">[Azure CLI(명령줄 인터페이스)]</span><span class="sxs-lookup"><span data-stu-id="b3d16-110">The [Azure Command-Line Interface (CLI)].</span></span>
+* <span data-ttu-id="b3d16-111">최신 [JDK(Java Development Kit)], 버전 1.7 이상</span><span class="sxs-lookup"><span data-stu-id="b3d16-111">An up-to-date [Java Development Kit (JDK)], version 1.7 or later.</span></span>
+* <span data-ttu-id="b3d16-112">Apache의 [Maven] 빌드 도구(버전 3)</span><span class="sxs-lookup"><span data-stu-id="b3d16-112">Apache's [Maven] build tool (Version 3).</span></span>
+* <span data-ttu-id="b3d16-113">[Git] 클라이언트</span><span class="sxs-lookup"><span data-stu-id="b3d16-113">A [Git] client.</span></span>
 
-<span data-ttu-id="4bebe-116">이 섹션에서는 완료된 Spring Boot 응용 프로그램을 복제하고 로컬로 테스트합니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-116">In this section, you will clone a completed Spring Boot application and test it locally.</span></span>
+## <a name="clone-the-sample-spring-boot-web-app"></a><span data-ttu-id="b3d16-114">샘플 Spring Boot 웹앱 복제</span><span class="sxs-lookup"><span data-stu-id="b3d16-114">Clone the sample Spring Boot web app</span></span>
 
-1. <span data-ttu-id="4bebe-117">명령 프롬프트 또는 터미널 창을 열고 Spring Boot 응용 프로그램을 저장할 로컬 디렉터리를 만들고 해당 디렉터리로 변경합니다. 예:</span><span class="sxs-lookup"><span data-stu-id="4bebe-117">Open a command prompt or terminal window and create a local directory to hold your Spring Boot application, and change to that directory; for example:</span></span>
+<span data-ttu-id="b3d16-115">이 섹션에서는 완료된 Spring Boot 응용 프로그램을 복제하고 로컬로 테스트합니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-115">In this section, you will clone a completed Spring Boot application and test it locally.</span></span>
+
+1. <span data-ttu-id="b3d16-116">명령 프롬프트 또는 터미널 창을 열고 Spring Boot 응용 프로그램을 저장할 로컬 디렉터리를 만들고 해당 디렉터리로 변경합니다. 예:</span><span class="sxs-lookup"><span data-stu-id="b3d16-116">Open a command prompt or terminal window and create a local directory to hold your Spring Boot application, and change to that directory; for example:</span></span>
    ```shell
    md C:\SpringBoot
    cd C:\SpringBoot
    ```
-   <span data-ttu-id="4bebe-118">-- 또는 --</span><span class="sxs-lookup"><span data-stu-id="4bebe-118">-- or --</span></span>
+   <span data-ttu-id="b3d16-117">-- 또는 --</span><span class="sxs-lookup"><span data-stu-id="b3d16-117">-- or --</span></span>
    ```shell
-   md /users/robert/SpringBoot
-   cd /users/robert/SpringBoot
+   md ~/SpringBoot
+   cd ~/SpringBoot
    ```
 
-1. <span data-ttu-id="4bebe-119">[Spring Boot 시작하기] 샘플 프로젝트를 만든 디렉터리에 복제합니다. 예:</span><span class="sxs-lookup"><span data-stu-id="4bebe-119">Clone the [Spring Boot Getting Started] sample project into the directory you created; for example:</span></span>
+1. <span data-ttu-id="b3d16-118">[Spring Boot 시작하기] 샘플 프로젝트를 만든 디렉터리에 복제합니다. 예:</span><span class="sxs-lookup"><span data-stu-id="b3d16-118">Clone the [Spring Boot Getting Started] sample project into the directory you created; for example:</span></span>
    ```shell
-   git clone https://github.com/microsoft/gs-spring-boot
+   git clone https://github.com/spring-guides/gs-spring-boot
    ```
 
-1. <span data-ttu-id="4bebe-120">디렉터리를 완료된 프로젝트로 변경합니다. 예:</span><span class="sxs-lookup"><span data-stu-id="4bebe-120">Change directory to the completed project; for example:</span></span>
+1. <span data-ttu-id="b3d16-119">디렉터리를 완료된 프로젝트로 변경합니다. 예:</span><span class="sxs-lookup"><span data-stu-id="b3d16-119">Change directory to the completed project; for example:</span></span>
    ```shell
    cd gs-spring-boot/complete
    ```
 
-1. <span data-ttu-id="4bebe-121">Maven을 사용하여 JAR 파일을 빌드합니다. 예:</span><span class="sxs-lookup"><span data-stu-id="4bebe-121">Build the JAR file using Maven; for example:</span></span>
+1. <span data-ttu-id="b3d16-120">Maven을 사용하여 JAR 파일을 빌드합니다. 예:</span><span class="sxs-lookup"><span data-stu-id="b3d16-120">Build the JAR file using Maven; for example:</span></span>
    ```shell
    mvn clean package
    ```
 
-1. <span data-ttu-id="4bebe-122">웹앱을 만들면 Maven을 사용하여 웹앱을 시작합니다. 예:</span><span class="sxs-lookup"><span data-stu-id="4bebe-122">When the web app has been created, start the web app using Maven; for example:</span></span>
+1. <span data-ttu-id="b3d16-121">웹앱을 만들면 Maven을 사용하여 웹앱을 시작합니다. 예:</span><span class="sxs-lookup"><span data-stu-id="b3d16-121">When the web app has been created, start the web app using Maven; for example:</span></span>
    ```shell
    mvn spring-boot:run
    ```
 
-1. <span data-ttu-id="4bebe-123">웹 브라우저를 사용하여 로컬로 이동하여 웹앱을 테스트합니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-123">Test the web app by browsing to it locally using a web browser.</span></span> <span data-ttu-id="4bebe-124">예를 들어, curl을 사용할 수 있는 경우 다음 명령을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-124">For example, you could use the following command if you have curl available:</span></span>
+1. <span data-ttu-id="b3d16-122">웹 브라우저를 사용하여 로컬로 이동하여 웹앱을 테스트합니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-122">Test the web app by browsing to it locally using a web browser.</span></span> <span data-ttu-id="b3d16-123">예를 들어, curl을 사용할 수 있는 경우 다음 명령을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-123">For example, you could use the following command if you have curl available:</span></span>
    ```shell
    curl http://localhost:8080
    ```
 
-1. <span data-ttu-id="4bebe-125">다음과 같이 **Greetings from Spring Boot!** 라는 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-125">You should see the following message displayed: **Greetings from Spring Boot!**</span></span>
+1. <span data-ttu-id="b3d16-124">다음과 같이 **Greetings from Spring Boot!** 라는 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-124">You should see the following message displayed: **Greetings from Spring Boot!**</span></span>
 
-## <a name="create-an-azure-service-principal"></a><span data-ttu-id="4bebe-126">Azure 서비스 주체 만들기</span><span class="sxs-lookup"><span data-stu-id="4bebe-126">Create an Azure service principal</span></span>
+## <a name="adjust-project-for-war-based-deployment-on-azure-app-service"></a><span data-ttu-id="b3d16-125">Azure App Service에 WAR 기반 배포에 대한 프로젝트를 조정합니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-125">Adjust project for WAR-based deployment on Azure App Service</span></span>
 
-<span data-ttu-id="4bebe-127">이 섹션에서는 웹앱을 Azure에 배포할 때 Maven 플러그 인에서 사용하는 Azure 서비스 주체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-127">In this section, you will create an Azure service principal that the Maven plugin uses when deploying your web app to Azure.</span></span>
+<span data-ttu-id="b3d16-126">이 섹션에서는 기본적으로 Tomcat을 런타임으로 제공하는 Azure App Service에 WAR 파일로 배포할 Spring Boot 프로젝트를 신속하게 조정하게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-126">In this section we will quickly adjust the Spring Boot project to be deployed as a WAR file on Azure App Service, which provides Tomcat as the runtime by default.</span></span> <span data-ttu-id="b3d16-127">이 작업을 위해서는 두 가지 파일이 수정되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-127">For this to work, there are two files to be modified:</span></span>
 
-1. <span data-ttu-id="4bebe-128">명령 프롬프트를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-128">Open a command prompt.</span></span>
+- <span data-ttu-id="b3d16-128">Maven `pom.xml` 파일</span><span class="sxs-lookup"><span data-stu-id="b3d16-128">The Maven `pom.xml` file</span></span>
+- <span data-ttu-id="b3d16-129">`Application` Java 클래스</span><span class="sxs-lookup"><span data-stu-id="b3d16-129">The `Application` Java class</span></span>
 
-1. <span data-ttu-id="4bebe-129">Azure CLI를 사용하여 Azure 계정에 로그인합니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-129">Sign into your Azure account by using the Azure CLI:</span></span>
-   ```shell
-   az login
+<span data-ttu-id="b3d16-130">Maven 설정부터 시작해 보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-130">Let's start with the Maven settings:</span></span>
+
+1. <span data-ttu-id="b3d16-131">`pom.xml` 열기</span><span class="sxs-lookup"><span data-stu-id="b3d16-131">Open `pom.xml`</span></span>
+
+1. <span data-ttu-id="b3d16-132">맨 위에 있는 `<artifactId>` 정의 바로 뒤에 `<packaging>war</packaging>` 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-132">Add `<packaging>war</packaging>` right after the `<artifactId>` definition at the top:</span></span>
+   ```xml
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.springframework</groupId>
+    <artifactId>gs-spring-boot</artifactId>
+
+    <packaging>war</packaging>
    ```
-   <span data-ttu-id="4bebe-130">지시에 따라 로그인 프로세스를 완료합니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-130">Follow the instructions to complete the sign-in process.</span></span>
 
-1. <span data-ttu-id="4bebe-131">Azure 서비스 주체 만들기</span><span class="sxs-lookup"><span data-stu-id="4bebe-131">Create an Azure service principal:</span></span>
-   ```shell
-   az ad sp create-for-rbac --name "uuuuuuuu" --password "pppppppp"
+1. <span data-ttu-id="b3d16-133">다음 종속성을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-133">Add the following dependency:</span></span>
+   ```xml
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
    ```
-   <span data-ttu-id="4bebe-132">여기서 `uuuuuuuu`는 사용자 이름이고 `pppppppp`는 서비스 사용자에 대한 암호입니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-132">Where `uuuuuuuu` is the user name and `pppppppp` is the password for the service principal.</span></span>
 
-1. <span data-ttu-id="4bebe-133">Azure는 다음 예제와 유사한 JSON로 응답합니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-133">Azure responds with JSON that resembles the following example:</span></span>
-   ```json
-   {
-      "appId": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
-      "displayName": "uuuuuuuu",
-      "name": "http://uuuuuuuu",
-      "password": "pppppppp",
-      "tenant": "tttttttt-tttt-tttt-tttt-tttttttttttt"
+<span data-ttu-id="b3d16-134">이제 `Application` 클래스를 열고, IDE가 새 종속성을 이미 선택했으면, 다음과 같이 수정을 진행합니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-134">Now open the class `Application`, hopefully after your IDE has already picked up the new dependencies, and proceed with the following modifications:</span></span>
+
+1. <span data-ttu-id="b3d16-135">클래스 응용프로그램을 `SpringBootServletInitializer`의 서브 클래스로 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-135">Make class Application a subclass of `SpringBootServletInitializer`:</span></span>
+   ```java
+   @SpringBootApplication
+   public class Application extends SpringBootServletInitializer {
+     // ...
    }
    ```
 
-   > [!NOTE]
-   >
-   > <span data-ttu-id="4bebe-134">웹앱을 Azure에 배포하도록 Maven 플러그 인을 구성하는 경우 이 JSON 응답의 값을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-134">You will use the values from this JSON response when you configure the Maven plugin to deploy your web app to Azure.</span></span> <span data-ttu-id="4bebe-135">`aaaaaaaa`, `uuuuuuuu`, `pppppppp` 및 `tttttttt`는 다음 섹션에서 Maven `settings.xml` 파일을 구성할 때 이러한 값을 해당 요소에 쉽게 매핑할 수 있도록 이 예제에서 사용되는 자리 표시자 값입니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-135">The `aaaaaaaa`, `uuuuuuuu`, `pppppppp`, and `tttttttt` are placeholder values, which are used in this example to make it easier to map these values to their respective elements when you configure your Maven `settings.xml` file in the next section.</span></span>
-   >
-   >
-
-## <a name="configure-maven-to-use-your-azure-service-principal"></a><span data-ttu-id="4bebe-136">Azure 서비스 주체를 사용하도록 Maven 구성</span><span class="sxs-lookup"><span data-stu-id="4bebe-136">Configure Maven to use your Azure service principal</span></span>
-
-<span data-ttu-id="4bebe-137">이 섹션에서는 Maven에서 웹앱을 Azure에 배포할 때 사용할 인증을 구성하기 위해 Azure 서비스 주체의 값을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-137">In this section, you will use the values from your Azure service principal to configure the authentication that Maven uses when deploying your web app to Azure.</span></span>
-
-1. <span data-ttu-id="4bebe-138">텍스트 편집기에서 Maven `settings.xml` 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-138">Open your Maven `settings.xml` file in a text editor.</span></span> <span data-ttu-id="4bebe-139">이 파일은 다음 예제와 비슷한 경로에 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-139">This file may be in a path similar to the following examples:</span></span>
-   * `/etc/maven/settings.xml`
-   * `%ProgramFiles%\apache-maven\3.5.0\conf\settings.xml`
-   * `$HOME/.m2/settings.xml`
-
-1. <span data-ttu-id="4bebe-140">*settings.xml* 파일의 `<servers>` 컬렉션에 이 자습서의 이전 섹션에 있는 Azure 서비스 주체 설정을 추가합니다. 예:</span><span class="sxs-lookup"><span data-stu-id="4bebe-140">Add your Azure service principal settings from the previous section of this tutorial to the `<servers>` collection in the *settings.xml* file; for example:</span></span>
-
-   ```xml
-   <servers>
-      <server>
-        <id>azure-auth</id>
-         <configuration>
-            <client>aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa</client>
-            <tenant>tttttttt-tttt-tttt-tttt-tttttttttttt</tenant>
-            <key>pppppppp</key>
-            <environment>AZURE</environment>
-         </configuration>
-      </server>
-   </servers>
+1. <span data-ttu-id="b3d16-136">응용프로그램 클래스에 다음 메서드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-136">Add the following method to the Application class:</span></span>
+   ```java
+       @Override
+       protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+           return application.sources(Application.class);
+       }
    ```
-   <span data-ttu-id="4bebe-141">위치:</span><span class="sxs-lookup"><span data-stu-id="4bebe-141">Where:</span></span>
-   | <span data-ttu-id="4bebe-142">요소</span><span class="sxs-lookup"><span data-stu-id="4bebe-142">Element</span></span> | <span data-ttu-id="4bebe-143">설명</span><span class="sxs-lookup"><span data-stu-id="4bebe-143">Description</span></span> |
-   |---|---|
-   | `<id>` | <span data-ttu-id="4bebe-144">Azure에 웹앱을 배포할 때 Maven을 사용하여 보안 설정을 조회하는 고유한 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-144">Specifies a unique name which Maven uses to look up your security settings when you deploy your web app to Azure.</span></span> |
-   | `<client>` | <span data-ttu-id="4bebe-145">서비스 사용자의 `appId` 값을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-145">Contains the `appId` value from your service principal.</span></span> |
-   | `<tenant>` | <span data-ttu-id="4bebe-146">서비스 사용자의 `tenant` 값을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-146">Contains the `tenant` value from your service principal.</span></span> |
-   | `<key>` | <span data-ttu-id="4bebe-147">서비스 사용자의 `password` 값을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-147">Contains the `password` value from your service principal.</span></span> |
-   | `<environment>` | <span data-ttu-id="4bebe-148">대상 Azure 클라우드 환경을 정의합니다. 이 예에서는 `AZURE`입니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-148">Defines the target Azure cloud environment, which is `AZURE` in this example.</span></span> <span data-ttu-id="4bebe-149">(환경의 전체 목록은 [Azure Web Apps의 Maven 플러그 인] 설명서에서 제공됩니다.)</span><span class="sxs-lookup"><span data-stu-id="4bebe-149">(A full list of environments is available in the [Maven Plugin for Azure Web Apps] documentation.)</span></span> |
 
-1. <span data-ttu-id="4bebe-150">*settings.xml* 파일을 저장하고 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-150">Save and close the *settings.xml* file.</span></span>
+<span data-ttu-id="b3d16-137">이제 응용프로그램은 Tomcat 및 다른 Servlet 런타임(예: Jetty)에 배포될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-137">Your application is now ready to be deployed to Tomcat and any other Servlet runtime (e.g. Jetty).</span></span>
 
-## <a name="optional-customize-your-pomxml-before-deploying-your-web-app-to-azure"></a><span data-ttu-id="4bebe-151">선택 사항: 웹앱을 Azure에 배포하기 전에 pom.xml 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="4bebe-151">OPTIONAL: Customize your pom.xml before deploying your web app to Azure</span></span>
+## <a name="add-the-maven-plugin-for-azure-app-service-web-apps"></a><span data-ttu-id="b3d16-138">Azure App Service Web Apps용 Maven 플러그인 추가</span><span class="sxs-lookup"><span data-stu-id="b3d16-138">Add the Maven Plugin for Azure App Service Web Apps</span></span>
 
-<span data-ttu-id="4bebe-152">텍스트 편집기에서 Spring Boot 응용 프로그램에 대한 `pom.xml` 파일을 열고 `azure-webapp-maven-plugin`에 대한 `<plugin>` 요소를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-152">Open the `pom.xml` file for your Spring Boot application in a text editor, and then locate the `<plugin>` element for `azure-webapp-maven-plugin`.</span></span> <span data-ttu-id="4bebe-153">이 요소는 다음 예제와 유사합니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-153">This element should resemble the following example:</span></span>
+<span data-ttu-id="b3d16-139">이 섹션에서는 Azure App Service Web Apps에 이 응용프로그램의 전체 배포를 자동화하는 Maven 플러그인을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-139">In this section, we will add a Maven plugin that will automate the entire deployment of this application into Azure App Service Web Apps.</span></span>
 
+1. <span data-ttu-id="b3d16-140">`pom.xml`을 다시 한 번 엽니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-140">Open `pom.xml` once again.</span></span>
+
+1. <span data-ttu-id="b3d16-141">`<properties>` 내에서, `maven.build.timestamp.format` 속성으로 사용자 지정 타임스탬프 형식을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-141">Inside `<properties>`, set a custom timestamp format with the property `maven.build.timestamp.format`.</span></span> <span data-ttu-id="b3d16-142">Azure App Service는 응용프로그램의 공개 URL을 생성하기 때문에, 이 설정은 배포 이름을 생성하고 다른 사용자의 실시간 배포와의 충돌을 피하기 위해 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-142">Because Azure App Service creates a public URL for your application, this setting will be used to generate the name of your deployment, and avoid conflict with other users' live deployments.</span></span>
    ```xml
-   <plugin>
+    <properties>
+        <java.version>1.8</java.version>
+        <maven.build.timestamp.format>yyyyMMddHHmmssSSS</maven.build.timestamp.format>
+    </properties>
+   ```
+
+1. <span data-ttu-id="b3d16-143">`<plugins>` 요소에 다음을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-143">In the `<plugins>` element, add the following:</span></span>
+   ```xml
+    <plugin>
       <groupId>com.microsoft.azure</groupId>
       <artifactId>azure-webapp-maven-plugin</artifactId>
-      <version>0.1.3</version>
-      <configuration>
-         <authentication>
-            <serverId>azure-auth</serverId>
-         </authentication>
-         <resourceGroup>maven-plugin</resourceGroup>
-         <appName>maven-web-app-${maven.build.timestamp}</appName>
-         <region>westus</region>
-         <javaVersion>1.8</javaVersion>
-         <deploymentType>ftp</deploymentType>
-         <resources>
-            <resource>
-               <directory>${project.basedir}/target</directory>
-               <targetPath>/</targetPath>
-               <includes>
-                  <include>*.jar</include>
-               </includes>
-            </resource>
-            <resource>
-               <directory>${project.basedir}</directory>
-               <targetPath>/</targetPath>
-               <includes>
-                  <include>web.config</include>
-               </includes>
-            </resource>
-         </resources>
-      </configuration>
-   </plugin>
+      <!-- Check latest version on Maven Central -->
+      <version>1.1.0</version>
+    </plugin>
    ```
 
-<span data-ttu-id="4bebe-154">Maven 플러그 인에 대해 수정할 수 있는 여러 값이 있으며 이러한 각 요소에 대한 자세한 설명을 [Azure Web Apps의 Maven 플러그 인] 설명서에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-154">There are several values that you can modify for the Maven plugin, and a detailed description for each of these elements is available in the [Maven Plugin for Azure Web Apps] documentation.</span></span> <span data-ttu-id="4bebe-155">즉, 이 문서에서 강조 표시된 값은 여러 개입니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-155">That being said, there are several values that are worth highlighting in this article:</span></span>
+<span data-ttu-id="b3d16-144">이러한 설정을 통해, 귀하의 Maven 프로젝트는 이제 실시간으로 Azure App Service Web App에 배포될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-144">With these settings, your Maven project is now ready for live deployment to Azure App Service Web App.</span></span>
 
-| <span data-ttu-id="4bebe-156">요소</span><span class="sxs-lookup"><span data-stu-id="4bebe-156">Element</span></span> | <span data-ttu-id="4bebe-157">설명</span><span class="sxs-lookup"><span data-stu-id="4bebe-157">Description</span></span> |
+## <a name="install-and-log-in-to-azure-cli"></a><span data-ttu-id="b3d16-145">Azure CLI 설치 및 로그인</span><span class="sxs-lookup"><span data-stu-id="b3d16-145">Install and log in to Azure CLI</span></span>
+
+<span data-ttu-id="b3d16-146">Maven Plugin이 Spring Boot 응용프로그램을 배포하도록 하는 가장 간단하고 쉬운 방법은 [ Azure CLI](https://docs.microsoft.com/cli/azure/)를 사용하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-146">The simplest and easiest way to get the Maven Plugin deploying your Spring Boot application is by using [Azure CLI](https://docs.microsoft.com/cli/azure/).</span></span> <span data-ttu-id="b3d16-147">설치되어 있는지 확인해 보세요.</span><span class="sxs-lookup"><span data-stu-id="b3d16-147">Make sure you have it installed.</span></span>
+
+1. <span data-ttu-id="b3d16-148">Azure CLI를 사용하여 Azure 계정에 로그인합니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-148">Sign into your Azure account by using the Azure CLI:</span></span>
+   ```shell
+   az login
+   ```
+   <span data-ttu-id="b3d16-149">지시에 따라 로그인 프로세스를 완료합니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-149">Follow the instructions to complete the sign-in process.</span></span>
+
+## <a name="optionally-customize-pomxml-before-deploying"></a><span data-ttu-id="b3d16-150">또는 배포 전에 pom.xml을 사용자 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-150">Optionally, customize pom.xml before deploying</span></span>
+
+<span data-ttu-id="b3d16-151">텍스트 편집기에서 Spring Boot 응용 프로그램에 대한 `pom.xml` 파일을 열고 `azure-webapp-maven-plugin`에 대한 `<plugin>` 요소를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-151">Open the `pom.xml` file for your Spring Boot application in a text editor, and then locate the `<plugin>` element for `azure-webapp-maven-plugin`.</span></span> <span data-ttu-id="b3d16-152">이 요소는 다음 예제와 유사합니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-152">This element should resemble the following example:</span></span>
+
+   ```xml
+  <plugins>
+    <plugin>
+      <groupId>com.microsoft.azure</groupId>
+      <artifactId>azure-webapp-maven-plugin</artifactId>
+      <!-- Check latest version on Maven Central -->
+      <version>1.1.0</version>
+      <configuration>
+         <resourceGroup>maven-projects</resourceGroup>
+         <appName>${project.artifactId}-${maven.build.timestamp}</appName>
+         <region>westus</region>
+         <javaVersion>1.8</javaVersion>
+         <deploymentType>war</deploymentType>
+      </configuration>
+    </plugin>
+  </plugins>
+   ```
+
+<span data-ttu-id="b3d16-153">Maven 플러그 인에 대해 수정할 수 있는 여러 값이 있으며 이러한 각 요소에 대한 자세한 설명을 [Azure Web Apps의 Maven 플러그 인] 설명서에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-153">There are several values that you can modify for the Maven plugin, and a detailed description for each of these elements is available in the [Maven Plugin for Azure Web Apps] documentation.</span></span> <span data-ttu-id="b3d16-154">즉, 이 문서에서 강조 표시된 값은 여러 개입니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-154">That being said, there are several values that are worth highlighting in this article:</span></span>
+
+| <span data-ttu-id="b3d16-155">요소</span><span class="sxs-lookup"><span data-stu-id="b3d16-155">Element</span></span> | <span data-ttu-id="b3d16-156">설명</span><span class="sxs-lookup"><span data-stu-id="b3d16-156">Description</span></span> |
 |---|---|
-| `<version>` | <span data-ttu-id="4bebe-158">[Azure Web Apps의 Maven 플러그 인] 버전을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-158">Specifies the version of the [Maven Plugin for Azure Web Apps].</span></span> <span data-ttu-id="4bebe-159">[Maven 중앙 리포지토리](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22)에 나열된 버전을 검사하여 최신 버전을 사용하고 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-159">Verify the version listed in the [Maven Central Respository](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) to ensure that you are using the latest version.</span></span> |
-| `<authentication>` | <span data-ttu-id="4bebe-160">Azure에 대한 인증 정보를 지정합니다. 이 예제에서는 `azure-auth`이 포함된 `<serverId>` 요소를 포함합니다. Maven에서는 해당 값을 사용하여 이 문서의 이전 섹션에 정의된 Maven *settings.xml* 파일에서 Azure 서비스 주체 값을 조회합니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-160">Specifies the authentication information for Azure, which in this example contains a `<serverId>` element that contains `azure-auth`; Maven uses that value to look up the Azure service principal values in your Maven *settings.xml* file, which you defined in an earlier section of this article.</span></span> |
-| `<resourceGroup>` | <span data-ttu-id="4bebe-161">대상 리소스 그룹, 즉, 이 예에서 `maven-plugin`을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-161">Specifies the target resource group, which is `maven-plugin` in this example.</span></span> <span data-ttu-id="4bebe-162">리소스 그룹이 아직 존재하지 않는 경우 배포 중에 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-162">The resource group is created during deployment if it does not already exist.</span></span> |
-| `<appName>` | <span data-ttu-id="4bebe-163">웹앱에 대한 대상 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-163">Specifies the target name for your web app.</span></span> <span data-ttu-id="4bebe-164">이 예제에서는 대상 이름은 `maven-web-app-${maven.build.timestamp}`이며 이 예제에서 충돌을 피하기 위해 여기에 `${maven.build.timestamp}` 접미사가 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-164">In this example, the target name is `maven-web-app-${maven.build.timestamp}`, where the `${maven.build.timestamp}` suffix is appended in this example to avoid conflict.</span></span> <span data-ttu-id="4bebe-165">(타임스탬프는 선택 사항입니다. 앱 이름에 대한 고유한 문자열을 지정할 수 있습니다.)</span><span class="sxs-lookup"><span data-stu-id="4bebe-165">(The timestamp is optional; you can specify any unique string for the app name.)</span></span> |
-| `<region>` | <span data-ttu-id="4bebe-166">대상 지역을 지정합니다. 이 예제에서는 `westus`입니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-166">Specifies the target region, which in this example is `westus`.</span></span> <span data-ttu-id="4bebe-167">(전체 목록은 [Azure Web Apps의 Maven 플러그 인] 설명서에서 제공됩니다.)</span><span class="sxs-lookup"><span data-stu-id="4bebe-167">(A full list is in the [Maven Plugin for Azure Web Apps] documentation.)</span></span> |
-| `<javaVersion>` | <span data-ttu-id="4bebe-168">웹앱에 Java 런타임 버전을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-168">Specifies the Java runtime version for your web app.</span></span> <span data-ttu-id="4bebe-169">(전체 목록은 [Azure Web Apps의 Maven 플러그 인] 설명서에서 제공됩니다.)</span><span class="sxs-lookup"><span data-stu-id="4bebe-169">(A full list is in the [Maven Plugin for Azure Web Apps] documentation.)</span></span> |
-| `<deploymentType>` | <span data-ttu-id="4bebe-170">웹앱의 배포 형식을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-170">Specifies deployment type for your web app.</span></span> <span data-ttu-id="4bebe-171">지금은 `ftp`만 지원되지만 다른 배포 형식의 지원을 개발 중입니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-171">For now, only `ftp` is supported, although support for other deployment types is in development.</span></span> |
-| `<resources>` | <span data-ttu-id="4bebe-172">Maven이 Azure에 웹앱을 배포할 때 사용하는 리소스 및 대상을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-172">Specifies resources and target destinations which Maven uses when deploying your web app to Azure.</span></span> <span data-ttu-id="4bebe-173">이 예제에서 두 개의 `<resource>` 요소는 Maven이 웹앱에 JAR 파일을 배포하고 Spring Boot 프로젝트에서 *web.config* 파일을 배포합니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-173">In this example, two `<resource>` elements specify that Maven will deploy the JAR file for your web app and the *web.config* file from the Spring Boot project.</span></span> |
+| `<version>` | <span data-ttu-id="b3d16-157">[Azure Web Apps의 Maven 플러그 인] 버전을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-157">Specifies the version of the [Maven Plugin for Azure Web Apps].</span></span> <span data-ttu-id="b3d16-158">[Maven 중앙 리포지토리](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22)에 나열된 버전을 검사하여 최신 버전을 사용하고 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-158">Verify the version listed in the [Maven Central Respository](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) to ensure that you are using the latest version.</span></span> |
+| `<resourceGroup>` | <span data-ttu-id="b3d16-159">대상 리소스 그룹, 즉, 이 예에서 `maven-plugin`을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-159">Specifies the target resource group, which is `maven-plugin` in this example.</span></span> <span data-ttu-id="b3d16-160">리소스 그룹이 아직 존재하지 않는 경우 배포 중에 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-160">The resource group is created during deployment if it does not already exist.</span></span> |
+| `<appName>` | <span data-ttu-id="b3d16-161">웹앱에 대한 대상 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-161">Specifies the target name for your web app.</span></span> <span data-ttu-id="b3d16-162">이 예제에서는 대상 이름은 `maven-web-app-${maven.build.timestamp}`이며 이 예제에서 충돌을 피하기 위해 여기에 `${maven.build.timestamp}` 접미사가 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-162">In this example, the target name is `maven-web-app-${maven.build.timestamp}`, where the `${maven.build.timestamp}` suffix is appended in this example to avoid conflict.</span></span> <span data-ttu-id="b3d16-163">(타임스탬프는 선택 사항입니다. 앱 이름에 대한 고유한 문자열을 지정할 수 있습니다.)</span><span class="sxs-lookup"><span data-stu-id="b3d16-163">(The timestamp is optional; you can specify any unique string for the app name.)</span></span> |
+| `<region>` | <span data-ttu-id="b3d16-164">대상 지역을 지정합니다. 이 예제에서는 `westus`입니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-164">Specifies the target region, which in this example is `westus`.</span></span> <span data-ttu-id="b3d16-165">(전체 목록은 [Azure Web Apps의 Maven 플러그 인] 설명서에서 제공됩니다.)</span><span class="sxs-lookup"><span data-stu-id="b3d16-165">(A full list is in the [Maven Plugin for Azure Web Apps] documentation.)</span></span> |
+| `<javaVersion>` | <span data-ttu-id="b3d16-166">웹앱에 Java 런타임 버전을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-166">Specifies the Java runtime version for your web app.</span></span> <span data-ttu-id="b3d16-167">(전체 목록은 [Azure Web Apps의 Maven 플러그 인] 설명서에서 제공됩니다.)</span><span class="sxs-lookup"><span data-stu-id="b3d16-167">(A full list is in the [Maven Plugin for Azure Web Apps] documentation.)</span></span> |
+| `<deploymentType>` | <span data-ttu-id="b3d16-168">웹앱의 배포 형식을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-168">Specifies deployment type for your web app.</span></span> <span data-ttu-id="b3d16-169">기본값은 `war`입니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-169">Default is `war`.</span></span> |
 
-## <a name="build-and-deploy-your-web-app-to-azure"></a><span data-ttu-id="4bebe-174">Azure에 웹앱 빌드 및 배포</span><span class="sxs-lookup"><span data-stu-id="4bebe-174">Build and deploy your web app to Azure</span></span>
+## <a name="build-and-deploy-your-web-app-to-azure"></a><span data-ttu-id="b3d16-170">Azure에 웹앱 빌드 및 배포</span><span class="sxs-lookup"><span data-stu-id="b3d16-170">Build and deploy your web app to Azure</span></span>
 
-<span data-ttu-id="4bebe-175">이 문서의 이전 섹션에서 설정을 모두 구성했으면 웹앱을 Azure에 배포할 준비가 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-175">Once you have configured all of the settings in the preceding sections of this article, you are ready to deploy your web app to Azure.</span></span> <span data-ttu-id="4bebe-176">이렇게 하려면 다음 단계를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-176">To do so, use the following steps:</span></span>
+<span data-ttu-id="b3d16-171">이 문서의 이전 섹션에서 설정을 모두 구성했으면 웹앱을 Azure에 배포할 준비가 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-171">Once you have configured all of the settings in the preceding sections of this article, you are ready to deploy your web app to Azure.</span></span> <span data-ttu-id="b3d16-172">이렇게 하려면 다음 단계를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-172">To do so, use the following steps:</span></span>
 
-1. <span data-ttu-id="4bebe-177">*pom.xml* 파일을 변경한 경우 이전에 사용하던 명령 프롬프트 또는 터미널 창에서 Maven를 사용하여 JAR 파일을 다시 작성합니다. 예:</span><span class="sxs-lookup"><span data-stu-id="4bebe-177">From the command prompt or terminal window that you were using earlier, rebuild the JAR file using Maven if you made any changes to the *pom.xml* file; for example:</span></span>
+1. <span data-ttu-id="b3d16-173">*pom.xml* 파일을 변경한 경우 이전에 사용하던 명령 프롬프트 또는 터미널 창에서 Maven를 사용하여 JAR 파일을 다시 작성합니다. 예:</span><span class="sxs-lookup"><span data-stu-id="b3d16-173">From the command prompt or terminal window that you were using earlier, rebuild the JAR file using Maven if you made any changes to the *pom.xml* file; for example:</span></span>
    ```shell
    mvn clean package
    ```
 
-1. <span data-ttu-id="4bebe-178">Maven을 사용하여 Azure에 웹앱을 배포합니다. 예:</span><span class="sxs-lookup"><span data-stu-id="4bebe-178">Deploy your web app to Azure by using Maven; for example:</span></span>
+1. <span data-ttu-id="b3d16-174">Maven을 사용하여 Azure에 웹앱을 배포합니다. 예:</span><span class="sxs-lookup"><span data-stu-id="b3d16-174">Deploy your web app to Azure by using Maven; for example:</span></span>
    ```shell
    mvn azure-webapp:deploy
    ```
 
-<span data-ttu-id="4bebe-179">Maven은 Azure에 웹앱을 배포합니다. 웹앱이 아직 없는 경우 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-179">Maven will deploy your web app to Azure; if the web app does not already exist, it will be created.</span></span>
+<span data-ttu-id="b3d16-175">Maven은 Azure에 웹앱을 배포합니다. 웹앱이 아직 없는 경우 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-175">Maven will deploy your web app to Azure; if the web app does not already exist, it will be created.</span></span>
 
-<span data-ttu-id="4bebe-180">웹을 배포하면 [Azure Portal]을 사용하여 작업을 관리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-180">When your web has been deployed, you will be able to manage it by using the [Azure portal].</span></span>
+<span data-ttu-id="b3d16-176">웹을 배포하면 [Azure Portal]을 사용하여 작업을 관리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-176">When your web has been deployed, you will be able to manage it by using the [Azure portal].</span></span>
 
-* <span data-ttu-id="4bebe-181">웹앱은 **App Services**에 나열됩니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-181">Your web app will be listed in **App Services**:</span></span>
+* <span data-ttu-id="b3d16-177">웹앱은 **App Services**에 나열됩니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-177">Your web app will be listed in **App Services**:</span></span>
 
    ![Azure Portal App Services에 나열된 웹앱][AP01]
 
-* <span data-ttu-id="4bebe-183">웹앱의 URL은 웹앱의 **개요**에 나열됩니다.</span><span class="sxs-lookup"><span data-stu-id="4bebe-183">And the URL for your web app will be listed in the **Overview** for your web app:</span></span>
+* <span data-ttu-id="b3d16-179">웹앱의 URL은 웹앱의 **개요**에 나열됩니다.</span><span class="sxs-lookup"><span data-stu-id="b3d16-179">And the URL for your web app will be listed in the **Overview** for your web app:</span></span>
 
    ![웹앱의 URL 확인][AP02]
 
@@ -252,19 +248,19 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 1. Save and close the *application.yml* file.
 -->
 
-## <a name="next-steps"></a><span data-ttu-id="4bebe-185">다음 단계</span><span class="sxs-lookup"><span data-stu-id="4bebe-185">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="b3d16-181">다음 단계</span><span class="sxs-lookup"><span data-stu-id="b3d16-181">Next steps</span></span>
 
-<span data-ttu-id="4bebe-186">이 문서에서 설명하는 다양한 기술에 대한 자세한 내용은 다음 문서를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="4bebe-186">For more information about the various technologies discussed in this article, see the following articles:</span></span>
+<span data-ttu-id="b3d16-182">이 문서에서 설명하는 다양한 기술에 대한 자세한 내용은 다음 문서를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b3d16-182">For more information about the various technologies discussed in this article, see the following articles:</span></span>
 
-* <span data-ttu-id="4bebe-187">[Azure Web Apps의 Maven 플러그 인]</span><span class="sxs-lookup"><span data-stu-id="4bebe-187">[Maven Plugin for Azure Web Apps]</span></span>
+* <span data-ttu-id="b3d16-183">[Azure Web Apps의 Maven 플러그 인]</span><span class="sxs-lookup"><span data-stu-id="b3d16-183">[Maven Plugin for Azure Web Apps]</span></span>
 
-* [<span data-ttu-id="4bebe-188">Azure CLI에서 Azure에 로그인</span><span class="sxs-lookup"><span data-stu-id="4bebe-188">Log in to Azure from the Azure CLI</span></span>](/azure/xplat-cli-connect)
+* [<span data-ttu-id="b3d16-184">Azure CLI에서 Azure에 로그인</span><span class="sxs-lookup"><span data-stu-id="b3d16-184">Log in to Azure from the Azure CLI</span></span>](/azure/xplat-cli-connect)
 
-* [<span data-ttu-id="4bebe-189">Azure Web Apps의 Maven 플러그 인을 사용하여 컨테이너화된 Spring Boot 앱을 Azure에 배포하는 방법</span><span class="sxs-lookup"><span data-stu-id="4bebe-189">How to use the Maven Plugin for Azure Web Apps to deploy a containerized Spring Boot app to Azure</span></span>](deploy-containerized-spring-boot-java-app-with-maven-plugin.md)
+* [<span data-ttu-id="b3d16-185">Azure Web Apps의 Maven 플러그 인을 사용하여 컨테이너화된 Spring Boot 앱을 Azure에 배포하는 방법</span><span class="sxs-lookup"><span data-stu-id="b3d16-185">How to use the Maven Plugin for Azure Web Apps to deploy a containerized Spring Boot app to Azure</span></span>](deploy-containerized-spring-boot-java-app-with-maven-plugin.md)
 
-* [<span data-ttu-id="4bebe-190">Azure CLI 2.0을 사용하여 Azure 서비스 주체 만들기</span><span class="sxs-lookup"><span data-stu-id="4bebe-190">Create an Azure service principal with Azure CLI 2.0</span></span>](/cli/azure/create-an-azure-service-principal-azure-cli)
+* [<span data-ttu-id="b3d16-186">Azure CLI 2.0을 사용하여 Azure 서비스 주체 만들기</span><span class="sxs-lookup"><span data-stu-id="b3d16-186">Create an Azure service principal with Azure CLI 2.0</span></span>](/cli/azure/create-an-azure-service-principal-azure-cli)
 
-* [<span data-ttu-id="4bebe-191">Maven 설정 참조</span><span class="sxs-lookup"><span data-stu-id="4bebe-191">Maven Settings Reference</span></span>](https://maven.apache.org/settings.html)
+* [<span data-ttu-id="b3d16-187">Maven 설정 참조</span><span class="sxs-lookup"><span data-stu-id="b3d16-187">Maven Settings Reference</span></span>](https://maven.apache.org/settings.html)
 
 <!-- URL List -->
 
@@ -279,14 +275,13 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 [Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
 [Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [Maven]: http://maven.apache.org/
-[MSDN 구독자 혜택]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
-[Spring Boot 시작하기]: https://github.com/microsoft/gs-spring-boot
-[Spring Boot Getting Started]: https://github.com/microsoft/gs-spring-boot
+[Spring Boot 시작하기]: https://github.com/spring-guides/gs-spring-boot
+[Spring Boot Getting Started]: https://github.com/spring-guides/gs-spring-boot
 [Spring Framework]: https://spring.io/
-[Azure Web Apps의 Maven 플러그 인]: https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin
-[Maven Plugin for Azure Web Apps]: https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin
+[Azure Web Apps의 Maven 플러그 인]: https://docs.microsoft.com/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme
+[Maven Plugin for Azure Web Apps]: https://docs.microsoft.com/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme
 
 <!-- IMG List -->
 
