@@ -14,11 +14,12 @@ ms.service: storage
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: storage
-ms.openlocfilehash: e10ecfb7f6d705aa3ccffc49d354d1019f7f1a0b
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.openlocfilehash: 2f9381fce2fee207360287c57443b56eb5128e42
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090696"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-storage"></a>Azure Storage에 Spring Boot Starter를 사용하는 방법
 
@@ -108,6 +109,7 @@ ms.lasthandoff: 04/26/2018
    az group create --name wingtiptoysresources --location westus
    ```
    위치:
+
    | 매개 변수 | 설명 |
    |---|---|
    | `name` | 리소스 그룹의 고유한 이름을 지정합니다. |
@@ -128,11 +130,12 @@ ms.lasthandoff: 04/26/2018
    }
    ```
 
-1. Spring Boot 앱에 대한 리소스 그룹에서 Azure Storage 계정을 만듭니다. 예를 들어 다음과 같습니다.
+2. Spring Boot 앱에 대한 리소스 그룹에서 Azure Storage 계정을 만듭니다. 예를 들어 다음과 같습니다.
    ```azurecli
    az storage account create --name wingtiptoysstorage --resource-group wingtiptoysresources --location westus --sku Standard_LRS
    ```
    위치:
+
    | 매개 변수 | 설명 |
    |---|---|
    | `name` | 저장소 계정에 고유한 이름을 지정합니다. |
@@ -141,7 +144,7 @@ ms.lasthandoff: 04/26/2018
    | `sku` | `Premium_LRS`, `Standard_GRS`, `Standard_LRS`, `Standard_RAGRS`, `Standard_ZRS` 중 하나를 지정합니다. |
 
    Azure가 프로비전 상태를 포함하는 긴 JSON 문자열을 반환합니다. 예를 들어 다음과 같습니다.
-   
+
    ```json
    {
      "id": "/subscriptions/ssssssss-ssss-ssss-ssss-ssssssssssss/...",
@@ -157,11 +160,12 @@ ms.lasthandoff: 04/26/2018
    }
    ```
 
-1. 저장소 계정에 대한 연결 문자열을 검색합니다. 예를 들어 다음과 같습니다.
+3. 저장소 계정에 대한 연결 문자열을 검색합니다. 예를 들어 다음과 같습니다.
    ```azurecli
    az storage account show-connection-string --name wingtiptoysstorage --resource-group wingtiptoysresources
    ```
    위치:
+
    | 매개 변수 | 설명 |
    | ---|---|
    | `name` | 이전 단계에서 만든 저장소 계정의 고유 이름을 지정합니다. |
@@ -270,7 +274,7 @@ ms.lasthandoff: 04/26/2018
    ```shell
    mvn clean package spring-boot:run
    ```
-   
+
    응용 프로그램이 컨테이너를 만들고 텍스트 파일을 Blob 형태로 컨테이너에 업로드합니다. 이것은 [Azure Portal](https://portal.azure.com)의 저장소 계정 아래 나열됩니다.
 
    ![Azure Portal에서 blob 나열](media/configure-spring-boot-starter-java-app-with-azure-storage/list-blobs-in-portal.png)

@@ -11,6 +11,8 @@
           href: configure-spring-boot-starter-java-app-with-azure-active-directory.md
         - name: Azure Key Vault
           href: configure-spring-boot-starter-java-app-with-azure-key-vault.md
+        - name: Azure App Insights
+          href: configure-spring-boot-java-applicationinsights.md
     - name: 자습서
       items:
         - name: Azure Redis 캐시(영문)

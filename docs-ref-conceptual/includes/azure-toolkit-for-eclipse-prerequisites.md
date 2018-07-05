@@ -10,16 +10,19 @@
   * [Mac OS X](http://www.apple.com/osx) 버전 "Yosemite" 이상
   * [Ubuntu Linux](http://www.ubuntu.com) 버전 14, 15 및 16
 
-자세한 내용은 Eclipse Marketplace의 [Eclipse용 Azure 도구 키트](http://marketplace.eclipse.org/content/azure-toolkit-eclipse) 페이지에서 참조하세요.
+> [!NOTE]
+> 
+> Eclipse Marketplace에 있는 [Eclipse용 Azure Toolkit](http://marketplace.eclipse.org/content/azure-toolkit-eclipse) 페이지는 툴킷과 호환되는 빌드를 나열합니다.
+> 
 
 <!--
 > [!IMPORTANT]
+> 
 > If you are using the Azure Toolkit for Eclipse on Windows, the toolkit requires installing the Azure SDK 2.9.6 or later in order to use the Azure emulator. You have two options for installing the Azure SDK:
 > 
 > * You can download and install the Azure SDK by using the [Web Platform Installer (WebPI)](http://go.microsoft.com/fwlink/?LinkID=252838).
 > * If you do not have the Azure SDK installed when you create your first Azure deployment project, you will be prompted to automatically download install the requisite version of the Azure SDK.
 > 
 > Note that the Azure SDK is required on Windows only.
-> 
 > 
 -->
