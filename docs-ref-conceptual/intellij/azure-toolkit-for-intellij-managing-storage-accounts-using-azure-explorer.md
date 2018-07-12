@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 4edb8c1ceef508dd251db693ccc3b98d77ec452b
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954844"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38075432"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-intellij"></a>IntelliJ용 Azure Explorer를 사용하여 저장소 계정 관리
 
@@ -47,7 +47,8 @@ Azure Explorer를 사용하여 저장소 계정을 만들려면 다음을 수행
 
    * **계정 종류**: 만들려는 저장소 계정의 형식을 지정합니다(예: “Blob Storage”). 자세한 내용은 [Azure 저장소 계정 정보]를 참조하세요. 
 
-   * **성능**: 선택한 게시자에서 사용할 저장소 계정 제품을 지정합니다(예: “프리미엄”). 자세한 내용은 [Azure Storage 확장성 및 성능 목표]를 참조하세요. 
+   * 
+  **성능**: 선택한 게시자에서 사용할 저장소 계정 제품을 지정합니다(예: “프리미엄”). 자세한 내용은 [Azure Storage 확장성 및 성능 목표]를 참조하세요. 
 
    * **복제**: 저장소 계정에 대한 복제를 지정합니다(예: “영역 중복”). 자세한 내용은 [Azure Storage 복제]를 참조하세요. 
 
@@ -69,7 +70,7 @@ Azure Explorer를 사용하여 저장소 컨테이너를 만들려면 다음을 
 
    ![Blob 컨테이너 만들기 명령][CC01]
 
-2. **Blob 컨테이너 만들기** 대화 상자에서 컨테이너의 이름을 지정하고 **확인**을 클릭합니다. 저장소 컨테이너 이름 지정에 대한 자세한 내용은 [컨테이너, BLOB 및 메타데이터 이름 지정 및 참조]를 참조하세요.
+2. **Blob 컨테이너 만들기** 대화 상자에서 컨테이너의 이름을 지정하고 **확인**을 클릭합니다. 저장소 컨테이너 이름 지정에 대한 자세한 내용은 [컨테이너, BLOB, 메타데이터 이름 지정 및 참조]를 참조하세요.
 
    ![저장소 컨테이너 만들기 대화 상자][CC02]
 
@@ -101,7 +102,7 @@ Azure Explorer를 사용하여 저장소 계정을 삭제하려면 다음을 수
 
 Azure Storage 계정, 크기 및 가격 책정에 대한 자세한 내용은 다음 리소스를 참조하세요.
 
-* [Microsoft Azure 저장소 소개]
+* [Microsoft Azure Storage 소개]
 * [Azure 저장소 계정 정보]
 * Azure Storage 계정 크기
   * [Azure의 Windows 저장소 계정 크기]
@@ -115,11 +116,11 @@ Azure Storage 계정, 크기 및 가격 책정에 대한 자세한 내용은 다
 <!-- URL List -->
 
 [IntelliJ용 Azure 도구 키트에 대한 로그인 지침]: ./azure-toolkit-for-intellij-sign-in-instructions.md
-[Microsoft Azure 저장소 소개]: /azure/storage/storage-introduction
+[Microsoft Azure Storage 소개]: /azure/storage/storage-introduction
 [Azure 저장소 계정 정보]: /azure/storage/storage-create-storage-account
 [Azure Storage 복제]: /azure/storage/storage-redundancy
 [Azure Storage 확장성 및 성능 목표]: /azure/storage/storage-scalability-targets
-[컨테이너, BLOB 및 메타데이터 이름 지정 및 참조]: http://go.microsoft.com/fwlink/?LinkId=255555
+[컨테이너, BLOB, 메타데이터 이름 지정 및 참조]: http://go.microsoft.com/fwlink/?LinkId=255555
 
 [Azure의 Windows 저장소 계정 크기]: /azure/virtual-machines/virtual-machines-windows-sizes
 [Azure의 Linux 저장소 계정 크기]: /azure/virtual-machines/virtual-machines-linux-sizes
