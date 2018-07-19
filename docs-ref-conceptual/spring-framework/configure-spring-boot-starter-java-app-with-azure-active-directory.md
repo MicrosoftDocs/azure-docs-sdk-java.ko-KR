@@ -8,18 +8,18 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 06/20/2018
+ms.date: 07/02/2018
 ms.devlang: java
 ms.service: active-directory
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: adcbc78cc129daf589bf070741308e4024432e5d
-ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
+ms.openlocfilehash: 6d20593620c7fb73f8481be8705bdc42d4e9ce32
+ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37090836"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37864053"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-active-directory"></a>Azure Active Directory에 Spring Boot Starter를 사용하는 방법
 
@@ -67,7 +67,7 @@ ms.locfileid: "37090836"
 
    ![새 Azure Active Directory 인스턴스 만들기][directory-01]
 
-1. **조직 이름**, **초기 도메인 이름**을 입력하고 **만들기**를 클릭합니다.
+1. **조직 이름**과 **초기 도메인 이름**을 입력합니다. 사용자 디렉터리의 전체 URL을 복사합니다. 이는 자습서의 뒷부분에서 사용자 계정을 추가 하는 데 사용됩니다. (예: `wingtiptoysdirectory.onmicrosoft.com`) 완료되면 **만들기**를 클릭합니다.
 
    ![Azure Active Directory 이름 지정][directory-02]
 
@@ -75,7 +75,7 @@ ms.locfileid: "37090836"
 
    ![Azure Active Directory 선택][directory-03]
 
-1. 포털 메뉴에서 **Azure Active Directory**를 선택하고, **속성**을 클릭하여 **디렉터리 ID**를 복사합니다-이는 이 문서의 뒷부분에서 사용 됩니다.
+1. 포털 메뉴에서 **Azure Active Directory**를 선택하고, **속성**을 클릭하여 **디렉터리 ID**를 복사합니다. 이 값은 이 자습서의 뒷부분에서 *application.properties* 파일을 구성하는 데 사용됩니다.
 
    ![Azure Active Directory ID 복사][directory-13]
 
@@ -93,11 +93,11 @@ ms.locfileid: "37090836"
 
    ![앱 등록 선택][directory-06]
 
-1. 앱 등록을 위한 페이지에서 나중에 사용하기 위해 **응용 프로그램 ID**를 복사한 다음, **설정**을 클릭하고, **키**를 클릭합니다.
+1. 앱 등록 페이지가 표시되면 **응용 프로그램 ID**를 복사합니다. 이 값은 이 자습서의 뒷부분에서 *application.properties* 파일을 구성하는 데 사용됩니다. **설정**을 클릭한 다음 **키**를 클릭합니다.
 
    ![앱 등록 키 만들기][directory-07]
 
-1. **설명**을 추가하고 새 키에 대해 **기간**을 지정한 다음 **저장**을 클릭합니다. **저장** 아이콘을 클릭하면 키 값이 자동으로 입력되며 나중에 사용하기 위해 키 값을 복사해 두어야 합니다.  이 값은 나중에 검색할 수 없습니다.
+1. **설명**을 추가하고 새 키에 대해 **기간**을 지정한 다음 **저장**을 클릭합니다. **저장** 아이콘을 클릭하면 키 값이 자동으로 입력되며, 나중에 이 자습서의 뒷부분에서 *application.properties* 파일을 구성하기 위해 키 값을 복사해 두어야 합니다. 이 값은 나중에 검색할 수 없습니다.
 
    ![앱 등록 키 매개 변수 지정][directory-08]
 
@@ -125,13 +125,55 @@ ms.locfileid: "37090836"
 
    ![새 회신 URL 추가][directory-15]
 
+1. 앱 등록에 대한 기본 페이지에서 **매니페스트**를 클릭하고 `oauth2AllowImplicitFlow` 매개 변수의 값을 `true`로 설정하고 **저장**을 클릭합니다.
+
+   ![앱 매니페스트 구성][directory-16]
+
+   > [!NOTE]
+   > 
+   > `oauth2AllowImplicitFlow` 매개 변수 및 다른 응용 프로그램 설정에 대한 자세한 내용은 [Azure Active Directory 응용 프로그램 매니페스트][AAD app manifest]를 참조하세요. 
+   >
+
+### <a name="add-a-user-account-to-your-directory-and-add-that-account-to-a-group"></a>디렉터리에 사용자 계정을 추가하고 해당 계정을 그룹에 추가합니다
+
+1. Active Directory의 **개요** 페이지에서 **사용자**를 클릭합니다.
+
+   ![사용자 패널을 엽니다.][directory-17]
+
+1. **사용자** 패널이 표시되면, **새 사용자**를 클릭합니다.
+
+   ![새 사용자 계정 추가하기][directory-18]
+
+1. **사용자** 패널이 표시되면, **이름** 및 **사용자 이름**을 입력합니다.
+
+   ![사용자 계정 정보 입력][directory-19]
+
+   > [!NOTE]
+   > 
+   > 사용자 이름을 입력하려면 자습서의 앞부분에 나온 디렉터리 URL을 지정해야 합니다. 예를 들어,
+   >
+   > `wingtipuser@wingtiptoysdirectory.onmicrosoft.com`
+   > 
+
+1. **그룹**을 클릭하고, 응용 프로그램에서 권한 부여를 위해 사용할 그룹을 선택한 다음 **선택**을 클릭합니다. (이 자습서의 목적에 따라 _사용자_ 그룹에 계정을 추가합니다.)
+
+   ![사용자의 그룹을 선택합니다.][directory-20]
+
+1. **암호 표시**를 클릭하여 암호를 복사합니다. 이는 이 자습서의 뒷부분에서 응용 프로그램에 로그인할 때 사용됩니다.
+
+   ![암호 표시][directory-21]
+
+1. **만들기**를 클릭하여 디렉터리에 새 사용자 계정을 추가합니다.
+
+   ![새 사용자 계정 만들기][directory-22]
+
 ## <a name="configure-and-compile-your-spring-boot-application"></a>Spring Boot 응용 프로그램 구성 및 컴파일
 
-1. 디렉터리에 다운로드한 프로젝트 아카이브에서 파일을 추출합니다.
+1. 이 자습서의 앞부분에서 작성하고 다운로드한 프로젝트 아카이브의 파일을 디렉터리로 추출합니다.
 
-2. 프로젝트에서 상위 폴더로 이동하고 텍스트 편집기에서 *pom.xml* 파일을 엽니다.
+1. 프로젝트에서 상위 폴더로 이동하고 텍스트 편집기에서 *pom.xml* 파일을 엽니다.
 
-3. Spring OAuth2 보안의 종속성을 추가합니다. 예를 들면 다음과 같습니다.
+1. Spring OAuth2 보안의 종속성을 추가합니다. 예를 들면 다음과 같습니다.
 
    ```xml
    <dependency>
@@ -144,11 +186,11 @@ ms.locfileid: "37090836"
    </dependency>
    ```
 
-4. *pom.xml* 파일을 저장하고 닫습니다.
+1. *pom.xml* 파일을 저장하고 닫습니다.
 
-5. 프로젝트에서 *src/main/resources* 폴더로 이동하고 텍스트 편집기에서 *application.properties* 파일을 엽니다.
+1. 프로젝트에서 *src/main/resources* 폴더로 이동하고 텍스트 편집기에서 *application.properties* 파일을 엽니다.
 
-6. 앞의 값을 사용하여 저장소 계정에 대한 키를 추가합니다. 예를 들어 다음과 같습니다.
+1. 이전에 생성한 값을 사용하여 앱 등록을 위한 설정을 지정합니다. 예를 들어,
 
    ```yaml
    # Specifies your Active Directory ID:
@@ -160,7 +202,7 @@ ms.locfileid: "37090836"
    # Specifies your App Registration's secret key:
    spring.security.oauth2.client.registration.azure.client-secret=AbCdEfGhIjKlMnOpQrStUvWxYz==
 
-   # Specifies the list of Active Directory groups to use for authentication:
+   # Specifies the list of Active Directory groups to use for authorization:
    azure.activedirectory.active-directory-groups=Users
    ```
    위치:
@@ -170,20 +212,20 @@ ms.locfileid: "37090836"
    | `azure.activedirectory.tenant-id` | 앞에 나온 Active Directory의 **디렉터리 ID** 포함합니다. |
    | `spring.security.oauth2.client.registration.azure.client-id` | 앞에서 완료한 앱 등록의 **응용프로그램 ID**를 포함합니다. |
    | `spring.security.oauth2.client.registration.azure.client-secret` | 앞에서 완료한 앱 등록 키의 **값**을 포함합니다. |
-   | `azure.activedirectory.active-directory-groups` | 인증에 사용할 Active Directory 그룹 목록을 포함합니다. |
+   | `azure.activedirectory.active-directory-groups` | 권한 부여에 사용할 Active Directory 그룹 목록을 포함합니다. |
 
    > [!NOTE]
    > 
    > *application.properties* 파일에서 사용할 수 있는 값의 전체 목록은 GitHub에서 [Azure Active Directory Spring Boot 샘플][AAD Spring Boot Sample]을 참조합니다.
    >
 
-7. *application.properties* 파일을 저장하고 닫습니다.
+1. *application.properties* 파일을 저장하고 닫습니다.
 
-8. 응용 프로그램에 대해 Java 소스 폴더에 이름이 *controller*인 폴더를 만듭니다. 예를 들어 *src/main/java/com/wingtiptoys/security/controller*입니다.
+1. 응용 프로그램에 대해 Java 소스 폴더에 이름이 *controller*인 폴더를 만듭니다. 예를 들어 *src/main/java/com/wingtiptoys/security/controller*입니다.
 
-9. *controller* 폴더에 이름이 *HelloController.java*인 새 Java 파일을 만들고 텍스트 편집기에서 엽니다.
+1. *controller* 폴더에 이름이 *HelloController.java*인 새 Java 파일을 만들고 텍스트 편집기에서 엽니다.
 
-10. 다음 코드를 입력한 다음 저장하고 파일을 닫습니다.
+1. 다음 코드를 입력한 다음 저장하고 파일을 닫습니다.
 
    ```java
    package com.wingtiptoys.security;
@@ -237,11 +279,11 @@ ms.locfileid: "37090836"
    > ```
    >    
 
-11. 응용 프로그램에 대해 Java 소스 폴더에 이름이 *security*인 폴더를 만듭니다. 예를 들어 *src/main/java/com/wingtiptoys/security/security*입니다.
+1. 응용 프로그램에 대해 Java 소스 폴더에 이름이 *security*인 폴더를 만듭니다. 예를 들어 *src/main/java/com/wingtiptoys/security/security*입니다.
 
-12. *security* 폴더에 이름이 *WebSecurityConfig.java*인 새 Java 파일을 만들고 텍스트 편집기에서 엽니다.
+1. *security* 폴더에 이름이 *WebSecurityConfig.java*인 새 Java 파일을 만들고 텍스트 편집기에서 엽니다.
 
-13. 다음 코드를 입력한 다음 저장하고 파일을 닫습니다.
+1. 다음 코드를 입력한 다음 저장하고 파일을 닫습니다.
 
     ```java
     package com.wingtiptoys.security;
@@ -291,6 +333,13 @@ ms.locfileid: "37090836"
 
    ![응용프로그램에 로그인][application-login]
 
+   > [!NOTE]
+   > 
+   > 새 사용자 계정에서 처음 로그인한 경우라면, 암호를 변경하라는 메시지가 표시될 수 있습니다.
+   > 
+   > ![암호 변경][update-password]
+   > 
+
 1. 사용자가 성공적으로 로그인한 후 컨트롤러에서 샘플 "Hello World" 텍스트가 표시됩니다.
 
    ![로그인 성공][hello-world]
@@ -321,8 +370,9 @@ Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 
 <!-- URL List -->
 
 [Azure Active Directory 설명서]: /azure/active-directory/
+[AAD app manifest]: /azure/active-directory/develop/active-directory-application-manifest
 [Get started with Azure AD]: /azure/active-directory/get-started-azure-ad
-[Java 개발자용 Azure]: https://docs.microsoft.com/java/azure/
+[Java 개발자용 Azure]: /java/azure/
 [체험판 Azure 계정]: https://azure.microsoft.com/pricing/free-trial/
 [Visual Studio Team Services용 Java 도구]: https://java.visualstudio.com/
 [MSDN 구독자 혜택]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
@@ -353,7 +403,15 @@ Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 
 [directory-13]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-13.png
 [directory-14]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-14.png
 [directory-15]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-15.png
+[directory-16]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-16.png
+[directory-17]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-17.png
+[directory-18]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-18.png
+[directory-19]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-19.png
+[directory-20]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-20.png
+[directory-21]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-21.png
+[directory-22]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-22.png
 
-[build-application]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/build-application.png
 [application-login]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/application-login.png
+[build-application]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/build-application.png
 [hello-world]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/hello-world.png
+[update-password]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/update-password.png
