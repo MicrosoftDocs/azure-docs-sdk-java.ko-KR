@@ -51,7 +51,7 @@ ms.locfileid: "28954734"
 
       ![GitHub 토큰을 입력하는 대화 상자][CL02b]
 
-1. 리포지토리 URL에 **https://github.com/spring-guides/gs-spring-boot-docker.git**을 입력하여 로컬 경로 및 폴더 정보를 지정하고 **복제**를 클릭합니다.
+1. 리포지토리 URL에 **https://github.com/spring-guides/gs-spring-boot-docker.git** 을 입력하여 로컬 경로 및 폴더 정보를 지정하고 **복제** 를 클릭합니다.
 
    ![리포지토리 복제 대화 상자][CL03]
 
