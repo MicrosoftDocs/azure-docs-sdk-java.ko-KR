@@ -8,18 +8,18 @@ manager: routlaw
 editor: ''
 ms.assetid: ''
 ms.author: robmcm;yungez;kevinzha
-ms.date: 02/01/2018
+ms.date: 07/05/2018
 ms.devlang: java
 ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
-ms.openlocfilehash: 6cf999f3db397760709476dae1f5c0fd83503725
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.openlocfilehash: 3306f3ef66ec1b53ab004765b8fb7aef04de9077
+ms.sourcegitcommit: 1ff4654193404415841252a130b87a8b53b7c6d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31823806"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39235977"
 ---
 # <a name="how-to-use-the-spring-boot-starter-with-the-azure-cosmos-db-sql-api"></a>Azure Cosmos DB SQL API에서 Spring Boot Starter를 사용하는 방법
 
@@ -33,13 +33,13 @@ Azure Cosmos DB는 개발자가 SQL, MongoDB, Graph 및 Table API와 같은 표�
 
 이 문서의 단계를 수행하기 위해 다음 필수 구성 요소가 필요합니다.
 
-* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정{]에 등록할 수 있습니다.
+* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정]에 등록할 수 있습니다.
 * [JDK(Java Development Kit)](http://www.oracle.com/technetwork/java/javase/downloads/), 버전 1.7 이상
 * [Apache Maven](http://maven.apache.org/), 버전 3.0 이상
 
 ## <a name="create-an-azure-cosmos-db-by-using-the-azure-portal"></a>Azure Portal을 사용하여 Azure Cosmos DB 만들기
 
-1. Azure Portal(<https://portal.azure.com/>)이동하고 **+새로 만들기**를 클릭합니다.
+1. Azure Portal(<https://portal.azure.com/>)로 이동하고 **+리소스 만들기**를 클릭합니다.
 
    ![Azure portal][AZ01]
 
@@ -50,7 +50,7 @@ Azure Cosmos DB는 개발자가 SQL, MongoDB, Graph 및 Table API와 같은 표�
 1. **Azure Cosmos DB** 페이지에서 다음 정보를 입력합니다.
 
    * 고유한 **ID**를 입력합니다. 이 항목은 데이터베이스의 URI로 사용합니다. 예: *wingtiptoysdata.documents.azure.com*
-   * API에 **SQL(Document DB)** 을 선택합니다.
+   * API에 대한 **SQL**을 선택합니다.
    * 데이터베이스에 사용하려는 **구독**을 선택합니다.
    * 데이터베이스에 새 **리소스 그룹**을 만들지 아니면 기존 리소스 그룹을 선택할지를 지정합니다.
    * 데이터베이스의 **위치**를 지정합니다.
@@ -71,13 +71,18 @@ Azure Cosmos DB는 개발자가 SQL, MongoDB, Graph 및 Table API와 같은 표�
 
 1. <https://start.spring.io/>로 이동합니다.
 
-1. **Java**에서 **Maven** 프로젝트를 생성한다고 지정하고, 응용 프로그램에 대한 **그룹** 및 **아티팩트** 이름을 입력한 다음 **프로젝트를 생성**하는 단추를 클릭합니다.
+1. **Java**에서 **Maven** 프로젝트를 생성한다고 지정하고, 응용 프로그램 **그룹** 및 **아티팩트** 이름을 입력한 다음, **Spring Boot** 버전을 지정하고 **프로젝트를 생성**하는 단추를 클릭합니다.
+
+   > [!IMPORTANT]
+   >
+   > Spring Boot 버전 2.0.n에서 API에 몇 가지 호환성이 손상되는 변경이 있었기 때문에 이 자습서의 단계를 완료하려면 Spring Boot 1.5.n 버전 중 하나가 필요합니다.
+   >
 
    ![기본 Spring Initializr 옵션][SI01]
 
    > [!NOTE]
    >
-   > Spring Initializr는 **그룹** 및 **아티팩트** 이름을 사용하여 패키지 이름을 만듭니다(예: *com.example.wintiptoys*).
+   > Spring Initializr는 **그룹** 및 **아티팩트** 이름을 사용하여 패키지 이름을 만듭니다(예: *com.example.wintiptoysdata*).
    >
 
 1. 메시지가 표시되면 로컬 컴퓨터의 경로에 프로젝트를 다운로드합니다.
@@ -92,11 +97,11 @@ Azure Cosmos DB는 개발자가 SQL, MongoDB, Graph 및 Table API와 같은 표�
 
 1. 앱의 디렉터리에서 *pom.xml* 파일을 찾습니다. 예:
 
-   `C:\SpringBoot\wingtiptoys\pom.xml`
+   `C:\SpringBoot\wingtiptoysdata\pom.xml`
 
    또는
 
-   `/users/example/home/wingtiptoys/pom.xml`
+   `/users/example/home/wingtiptoysdata/pom.xml`
 
    ![pom.xml 파일 찾기][PM01]
 
@@ -112,17 +117,28 @@ Azure Cosmos DB는 개발자가 SQL, MongoDB, Graph 및 Table API와 같은 표�
 
    ![pom.xml 파일 편집][PM02]
 
+1. Spring Boot 버전이 1.5.n 버전 중 하나인지 확인합니다. 예를 들어
+
+   ```xml
+   <parent>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-parent</artifactId>
+      <version>1.5.14.RELEASE</version>
+      <relativePath/>
+   </parent>
+   ```
+
 1. *pom.xml* 파일을 저장하고 닫습니다.
 
 ## <a name="configure-your-spring-boot-app-to-use-your-azure-cosmos-db"></a>Azure Cosmos DB를 사용하도록 Spring Boot 앱 구성
 
 1. 앱의 *리소스* 디렉터리에서 *application.properties* 파일을 찾습니다.
 
-   `C:\SpringBoot\wingtiptoys\src\main\resources\application.properties`
+   `C:\SpringBoot\wingtiptoysdata\src\main\resources\application.properties`
 
    또는
 
-   `/users/example/home/wingtiptoys/src/main/resources/application.properties`
+   `/users/example/home/wingtiptoysdata/src/main/resources/application.properties`
 
    ![application.properties 파일 찾기][RE01]
 
@@ -154,13 +170,14 @@ Azure Cosmos DB는 개발자가 SQL, MongoDB, Graph 및 Table API와 같은 표�
 1. 텍스트 편집기에서 *User.java* 파일을 다음 줄을 파일에 추가하여 데이터베이스에서 값을 저장하고 검색하는 일반 사용자 클래스를 정의합니다.
 
    ```java
-   package com.example.wingtiptoys;
+   package com.example.wingtiptoysdata;
 
+   // Define a generic User class.
    public class User {
       private String id;
       private String firstName;
       private String lastName;
- 
+   
       public User(String id, String firstName, String lastName) {
          this.id = id;
          this.firstName = firstName;
@@ -170,30 +187,30 @@ Azure Cosmos DB는 개발자가 SQL, MongoDB, Graph 및 Table API와 같은 표�
       public String getId() {
          return this.id;
       }
-
+   
       public void setId(String id) {
          this.id = id;
       }
-
+   
       public String getFirstName() {
          return firstName;
       }
-
+   
       public void setFirstName(String firstName) {
          this.firstName = firstName;
       }
-
+   
       public String getLastName() {
          return lastName;
       }
-
+   
       public void setLastName(String lastName) {
          this.lastName = lastName;
       }
-
+   
       @Override
       public String toString() {
-         return String.format("User: %s %s", firstName, lastName);
+         return String.format("User: %s %s %s", id, firstName, lastName);
       }
    }
    ```
@@ -207,13 +224,13 @@ Azure Cosmos DB는 개발자가 SQL, MongoDB, Graph 및 Table API와 같은 표�
 1. 텍스트 편집기에서 *UserRepository.java* 파일을 열고 파일에 다음 줄을 추가하여 기본 DocumentDB 리포지토리 인터페이스를 확장하는 사용자 리포지토리 인터페이스를 정의합니다.
 
    ```java
-   package com.example.wingtiptoys;
-
+   package com.example.wingtiptoysdata;
+   
    import com.microsoft.azure.spring.data.documentdb.repository.DocumentDbRepository;
    import org.springframework.stereotype.Repository;
-
+   
    @Repository
-   public interface UserRepository extends DocumentDbRepository<User, String> {}   
+   public interface UserRepository extends DocumentDbRepository<User, String> { } 
    ```
 
 1. *UserRepository.java* 파일을 저장하고 닫습니다.
@@ -222,42 +239,58 @@ Azure Cosmos DB는 개발자가 SQL, MongoDB, Graph 및 Table API와 같은 표�
 
 1. 앱의 패키지 디렉터리에서 기본 응용 프로그램 Java 파일을 찾습니다. 예:
 
-   `C:\SpringBoot\wingtiptoys\src\main\java\com\example\wingtiptoys\WingtiptoysApplication.java`
+   `C:\SpringBoot\wingtiptoysdata\src\main\java\com\example\wingtiptoysdata\WingtiptoysdataApplication.java`
 
    또는
 
-   `/users/example/home/wingtiptoys/src/main/java/com/example/wingtiptoys/WingtiptoysApplication.java`
+   `/users/example/home/wingtiptoysdata/src/main/java/com/example/wingtiptoysdata/WingtiptoysdataApplication.java`
 
    ![응용 프로그램 Java 파일 찾기][JV01]
 
 1. 텍스트 편집기에서 응용 프로그램 Java 파일을 열고 다음 줄을 파일에 추가합니다.
 
    ```java
-   package com.example.wingtiptoys;
-
+   package com.example.wingtiptoysdata;
+   
+   // These imports are required for the application.
    import org.springframework.boot.SpringApplication;
    import org.springframework.boot.autoconfigure.SpringBootApplication;
    import org.springframework.beans.factory.annotation.Autowired;
    import org.springframework.boot.CommandLineRunner;
-
+   
+   // These imports are only used to create an ID for this example.
+   import java.util.Date;
+   import java.text.SimpleDateFormat;
+   
    @SpringBootApplication
-   public class WingtiptoysApplication implements CommandLineRunner {
-
+   public class wingtiptoysdataApplication implements CommandLineRunner {
+   
       @Autowired
       private UserRepository repository;
-    
+   
       public static void main(String[] args) {
-         SpringApplication.run(WingtiptoysApplication.class, args);
+         // Execute the command line runner.
+         SpringApplication.run(wingtiptoysdataApplication.class, args);
       }
-
-      public void run(String... var1) throws Exception {
-         final User testUser = new User("testId", "testFirstName", "testLastName");
-
+   
+      public void run(String... args) throws Exception {
+         // Create a simple date/time ID.
+         SimpleDateFormat userId = new SimpleDateFormat("yyyyMMddHHmmssSSS");
+         Date currentDate = new Date();
+   
+         // Create a new User class.
+         final User testUser = new User(userId.format(currentDate), "Gena", "Soto");
+   
+         // For this example, remove all of the existing records.
          repository.deleteAll();
+   
+         // Save the User class to the Azure database.
          repository.save(testUser);
-
+         
+         // Retrieve the database record for the User class you just saved by ID.
          final User result = repository.findOne(testUser.getId());
-
+   
+         // Display the results of the database record retrieval.
          System.out.printf("\n\n%s\n\n",result.toString());
       }
    }
@@ -269,24 +302,24 @@ Azure Cosmos DB는 개발자가 SQL, MongoDB, Graph 및 Table API와 같은 표�
 
 1. 명령 프롬프트를 열고 디렉터리를 *pom.xml* 파일이 위치한 폴더로 변경합니다. 예:
 
-   `cd C:\SpringBoot\wingtiptoys`
+   `cd C:\SpringBoot\wingtiptoysdata`
 
    또는
 
-   `cd /users/example/home/wingtiptoys`
+   `cd /users/example/home/wingtiptoysdata`
 
 1. Maven을 사용하여 Spring Boot 응용 프로그램을 빌드하고 실행합니다. 예:
 
    ```shell
-   mvn package
-   java -jar target/wingtiptoys-0.0.1-SNAPSHOT.jar
+   mvn clean package
+   mvn spring-boot:run
    ```
 
 1. 응용 프로그램에 여러 런타임 메시지가 표시되고 `User: testFirstName testLastName` 메시지가 표시되어 값을 성공적으로 저장하고 데이터베이스에서 검색했음을 나타내야 합니다.
 
    ![응용 프로그램에서 성공적인 출력][JV02]
 
-1. 선택 사항: 콘텐츠를 보기 위해 **문서 탐색기**를 클릭하고 표시된 목록에서 항목을 선택하여 데이터베이스의 속성 페이지에서 Azure Cosmos DB의 콘텐츠를 보도록 Azure Portal을 사용할 수 있습니다.
+1. 선택 사항: 콘텐츠를 보기 위해 **데이터 탐색기**를 클릭하고 표시된 목록에서 항목을 선택하여 데이터베이스의 속성 페이지에서 Azure Cosmos DB의 콘텐츠를 보도록 Azure Portal을 사용할 수 있습니다.
 
    ![문서 탐색기를 사용하여 데이터 보기][JV03]
 
@@ -302,7 +335,7 @@ Azure Cosmos DB 및 Java를 사용하는 방법에 대한 자세한 내용은 �
 
 Azure에서 Spring Boot 응용 프로그램을 사용 하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
 
-* [Azure의 Spring Boot DocumenDB Starter]
+* [Azure의 Spring Boot Document DB Starter]
 
 * [Azure App Service에 Spring Boot 응용 프로그램 배포](deploy-spring-boot-java-web-app-on-azure.md)
 
@@ -318,8 +351,8 @@ Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 
 [Java 개발자용 Azure]: https://docs.microsoft.com/java/azure/
 [Build a SQL API app with Java]: https://docs.microsoft.com/azure/cosmos-db/create-sql-api-java 
 [Azure Cosmos DB SQL API용 Spring 데이터]: https://azure.microsoft.com/blog/spring-data-azure-cosmos-db-nosql-data-access-on-azure/
-[Azure의 Spring Boot DocumenDB Starter]:https://github.com/Microsoft/azure-spring-boot-starters/tree/master/azure-documentdb-spring-boot-starter-sample
-[체험판 Azure 계정{]: https://azure.microsoft.com/pricing/free-trial/
+[Azure의 Spring Boot Document DB Starter]:https://github.com/Microsoft/azure-spring-boot-starters/tree/master/azure-documentdb-spring-boot-starter-sample
+[체험판 Azure 계정]: https://azure.microsoft.com/pricing/free-trial/
 [Visual Studio Team Services용 Java 도구]: https://java.visualstudio.com/
 [MSDN 구독자 혜택]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
