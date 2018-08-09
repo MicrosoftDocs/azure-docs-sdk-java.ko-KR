@@ -4,6 +4,8 @@
     - name: Java 빠른 시작
       expanded: true
       items:
+        - name: 시작하기
+          href: java-sdk-azure-get-started.md
         - name: Service Fabric
           items:
             - name: Spring Boot
@@ -12,24 +14,18 @@
               href: /azure/service-fabric/service-fabric-quickstart-java-reliable-services
         - name: Web Apps
           href: /azure/app-service-web/app-service-web-get-started-java
-        - name: SQL Database
-          href: /azure/sql-database/sql-database-connect-query-java
-        - name: MySQL
-          href: /azure/mysql/connect-java
-        - name: PostgreSQL
-          href: /azure/postgresql/connect-java
+        - name: 데이터베이스
+          items:
+            - name: SQL Database
+              href: /azure/sql-database/sql-database-connect-query-java
+            - name: MySQL
+              href: /azure/mysql/connect-java
+            - name: PostgreSQL
+              href: /azure/postgresql/connect-java
         - name: Cosmos DB
           href: /azure/cosmos-db/create-documentdb-java
         - name: Blob 저장소
           href: /azure/storage/blobs/storage-quickstart-blobs-java
-        - name: Java용 Azure 라이브러리
-          items:
-            - name: Maven
-              href: java-sdk-azure-get-started.md
-            - name: '(예: Eclipse'
-              href: eclipse/java-sdk-azure-get-started-eclipse.md
-            - name: Intellij
-              href: intellij/java-sdk-azure-get-started-intellij.md
     - name: 도구
       expanded: true
       href: java-azure-tools.md
