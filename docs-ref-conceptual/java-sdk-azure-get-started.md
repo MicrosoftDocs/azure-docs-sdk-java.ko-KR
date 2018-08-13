@@ -12,12 +12,12 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
-ms.openlocfilehash: f069183c96cdc42d590d2e58a5a6a500be5ab69a
-ms.sourcegitcommit: 720c2eaf66532d277015610ec375c71e934d9ee6
+ms.openlocfilehash: dee41f08dc303fc95fcfa6a585a5d1a06726f2ef
+ms.sourcegitcommit: dad28b332346dfa9af249b5a64e042cbb1eb90d7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
-ms.locfileid: "29065530"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39625039"
 ---
 # <a name="get-started-with-cloud-development-using-the-azure-libraries-for-java"></a>Java용 Azure 라이브러리를 사용한 클라우드 개발 시작
 
@@ -79,7 +79,7 @@ graphURL=https\://graph.windows.net/
 - key: 서비스 사용자 출력의 *password* 값을 사용합니다.
 - tenant: 서비스 사용자 출력의 *tenant* 값을 사용합니다.
 
-코드에서 읽을 수 있는 시스템의 안전한 위치에 이 파일을 저장합니다. 향후 코드에서 이 파일을 사용할 수 있으므로 이 문서에서 응용 프로그램의 외부에 저장해 두는 것이 좋습니다.
+코드에서 읽을 수 있는 시스템의 안전한 위치에 JSON 파일을 저장합니다. 향후 코드에서 이 파일을 사용할 수 있으므로 이 문서에서 응용 프로그램의 외부에 저장해 두는 것이 좋습니다.
 
 셸에서 인증 파일의 전체 경로가 포함된 `AZURE_AUTH_LOCATION` 환경 변수를 설정합니다.   
 
@@ -93,7 +93,9 @@ Windows 환경에서 작업할 경우 변수를 시스템 속성에 추가합니
 setx AZURE_AUTH_LOCATION "C:\<fullpath>\azureauth.properties" /m
 ```
 
-## <a name="create-a-new-maven-project"></a>새 Maven 프로젝트 만들기
+## <a name="tooling"></a>도구
+
+### <a name="create-a-new-maven-project"></a>새 Maven 프로젝트 만들기
 
 > [!NOTE]
 > 이 가이드에서는 Maven 빌드 도구를 사용하여 샘플 코드를 빌드하고 실행하지만, Gradle과 같은 다른 빌드 도구도 Java용 Azure 라이브러리에서 작동합니다. 
@@ -142,7 +144,27 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp  \
     </plugins>
 </build>
  ```
-   
+
+### <a name="install-the-azure-toolkit-for-intellij"></a>IntelliJ용 Azure 도구 키트 설치
+
+[Azure 도구 키트](intellij/azure-toolkit-for-intellij-installation.md)는 웹앱이나 API를 프로그래밍 방식으로 설치하지만 현재 다른 개발 유형에는 사용하고 있지 않은 경우에 필요합니다. 다음은 설치 프로세스에 대한 요약입니다. 자세한 절차는 [IntelliJ용 Azure 도구 키트 설치](intellij/azure-toolkit-for-intellij-installation.md)를 참조하세요.
+
+**파일** 메뉴를 선택한 다음 **설정...** 을 선택합니다. 
+
+**저장소 찾아보기...** 를 선택하고 “Azure”를 검색한 다음 **Intellij용 Azure 도구 키트**를 설치합니다.
+
+Intellij를 다시 시작합니다.
+
+### <a name="install-the-azure-toolkit-for-eclipse"></a>Eclipse용 Azure 도구 키트 설치
+
+[Azure 도구 키트](eclipse/azure-toolkit-for-eclipse.md)는 웹앱이나 API를 프로그래밍 방식으로 설치하지만 현재 다른 개발 유형에는 사용하고 있지 않은 경우에 필요합니다. 다음은 설치 프로세스에 대한 요약입니다. 자세한 절차는 [Eclipse용 Azure 도구 키트 설치](eclipse/azure-toolkit-for-eclipse.md)를 참조하세요.
+
+**도움말** 메뉴를 선택하고 **새 소프트웨어 설치**를 선택합니다.
+
+**작업:** 필드에 `http://dl.microsoft.com/eclipse`를 입력하고 Enter를 누릅니다.
+
+그런 다음 **Java용 Azure 도구 키트** 옆의 확인란을 선택하고 **필요한 소프트웨어를 설치하는 동안 모든 업데이트 사이트 문의** 확인란의 선택을 취소합니다. 이제 다음을 선택합니다.
+
 ## <a name="create-a-linux-virtual-machine"></a>Linux 가상 머신 만들기
 
 프로젝트의 `src/main/java/com/fabirkam` 디렉터리에 `AzureApp.java`라는 새 파일을 만들고 다음 코드 블록에 붙여넣습니다. `userName` 및 `sshKey` 변수를 컴퓨터에 대한 실제 값으로 업데이트합니다. 이 코드에서는 미국 동부 Azure 지역에서 실행되는 `sampleResourceGroup` 리소스 그룹에 `testLinuxVM`이라는 새 Linux VM을 만듭니다.
