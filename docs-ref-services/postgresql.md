@@ -7,16 +7,14 @@ ms.author: routlaw
 manager: douge
 ms.date: 05/17/2017
 ms.topic: article
-ms.prod: azure
-ms.technology: azure
 ms.devlang: java
 ms.service: postgresql
-ms.openlocfilehash: d6fa2acb9a2f44b157ae52ba6e41f6777a43b574
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: 0f93d26a07de9acf72a46792793b573dba878fba
+ms.sourcegitcommit: 1b22376e4ceb3d2f2734c8fc80823a44cc5fe8fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21930979"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42703329"
 ---
 # <a name="azure-database-for-postgresql-libraries-for-java"></a>Java용 Azure Database for PostgreSQL 라이브러리
 
@@ -40,7 +38,7 @@ Azure Database for PostgreSQL을 시작하려면 [Java를 사용하여 데이터
 </dependency>
 ```   
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 JDBC를 사용하여 Azure Database for PostgreSQL에 연결하고 sales 테이블의 모든 레코드를 선택합니다. Azure Portal에서 데이터베이스에 대한 JDBC 연결 문자열을 가져올 수 있습니다.
 
