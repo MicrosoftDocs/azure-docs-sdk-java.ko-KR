@@ -13,12 +13,12 @@ ms.devlang: na
 ms.topic: hero-article
 ms.date: 03/17/2017
 ms.author: routlaw
-ms.openlocfilehash: 1adc0a104ba22bcd353664e68323165890e46c64
-ms.sourcegitcommit: 30d502b3150fa14bcc1251f5f88c7c0dd83e531e
+ms.openlocfilehash: 70b508118c50b75693e2d746dc1e2919c827cb29
+ms.sourcegitcommit: 0f38ef9ad64cffdb7b2e9e966224dfd0af251b0f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2017
-ms.locfileid: "22033635"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42703546"
 ---
 # <a name="create-and-deploy-a-java-app-to-azure-with-maven"></a>Maven을 사용하여 Azure에 Java 앱 생성 및 배포
 
@@ -33,7 +33,7 @@ ms.locfileid: "22033635"
 - [Maven 3](http://maven.apache.org/download.cgi)
 - [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2)
 
-Azure 구독이 아직 없는 경우 시작하기 전에 [무료 계정](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) 을 만듭니다.
+Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https://azure.microsoft.com/free/?WT.mc_id=A261C142F)을 만듭니다.
 
 ## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
@@ -53,7 +53,7 @@ mvn package
 mvn tomcat7:run-war
 ```
 
-웹 브라우저를 열고 http://localhost:8080 으로 이동하여 앱을 미리 봅니다.
+웹 브라우저를 열고 http://localhost:8080으로 이동하여 앱을 미리보기 합니다:
 
   ![Java 샘플 앱의 Hello World 출력](media/maven-quickstart/java-app-hello-world-output.png)
 
@@ -75,7 +75,7 @@ az group create --location "East US" --name myResourceGroup
 
 `---location`에 사용할 수 있는 가능한 값을 보려면 [az appservice list-locations](/cli/azure/appservice#list-locations) 명령을 사용합니다.
 
-## <a name="create-an-app-service-plan"></a>App Service 계획 만들기
+## <a name="create-an-app-service-plan"></a>App Service 플랜 만들기
 
 [az appservice plan create](/cli/azure/appservice/plan#create)를 사용하여 **체험** [App Service 계획](/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)을 만듭니다. App Service 계획은 계획에서 실행되는 모든 웹앱에서 공유하는 리소스를 할당합니다.
 

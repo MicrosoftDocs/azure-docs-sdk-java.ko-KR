@@ -7,19 +7,19 @@ author: rmcmurray
 manager: routlaw
 editor: ''
 ms.assetid: ''
-ms.author: robmcm;yungez;kevinzha
-ms.date: 07/05/2018
+ms.author: robmcm
+ms.date: 08/10/2018
 ms.devlang: java
 ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
-ms.openlocfilehash: 3306f3ef66ec1b53ab004765b8fb7aef04de9077
-ms.sourcegitcommit: 1ff4654193404415841252a130b87a8b53b7c6d8
+ms.openlocfilehash: dcb5ef5f12cc1682175da147268eb4a6a89f820b
+ms.sourcegitcommit: 0f38ef9ad64cffdb7b2e9e966224dfd0af251b0f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39235977"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42703526"
 ---
 # <a name="how-to-use-the-spring-boot-starter-with-the-azure-cosmos-db-sql-api"></a>Azure Cosmos DB SQL API에서 Spring Boot Starter를 사용하는 방법
 
@@ -75,7 +75,7 @@ Azure Cosmos DB는 개발자가 SQL, MongoDB, Graph 및 Table API와 같은 표�
 
    > [!IMPORTANT]
    >
-   > Spring Boot 버전 2.0.n에서 API에 몇 가지 호환성이 손상되는 변경이 있었기 때문에 이 자습서의 단계를 완료하려면 Spring Boot 1.5.n 버전 중 하나가 필요합니다.
+   > 이 문서의 단계를 완료하는 데 사용할 Spring Boot 버전 2.0.n의 API에 몇가지 호환성이 손상되는 변경이 있습니다. 그러나 이 자습서의 단계를 완료하기 위해 Spring Boot 1.5.n 버전 중 하나를 사용할 수 있으며 필요한 경우 차이점이 강조 표시됩니다.
    >
 
    ![기본 Spring Initializr 옵션][SI01]
@@ -111,22 +111,39 @@ Azure Cosmos DB는 개발자가 SQL, MongoDB, Graph 및 Table API와 같은 표�
    <dependency>
       <groupId>com.microsoft.azure</groupId>
       <artifactId>azure-documentdb-spring-boot-starter</artifactId>
-      <version>0.1.4</version>
+      <version>2.0.4</version>
    </dependency>
    ```
 
    ![pom.xml 파일 편집][PM02]
 
-1. Spring Boot 버전이 1.5.n 버전 중 하나인지 확인합니다. 예를 들어
+   > [!IMPORTANT]
+   >
+   > Spring Boot 1.5.n 버전 중 하나를 사용하여 이 자습서를 완료하고자 하는 경우, Azure Cosmos DB 스타터의 이전 버전을 지정해야 합니다. 예:
+   >
+   > ```xml
+   > <dependency>
+   >   <groupId>com.microsoft.azure</groupId>
+   >   <artifactId>azure-documentdb-spring-boot-starter</artifactId>
+   >   <version>0.1.4</version>
+   > </dependency>
+   > ```
+
+1. Spring Boot 버전이 Spring Initializr를 사용하여 응용 프로그램을 만들 때 선택한 버전인지 확인합니다. 예:
 
    ```xml
    <parent>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-parent</artifactId>
-      <version>1.5.14.RELEASE</version>
+      <version>2.0.1.RELEASE</version>
       <relativePath/>
    </parent>
    ```
+
+   > [!NOTE]
+   >
+   > Spring Boot 1.5.n 버전 중 하나를 사용하여 이 자습서를 완료하고자 하는 경우, 올바른 버전을 검증해야 합니다. 예: `<version>1.5.14.RELEASE</version>`.
+   >
 
 1. *pom.xml* 파일을 저장하고 닫습니다.
 
@@ -177,6 +194,9 @@ Azure Cosmos DB는 개발자가 SQL, MongoDB, Graph 및 Table API와 같은 표�
       private String id;
       private String firstName;
       private String lastName;
+   
+      public User() {
+      }
    
       public User(String id, String firstName, String lastName) {
          this.id = id;
@@ -251,50 +271,57 @@ Azure Cosmos DB는 개발자가 SQL, MongoDB, Graph 및 Table API와 같은 표�
 
    ```java
    package com.example.wingtiptoysdata;
-   
+
    // These imports are required for the application.
    import org.springframework.boot.SpringApplication;
    import org.springframework.boot.autoconfigure.SpringBootApplication;
    import org.springframework.beans.factory.annotation.Autowired;
    import org.springframework.boot.CommandLineRunner;
-   
+
    // These imports are only used to create an ID for this example.
    import java.util.Date;
    import java.text.SimpleDateFormat;
-   
+
    @SpringBootApplication
    public class wingtiptoysdataApplication implements CommandLineRunner {
-   
+
       @Autowired
       private UserRepository repository;
-   
+
       public static void main(String[] args) {
          // Execute the command line runner.
          SpringApplication.run(wingtiptoysdataApplication.class, args);
+         System.exit(0);
       }
-   
+
       public void run(String... args) throws Exception {
          // Create a simple date/time ID.
          SimpleDateFormat userId = new SimpleDateFormat("yyyyMMddHHmmssSSS");
          Date currentDate = new Date();
-   
+
          // Create a new User class.
          final User testUser = new User(userId.format(currentDate), "Gena", "Soto");
-   
+
          // For this example, remove all of the existing records.
          repository.deleteAll();
-   
+
          // Save the User class to the Azure database.
          repository.save(testUser);
-         
+      
          // Retrieve the database record for the User class you just saved by ID.
-         final User result = repository.findOne(testUser.getId());
-   
+         // final User result = repository.findOne(testUser.getId());
+         final User result = repository.findById(testUser.getId()).get();
+
          // Display the results of the database record retrieval.
          System.out.printf("\n\n%s\n\n",result.toString());
       }
    }
    ```
+
+   > [!IMPORTANT]
+   >
+   > Spring Boot 1.5.n 버전 중 하나를 사용하여 이 자습서를 완료하고자 하는 경우, `final User result = repository.findById(testUser.getId()).get();` 구문을 `final User result = repository.findOne(testUser.getId());`로 대체해야 합니다.
+   >
 
 1. 기본 응용 프로그램 Java 파일을 저장하고 닫습니다.
 
@@ -315,7 +342,11 @@ Azure Cosmos DB는 개발자가 SQL, MongoDB, Graph 및 Table API와 같은 표�
    mvn spring-boot:run
    ```
 
-1. 응용 프로그램에 여러 런타임 메시지가 표시되고 `User: testFirstName testLastName` 메시지가 표시되어 값을 성공적으로 저장하고 데이터베이스에서 검색했음을 나타내야 합니다.
+1. 응용 프로그램에 여러 런타임 메시지가 표시되고 다음 예와 같은 메시지가 표시되어 값을 성공적으로 저장하고 데이터베이스에서 검색했음을 나타내야 합니다.
+
+   ```
+   User: 20170724025215132 Gena Soto
+   ```
 
    ![응용 프로그램에서 성공적인 출력][JV02]
 
