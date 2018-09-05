@@ -1,0 +1,56 @@
+items:
+- name: Azure 상의 Eclipse MicroProfile
+  href: ./index.yml
+  items:
+  - name: Azure 확장
+    href: https://github.com/Azure/azure-microprofile
+  - name: 자습서
+    items:
+    - name: Azure Container Instances에 배포
+      href: deploy-microprofile-to-container-instances.md
+    - name: Azure 웹앱에 배포
+      href: deploy-microprofile-to-web-app-for-containers.md
+    - name: Azure Key Vault에 대한 소스 구성
+      href: configure-microprofile-with-keyvault.md
+    expanded: true
+  - name: 샘플
+    items:
+    - name: MicroProfile Hello Azure
+      href: https://github.com/azure-samples/microprofile-hello-azure
+    - name: Azure Key Vault에 대한 MicroProfile 소스 구성
+      href: https://github.com/Azure-Samples/microprofile-configsource-keyvault
+    expanded: false
+  - name: 참고 자료
+    items:
+    - name: Eclipse MicroProfile
+      href: https://microprofile.io/
+    - name: MicroProfile 구현
+      items:
+      - name: Apache TomEE
+        href: https://tomee.apache.org
+      - name: IBM OpenLiberty
+        href: https://openliberty.io/
+      - name: KumuluzEE 마이크로
+        href: https://ee.kumuluz.com/microprofile
+      - name: Payara 마이크로
+        href: https://payara.fish/payara_micro
+      - name: Red Hat WildFly Swarm(Thorntail)
+        href: http://wildfly-swarm.io/
+      expanded: false
+    - name: MicroProfile 프로젝트 생성기
+      items:
+      - name: WildFly Swarm(Thorntail) 생성기
+        href: http://wildfly-swarm.io/generator/
+      - name: KumuluzEE 생성기
+        href: https://ee.kumuluz.com/generator/
+      - name: Jeddict
+        href: https://jeddict.github.io/
+      expanded: false
+    expanded: true
+  expanded: true
+ms.openlocfilehash: 62be295bce66c292922e88a4277fe49064c8f989
+ms.sourcegitcommit: 77dc6c03a2e6264df688d91a04fc6b40950779ef
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240767"
