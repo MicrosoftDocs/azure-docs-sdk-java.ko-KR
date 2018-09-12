@@ -14,12 +14,12 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: d58cafe3456150069ec8572c101c62d1b2c29c5d
-ms.sourcegitcommit: e1a5d9687e006e8bf12d11747d45cf130a2c82af
+ms.openlocfilehash: ca788354d26964bd9f1e21a0d3a8005ff65ce4bc
+ms.sourcegitcommit: 280d13b43cef94177d95e03879a5919da234a23c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "42703362"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43324349"
 ---
 # <a name="deploy-a-spring-boot-app-to-the-cloud-using-the-maven-plugin-for-azure-app-service"></a>Azure Apps Service의 Maven 플러그 인을 사용하여 Spring Boot 앱을 클라우드에 배포
 
@@ -129,6 +129,7 @@ Maven 설정부터 시작해 보겠습니다.
            return application.sources(Application.class);
        }
    ```
+1. `SpringApplicationBuilder`, `SpringBootServletInitializer`를 제대로 가져올 수 있도록 가져오기를 구성합니다.
 
 이제 응용프로그램은 Tomcat 및 다른 Servlet 런타임(예: Jetty)에 배포될 수 있습니다.
 
