@@ -14,12 +14,12 @@ ms.service: container-registry;app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 323ae247c3df8c7d7b180d9d60b9014e4e2d7382
-ms.sourcegitcommit: 77dc6c03a2e6264df688d91a04fc6b40950779ef
+ms.openlocfilehash: 1eb0e7d7a718a1c106adebbf89011f6e3fa1504e
+ms.sourcegitcommit: c2019ba6da6c7c28b17b5a85f89e49bb5e570ba4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240963"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44040251"
 ---
 # <a name="deploy-a-java-based-microprofile-service-to-azure-web-app-for-containers"></a>Java 기반 MicroProfile 서비스를 Azure Web App for Containers에 배포합니다.
 
@@ -137,7 +137,7 @@ public class API {
 이제 로컬 시스템에서 MicroProfile 응용 프로그램을 성공적으로 빌드하고 실행했으므로 다음 단계는 이 컨테이너를 컨테이너 레지스트리에 푸시하는 것입니다. 이 자습서에서는 Azure Container Registry를 사용하지만 모든 컨테이너 레지스트리가 작동합니다(`pom.xml` 파일을 편집하여 관련 위치를 가리키는 경우).
 
 1. `mvn clean package`를 실행하여 클린, 컴파일하고 로컬 docker 이미지를 만듭니다.
-2. Azure Container Repository로 푸시하려면 `mvn dockerfile:push`를 실행합니다.
+2. Azure Container Registry에 푸시하기 위해 `mvn dockerfile:push`를 실행합니다.
 
 이 단계에서 Docker 컨테이너 이미지를 Azure Container Registry에 업로드했으나 Azure Web App for Containers 인스턴스에 배포해야 하므로 아직 실행되지 않았습니다. 이제는 이 작업을 시작합니다.
 

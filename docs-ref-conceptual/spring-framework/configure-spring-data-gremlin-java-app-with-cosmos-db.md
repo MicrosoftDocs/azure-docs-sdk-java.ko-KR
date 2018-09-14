@@ -7,19 +7,18 @@ author: rmcmurray
 manager: mbaldwin
 editor: ''
 ms.assetid: ''
-ms.author: robmcm
 ms.date: 08/20/2018
 ms.devlang: java
 ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
-ms.openlocfilehash: 0976f4b0c13ce5c577458f2974f5dce123bf7e59
-ms.sourcegitcommit: 77dc6c03a2e6264df688d91a04fc6b40950779ef
+ms.openlocfilehash: 4e0138e3cc474b4c47d3bf492e696ec49ea3ef37
+ms.sourcegitcommit: c2019ba6da6c7c28b17b5a85f89e49bb5e570ba4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43241139"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44040271"
 ---
 # <a name="how-to-use-the-spring-data-gremlin-starter-with-the-azure-cosmos-db-sql-api"></a>Azure Cosmos DB SQL API에서 Spring Data Gremlin Starter를 사용하는 방법
 
@@ -85,7 +84,7 @@ Spring 데이터 Gremlin Starter는 개발자가 Gremlin 호환 데이터 저장
    * 데이터베이스에 대해 고유한 **데이터베이스 id**를 지정합니다.
    * 그래프 대해 고유한 **그래프 id**를 지정합니다.
    * **저장소 용량**을 지정하도록 선택할 수 있으며 기본값을 적용할 수도 있습니다.
-   * **전체**를 지정합니다. 본 예제의 경우 400 요청 단위(RU)를 선택할 수 있습니다.
+   * **처리량**을 지정합니다. 본 예제의 경우 400 요청 단위(RU)를 선택할 수 있습니다.
    
    이러한 옵션을 지정한 경우 **OK**를 클릭하여 그래프를 만듭니다.
 
