@@ -15,12 +15,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.custom: mvc
-ms.openlocfilehash: cb83a7d6ec3a9a83fbfd3b2e34e5a4e498aa36d3
-ms.sourcegitcommit: 51dc05a96a8cbc8a6c9b45e094d8f3cfec16a607
+ms.openlocfilehash: 546aa2dc18143ca173d72198ea8e6c30bda3c97f
+ms.sourcegitcommit: e017de4677c5bedd6ef88c8c1b6da279dc973efe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2018
-ms.locfileid: "39189673"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45639726"
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Azure Kubernetes Service의 Kubernetes 클러스터에 Spring Boot 응용 프로그램 배포
 
@@ -239,7 +239,7 @@ ms.locfileid: "39189673"
 
    a. **앱 만들기**를 선택합니다.
 
-   나. **App name**에 Spring Boot 응용 프로그램 이름을 입력합니다(예: "*gs-spring-boot-docker*").
+   b. **App name**에 Spring Boot 응용 프로그램 이름을 입력합니다(예: "*gs-spring-boot-docker*").
 
    다. **Container image**에 대해 이전의 로그인 서버 및 컨테이너 이미지를 입력합니다(예: "*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*").
 
@@ -321,7 +321,7 @@ Spring Boot on Docker 샘플 프로젝트에 대한 자세한 내용은 [Spring 
 
 다음 링크는 Azure에서 Kubernetes를 사용하는 방법에 대한 추가 정보를 제공합니다.
 
-* [Azure Kubernetes Service에서 Kubernetes 클러스터 시작하기](https://docs.microsoft.com/en-us/azure/aks/intro-kubernetes)
+* [Azure Kubernetes Service에서 Kubernetes 클러스터 시작하기](https://docs.microsoft.com/azure/aks/intro-kubernetes)
 
 Kubernetes 명령줄 인터페이스를 사용하는 방법에 대한 자세한 내용은 <https://kubernetes.io/docs/user-guide/kubectl/>의 **kubectl** 사용자 가이드에서 사용할 수 있습니다.
 
@@ -358,7 +358,7 @@ Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대�
 [개인 레지스트리에서 이미지 끌어오기]: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
 
 <!-- Newly added -->
-[Azure Kubernetes Service의 Azure Container Registry를 사용하여 인증]: https://docs.microsoft.com/en-us/azure/container-registry/container-registry-auth-aks/
+[Azure Kubernetes Service의 Azure Container Registry를 사용하여 인증]: https://docs.microsoft.com/azure/container-registry/container-registry-auth-aks/
 [Visual Studio Code Java 자습서]: https://code.visualstudio.com/docs/java/java-kubernetes/
 
 <!-- IMG List -->

@@ -13,12 +13,12 @@ ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
-ms.openlocfilehash: 4e0138e3cc474b4c47d3bf492e696ec49ea3ef37
-ms.sourcegitcommit: c2019ba6da6c7c28b17b5a85f89e49bb5e570ba4
+ms.openlocfilehash: 3e7ec1a2f6b15ec9444dc6ee8d8f2d0f779b1f10
+ms.sourcegitcommit: e017de4677c5bedd6ef88c8c1b6da279dc973efe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44040271"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45639796"
 ---
 # <a name="how-to-use-the-spring-data-gremlin-starter-with-the-azure-cosmos-db-sql-api"></a>Azure Cosmos DB SQL API에서 Spring Data Gremlin Starter를 사용하는 방법
 
@@ -163,9 +163,11 @@ Spring 데이터 Gremlin Starter는 개발자가 Gremlin 호환 데이터 저장
       password: 57686f6120447564652c20426f6220526f636b73==
       telemetryAllowed: false
    ```
+   
    위치:
+   
    | 필드 | 설명 |
-   | ---|---|
+   |---|---|
    | `endpoint` | 이 자습서의 앞부분에서 Azure Cosmos DB를 만들 때 지정한 고유한 **ID**에서 파생된 데이터베이스의 Gremlin URI를 지정합니다. |
    | `port` | TCP/IP 포트를 지정합니다. HTTPS의 경우 **443**입니다. |
    | `username` | 이 자습서의 앞부분에 그래프를 추가할 때 사용한 고유한 **데이터베이스 id**와 **그래프 id**를 지정합니다. "/dbs/**{Database id}**/colls/ **{Graph id}**"구문을 사용하여 입력해야 합니다. |

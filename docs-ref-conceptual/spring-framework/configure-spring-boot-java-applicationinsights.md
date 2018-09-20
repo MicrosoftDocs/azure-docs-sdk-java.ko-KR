@@ -14,12 +14,12 @@ ms.service: Azure Monitor
 ms.tgt_pltfrm: application-insights
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 0e57bfb304185b8b98dedfdecb2e0374c4a72fe5
-ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
+ms.openlocfilehash: e78987a05527aef739bc1467511381665513a3ab
+ms.sourcegitcommit: e017de4677c5bedd6ef88c8c1b6da279dc973efe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37090776"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45639736"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-application-insights"></a>Application Insights를 사용하도록 Spring Boot Initializer 앱 구성
 
@@ -91,7 +91,7 @@ ms.locfileid: "37090776"
  <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>applicationinsights-spring-boot-starter</artifactId>
-    <version>1.0.0-BETA</version>
+    <version>1.0.1-BETA</version>
 </dependency>
 ```
 
@@ -222,7 +222,7 @@ ms.locfileid: "37090776"
     <dependency>
         <groupId>com.microsoft.azure</groupId>
         <artifactId>applicationinsights-spring-boot-starter</artifactId>
-        <version>1.0.0-BETA</version>
+        <version>1.0.1-BETA</version>
     </dependency>
 
     <dependency>
@@ -278,7 +278,7 @@ Azure에서 Spring Boot 응용 프로그램을 사용 하는 방법에 대한 �
 
 * [Azure Container Service의 Kubernetes 클러스터에 Spring Boot 응용 프로그램 실행](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Application Insight는 외부 종속성 및 들어오는 요청과의 상관 관계의 자동 컬렉션을 지원합니다. 이제 Oracle, MsSQL, MySQL, Redis의 자동 컬렉션을 지원합니다. 자동 컬렉션 활성화에 대한 자세한 내용은 [ Application Insights Java 에이전트 사용 방법](https://docs.microsoft.com/en-us/azure/application-insights/app-insights-java-agent) 을 참조하십시오.
+Application Insight는 외부 종속성 및 들어오는 요청과의 상관 관계의 자동 컬렉션을 지원합니다. 이제 Oracle, MsSQL, MySQL, Redis의 자동 컬렉션을 지원합니다. 자동 컬렉션 활성화에 대한 자세한 내용은 [ Application Insights Java 에이전트 사용 방법](https://docs.microsoft.com/azure/application-insights/app-insights-java-agent) 을 참조하십시오.
 
 Azure Application Insights 및 모니터링 기능에 대한 자세한 내용은 **[Application Insights]** 홈페이지를 참조하십시오.
 
@@ -300,7 +300,7 @@ Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 
 [Spring Boot Profile 특정 속성]: https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html#boot-features-external-config-profile-specific-properties
 [Spring Initializr]: https://start.spring.io/
 [Spring Framework]: https://spring.io/
-[Application Insights]: https://docs.microsoft.com/en-us/azure/application-insights/
+[Application Insights]: https://docs.microsoft.com/azure/application-insights/
 
 <!-- IMG List -->
 

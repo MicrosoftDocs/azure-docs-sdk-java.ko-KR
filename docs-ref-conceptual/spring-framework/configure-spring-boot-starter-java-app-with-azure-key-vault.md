@@ -14,12 +14,12 @@ ms.service: key-vault
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: a2734fc08f2f59f64ba6c6c20ff18d75070b68d5
-ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
+ms.openlocfilehash: 78b7a9a2e26168b19dc8a1d12e47456752b57ffc
+ms.sourcegitcommit: e017de4677c5bedd6ef88c8c1b6da279dc973efe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37090716"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45639776"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>Azure Key Vault에 Spring Boot Starter를 사용하는 방법
 
@@ -154,10 +154,10 @@ ms.locfileid: "37090716"
    |---|---|
    | `name` | 키 자격 증명 모음의 고유한 이름을 지정합니다. |
    | `location` | 리소스 그룹을 호스팅할 [Azure 지역](https://azure.microsoft.com/regions/)을 지정합니다. |
-   | `enabled-for-deployment` | [키 자격 증명 모음 배포 옵션](https://docs.microsoft.com/en-us/cli/azure/keyvault)을 지정합니다. |
-   | `enabled-for-disk-encryption` | [키 자격 증명 모음 암호화 옵션](https://docs.microsoft.com/en-us/cli/azure/keyvault)을 지정합니다. |
-   | `enabled-for-template-deployment` | [키 자격 증명 모음 암호화 옵션](https://docs.microsoft.com/en-us/cli/azure/keyvault)을 지정합니다. |
-   | `sku` | [키 자격 증명 모음 SKU 옵션](https://docs.microsoft.com/en-us/cli/azure/keyvault)을 지정합니다. |
+   | `enabled-for-deployment` | [키 자격 증명 모음 배포 옵션](https://docs.microsoft.com/cli/azure/keyvault)을 지정합니다. |
+   | `enabled-for-disk-encryption` | [키 자격 증명 모음 암호화 옵션](https://docs.microsoft.com/cli/azure/keyvault)을 지정합니다. |
+   | `enabled-for-template-deployment` | [키 자격 증명 모음 암호화 옵션](https://docs.microsoft.com/cli/azure/keyvault)을 지정합니다. |
+   | `sku` | [키 자격 증명 모음 SKU 옵션](https://docs.microsoft.com/cli/azure/keyvault)을 지정합니다. |
    | `query` | 이 자습서를 완료하는 데 필요한 키 자격 증명 모은 URI인 값을 응답에서 검색합니다. |
 
    Azure CLI가 나중에 사용하게 되는 키 자격 증명 모음의 URI를 표시합니다. 예를 들어 다음과 같습니다.  
@@ -175,7 +175,7 @@ ms.locfileid: "37090716"
    | 매개 변수 | 설명 |
    |---|---|
    | `name` | 앞의 키 자격 증명 모음 이름을 지정합니다. |
-   | `secret-permission` | 키 자격 증명 모음에 대해 [보안 정책](https://docs.microsoft.com/en-us/cli/azure/keyvault)을 지정합니다. |
+   | `secret-permission` | 키 자격 증명 모음에 대해 [보안 정책](https://docs.microsoft.com/cli/azure/keyvault)을 지정합니다. |
    | `spn` | 앞의 응용 프로그램 등록에서 GUID를 지정합니다. |
 
    Azure CLI가 다음 예제처럼 보안 정책 만들기 결과를 표시합니다.  
