@@ -7,70 +7,143 @@ author: rmcmurray
 manager: routlaw
 editor: ''
 ms.assetid: ''
-ms.author: yungez;robmcm
-ms.date: 02/01/2018
+ms.author: robmcm
+ms.date: 09/10/2018
 ms.devlang: java
 ms.service: storage
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: storage
-ms.openlocfilehash: 2f9381fce2fee207360287c57443b56eb5128e42
-ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
+ms.openlocfilehash: 1a219a066f0f89adbf3f541856b36b842520bfbb
+ms.sourcegitcommit: fd67d4088be2cad01c642b9ecf3f9475d9cb4f3c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37090696"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46505921"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-storage"></a>Azure Storage에 Spring Boot Starter를 사용하는 방법
 
 ## <a name="overview"></a>개요
 
-이 문서에서는 **Spring Initializr**를 사용하여 사용자 지정 응용 프로그램을 만든 다음 해당 응용 프로그램을 사용하여 Azure Storage에 액세스하는 방법을 살펴봅니다. 
+이 문서에서는 **Spring Initializr**을 사용하여 사용자 정의 응용 프로그램을 만든 다음 응용 프로그램에 Azure 저장소 스타터를 추가하고 응용 프로그램을 사용하여 Azure 저장소 계정에 BLOB를 업로드하는 방법을 안내합니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
 이 문서의 단계를 수행하기 위해 다음 필수 구성 요소가 필요합니다.
 
-* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)을 활성화하거나 [무료 Azure 계정](https://azure.microsoft.com/pricing/free-trial/)에 등록할 수 있습니다.
+* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)을 활성화하거나 [체험판 Azure 계정](https://azure.microsoft.com/pricing/free-trial/)에 등록할 수 있습니다.
 * [Azure CLI(명령줄 인터페이스)](http://docs.microsoft.com/cli/azure/overview)
 * 최신 [JDK(Java Development Kit)](http://www.oracle.com/technetwork/java/javase/downloads/), 버전 1.7 이상
 * [Apache Maven](http://maven.apache.org/), 버전 3.0 이상
 
-## <a name="create-a-custom-application-using-the-spring-initializr"></a>Spring Initializr를 사용하여 사용자 지정 응용 프로그램 만들기
+> [!IMPORTANT]
+>
+> 이 문서의 단계를 완료하려면 Spring Boot 버전 2.0 이상이 필요합니다.
+>
+
+## <a name="create-an-azure-storage-account-and-blob-container-for-your-application"></a>응용 프로그램에 대 한 Azure Storage 계정 및 Blob 컨테이너 만들기
+
+1. <https://portal.azure.com/>에서 Azure Portal을 찾아 로그인합니다.
+
+1. **+리소스 만들기**를 클릭한 다음 **저장소**를 클릭하고 **저장소 계정**을 클릭합니다.
+
+   ![Azure Storage 계정 만들기][IMG01]
+
+1. **네임스페이스 만들기** 페이지에서 다음 정보를 입력합니다.
+
+   * 저장소 계정에 대한 URI의 일부가 되는 고유한 **이름**을 입력합니다. 예: **wingtiptoysstorage**를 **이름**에 입력한 경우 URI는 *wingtiptoysstorage.core.windows.net*입니다.
+   * **계정 종류**에 **Blob storage**를 선택합니다.
+   * 저장소 계정의 **위치**를 지정합니다.
+   * 저장소 계정에 사용하려는 **구독**을 선택합니다.
+   * 저장소 계정에 새 **리소스 그룹**을 만들지 아니면 기존 리소스 그룹을 선택할지를 지정합니다.
+   
+   ![Azure Storage 계정 옵션을 지정합니다.][IMG02]
+
+1. 위에 열거된 이러한 옵션을 지정한 경우 **만들기**를 클릭하여 저장소 계정을 만듭니다.
+
+1. Azure portal에서 저장소 계정을 만든 경우 **Blob**을 클릭하고 **+컨테이너**를 클릭합니다.
+
+   ![Blob 컨테이너 만들기][IMG03]
+
+1. Blob 컨테이너에 대한 **이름**을 입력하고 **확인**을 클릭합니다.
+
+   ![Blob 컨테이너 옵션 지정][IMG04]
+
+1. Azure portal은 Blob 컨테이너 생성 후 이를 나열 합니다.
+
+   ![Blob 컨테이너 목록 검토][IMG05]
+
+## <a name="create-a-simple-spring-boot-application-with-the-spring-initializr"></a>Spring Initializr를 사용하여 간단한 Spring Boot 응용 프로그램 만들기
 
 1. <https://start.spring.io/>로 이동합니다.
 
-1. **Java**에서 **Maven** 프로젝트를 생성한다고 지정하고, 응용 프로그램에 대한 **그룹** 및 **아티팩트** 이름을 입력한 다음 Spring Initializr의 **정식 버전으로 전환**하는 링크를 클릭합니다.
+1. 다음 옵션을 지정합니다.
 
-   ![기본 Spring Initializr 옵션](media/configure-spring-boot-starter-java-app-with-azure-storage/spring-initializr-basic.png)
+   * **Java**를 사용하는 **Maven** 프로젝트를 생성합니다.
+   * 2.0 이상의 **Spring Boot** 버전을 지정합니다.
+   * 응용 프로그램에 대한 **그룹** 및 **아티팩트** 이름을 지정합니다.
+   * **Web** 종속성 추가
+
+      ![기본 Spring Initializr 옵션][SI01]
 
    > [!NOTE]
    >
-   > Spring Initializr는 **그룹** 및 **아티팩트** 이름을 사용하여 패키지 이름을 만듭니다(예: *com.contoso.wingtiptoysdemo*).
+   > Spring Initializr는 **그룹** 및 **아티팩트** 이름을 사용하여 패키지 이름을 만듭니다(예: *com.wingtiptoys.storage*).
    >
 
-1. **Azure** 섹션까지 아래로 스크롤하고 **Azure Storage**의 확인란을 선택합니다.
-
-   ![전체 Spring Initializr 옵션](media/configure-spring-boot-starter-java-app-with-azure-storage/spring-initializr-advanced.png)
-
-1. 페이지 하단까지 스크롤하고 버튼을 클릭하여 **프로젝트를 생성**합니다.
-
-   ![전체 Spring Initializr 옵션](media/configure-spring-boot-starter-java-app-with-azure-storage/spring-initializr-generate.png)
+1. 위에 열거된 이러한 옵션을 지정한 경우 **프로젝트 만들기**를 클릭합니다.
 
 1. 메시지가 표시되면 로컬 컴퓨터의 경로에 프로젝트를 다운로드합니다.
 
-   ![사용자 지정 Spring Boot 프로젝트 다운로드](media/configure-spring-boot-starter-java-app-with-azure-storage/download-app.png)
+   ![Spring 프로젝트 다운로드][SI02]
 
-## <a name="sign-into-azure-and-select-the-subscription-to-use"></a>Azure에 로그인하고 사용할 구독 선택
+1. 로컬 시스템에서 파일의 압축을 푼 후에 단순한 Spring Boot 응용 프로그램을 편집할 준비를 합니다.
+
+## <a name="configure-your-spring-boot-app-to-use-the-azure-storage-starter"></a>Azure Storage Starter를 사용하도록 Spring Boot 앱 구성
+
+1. 앱의 루트 디렉터리에서 *pom.xml* 파일을 찾습니다. 예:
+
+   `C:\SpringBoot\storage\pom.xml`
+
+   또는
+
+   `/users/example/home/storage/pom.xml`
+
+1. 텍스트 편집기에서 *pom.xml* 파일을 열고 `<dependencies>` 목록에 Spring Cloud Azure Storage starter를 추가합니다.
+
+   ```xml
+   <dependency>
+      <groupId>com.microsoft.azure</groupId>
+      <artifactId>spring-azure-starter-storage</artifactId>
+      <version>1.0.0.M2</version>
+   </dependency>
+   ```
+
+   ![pom.xml 파일을 편집합니다.][SI03]
+
+1. *pom.xml* 파일을 저장하고 닫습니다.
+
+## <a name="create-an-azure-credential-file"></a>Azure 자격 증명 파일 만들기
 
 1. 명령 프롬프트를 엽니다.
 
-1. Azure CLI를 사용하여 Azure 계정에 로그인합니다.
+1. Spring Boot 앱의 *리소스* 디렉터리로 이동합니다. 예:
+
+   ```shell
+   cd C:\SpringBoot\storage\src\main\resources
+   ```
+
+   또는
+
+   ```shell
+   cd /users/example/home/storage/src/main/resources
+   ```
+
+1. Azure 계정 로그인:
 
    ```azurecli
    az login
    ```
-   지시에 따라 로그인 프로세스를 완료합니다.
 
 1. 구독 나열:
 
@@ -83,237 +156,194 @@ ms.locfileid: "37090696"
    [
      {
        "cloudName": "AzureCloud",
-       "id": "ssssssss-ssss-ssss-ssss-ssssssssssss",
+       "id": "11111111-1111-1111-1111-111111111111",
        "isDefault": true,
        "name": "Converted Windows Azure MSDN - Visual Studio Ultimate",
        "state": "Enabled",
-       "tenantId": "tttttttt-tttt-tttt-tttt-tttttttttttt",
+       "tenantId": "22222222-2222-2222-2222-222222222222",
        "user": {
-         "name": "contoso@microsoft.com",
+         "name": "gena.soto@wingtiptoys.com",
          "type": "user"
        }
      }
    ]
-   ```
 
-1. 다음 예제처럼 Azure에 사용하려는 계정의 GUID를 지정합니다.
+1. Specify the GUID for the subscription you want to use with Azure; for example:
 
    ```azurecli
-   az account set -s ssssssss-ssss-ssss-ssss-ssssssssssss
+   az account set -s 11111111-1111-1111-1111-111111111111
    ```
 
-## <a name="create-an-azure-storage-account"></a>Azure Storage 계정 만들기
+1. Azure 자격 증명 파일 만들기
 
-1. 이 문서에서 사용할 Azure 리소스에 대한 리소스 그룹을 만듭니다. 예를 들어 다음과 같습니다.
    ```azurecli
-   az group create --name wingtiptoysresources --location westus
+   az ad sp create-for-rbac --sdk-auth > my.azureauth
    ```
-   위치:
 
-   | 매개 변수 | 설명 |
-   |---|---|
-   | `name` | 리소스 그룹의 고유한 이름을 지정합니다. |
-   | `location` | 리소스 그룹을 호스팅할 [Azure 지역](https://azure.microsoft.com/regions/)을 지정합니다. |
-
-   Azure CLI가 다음 에제처럼 리소스 그룹 만들기 결과를 표시합니다.  
+   이 명령은 *my.azureauth* 파일을 *리소스* 디렉터리에 다음 예제와 유사하게 만듭니다.
 
    ```json
    {
-     "id": "/subscriptions/ssssssss-ssss-ssss-ssss-ssssssssssss/resourceGroups/wingtiptoysresources",
-     "location": "westus",
-     "managedBy": null,
-     "name": "wingtiptoysresources",
-     "properties": {
-       "provisioningState": "Succeeded"
-     },
-     "tags": null
+     "clientId": "33333333-3333-3333-3333-333333333333",
+     "clientSecret": "44444444-4444-4444-4444-444444444444",
+     "subscriptionId": "11111111-1111-1111-1111-111111111111",
+     "tenantId": "22222222-2222-2222-2222-222222222222",
+     "activeDirectoryEndpointUrl": "https://login.microsoftonline.com",
+     "resourceManagerEndpointUrl": "https://management.azure.com/",
+     "activeDirectoryGraphResourceId": "https://graph.windows.net/",
+     "sqlManagementEndpointUrl": "https://management.core.windows.net:8443/",
+     "galleryEndpointUrl": "https://gallery.azure.com/",
+     "managementEndpointUrl": "https://management.core.windows.net/"
    }
    ```
 
-2. Spring Boot 앱에 대한 리소스 그룹에서 Azure Storage 계정을 만듭니다. 예를 들어 다음과 같습니다.
-   ```azurecli
-   az storage account create --name wingtiptoysstorage --resource-group wingtiptoysresources --location westus --sku Standard_LRS
-   ```
-   위치:
+## <a name="configure-your-spring-boot-app-to-use-your-azure-storage-account"></a>Azure Storage 계정을 사용하도록 Spring Boot 앱 구성
 
-   | 매개 변수 | 설명 |
-   |---|---|
-   | `name` | 저장소 계정에 고유한 이름을 지정합니다. |
-   | `resource-group` | 이전 단계에서 만든 리소스 그룹의 이름을 지정합니다. |
-   | `location` | 저장소 계정을 호스팅할 [Azure 지역](https://azure.microsoft.com/regions/)을 지정합니다. |
-   | `sku` | `Premium_LRS`, `Standard_GRS`, `Standard_LRS`, `Standard_RAGRS`, `Standard_ZRS` 중 하나를 지정합니다. |
+1. 앱의 *리소스* 디렉터리에서 *application.properties* 파일을 찾습니다.
 
-   Azure가 프로비전 상태를 포함하는 긴 JSON 문자열을 반환합니다. 예를 들어 다음과 같습니다.
+   `C:\SpringBoot\storage\src\main\resources\application.properties`
 
-   ```json
-   {
-     "id": "/subscriptions/ssssssss-ssss-ssss-ssss-ssssssssssss/...",
-     "identity": null,
-     "kind": "Storage"
-       ...
-       ... (A long list of values will be displayed here.)
-       ...
-     "statusOfPrimary": "available",
-     "statusOfSecondary": null,
-     "tags": {},
-     "type": "Microsoft.Storage/storageAccounts"
-   }
-   ```
+   또는
 
-3. 저장소 계정에 대한 연결 문자열을 검색합니다. 예를 들어 다음과 같습니다.
-   ```azurecli
-   az storage account show-connection-string --name wingtiptoysstorage --resource-group wingtiptoysresources
-   ```
-   위치:
+   `/users/example/home/storage/src/main/resources/application.properties`
 
-   | 매개 변수 | 설명 |
-   | ---|---|
-   | `name` | 이전 단계에서 만든 저장소 계정의 고유 이름을 지정합니다. |
-   | `resource-group` | 이전 단계에서 만든 리소스 그룹의 이름을 지정합니다. |
+1.  텍스트 편집기에서 *application.properties* 파일을 찾고 다음 줄을 추가하고 샘플 값을 저장소 계정의 적절한 속성으로 바꿉니다.
 
-   Azure가 저장소 계정에 대한 연결 문자열을 포함하는 JSON 문자열을 반환합니다. 예를 들어 다음과 같습니다.
-
-   ```json
-   {
-     "connectionString": "DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=wingtiptoysstorage;AccountKey=AbCdEfGhIjKlMnOpQrStUvWxYz=="
-   }
-   ```
-
-## <a name="configure-and-compile-your-spring-boot-application"></a>Spring Boot 응용 프로그램 구성 및 컴파일
-
-1. 디렉터리에 다운로드한 프로젝트 아카이브에서 파일을 추출합니다.
-
-1. 프로젝트에서 *src/main/resources* 폴더로 이동하고 텍스트 편집기에서 *application.properties* 파일을 엽니다.
-
-1. 저장소 계정의 키를 추가합니다. 예를 들어 다음과 같습니다.
    ```yaml
-   azure.storage.connection-string=DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=wingtiptoysstorage;AccountKey=AbCdEfGhIjKlMnOpQrStUvWxYz==
+   spring.cloud.azure.credential-file-path=my.azureauth
+   spring.cloud.azure.resource-group=wingtiptoysresources
+   spring.cloud.azure.region=West US
+   spring.cloud.azure.storage.account=wingtiptoysstorage
    ```
+   위치:
+   | 필드 | 설명 |
+   | ---|---|
+   | `spring.cloud.azure.credential-file-path` | 이 자습서의 앞부분에서 만든 Azure 자격 증명 파일을 지정합니다. |
+   | `spring.cloud.azure.resource-group` | Azure 저장소 계정을 포함하는 Azure 리소스 그룹을 지정합니다. |
+   | `spring.cloud.azure.region` | Azure 저장소 계정을 만들 때 지정한 지리적 영역을 지정합니다. |
+   | `spring.cloud.azure.storage.account` | 이 자습서의 앞부분에서 만든 Azure 저장소 계정을 지정합니다.
 
-1. 프로젝트에서 */src/main/java/com/example/wingtiptoysdemo* 폴더로 이동하고 텍스트 편집기에서 *WingtiptoysdemoApplication.java* 파일을 엽니다.
+1. *application.properties* 파일을 저장하고 닫습니다.
 
-1. 기존 Java 코드를 컨테이너의 Blob를 나열하는 다음 예제로 바꿉니다.
+## <a name="add-sample-code-to-implement-basic-azure-storage-functionality"></a>기본 Azure 저장소 기능을 구현하는 샘플 코드 추가
+
+이 섹션에서는 Azure 저장소 계정에서 Blob를 저장하는 데 필요한 Java 클래스를 만듭니다.
+
+### <a name="modify-the-main-application-class"></a>기본 응용 프로그램 클래스 수정
+
+1. 앱의 패키지 디렉터리에서 기본 응용 프로그램 Java 파일을 찾습니다. 예:
+
+   `C:\SpringBoot\storage\src\main\java\com\wingtiptoys\storage\StorageApplication.java`
+
+   또는
+
+   `/users/example/home/storage/src/main/java/com/wingtiptoys/storage/StorageApplication.java`
+
+1. 텍스트 편집기에서 응용 프로그램 Java 파일을 열고 다음 줄을 파일에 추가합니다.
 
    ```java
-   package com.example.wingtiptoysdemo;
-
-   import com.microsoft.azure.storage.*;
-   import com.microsoft.azure.storage.blob.*;
-   import org.springframework.beans.factory.annotation.Autowired;
-   import org.springframework.boot.CommandLineRunner;
+   package com.wingtiptoys.storage;
+   
    import org.springframework.boot.SpringApplication;
    import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-   import java.net.URISyntaxException;
-
+   
    @SpringBootApplication
-   public class WingtiptoysdemoApplication implements CommandLineRunner {
-
-      @Autowired
-      private CloudStorageAccount cloudStorageAccount;
-
-      final String containerName = "mycontainer";
-
+   public class StorageApplication {
       public static void main(String[] args) {
-         SpringApplication.run(WingtiptoysdemoApplication.class, args);
-      }
-
-      public void run(String... var1)
-             throws URISyntaxException, StorageException {
-          // Create a container (if it does not exist).
-          createContainerIfNotExists(containerName);
-          // Upload a blob to the container.
-          uploadTextBlob(containerName);
-      }
-
-      private void createContainerIfNotExists(String containerName)
-            throws URISyntaxException, StorageException {
-         try
-         {
-            // Create a blob client.
-            final CloudBlobClient blobClient = cloudStorageAccount.createCloudBlobClient();
-            // Get a reference to a container. (Name must be lower case.)
-            final CloudBlobContainer container = blobClient.getContainerReference(containerName);
-            // Create the container if it does not exist.
-            container.createIfNotExists();
-         }
-         catch (Exception e)
-         {
-            // Output the stack trace.
-            e.printStackTrace();
-         }
-      }
-
-      private void uploadTextBlob(String containerName)
-            throws URISyntaxException, StorageException {
-         try
-         {
-            // Create a blob client.
-            final CloudBlobClient blobClient = cloudStorageAccount.createCloudBlobClient();
-            // Get a reference to a container. (Name must be lower case.)
-            final CloudBlobContainer container = blobClient.getContainerReference(containerName);
-            // Get a blob reference for a text file.
-            CloudBlockBlob blob = container.getBlockBlobReference("test.txt");
-            // Upload some text into the blob.
-            blob.uploadText("Hello World!");
-         }
-         catch (Exception e)
-         {
-            // Output the stack trace.
-            e.printStackTrace();
-         }
+         SpringApplication.run(StorageApplication.class, args);
       }
    }
    ```
-   > [!NOTE]
-   >
-   > 위의 예제는 *application.properties* 파일에서 정의된 저장소 계정 설정을 자동으로 연결합니다.
-   >
 
-1. 응용 프로그램 컴파일 및 실행:
+1. 기본 응용 프로그램 Java 파일을 저장하고 닫습니다.
+
+### <a name="add-a-web-controller-class"></a>웹 컨트롤러 클래스 추가
+
+1. 앱의 패키지 디렉터리에 *WebController.java*라는 새 Java 파일을 작성합니다. 예:
+
+   `C:\SpringBoot\storage\src\main\java\com\wingtiptoys\storage\WebController.java`
+
+   또는
+
+   `/users/example/home/storage/src/main/java/com/wingtiptoys/storage/WebController.java`
+
+1. 텍스트 편집기에서 웹 컨트롤러 Java 파일을 열고 다음 줄을 파일에 추가합니다.
+
+   ```java
+   package com.wingtiptoys.storage;
+   
+   import org.springframework.beans.factory.annotation.Value;
+   import org.springframework.core.io.Resource;
+   import org.springframework.core.io.WritableResource;
+   import org.springframework.util.StreamUtils;
+   import org.springframework.web.bind.annotation.GetMapping;
+   import org.springframework.web.bind.annotation.PostMapping;
+   import org.springframework.web.bind.annotation.RequestBody;
+   import org.springframework.web.bind.annotation.RestController;
+   
+   import java.io.IOException;
+   import java.io.OutputStream;
+   import java.nio.charset.Charset;
+   
+   @RestController
+   public class WebController {
+   
+      @Value("blob://test/myfile.txt")
+      private Resource blobFile;
+
+      @GetMapping(value = "/")
+      public String readBlobFile() throws IOException {
+         return StreamUtils.copyToString(
+            this.blobFile.getInputStream(),
+            Charset.defaultCharset()) + "\n";
+      }
+   
+      @PostMapping(value = "/")
+      public String writeBlobFile(@RequestBody String data) throws IOException {
+         try (OutputStream os = ((WritableResource) this.blobFile).getOutputStream()) {
+            os.write(data.getBytes());
+         }
+         return "File was updated.\n";
+      }
+   }
+   ```
+   
+   여기서 `@Value("blob://[container]/[blob]")` 구문은 데이터를 저장할 컨테이너 및 Blob의 이름을 각각 정의합니다.
+
+1. 웹 컨트롤러 Java 파일을 저장하고 닫습니다.
+
+1. 명령 프롬프트를 열고 디렉터리를 *pom.xml* 파일이 위치한 폴더로 변경합니다. 예:
+
+   `cd C:\SpringBoot\storage`
+
+   또는
+
+   `cd /users/example/home/storage`
+
+1. Maven을 사용하여 Spring Boot 응용 프로그램을 빌드하고 실행합니다. 예:
+
    ```shell
-   mvn clean package spring-boot:run
+   mvn clean package
+   mvn spring-boot:run
    ```
 
-   응용 프로그램이 컨테이너를 만들고 텍스트 파일을 Blob 형태로 컨테이너에 업로드합니다. 이것은 [Azure Portal](https://portal.azure.com)의 저장소 계정 아래 나열됩니다.
+1. 응용 프로그램이 실행되면, 응용 프로그램을 테스트하기 위해 *curl*을 사용할 수 있습니다. 예:
 
-   ![Azure Portal에서 blob 나열](media/configure-spring-boot-starter-java-app-with-azure-storage/list-blobs-in-portal.png)
+   a. 파일의 내용을 업데이트하려면 POST 요청을 보냅니다.
 
-   > [!NOTE]
-   > 
-   > 응용 프로그램을 컴파일할 때 다음 오류 메시지가 표시될 수 있습니다.
-   > 
-   > `[INFO] ------------------------------------------------------------------------`<br/>
-   > `[INFO] BUILD FAILURE`<br/>
-   > `[INFO] ------------------------------------------------------------------------`<br/>
-   > `[INFO] Total time: 2.616 s`<br/>
-   > `[INFO] Finished at: 2017-11-11T13:14:15Z`<br/>
-   > `[INFO] Final Memory: 26M/213M`<br/>
-   > `[INFO] ------------------------------------------------------------------------`<br/>
-   > `[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2`<br/>
-   > `.18.1:test (default-test) on project wingtiptoysdemo: Execution default-test of`<br/>
-   > `goal org.apache.maven.plugins:maven-surefire-plugin:2.18.1:test failed: The for`<br/>
-   > `ked VM terminated without properly saying goodbye. VM crash or System.exit called?`<br/>
-   > `[ERROR] Command was /bin/sh -c cd /home/robert/SpringBoot/wingtiptoysdemo && /u`<br/>
-   > `sr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -jar /home/robert/SpringBoot/wingt`<br/>
-   > `iptoysdemo/target/surefire/surefirebooter6371623993063346766.jar /home/robert/S`<br/>
-   > `pringBoot/wingtiptoysdemo/target/surefire/surefire5107893623933537917tmp /home/`<br/>
-   > `robert/SpringBoot/wingtiptoysdemo/target/surefire/surefire_01414159391084128068tmp`<br/>
-   > `[ERROR] -> [Help 1]`<br/>
-   > 
-   > 이 경우 Maven Surefire 테스트를 사용하지 않게 설정할 수 있습니다. 이를 위해 다음 플러그인 항목을 *pom.xml* 파일에 추가합니다.
-   > 
-   > ```xml
-   > <plugin>
-   >   <groupId>org.apache.maven.plugins</groupId>
-   >   <artifactId>maven-surefire-plugin</artifactId>
-   >   <version>2.20.1</version>
-   >   <configuration>
-   >     <skipTests>true</skipTests>
-   >   </configuration>
-   > </plugin>
-   > ```
-   > 
+      ```shell
+      curl -X POST -H "Content-Type: text/plain" -d "Hello World" http://localhost:8080/
+      ```
+
+      파일이 업데이트되었다는 응답이 표시됩니다.
+
+   b. 파일의 내용을 확인하려면 GET 요청을 보냅니다.
+
+      ```shell
+      curl -X GET http://localhost:8080/
+      ```
+
+     게시한 "Hello World" 텍스트가 표시됩니다.
 
 ## <a name="next-steps"></a>다음 단계
 
@@ -326,3 +356,15 @@ Spring Boot 응용 프로그램에서 호출할 수 있는 다른 Azure Storage 
 * [Java에서 Azure Queue Storage를 사용하는 방법](/azure/storage/queues/storage-java-how-to-use-queue-storage)
 * [Java에서 Azure Table Storage를 사용하는 방법](/azure/cosmos-db/table-storage-how-to-use-java)
 * [Java에서 Azure File Storage를 사용하는 방법](/azure/storage/files/storage-java-how-to-use-file-storage)
+
+<!-- IMG List -->
+
+[IMG01]: ./media/configure-spring-boot-starter-java-app-with-azure-storage/create-storage-account-01.png
+[IMG02]: ./media/configure-spring-boot-starter-java-app-with-azure-storage/create-storage-account-02.png
+[IMG03]: ./media/configure-spring-boot-starter-java-app-with-azure-storage/create-storage-account-03.png
+[IMG04]: ./media/configure-spring-boot-starter-java-app-with-azure-storage/create-storage-account-04.png
+[IMG05]: ./media/configure-spring-boot-starter-java-app-with-azure-storage/create-storage-account-05.png
+
+[SI01]: ./media/configure-spring-boot-starter-java-app-with-azure-storage/create-project-01.png
+[SI02]: ./media/configure-spring-boot-starter-java-app-with-azure-storage/create-project-02.png
+[SI03]: ./media/configure-spring-boot-starter-java-app-with-azure-storage/create-project-03.png
