@@ -14,12 +14,12 @@ ms.service: active-directory
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 6d20593620c7fb73f8481be8705bdc42d4e9ce32
-ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
+ms.openlocfilehash: d3b6bdc4aaae79864d370c581585167cf3732160
+ms.sourcegitcommit: bb7286fad75a2bb43e6ce1a8f1b09e701147c9f9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37864053"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48047187"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-active-directory"></a>Azure Active Directory에 Spring Boot Starter를 사용하는 방법
 
@@ -85,7 +85,7 @@ ms.locfileid: "37864053"
 
    ![새 앱 등록 추가][directory-04]
 
-1. **새 응용 프로그램 등록** 을 클릭하고 응용 프로그램 **이름**을 지정한 다음http://localhost:8080 **로그온 URL**에 사용하고 **만들기**를 클릭합니다.
+1. **새 응용 프로그램 등록** 을 클릭하고 응용 프로그램 **이름**을 지정한 다음 http://localhost:8080 **로그온 URL**에 사용하고 **만들기**를 클릭합니다.
 
    ![새 앱 등록 만들기][directory-05]
 
