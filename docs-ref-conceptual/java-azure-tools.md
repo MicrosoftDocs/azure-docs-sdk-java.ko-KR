@@ -10,12 +10,12 @@ ms.service: Azure
 ms.technology: Azure
 ms.date: 4/10/2017
 ms.author: routlaw;asirveda
-ms.openlocfilehash: 425d4c3a5a347e4706e9c37ebd7247cf0d8c9846
-ms.sourcegitcommit: f0dadb22efb191182c3b79dcaa97a76cfcdcc324
+ms.openlocfilehash: fad860e19382fb320892dcc5eada95e6d663739e
+ms.sourcegitcommit: bb7286fad75a2bb43e6ce1a8f1b09e701147c9f9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
-ms.locfileid: "26288312"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48047120"
 ---
 # <a name="azure-tools-for-java-developers"></a>Java 개발자용 Azure 도구
 
@@ -29,7 +29,7 @@ ms.locfileid: "26288312"
 
 ## <a name="visual-studio-code"></a>Visual Studio Code
 
-VS Code는 가벼우면서 강력한 코드 편집기로, MacOS, Windows, Linux에 사용할 수 있습니다. VS Code는 프로젝트 지원, 코드 완성, 디버깅, 린팅, 탐색을 제공하는 여러 확장을 통해 간단한 최신 Java 개발 워크플로를 지원합니다.
+[VS Code](https://code.visualstudio.com/)는 가벼우면서 강력한 코드 편집기로, MacOS, Windows, Linux에 사용할 수 있습니다. VS Code는 프로젝트 지원, 코드 완성, 디버깅, 린팅, 탐색을 제공하는 여러 확장을 통해 간단한 최신 Java 개발 워크플로를 지원합니다.
 
 [VS Code 및 Java 시작](https://code.visualstudio.com/docs/java)
 [VS Code용 Java 확장 팩](https://code.visualstudio.com/docs/java/extensions)  
