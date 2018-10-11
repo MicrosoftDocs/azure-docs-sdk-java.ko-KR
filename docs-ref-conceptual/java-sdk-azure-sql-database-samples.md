@@ -13,12 +13,12 @@ ms.devlang: java
 ms.service: multiple
 ms.assetid: e4537f38-a60d-4218-a9ba-3cba7af61b8b
 ms.openlocfilehash: 69ba251fc2ca4faa9abb1bffd125affe5133ac06
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21930779"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893084"
 ---
-# <a name="azure-management-libraries-for-java-samples-for-sql-database"></a><span data-ttu-id="062c9-104">Java SQL Database 샘플용 Azure 관리 라이브러리</span><span class="sxs-lookup"><span data-stu-id="062c9-104">Azure management libraries for Java samples for SQL Database</span></span>
+# <a name="azure-management-libraries-for-java-samples-for-sql-database"></a><span data-ttu-id="90fe7-104">Java SQL Database 샘플용 Azure 관리 라이브러리</span><span class="sxs-lookup"><span data-stu-id="90fe7-104">Azure management libraries for Java samples for SQL Database</span></span>
 
 [!INCLUDE [java-sql-samples](includes/java-sql-samples.md)]
