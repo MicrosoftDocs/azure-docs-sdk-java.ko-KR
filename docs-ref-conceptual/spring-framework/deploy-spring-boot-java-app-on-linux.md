@@ -16,11 +16,11 @@ ms.topic: article
 ms.workload: web
 ms.custom: mvc
 ms.openlocfilehash: 49d94d11ad6a4e103ded849e477d99f01955c693
-ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37090866"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48899206"
 ---
 # <a name="deploy-a-spring-boot-application-on-linux-in-the-azure-container-service"></a>Azure Container Service에서 Linux에 Spring Boot 응용 프로그램 배포
 
@@ -201,7 +201,7 @@ ms.locfileid: "37090866"
 
    a. **앱 이름**에 고유한 이름을 입력합니다. 예: "*wingtiptoyslinux*."
 
-   나. 드롭다운 목록에서 **구독**을 선택합니다.
+   b. 드롭다운 목록에서 **구독**을 선택합니다.
 
    다. 기존 **리소스 그룹**을 선택하거나 새 리소스 그룹을 만들기 위해 이름을 지정합니다.
 

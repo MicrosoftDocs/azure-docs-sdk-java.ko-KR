@@ -1,6 +1,6 @@
 ---
 title: 지역 간에 동시에 VM 만들기 | Microsoft Docs
-description: Java용 Azure SDK를 사용하여 여러 Azure 지역 간에 동시에 가상 컴퓨터를 만드는 샘플 코드
+description: Java용 Azure SDK를 사용하여 여러 Azure 지역 간에 동시에 가상 머신을 만드는 샘플 코드
 author: rloutlaw
 manager: douge
 ms.assetid: e5a36699-2d96-4571-84f9-a6af13f3c067
@@ -10,18 +10,18 @@ ms.topic: article
 ms.date: 03/30/2017
 ms.author: routlaw;asirveda
 ms.openlocfilehash: e20feb555c3a360eceae60c1569af9a00a5cd027
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21931199"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893214"
 ---
-# <a name="create-virtual-machines-across-multiple-regions-from-your-java-applications"></a>Java 응용 프로그램에서 여러 지역에 가상 컴퓨터 만들기
+# <a name="create-virtual-machines-across-multiple-regions-from-your-java-applications"></a>Java 응용 프로그램에서 여러 지역에 가상 머신 만들기
 
-[이 샘플](https://github.com/Azure-Samples/compute-java-create-virtual-machines-across-regions-in-parallel)에서는 [Java용 Azure 관리 라이브러리](https://github.com/Azure/azure-sdk-for-java)를 사용하여 서로 다른 Azure 지역에서 동시에 가상 컴퓨터를 만듭니다.
+[이 샘플](https://github.com/Azure-Samples/compute-java-create-virtual-machines-across-regions-in-parallel)에서는 [Java용 Azure 관리 라이브러리](https://github.com/Azure/azure-sdk-for-java)를 사용하여 서로 다른 Azure 지역에서 동시에 가상 머신을 만듭니다.
 
 > [!IMPORTANT]
-> 샘플에서는 네 개 지역에서 [STANDARD_DS3_V2 크기](http://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-sizes)의 Ubuntu 16.04 LTS를 실행하는 총 48개의 VM을 만듭니다. 샘플 코드는 종료하기 전에 이러한 가상 컴퓨터를 삭제합니다. 이 샘플을 VM의 기본 개수로 실행하기 전에 반드시 [서비스 제한 및 할당량을 확인](http://docs.microsoft.com/azure/azure-subscription-service-limits)하세요.
+> 샘플에서는 네 개 지역에서 [STANDARD_DS3_V2 크기](http://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-sizes)의 Ubuntu 16.04 LTS를 실행하는 총 48개의 VM을 만듭니다. 샘플 코드는 종료하기 전에 이러한 가상 머신을 삭제합니다. 이 샘플을 VM의 기본 개수로 실행하기 전에 반드시 [서비스 제한 및 할당량을 확인](http://docs.microsoft.com/azure/azure-subscription-service-limits)하세요.
 
 ## <a name="run-the-sample"></a>샘플 실행
 
@@ -39,7 +39,7 @@ mvn clean compile exec:java
 
 [!INCLUDE [auth-include](includes/java-auth-include.md)]
 
-## <a name="set-locations-and-counts-for-the-virtual-machines"></a>가상 컴퓨터에 대한 위치 및 개수 설정
+## <a name="set-locations-and-counts-for-the-virtual-machines"></a>가상 머신에 대한 위치 및 개수 설정
 
 ```java
 // use a Map to define how where and how many VMs to create 
@@ -66,7 +66,7 @@ ResourceGroup resourceGroup = azure.resourceGroups().define(rgName)
 
 샘플의 각 리소스는 이 리소스 그룹에서 관리됩니다. 이렇게 하면 나중에 리소스 그룹을 삭제하여 리소스를 쉽게 정리할 수 있습니다.
 
-## <a name="define-the-virtual-machines"></a>가상 컴퓨터 정의
+## <a name="define-the-virtual-machines"></a>가상 머신 정의
 ```java
 // list to store the VirtualMachine definitions
 List<Creatable<VirtualMachine>> creatableVirtualMachines = new ArrayList<>();
@@ -124,11 +124,11 @@ for (Map.Entry<Region, Integer> entry : virtualMachinesByLocation.entrySet()) {
 }
 ```
 
-위의 `for` 외부 루프는 각 지역을 반복하여 해당 지역의 모든 가상 컴퓨터에서 사용할 가상 네트워크 Creatable 개체와 저장소 계정 Creatable 개체를 정의합니다. 관리 라이브러리를 사용할 때 필요한 경우에만 [Creatable 개체](java-sdk-azure-concepts.md#Creatables)를 사용하여 리소스를 만드는 방법에 대해 자세히 알아보세요.
+위의 `for` 외부 루프는 각 지역을 반복하여 해당 지역의 모든 가상 머신에서 사용할 가상 네트워크 Creatable 개체와 저장소 계정 Creatable 개체를 정의합니다. 관리 라이브러리를 사용할 때 필요한 경우에만 [Creatable 개체](java-sdk-azure-concepts.md#Creatables)를 사용하여 리소스를 만드는 방법에 대해 자세히 알아보세요.
 
 `for` 내부 루프는 가상 컴퓨터에 대한 공용 IP 주소 Creatable 개체를 가져온 다음 이전에 정의한 가상 네트워크, 저장소 계정 및 공용 IP 주소에 대한 Creatable 개체를 사용하여 가상 컴퓨터 Creatable 개체를 정의합니다.  그런 다음 `creatableVirtualMachines` 목록에 이 VirtualMachine Creatable 개체를 추가합니다.
 
-## <a name="create-the-virtual-machines"></a>가상 컴퓨터 만들기
+## <a name="create-the-virtual-machines"></a>가상 머신 만들기
 
 ```java
 // create all virtual machines defined in the list, return all Creatable objects used
@@ -148,7 +148,7 @@ for (String publicIpCreatableKey : publicIpCreatableKeys) {
 }
 ```
 
-`azure.virtualMachines().create(creatableVirtualMachines)` 호출은 `creatableVirtualMachines` 목록에 정의된 모든 가상 컴퓨터를 지역 전체에서 동시에 만듭니다.
+`azure.virtualMachines().create(creatableVirtualMachines)` 호출은 `creatableVirtualMachines` 목록에 정의된 모든 가상 머신을 지역 전체에서 동시에 만듭니다.
 
 반환된 `CreatedResources<VirtualMachine>` 개체를 사용하여 반환된 `VirtualMachine` 형식 외에도 `create()` 메서드 중에 Azure 구독에 만들어진 모든 리소스에 액세스합니다. `createdRelatedResources()`에서 반환된 값을 올바른 형식으로 캐스트합니다. 
 
@@ -178,18 +178,18 @@ finally {
 
 [GitHub에서 전체 샘플 코드(영문)](https://github.com/Azure-Samples/compute-java-create-virtual-machines-across-regions-in-parallel)를 봅니다.
 
-이 샘플에서는 `Creatable` 개체를 사용하여 가상 컴퓨터를 호스팅하는 각 지역에 대한 가상 네트워크 및 저장소 계정을 정의합니다. 그런 다음 각 가상 컴퓨터의 공용 IP 주소에 대해 `Creatable` 개체가 정의됩니다. 샘플은 이러한 `Creatable` 개체를 사용하여 가상 컴퓨터를 정의하고 `virtualMachineCreatable` 목록에 이 VM 정의를 추가합니다.
+이 샘플에서는 `Creatable` 개체를 사용하여 가상 머신을 호스팅하는 각 지역에 대한 가상 네트워크 및 저장소 계정을 정의합니다. 그런 다음 각 가상 머신의 공용 IP 주소에 대해 `Creatable` 개체가 정의됩니다. 샘플은 이러한 `Creatable` 개체를 사용하여 가상 머신을 정의하고 `virtualMachineCreatable` 목록에 이 VM 정의를 추가합니다.
 
 코드에서 목록에 모든 가상 컴퓨터 정의를 추가하면 `azure.virtualMachines().create(creatableVirtualMachines)`는 Azure에서 각 가상 컴퓨터를 동시에 만듭니다.
 
-그런 다음 샘플 코드는 반환된 CreatedResources 개체에서 만들어진 모든 가상 컴퓨터에 대한 IP 주소를 가져와서 가상 컴퓨터 간에 부하를 분산할 수 있는 [Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview)를 만듭니다. 
+그런 다음 샘플 코드는 반환된 CreatedResources 개체에서 만들어진 모든 가상 머신에 대한 IP 주소를 가져와서 가상 머신 간에 부하를 분산할 수 있는 [Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview)를 만듭니다. 
 
 `finally` 블록에서는 오류가 발생하더라도 Azure 구독에서 리소스를 삭제합니다.
 
-| 샘플에 사용되는 클래스 | 참고 사항
+| 샘플에 사용되는 클래스 | 메모
 |-------|-------|
-| [VirtualMachine](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine) | 속성을 쿼리하고 가상 컴퓨터의 상태를 관리합니다. `azure.virtualMachines().list()` 또는 이름별 또는 ID `azure.virtualMachines().getByResourceGroup()` 목록 형식으로 검색됩니다.
-| [VirtualMachineSizeTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_size_types) | 가상 컴퓨터를 정의할 때 `withSize()`에 대한 매개 변수로 사용할 [가상 컴퓨터 크기 옵션](https://azure.microsoft.com/pricing/details/virtual-machines/linux/)에 매핑되는 정적 값입니다.
+| [VirtualMachine](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine) | 속성을 쿼리하고 가상 머신의 상태를 관리합니다. `azure.virtualMachines().list()` 또는 이름별 또는 ID `azure.virtualMachines().getByResourceGroup()` 목록 형식으로 검색됩니다.
+| [VirtualMachineSizeTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_size_types) | 가상 머신을 정의할 때 `withSize()`에 대한 매개 변수로 사용할 [가상 머신 크기 옵션](https://azure.microsoft.com/pricing/details/virtual-machines/linux/)에 매핑되는 정적 값입니다.
 | [PublicIpAddress](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._public_i_p_address) | `azure.publicIpAddresses().define()`을 통해 각 가상 컴퓨터에 대해 정의되지만 즉시 만들어지지는 않습니다. 각 `Creatable`에 대한 키를 저장하고 나중에 `createdRelatedResource()`를 통해 검색합니다.
 | [KnownLinuxVirtualMachineImage](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._known_linux_virtual_machine_image) | 가상 컴퓨터를 정의할 때 `withPopularLinuxImage()` 메서드에 대한 매개 변수로 사용되는 Linux 가상 컴퓨터 옵션 집합입니다.
 | [네트워크](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._network) | 샘플에서는 `azure.networks().define()`을 통해 각 지역에 대해 하나의 가상 네트워크를 정의합니다. 

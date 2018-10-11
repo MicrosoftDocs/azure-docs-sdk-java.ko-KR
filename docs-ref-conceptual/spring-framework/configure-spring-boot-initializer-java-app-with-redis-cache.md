@@ -15,11 +15,11 @@ ms.tgt_pltfrm: cache-redis
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 8bfe7c2ddd238e0e5a259de9078b831a97b1b1a4
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954584"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892914"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a>Azure Redis Cache를 사용하여 클라우드에서 Redis를 사용하도록 Spring Boot Initializer 앱 구성
 
@@ -29,7 +29,7 @@ ms.locfileid: "28954584"
 
 이 문서의 단계를 완료하려면 다음 필수 구성 요소가 필요합니다.
 
-* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정{]에 등록할 수 있습니다.
+* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정]에 등록할 수 있습니다.
 * [JDK(Java Development Kit)](http://www.oracle.com/technetwork/java/javase/downloads/), 버전 1.7 이상
 * [Apache Maven](http://maven.apache.org/), 버전 3.0 이상
 
@@ -60,7 +60,7 @@ ms.locfileid: "28954584"
 
 ## <a name="create-a-redis-cache-on-azure"></a>Azure에 Redis 캐시 만들기
 
-1. <https://portal.azure.com/>의 Azure Portal로 이동하고 **+새로 만들기**를 클릭합니다.
+1. Azure Portal(<https://portal.azure.com/>)이동하고 **+새로 만들기**를 클릭합니다.
 
    ![Azure portal][AZ01]
 
@@ -188,7 +188,7 @@ ms.locfileid: "28954584"
    mvn spring-boot:run
    ```
 
-1. 웹 브라우저를 통해 http://localhost:8080 으로 이동하여 웹앱을 테스트하거나 사용 가능한 curl이 있는 경우 다음 예제와 같이 구문을 사용합니다.
+1. 웹 브라우저를 통해 http://localhost:8080으로 이동하여 웹앱을 테스트하거나 사용 가능한 curl이 있는 경우 다음 예제와 같이 구문을 사용합니다.
 
    ```shell
    curl http://localhost:8080
@@ -213,7 +213,7 @@ Azure에서 Java로 Redis Cache를 시작하는 방법에 대한 자세한 내�
 <!-- URL List -->
 
 [Java 개발자용 Azure]: https://docs.microsoft.com/java/azure/
-[체험판 Azure 계정{]: https://azure.microsoft.com/pricing/free-trial/
+[체험판 Azure 계정]: https://azure.microsoft.com/pricing/free-trial/
 [Visual Studio Team Services용 Java 도구]: https://java.visualstudio.com/
 [MSDN 구독자 혜택]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/

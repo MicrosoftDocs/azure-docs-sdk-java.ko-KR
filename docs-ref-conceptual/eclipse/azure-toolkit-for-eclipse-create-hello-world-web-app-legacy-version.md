@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.openlocfilehash: 896e7eff389bc7d3ac119d315c50aae505a381da
-ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37090806"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892564"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-eclipse"></a>레거시 Eclipse용 도구 키트를 사용하여 Azure용 Hello World 웹앱 만들기
 
@@ -101,7 +101,7 @@ ms.locfileid: "37090806"
       
       ![Azure 웹앱 컨테이너에 배포 대화 상자][15]
 
-   나. **새 웹앱 컨테이너** 대화 상자가 표시됩니다.
+   b. **새 웹앱 컨테이너** 대화 상자가 표시됩니다.
       
       ![새 웹앱 컨테이너 대화 상자][07a]
 

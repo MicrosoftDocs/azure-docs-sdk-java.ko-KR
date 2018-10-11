@@ -12,11 +12,11 @@ ms.technology: azure
 ms.devlang: java
 ms.service: dns
 ms.openlocfilehash: 2cd8fe7ee4d6a87da32a349fe8f1d2815d3fd36d
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31823636"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892904"
 ---
 # <a name="azure-traffic-manager-libraries-for-java"></a>Java용 Azure Traffic Manager 라이브러리
 

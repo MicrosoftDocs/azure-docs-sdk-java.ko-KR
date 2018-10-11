@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: adf779e2ba6ca73ea3a2406613f9622cc9ecbf99
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954526"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893164"
 ---
 # <a name="deploy-a-spring-boot-application-to-the-cloud-with-azure-app-service"></a>Azure App Service로 클라우드에 Spring Boot 응용 프로그램 배포
 
@@ -29,7 +29,7 @@ ms.locfileid: "28954526"
 
 이 자습서의 단계를 완료하려면 다음이 필요합니다.
 
-* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정{]에 등록할 수 있습니다.
+* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [무료 Azure 계정]에 등록할 수 있습니다.
 * 최신 [JDK(Java Developer Kit)]
 * Apache의 [Maven] 빌드 도구(버전 3)
 * [Git] 클라이언트
@@ -71,7 +71,7 @@ ms.locfileid: "28954526"
    java -jar gs-spring-boot-0.1.0.jar
    ```
 
-1. 웹 브라우저를 통해 http://localhost:8080 으로 이동하여 웹앱을 테스트하거나 사용 가능한 curl이 있는 경우 다음 예제와 같이 구문을 사용합니다.
+1. 웹 브라우저를 통해 http://localhost:8080으로 이동하여 웹앱을 테스트하거나 사용 가능한 curl이 있는 경우 다음 예제와 같이 구문을 사용합니다.
    ```
    curl http://localhost:8080
    ```
@@ -114,7 +114,7 @@ ms.locfileid: "28954526"
 
    a. **응용 프로그램 설정** 메뉴 항목을 클릭합니다.
 
-   나. Java 버전으로 **Java 8**을 선택합니다.
+   b. Java 버전으로 **Java 8**을 선택합니다.
 
    다. 부 Java 버전으로 **가장 최근 항목**을 선택합니다.
 
@@ -128,7 +128,7 @@ ms.locfileid: "28954526"
 
    a. **배포 자격 증명** 메뉴 항목을 클릭합니다.
 
-   나. 사용자 이름 및 암호를 지정합니다.
+   b. 사용자 이름 및 암호를 지정합니다.
 
    다. **저장**을 클릭합니다.
 
@@ -138,7 +138,7 @@ ms.locfileid: "28954526"
 
    a. **배포 자격 증명** 메뉴 항목을 클릭합니다.
 
-   나. 전체 FTP 사용자 이름 및 URL을 복사하고 이 자습서의 다음 섹션을 위해 저장합니다.
+   b. 전체 FTP 사용자 이름 및 URL을 복사하고 이 자습서의 다음 섹션을 위해 저장합니다.
 
    ![FTP URL 및 자격 증명][AZ09]
 
@@ -199,7 +199,7 @@ Azure에서 Spring Boot 응용 프로그램을 사용 하는 방법에 대한 �
 
 Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 개발자용 Azure] 및 [Visual Studio Team Services용 Java 도구]를 참조하세요.
 
-FTP를 사용하여 Azure에 웹앱을 배포하는 방법에 대한 자세한 내용은 [FTP/S를 사용하여 Azure App Service에 앱 배포]를 참조하세요.
+FTP를 사용하여 Azure에 웹앱을 배포하는 방법에 대한 자세한 내용은 [FTP/S를 사용하여 앱에 Azure App Service에 배포]를 참조하세요.
 
 Spring Boot 샘플 프로젝트에 대한 자세한 내용은 [Spring Boot 시작하기]를 참조하세요.
 
@@ -214,8 +214,8 @@ Spring Boot 샘플 프로젝트에 대한 자세한 내용은 [Spring Boot 시�
 [Java 개발자용 Azure]: https://docs.microsoft.com/java/azure/
 [Azure Portal]: https://portal.azure.com/
 [Azure App Service에서 웹앱 구성]: /azure/app-service/web-sites-configure
-[FTP/S를 사용하여 Azure App Service에 앱 배포]: https://docs.microsoft.com/azure/app-service/app-service-deploy-ftp
-[체험판 Azure 계정{]: https://azure.microsoft.com/pricing/free-trial/
+[FTP/S를 사용하여 앱에 Azure App Service에 배포]: https://docs.microsoft.com/azure/app-service/app-service-deploy-ftp
+[무료 Azure 계정]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [JDK(Java Developer Kit)]: http://www.oracle.com/technetwork/java/javase/downloads/
 [Visual Studio Team Services용 Java 도구]: https://java.visualstudio.com/

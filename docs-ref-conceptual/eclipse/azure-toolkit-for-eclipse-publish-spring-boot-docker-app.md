@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: c116e0712afd8e48983f946f43eddfd0c79c0ba8
-ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38075479"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48899179"
 ---
 # <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-eclipse"></a>Eclipse용 Azure 도구 키트를 사용하여 Spring Boot 앱을 Docker 컨테이너로 게시
 
@@ -47,7 +47,7 @@ ms.locfileid: "38075479"
 
    a. **Git**를 확장합니다.
 
-   나. **Projects from Git**를 선택합니다.
+   b. **Projects from Git**를 선택합니다.
    
    다. **다음**을 클릭합니다.
 
@@ -57,7 +57,7 @@ ms.locfileid: "38075479"
 
    a. **Clone URI**를 선택합니다.
    
-   나. **다음**을 클릭합니다.
+   b. **다음**을 클릭합니다.
 
    ![Select Repository Source 페이지][CL03]
 
@@ -65,7 +65,7 @@ ms.locfileid: "38075479"
 
    a. **URI**에 대해 `https://github.com/spring-guides/gs-spring-boot-docker.git`를 입력합니다. 이 단계에서는 **Host** 및 **Repository path** 필드에 올바른 값을 자동으로 채웁니다.
    
-   나. Spring Boot 리포지토리는 공개되어 있으므로 Git 사용자 이름과 암호를 입력하지 않아도 됩니다.
+   b. Spring Boot 리포지토리는 공개되어 있으므로 Git 사용자 이름과 암호를 입력하지 않아도 됩니다.
    
    다. **다음**을 클릭합니다.
 
@@ -79,7 +79,7 @@ ms.locfileid: "38075479"
 
    a. 로컬 리포지토리를 저장할 로컬 폴더를 지정합니다.
    
-   나. **다음**을 클릭합니다.
+   b. **다음**을 클릭합니다.
 
    ![Local Destination 페이지][CL06]
 
@@ -87,7 +87,7 @@ ms.locfileid: "38075479"
 
    a. **Import as a general project**를 선택합니다.
    
-   나. **다음**을 클릭합니다.
+   b. **다음**을 클릭합니다.
 
    !["Select a wizard to use for importing projects" 페이지][CL07]
 
@@ -95,7 +95,7 @@ ms.locfileid: "38075479"
 
    a. 프로젝트 이름을 지정합니다.
    
-   나. **Finish**를 클릭합니다.
+   b. **Finish**를 클릭합니다.
 
    ![Import Projects 페이지][CL08]
 
@@ -115,7 +115,7 @@ Spring Boot Docker 리포지토리는 이 자습서에서 사용할 완성된 Ma
 
    a. **Maven**을 확장합니다.
    
-   나. **Existing Maven Projects**를 선택합니다.
+   b. **Existing Maven Projects**를 선택합니다.
    
    다. **다음**을 클릭합니다.
 
@@ -125,7 +125,7 @@ Spring Boot Docker 리포지토리는 이 자습서에서 사용할 완성된 Ma
 
    a. **Root Directory**에 대해 로컬 리포지토리의 **전체** 폴더를 지정합니다.
    
-   나. **Advanced** 섹션을 펼치고 **Name template**에 사용자 지정 이름을 입력합니다.
+   b. **Advanced** 섹션을 펼치고 **Name template**에 사용자 지정 이름을 입력합니다.
    
    다. 프로젝트에서 **pom.xml** 파일에 대한 상자를 선택합니다.
    
@@ -161,7 +161,7 @@ Spring Boot Docker 리포지토리는 이 자습서에서 사용할 완성된 Ma
 
    a. 사용자 지정 Docker 이미지 이름을 입력합니다.
    
-   나. **Artifact to deploy**에 대해 방금 빌드한 **gs-spring-boot-docker-0.1.0.jar** 파일의 경로를 지정합니다.
+   b. **Artifact to deploy**에 대해 방금 빌드한 **gs-spring-boot-docker-0.1.0.jar** 파일의 경로를 지정합니다.
 
    ![Docker 옵션 지정][PU02]
 
@@ -173,7 +173,7 @@ Spring Boot Docker 리포지토리는 이 자습서에서 사용할 완성된 Ma
 
       ![새 Docker 호스트 추가][PU03]
 
-   나. **Create Docker Host** 대화 상자가 표시되면 기본값을 그대로 허용하도록 선택하거나 새 Docker 호스트에 대한 사용자 지정 설정을 지정할 수 있습니다. 다양한 설정에 대한 자세한 설명은 [IntelliJ용 Azure 도구 키트를 사용하여 웹앱을 Docker 컨테이너로 게시][Publish Container with Azure Toolkit]를 참조하세요. 사용할 설정을 지정하면 **다음**을 클릭합니다.
+   b. **Create Docker Host** 대화 상자가 표시되면 기본값을 그대로 허용하도록 선택하거나 새 Docker 호스트에 대한 사용자 지정 설정을 지정할 수 있습니다. 다양한 설정에 대한 자세한 설명은 [IntelliJ용 Azure 도구 키트를 사용하여 웹앱을 Docker 컨테이너로 게시][Publish Container with Azure Toolkit]를 참조하세요. 사용할 설정을 지정하면 **다음**을 클릭합니다.
 
       ![Docker 호스트 옵션 지정][PU04]
 
@@ -189,7 +189,7 @@ Spring Boot Docker 리포지토리는 이 자습서에서 사용할 완성된 Ma
 
    a. Docker 컨테이너를 호스팅할 컨테이너에 대한 사용자 지정 이름을 지정하도록 선택하거나 기본값을 적용할 수 있습니다.
 
-   나. *[외부 포트]*:*[내부 포트]* 구문을 사용하여 Docker 호스트에 대한 TCP 포트를 입력합니다. 예를 들어 **80:8080**은 80 외부 포트 및 8080 기본 내부 Spring Boot 포트를 지정합니다.
+   b. *[외부 포트]*:*[내부 포트]* 구문을 사용하여 Docker 호스트에 대한 TCP 포트를 입력합니다. 예를 들어 **80:8080**은 80 외부 포트 및 8080 기본 내부 Spring Boot 포트를 지정합니다.
    
       내부 포트를 사용자 지정한 경우(예: application.yml 파일 편집) Azure에서 올바른 라우팅을 수행할 포트 번호를 지정해야 합니다.
 

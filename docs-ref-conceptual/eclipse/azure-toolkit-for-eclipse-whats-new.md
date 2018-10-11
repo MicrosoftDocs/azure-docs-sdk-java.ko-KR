@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: e993fd09e555274f51a500408efbffc4ac5df394
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954674"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892554"
 ---
 # <a name="whats-new-in-the-azure-toolkit-for-eclipse"></a>Eclipse용 Azure 도구 키트의 새로운 기능
 

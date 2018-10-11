@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 05fb81466202547cb1bad34caae0f94f16a9d21b
-ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37090676"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893654"
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>IntelliJ용 Azure 도구 키트를 사용하여 웹앱을 Docker 컨테이너로 게시
 
@@ -59,7 +59,7 @@ Docker 컨테이너는 웹 응용 프로그램을 배포하는 데 널리 사용
 
    a. **Docker 이미지 이름** 상자에서 Docker 호스트에 사용할 고유한 이름을 입력합니다. (마법사에서 이름을 자동으로 만들지만 사용자가 수정할 수 있습니다.) 
 
-   나. **호스트** 영역에 사용자가 이미 만든 Docker 호스트가 표시됩니다. 다음 중 하나를 수행합니다. 
+   b. **호스트** 영역에 사용자가 이미 만든 Docker 호스트가 표시됩니다. 다음 중 하나를 수행합니다. 
    * 기존 Docker 호스트가 있는 경우 웹앱을 해당 호스트에 배포할 수 있습니다.
    * Docker 호스트를 만들려면 녹색 더하기 기호(**+**)를 클릭합니다.  
      **Docker 호스트 만들기** 대화 상자가 열립니다. 
@@ -70,7 +70,7 @@ Docker 컨테이너는 웹 응용 프로그램을 배포하는 데 널리 사용
 
    a. **이름** 상자에서 Docker 호스트에 사용할 고유한 이름을 입력합니다. (이전에 지정한 Docker 이미지 이름과 다릅니다.) 
     
-   나. **구독** 상자에서 호스트에 사용하는 Azure 구독을 입력합니다. 
+   b. **구독** 상자에서 호스트에 사용하는 Azure 구독을 입력합니다. 
       
    다. **지역** 상자에서 호스트가 배치될 지리적 지역을 입력합니다.
       
@@ -122,7 +122,7 @@ Docker 컨테이너는 웹 응용 프로그램을 배포하는 데 널리 사용
 
          * *id_rsa.pub*: 인증에 사용되는 RSA 공개 키를 포함합니다.
 
-     나. **Docker 데몬 액세스** 탭에서 다음 정보를 제공합니다.
+     b. **Docker 데몬 액세스** 탭에서 다음 정보를 제공합니다.
 
      ![Docker 호스트 만들기][PUB06]
     
@@ -156,7 +156,7 @@ Docker 컨테이너는 웹 응용 프로그램을 배포하는 데 널리 사용
 
    a. **Docker 컨테이너 이름** 상자에서 Docker 컨테이너에 사용할 고유한 이름을 입력합니다.
 
-   나. 다음 Docker 이미지 중 하나를 선택합니다. 
+   b. 다음 Docker 이미지 중 하나를 선택합니다. 
 
       * **미리 정의된 Docker 이미지**: Azure에서 기존 Docker 이미지를 지정합니다. 
 

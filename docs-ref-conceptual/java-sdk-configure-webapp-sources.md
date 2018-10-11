@@ -10,11 +10,11 @@ ms.topic: article
 ms.date: 03/30/2017
 ms.author: routlaw;asirveda
 ms.openlocfilehash: 910d1e43c9942d6402aeccb8757ba819b7453dab
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21931189"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893144"
 ---
 # <a name="configure-azure-app-service-deployment-sources-from-your-java-applications"></a>Java 응용 프로그램에서 Azure App Service 배포 원본 구성
 
@@ -155,7 +155,7 @@ WebApp app4 = azure.webApps()
 
 네 번째 응용 프로그램은 변경 내용을 푸시하거나 GitHub 리포지토리의 마스터 분기로 끌어오기 요청을 병합할 때마다 마스터 분기에 코드를 배포합니다.
 
-| 샘플에 사용되는 클래스 | 참고 사항
+| 샘플에 사용되는 클래스 | 메모
 |-------|-------|
 | [WebApp](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice._web_app) | `azure.webApps().define()....create()` 흐름 체인에서 만들어집니다. App Service 웹앱과 앱에 필요한 모든 리소스를 만듭니다. 대부분의 메서드는 구성 세부 정보에 대한 개체를 쿼리하지만, `restart()`와 같은 동사 메서드는 웹앱의 상태를 변경합니다.
 | [WebContainer](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice._web_container) | Java 웹 컨테이너를 실행하는 WebApp을 정의할 때 `withWebContainer()`에 대한 매개 변수로 사용되는 정적 공용 필드가 있는 클래스입니다. Jetty 및 Tomcat 버전을 모두 선택할 수 있습니다.

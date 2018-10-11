@@ -11,11 +11,11 @@ ms.technology: Azure
 ms.date: 3/30/2017
 ms.author: routlaw;asirveda
 ms.openlocfilehash: 5945164b2b04e1fa9169590a71f6c5f9f45842d6
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21931059"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893065"
 ---
 # <a name="manage-azure-storage-accounts-from-your-java-applications"></a>Java 응용 프로그램에서 Azure 저장소 계정 관리
 
@@ -91,7 +91,7 @@ azure.storageAccounts().deleteByResourceGroup(rgName,accountName);
 ```
 
 > [!NOTE]
-> 다른 아티팩트에서 사용 중인 가상 컴퓨터 또는 디스크에 연결된 사용 중인 디스크 이미지가 있는 저장소 계정은 이러한 메서드로 제거할 수 없습니다. 계정을 제거하려면 먼저 이러한 리소스에서 저장소를 분리하세요.
+> 다른 아티팩트에서 사용 중인 가상 머신 또는 디스크에 연결된 사용 중인 디스크 이미지가 있는 Storage 계정은 이러한 메서드로 제거할 수 없습니다. 계정을 제거하려면 먼저 이러한 리소스에서 저장소를 분리하세요.
 
 ## <a name="sample-explanation"></a>샘플 설명
 
@@ -102,7 +102,7 @@ azure.storageAccounts().deleteByResourceGroup(rgName,accountName);
 - 리소스 그룹의 모든 저장소 계정을 나열합니다.
 - 저장소 계정을 삭제합니다. 
 
-| 샘플에 사용되는 클래스 | 참고 사항
+| 샘플에 사용되는 클래스 | 메모
 |-------|-------|
 | [StorageAccount](https://docs.microsoft.com/java/api/com.microsoft.azure.management.storage._storage_account)  | Azure 저장소 계정에 대한 표현입니다. 클래스의 메서드를 사용하여 저장소 계정에 대한 정보를 얻습니다.
 | [StorageAccountKey](https://docs.microsoft.com/java/api/com.microsoft.azure.management.storage._storage_account_key) | `StorageAccount.getKeys()`는 저장소 계정 키를 반환합니다. `StorageAccount`의 `regenerateKey` 메서드를 사용하여 키를 업데이트합니다.

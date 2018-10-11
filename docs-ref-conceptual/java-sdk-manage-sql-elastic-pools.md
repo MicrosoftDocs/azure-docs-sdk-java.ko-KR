@@ -11,11 +11,11 @@ ms.technology: Azure
 ms.date: 3/30/2017
 ms.author: routlaw;asirveda
 ms.openlocfilehash: 9ec0cf3083b8659fa850b798ca0ecf18b2757234
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21931119"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893574"
 ---
 # <a name="manage-azure-sql-databases-in-elastic-pools-from-your-java-applications"></a>Java 응용 프로그램에서 탄력적 풀의 Azure SQL 데이터베이스 관리
 
@@ -125,7 +125,7 @@ sqlServer.elasticPools().delete(elasticPoolName);
 
 만든 리소스를 모두 삭제한 후에 샘플이 종료됩니다.
 
-| 샘플에 사용되는 클래스 | 참고 사항 |
+| 샘플에 사용되는 클래스 | 메모 |
 |-------|-------|
 | [SqlServer](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql._sql_server) | `azure.sqlServers().define()...create()` 흐름 체인으로 만든 Azure의 SQL DB 서버입니다. 탄력적 풀과 데이터베이스를 만들고 사용하는 메서드를 제공합니다. 
 | [SqlDatabase](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql._sql_database) | SQL 데이터베이스를 나타내는 클라이언트 쪽 개체입니다. `sqlServer().define()...create()`를 통해 만들어집니다. 

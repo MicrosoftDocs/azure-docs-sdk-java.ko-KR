@@ -13,11 +13,11 @@ ms.devlang: java
 ms.service: multiple
 ms.assetid: 9aaf22a2-382a-4b13-a8e3-0e467d607207
 ms.openlocfilehash: 22a337e928085475e905a271f991147729d97671
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21930879"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892734"
 ---
 # <a name="azure-libraries-for-java"></a>Java용 Azure 라이브러리
 
@@ -71,8 +71,8 @@ for (ListBlobItem blobItem : container.listBlobs()) {
 
 다음 샘플에는 Java용 Azure 관리 라이브러리를 사용하여 일반적인 자동화 작업을 수행하고 자신의 앱에서 사용할 준비가 된 코드가 있습니다.
 
-- [가상 컴퓨터](java-sdk-azure-virtual-machine-samples.md)
+- [가상 머신](java-sdk-azure-virtual-machine-samples.md)
 - [웹앱](java-sdk-azure-web-apps-samples.md)
-- [SQL 데이터베이스](java-sdk-azure-sql-database-samples.md)
+- [SQL Database](java-sdk-azure-sql-database-samples.md)
    
 [참조](https://docs.microsoft.com/java/api)는 서비스 라이브러리와 관리 라이브러리의 모든 패키지에서 사용할 수 있습니다. 새 기능, 주요 변경 내용 및 이전 버전에서의 마이그레이션 지침은 [릴리스 정보](java-sdk-azure-release-notes.md)에서 사용할 수 있습니다.

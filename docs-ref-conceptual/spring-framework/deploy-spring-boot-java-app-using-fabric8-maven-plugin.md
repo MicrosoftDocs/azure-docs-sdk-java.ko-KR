@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: f05dca50f84b27f157892d63cda02286c6755795
-ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37090816"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48899294"
 ---
 # <a name="deploy-a-spring-boot-app-using-the-fabric8-maven-plugin"></a>Fabric8 Maven 플러그인을 사용하여 Spring Boot 앱 배포
 
@@ -415,7 +415,7 @@ ms.locfileid: "37090816"
               - name: mysecrets
       ```
 
-   나. 다음과 같은 콘텐츠가 포함된 **secrets.yml** 파일을 만듭니다.
+   b. 다음과 같은 콘텐츠가 포함된 **secrets.yml** 파일을 만듭니다.
       ```yaml
       apiVersion: v1
       kind: Secret

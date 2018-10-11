@@ -1,6 +1,6 @@
 ---
-title: Java를 사용하여 가상 컴퓨터 확장 집합 관리 | Microsoft Docs
-description: Java용 Azure SDK를 사용하여 Azure 가상 컴퓨터 확장 집합을 관리하는 샘플 코드
+title: Java를 사용하여 가상 머신 확장 집합 관리 | Microsoft Docs
+description: Java용 Azure SDK를 사용하여 Azure 가상 머신 확장 집합을 관리하는 샘플 코드
 author: rloutlaw
 manager: douge
 ms.assetid: b55923b7-d60a-460d-b77c-af5fac67f1cc
@@ -11,15 +11,15 @@ ms.technology: Azure
 ms.date: 3/30/2017
 ms.author: routlaw;asirveda
 ms.openlocfilehash: 4653726b387369c18942b6c11392f15b9f0351f3
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21931159"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893494"
 ---
-# <a name="manage-azure-virtual-machine-scale-sets-from-your-java-applications"></a>Java 응용 프로그램에서 Azure 가상 컴퓨터 확장 집합 관리
+# <a name="manage-azure-virtual-machine-scale-sets-from-your-java-applications"></a>Java 응용 프로그램에서 Azure 가상 머신 확장 집합 관리
 
-[이 샘플](https://github.com/Azure-Samples/compute-java-manage-virtual-machine-scale-sets)에서는 [Java 관리 라이브러리](https://github.com/Azure/azure-sdk-for-java)를 사용하여 [가상 컴퓨터 확장 집합](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-overview)을 만듭니다. 
+[이 샘플](https://github.com/Azure-Samples/compute-java-manage-virtual-machine-scale-sets)에서는 [Java 관리 라이브러리](https://github.com/Azure/azure-sdk-for-java)를 사용하여 [가상 머신 확장 집합](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-overview)을 만듭니다. 
 
 ## <a name="run-the-sample"></a>샘플 실행
 
@@ -109,7 +109,7 @@ LoadBalancer loadBalancer1 = azure.loadBalancers().define(loadBalancerName1)
                     .create();
 ```
 
- 부하 분산 장치는 두 개의 백 엔드 네트워크 주소 풀을 정의합니다. 하나는 HTTP(`backendPoolName1`)에서 부하를 분산하고, 다른 하나는 HTTPS(`backendPoolName2`)에서 부하를 분산합니다.  `defineHttpProbe()` 메서드는 부하 분산 장치에 대한 [상태 프로브 끝점](https://docs.microsoft.com/azure/load-balancer/load-balancer-custom-probe-overview)을 설정합니다. NAT 규칙은 텔넷 및 SSH 액세스를 위해 확장 집합 가상 컴퓨터에서 22와 23 포트를 노출합니다.
+ 부하 분산 장치는 두 개의 백 엔드 네트워크 주소 풀을 정의합니다. 하나는 HTTP(`backendPoolName1`)에서 부하를 분산하고, 다른 하나는 HTTPS(`backendPoolName2`)에서 부하를 분산합니다.  `defineHttpProbe()` 메서드는 부하 분산 장치에 대한 [상태 프로브 엔드포인트](https://docs.microsoft.com/azure/load-balancer/load-balancer-custom-probe-overview)를 설정합니다. NAT 규칙은 텔넷 및 SSH 액세스를 위해 확장 집합 가상 머신에서 22와 23 포트를 노출합니다.
 
 ## <a name="create-a-scale-set"></a>확장 집합 만들기
  
@@ -148,7 +148,7 @@ VirtualMachineScaleSet virtualMachineScaleSet = azure.virtualMachineScaleSets()
 
 이전 단계에서 만든 가상 네트워크 정의와 부하 분산 장치 정의를 사용하여 세 개의 Linux 인스턴스(`withCapacity(3)`) 및 각각 세 개의 100GB 데이터 디스크가 있는 확장 집합을 만듭니다. `defineNewExtension()` 메서드 체인은 각 VM에 Apache 웹 서버를 설치합니다.
 
-## <a name="list-virtual-machine-scale-set-network-interfaces"></a>가상 컴퓨터 확장 집합 네트워크 인터페이스 나열
+## <a name="list-virtual-machine-scale-set-network-interfaces"></a>가상 머신 확장 집합 네트워크 인터페이스 나열
 
 ```java
 // List network interfaces on the scale set and iterate through them
@@ -159,7 +159,7 @@ for (VirtualMachineScaleSetNetworkInterface vmssNic : vmssNics) {
 }
 ```
 
-## <a name="get-ssh-connection-strings-for-each-scale-set-virtual-machine"></a>각 확장 집합 가상 컴퓨터에 대한 SSH 연결 문자열 가져오기
+## <a name="get-ssh-connection-strings-for-each-scale-set-virtual-machine"></a>각 확장 집합 가상 머신에 대한 SSH 연결 문자열 가져오기
 
 ```java
 for (VirtualMachineScaleSetVM instance : virtualMachineScaleSet.virtualMachines().list()) {
@@ -187,34 +187,34 @@ for (VirtualMachineScaleSetVM instance : virtualMachineScaleSet.virtualMachines(
 }
 ```
 
-이전에 만든 NAT 풀에서 가상 컴퓨터의 SSH 및 텔넷 포트(각각 22 및 23)를 부하 분산 장치의 포트에 매핑했습니다. 이 코드는 각 가상 컴퓨터에 대한 SSH 연결 문자열을 작성합니다.
+이전에 만든 NAT 풀에서 가상 머신의 SSH 및 텔넷 포트(각각 22 및 23)를 부하 분산 장치의 포트에 매핑했습니다. 이 코드는 각 가상 머신에 대한 SSH 연결 문자열을 작성합니다.
 
-## <a name="stop-the-virtual-machine-scale-set"></a>가상 컴퓨터 확장 집합 중지
+## <a name="stop-the-virtual-machine-scale-set"></a>가상 머신 확장 집합 중지
 
 ```java
 // stop (not deallocate) all scale set instances
 virtualMachineScaleSet.powerOff();
 ```
 
-중지된 가상 컴퓨터는 예약된 리소스를 계속 사용합니다. `deallocate()`를 사용하여 가상 컴퓨터에서 운영 체제를 중지하고 해당 계산 리소스를 해제합니다.
+중지된 가상 머신은 예약된 리소스를 계속 사용합니다. `deallocate()`를 사용하여 가상 머신에서 운영 체제를 중지하고 해당 계산 리소스를 해제합니다.
 
-## <a name="deallocate-the-virtual-machine-scale-set"></a>가상 컴퓨터 크기 집합 할당 해제
+## <a name="deallocate-the-virtual-machine-scale-set"></a>가상 머신 확장 집합 할당 해제
 
 ```java
 // deallocate the virtual machine scale set
 virtualMachineScaleSet.deallocate();
 ```
 
-Deallocate()는 가상 컴퓨터에서 운영 체제를 종료하고 확장 집합 인스턴스에서 사용하는 계산 및 네트워크 리소스(예: IP 주소)를 해제합니다. 가상 컴퓨터에 연결된 모든 디스크(OS 포함)에 대해 저장소 요금이 계속 발생합니다.
+Deallocate()는 가상 머신에서 운영 체제를 종료하고 확장 집합 인스턴스에서 사용하는 계산 및 네트워크 리소스(예: IP 주소)를 해제합니다. 가상 머신에 연결된 모든 디스크(OS 포함)에 대해 저장소 요금이 계속 발생합니다.
 
-## <a name="start-a-virtual-machine-scale-set"></a>가상 컴퓨터 확장 집합 시작
+## <a name="start-a-virtual-machine-scale-set"></a>가상 머신 확장 집합 시작
 
 ```java
 // start a deallocated or stopped virtual machine scale set
 virtualMachineScaleSet.start();
 ```
 
-## <a name="update-the-number-of-virtual-machines-instances-in-the-scale-set"></a>확장 집합의 가상 컴퓨터 인스턴스 수 업데이트
+## <a name="update-the-number-of-virtual-machines-instances-in-the-scale-set"></a>확장 집합의 가상 머신 인스턴스 수 업데이트
 ```java
 // increase the number of virtual machine scale set instances from three to six
 virtualMachineScaleSet.update()
@@ -222,19 +222,19 @@ virtualMachineScaleSet.update()
                     .apply();
 ```
 
-`withCapacity()`를 사용하여 확장 집합의 가상 컴퓨터 수를 조정하고, `withSku()`를 사용하여 각 가상 컴퓨터의 용량을 조정합니다.
+`withCapacity()`를 사용하여 확장 집합의 가상 머신 수를 조정하고, `withSku()`를 사용하여 각 가상 머신의 용량을 조정합니다.
 
 ## <a name="sample-explanation"></a>샘플 설명
 
-[샘플 코드](https://github.com/Azure-Samples/compute-java-manage-virtual-machine-scale-sets/blob/master/src/main/java/com/microsoft/azure/management/compute/samples/ManageVirtualMachineScaleSet.java)에서는 먼저 통신하도록 설정된 확장 집합에 대한 가상 네트워크와 부하 분산 장치를 만들어 가상 컴퓨터 간에 트래픽을 분산합니다. `azure.virtualMachineScaleSets().define()...create()` 메서드 체인은 Apache 웹 서버를 실행하는 세 개의 Linux 인스턴스가 있는 확장 집합을 만듭니다.    
+[샘플 코드](https://github.com/Azure-Samples/compute-java-manage-virtual-machine-scale-sets/blob/master/src/main/java/com/microsoft/azure/management/compute/samples/ManageVirtualMachineScaleSet.java)에서는 먼저 통신하도록 설정된 확장 집합에 대한 가상 네트워크와 부하 분산 장치를 만들어 가상 머신 간에 트래픽을 분산합니다. `azure.virtualMachineScaleSets().define()...create()` 메서드 체인은 Apache 웹 서버를 실행하는 세 개의 Linux 인스턴스가 있는 확장 집합을 만듭니다.    
    
-| 샘플에 사용되는 클래스 | 참고 사항
+| 샘플에 사용되는 클래스 | 메모
 |-------|-------|
-| [VirtualMachineScaleSet](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_scale_set) | 확장 집합의 모든 가상 컴퓨터를 쿼리, 시작, 중지, 업데이트 및 삭제합니다.
-| [VirtualMachineScaleSetVM](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_scale_set_v_m) | `virtualMachineScaleSet.virtualMachines().get()` 또는 `list()`에서 검색되고, 이를 사용하여 확장 집합의 가상 컴퓨터를 쿼리, 시작, 중지, 구성 및 삭제할 수 있습니다.
-| [VirtualMachineScaleSetNetworkInterface](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._virtual_machine_scale_set_network_interface) | `virtualMachineScaleSet.listNetworkInterfaces()`에서 반환되고, 확장 집합의 가상 컴퓨터에 있는 네트워크 인터페이스에 대한 읽기 전용 표현입니다.
-| [VirtualMachineScaleSetSkuTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_scale_set_sku_types) | 확장 집합 멤버에서 소비할 수 있는 리소스의 크기를 정의하는 데 사용되는 [가상 컴퓨터 확장 집합 계층](https://azure.microsoft.com/pricing/details/virtual-machine-scale-sets/linux/)을 설정하는 데 사용되는 정적 필드 클래스입니다.
-| [VirtualMachineScaleSetNicIpConfiguration](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._virtual_machine_scale_set_nic_i_p_configuration) | 확장 집합 가상 컴퓨터에서 네트워크 인터페이스와 연결된 IP 구성을 쿼리하는 데 사용됩니다.
+| [VirtualMachineScaleSet](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_scale_set) | 확장 집합의 모든 가상 머신을 쿼리, 시작, 중지, 업데이트 및 삭제합니다.
+| [VirtualMachineScaleSetVM](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_scale_set_v_m) | `virtualMachineScaleSet.virtualMachines().get()` 또는 `list()`에서 검색되고, 이를 사용하여 확장 집합의 가상 머신을 쿼리, 시작, 중지, 구성 및 삭제할 수 있습니다.
+| [VirtualMachineScaleSetNetworkInterface](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._virtual_machine_scale_set_network_interface) | `virtualMachineScaleSet.listNetworkInterfaces()`에서 반환되고, 확장 집합의 가상 머신에 있는 네트워크 인터페이스에 대한 읽기 전용 표현입니다.
+| [VirtualMachineScaleSetSkuTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_scale_set_sku_types) | 확장 집합 멤버에서 소비할 수 있는 리소스의 크기를 정의하는 데 사용되는 [가상 머신 확장 집합 계층](https://azure.microsoft.com/pricing/details/virtual-machine-scale-sets/linux/)을 설정하는 데 사용되는 정적 필드 클래스입니다.
+| [VirtualMachineScaleSetNicIpConfiguration](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._virtual_machine_scale_set_nic_i_p_configuration) | 확장 집합 가상 머신에서 네트워크 인터페이스와 연결된 IP 구성을 쿼리하는 데 사용됩니다.
 
 ## <a name="next-steps"></a>다음 단계
 

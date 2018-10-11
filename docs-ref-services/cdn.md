@@ -12,11 +12,11 @@ ms.technology: azure
 ms.devlang: java
 ms.service: cdn
 ms.openlocfilehash: 199e9b4b2b2431e23954d24e4adeb4326eb4741c
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31823736"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893074"
 ---
 # <a name="azure-cdn-libraries-for-java"></a>Java용 Azure CDN 라이브러리
 
@@ -28,7 +28,7 @@ Azure CDN을 시작하려면 [Azure CDN 시작](/azure/cdn/cdn-create-new-endpoi
 
 ## <a name="management-api"></a>관리 API
 
-관리 API를 사용하여 CDN 프로필을 만들고, 끝점을 정의하며, CDN에 콘텐츠를 추가합니다.
+관리 API를 사용하여 CDN 프로필을 만들고, 엔드포인트를 정의하며, CDN에 콘텐츠를 추가합니다.
 
 `pom.xml` Maven 파일에 [종속성을 추가](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)하여 프로젝트에서 관리 API를 사용합니다.
 
@@ -42,7 +42,7 @@ Azure CDN을 시작하려면 [Azure CDN 시작](/azure/cdn/cdn-create-new-endpoi
 
 ### <a name="example"></a>예
 
-CDN 프로필을 만들고, 끝점을 할당하고, CDN에 콘텐츠를 로드합니다.
+CDN 프로필을 만들고, 엔드포인트를 할당하고, CDN에 콘텐츠를 로드합니다.
 
 ```java
 CdnProfile profile = azure.cdnProfiles().define("testCDN")

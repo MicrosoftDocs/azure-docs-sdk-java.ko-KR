@@ -11,11 +11,11 @@ ms.technology: Azure
 ms.date: 3/30/2017
 ms.author: routlaw;asirveda
 ms.openlocfilehash: 3d21cdd890912c1fc58fc65a79ba972b8327edeb
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21931089"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892544"
 ---
 # <a name="create-and-manage-azure-virtual-networks-from-your-java-apps"></a>Java 앱에서 Azure 가상 네트워크 만들기 및 관리
 
@@ -125,7 +125,7 @@ virtualNetwork1.update()
 
 이전 단계에서 만든 네트워크 보안 규칙을 사용하여 인바운드 HTTP 트래픽을 허용하도록 프런트 엔드 서브넷을 업데이트합니다.
 
-## <a name="create-a-virtual-machine-on-a-subnet"></a>서브넷에 가상 컴퓨터 만들기
+## <a name="create-a-virtual-machine-on-a-subnet"></a>서브넷에 가상 머신 만들기
 ```java
 // attach the new VM to the front end subnet on the virtual network
 VirtualMachine frontEndVM = azure.virtualMachines().define(frontEndVmName)
@@ -173,9 +173,9 @@ azure.networks().deleteByResourceGroup(rgName,vnetName1);
 
 ## <a name="sample-explanation"></a>샘플 설명
 
-이 샘플에서는 두 서브넷과 각 서브넷에 하나의 가상 컴퓨터가 있는 가상 네트워크를 만듭니다. 백 서브넷은 공용 인터넷에서 차단됩니다. 프런트 엔드 연결 서브넷에서 인터넷의 인바운드 HTTP 트래픽을 허용합니다. 가상 네트워크의 두 가상 컴퓨터는 모두 기본 네트워크 보안 그룹 규칙을 통해 서로 통신합니다.
+이 샘플에서는 두 서브넷과 각 서브넷에 하나의 가상 컴퓨터가 있는 가상 네트워크를 만듭니다. 백 서브넷은 공용 인터넷에서 차단됩니다. 프런트 엔드 연결 서브넷에서 인터넷의 인바운드 HTTP 트래픽을 허용합니다. 가상 네트워크의 두 가상 머신은 모두 기본 네트워크 보안 그룹 규칙을 통해 서로 통신합니다.
 
-| 샘플에 사용되는 클래스 | 참고 사항
+| 샘플에 사용되는 클래스 | 메모
 |-------|-------|
 | [네트워크](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._network) | `azure.networks().define()...create()`에서 만든 가상 네트워크의 로컬 개체 표현입니다. 기존 가상 네트워크를 업데이트하려면 `update()...apply()` 흐름 체인을 사용합니다.
 | [서브넷](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._subnet) | `withSubnet()`을 사용하여 네트워크를 정의하거나 업데이트할 때 가상 네트워크에 서브넷을 만듭니다. `Network.subnets().get()` 또는 `Network.subnets().entrySet()`에서 서브넷의 개체 표현을 가져옵니다. 이러한 개체에는 서브넷 속성을 쿼리하는 메서드가 있습니다.

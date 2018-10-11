@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 213efa7fc31705b0ffcba6f2fe40e7186a365fae
-ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38074533"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893524"
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-intellij"></a>IntelliJ용 Azure Explorer를 사용하여 Virtual Machines 관리
 
@@ -54,11 +54,9 @@ Azure Explorer를 사용하여 가상 머신을 만들려면 다음을 수행합
 
       * **게시자**: 가상 머신에 사용할 이미지를 만든 게시자를 지정합니다(예: *Microsoft*).
 
-      * 
-  **제품**: 선택한 게시자에서 사용할 가상 머신 제품을 지정합니다(예: *JDK*).
+      * **제품**: 선택한 게시자에서 사용할 가상 머신 제품을 지정합니다(예: *JDK*).
 
-      * 
-  **SKU**: 선택한 제품에서 사용할 SKU(Stockkeeping Unit)를 지정합니다(예: *JDK_8*).
+      * **SKU**: 선택한 제품에서 사용할 SKU(Stockkeeping Unit)를 지정합니다(예: *JDK_8*).
 
       * **버전 번호**: 선택한 SKU에서 사용할 버전을 지정합니다.
 

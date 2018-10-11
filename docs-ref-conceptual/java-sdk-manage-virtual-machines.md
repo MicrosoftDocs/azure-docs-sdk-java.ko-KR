@@ -1,6 +1,6 @@
 ---
-title: Java를 사용하여 Azure 가상 컴퓨터 관리 | Microsoft Docs
-description: Java용 Azure SDK를 사용하여 Azure 가상 컴퓨터를 관리하는 샘플 코드
+title: Java를 사용하여 Azure 가상 머신 관리 | Microsoft Docs
+description: Java용 Azure SDK를 사용하여 Azure 가상 머신을 관리하는 샘플 코드
 author: rloutlaw
 manager: douge
 ms.assetid: 88629aee-6279-433e-a08b-4f8e290446d0
@@ -11,15 +11,15 @@ ms.technology: Azure
 ms.date: 3/30/2017
 ms.author: routlaw;asirveda
 ms.openlocfilehash: e3048b3317477f4b1fb8edf93e4bebad6b7fafce
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21931169"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893614"
 ---
-# <a name="manage-azure-virtual-machines-from-your-java-applications"></a>Java 응용 프로그램에서 Azure 가상 컴퓨터 관리
+# <a name="manage-azure-virtual-machines-from-your-java-applications"></a>Java 응용 프로그램에서 Azure 가상 머신 관리
 
-[이 샘플](https://github.com/Azure-Samples/compute-java-manage-vm/)에서는 [Java용 Azure 관리 라이브러리](https://github.com/Azure/azure-sdk-for-java)를 사용하여 Azure 가상 컴퓨터를 만들고 작동합니다.
+[이 샘플](https://github.com/Azure-Samples/compute-java-manage-vm/)에서는 [Java용 Azure 관리 라이브러리](https://github.com/Azure/azure-sdk-for-java)를 사용하여 Azure 가상 머신을 만들고 작동합니다.
 
 ## <a name="run-the-sample"></a>샘플 실행
 
@@ -37,7 +37,7 @@ mvn clean compile exec:java
 
 [!INCLUDE [auth-include](includes/java-auth-include.md)]
 
-## <a name="create-a-windows-virtual-machine"></a>Windows 가상 컴퓨터 만들기
+## <a name="create-a-windows-virtual-machine"></a>Windows 가상 머신 만들기
 
 ```java
 // Prepare a data disk for VM
@@ -68,11 +68,11 @@ VirtualMachine windowsVM = azure.virtualMachines().define(windowsVmName)
 이 코드에서는 다음을 수행합니다.   
 
 0. 가상 컴퓨터에서 사용할 `Disk` Creatable을 50GB 크기와 임의의 이름으로 정의합니다.
-0. `azure.virtualMachines().define()..create()` 체인을 사용하여 Windows Server 2012 가상 컴퓨터를 만듭니다. API에서 가상 컴퓨터와 동일한 시간에 이전 단계에서 정의된 `Disk`를 만듭니다. 10GB 데이터 디스크도 `withNewDataDisk(10)`를 통해 가상 컴퓨터에 연결됩니다.
+0. `azure.virtualMachines().define()..create()` 체인을 사용하여 Windows Server 2012 가상 머신을 만듭니다. API에서 가상 머신과 동일한 시간에 이전 단계에서 정의된 `Disk`를 만듭니다. 10GB 데이터 디스크도 `withNewDataDisk(10)`를 통해 가상 머신에 연결됩니다.
 
 [Creatable<T> 개체](java-sdk-azure-concepts.md#Creatables)를 사용하여 리소스의 로컬 표현을 정의하고 다른 Azure 리소스에 필요한 만큼 리소스를 만드는 방법에 대해 자세히 알아보세요.
 
-## <a name="stop-start-and-restart-a-virtual-machine"></a>가상 컴퓨터 중지, 시작 및 다시 시작
+## <a name="stop-start-and-restart-a-virtual-machine"></a>가상 머신 중지, 시작 및 다시 시작
 
 ```java
 // look up a virtual machine by its ID and then restart, stop, and start it
@@ -109,7 +109,7 @@ VirtualMachine linuxVM = azure.virtualMachines().define(linuxVmName)
 `withPopularLinuxImage`를 사용하여 Windows VM 대신 Linux VM을 정의합니다.
 
 
-## <a name="list-virtual-machines"></a>가상 컴퓨터 나열
+## <a name="list-virtual-machines"></a>가상 머신 나열
 
 ```java
 // get a list of VMs in the same resource group as an existing VM
@@ -124,9 +124,9 @@ for (VirtualMachine virtualMachine : azure.virtualMachines().listByResourceGroup
 }
 ```
 
-`azure.virtualMachines().list()`를 사용하여 구독에 대한 가상 컴퓨터를 모두 나열하고, `tags()`에서 반환한 Map을 반복하여 리소스 그룹에서 태그가 지정된 가상 컴퓨터 컬렉션을 관리합니다.
+`azure.virtualMachines().list()`를 사용하여 구독에 대한 가상 머신을 모두 나열하고, `tags()`에서 반환한 Map을 반복하여 리소스 그룹에서 태그가 지정된 가상 머신 컬렉션을 관리합니다.
 
-## <a name="update-a-virtual-machine"></a>가상 컴퓨터 업데이트
+## <a name="update-a-virtual-machine"></a>가상 머신 업데이트
 
 ```java
 // add a 10GB data disk to the virtual machine
@@ -137,7 +137,7 @@ windowsVM.update()
 
 `update()...apply()` 및 `define()...create()`를 통해 가상 컴퓨터를 만들 때 해당 가상 컴퓨터를 구성하는 데 사용한 것과 동일한 메서드를 사용하여 가상 컴퓨터 구성을 업데이트합니다.
 
-## <a name="delete-a-virtual-machine"></a>가상 컴퓨터 삭제
+## <a name="delete-a-virtual-machine"></a>가상 머신 삭제
 
 ```java
 // delete by ID if you already are working with the VM object
@@ -149,18 +149,18 @@ azure.virtualMachines().deleteByResourceGroup(rgName,windowsVmName);
 
 ## <a name="sample-explanation"></a>샘플 설명
 
-[샘플 코드](https://github.com/Azure-Samples/compute-java-manage-vm/blob/master/src/main/java/com/microsoft/azure/management/compute/samples/ManageVirtualMachine.java)에서는 50GB 데이터 디스크가 있는 Windows 가상 컴퓨터를 만듭니다. 그런 다음 샘플에서 두 번째 10GB 데이터 디스크를 만들어 이 Windows 가상 컴퓨터에 연결합니다.
-그런 다음 샘플에서 Windows 가상 컴퓨터와 동일한 가상 네트워크에 Linux 가상 컴퓨터를 만듭니다.
+[샘플 코드](https://github.com/Azure-Samples/compute-java-manage-vm/blob/master/src/main/java/com/microsoft/azure/management/compute/samples/ManageVirtualMachine.java)에서는 50GB 데이터 디스크가 있는 Windows 가상 머신을 만듭니다. 그런 다음 샘플에서 두 번째 10GB 데이터 디스크를 만들어 이 Windows 가상 머신에 연결합니다.
+그런 다음 샘플에서 Windows 가상 머신과 동일한 가상 네트워크에 Linux 가상 머신을 만듭니다.
 
-샘플에서는 두 가상 컴퓨터에 대한 정보를 모두 기록하고 완료하기 전에 모두 삭제합니다.
+샘플에서는 두 가상 머신에 대한 정보를 모두 기록하고 완료하기 전에 모두 삭제합니다.
 
-| 샘플에 사용되는 클래스 | 참고 사항
+| 샘플에 사용되는 클래스 | 메모
 |-------|-------|
-| [VirtualMachine](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine) | 속성을 쿼리하고 가상 컴퓨터의 상태를 관리합니다. `azure.virtualMachines().list()` 또는 이름별 또는 ID `azure.virtualMachines().getByResourceGroup()` 목록 형식으로 검색됩니다.
-| [VirtualMachineSizeTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_size_types) | [가상 컴퓨터 크기 옵션](https://azure.microsoft.com/pricing/details/virtual-machines/linux/)에 매핑되는 정적 값이 있는 클래스입니다. `withSize()` 메서드에서 VM에 할당된 리소스를 정의하는 데 사용됩니다.
-| [디스크](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._disk) | `withData()`를 사용하여 데이터를 저장하거나 디스크를 정의할 때 적절한 `withLinux` 또는 `withWindows` 메서드 사용하여 운영 체제 이미지를 저장할 디스크를 만듭니다. 만들 때(`using withNewDataDisk` 또는 `withExistingDataDisk`) 또는 VirtualMachine 개체의 `update()..apply()`로 만든 후에 가상 컴퓨터에 디스크를 연결합니다.
+| [VirtualMachine](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine) | 속성을 쿼리하고 가상 머신의 상태를 관리합니다. `azure.virtualMachines().list()` 또는 이름별 또는 ID `azure.virtualMachines().getByResourceGroup()` 목록 형식으로 검색됩니다.
+| [VirtualMachineSizeTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_size_types) | [가상 머신 크기 옵션](https://azure.microsoft.com/pricing/details/virtual-machines/linux/)에 매핑되는 정적 값이 있는 클래스입니다. `withSize()` 메서드에서 VM에 할당된 리소스를 정의하는 데 사용됩니다.
+| [디스크](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._disk) | `withData()`를 사용하여 데이터를 저장하거나 디스크를 정의할 때 적절한 `withLinux` 또는 `withWindows` 메서드 사용하여 운영 체제 이미지를 저장할 디스크를 만듭니다. 만들 때(`using withNewDataDisk` 또는 `withExistingDataDisk`) 또는 VirtualMachine 개체의 `update()..apply()`로 만든 후에 가상 머신에 디스크를 연결합니다.
 | [DiskSkuTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._disk_sku_types) | 표준 또는 [프리미엄](https://docs.microsoft.com/azure/storage/storage-premium-storage) 저장소 계획이 있는 디스크를 정의하는 정적 값이 있는 클래스입니다.
-| [KnownLinuxVirtualMachineImage](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._known_linux_virtual_machine_image) | 가상 컴퓨터를 정의할 때 `withPopularLinuxImage()` 메서드와 함께 사용할 Linux 가상 컴퓨터 옵션 집합이 있는 클래스입니다.
+| [KnownLinuxVirtualMachineImage](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._known_linux_virtual_machine_image) | 가상 머신을 정의할 때 `withPopularLinuxImage()` 메서드와 함께 사용할 Linux 가상 머신 옵션 집합이 있는 클래스입니다.
 | [KnownWindowsVirtualMachineImage](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._known_windows_virtual_machine_image) | 가상 컴퓨터를 정의할 때 `withPopularWindowsImage()` 메서드와 함께 사용할 Windows 가상 컴퓨터 이미지 옵션 집합이 있는 클래스입니다.
 
 ## <a name="next-steps"></a>다음 단계

@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.openlocfilehash: efc1dffa248987772827bbe7bc0caa9f10a0b4ef
-ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37090786"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893397"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-intellij"></a>레거시 IntelliJ용 도구 키트를 사용하여 Azure용 Hello World 웹앱 만들기
 
@@ -87,7 +87,7 @@ ms.locfileid: "37090786"
 
    a. **프로젝트 설정** 목록에서 **아티팩트**를 클릭합니다.
 
-   나. **이름** 상자에서 아티팩트 이름에 공백 또는 특수 문자가 포함되지 않도록 이름을 변경합니다. 이 작업은 해당 이름이 URI(Uniform Resource Identifier)에 사용되기 때문에 필요합니다.
+   b. **이름** 상자에서 아티팩트 이름에 공백 또는 특수 문자가 포함되지 않도록 이름을 변경합니다. 이 작업은 해당 이름이 URI(Uniform Resource Identifier)에 사용되기 때문에 필요합니다.
 
    다. **형식**을 **웹 응용 프로그램: 보관**으로 변경합니다.
 
@@ -119,7 +119,7 @@ ms.locfileid: "37090786"
       
       ![앱 컨테이너 추가][10]
 
-   나. 다음 몇 개 단계에서 사용되는 **새 웹앱 컨테이너** 대화 상자가 표시됩니다.
+   b. 다음 몇 개 단계에서 사용되는 **새 웹앱 컨테이너** 대화 상자가 표시됩니다.
       
       ![새 앱 컨테이너][11a]
    

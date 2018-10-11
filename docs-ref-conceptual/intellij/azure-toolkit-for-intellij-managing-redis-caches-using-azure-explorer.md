@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 046ae0428d50a7f173f5ad15be53ffd8e66c11c5
-ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38075372"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892524"
 ---
 # <a name="managing-redis-caches-using-the-azure-explorer-for-intellij"></a>IntelliJ용 Azure 탐색기를 사용하여 Redis Cache 관리
 
@@ -45,7 +45,7 @@ IntelliJ용 Azure 도구 키트의 일부인 Azure 탐색기는 IntelliJ IDE 내
 
    a. **DNS 이름**: 새 Redis Cache에 대한 DNS 하위 도메인을 지정합니다. 이 주소는 ".redis.cache.windows.net" 앞에 추가됩니다(예: *wingtiptoys.redis.cache.windows.net*).
 
-   나. **구독**: 새 Redis Cache에 사용할 Azure 구독을 지정합니다.
+   b. **구독**: 새 Redis Cache에 사용할 Azure 구독을 지정합니다.
 
    다. **리소스 그룹**: Redis Cache에 대한 리소스 그룹을 지정합니다. 다음 옵션 중 하나를 선택해야 합니다. 
       * **새로 만들기**: 새 리소스 그룹을 만들도록 지정합니다. 

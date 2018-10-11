@@ -13,11 +13,11 @@ ms.devlang: java
 ms.service: multiple
 ms.assetid: f452468b-7aae-4944-abad-0b1aaf19170d
 ms.openlocfilehash: 8b52981ddfaadb7227cea4c7df014011196339cb
-ms.sourcegitcommit: 1f6a80e067a8bdbbb4b2da2e2145fda73d5fe65a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
-ms.locfileid: "26184647"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893634"
 ---
 # <a name="patterns-and-best-practices-for-development-with-the-azure-libraries-for-java"></a>Java용 Azure 라이브러리를 통한 개발 패턴 및 모범 사례 
 
@@ -74,7 +74,7 @@ for (VirtualMachine vm : vms) {
 
 - `List<T>`: 순서가 지정되지 않았지만 쉽게 검색하고 반복할 수 있는 데이터입니다.
 - `Map<T>`: 고유 키가 있는 키/값 쌍이지만 반드시 고유한 값은 아닙니다. Map의 예로 App Service 웹앱에 대한 앱 설정이 있습니다.
-- `Set<T>`: 고유한 키와 값이 있습니다. Set의 예로 고유 식별자(키)와 고유 네트워크 구성(값)이 모두 있는 가상 컴퓨터에 연결된 네트워크가 있습니다.
+- `Set<T>`: 고유한 키와 값이 있습니다. Set의 예로 고유 식별자(키)와 고유 네트워크 구성(값)이 모두 있는 가상 머신에 연결된 네트워크가 있습니다.
 
 ## <a name="actionable-verbs"></a>실행 가능한 동사
 
@@ -105,7 +105,7 @@ vmToRestart.restart();
 
 ## <a name="lazy-resource-creation"></a>지연 리소스 만들기
 
-Azure 리소스를 만들 때 새 리소스가 아직 존재하지 않는 다른 리소스에 종속되면 문제가 발생합니다. 이 시나리오의 예로, 새 가상 컴퓨터를 만들 때 공용 IP 주소를 예약하고 디스크를 설정합니다. 주소 예약 또는 디스크 만들기를 확인하지 않으려는 경우 가상 컴퓨터를 만들 때 이러한 리소스가 있는지 확인만 하면 됩니다.
+Azure 리소스를 만들 때 새 리소스가 아직 존재하지 않는 다른 리소스에 종속되면 문제가 발생합니다. 이 시나리오의 예로, 새 가상 머신을 만들 때 공용 IP 주소를 예약하고 디스크를 설정합니다. 주소 예약 또는 디스크 만들기를 확인하지 않으려는 경우 가상 머신을 만들 때 이러한 리소스가 있는지 확인만 하면 됩니다.
 
 `Creatable<T>` 개체를 사용하면 구독에 Azure 리소스를 만들 때까지 기다리지 않고 코드에서 사용할 수 있도록 이러한 리소스를 정의할 수 있습니다. 관리 라이브러리는 `Creatable<T>` 개체가 필요할 때까지 기다린 후에 이러한 개체를 만듭니다.
 
@@ -124,13 +124,13 @@ Creatable<VirtualMachine> vmCreatable = azure.virtualMachines().define("creatabl
     .withNewPrimaryPublicIPAddress(publicIPAddressCreatable)
 ```
 
-개체를 사용하여 정의된 리소스가 Azure에서 `create()`를 사용하여 빌드될 때 구독에 `Creatable<T>` 리소스가 생성됩니다. IP 주소 및 가상 컴퓨터 예제를 계속하는 예제는 다음과 같습니다.
+개체를 사용하여 정의된 리소스가 Azure에서 `create()`를 사용하여 빌드될 때 구독에 `Creatable<T>` 리소스가 생성됩니다. IP 주소 및 가상 머신 예제를 계속하는 예제는 다음과 같습니다.
 
 ```java
 CreatedResources<VirtualMachine> virtualMachine = azure.virtualMachines().create(vmCreatable);
 ```
 
-`Creatable<T>`를 `create()` 호출에 전달하면 단일 리소스 개체 대신 `CreatedResources` 개체가 반환됩니다.  `CreatedResources<T>` 개체를 사용하면 호출에서 형식화된 리소스 외에도 `create()` 호출로 만든 모든 리소스에 액세스할 수 있습니다. 위의 예제에서 만든 가상 컴퓨터에 대해 Azure에서 만든 공용 IP 주소에 액세스하려면 다음을 수행합니다.
+`Creatable<T>`를 `create()` 호출에 전달하면 단일 리소스 개체 대신 `CreatedResources` 개체가 반환됩니다.  `CreatedResources<T>` 개체를 사용하면 호출에서 형식화된 리소스 외에도 `create()` 호출로 만든 모든 리소스에 액세스할 수 있습니다. 위의 예제에서 만든 가상 머신에 대해 Azure에서 만든 공용 IP 주소에 액세스하려면 다음을 수행합니다.
 
 ```java
 PublicIPAddress pip = (PublicIPAddress) virtualMachine.createdRelatedResource(publicIPAddressCreatable.key());
