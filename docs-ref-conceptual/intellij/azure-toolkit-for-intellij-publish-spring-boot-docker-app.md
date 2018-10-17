@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 4228352efa4354bfe4969c1a5ecd3f3b40483f85
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954734"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893584"
 ---
 # <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>IntelliJ용 Azure 도구 키트를 사용하여 Spring Boot 앱을 Docker 컨테이너로 게시
 
@@ -51,7 +51,7 @@ ms.locfileid: "28954734"
 
       ![GitHub 토큰을 입력하는 대화 상자][CL02b]
 
-1. 리포지토리 URL에 **https://github.com/spring-guides/gs-spring-boot-docker.git** 을 입력하여 로컬 경로 및 폴더 정보를 지정하고 **복제** 를 클릭합니다.
+1. 리포지토리 URL에 대해 **https://github.com/spring-guides/gs-spring-boot-docker.git**를 입력하고 로컬 경로 및 폴더 정보를 지정한 다음 **복제**를 클릭합니다.
 
    ![리포지토리 복제 대화 상자][CL03]
 
@@ -139,7 +139,7 @@ Spring Boot 앱을 게시하려면 배포 준비된 아티팩트를 만들어야
 
       ![매니페스트 만들기 단추 클릭][ART04a]
 
-   나. 아티팩트에 대한 기본 경로를 선택한 다음 **확인**을 클릭합니다.
+   b. 아티팩트에 대한 기본 경로를 선택한 다음 **확인**을 클릭합니다.
 
       ![아티팩트 경로 지정][ART04b]
 
@@ -187,7 +187,7 @@ IntelliJ는 프로젝트 도구 창에서 Spring Boot 앱에 대한 완료된 �
 
       ![새 Docker 호스트 추가][PU02]
 
-   나. **Create Docker Host** 대화 상자가 표시되면 기본값을 그대로 허용하도록 선택하거나 새 Docker 호스트에 대한 사용자 지정 설정을 지정할 수 있습니다. 다양한 설정에 대한 자세한 설명은 [IntelliJ용 Azure 도구 키트를 사용하여 웹앱을 Docker 컨테이너로 게시][Publish Container with Azure Toolkit]를 참조하세요. 사용할 설정을 지정하면 **다음**을 클릭합니다.
+   b. **Create Docker Host** 대화 상자가 표시되면 기본값을 그대로 허용하도록 선택하거나 새 Docker 호스트에 대한 사용자 지정 설정을 지정할 수 있습니다. 다양한 설정에 대한 자세한 설명은 [IntelliJ용 Azure 도구 키트를 사용하여 웹앱을 Docker 컨테이너로 게시][Publish Container with Azure Toolkit]를 참조하세요. 사용할 설정을 지정하면 **다음**을 클릭합니다.
 
       ![Docker 호스트 옵션 지정][PU03a]
 
@@ -203,7 +203,7 @@ IntelliJ는 프로젝트 도구 창에서 Spring Boot 앱에 대한 완료된 �
 
    a. Docker 컨테이너를 호스팅할 컨테이너에 대한 사용자 지정 이름을 지정하도록 선택하거나 기본값을 적용할 수 있습니다.
 
-   나. *[외부 포트]*:*[내부 포트]* 구문을 사용하여 Docker 호스트에 대한 TCP 포트를 입력합니다. 예를 들어 **80:8080**은 80 외부 포트 및 8080 기본 내부 Spring Boot 포트를 지정합니다.
+   b. *[외부 포트]*:*[내부 포트]* 구문을 사용하여 Docker 호스트에 대한 TCP 포트를 입력합니다. 예를 들어 **80:8080**은 80 외부 포트 및 8080 기본 내부 Spring Boot 포트를 지정합니다.
    
       내부 포트를 사용자 지정한 경우(예: application.yml 파일 편집) Azure에서 올바른 라우팅을 수행할 포트 번호를 지정해야 합니다.
 
