@@ -14,12 +14,12 @@ ms.service: storage
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: storage
-ms.openlocfilehash: 1a219a066f0f89adbf3f541856b36b842520bfbb
-ms.sourcegitcommit: fd67d4088be2cad01c642b9ecf3f9475d9cb4f3c
+ms.openlocfilehash: 4838b6dbd354ad941df12933dddfa7f3e7eef905
+ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46505921"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49799969"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-storage"></a>Azure Storage에 Spring Boot Starter를 사용하는 방법
 
@@ -56,7 +56,7 @@ ms.locfileid: "46505921"
    * 저장소 계정의 **위치**를 지정합니다.
    * 저장소 계정에 사용하려는 **구독**을 선택합니다.
    * 저장소 계정에 새 **리소스 그룹**을 만들지 아니면 기존 리소스 그룹을 선택할지를 지정합니다.
-   
+
    ![Azure Storage 계정 옵션을 지정합니다.][IMG02]
 
 1. 위에 열거된 이러한 옵션을 지정한 경우 **만들기**를 클릭하여 저장소 계정을 만듭니다.
@@ -207,7 +207,7 @@ ms.locfileid: "46505921"
 
    `/users/example/home/storage/src/main/resources/application.properties`
 
-1.  텍스트 편집기에서 *application.properties* 파일을 찾고 다음 줄을 추가하고 샘플 값을 저장소 계정의 적절한 속성으로 바꿉니다.
+2. 텍스트 편집기에서 *application.properties* 파일을 찾고 다음 줄을 추가하고 샘플 값을 저장소 계정의 적절한 속성으로 바꿉니다.
 
    ```yaml
    spring.cloud.azure.credential-file-path=my.azureauth
@@ -216,14 +216,16 @@ ms.locfileid: "46505921"
    spring.cloud.azure.storage.account=wingtiptoysstorage
    ```
    위치:
-   | 필드 | 설명 |
-   | ---|---|
-   | `spring.cloud.azure.credential-file-path` | 이 자습서의 앞부분에서 만든 Azure 자격 증명 파일을 지정합니다. |
-   | `spring.cloud.azure.resource-group` | Azure 저장소 계정을 포함하는 Azure 리소스 그룹을 지정합니다. |
-   | `spring.cloud.azure.region` | Azure 저장소 계정을 만들 때 지정한 지리적 영역을 지정합니다. |
-   | `spring.cloud.azure.storage.account` | 이 자습서의 앞부분에서 만든 Azure 저장소 계정을 지정합니다.
 
-1. *application.properties* 파일을 저장하고 닫습니다.
+   |                   필드                   |                                            설명                                            |
+   |-------------------------------------------|---------------------------------------------------------------------------------------------------|
+   | `spring.cloud.azure.credential-file-path` |            이 자습서의 앞부분에서 만든 Azure 자격 증명 파일을 지정합니다.             |
+   |    `spring.cloud.azure.resource-group`    |           Azure 저장소 계정을 포함하는 Azure 리소스 그룹을 지정합니다.            |
+   |        `spring.cloud.azure.region`        | Azure 저장소 계정을 만들 때 지정한 지리적 영역을 지정합니다. |
+   |   `spring.cloud.azure.storage.account`    |            이 자습서의 앞부분에서 만든 Azure 저장소 계정을 지정합니다.             |
+
+
+3. *application.properties* 파일을 저장하고 닫습니다.
 
 ## <a name="add-sample-code-to-implement-basic-azure-storage-functionality"></a>기본 Azure 저장소 기능을 구현하는 샘플 코드 추가
 
@@ -243,10 +245,10 @@ ms.locfileid: "46505921"
 
    ```java
    package com.wingtiptoys.storage;
-   
+
    import org.springframework.boot.SpringApplication;
    import org.springframework.boot.autoconfigure.SpringBootApplication;
-   
+
    @SpringBootApplication
    public class StorageApplication {
       public static void main(String[] args) {
@@ -271,7 +273,7 @@ ms.locfileid: "46505921"
 
    ```java
    package com.wingtiptoys.storage;
-   
+
    import org.springframework.beans.factory.annotation.Value;
    import org.springframework.core.io.Resource;
    import org.springframework.core.io.WritableResource;
@@ -280,14 +282,14 @@ ms.locfileid: "46505921"
    import org.springframework.web.bind.annotation.PostMapping;
    import org.springframework.web.bind.annotation.RequestBody;
    import org.springframework.web.bind.annotation.RestController;
-   
+
    import java.io.IOException;
    import java.io.OutputStream;
    import java.nio.charset.Charset;
-   
+
    @RestController
    public class WebController {
-   
+
       @Value("blob://test/myfile.txt")
       private Resource blobFile;
 
@@ -297,7 +299,7 @@ ms.locfileid: "46505921"
             this.blobFile.getInputStream(),
             Charset.defaultCharset()) + "\n";
       }
-   
+
       @PostMapping(value = "/")
       public String writeBlobFile(@RequestBody String data) throws IOException {
          try (OutputStream os = ((WritableResource) this.blobFile).getOutputStream()) {
@@ -307,7 +309,7 @@ ms.locfileid: "46505921"
       }
    }
    ```
-   
+
    여기서 `@Value("blob://[container]/[blob]")` 구문은 데이터를 저장할 컨테이너 및 Blob의 이름을 각각 정의합니다.
 
 1. 웹 컨트롤러 Java 파일을 저장하고 닫습니다.

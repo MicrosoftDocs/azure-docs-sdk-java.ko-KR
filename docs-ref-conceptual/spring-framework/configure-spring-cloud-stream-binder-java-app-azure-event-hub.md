@@ -14,12 +14,12 @@ ms.service: event-hubs
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 3f7eeffe8bd36196f9b79edd60830b5d202ea285
-ms.sourcegitcommit: fd67d4088be2cad01c642b9ecf3f9475d9cb4f3c
+ms.openlocfilehash: dfc3b6121bddcb637735047e2e7bc7485da9a4fe
+ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46506582"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49799949"
 ---
 # <a name="how-to-create-a-spring-cloud-stream-binder-application-with-azure-event-hubs"></a>Azure Event Hub를 사용하여 Spring Cloud 스트림 바인더 응용 프로그램을 만드는 방법
 
@@ -57,7 +57,7 @@ ms.locfileid: "46506582"
    * 네임스페이스에 사용하려는 **구독**을 선택합니다.
    * 네임스페이스에 새 **리소스 그룹**을 만들지 아니면 기존 리소스 그룹을 선택할지를 지정합니다.
    * 이벤트 허브 네임 스페이스에 대한 **위치**를 지정합니다.
-   
+
    ![Azure Event Hub 네임스페이스 옵션을 지정합니다.][IMG02]
 
 1. 위에 열거된 이러한 옵션을 지정한 경우 **만들기**를 클릭하여 네임스페이스를 만듭니다.
@@ -97,7 +97,7 @@ ms.locfileid: "46506582"
    * 저장소 계정의 **위치**를 지정합니다.
    * 저장소 계정에 사용하려는 **구독**을 선택합니다.
    * 저장소 계정에 새 **리소스 그룹**을 만들지 아니면 기존 리소스 그룹을 선택할지를 지정합니다.
-   
+
    ![Azure Storage 계정 옵션을 지정합니다.][IMG08]
 
 1. 위에 열거된 이러한 옵션을 지정한 경우 **만들기**를 클릭하여 저장소 계정을 만듭니다.
@@ -236,7 +236,7 @@ ms.locfileid: "46506582"
 
    `/users/example/home/eventhub/src/main/resources/application.properties`
 
-1.  텍스트 편집기에서 *application.properties* 파일을 찾고 다음 줄을 추가하고 샘플 값을 이벤트 허브의 적절한 속성으로 바꿉니다.
+2. 텍스트 편집기에서 *application.properties* 파일을 찾고 다음 줄을 추가하고 샘플 값을 이벤트 허브의 적절한 속성으로 바꿉니다.
 
    ```yaml
    spring.cloud.azure.credential-file-path=my.azureauth
@@ -250,18 +250,20 @@ ms.locfileid: "46506582"
    spring.cloud.stream.eventhub.bindings.input.consumer.checkpoint-mode=MANUAL
    ```
    위치:
-   | 필드 | 설명 |
-   | ---|---|
-   | `spring.cloud.azure.credential-file-path` | 이 자습서의 앞부분에서 만든 Azure 자격 증명 파일을 지정합니다. |
-   | `spring.cloud.azure.resource-group` | Azure 이벤트 허브를 포함하는 Azure 리소스 그룹을 지정합니다. |
-   | `spring.cloud.azure.region` | Azure 이벤트 허브를 만들 때 지정한 지리적 영역을 지정합니다. |
-   | `spring.cloud.azure.eventhub.namespace` | Azure 이벤트 허브 네임스페이스를 만들 때 지정한 고유 이름을 지정합니다. |
-   | `spring.cloud.azure.eventhub.checkpoint-storage-account` | 이 자습서의 앞부분에서 만든 Azure 저장소 계정을 지정합니다.
-   | `spring.cloud.stream.bindings.input.destination` | 입력 대상 Azure Event Hub를 지정합니다.이 자습서에서는 이 자습서의 앞부분에서 만든 허브를 사용합니다. |
-   | `spring.cloud.stream.bindings.input.group `| Azure Event Hub에서 소비자 그룹을 지정합니다. Azure Event Hub를 만들 때 생성된 기본 소비자 그룹을 사용하려면 '$Default'로 설정할 수 있습니다. |
-   | `spring.cloud.stream.bindings.output.destination` | 출력 대상 Azure Event Hub를 지정합니다.이 자습서에서는 입력 대상과 동일합니다. |
 
-1. *application.properties* 파일을 저장하고 닫습니다.
+   |                          필드                           |                                                                                   설명                                                                                    |
+   |----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+   |        `spring.cloud.azure.credential-file-path`         |                                                    이 자습서의 앞부분에서 만든 Azure 자격 증명 파일을 지정합니다.                                                    |
+   |           `spring.cloud.azure.resource-group`            |                                                      Azure 이벤트 허브를 포함하는 Azure 리소스 그룹을 지정합니다.                                                      |
+   |               `spring.cloud.azure.region`                |                                           Azure 이벤트 허브를 만들 때 지정한 지리적 영역을 지정합니다.                                            |
+   |         `spring.cloud.azure.eventhub.namespace`          |                                          Azure 이벤트 허브 네임스페이스를 만들 때 지정한 고유 이름을 지정합니다.                                           |
+   | `spring.cloud.azure.eventhub.checkpoint-storage-account` |                                                    이 자습서의 앞부분에서 만든 Azure 저장소 계정을 지정합니다.                                                    |
+   |     `spring.cloud.stream.bindings.input.destination`     |                            입력 대상 Azure Event Hub를 지정합니다.이 자습서에서는 이 자습서의 앞부분에서 만든 허브를 사용합니다.                            |
+   |       `spring.cloud.stream.bindings.input.group `        | Azure Event Hub에서 소비자 그룹을 지정합니다. Azure Event Hub를 만들 때 생성된 기본 소비자 그룹을 사용하려면 '$Default'로 설정할 수 있습니다. |
+   |    `spring.cloud.stream.bindings.output.destination`     |                               출력 대상 Azure Event Hub를 지정합니다.이 자습서에서는 입력 대상과 동일합니다.                               |
+
+
+3. *application.properties* 파일을 저장하고 닫습니다.
 
 ## <a name="add-sample-code-to-implement-basic-event-hub-functionality"></a>기본 이벤트 허브 기능을 구현하는 샘플 코드 추가
 
@@ -281,10 +283,10 @@ ms.locfileid: "46506582"
 
    ```java
    package com.wingtiptoys.eventhub;
-   
+
    import org.springframework.boot.SpringApplication;
    import org.springframework.boot.autoconfigure.SpringBootApplication;
-   
+
    @SpringBootApplication
    public class EventhubApplication {
       public static void main(String[] args) {
@@ -301,7 +303,7 @@ ms.locfileid: "46506582"
 
    ```java
    package com.wingtiptoys.eventhub;
-   
+
    import org.springframework.beans.factory.annotation.Autowired;
    import org.springframework.cloud.stream.annotation.EnableBinding;
    import org.springframework.cloud.stream.messaging.Source;
@@ -309,14 +311,14 @@ ms.locfileid: "46506582"
    import org.springframework.web.bind.annotation.PostMapping;
    import org.springframework.web.bind.annotation.RequestBody;
    import org.springframework.web.bind.annotation.RestController;
-   
+
    @EnableBinding(Source.class)
    @RestController
    public class EventhubSource {
-   
+
       @Autowired
       private Source source;
-   
+
       @PostMapping("/messages")
       public String postMessage(@RequestBody String message) {
          this.source.output().send(new GenericMessage<>(message));
@@ -332,7 +334,7 @@ ms.locfileid: "46506582"
 
    ```java
    package com.wingtiptoys.eventhub;
-   
+
    import com.microsoft.azure.spring.integration.core.AzureHeaders;
    import com.microsoft.azure.spring.integration.core.api.Checkpointer;
    import org.slf4j.Logger;
@@ -341,10 +343,10 @@ ms.locfileid: "46506582"
    import org.springframework.cloud.stream.annotation.StreamListener;
    import org.springframework.cloud.stream.messaging.Sink;
    import org.springframework.messaging.handler.annotation.Header;
-   
+
    @EnableBinding(Sink.class)
    public class EventhubSink {
-   
+
       private static final Logger LOGGER = LoggerFactory.getLogger(EventhubSink.class);
 
       @StreamListener(Sink.INPUT)

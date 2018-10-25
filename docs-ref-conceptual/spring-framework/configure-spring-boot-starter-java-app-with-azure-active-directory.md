@@ -14,12 +14,12 @@ ms.service: active-directory
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: d3b6bdc4aaae79864d370c581585167cf3732160
-ms.sourcegitcommit: bb7286fad75a2bb43e6ce1a8f1b09e701147c9f9
+ms.openlocfilehash: 665768ffe7bec977d553ffa62e1dbd6b968eb9de
+ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047187"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49799909"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-active-directory"></a>Azure Active Directory에 Spring Boot Starter를 사용하는 방법
 
@@ -85,54 +85,54 @@ ms.locfileid: "48047187"
 
    ![새 앱 등록 추가][directory-04]
 
-1. **새 응용 프로그램 등록** 을 클릭하고 응용 프로그램 **이름**을 지정한 다음 http://localhost:8080 **로그온 URL**에 사용하고 **만들기**를 클릭합니다.
+2. **새 응용 프로그램 등록** 을 클릭하고 응용 프로그램 **이름**을 지정한 다음 http://localhost:8080 **로그온 URL**에 사용하고 **만들기**를 클릭합니다.
 
    ![새 앱 등록 만들기][directory-05]
 
-1. 응용 프로그램 등록을 만든 후 클릭합니다.
+3. 응용 프로그램 등록을 만든 후 클릭합니다.
 
    ![앱 등록 선택][directory-06]
 
-1. 앱 등록 페이지가 표시되면 **응용 프로그램 ID**를 복사합니다. 이 값은 이 자습서의 뒷부분에서 *application.properties* 파일을 구성하는 데 사용됩니다. **설정**을 클릭한 다음 **키**를 클릭합니다.
+4. 앱 등록 페이지가 표시되면 **응용 프로그램 ID**를 복사합니다. 이 값은 이 자습서의 뒷부분에서 *application.properties* 파일을 구성하는 데 사용됩니다. **설정**을 클릭한 다음 **키**를 클릭합니다.
 
    ![앱 등록 키 만들기][directory-07]
 
-1. **설명**을 추가하고 새 키에 대해 **기간**을 지정한 다음 **저장**을 클릭합니다. **저장** 아이콘을 클릭하면 키 값이 자동으로 입력되며, 나중에 이 자습서의 뒷부분에서 *application.properties* 파일을 구성하기 위해 키 값을 복사해 두어야 합니다. 이 값은 나중에 검색할 수 없습니다.
+5. **설명**을 추가하고 새 키에 대해 **기간**을 지정한 다음 **저장**을 클릭합니다. **저장** 아이콘을 클릭하면 키 값이 자동으로 입력되며, 나중에 이 자습서의 뒷부분에서 *application.properties* 파일을 구성하기 위해 키 값을 복사해 두어야 합니다. 이 값은 나중에 검색할 수 없습니다.
 
    ![앱 등록 키 매개 변수 지정][directory-08]
 
-1. 앱 등록을 위한 기본 페이지에서 **설정**을 클릭하고 **필요한 권한**을 클릭합니다.
+6. 앱 등록을 위한 기본 페이지에서 **설정**을 클릭하고 **필요한 권한**을 클릭합니다.
 
    ![앱 등록 필요 권한][directory-09]
 
-1. **Windows Azure Active Directory**를 클릭합니다.
+7. **Windows Azure Active Directory**를 클릭합니다.
 
    ![Windows Azure Active Directory 선택][directory-10]
 
-1. **로그인한 사용자로 디렉터리 액세스**와 **로그인 및 사용자 프로필 읽기**에 대한 상자를 선택하고 **저장**을 클릭합니다.
+8. **로그인한 사용자로 디렉터리 액세스**와 **로그인 및 사용자 프로필 읽기**에 대한 상자를 선택하고 **저장**을 클릭합니다.
 
    ![액세스 권한 사용][directory-11]
 
-1. **필요한 권한** 페이지에서 **사용 권한 부여**를 클릭하고 메시지가 표시되면 **예**를 클릭합니다.
+9. **필요한 권한** 페이지에서 **사용 권한 부여**를 클릭하고 메시지가 표시되면 **예**를 클릭합니다.
 
    ![액세스 권한 부여][directory-12]
 
-1. 앱 등록을 위한 기본 페이지에서 **설정**을 클릭하고 **회신 URL**을 클릭합니다.
+10. 앱 등록을 위한 기본 페이지에서 **설정**을 클릭하고 **회신 URL**을 클릭합니다.
 
-   ![회신 URL 편집][directory-14]
+    ![회신 URL 편집][directory-14]
 
-1. "http://localhost:8080/login/oauth2/code/azure"을 새 회신 URL로 입력하고, **저장**을 클릭합니다.
+11. "<http://localhost:8080/login/oauth2/code/azure>"을 새 회신 URL로 입력하고, **저장**을 클릭합니다.
 
-   ![새 회신 URL 추가][directory-15]
+    ![새 회신 URL 추가][directory-15]
 
-1. 앱 등록에 대한 기본 페이지에서 **매니페스트**를 클릭하고 `oauth2AllowImplicitFlow` 매개 변수의 값을 `true`로 설정하고 **저장**을 클릭합니다.
+12. 앱 등록에 대한 기본 페이지에서 **매니페스트**를 클릭하고 `oauth2AllowImplicitFlow` 매개 변수의 값을 `true`로 설정하고 **저장**을 클릭합니다.
 
-   ![앱 매니페스트 구성][directory-16]
+    ![앱 매니페스트 구성][directory-16]
 
-   > [!NOTE]
-   > 
-   > `oauth2AllowImplicitFlow` 매개 변수 및 다른 응용 프로그램 설정에 대한 자세한 내용은 [Azure Active Directory 응용 프로그램 매니페스트][AAD app manifest]를 참조하세요. 
-   >
+    > [!NOTE]
+    > 
+    > `oauth2AllowImplicitFlow` 매개 변수 및 다른 응용 프로그램 설정에 대한 자세한 내용은 [Azure Active Directory 응용 프로그램 매니페스트][AAD app manifest]를 참조하세요. 
+    >
 
 ### <a name="add-a-user-account-to-your-directory-and-add-that-account-to-a-group"></a>디렉터리에 사용자 계정을 추가하고 해당 계정을 그룹에 추가합니다
 
