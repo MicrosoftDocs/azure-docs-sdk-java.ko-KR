@@ -11,26 +11,26 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: cosmosdb
-ms.openlocfilehash: 6fc9f90cb3c8130aa82b20554a94a8b5ab78c083
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: d8748dc6fcc0c839a8b2d2f817c0477bcac5baa2
+ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48899262"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49799889"
 ---
-# <a name="azure-cosmos-db-libraries-for-java"></a><span data-ttu-id="b8b1c-104">Java용 Azure Cosmos DB 라이브러리</span><span class="sxs-lookup"><span data-stu-id="b8b1c-104">Azure Cosmos DB libraries for Java</span></span>
+# <a name="azure-cosmos-db-libraries-for-java"></a><span data-ttu-id="c29c4-104">Java용 Azure Cosmos DB 라이브러리</span><span class="sxs-lookup"><span data-stu-id="c29c4-104">Azure Cosmos DB libraries for Java</span></span>
 
-## <a name="overview"></a><span data-ttu-id="b8b1c-105">개요</span><span class="sxs-lookup"><span data-stu-id="b8b1c-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="c29c4-105">개요</span><span class="sxs-lookup"><span data-stu-id="c29c4-105">Overview</span></span>
 
-<span data-ttu-id="b8b1c-106">[Azure Cosmos DB](/azure/cosmos-db/introduction)를 사용하여 키-값, JSON 문서, 그래프 및 열 형식 데이터를 전 세계에 분산된 데이터베이스에 저장하고 쿼리합니다.</span><span class="sxs-lookup"><span data-stu-id="b8b1c-106">Store and query key-value, JSON document, graph, and columnar data in a globally distributed database with [Azure Cosmos DB](/azure/cosmos-db/introduction).</span></span>
+<span data-ttu-id="c29c4-106">[Azure Cosmos DB](/azure/cosmos-db/introduction)를 사용하여 키-값, JSON 문서, 그래프 및 열 형식 데이터를 전 세계에 분산된 데이터베이스에 저장하고 쿼리합니다.</span><span class="sxs-lookup"><span data-stu-id="c29c4-106">Store and query key-value, JSON document, graph, and columnar data in a globally distributed database with [Azure Cosmos DB](/azure/cosmos-db/introduction).</span></span>
 
-<span data-ttu-id="b8b1c-107">Azure Cosmos DB를 시작하려면 [Azure Cosmos DB: Java 및 Azure Portal을 사용하여 API 앱 빌드](/azure/cosmos-db/create-sql-api-java)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b8b1c-107">To get started with Azure Cosmos DB, see [Azure Cosmos DB: Build an API app with Java and the Azure portal](/azure/cosmos-db/create-sql-api-java).</span></span>
+<span data-ttu-id="c29c4-107">Azure Cosmos DB를 시작하려면 [Azure Cosmos DB: Java 및 Azure Portal을 사용하여 API 앱 빌드](/azure/cosmos-db/create-sql-api-java)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c29c4-107">To get started with Azure Cosmos DB, see [Azure Cosmos DB: Build an API app with Java and the Azure portal](/azure/cosmos-db/create-sql-api-java).</span></span>
 
-## <a name="client-library"></a><span data-ttu-id="b8b1c-108">클라이언트 라이브러리</span><span class="sxs-lookup"><span data-stu-id="b8b1c-108">Client library</span></span>
+## <a name="client-library"></a><span data-ttu-id="c29c4-108">클라이언트 라이브러리</span><span class="sxs-lookup"><span data-stu-id="c29c4-108">Client library</span></span>
 
-<span data-ttu-id="b8b1c-109">[SQL API](/azure/cosmos-db/sql-api-introduction) 클라이언트 라이브러리로 Azure Cosmos DB에 연결하여 [SQL 쿼리 구문](/azure/cosmos-db/sql-api-sql-query)으로 JSON 데이터 작업을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="b8b1c-109">Connect to Azure Cosmos DB using the [SQL API](/azure/cosmos-db/sql-api-introduction) client library to work with JSON data with [SQL query syntax](/azure/cosmos-db/sql-api-sql-query).</span></span>
+<span data-ttu-id="c29c4-109">[SQL API](/azure/cosmos-db/sql-api-introduction) 클라이언트 라이브러리로 Azure Cosmos DB에 연결하여 [SQL 쿼리 구문](/azure/cosmos-db/sql-api-sql-query)으로 JSON 데이터 작업을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="c29c4-109">Connect to Azure Cosmos DB using the [SQL API](/azure/cosmos-db/sql-api-introduction) client library to work with JSON data with [SQL query syntax](/azure/cosmos-db/sql-api-sql-query).</span></span>
 
-<span data-ttu-id="b8b1c-110">`pom.xml` Maven 파일에 [종속성을 추가](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)하여 프로젝트에서 Cosmos DB 클라이언트 라이브러리를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="b8b1c-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the Cosmos DB client library in your project.</span></span>
+<span data-ttu-id="c29c4-110">`pom.xml` Maven 파일에 [종속성을 추가](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)하여 프로젝트에서 Cosmos DB 클라이언트 라이브러리를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="c29c4-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the Cosmos DB client library in your project.</span></span>
 
 ```XML
 <dependency>
@@ -40,9 +40,9 @@ ms.locfileid: "48899262"
 </dependency>
 ```
 
-### <a name="example"></a><span data-ttu-id="b8b1c-111">예</span><span class="sxs-lookup"><span data-stu-id="b8b1c-111">Example</span></span>
+### <a name="example"></a><span data-ttu-id="c29c4-111">예</span><span class="sxs-lookup"><span data-stu-id="c29c4-111">Example</span></span>
 
-<span data-ttu-id="b8b1c-112">SQL 쿼리 구문을 사용하여 Cosmos DB에서 일치하는 JSON 문서를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="b8b1c-112">Select matching JSON documents in Cosmos DB using SQL query syntax.</span></span>
+<span data-ttu-id="c29c4-112">SQL 쿼리 구문을 사용하여 Cosmos DB에서 일치하는 JSON 문서를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="c29c4-112">Select matching JSON documents in Cosmos DB using SQL query syntax.</span></span>
 
 ```java
 DocumentClient client = new DocumentClient("https://contoso.documents.azure.com:443",
@@ -55,20 +55,19 @@ List<Document> results = client.queryDocuments("dbs/" + DATABASE_ID + "/colls/" 
         null)
     .getQueryIterable()
     .toList();
-
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="b8b1c-113">클라이언트 API 탐색</span><span class="sxs-lookup"><span data-stu-id="b8b1c-113">Explore the Client APIs</span></span>](/java/api/overview/azure/cosmosdb/client)
+> [<span data-ttu-id="c29c4-113">클라이언트 API 탐색</span><span class="sxs-lookup"><span data-stu-id="c29c4-113">Explore the Client APIs</span></span>](/java/api/overview/azure/cosmosdb/client)
 
 
-## <a name="samples"></a><span data-ttu-id="b8b1c-114">샘플</span><span class="sxs-lookup"><span data-stu-id="b8b1c-114">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="c29c4-114">샘플</span><span class="sxs-lookup"><span data-stu-id="c29c4-114">Samples</span></span>
 
-<span data-ttu-id="b8b1c-115">[Azure Cosmos DB MongoDB API를 사용하여 Java 앱 개발(영문)][2] </span><span class="sxs-lookup"><span data-stu-id="b8b1c-115">[Develop a Java app using Azure Cosmos DB MongoDB API][2] </span></span>  
-<span data-ttu-id="b8b1c-116">[Azure Cosmos DB Graph API를 사용하여 Java 앱 개발(영문)][3] </span><span class="sxs-lookup"><span data-stu-id="b8b1c-116">[Develop a Java app using Azure Cosmos DB Graph API][3] </span></span>  
-<span data-ttu-id="b8b1c-117">[Azure Cosmos DB SQL API를 사용하여 Java 앱 개발][4]</span><span class="sxs-lookup"><span data-stu-id="b8b1c-117">[Develop a Java app using Azure Cosmos DB SQL API][4]</span></span>        
+<span data-ttu-id="c29c4-115">[Azure Cosmos DB MongoDB API를 사용하여 Java 앱 개발(영문)][2] </span><span class="sxs-lookup"><span data-stu-id="c29c4-115">[Develop a Java app using Azure Cosmos DB MongoDB API][2] </span></span>  
+<span data-ttu-id="c29c4-116">[Azure Cosmos DB Graph API를 사용하여 Java 앱 개발(영문)][3] </span><span class="sxs-lookup"><span data-stu-id="c29c4-116">[Develop a Java app using Azure Cosmos DB Graph API][3] </span></span>  
+<span data-ttu-id="c29c4-117">[Azure Cosmos DB SQL API를 사용하여 Java 앱 개발][4]</span><span class="sxs-lookup"><span data-stu-id="c29c4-117">[Develop a Java app using Azure Cosmos DB SQL API][4]</span></span>        
 
-<span data-ttu-id="b8b1c-118">앱에서 사용할 수 있는 [Azure Cosmos DB용 Java 샘플 코드](https://azure.microsoft.com/resources/samples/?platform=java&term=cosmos)를 추가로 탐색합니다.</span><span class="sxs-lookup"><span data-stu-id="b8b1c-118">Explore more [sample Java code for Azure Cosmos DB](https://azure.microsoft.com/resources/samples/?platform=java&term=cosmos) you can use in your apps.</span></span>
+<span data-ttu-id="c29c4-118">앱에서 사용할 수 있는 [Azure Cosmos DB용 Java 샘플 코드](https://azure.microsoft.com/resources/samples/?platform=java&term=cosmos)를 추가로 탐색합니다.</span><span class="sxs-lookup"><span data-stu-id="c29c4-118">Explore more [sample Java code for Azure Cosmos DB](https://azure.microsoft.com/resources/samples/?platform=java&term=cosmos) you can use in your apps.</span></span>
 
 [2]: https://github.com/Azure-Samples/azure-cosmos-db-mongodb-java-getting-started
 [3]: https://github.com/Azure-Samples/azure-cosmos-db-graph-java-getting-started

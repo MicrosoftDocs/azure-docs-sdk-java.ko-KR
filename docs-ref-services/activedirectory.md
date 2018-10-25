@@ -10,26 +10,26 @@ ms.topic: reference
 ms.prod: azure
 ms.technology: azure
 ms.devlang: java
-ms.openlocfilehash: 36758977a64600d5ac11a0c5ac59bed981e8fa33
-ms.sourcegitcommit: 7c6a15f574fb85ee22f6ccdb7864627b73a6c1f7
+ms.openlocfilehash: 6147fc959727b53cd796534cefc927145b52d81d
+ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47398165"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49799839"
 ---
-# <a name="azure-active-directory-libraries-for-java"></a><span data-ttu-id="15caa-104">Java용 Azure Active Directory 라이브러리</span><span class="sxs-lookup"><span data-stu-id="15caa-104">Azure Active Directory libraries for Java</span></span>
+# <a name="azure-active-directory-libraries-for-java"></a><span data-ttu-id="d2b1a-104">Java용 Azure Active Directory 라이브러리</span><span class="sxs-lookup"><span data-stu-id="d2b1a-104">Azure Active Directory libraries for Java</span></span>
 
-## <a name="overview"></a><span data-ttu-id="15caa-105">개요</span><span class="sxs-lookup"><span data-stu-id="15caa-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="d2b1a-105">개요</span><span class="sxs-lookup"><span data-stu-id="d2b1a-105">Overview</span></span>
 
-<span data-ttu-id="15caa-106">[Azure Active Directory](/azure/active-directory/active-directory-whatis)를 사용하여 사용자를 로그온하고 응용 프로그램 및 API에 대한 액세스를 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="15caa-106">Sign-on users and control access to applications and APIs with [Azure Active Directory](/azure/active-directory/active-directory-whatis).</span></span>
+<span data-ttu-id="d2b1a-106">[Azure Active Directory](/azure/active-directory/active-directory-whatis)를 사용하여 사용자를 로그온하고 응용 프로그램 및 API에 대한 액세스를 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="d2b1a-106">Sign-on users and control access to applications and APIs with [Azure Active Directory](/azure/active-directory/active-directory-whatis).</span></span>
 
-<span data-ttu-id="15caa-107">Azure AD를 시작하려면 [Azure AD에서 Java 웹앱 로그인 및 로그아웃](/azure/active-directory/develop/active-directory-devquickstarts-webapp-java)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="15caa-107">To get started with Azure AD, see [Java web app sign-in and sign-out with Azure AD](/azure/active-directory/develop/active-directory-devquickstarts-webapp-java).</span></span>
+<span data-ttu-id="d2b1a-107">Azure AD를 시작하려면 [Azure AD에서 Java 웹앱 로그인 및 로그아웃](/azure/active-directory/develop/active-directory-devquickstarts-webapp-java)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d2b1a-107">To get started with Azure AD, see [Java web app sign-in and sign-out with Azure AD](/azure/active-directory/develop/active-directory-devquickstarts-webapp-java).</span></span>
 
-## <a name="client-library"></a><span data-ttu-id="15caa-108">클라이언트 라이브러리</span><span class="sxs-lookup"><span data-stu-id="15caa-108">Client library</span></span>
+## <a name="client-library"></a><span data-ttu-id="d2b1a-108">클라이언트 라이브러리</span><span class="sxs-lookup"><span data-stu-id="d2b1a-108">Client library</span></span>
 
-<span data-ttu-id="15caa-109">[Java용 ADAL(Active Directory Authentication Library)](https://github.com/AzureAD/azure-activedirectory-library-for-java)을 사용하여 OAuth2, OpenID Connect 또는 Active Directory Graph 인증 및 [SAML 2.0](https://docs.microsoft.com/azure/active-directory/develop/active-directory-saml-protocol-reference) Single Sign-On을 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="15caa-109">Configure OAuth2, OpenID Connect, or Active Directory Graph authentication and [SAML 2.0](https://docs.microsoft.com/azure/active-directory/develop/active-directory-saml-protocol-reference) single-sign on with the [Azure Active Directory authentication library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java).</span></span>
+<span data-ttu-id="d2b1a-109">[Java용 ADAL(Active Directory Authentication Library)](https://github.com/AzureAD/azure-activedirectory-library-for-java)을 사용하여 OAuth2, OpenID Connect 또는 Active Directory Graph 인증 및 [SAML 2.0](https://docs.microsoft.com/azure/active-directory/develop/active-directory-saml-protocol-reference) Single Sign-On을 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="d2b1a-109">Configure OAuth2, OpenID Connect, or Active Directory Graph authentication and [SAML 2.0](https://docs.microsoft.com/azure/active-directory/develop/active-directory-saml-protocol-reference) single-sign on with the [Azure Active Directory authentication library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java).</span></span>
 
-<span data-ttu-id="15caa-110">`pom.xml` Maven 파일에 [종속성을 추가](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)하여 프로젝트에서 클라이언트 라이브러리를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="15caa-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the client library in your project.</span></span>
+<span data-ttu-id="d2b1a-110">`pom.xml` Maven 파일에 [종속성을 추가](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)하여 프로젝트에서 클라이언트 라이브러리를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="d2b1a-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the client library in your project.</span></span>
 
 ```XML
 <dependency>
@@ -39,9 +39,9 @@ ms.locfileid: "47398165"
 </dependency>
 ```   
 
-### <a name="example"></a><span data-ttu-id="15caa-111">예</span><span class="sxs-lookup"><span data-stu-id="15caa-111">Example</span></span>
+### <a name="example"></a><span data-ttu-id="d2b1a-111">예</span><span class="sxs-lookup"><span data-stu-id="d2b1a-111">Example</span></span>
 
-<span data-ttu-id="15caa-112">Azure Active Directory의 [Graph API](https://docs.microsoft.com/azure/active-directory/develop/active-directory-graph-api)를 사용하여 Active Directory 테넌트에서 사용자에 대한 JWT(JSON Web Token)를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="15caa-112">Retrieve a JSON Web Token (JWT) for a user in your an Active Directory tenant using Azure Active Directory's [Graph API](https://docs.microsoft.com/azure/active-directory/develop/active-directory-graph-api).</span></span> <span data-ttu-id="15caa-113">그런 다음 이 토큰을 사용하여 응용 프로그램 또는 API를 통해 해당 사용자를 인증할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="15caa-113">This token can then be used to authenticate the user with an application or API.</span></span>
+<span data-ttu-id="d2b1a-112">Azure Active Directory의 [Graph API](https://docs.microsoft.com/azure/active-directory/develop/active-directory-graph-api)를 사용하여 Active Directory 테넌트에서 사용자에 대한 JWT(JSON Web Token)를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="d2b1a-112">Retrieve a JSON Web Token (JWT) for a user in your an Active Directory tenant using Azure Active Directory's [Graph API](https://docs.microsoft.com/azure/active-directory/develop/active-directory-graph-api).</span></span> <span data-ttu-id="d2b1a-113">그런 다음 이 토큰을 사용하여 응용 프로그램 또는 API를 통해 해당 사용자를 인증할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d2b1a-113">This token can then be used to authenticate the user with an application or API.</span></span>
 
 ```java
 ExecutorService service = Executors.newFixedThreadPool(1);
@@ -55,11 +55,11 @@ System.out.println("Refresh Token - " + result.getRefreshToken());
 System.out.println("ID Token - " + result.getIdToken());
 ```
 
-## <a name="management-api"></a><span data-ttu-id="15caa-114">관리 API</span><span class="sxs-lookup"><span data-stu-id="15caa-114">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="d2b1a-114">관리 API</span><span class="sxs-lookup"><span data-stu-id="d2b1a-114">Management API</span></span>
 
-<span data-ttu-id="15caa-115">관리 API를 사용하여 [역할 기반 액세스 제어](/azure/active-directory/role-based-access-control-what-is)를 구성하고 ID(예: 사용자 및 [서비스 사용자](https://docs.microsoft.com/azure/active-directory/develop/active-directory-application-objects))를 해당 역할에 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="15caa-115">Configure [role based access control](/azure/active-directory/role-based-access-control-what-is) and assign identities (such as users and [service principals](https://docs.microsoft.com/azure/active-directory/develop/active-directory-application-objects)) to those roles with the management API.</span></span> 
+<span data-ttu-id="d2b1a-115">관리 API를 사용하여 [역할 기반 액세스 제어](/azure/active-directory/role-based-access-control-what-is)를 구성하고 ID(예: 사용자 및 [서비스 사용자](https://docs.microsoft.com/azure/active-directory/develop/active-directory-application-objects))를 해당 역할에 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="d2b1a-115">Configure [role based access control](/azure/active-directory/role-based-access-control-what-is) and assign identities (such as users and [service principals](https://docs.microsoft.com/azure/active-directory/develop/active-directory-application-objects)) to those roles with the management API.</span></span> 
 
-<span data-ttu-id="15caa-116">`pom.xml` Maven 파일에 [종속성을 추가](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)하여 프로젝트에서 관리 API를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="15caa-116">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>
+<span data-ttu-id="d2b1a-116">`pom.xml` Maven 파일에 [종속성을 추가](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)하여 프로젝트에서 관리 API를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="d2b1a-116">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>
 
 ```XML
 <dependency>
@@ -69,9 +69,9 @@ System.out.println("ID Token - " + result.getIdToken());
 </dependency>
 ```
 
-### <a name="example"></a><span data-ttu-id="15caa-117">예</span><span class="sxs-lookup"><span data-stu-id="15caa-117">Example</span></span> 
+### <a name="example"></a><span data-ttu-id="d2b1a-117">예</span><span class="sxs-lookup"><span data-stu-id="d2b1a-117">Example</span></span> 
 
-<span data-ttu-id="15caa-118">새 서비스 사용자를 만들고 참가자 역할을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="15caa-118">Create a new service principal and assign it the Contributor role.</span></span>
+<span data-ttu-id="d2b1a-118">새 서비스 사용자를 만들고 참가자 역할을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d2b1a-118">Create a new service principal and assign it the Contributor role.</span></span>
 
 ```java
 ServicePrincipal sp = Azure.servicePrincipals().define(spName)
@@ -86,14 +86,14 @@ RoleAssignment roleAssignment2 = authenticated.roleAssignments()
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="15caa-119">관리 API 탐색</span><span class="sxs-lookup"><span data-stu-id="15caa-119">Explore the Management APIs</span></span>](/java/api/overview/azure/activedirectory/management)
+> [<span data-ttu-id="d2b1a-119">관리 API 탐색</span><span class="sxs-lookup"><span data-stu-id="d2b1a-119">Explore the Management APIs</span></span>](/java/api/overview/azure/activedirectory/management)
 
 
-## <a name="samples"></a><span data-ttu-id="15caa-120">샘플</span><span class="sxs-lookup"><span data-stu-id="15caa-120">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="d2b1a-120">샘플</span><span class="sxs-lookup"><span data-stu-id="d2b1a-120">Samples</span></span>
 
-<span data-ttu-id="15caa-121">[그룹, 사용자 및 역할 관리](https://github.com/Azure-Samples/aad-java-manage-users-groups-and-roles)  </span><span class="sxs-lookup"><span data-stu-id="15caa-121">[Manage groups, users, and roles](https://github.com/Azure-Samples/aad-java-manage-users-groups-and-roles)  </span></span>  
-<span data-ttu-id="15caa-122">[Java 웹앱에서 사용자 로그인 및 로그아웃(영문)](https://github.com/Azure-Samples/active-directory-java-webapp-openidconnect)  </span><span class="sxs-lookup"><span data-stu-id="15caa-122">[Sign-in and sign-out users in a Java web app](https://github.com/Azure-Samples/active-directory-java-webapp-openidconnect)  </span></span>  
-<span data-ttu-id="15caa-123">[명령줄 앱을 사용하여 Azure AD에서 API 액세스(영문)](https://github.com/Azure-Samples/active-directory-java-native-headless) </span><span class="sxs-lookup"><span data-stu-id="15caa-123">[Access an API with Azure AD using a command line app](https://github.com/Azure-Samples/active-directory-java-native-headless) </span></span>  
-[<span data-ttu-id="15caa-124">Java 웹앱에서 활성 AD Graph API 호출(영문)</span><span class="sxs-lookup"><span data-stu-id="15caa-124">Call the Active AD Graph API from your Java web app</span></span>](https://github.com/Azure-Samples/active-directory-java-webapp-openidconnect)  
+<span data-ttu-id="d2b1a-121">[그룹, 사용자 및 역할 관리](https://github.com/Azure-Samples/aad-java-manage-users-groups-and-roles)  </span><span class="sxs-lookup"><span data-stu-id="d2b1a-121">[Manage groups, users, and roles](https://github.com/Azure-Samples/aad-java-manage-users-groups-and-roles)  </span></span>  
+<span data-ttu-id="d2b1a-122">[Java 웹앱에서 사용자 로그인 및 로그아웃(영문)](https://github.com/Azure-Samples/active-directory-java-webapp-openidconnect)  </span><span class="sxs-lookup"><span data-stu-id="d2b1a-122">[Sign-in and sign-out users in a Java web app](https://github.com/Azure-Samples/active-directory-java-webapp-openidconnect)  </span></span>  
+<span data-ttu-id="d2b1a-123">[명령줄 앱을 사용하여 Azure AD에서 API 액세스(영문)](https://github.com/Azure-Samples/active-directory-java-native-headless) </span><span class="sxs-lookup"><span data-stu-id="d2b1a-123">[Access an API with Azure AD using a command line app](https://github.com/Azure-Samples/active-directory-java-native-headless) </span></span>  
+[<span data-ttu-id="d2b1a-124">Java 웹앱에서 활성 AD Graph API 호출(영문)</span><span class="sxs-lookup"><span data-stu-id="d2b1a-124">Call the Active AD Graph API from your Java web app</span></span>](https://github.com/Azure-Samples/active-directory-java-webapp-openidconnect)  
 
-<span data-ttu-id="15caa-125">앱에서 사용할 수 있는 [Azure AD용 Java 샘플 코드](https://azure.microsoft.com/en-us/resources/samples/?term=active+directory&platform=java)를 추가로 탐색합니다.</span><span class="sxs-lookup"><span data-stu-id="15caa-125">Explore more [sample Java code for Azure AD](https://azure.microsoft.com/en-us/resources/samples/?term=active+directory&platform=java) you can use in your apps.</span></span>
+<span data-ttu-id="d2b1a-125">앱에서 사용할 수 있는 [Azure AD용 Java 샘플 코드](https://azure.microsoft.com/en-us/resources/samples/?term=active+directory&platform=java)를 추가로 탐색합니다.</span><span class="sxs-lookup"><span data-stu-id="d2b1a-125">Explore more [sample Java code for Azure AD](https://azure.microsoft.com/en-us/resources/samples/?term=active+directory&platform=java) you can use in your apps.</span></span>
