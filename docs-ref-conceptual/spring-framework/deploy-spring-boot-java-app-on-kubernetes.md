@@ -15,12 +15,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.custom: mvc
-ms.openlocfilehash: 546aa2dc18143ca173d72198ea8e6c30bda3c97f
-ms.sourcegitcommit: e017de4677c5bedd6ef88c8c1b6da279dc973efe
+ms.openlocfilehash: 8e8f9088146af504ba2d9d45e2e82118c4081359
+ms.sourcegitcommit: dae7511a9d93ca7f388d5b0e05dc098e22c2f2f6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45639726"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49962507"
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Azure Kubernetes Service의 Kubernetes 클러스터에 Spring Boot 응용 프로그램 배포
 
@@ -73,7 +73,7 @@ ms.locfileid: "45639726"
    mvn package spring-boot:run
    ```
 
-1. http://localhost:8080으로 이동하거나 `curl` 명령을 사용하여 웹앱을 테스트합니다.
+1. `http://localhost:8080`으로 이동하거나 `curl` 명령을 사용하여 웹앱을 테스트합니다.
    ```
    curl http://localhost:8080
    ```
