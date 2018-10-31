@@ -6,21 +6,21 @@ documentationcenter: java
 author: rmcmurray
 manager: routlaw
 editor: brborges
-ms.author: robmcm;kevinzha;brborges
-ms.date: 10/04/2018
+ms.author: robmcm
+ms.date: 10/18/2018
 ms.devlang: java
 ms.service: app-service
 ms.topic: article
-ms.openlocfilehash: 36afcc764c1cb984779518ddec004ecbfa1b7c57
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: dc3038fed6859203f36e0c4dc9a9b01e81a7c4c5
+ms.sourcegitcommit: dae7511a9d93ca7f388d5b0e05dc098e22c2f2f6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48876397"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49962497"
 ---
 # <a name="deploy-a-spring-boot-jar-file-web-app-to-azure-app-service-on-linux"></a>Linux에 Azure App Service에 Spring Boot JAR 파일 웹앱 배포
 
-이 문서에서는 [Azure App Service Web Apps용 Maven Plugin](https://docs.microsoft.com/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme)을 사용하여 Java SE JAR로 패키지된 Spring Boot 응용 프로그램을 [Linux의 Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/containers/)에 배포하는 방법을 보여줍니다. 앱의 의존성, 런타임 및 구성을 배포 가능한 단일 아티팩트에 통합하려면 [Tomcat 및 WAR 파일](/azure/app-service/containers/quickstart-java) 상 Java SE 배포를 선택하십시오.
+이 문서에서는 [Azure App Service Web Apps용 Maven Plugin](https://docs.microsoft.com/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme)을 사용하여 Java SE JAR로 패키지된 Spring Boot 응용 프로그램을 [Linux의 Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/containers/)에 배포하는 방법을 보여줍니다. 앱의 의존성, 런타임 및 구성을 배포 가능한 단일 아티팩트에 통합하려면 [Tomcat 및 WAR 파일](/azure/app-service/containers/quickstart-java)에 대해 Java SE 배포를 선택합니다.
 
 
 Azure 구독이 아직 없는 경우 시작하기 전에 [무료 계정](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) 을 만듭니다.
@@ -33,6 +33,18 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [무료 계정](https:/
 * [JDK(Java Development Kit)](https://www.azul.com/downloads/azure-only/zulu/), 버전 1.7 이상
 * Apache [Maven](https://maven.apache.org/), 버전 3).
 * [Git](https://git-scm.com/downloads) 클라이언트
+
+## <a name="install-and-sign-in-to-azure-cli"></a>Azure CLI 설치 및 로그인
+
+Maven Plugin이 Spring Boot 응용프로그램을 배포하도록 하는 가장 간단하고 쉬운 방법은 [ Azure CLI](https://docs.microsoft.com/cli/azure/)를 사용하는 것입니다.
+
+Azure CLI를 사용하여 Azure 계정에 로그인합니다.
+   
+   ```shell
+   az login
+   ```
+   
+지시에 따라 로그인 프로세스를 완료합니다.
 
 ## <a name="clone-the-sample-app"></a>샘플 앱 복제
 
@@ -78,14 +90,14 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [무료 계정](https:/
 
 ## <a name="configure-maven-plugin-for-azure-app-service"></a>Azure App Service용 Maven 플러그인 구성
 
-이 섹션에서는 Maven이 Linux의 Azure App Service에 앱을 배포할 수 있도록 Spring Boot프로젝트 `pom.xml`를 구성할 것입니다.
+이 섹션에서는 Maven이 Linux의 Azure App Service에 앱을 배포할 수 있도록 Spring Boot 프로젝트 `pom.xml`을 구성합니다.
 
 1. 코드 편집기에서 `pom.xml`를 엽니다.
 
-1. pom.xml의 `<build>` 섹션에서 `<plugins>` 태그 안에 다음 `<plugin>` 항목을 추가하세요.
+2. pom.xml의 `<build>` 섹션에서 `<plugins>` 태그 안에 다음 `<plugin>` 항목을 추가하세요.
 
    ```xml
-  <plugin>
+   <plugin>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-webapp-maven-plugin</artifactId>
     <version>1.4.0</version>
@@ -108,10 +120,10 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [무료 계정](https:/
       <!-- Java Runtime Stack for Web App on Linux-->
       <linuxRuntime>jre8</linuxRuntime>
     </configuration>
-  </plugin>
-  ```
+   </plugin>
+   ```
 
-1. 플러그인 구성에서 다음 자리 표시자를 업데이트합니다.
+3. 플러그인 구성에서 다음 자리 표시자를 업데이트합니다.
 
 | Placeholder | 설명 |
 | ----------- | ----------- |
@@ -120,18 +132,6 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [무료 계정](https:/
 | `REGION` | 웹앱이 호스팅되는 Azure 지역입니다(예: `westus2`). `az account list-locations` 명령을 사용하여 Cloud Shell 또는 CLI에서 지역 목록을 가져올 수 있습니다. |
 
 구성 옵션의 전체 목록을 [GitHub의 Maven 플러그 인 참조](https://github.com/Microsoft/azure-maven-plugins/tree/develop/azure-webapp-maven-plugin)에서 찾을 수 있습니다.
-
-## <a name="install-and-log-in-to-azure-cli"></a>Azure CLI 설치 및 로그인
-
-Maven Plugin이 Spring Boot 응용프로그램을 배포하도록 하는 가장 간단하고 쉬운 방법은 [ Azure CLI](https://docs.microsoft.com/cli/azure/)를 사용하는 것입니다.
-
-1. Azure CLI를 사용하여 Azure 계정에 로그인합니다.
-   
-   ```shell
-   az login
-   ```
-   
-   지시에 따라 로그인 프로세스를 완료합니다.
 
 ## <a name="deploy-the-app-to-azure"></a>Azure에 앱 배포
 

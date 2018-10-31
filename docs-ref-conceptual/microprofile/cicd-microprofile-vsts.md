@@ -14,12 +14,12 @@ ms.service: Azure DevOps
 ms.tgt_pltfrm: multiple
 ms.topic: tutorial
 ms.workload: web
-ms.openlocfilehash: c2b6bf3370982d26d8d23fede370e0105a70b734
-ms.sourcegitcommit: fd67d4088be2cad01c642b9ecf3f9475d9cb4f3c
+ms.openlocfilehash: 818e37291fa47f99cb161c63a86062bddbf6248c
+ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46506590"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49799939"
 ---
 # <a name="cicd-for-microprofile-applications-using-azure-devops"></a>Azure DevOps를 사용하는 MicroProfile 응용 프로그램의 CI/CD
 
@@ -38,9 +38,9 @@ Docker 이미지를 만들고 컨테이너 이미지를 Azure 컨테이너 레�
 - 새 [Azure DevOps 프로젝트](https://docs.microsoft.com/en-us/vsts/organizations/projects/create-project?view=vsts&tabs=new-nav)를 만들고 위의 Git url을 사용하여 **리포지토리 가져오기**를 합니다.
 - [ACR(Azure Container Registry)](https://azure.microsoft.com/en-us/services/container-registry) 만들기
 - 컨테이너용 Azure 웹 앱 만들기
-> [!NOTE]
->
-> 웹 앱 인스턴스를 프로비저닝할 때 컨테이너 설정에서 "빠른 시작" 선택
+  > [!NOTE]
+  >
+  > 웹 앱 인스턴스를 프로비저닝할 때 컨테이너 설정에서 "빠른 시작" 선택
 
 
 ## <a name="create-a-build-definition"></a>빌드 정의 만들기
@@ -54,17 +54,17 @@ Azure DevOps의 빌드 정의는 Java EE 응용 프로그램 소스 응용 프�
 2. 빌드 작업을 정의하려면**새 파이프라인** 단추를 클릭하고 나서 **계속**을 클릭합니다.
 3. Java 프로젝트를 빌드하려면 템플릿 목록에서 "Maven"을 선택한 다음 **적용** 단추를 클릭합니다.
 4. 에이전트 풀 필드에 대한 드롭다운 메뉴를 사용하여 **호스팅된 Linux 미리 보기** 옵션을 선택합니다.
-> [!NOTE]
->
-> 이는 Azure DevOps에 어느 빌드 서버를 사용할지를 알립니다.  개인 사용자 지정된 빌드 서버를 사용할 수 있습니다.
+   > [!NOTE]
+   >
+   > 이는 Azure DevOps에 어느 빌드 서버를 사용할지를 알립니다.  개인 사용자 지정된 빌드 서버를 사용할 수 있습니다.
 
 5. 지속적인 통합을 위해 빌드를 구성하려면 **트리거** 탭을 선택하고 **연속 통합 사용** 확인란을 선택하십시오.  
 
 <img src="media/VSTS/Build-Triggers2.png"> 
- 
-6. 기본 빌드 파이프라인 페이지로 다시 돌아가려면 **작업** 탭을 선택합니다.
-7. **저장 및 큐** 드롭다운 메뉴를 사용하여 **저장** 옵션을 선택합니다.
- 
+
+6. 기본 빌드 파이프라인 페이지로 다시 돌아가려면 <strong>작업</strong> 탭을 선택합니다.
+7. <strong>저장 &amp; 큐</strong> 드롭다운 메뉴를 사용하여 <strong>저장</strong> 옵션을 선택합니다.
+
 
 ## <a name="create-a-docker-build-image"></a>Docker 빌드 이미지 만들기
 
@@ -72,15 +72,14 @@ Azure DevOps의 빌드 정의는 Java EE 응용 프로그램 소스 응용 프�
 
 1. 기본 빌드 파이프라인 페이지로 다시 돌아가려면 **작업** 탭을 선택합니다.
 2. 빌드 정의에 새 작업을 추가하려면 **+** 아이콘을 클릭합니다.
- 
+
 <img src="media/VSTS/Tasks-add4.png">
- 
-3. 템플릿 목록에서 "Docker"를 선택한 다음 **추가** 단추를 클릭합니다.
-4. **표시 이름** 필드에 대한 설명 이름을 입력합니다.
-5. **컨테이너 레지스트리 유형**의 드롭다운 메뉴에서 **Azure Container Registry**가 선택되었는지 확인합니다.
-> [!NOTE]
->
->  Docker 허브 또는 다른 레지스트리를 사용하는 경우, "Container Registry"를 대신 선택합니다.  그리고 자격 증명 및 이에 대한 연결 정보를 제공하려면 "+새로 만들기" 단추를 클릭합니다. 계속 하려면 명령 섹션을 건너뜁니다.
+
+3. 템플릿 목록에서 &quot;Docker&quot;를 선택한 다음, <strong>추가</strong> 단추를 클릭합니다.
+4. <strong>표시 이름</strong> 필드에 대한 설명 이름을 입력합니다.
+5. <strong>컨테이너 레지스트리 유형</strong>의 드롭다운 메뉴에서 <strong>Azure Container Registry</strong>가 선택되었는지 확인합니다.
+&gt; [!NOTE]
+&gt; &gt; Docker 허브 또는 다른 레지스트리를 사용하는 경우 대신 &quot;Container Registry&quot;를 선택합니다.  그리고 자격 증명 및 이에 대한 연결 정보를 제공하려면 &quot;+새로 만들기&quot; 단추를 클릭합니다. 계속 하려면 명령 섹션을 건너뜁니다.
 
 6. **Azure 구독** 드롭다운 메뉴를 사용하여 Azure 구독 ID를 선택합니다.  그런 다음 **권한 부여** 단추를 클릭합니다.
 7. **Azure 컨테이너 레지스트리** 드롭다운 메뉴에서 Azure에서 만든 레지스트리 이름을 선택합니다.
@@ -103,7 +102,7 @@ Azure DevOps의 빌드 정의는 Java EE 응용 프로그램 소스 응용 프�
 5. 빌드 번호를 클릭하여 Java 프로젝트의 빌드 파이프라인이 성공적으로 완료되었는지 확인합니다.
 
 <img src="media/VSTS/Build-Number6.png">
- 
+
 
 ## <a name="create-a-release-definition-for-a-java-app"></a>Java 앱에 대한 릴리스 정의 만들기
 
@@ -112,20 +111,19 @@ Azure DevOps의 릴리스 파이프라인은 빌드 프로세스가 성공적으
 1. Azure DevOps 프로젝트 페이지 위쪽에서 "빌드 및 릴리스" 탭을 클릭합니다.  그리고 **릴리스** 링크를 선택합니다.
 
 <img src="media/VSTS/Release-new-pipeline7.png">
- 
-2. “새 파이프라인” 단추를 클릭합니다.
-3. 템플릿 목록에서 **Azure App Service에 Java 앱 배포**를 선택하고, **적용** 단추를 클릭합니다.
+
+2. &quot;새 파이프라인** 단추를 클릭합니다.
+3. 템플릿 목록에서 <strong>Azure App Service에 Java 앱 배포</strong>를 선택하고, <strong>적용</strong> 단추를 클릭합니다.
 
 <img src="media/VSTS/deploy-java-template8.png">
- 
-4. **단계 이름**(예: 개발, 테스트, 스테이징 또는 프로덕션)을 설정합니다.  그리고 팝업 창을 닫으려면 **X** 단추를 클릭합니다.
-5. 아티팩트 섹션에서 **+추가** 단추를 클릭합니다.  이는 빌드 정의에서 이 릴리스 정의로 아티팩트를 연결합니다.  
-6. 빌드 정의를 선택하려면 **소스(빌드 파이프라인)** 에 대한 드롭다운 메뉴를 사용합니다. 그리고 계속하려면 **추가** 단추를 클릭합니다.
+
+4. <strong>단계 이름</strong>(예: 개발, 테스트, 스테이징 또는 프로덕션)을 설정합니다.  그리고 팝업 창을 닫으려면 <strong>X</strong> 단추를 클릭합니다.
+5. 아티팩트 섹션에서 <strong>+추가</strong> 단추를 클릭합니다.  이는 빌드 정의에서 이 릴리스 정의로 아티팩트를 연결합니다.<br/>6. 빌드 정의를 선택하려면 <strong>소스(빌드 파이프라인)</strong>에 대한 드롭다운 메뉴를 사용합니다. 그리고 계속하려면 <strong>추가</strong> 단추를 클릭합니다.
 
 <img src="media/VSTS/add-artifact9.png">
- 
-7. 파이프라인에서 **작업** 탭을 클릭합니다.  그런 다음 단계 이름을 선택합니다.
- 
+
+7. 파이프라인에서 <strong>작업</strong> 탭을 클릭합니다.  그런 다음 단계 이름을 선택합니다.
+
 <img src="media/VSTS/release-stage10.png">
 
 8. **Azure 구독** 드롭다운 메뉴를 사용하여 Azure 구독 ID를 선택합니다.
@@ -152,13 +150,13 @@ Azure DevOps의 릴리스 파이프라인은 빌드 프로세스가 성공적으
 4. **Azure App Service 배포**를 클릭합니다. 
 5. **응용 프로그램 및 구성 설정** 섹션을 확장한 다음 **응용 프로그램 설정** 필드의 탐색 경로를 클릭하여 배포 중에 컨테이너 레지스트리에 연결할 환경 변수를 추가합니다.
 6. **+ 추가** 버튼을 클릭하여 다음 앱 설정을 정의하고 환경 변수를 할당합니다.
-- DOCKER_REGISTRY_SERVER_PASSWORD = $(registry.password)
-- DOCKER_REGISTRY_SERVER_URL = $(registry.url)
-- DOCKER_REGISTRY_SERVER_URL = $(registry.url)
+7. DOCKER_REGISTRY_SERVER_PASSWORD = $(registry.password)
+8. DOCKER_REGISTRY_SERVER_URL = $(registry.url)
+9. DOCKER_REGISTRY_SERVER_URL = $(registry.url)
 
 <img src="media/VSTS/environment-variables14.png">
- 
-7. 계속하려면 **확인** 단추를 클릭합니다.
+
+7. 계속하려면 <strong>확인</strong> 단추를 클릭합니다.
 
 ## <a name="setup-continious-deployment--deploy-java-application"></a>지속적인 배포 설정 및 Java 응용 프로그램 배포
 
@@ -166,22 +164,22 @@ Azure DevOps의 릴리스 파이프라인은 빌드 프로세스가 성공적으
 2. 아티팩트 섹션에서 번갯불 아이콘을 클릭합니다.  그런 다음 **지속적인 배포 트리거**를 활성화로 설정합니다.
 
 <img src="media/VSTS/release-enable-CD.png">
- 
-3. **저장** 단추를 클릭하고 **확인** 단추를 클릭합니다. 
-4. **릴리스** 드롭다운 메뉴를 클릭하고 **릴리스 만들기** 링크를 선택합니다.
-5. **자동에서 수동으로 변경을 트리거하는 단계** 드롭다운 메뉴를 사용하여 단계 이름의 확인란을 선택합니다.
-6. 계속하려면 **만들기** 단추를 클릭합니다.
-7. 릴리스 번호를 클릭합니다.  그런 다음 스테이지 이름 위로 마우스 커서를 이동하고 **배포** 단추를 클릭합니다.
-8. Azure에 배포 프로세스를 시작하려면 팝업 창에서 **배포** 단추를 클릭합니다.
+
+3. <strong>저장</strong> 단추를 클릭하고 <strong>확인</strong> 단추를 클릭합니다. 
+4. <strong>릴리스</strong> 드롭다운 메뉴를 클릭하고 <strong>릴리스 만들기</strong> 링크를 선택합니다.
+5. <strong>자동에서 수동으로 변경을 트리거하는 단계</strong> 드롭다운 메뉴를 사용하여 단계 이름의 확인란을 선택합니다.
+6. 계속하려면 <strong>만들기</strong> 단추를 클릭합니다.
+7. 릴리스 번호를 클릭합니다.  그런 다음 스테이지 이름 위로 마우스 커서를 이동하고 <strong>배포</strong> 단추를 클릭합니다.
+8. Azure에 배포 프로세스를 시작하려면 팝업 창에서 <strong>배포</strong> 단추를 클릭합니다.
 
 
 ## <a name="test-the-java-web-application"></a>Java 웹 응용 프로그램 테스트하기
 1. 웹 브라우저에서 웹 앱 url을 실행합니다.  
-https://{your-app-service-name}.azurewebsites.net/api/hello
+   https://{your-app-service-name}.azurewebsites.net/api/hello
 
- 
+
 <img src="media/VSTS/web-app16.png">
 
 2. 웹 페이지에 **Hello Azure!** 가 나타납니다.
- 
+
 <img src="media/VSTS/web-api17.png">
