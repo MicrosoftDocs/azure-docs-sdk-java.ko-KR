@@ -14,12 +14,12 @@ ms.service: event-hubs
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 85fe1d9c56530b716a1f1750713f4c87d43dfad3
-ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
+ms.openlocfilehash: ccef834d0ff1c40b061946f8ab1852584da80d7b
+ms.sourcegitcommit: a168dc8c2396b6c4749abef03debb1f69298da38
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49799959"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50747004"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-apache-kafka-with-azure-event-hubs"></a>Azure Event Hub를 사용하여 Apache Kafka에 대한 Spring Boot Starter를 사용하는 방법
 
@@ -182,8 +182,9 @@ ms.locfileid: "49799959"
        }
      }
    ]
-
-1. Specify the GUID for the subscription you want to use with Azure; for example:
+   ```
+   
+1. Azure에 사용하려는 구독에 대한 GUID를 지정합니다. 예:
 
    ```azurecli
    az account set -s 11111111-1111-1111-1111-111111111111
