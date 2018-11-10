@@ -8,11 +8,14 @@ items:
     items:
     - name: 웹앱 배포
       items:
-      - name: Windows 및 Eclipse IDE를 사용
+      - name: Windows 및 Eclipse
         href: /azure/app-service-web/app-service-web-get-started-java
         maintainContext: true
-      - name: Linux 및 Maven을 사용
+      - name: Linux 및 Tomcat
         href: /azure/app-service/containers/quickstart-java
+        maintainContext: true
+      - name: Linux 및 Java SE
+        href: /java/azure/spring-framework/deploy-spring-boot-java-app-with-maven-plugin
         maintainContext: true
     - name: 웹앱 모니터
       href: /azure/application-insights/app-insights-java-quick-start
@@ -180,9 +183,9 @@ items:
       href: java-sdk-azure-containers-samples.md
     - name: 모든 Java 샘플
       href: https://azure.microsoft.com/resources/samples/?platform=java
-ms.openlocfilehash: 2aef0503c8cb21481335214a130c23fd66baeb30
-ms.sourcegitcommit: 19876d17fed0afd9af0cb8e161f5a463696e74cf
+ms.openlocfilehash: 784faacb4aad2dd34a72881849f4f156475743d5
+ms.sourcegitcommit: db36eeb667a0bfe6d113953bb0583240db61b0f4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49634496"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50134618"
