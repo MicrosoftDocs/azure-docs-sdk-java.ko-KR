@@ -4,31 +4,31 @@ description: IntelliJ용 Azure 도구 키트의 최신 기능에 대해 알아�
 services: ''
 documentationcenter: java
 author: rmcmurray
-manager: routlaw
+manager: mbaldwin
 editor: ''
 ms.assetid: 46ed791f-df59-416a-809e-f52345ad973c
-ms.author: robmcm;asirveda;martinsawicki
-ms.date: 02/01/2018
+ms.author: robmcm
+ms.date: 11/13/2018
 ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: dcbd7e8a78470df0ab3bc2d7c87137a97fc4665c
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 6c9e79b7fc39a23c3768d93d60d35aace5cde6d1
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893424"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338827"
 ---
-# <a name="whats-new-in-the-azure-toolkit-for-intellij"></a><span data-ttu-id="a9b87-103">IntelliJ용 Azure 도구 키트의 새로운 기능</span><span class="sxs-lookup"><span data-stu-id="a9b87-103">What's New in the Azure Toolkit for IntelliJ</span></span>
+# <a name="whats-new-in-the-azure-toolkit-for-intellij"></a><span data-ttu-id="67bd3-103">IntelliJ용 Azure 도구 키트의 새로운 기능</span><span class="sxs-lookup"><span data-stu-id="67bd3-103">What's New in the Azure Toolkit for IntelliJ</span></span>
 
-<span data-ttu-id="a9b87-104">다음 웹페이지는 다양한 릴리스 정보 및 IntelliJ용 Azure 도구 키트에 대한 최신 업데이트를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="a9b87-104">The following web page contains information on the various releases and latest updates to the Azure Toolkit for IntelliJ.</span></span>
+<span data-ttu-id="67bd3-104">다음 웹페이지는 다양한 릴리스 정보 및 IntelliJ용 Azure 도구 키트에 대한 최신 업데이트를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="67bd3-104">The following web page contains information on the various releases and latest updates to the Azure Toolkit for IntelliJ.</span></span>
 
 <https://github.com/Microsoft/azure-tools-for-java/releases>
 
 > [!NOTE] 
-> <span data-ttu-id="a9b87-105">Azure Toolkit for Eclipse IDE이기도합니다.</span><span class="sxs-lookup"><span data-stu-id="a9b87-105">There is also an Azure Toolkit for the Eclipse IDE.</span></span> <span data-ttu-id="a9b87-106">자세한 내용은 [Eclipse용 Azure 도구 키트 설치]를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="a9b87-106">For more information, see [Azure Toolkit for Eclipse].</span></span> 
+> <span data-ttu-id="67bd3-105">Azure Toolkit for Eclipse IDE이기도합니다.</span><span class="sxs-lookup"><span data-stu-id="67bd3-105">There is also an Azure Toolkit for the Eclipse IDE.</span></span> <span data-ttu-id="67bd3-106">자세한 내용은 [Eclipse용 Azure 도구 키트 설치]를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="67bd3-106">For more information, see [Azure Toolkit for Eclipse].</span></span> 
 > 
 
 <!--
@@ -72,7 +72,7 @@ The Azure Toolkit for IntelliJ - April 2016 release includes the following enhan
 
 -->
 
-## <a name="next-steps"></a><span data-ttu-id="a9b87-107">다음 단계</span><span class="sxs-lookup"><span data-stu-id="a9b87-107">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="67bd3-107">다음 단계</span><span class="sxs-lookup"><span data-stu-id="67bd3-107">Next steps</span></span>
 
 [!INCLUDE [azure-toolkit-for-intellij-additional-resources](../includes/azure-toolkit-for-intellij-additional-resources.md)]
 

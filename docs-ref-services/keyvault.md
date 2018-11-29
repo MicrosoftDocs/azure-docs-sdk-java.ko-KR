@@ -11,38 +11,38 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: keyvault
-ms.openlocfilehash: 84ea77a19c326409f453f62359cf46c90398daeb
-ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
+ms.openlocfilehash: f025479301fd923b7620e8560e8586c8ab63c80b
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49799929"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338987"
 ---
-# <a name="azure-key-vault-libraries-for-java"></a><span data-ttu-id="6e9a3-104">Java용 Azure Key Vault 라이브러리</span><span class="sxs-lookup"><span data-stu-id="6e9a3-104">Azure Key Vault libraries for Java</span></span>
+# <a name="azure-key-vault-libraries-for-java"></a><span data-ttu-id="cc148-104">Java용 Azure Key Vault 라이브러리</span><span class="sxs-lookup"><span data-stu-id="cc148-104">Azure Key Vault libraries for Java</span></span>
 
-## <a name="overview"></a><span data-ttu-id="6e9a3-105">개요</span><span class="sxs-lookup"><span data-stu-id="6e9a3-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="cc148-105">개요</span><span class="sxs-lookup"><span data-stu-id="cc148-105">Overview</span></span>
 
-<span data-ttu-id="6e9a3-106">[Azure Key Vault](/azure/key-vault/)를 사용하여 클라우드 응용 프로그램 및 서비스에서 사용하는 암호화 키와 비밀을 보호하고 관리합니다.</span><span class="sxs-lookup"><span data-stu-id="6e9a3-106">Safeguard and manage cryptographic keys and secrets used by cloud applications and services with [Azure Key Vault](/azure/key-vault/).</span></span>
+<span data-ttu-id="cc148-106">[Azure Key Vault](/azure/key-vault/)를 사용하여 클라우드 응용 프로그램 및 서비스에서 사용하는 암호화 키와 비밀을 보호하고 관리합니다.</span><span class="sxs-lookup"><span data-stu-id="cc148-106">Safeguard and manage cryptographic keys and secrets used by cloud applications and services with [Azure Key Vault](/azure/key-vault/).</span></span>
 
-<span data-ttu-id="6e9a3-107">Azure Key Vault를 시작하려면 [Azure Key Vault 시작](/azure/key-vault/key-vault-get-started)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6e9a3-107">To get started with Azure Key Vault, see [Get started with Azure Key Vault](/azure/key-vault/key-vault-get-started).</span></span>
+<span data-ttu-id="cc148-107">Azure Key Vault를 시작하려면 [Azure Key Vault 시작](/azure/key-vault/key-vault-get-started)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="cc148-107">To get started with Azure Key Vault, see [Get started with Azure Key Vault](/azure/key-vault/key-vault-get-started).</span></span>
 
-## <a name="client-library"></a><span data-ttu-id="6e9a3-108">클라이언트 라이브러리</span><span class="sxs-lookup"><span data-stu-id="6e9a3-108">Client library</span></span>
+## <a name="client-library"></a><span data-ttu-id="cc148-108">클라이언트 라이브러리</span><span class="sxs-lookup"><span data-stu-id="cc148-108">Client library</span></span>
 
-<span data-ttu-id="6e9a3-109">클라이언트 라이브러리를 사용하여 Azure Key Vault에서 키와 비밀을 생성, 업데이트 및 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="6e9a3-109">Create, update, and delete keys and secrets in Azure Key Vault with the client libraries.</span></span>
+<span data-ttu-id="cc148-109">클라이언트 라이브러리를 사용하여 Azure Key Vault에서 키와 비밀을 생성, 업데이트 및 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="cc148-109">Create, update, and delete keys and secrets in Azure Key Vault with the client libraries.</span></span>
 
-<span data-ttu-id="6e9a3-110">`pom.xml` Maven 파일에 [종속성을 추가](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)하여 프로젝트에서 클라이언트 라이브러리를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6e9a3-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the client library in your project.</span></span>  
+<span data-ttu-id="cc148-110">`pom.xml` Maven 파일에 [종속성을 추가](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)하여 프로젝트에서 클라이언트 라이브러리를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="cc148-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the client library in your project.</span></span>  
 
 ```XML
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-keyvault</artifactId>
-    <version>1.1.0</version>
+    <version>1.1.2</version>
 </dependency>
 ```   
 
-## <a name="example"></a><span data-ttu-id="6e9a3-111">예</span><span class="sxs-lookup"><span data-stu-id="6e9a3-111">Example</span></span>
+## <a name="example"></a><span data-ttu-id="cc148-111">예</span><span class="sxs-lookup"><span data-stu-id="cc148-111">Example</span></span>
 
-<span data-ttu-id="6e9a3-112">Key Vault에서 [JSON 웹 키](https://tools.ietf.org/html/draft-ietf-jose-json-web-key-18)를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="6e9a3-112">Retrieve a [JSON web key](https://tools.ietf.org/html/draft-ietf-jose-json-web-key-18) from a Key Vault.</span></span>
+<span data-ttu-id="cc148-112">Key Vault에서 [JSON 웹 키](https://tools.ietf.org/html/draft-ietf-jose-json-web-key-18)를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="cc148-112">Retrieve a [JSON web key](https://tools.ietf.org/html/draft-ietf-jose-json-web-key-18) from a Key Vault.</span></span>
 
 ```java
 KeyVaultClient kvc = new KeyVaultClient(credentials);
@@ -51,14 +51,14 @@ JsonWebKey jsonKey = returnedKeyBundle.key();
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="6e9a3-113">클라이언트 API 탐색</span><span class="sxs-lookup"><span data-stu-id="6e9a3-113">Explore the Client APIs</span></span>](/java/api/overview/azure/keyvault/client)
+> [<span data-ttu-id="cc148-113">클라이언트 API 탐색</span><span class="sxs-lookup"><span data-stu-id="cc148-113">Explore the Client APIs</span></span>](/java/api/overview/azure/keyvault/client)
 
 
-## <a name="management-api"></a><span data-ttu-id="6e9a3-114">관리 API</span><span class="sxs-lookup"><span data-stu-id="6e9a3-114">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="cc148-114">관리 API</span><span class="sxs-lookup"><span data-stu-id="cc148-114">Management API</span></span>
 
-<span data-ttu-id="6e9a3-115">Azure Key Vault 관리 라이브러리를 사용하여 키 자격 증명 모음을 만들고, 응용 프로그램에 권한을 부여하고, 권한을 관리합니다.</span><span class="sxs-lookup"><span data-stu-id="6e9a3-115">Use the Azure Key Vault management libraries to create key vaults, authorize applications, and manage permissions.</span></span> 
+<span data-ttu-id="cc148-115">Azure Key Vault 관리 라이브러리를 사용하여 키 자격 증명 모음을 만들고, 응용 프로그램에 권한을 부여하고, 권한을 관리합니다.</span><span class="sxs-lookup"><span data-stu-id="cc148-115">Use the Azure Key Vault management libraries to create key vaults, authorize applications, and manage permissions.</span></span> 
 
-<span data-ttu-id="6e9a3-116">`pom.xml` Maven 파일에 [종속성을 추가](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)하여 프로젝트에서 관리 API를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6e9a3-116">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>  
+<span data-ttu-id="cc148-116">`pom.xml` Maven 파일에 [종속성을 추가](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)하여 프로젝트에서 관리 API를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="cc148-116">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>  
 
 ```XML
 <dependency>
@@ -68,9 +68,9 @@ JsonWebKey jsonKey = returnedKeyBundle.key();
 </dependency>
 ```
 
-## <a name="example"></a><span data-ttu-id="6e9a3-117">예</span><span class="sxs-lookup"><span data-stu-id="6e9a3-117">Example</span></span>
+## <a name="example"></a><span data-ttu-id="cc148-117">예</span><span class="sxs-lookup"><span data-stu-id="cc148-117">Example</span></span>
 
-<span data-ttu-id="6e9a3-118">키 자격 증명 모음에서 비밀을 나열하고 검색하기 위해 `clientId` [서비스 사용자](/azure/azure-resource-manager/resource-group-create-service-principal-portal)를 사용하여 실행되는 응용 프로그램에 권한을 부여합니다.</span><span class="sxs-lookup"><span data-stu-id="6e9a3-118">Authorize and application running with [service principal](/azure/azure-resource-manager/resource-group-create-service-principal-portal) `clientId` to list and retrieve secrets from a key vault.</span></span> 
+<span data-ttu-id="cc148-118">키 자격 증명 모음에서 비밀을 나열하고 검색하기 위해 `clientId` [서비스 사용자](/azure/azure-resource-manager/resource-group-create-service-principal-portal)를 사용하여 실행되는 응용 프로그램에 권한을 부여합니다.</span><span class="sxs-lookup"><span data-stu-id="cc148-118">Authorize and application running with [service principal](/azure/azure-resource-manager/resource-group-create-service-principal-portal) `clientId` to list and retrieve secrets from a key vault.</span></span> 
 
 ```java
 vault1 = vault1.update()
@@ -84,9 +84,9 @@ vault1 = vault1.update()
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="6e9a3-119">관리 API 탐색</span><span class="sxs-lookup"><span data-stu-id="6e9a3-119">Explore the Management APIs</span></span>](/java/api/overview/azure/keyvault/management)
+> [<span data-ttu-id="cc148-119">관리 API 탐색</span><span class="sxs-lookup"><span data-stu-id="cc148-119">Explore the Management APIs</span></span>](/java/api/overview/azure/keyvault/management)
 
 
-## <a name="samples"></a><span data-ttu-id="6e9a3-120">샘플</span><span class="sxs-lookup"><span data-stu-id="6e9a3-120">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="cc148-120">샘플</span><span class="sxs-lookup"><span data-stu-id="cc148-120">Samples</span></span>
 
-<span data-ttu-id="6e9a3-121">앱에서 사용할 수 있는 [Azure Key Vault용 Java 샘플 코드](https://azure.microsoft.com/resources/samples/?platform=java&term=key+vault)를 추가로 탐색합니다.</span><span class="sxs-lookup"><span data-stu-id="6e9a3-121">Explore more [sample Java code for Azure Key Vault](https://azure.microsoft.com/resources/samples/?platform=java&term=key+vault) you can use in your apps.</span></span>
+<span data-ttu-id="cc148-121">앱에서 사용할 수 있는 [Azure Key Vault용 Java 샘플 코드](https://azure.microsoft.com/resources/samples/?platform=java&term=key+vault)를 추가로 탐색합니다.</span><span class="sxs-lookup"><span data-stu-id="cc148-121">Explore more [sample Java code for Azure Key Vault](https://azure.microsoft.com/resources/samples/?platform=java&term=key+vault) you can use in your apps.</span></span>
