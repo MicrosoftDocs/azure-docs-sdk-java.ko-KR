@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: keyvault
-ms.openlocfilehash: 84ea77a19c326409f453f62359cf46c90398daeb
-ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
+ms.openlocfilehash: f025479301fd923b7620e8560e8586c8ab63c80b
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49799929"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338987"
 ---
 # <a name="azure-key-vault-libraries-for-java"></a>Java용 Azure Key Vault 라이브러리
 
@@ -36,7 +36,7 @@ Azure Key Vault를 시작하려면 [Azure Key Vault 시작](/azure/key-vault/key
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-keyvault</artifactId>
-    <version>1.1.0</version>
+    <version>1.1.2</version>
 </dependency>
 ```   
 
