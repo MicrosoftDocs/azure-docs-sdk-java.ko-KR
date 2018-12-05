@@ -4,100 +4,100 @@ description: 이 자습서에서는 Apache Maven용 Fabric8 플러그인을 사�
 services: container-service
 documentationcenter: java
 author: rmcmurray
-manager: routlaw
+manager: mbaldwin
 editor: ''
 ms.assetid: ''
-ms.author: yuwzho;robmcm
-ms.date: 02/01/2018
+ms.author: robmcm
+ms.date: 11/21/2018
 ms.devlang: java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: f05dca50f84b27f157892d63cda02286c6755795
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: ab3babf358cf4899709a9a9d2d7917cb2c6d220e
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48899294"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338837"
 ---
-# <a name="deploy-a-spring-boot-app-using-the-fabric8-maven-plugin"></a><span data-ttu-id="dc830-103">Fabric8 Maven 플러그인을 사용하여 Spring Boot 앱 배포</span><span class="sxs-lookup"><span data-stu-id="dc830-103">Deploy a Spring Boot app using the Fabric8 Maven Plugin</span></span>
+# <a name="deploy-a-spring-boot-app-using-the-fabric8-maven-plugin"></a><span data-ttu-id="27f6f-103">Fabric8 Maven 플러그인을 사용하여 Spring Boot 앱 배포</span><span class="sxs-lookup"><span data-stu-id="27f6f-103">Deploy a Spring Boot app using the Fabric8 Maven Plugin</span></span>
 
-<span data-ttu-id="dc830-104">**[Fabric8]** 은 개발자들이 Linux 컨테이너에서 응용 프로그램을 만들 수 있게 지원하는 **[Kubernetes]** 기반 오픈 소스 솔루션입니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-104">**[Fabric8]** is an open-source solution that is built on **[Kubernetes]**, which helps developers create applications in Linux containers.</span></span>
+<span data-ttu-id="27f6f-104">**[Fabric8]** 은 개발자들이 Linux 컨테이너에서 응용 프로그램을 만들 수 있게 지원하는 **[Kubernetes]** 기반 오픈 소스 솔루션입니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-104">**[Fabric8]** is an open-source solution that is built on **[Kubernetes]**, which helps developers create applications in Linux containers.</span></span>
 
-<span data-ttu-id="dc830-105">이 자습서에서는 Maven용 Fabric8 플러그인을 사용하여 [AKS(Azure Container Service)]에서 응용 프로그램을 개발하고 Linux 호스트에 배포하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-105">This tutorial walks you through using the Fabric8 plugin for Maven to develop to deploy an application to a Linux host in the [Azure Container Service (AKS)].</span></span>
+<span data-ttu-id="27f6f-105">이 자습서에서는 Maven용 Fabric8 플러그인을 사용하여 [AKS(Azure Container Service)]에서 응용 프로그램을 개발하고 Linux 호스트에 배포하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-105">This tutorial walks you through using the Fabric8 plugin for Maven to develop to deploy an application to a Linux host in the [Azure Container Service (AKS)].</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="dc830-106">필수 조건</span><span class="sxs-lookup"><span data-stu-id="dc830-106">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="27f6f-106">필수 조건</span><span class="sxs-lookup"><span data-stu-id="27f6f-106">Prerequisites</span></span>
 
-<span data-ttu-id="dc830-107">이 자습서의 단계를 완료하려면 다음 필수 조건이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-107">In order to complete the steps in this tutorial, you need to have the following prerequisites:</span></span>
+<span data-ttu-id="27f6f-107">이 자습서의 단계를 완료하려면 다음 필수 조건이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-107">In order to complete the steps in this tutorial, you need to have the following prerequisites:</span></span>
 
-* <span data-ttu-id="dc830-108">Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정]에 등록할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-108">An Azure subscription; if you don't already have an Azure subscription, you can activate your [MSDN subscriber benefits] or sign up for a [free Azure account].</span></span>
-* <span data-ttu-id="dc830-109">[Azure CLI(명령줄 인터페이스)]</span><span class="sxs-lookup"><span data-stu-id="dc830-109">The [Azure Command-Line Interface (CLI)].</span></span>
-* <span data-ttu-id="dc830-110">최신 [JDK(Java Developer Kit)]</span><span class="sxs-lookup"><span data-stu-id="dc830-110">An up-to-date [Java Developer Kit (JDK)].</span></span>
-* <span data-ttu-id="dc830-111">Apache의 [Maven] 빌드 도구(버전 3)</span><span class="sxs-lookup"><span data-stu-id="dc830-111">Apache's [Maven] build tool (Version 3).</span></span>
-* <span data-ttu-id="dc830-112">[Git] 클라이언트</span><span class="sxs-lookup"><span data-stu-id="dc830-112">A [Git] client.</span></span>
-* <span data-ttu-id="dc830-113">[Docker] 클라이언트</span><span class="sxs-lookup"><span data-stu-id="dc830-113">A [Docker] client.</span></span>
+* <span data-ttu-id="27f6f-108">Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정]에 등록할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-108">An Azure subscription; if you don't already have an Azure subscription, you can activate your [MSDN subscriber benefits] or sign up for a [free Azure account].</span></span>
+* <span data-ttu-id="27f6f-109">[Azure CLI(명령줄 인터페이스)]</span><span class="sxs-lookup"><span data-stu-id="27f6f-109">The [Azure Command-Line Interface (CLI)].</span></span>
+* <span data-ttu-id="27f6f-110">지원되는 JDK(Java Development Kit)</span><span class="sxs-lookup"><span data-stu-id="27f6f-110">A supported Java Development Kit (JDK).</span></span> <span data-ttu-id="27f6f-111">Azure에서 개발하는 경우 사용할 수 있는 JDK에 대한 자세한 내용은 <https://aka.ms/azure-jdks>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="27f6f-111">For more information about the JDKs available for use when developing on Azure, see <https://aka.ms/azure-jdks>.</span></span>
+* <span data-ttu-id="27f6f-112">Apache의 [Maven] 빌드 도구(버전 3)</span><span class="sxs-lookup"><span data-stu-id="27f6f-112">Apache's [Maven] build tool (Version 3).</span></span>
+* <span data-ttu-id="27f6f-113">[Git] 클라이언트</span><span class="sxs-lookup"><span data-stu-id="27f6f-113">A [Git] client.</span></span>
+* <span data-ttu-id="27f6f-114">[Docker] 클라이언트</span><span class="sxs-lookup"><span data-stu-id="27f6f-114">A [Docker] client.</span></span>
 
 > [!NOTE]
 >
-> <span data-ttu-id="dc830-114">이 자습서의 가상화 요구 사항으로 인해 가상 머신에는 이 문서의 단계를 따를 수 없습니다. 따라서 가상화 기능이 사용하도록 설정된 물리적 컴퓨터를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-114">Due to the virtualization requirements of this tutorial, you cannot follow the steps in this article on a virtual machine; you must use a physical computer with virtualization features enabled.</span></span>
+> <span data-ttu-id="27f6f-115">이 자습서의 가상화 요구 사항으로 인해 가상 머신에는 이 문서의 단계를 따를 수 없습니다. 따라서 가상화 기능이 사용하도록 설정된 물리적 컴퓨터를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-115">Due to the virtualization requirements of this tutorial, you cannot follow the steps in this article on a virtual machine; you must use a physical computer with virtualization features enabled.</span></span>
 >
 
-## <a name="create-the-spring-boot-on-docker-getting-started-web-app"></a><span data-ttu-id="dc830-115">Spring Boot on Docker 시작 웹앱 만들기</span><span class="sxs-lookup"><span data-stu-id="dc830-115">Create the Spring Boot on Docker Getting Started web app</span></span>
+## <a name="create-the-spring-boot-on-docker-getting-started-web-app"></a><span data-ttu-id="27f6f-116">Spring Boot on Docker 시작 웹앱 만들기</span><span class="sxs-lookup"><span data-stu-id="27f6f-116">Create the Spring Boot on Docker Getting Started web app</span></span>
 
-<span data-ttu-id="dc830-116">다음 단계에서는 Spring Boot 웹 응용 프로그램을 빌드하고 로컬로 테스트하는 과정을 안내합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-116">The following steps walk you through building a Spring Boot web application and testing it locally.</span></span>
+<span data-ttu-id="27f6f-117">다음 단계에서는 Spring Boot 웹 응용 프로그램을 빌드하고 로컬로 테스트하는 과정을 안내합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-117">The following steps walk you through building a Spring Boot web application and testing it locally.</span></span>
 
-1. <span data-ttu-id="dc830-117">명령 프롬프트를 열고 응용 프로그램을 저장할 로컬 디렉터리를 만들고 해당 디렉터리로 변경합니다. 예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-117">Open a command-prompt and create a local directory to hold your application, and change to that directory; for example:</span></span>
+1. <span data-ttu-id="27f6f-118">명령 프롬프트를 열고 응용 프로그램을 저장할 로컬 디렉터리를 만들고 해당 디렉터리로 변경합니다. 예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-118">Open a command-prompt and create a local directory to hold your application, and change to that directory; for example:</span></span>
    ```shell
    md /home/GenaSoto/SpringBoot
    cd /home/GenaSoto/SpringBoot
    ```
-   <span data-ttu-id="dc830-118">-- 또는 --</span><span class="sxs-lookup"><span data-stu-id="dc830-118">-- or --</span></span>
+   <span data-ttu-id="27f6f-119">-- 또는 --</span><span class="sxs-lookup"><span data-stu-id="27f6f-119">-- or --</span></span>
    ```shell
    md C:\SpringBoot
    cd C:\SpringBoot
    ```
 
-1. <span data-ttu-id="dc830-119">[Spring Boot on Docker 시작] 샘플 프로젝트를 디렉터리에 복제합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-119">Clone the [Spring Boot on Docker Getting Started] sample project into the directory.</span></span>
+1. <span data-ttu-id="27f6f-120">[Spring Boot on Docker 시작] 샘플 프로젝트를 디렉터리에 복제합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-120">Clone the [Spring Boot on Docker Getting Started] sample project into the directory.</span></span>
    ```shell
    git clone https://github.com/spring-guides/gs-spring-boot-docker.git
    ```
 
-1. <span data-ttu-id="dc830-120">디렉터리를 완료된 프로젝트로 변경합니다. 예:</span><span class="sxs-lookup"><span data-stu-id="dc830-120">Change directory to the completed project; for example:</span></span>
+1. <span data-ttu-id="27f6f-121">디렉터리를 완료된 프로젝트로 변경합니다. 예:</span><span class="sxs-lookup"><span data-stu-id="27f6f-121">Change directory to the completed project; for example:</span></span>
    ```shell
    cd gs-spring-boot-docker/complete
    ```
-   <span data-ttu-id="dc830-121">-- 또는 --</span><span class="sxs-lookup"><span data-stu-id="dc830-121">-- or --</span></span>
+   <span data-ttu-id="27f6f-122">-- 또는 --</span><span class="sxs-lookup"><span data-stu-id="27f6f-122">-- or --</span></span>
    ```shell
    cd gs-spring-boot-docker\complete
    ```
 
-1. <span data-ttu-id="dc830-122">Maven을 사용하여 샘플 앱을 빌드하고 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-122">Use Maven to build and run the sample app.</span></span>
+1. <span data-ttu-id="27f6f-123">Maven을 사용하여 샘플 앱을 빌드하고 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-123">Use Maven to build and run the sample app.</span></span>
    ```shell
    mvn clean package spring-boot:run
    ```
 
-1. <span data-ttu-id="dc830-123">http://localhost:8080으로 이동하거나 `curl` 명령을 사용하여 웹앱을 테스트합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-123">Test the web app by browsing to http://localhost:8080, or with the following `curl` command:</span></span>
+1. <span data-ttu-id="27f6f-124">http://localhost:8080으로 이동하거나 `curl` 명령을 사용하여 웹앱을 테스트합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-124">Test the web app by browsing to http://localhost:8080, or with the following `curl` command:</span></span>
    ```shell
    curl http://localhost:8080
    ```
 
-   <span data-ttu-id="dc830-124">**Hello Docker World**라는 메시지가 표시되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-124">You should see a **Hello Docker World** message displayed.</span></span>
+   <span data-ttu-id="27f6f-125">**Hello Docker World**라는 메시지가 표시되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-125">You should see a **Hello Docker World** message displayed.</span></span>
 
    ![샘플 응용 프로그램을 로컬로 찾아보기][SB01]
 
 
-## <a name="install-the-kubernetes-command-line-interface-and-create-an-azure-resource-group-using-the-azure-cli"></a><span data-ttu-id="dc830-126">Kubernetes 명령줄 인터페이스를 설치하고 Azure CLI를 사용하여 Azure 리소스 그룹 만들기</span><span class="sxs-lookup"><span data-stu-id="dc830-126">Install the Kubernetes command-line interface and create an Azure resource group using the Azure CLI</span></span>
+## <a name="install-the-kubernetes-command-line-interface-and-create-an-azure-resource-group-using-the-azure-cli"></a><span data-ttu-id="27f6f-127">Kubernetes 명령줄 인터페이스를 설치하고 Azure CLI를 사용하여 Azure 리소스 그룹 만들기</span><span class="sxs-lookup"><span data-stu-id="27f6f-127">Install the Kubernetes command-line interface and create an Azure resource group using the Azure CLI</span></span>
 
-1. <span data-ttu-id="dc830-127">명령 프롬프트를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-127">Open a command prompt.</span></span>
+1. <span data-ttu-id="27f6f-128">명령 프롬프트를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-128">Open a command prompt.</span></span>
 
-1. <span data-ttu-id="dc830-128">다음 명령을 입력하여 Azure 계정에 로그인합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-128">Type the following command to log in to your Azure account:</span></span>
+1. <span data-ttu-id="27f6f-129">다음 명령을 입력하여 Azure 계정에 로그인합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-129">Type the following command to log in to your Azure account:</span></span>
    ```azurecli
    az login
    ```
-   <span data-ttu-id="dc830-129">지시에 따라 로그인 프로세스를 완료합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-129">Follow the instructions to complete the login process</span></span>
+   <span data-ttu-id="27f6f-130">지시에 따라 로그인 프로세스를 완료합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-130">Follow the instructions to complete the login process</span></span>
 
-   <span data-ttu-id="dc830-130">Azure CLI가 다음 예제처럼 계정 목록을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-130">The Azure CLI will display a list of your accounts; for example:</span></span>
+   <span data-ttu-id="27f6f-131">Azure CLI가 다음 예제처럼 계정 목록을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-131">The Azure CLI will display a list of your accounts; for example:</span></span>
 
    ```json
    [
@@ -116,16 +116,16 @@ ms.locfileid: "48899294"
    ]
    ```
 
-1. <span data-ttu-id="dc830-131">아직 Kubernetes 명령줄 인터페이스(`kubectl`)를 설치하지 않은 경우 다음 예제처럼 Azure CLI를 사용하여 설치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-131">If you do not already have the Kubernetes command-line interface (`kubectl`) installed, you can install using the Azure CLI; for example:</span></span>
+1. <span data-ttu-id="27f6f-132">아직 Kubernetes 명령줄 인터페이스(`kubectl`)를 설치하지 않은 경우 다음 예제처럼 Azure CLI를 사용하여 설치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-132">If you do not already have the Kubernetes command-line interface (`kubectl`) installed, you can install using the Azure CLI; for example:</span></span>
    ```azurecli
    az acs kubernetes install-cli
    ```
 
    > [!NOTE]
    >
-   > <span data-ttu-id="dc830-132">Linux 사용자는 이 명령 앞에 `sudo`를 붙여야 할 수 있습니다. 그러면 Kubernetes CLI가 `/usr/local/bin`에 배포됩니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-132">Linux users may have to prefix this command with `sudo` since it deploys the Kubernetes CLI to `/usr/local/bin`.</span></span>
+   > <span data-ttu-id="27f6f-133">Linux 사용자는 이 명령 앞에 `sudo`를 붙여야 할 수 있습니다. 그러면 Kubernetes CLI가 `/usr/local/bin`에 배포됩니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-133">Linux users may have to prefix this command with `sudo` since it deploys the Kubernetes CLI to `/usr/local/bin`.</span></span>
    >
-   > <span data-ttu-id="dc830-133">이미 `kubectl`을 설치하였고 `kubectl` 버전이 너무 오래되었으면 이 문서의 뒷부분에 등장하는 절차를 완료하려 할 때 다음 예제와 유사한 오류 메시지가 표시될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-133">If you already have `kubectl`) installed and your version of `kubectl` is too old, you may see an error message similar to the following example when you attempt to complete the steps listed later in this article:</span></span>
+   > <span data-ttu-id="27f6f-134">이미 `kubectl`을 설치하였고 `kubectl` 버전이 너무 오래되었으면 이 문서의 뒷부분에 등장하는 절차를 완료하려 할 때 다음 예제와 유사한 오류 메시지가 표시될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-134">If you already have `kubectl`) installed and your version of `kubectl` is too old, you may see an error message similar to the following example when you attempt to complete the steps listed later in this article:</span></span>
    >
    > ```
    > error: group map[autoscaling:0x0000000000 batch:0x0000000000 certificates.k8s.io
@@ -135,18 +135,18 @@ ms.locfileid: "48899294"
    > onentconfig:0x0000000000] is already registered
    > ```
    >
-   > <span data-ttu-id="dc830-134">이 경우 `kubectl`을 다시 설치하여 버전을 업데이트해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-134">If this happens, you will need to reinstall `kubectl` to update your version.</span></span>
+   > <span data-ttu-id="27f6f-135">이 경우 `kubectl`을 다시 설치하여 버전을 업데이트해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-135">If this happens, you will need to reinstall `kubectl` to update your version.</span></span>
    >
 
-1. <span data-ttu-id="dc830-135">다음 예제처럼 이 문서에서 사용할 Azure 리소스에 대한 리소스 그룹을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-135">Create a resource group for the Azure resources that you will use in this tutorial; for example:</span></span>
+1. <span data-ttu-id="27f6f-136">다음 예제처럼 이 문서에서 사용할 Azure 리소스에 대한 리소스 그룹을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-136">Create a resource group for the Azure resources that you will use in this tutorial; for example:</span></span>
    ```azurecli
    az group create --name=wingtiptoys-kubernetes --location=westeurope
    ```
-   <span data-ttu-id="dc830-136">위치:</span><span class="sxs-lookup"><span data-stu-id="dc830-136">Where:</span></span>  
-      * <span data-ttu-id="dc830-137">*wingtiptoys-kubernetes*는 리소스 그룹의 고유한 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-137">*wingtiptoys-kubernetes* is a unique name for your resource group</span></span>  
-      * <span data-ttu-id="dc830-138">*westeurope*은 응용 프로그램의 적합한 지리적 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-138">*westeurope* is an appropriate geographic location for your application</span></span>  
+   <span data-ttu-id="27f6f-137">위치:</span><span class="sxs-lookup"><span data-stu-id="27f6f-137">Where:</span></span>  
+      * <span data-ttu-id="27f6f-138">*wingtiptoys-kubernetes*는 리소스 그룹의 고유한 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-138">*wingtiptoys-kubernetes* is a unique name for your resource group</span></span>  
+      * <span data-ttu-id="27f6f-139">*westeurope*은 응용 프로그램의 적합한 지리적 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-139">*westeurope* is an appropriate geographic location for your application</span></span>  
 
-   <span data-ttu-id="dc830-139">Azure CLI가 다음 에제처럼 리소스 그룹 만들기 결과를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-139">The Azure CLI will display the results of your resource group creation; for example:</span></span>  
+   <span data-ttu-id="27f6f-140">Azure CLI가 다음 에제처럼 리소스 그룹 만들기 결과를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-140">The Azure CLI will display the results of your resource group creation; for example:</span></span>  
 
    ```json
    {
@@ -162,18 +162,18 @@ ms.locfileid: "48899294"
    ```
 
 
-## <a name="create-a-kubernetes-cluster-using-the-azure-cli"></a><span data-ttu-id="dc830-140">Azure CLI를 사용하여 Kubernetes 클러스터 만들기</span><span class="sxs-lookup"><span data-stu-id="dc830-140">Create a Kubernetes cluster using the Azure CLI</span></span>
+## <a name="create-a-kubernetes-cluster-using-the-azure-cli"></a><span data-ttu-id="27f6f-141">Azure CLI를 사용하여 Kubernetes 클러스터 만들기</span><span class="sxs-lookup"><span data-stu-id="27f6f-141">Create a Kubernetes cluster using the Azure CLI</span></span>
 
-1. <span data-ttu-id="dc830-141">다음 예제처럼 새 리소스 그룹에서 Kubernetes 클러스터를 만듭니다. </span><span class="sxs-lookup"><span data-stu-id="dc830-141">Create a Kubernetes cluster in your new resource group; for example:</span></span>  
+1. <span data-ttu-id="27f6f-142">다음 예제처럼 새 리소스 그룹에서 Kubernetes 클러스터를 만듭니다. </span><span class="sxs-lookup"><span data-stu-id="27f6f-142">Create a Kubernetes cluster in your new resource group; for example:</span></span>  
    ```azurecli 
    az acs create --orchestrator-type kubernetes --resource-group wingtiptoys-kubernetes --name wingtiptoys-cluster --generate-ssh-keys --dns-prefix=wingtiptoys
    ```
-   <span data-ttu-id="dc830-142">위치:</span><span class="sxs-lookup"><span data-stu-id="dc830-142">Where:</span></span>  
-      * <span data-ttu-id="dc830-143">*wingtiptoys kubernetes*는 이 문서의 앞부분에 나온 리소스 그룹의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-143">*wingtiptoys-kubernetes* is the name of your resource group from earlier in this article</span></span>  
-      * <span data-ttu-id="dc830-144">*wingtiptoys-cluster*는 Kubernetes클러스터의 고유한 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-144">*wingtiptoys-cluster* is a unique name for your Kubernetes cluster</span></span>
-      * <span data-ttu-id="dc830-145">*wingtiptoys*는 응용 프로그램의 고유한 DNS 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-145">*wingtiptoys* is a unique name DNS name for your application</span></span>
+   <span data-ttu-id="27f6f-143">위치:</span><span class="sxs-lookup"><span data-stu-id="27f6f-143">Where:</span></span>  
+      * <span data-ttu-id="27f6f-144">*wingtiptoys kubernetes*는 이 문서의 앞부분에 나온 리소스 그룹의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-144">*wingtiptoys-kubernetes* is the name of your resource group from earlier in this article</span></span>  
+      * <span data-ttu-id="27f6f-145">*wingtiptoys-cluster*는 Kubernetes클러스터의 고유한 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-145">*wingtiptoys-cluster* is a unique name for your Kubernetes cluster</span></span>
+      * <span data-ttu-id="27f6f-146">*wingtiptoys*는 응용 프로그램의 고유한 DNS 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-146">*wingtiptoys* is a unique name DNS name for your application</span></span>
 
-   <span data-ttu-id="dc830-146">Azure CLI가 다음 예제처럼 클러스터 만들기 결과를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-146">The Azure CLI will display the results of your cluster creation; for example:</span></span>  
+   <span data-ttu-id="27f6f-147">Azure CLI가 다음 예제처럼 클러스터 만들기 결과를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-147">The Azure CLI will display the results of your cluster creation; for example:</span></span>  
 
    ```json
    {
@@ -227,17 +227,17 @@ ms.locfileid: "48899294"
    }
    ```
 
-1. <span data-ttu-id="dc830-147">다음 예제처럼 새 Kubernetes 클러스터에 대한 자격 증명을 다운로드합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-147">Download your credentials for your new Kubernetes cluster; for example:</span></span>  
+1. <span data-ttu-id="27f6f-148">다음 예제처럼 새 Kubernetes 클러스터에 대한 자격 증명을 다운로드합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-148">Download your credentials for your new Kubernetes cluster; for example:</span></span>  
    ```azurecli 
    az acs kubernetes get-credentials --resource-group=wingtiptoys-kubernetes --name wingtiptoys-cluster
    ```
 
-1. <span data-ttu-id="dc830-148">다음 명령을 사용하여 연결을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-148">Verify your connection with the following command:</span></span>
+1. <span data-ttu-id="27f6f-149">다음 명령을 사용하여 연결을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-149">Verify your connection with the following command:</span></span>
    ```shell 
    kubectl get nodes
    ```
 
-   <span data-ttu-id="dc830-149">다음 예제와 유사한 노드 및 상태 목록이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-149">You should see a list of nodes and statuses like the following example:</span></span>
+   <span data-ttu-id="27f6f-150">다음 예제와 유사한 노드 및 상태 목록이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-150">You should see a list of nodes and statuses like the following example:</span></span>
 
    ```shell
    NAME                    STATUS                     AGE       VERSION
@@ -248,21 +248,21 @@ ms.locfileid: "48899294"
    ```
 
 
-## <a name="create-a-private-azure-container-registry-using-the-azure-cli"></a><span data-ttu-id="dc830-150">Azure CLI를 사용하여 개인 Azure Container Registry 만들기</span><span class="sxs-lookup"><span data-stu-id="dc830-150">Create a private Azure container registry using the Azure CLI</span></span>
+## <a name="create-a-private-azure-container-registry-using-the-azure-cli"></a><span data-ttu-id="27f6f-151">Azure CLI를 사용하여 개인 Azure Container Registry 만들기</span><span class="sxs-lookup"><span data-stu-id="27f6f-151">Create a private Azure container registry using the Azure CLI</span></span>
 
-1. <span data-ttu-id="dc830-151">다음 예제처럼 리소스 그룹에서 Docker 이미지를 호스팅할 개인 Azure Container Registry를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-151">Create a private Azure container registry in your resource group to host your Docker image; for example:</span></span>
+1. <span data-ttu-id="27f6f-152">다음 예제처럼 리소스 그룹에서 Docker 이미지를 호스팅할 개인 Azure Container Registry를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-152">Create a private Azure container registry in your resource group to host your Docker image; for example:</span></span>
    ```azurecli
    az acr create --admin-enabled --resource-group wingtiptoys-kubernetes --location westeurope --name wingtiptoysregistry --sku Basic
    ```
-   <span data-ttu-id="dc830-152">위치:</span><span class="sxs-lookup"><span data-stu-id="dc830-152">Where:</span></span>
+   <span data-ttu-id="27f6f-153">위치:</span><span class="sxs-lookup"><span data-stu-id="27f6f-153">Where:</span></span>
 
-   | <span data-ttu-id="dc830-153">매개 변수</span><span class="sxs-lookup"><span data-stu-id="dc830-153">Parameter</span></span> | <span data-ttu-id="dc830-154">설명</span><span class="sxs-lookup"><span data-stu-id="dc830-154">Description</span></span> |
+   | <span data-ttu-id="27f6f-154">매개 변수</span><span class="sxs-lookup"><span data-stu-id="27f6f-154">Parameter</span></span> | <span data-ttu-id="27f6f-155">설명</span><span class="sxs-lookup"><span data-stu-id="27f6f-155">Description</span></span> |
    |---|---|
-   | `wingtiptoys-kubernetes` | <span data-ttu-id="dc830-155">이 문서의 앞부분에 나온 리소스 그룹의 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-155">Specifies the name of your resource group from earlier in this article.</span></span> |
-   | `wingtiptoysregistry` | <span data-ttu-id="dc830-156">개인 레지스트리에 고유한 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-156">Specifies a unique name for your private registry.</span></span> |
-   | `westeurope` | <span data-ttu-id="dc830-157">응용 프로그램의 적합한 지리적 위치를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-157">Specifies an appropriate geographic location for your application.</span></span> |
+   | `wingtiptoys-kubernetes` | <span data-ttu-id="27f6f-156">이 문서의 앞부분에 나온 리소스 그룹의 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-156">Specifies the name of your resource group from earlier in this article.</span></span> |
+   | `wingtiptoysregistry` | <span data-ttu-id="27f6f-157">개인 레지스트리에 고유한 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-157">Specifies a unique name for your private registry.</span></span> |
+   | `westeurope` | <span data-ttu-id="27f6f-158">응용 프로그램의 적합한 지리적 위치를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-158">Specifies an appropriate geographic location for your application.</span></span> |
 
-   <span data-ttu-id="dc830-158">Azure CLI가 다음 예제처럼 레지스트리 만들기 결과를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-158">The Azure CLI will display the results of your registry creation; for example:</span></span>  
+   <span data-ttu-id="27f6f-159">Azure CLI가 다음 예제처럼 레지스트리 만들기 결과를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-159">The Azure CLI will display the results of your registry creation; for example:</span></span>  
 
    ```json
    {
@@ -286,12 +286,12 @@ ms.locfileid: "48899294"
    }
    ```
 
-2. <span data-ttu-id="dc830-159">Azure CLI에서 컨테이너 레지스트리에 대한 암호를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-159">Retrieve the password for your container registry from the Azure CLI.</span></span>
+2. <span data-ttu-id="27f6f-160">Azure CLI에서 컨테이너 레지스트리에 대한 암호를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-160">Retrieve the password for your container registry from the Azure CLI.</span></span>
    ```azurecli
    az acr credential show --name wingtiptoysregistry --query passwords[0]
    ```
 
-   <span data-ttu-id="dc830-160">Azure CLI가 다음 예제처럼 레지스트리의 암호를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-160">The Azure CLI will display the password for your registry; for example:</span></span>  
+   <span data-ttu-id="27f6f-161">Azure CLI가 다음 예제처럼 레지스트리의 암호를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-161">The Azure CLI will display the password for your registry; for example:</span></span>  
 
    ```json
    {
@@ -300,10 +300,10 @@ ms.locfileid: "48899294"
    }
    ```
 
-3. <span data-ttu-id="dc830-161">Maven 설치에 대한 구성 디렉터리(default ~/.m2/ 또는 C:\Users\username\.m2)로 이동한 후 텍스트 편집기를 사용하여 *settings.xml* 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-161">Navigate to the configuration directory for your Maven installation (default ~/.m2/ or C:\Users\username\.m2) and open the *settings.xml* file with a text editor.</span></span>
+3. <span data-ttu-id="27f6f-162">Maven 설치에 대한 구성 디렉터리(default ~/.m2/ 또는 C:\Users\username\.m2)로 이동한 후 텍스트 편집기를 사용하여 *settings.xml* 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-162">Navigate to the configuration directory for your Maven installation (default ~/.m2/ or C:\Users\username\.m2) and open the *settings.xml* file with a text editor.</span></span>
 
-4. <span data-ttu-id="dc830-162">Azure Container Registry URL, 사용자 이름 및 암호를 *settings.xml* 파일의 새 `<server>` 컬렉션에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-162">Add your Azure Container Registry URL, username and password to a new `<server>` collection in the *settings.xml* file.</span></span>
-   <span data-ttu-id="dc830-163">`id` 및 `username`은 레지스트리의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-163">The `id` and `username` are the name of the registry.</span></span> <span data-ttu-id="dc830-164">이전 명령의 `password` 값을 사용합니다(따옴표 제외).</span><span class="sxs-lookup"><span data-stu-id="dc830-164">Use the `password` value from the previous command (without quotes).</span></span>
+4. <span data-ttu-id="27f6f-163">Azure Container Registry URL, 사용자 이름 및 암호를 *settings.xml* 파일의 새 `<server>` 컬렉션에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-163">Add your Azure Container Registry URL, username and password to a new `<server>` collection in the *settings.xml* file.</span></span>
+   <span data-ttu-id="27f6f-164">`id` 및 `username`은 레지스트리의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-164">The `id` and `username` are the name of the registry.</span></span> <span data-ttu-id="27f6f-165">이전 명령의 `password` 값을 사용합니다(따옴표 제외).</span><span class="sxs-lookup"><span data-stu-id="27f6f-165">Use the `password` value from the previous command (without quotes).</span></span>
 
    ```xml
    <servers>
@@ -315,9 +315,9 @@ ms.locfileid: "48899294"
    </servers>
    ```
 
-5. <span data-ttu-id="dc830-165">Spring Boot 응용 프로그램에 대해 완료된 프로젝트 디렉터리로 이동하고(예: "*C:\SpringBoot\gs-spring-boot-docker\complete*" 또는 "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*") 텍스트 편집기를 사용하여 *pom.xml* 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-165">Navigate to the completed project directory for your Spring Boot application (for example, "*C:\SpringBoot\gs-spring-boot-docker\complete*" or "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*"), and open the *pom.xml* file with a text editor.</span></span>
+5. <span data-ttu-id="27f6f-166">Spring Boot 응용 프로그램에 대해 완료된 프로젝트 디렉터리로 이동하고(예: "*C:\SpringBoot\gs-spring-boot-docker\complete*" 또는 "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*") 텍스트 편집기를 사용하여 *pom.xml* 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-166">Navigate to the completed project directory for your Spring Boot application (for example, "*C:\SpringBoot\gs-spring-boot-docker\complete*" or "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*"), and open the *pom.xml* file with a text editor.</span></span>
 
-6. <span data-ttu-id="dc830-166">*pom.xml* 파일의 `<properties>` 컬렉션을 Azure Container Registry의 로그인 서버 값으로 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-166">Update the `<properties>` collection in the *pom.xml* file with the login server value for your Azure Container Registry.</span></span>
+6. <span data-ttu-id="27f6f-167">*pom.xml* 파일의 `<properties>` 컬렉션을 Azure Container Registry의 로그인 서버 값으로 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-167">Update the `<properties>` collection in the *pom.xml* file with the login server value for your Azure Container Registry.</span></span>
 
    ```xml
    <properties>
@@ -326,7 +326,7 @@ ms.locfileid: "48899294"
    </properties>
    ```
 
-7. <span data-ttu-id="dc830-167">*pom.xml* 파일의 `<plugins>` 컬렉션을 업데이트하여 `<plugin>`에 Azure Container Registry의 로그인 서버 주소 및 레지스트리 이름이 포함되도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-167">Update the `<plugins>` collection in the *pom.xml* file so that the `<plugin>` contains the login server address and registry name for your Azure Container Registry.</span></span>
+7. <span data-ttu-id="27f6f-168">*pom.xml* 파일의 `<plugins>` 컬렉션을 업데이트하여 `<plugin>`에 Azure Container Registry의 로그인 서버 주소 및 레지스트리 이름이 포함되도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-168">Update the `<plugins>` collection in the *pom.xml* file so that the `<plugin>` contains the login server address and registry name for your Azure Container Registry.</span></span>
 
    ```xml
    <plugin>
@@ -341,13 +341,13 @@ ms.locfileid: "48899294"
    </plugin>
    ```
 
-8. <span data-ttu-id="dc830-168">Spring Boot 응용 프로그램에 대한 완성된 프로젝트 디렉터리로 이동한 후 다음 Maven 명령을 실행하여 Docker 컨테이너를 빌드하고 레지스트리에 이미지를 푸시합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-168">Navigate to the completed project directory for your Spring Boot application, and run the following Maven command to build the Docker container and push the image to your registry:</span></span>
+8. <span data-ttu-id="27f6f-169">Spring Boot 응용 프로그램에 대한 완성된 프로젝트 디렉터리로 이동한 후 다음 Maven 명령을 실행하여 Docker 컨테이너를 빌드하고 레지스트리에 이미지를 푸시합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-169">Navigate to the completed project directory for your Spring Boot application, and run the following Maven command to build the Docker container and push the image to your registry:</span></span>
 
    ```shell
    mvn package dockerfile:build -DpushImage
    ```
 
-   <span data-ttu-id="dc830-169">Maven이 빌드의 결과를 다음 예제처럼 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-169">Maven will display the results of your build; for example:</span></span>  
+   <span data-ttu-id="27f6f-170">Maven이 빌드의 결과를 다음 예제처럼 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-170">Maven will display the results of your build; for example:</span></span>  
 
    ```shell
    [INFO] ----------------------------------------------------
@@ -360,11 +360,11 @@ ms.locfileid: "48899294"
    ```
 
 
-## <a name="configure-your-spring-boot-app-to-use-the-fabric8-maven-plugin"></a><span data-ttu-id="dc830-170">Fabric8 Maven 플러그인을 사용하도록 Spring Boot 앱 구성</span><span class="sxs-lookup"><span data-stu-id="dc830-170">Configure your Spring Boot app to use the Fabric8 Maven plugin</span></span>
+## <a name="configure-your-spring-boot-app-to-use-the-fabric8-maven-plugin"></a><span data-ttu-id="27f6f-171">Fabric8 Maven 플러그인을 사용하도록 Spring Boot 앱 구성</span><span class="sxs-lookup"><span data-stu-id="27f6f-171">Configure your Spring Boot app to use the Fabric8 Maven plugin</span></span>
 
-1. <span data-ttu-id="dc830-171">Spring Boot 응용 프로그램에 대해 완료된 프로젝트 디렉터리로 이동하고(예: "*C:\SpringBoot\gs-spring-boot-docker\complete*" 또는 "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*") 텍스트 편집기를 사용하여 *pom.xml* 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-171">Navigate to the completed project directory for your Spring Boot application, (for example: "*C:\SpringBoot\gs-spring-boot-docker\complete*" or "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*"), and open the *pom.xml* file with a text editor.</span></span>
+1. <span data-ttu-id="27f6f-172">Spring Boot 응용 프로그램에 대해 완료된 프로젝트 디렉터리로 이동하고(예: "*C:\SpringBoot\gs-spring-boot-docker\complete*" 또는 "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*") 텍스트 편집기를 사용하여 *pom.xml* 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-172">Navigate to the completed project directory for your Spring Boot application, (for example: "*C:\SpringBoot\gs-spring-boot-docker\complete*" or "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*"), and open the *pom.xml* file with a text editor.</span></span>
 
-1. <span data-ttu-id="dc830-172">*pom.xml* 파일의 `<plugins>` 컬렉션을 업데이트하여 Fabric8 Maven 플러그인을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-172">Update the `<plugins>` collection in the *pom.xml* file to add the Fabric8 Maven plugin:</span></span>
+1. <span data-ttu-id="27f6f-173">*pom.xml* 파일의 `<plugins>` 컬렉션을 업데이트하여 Fabric8 Maven 플러그인을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-173">Update the `<plugins>` collection in the *pom.xml* file to add the Fabric8 Maven plugin:</span></span>
 
    ```xml
    <plugin>
@@ -378,11 +378,11 @@ ms.locfileid: "48899294"
    </plugin>
    ```
 
-1. <span data-ttu-id="dc830-173">Spring Boot 응용 프로그램의 기본 원본 디렉터리로 이동하고(예: "*C:\SpringBoot\gs-spring-boot-docker\complete\src\main*" 또는 "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete/src/main*") 이름이 "*fabric8*"인 새 폴더를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-173">Navigate to the main source directory for your Spring Boot application, (for example: "*C:\SpringBoot\gs-spring-boot-docker\complete\src\main*" or "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete/src/main*"), and create a new folder named "*fabric8*".</span></span>
+1. <span data-ttu-id="27f6f-174">Spring Boot 응용 프로그램의 기본 원본 디렉터리로 이동하고(예: "*C:\SpringBoot\gs-spring-boot-docker\complete\src\main*" 또는 "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete/src/main*") 이름이 "*fabric8*"인 새 폴더를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-174">Navigate to the main source directory for your Spring Boot application, (for example: "*C:\SpringBoot\gs-spring-boot-docker\complete\src\main*" or "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete/src/main*"), and create a new folder named "*fabric8*".</span></span>
 
-1. <span data-ttu-id="dc830-174">새 *fabric8* 폴더에 3개의 YAML 조각 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-174">Create three YAML fragment files in the new *fabric8* folder:</span></span>
+1. <span data-ttu-id="27f6f-175">새 *fabric8* 폴더에 3개의 YAML 조각 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-175">Create three YAML fragment files in the new *fabric8* folder:</span></span>
 
-   <span data-ttu-id="dc830-175">a.</span><span class="sxs-lookup"><span data-stu-id="dc830-175">a.</span></span> <span data-ttu-id="dc830-176">다음과 같은 콘텐츠가 포함된 **deployment.yml** 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-176">Create a file named **deployment.yml** with the following contents:</span></span>
+   <span data-ttu-id="27f6f-176">a.</span><span class="sxs-lookup"><span data-stu-id="27f6f-176">a.</span></span> <span data-ttu-id="27f6f-177">다음과 같은 콘텐츠가 포함된 **deployment.yml** 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-177">Create a file named **deployment.yml** with the following contents:</span></span>
       ```yaml
       apiVersion: extensions/v1beta1
       kind: Deployment
@@ -415,7 +415,7 @@ ms.locfileid: "48899294"
               - name: mysecrets
       ```
 
-   <span data-ttu-id="dc830-177">b.</span><span class="sxs-lookup"><span data-stu-id="dc830-177">b.</span></span> <span data-ttu-id="dc830-178">다음과 같은 콘텐츠가 포함된 **secrets.yml** 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-178">Create a file named **secrets.yml** with the following contents:</span></span>
+   <span data-ttu-id="27f6f-178">b.</span><span class="sxs-lookup"><span data-stu-id="27f6f-178">b.</span></span> <span data-ttu-id="27f6f-179">다음과 같은 콘텐츠가 포함된 **secrets.yml** 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-179">Create a file named **secrets.yml** with the following contents:</span></span>
       ```yaml
       apiVersion: v1
       kind: Secret
@@ -427,7 +427,7 @@ ms.locfileid: "48899294"
       type: kubernetes.io/dockercfg
       ```
 
-   <span data-ttu-id="dc830-179">다.</span><span class="sxs-lookup"><span data-stu-id="dc830-179">c.</span></span> <span data-ttu-id="dc830-180">다음과 같은 콘텐츠가 포함된 **service.yml** 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-180">Create a file named **service.yml** with the following contents:</span></span>
+   <span data-ttu-id="27f6f-180">다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-180">c.</span></span> <span data-ttu-id="27f6f-181">다음과 같은 콘텐츠가 포함된 **service.yml** 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-181">Create a file named **service.yml** with the following contents:</span></span>
       ```yaml
       apiVersion: v1
       kind: Service
@@ -442,15 +442,15 @@ ms.locfileid: "48899294"
         type: LoadBalancer
       ```
 
-1. <span data-ttu-id="dc830-181">Kubernetes 리소스 목록 파일을 빌드하는 다음 Maven 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-181">Run the following Maven command to build the Kubernetes resource list file:</span></span>
+1. <span data-ttu-id="27f6f-182">Kubernetes 리소스 목록 파일을 빌드하는 다음 Maven 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-182">Run the following Maven command to build the Kubernetes resource list file:</span></span>
 
    ```shell
    mvn fabric8:resource
    ```
 
-   <span data-ttu-id="dc830-182">이 명령은 *src/main/fabric8* 폴더 아래의 모든 Kubernetes 리소스 yaml 파일을 Kubernetes 리소스 목록이 포함된 한 YAML 파일로 병합합니다. 이를 Kubernetes 클러스터에 직접 적용하거나 Helm 차트로 내보낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-182">This command merges all Kubernetes resource yaml files under the *src/main/fabric8* folder to a YAML file that contains a Kubernetes resource list, which can be applied to Kubernetes cluster directly or export to a helm chart.</span></span>
+   <span data-ttu-id="27f6f-183">이 명령은 *src/main/fabric8* 폴더 아래의 모든 Kubernetes 리소스 yaml 파일을 Kubernetes 리소스 목록이 포함된 한 YAML 파일로 병합합니다. 이를 Kubernetes 클러스터에 직접 적용하거나 Helm 차트로 내보낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-183">This command merges all Kubernetes resource yaml files under the *src/main/fabric8* folder to a YAML file that contains a Kubernetes resource list, which can be applied to Kubernetes cluster directly or export to a helm chart.</span></span>
 
-   <span data-ttu-id="dc830-183">Maven이 빌드의 결과를 다음 예제처럼 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-183">Maven will display the results of your build; for example:</span></span>  
+   <span data-ttu-id="27f6f-184">Maven이 빌드의 결과를 다음 예제처럼 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-184">Maven will display the results of your build; for example:</span></span>  
 
    ```shell
    [INFO] ----------------------------------------------------
@@ -462,13 +462,13 @@ ms.locfileid: "48899294"
    [INFO] ----------------------------------------------------
    ```
 
-1. <span data-ttu-id="dc830-184">다음 Maven 명령을 실행하여 리소스 목록 파일을 Kubernetes 클러스터에 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-184">Run the following Maven command to apply the resource list file to your Kubernetes cluster:</span></span>
+1. <span data-ttu-id="27f6f-185">다음 Maven 명령을 실행하여 리소스 목록 파일을 Kubernetes 클러스터에 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-185">Run the following Maven command to apply the resource list file to your Kubernetes cluster:</span></span>
 
    ```shell
    mvn fabric8:apply
    ```
 
-   <span data-ttu-id="dc830-185">Maven이 빌드의 결과를 다음 예제처럼 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-185">Maven will display the results of your build; for example:</span></span>  
+   <span data-ttu-id="27f6f-186">Maven이 빌드의 결과를 다음 예제처럼 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-186">Maven will display the results of your build; for example:</span></span>  
 
    ```shell
    [INFO] ----------------------------------------------------
@@ -480,12 +480,12 @@ ms.locfileid: "48899294"
    [INFO] ----------------------------------------------------
    ```
 
-1. <span data-ttu-id="dc830-186">앱이 클러스터에 배포되면 다음 예제처럼 `kubectl` 응용 프로그램을 사용하여 외부 IP 주소를 쿼리합니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-186">Once the app is deployed to the cluster, query the external IP address using the `kubectl` application; for example:</span></span>
+1. <span data-ttu-id="27f6f-187">앱이 클러스터에 배포되면 다음 예제처럼 `kubectl` 응용 프로그램을 사용하여 외부 IP 주소를 쿼리합니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-187">Once the app is deployed to the cluster, query the external IP address using the `kubectl` application; for example:</span></span>
    ```shell
    kubectl get svc -w
    ```
 
-   <span data-ttu-id="dc830-187">`kubectl`에 다음 예제처럼 내부 및 외부 IP 주소가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-187">`kubectl` will display your internal and external IP addresses; for example:</span></span>
+   <span data-ttu-id="27f6f-188">`kubectl`에 다음 예제처럼 내부 및 외부 IP 주소가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-188">`kubectl` will display your internal and external IP addresses; for example:</span></span>
 
    ```shell
    NAME                    CLUSTER-IP   EXTERNAL-IP   PORT(S)        AGE
@@ -493,35 +493,35 @@ ms.locfileid: "48899294"
    gs-spring-boot-docker   10.0.242.8   13.65.196.3   80:31215/TCP   3m
    ```
 
-   <span data-ttu-id="dc830-188">외부 IP 주소를 사용하여 웹 브라우저에 응용 프로그램을 열 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-188">You can use the external IP address to open your application in a web browser.</span></span>
+   <span data-ttu-id="27f6f-189">외부 IP 주소를 사용하여 웹 브라우저에 응용 프로그램을 열 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-189">You can use the external IP address to open your application in a web browser.</span></span>
 
    ![샘플 응용 프로그램을 외부로 찾아보기][SB02]
 
-## <a name="delete-your-kubernetes-cluster"></a><span data-ttu-id="dc830-190">Kubernetes 클러스터 삭제</span><span class="sxs-lookup"><span data-stu-id="dc830-190">Delete your Kubernetes cluster</span></span>
+## <a name="delete-your-kubernetes-cluster"></a><span data-ttu-id="27f6f-191">Kubernetes 클러스터 삭제</span><span class="sxs-lookup"><span data-stu-id="27f6f-191">Delete your Kubernetes cluster</span></span>
 
-<span data-ttu-id="dc830-191">Kubernetes 클러스터가 더 이상 필요하지 않게 되면 `az group delete` 명령을 사용하여 리소스 그룹을 제거할 수 있습니다. 그러면 모든 관련 리소스가 제거되며 예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="dc830-191">When your Kubernetes cluster is no longer needed, you can use the `az group delete` command to remove the resource group, which will remove all of its related resources; for example:</span></span>
+<span data-ttu-id="27f6f-192">Kubernetes 클러스터가 더 이상 필요하지 않게 되면 `az group delete` 명령을 사용하여 리소스 그룹을 제거할 수 있습니다. 그러면 모든 관련 리소스가 제거되며 예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="27f6f-192">When your Kubernetes cluster is no longer needed, you can use the `az group delete` command to remove the resource group, which will remove all of its related resources; for example:</span></span>
 
    ```azurecli
    az group delete --name wingtiptoys-kubernetes --yes --no-wait
    ```
 
-## <a name="next-steps"></a><span data-ttu-id="dc830-192">다음 단계</span><span class="sxs-lookup"><span data-stu-id="dc830-192">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="27f6f-193">다음 단계</span><span class="sxs-lookup"><span data-stu-id="27f6f-193">Next steps</span></span>
 
-<span data-ttu-id="dc830-193">Azure에서 Spring Boot 응용 프로그램을 사용 하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="dc830-193">For more information about using Spring Boot applications on Azure, see the following articles:</span></span>
+<span data-ttu-id="27f6f-194">Azure에서 Spring Boot 응용 프로그램을 사용 하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="27f6f-194">For more information about using Spring Boot applications on Azure, see the following articles:</span></span>
 
-* [<span data-ttu-id="dc830-194">Azure App Service에 Spring Boot 응용 프로그램 배포</span><span class="sxs-lookup"><span data-stu-id="dc830-194">Deploy a Spring Boot Application to the Azure App Service</span></span>](deploy-spring-boot-java-web-app-on-azure.md)
-* [<span data-ttu-id="dc830-195">Azure Container Service에서 Linux에 Spring Boot 응용 프로그램 배포</span><span class="sxs-lookup"><span data-stu-id="dc830-195">Deploy a Spring Boot application on Linux in the Azure Container Service</span></span>](deploy-spring-boot-java-app-on-linux.md)
-* [<span data-ttu-id="dc830-196">Azure Container Service의 Kubernetes 클러스터에 Spring Boot 응용 프로그램 배포</span><span class="sxs-lookup"><span data-stu-id="dc830-196">Deploy a Spring Boot Application on a Kubernetes Cluster in the Azure Container Service</span></span>](deploy-spring-boot-java-app-on-kubernetes.md)
+* [<span data-ttu-id="27f6f-195">Azure App Service에 Spring Boot 응용 프로그램 배포</span><span class="sxs-lookup"><span data-stu-id="27f6f-195">Deploy a Spring Boot Application to the Azure App Service</span></span>](deploy-spring-boot-java-web-app-on-azure.md)
+* [<span data-ttu-id="27f6f-196">Azure Container Service에서 Linux에 Spring Boot 응용 프로그램 배포</span><span class="sxs-lookup"><span data-stu-id="27f6f-196">Deploy a Spring Boot application on Linux in the Azure Container Service</span></span>](deploy-spring-boot-java-app-on-linux.md)
+* [<span data-ttu-id="27f6f-197">Azure Container Service의 Kubernetes 클러스터에 Spring Boot 응용 프로그램 배포</span><span class="sxs-lookup"><span data-stu-id="27f6f-197">Deploy a Spring Boot Application on a Kubernetes Cluster in the Azure Container Service</span></span>](deploy-spring-boot-java-app-on-kubernetes.md)
 
-<span data-ttu-id="dc830-197">Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 개발자용 Azure] 및 [Visual Studio Team Services용 Java 도구]를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="dc830-197">For more information about using Azure with Java, see the [Azure for Java Developers] and the [Java Tools for Visual Studio Team Services].</span></span>
+<span data-ttu-id="27f6f-198">Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 개발자용 Azure] 및 [Visual Studio Team Services용 Java 도구]를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="27f6f-198">For more information about using Azure with Java, see the [Azure for Java Developers] and the [Java Tools for Visual Studio Team Services].</span></span>
 
-<span data-ttu-id="dc830-198">Spring Boot on Docker 샘플 프로젝트에 대한 자세한 정보는 [Spring Boot on Docker 시작]을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="dc830-198">For further details about the Spring Boot on Docker sample project, see [Spring Boot on Docker Getting Started].</span></span>
+<span data-ttu-id="27f6f-199">Spring Boot on Docker 샘플 프로젝트에 대한 자세한 정보는 [Spring Boot on Docker 시작]을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="27f6f-199">For further details about the Spring Boot on Docker sample project, see [Spring Boot on Docker Getting Started].</span></span>
 
-<span data-ttu-id="dc830-199">자체 Spring Boot 응용 프로그램을 시작하는 데 도움이 필요하면 <https://start.spring.io/>에서 **Spring Initializr**를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="dc830-199">For help with getting started with your own Spring Boot applications, see the **Spring Initializr** at <https://start.spring.io/>.</span></span>
+<span data-ttu-id="27f6f-200">자체 Spring Boot 응용 프로그램을 시작하는 데 도움이 필요하면 <https://start.spring.io/>에서 **Spring Initializr**를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="27f6f-200">For help with getting started with your own Spring Boot applications, see the **Spring Initializr** at <https://start.spring.io/>.</span></span>
 
-<span data-ttu-id="dc830-200">간단한 Spring Boot 응용 프로그램을 만들기 시작하는 방법에 대한 자세한 내용은 <https://start.spring.io/>에서 Spring Initializr를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="dc830-200">For more information about getting started with creating a simple Spring Boot application, see the Spring Initializr at <https://start.spring.io/>.</span></span>
+<span data-ttu-id="27f6f-201">간단한 Spring Boot 응용 프로그램을 만들기 시작하는 방법에 대한 자세한 내용은 <https://start.spring.io/>에서 Spring Initializr를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="27f6f-201">For more information about getting started with creating a simple Spring Boot application, see the Spring Initializr at <https://start.spring.io/>.</span></span>
 
-<span data-ttu-id="dc830-201">Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대한 추가 예제를 보려면 [Azure Web App on Linux에 대한 사용자 지정 Docker 이미지 사용]을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="dc830-201">For additional examples for how to use custom Docker images with Azure, see [Using a custom Docker image for Azure Web App on Linux].</span></span>
+<span data-ttu-id="27f6f-202">Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대한 추가 예제를 보려면 [Azure Web App on Linux에 대한 사용자 지정 Docker 이미지 사용]을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="27f6f-202">For additional examples for how to use custom Docker images with Azure, see [Using a custom Docker image for Azure Web App on Linux].</span></span>
 
 <!-- URL List -->
 
@@ -540,8 +540,6 @@ ms.locfileid: "48899294"
 [체험판 Azure 계정]: https://azure.microsoft.com/pricing/free-trial/
 [free Azure account]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[JDK(Java Developer Kit)]: http://www.oracle.com/technetwork/java/javase/downloads/
-[Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
 [Visual Studio Team Services용 Java 도구]: https://java.visualstudio.com/
 [Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [Kubernetes]: https://kubernetes.io/
@@ -552,6 +550,9 @@ ms.locfileid: "48899294"
 [Spring Boot on Docker 시작]: https://github.com/spring-guides/gs-spring-boot-docker
 [Spring Boot on Docker Getting Started]: https://github.com/spring-guides/gs-spring-boot-docker
 [Spring Framework]: https://spring.io/
+
+[Java Development Kit (JDK)]: https://aka.ms/azure-jdks
+<!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
 
 <!-- IMG List -->
 
