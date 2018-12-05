@@ -4,22 +4,22 @@ description: Azure Key Vault 스타터에 Spring Boot Initializer 앱을 구성�
 services: key-vault
 documentationcenter: java
 author: rmcmurray
-manager: routlaw
+manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 02/01/2018
+ms.date: 11/21/2018
 ms.devlang: java
 ms.service: key-vault
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 78b7a9a2e26168b19dc8a1d12e47456752b57ffc
-ms.sourcegitcommit: e017de4677c5bedd6ef88c8c1b6da279dc973efe
+ms.openlocfilehash: fcb18de809f4465239f1f360a755624a5095e03a
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45639776"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52339157"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>Azure Key Vault에 Spring Boot Starter를 사용하는 방법
 
@@ -32,10 +32,10 @@ ms.locfileid: "45639776"
 이 문서의 단계를 완료하려면 다음 필수 구성 요소가 필요합니다.
 
 * Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정]에 등록할 수 있습니다.
-* [JDK(Java Development Kit)](http://www.oracle.com/technetwork/java/javase/downloads/), 버전 1.7 이상
+* 지원되는 JDK(Java Development Kit) Azure에서 개발하는 경우 사용할 수 있는 JDK에 대한 자세한 내용은 <https://aka.ms/azure-jdks>를 참조하세요.
 * [Apache Maven](http://maven.apache.org/), 버전 3.0 이상
 
-## <a name="create-an-app-using-the-spring-initialzr"></a>Spring Initialzr를 사용하여 앱 만들기
+## <a name="create-an-app-using-spring-initializr"></a>Spring Initialzr를 사용하여 앱 만들기
 
 1. <https://start.spring.io/>로 이동합니다.
 
@@ -53,7 +53,7 @@ ms.locfileid: "45639776"
 
 1. 메시지가 표시되면 로컬 컴퓨터의 경로에 프로젝트를 다운로드합니다.
 
-## <a name="sign-into-azure-and-select-the-subscription-to-use"></a>Azure에 로그인하고 사용할 구독 선택
+## <a name="sign-into-azure"></a>Azure에 로그인
 
 1. 명령 프롬프트를 엽니다.
 
@@ -94,7 +94,7 @@ ms.locfileid: "45639776"
    az account set -s ssssssss-ssss-ssss-ssss-ssssssssssss
    ```
 
-## <a name="create-and-configure-a-new-azure-key-vault-using-the-azure-cli"></a>Azure CLI를 사용하여 새 Azure Key Vault 만들기 및 구성
+## <a name="create-a-new-azure-key-vault"></a>새 Azure Key Vault 만들기
 
 1. 다음 예제처럼 키 자격 증명 모음에사용할 Azure 리소스에 대한 리소스 그룹을 만듭니다.
    ```azurecli
@@ -231,7 +231,7 @@ ms.locfileid: "45639776"
    }
    ```
 
-## <a name="configure-and-compile-your-spring-boot-application"></a>Spring Boot 응용 프로그램 구성 및 컴파일
+## <a name="configure-and-compile-your-app"></a>앱 구성 및 컴파일
 
 1. 앞서 디렉터리에 다운로드한 Spring Boot 프로젝트 아카이브 파일에서 파일을 추출합니다.
 
@@ -305,7 +305,9 @@ ms.locfileid: "45639776"
 
    ![Spring Boot 런타임 메시지][build-application-02]
 
-## <a name="next-steps"></a>다음 단계
+## <a name="summary"></a>요약
+
+이 자습서에서는 **[Spring Initializr]** 을 사용하여 새 Java 웹 애플리케이션을 만들고 민감한 정보를 저장하기 위해 Azure Key Vault를 만든 다음 Key Vault에서 정보를 검색하도록 애플리케이션을 구성했습니다.
 
 Azure Key Vaults를 사용하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
 
@@ -320,6 +322,13 @@ Azure에서 Spring Boot 응용 프로그램을 사용 하는 방법에 대한 �
 * [Azure Container Service의 Kubernetes 클러스터에 Spring Boot 응용 프로그램 실행](deploy-spring-boot-java-app-on-kubernetes.md)
 
 Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 개발자용 Azure] 및 [Visual Studio Team Services용 Java 도구]를 참조하세요.
+
+## <a name="next-steps"></a>다음 단계
+
+Spring과 Azure에 대한 자세한 사항은 Azure의 Spring 설명서 센터를 참조합니다.
+
+> [!div class="nextstepaction"]
+> [Azure의 Spring](/java/azure/spring-framework)
 
 <!-- URL List -->
 

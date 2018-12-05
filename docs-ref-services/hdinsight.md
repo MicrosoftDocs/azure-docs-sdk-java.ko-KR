@@ -7,13 +7,13 @@ ms.reviewer: jasonh
 ms.service: hdinsight
 ms.topic: reference
 ms.devlang: java
-ms.date: 9/20/2018
-ms.openlocfilehash: 9fd35d12e0aa864b5d23cf03547f7b76dc74c677
-ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
+ms.date: 11/21/2018
+ms.openlocfilehash: 96ecbedc90706775a80b97c42f0d55a46a45b8ac
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49799899"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338687"
 ---
 # <a name="hdinsight-java-management-sdk-preview"></a>HDInsight Java 관리 SDK 미리 보기
 
@@ -24,7 +24,7 @@ HDInsight Java SDK는 HDInsight 클러스터 관리를 위한 클래스 및 메�
 ## <a name="prerequisites"></a>필수 조건
 
 * Azure 계정. 계정이 없으면 [체험 계정을 얻습니다](https://azure.microsoft.com/free/).
-* [Java JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* 지원되는 JDK(Java Development Kit) Azure에서 개발하는 경우 사용할 수 있는 JDK에 대한 자세한 내용은 <https://aka.ms/azure-jdks>를 참조하세요.
 * [Maven](https://maven.apache.org/install.html)
 
 ## <a name="sdk-installation"></a>SDK 설치

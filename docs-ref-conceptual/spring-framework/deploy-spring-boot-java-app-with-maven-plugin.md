@@ -4,19 +4,19 @@ description: Linux용 Azure Web Apps의 Maven 플러그 인을 사용하여 Spri
 services: app-service
 documentationcenter: java
 author: rmcmurray
-manager: routlaw
+manager: mbaldwin
 editor: brborges
 ms.author: robmcm
-ms.date: 10/18/2018
+ms.date: 11/21/2018
 ms.devlang: java
 ms.service: app-service
 ms.topic: article
-ms.openlocfilehash: dc3038fed6859203f36e0c4dc9a9b01e81a7c4c5
-ms.sourcegitcommit: dae7511a9d93ca7f388d5b0e05dc098e22c2f2f6
+ms.openlocfilehash: 066ac30697c6adccc0c6a7b9d57205de488bdc53
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49962497"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52339007"
 ---
 # <a name="deploy-a-spring-boot-jar-file-web-app-to-azure-app-service-on-linux"></a>Linux에 Azure App Service에 Spring Boot JAR 파일 웹앱 배포
 
@@ -30,7 +30,7 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [무료 계정](https:/
 이 자습서의 단계를 완료하려면 다음이 설치 및 구성되어야 합니다.
 
 * [Azure CLI](/cli/azure/), 로컬로 또는 [Azure Cloud Shell](https://shell.azure.com)을 통해.
-* [JDK(Java Development Kit)](https://www.azul.com/downloads/azure-only/zulu/), 버전 1.7 이상
+* 지원되는 JDK(Java Development Kit) Azure에서 개발하는 경우 사용할 수 있는 JDK에 대한 자세한 내용은 <https://aka.ms/azure-jdks>를 참조하세요.
 * Apache [Maven](https://maven.apache.org/), 버전 3).
 * [Git](https://git-scm.com/downloads) 클라이언트
 
@@ -180,7 +180,6 @@ Maven은 Azure에 웹앱을 배포합니다. 웹앱이나 웹앱 플랜이 아�
 [Azure Portal]: https://portal.azure.com/
 [free Azure account]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
 [Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [Maven]: http://maven.apache.org/
 [MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
@@ -188,6 +187,9 @@ Maven은 Azure에 웹앱을 배포합니다. 웹앱이나 웹앱 플랜이 아�
 [Spring Boot 시작하기]: https://github.com/spring-guides/gs-spring-boot
 [Spring Framework]: https://spring.io/
 [Azure Web Apps의 Maven 플러그 인]: https://docs.microsoft.com/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme
+
+[Java Development Kit (JDK)]: https://aka.ms/azure-jdks
+<!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
 
 <!-- IMG List -->
 

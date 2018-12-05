@@ -4,23 +4,23 @@ description: 이 자습서에서는 Microsoft Azure에서 Kubernetes 클러스�
 services: container-service
 documentationcenter: java
 author: rmcmurray
-manager: routlaw
+manager: mbaldwin
 editor: ''
 ms.assetid: ''
-ms.author: asirveda;robmcm
-ms.date: 07/05/2018
+ms.author: robmcm
+ms.date: 11/21/2018
 ms.devlang: java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.custom: mvc
-ms.openlocfilehash: 8e8f9088146af504ba2d9d45e2e82118c4081359
-ms.sourcegitcommit: dae7511a9d93ca7f388d5b0e05dc098e22c2f2f6
+ms.openlocfilehash: d5ebfb7fc7279c745f77848dae397509662f0c0d
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49962507"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338727"
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Azure Kubernetes Service의 Kubernetes 클러스터에 Spring Boot 응용 프로그램 배포
 
@@ -32,7 +32,7 @@ ms.locfileid: "49962507"
 
 * Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정]에 등록할 수 있습니다.
 * [Azure CLI(명령줄 인터페이스)]
-* 최신 [JDK(Java Developer Kit)]
+* 지원되는 JDK(Java Development Kit) Azure에서 개발하는 경우 사용할 수 있는 JDK에 대한 자세한 내용은 <https://aka.ms/azure-jdks>를 참조하세요.
 * Apache의 [Maven] 빌드 도구(버전 3)
 * [Git] 클라이언트
 * [Docker] 클라이언트
@@ -344,7 +344,6 @@ Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대�
 [Docker]: https://www.docker.com/
 [체험판 Azure 계정]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[JDK(Java Developer Kit)]: http://www.oracle.com/technetwork/java/javase/downloads/
 [Visual Studio Team Services용 Java 도구]: https://java.visualstudio.com/
 [Kubernetes]: https://kubernetes.io/
 [Kubernetes Command-Line Interface (kubectl)]: https://kubernetes.io/docs/user-guide/kubectl-overview/
@@ -356,6 +355,9 @@ Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대�
 [Pod에 대한 서비스 계정 구성]: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
 [네임스페이스]: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
 [개인 레지스트리에서 이미지 끌어오기]: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
+
+[Java Development Kit (JDK)]: https://aka.ms/azure-jdks
+<!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
 
 <!-- Newly added -->
 [Azure Kubernetes Service의 Azure Container Registry를 사용하여 인증]: https://docs.microsoft.com/azure/container-registry/container-registry-auth-aks/
