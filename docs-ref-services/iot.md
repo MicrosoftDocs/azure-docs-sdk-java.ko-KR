@@ -1,7 +1,7 @@
 ---
 title: Java용 Azure IoT Hub 라이브러리
 description: Java용 Azure IoT Hub 라이브러리에 대한 참조 설명서
-keywords: Azure, Java, SDK, API, 이벤트, IoT, 스트림, 장치, IoT Hub
+keywords: Azure, Java, SDK, API, 이벤트, IoT, 스트림, 디바이스, IoT Hub
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -21,11 +21,11 @@ ms.locfileid: "48047150"
 
 [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub/iot-hub-what-is-iot-hub)를 사용하여 IoT(사물 인터넷) 자산을 연결, 모니터링 및 제어합니다.
 
-Azure IoT Hub를 시작하려면 [Java를 사용하여 IoT Hub에 장치 연결](/azure/iot-hub/iot-hub-java-java-getstarted)을 참조하세요.
+Azure IoT Hub를 시작하려면 [Java를 사용하여 IoT Hub에 디바이스 연결](/azure/iot-hub/iot-hub-java-java-getstarted)을 참조하세요.
 
 ## <a name="iot-service-library"></a>IoT 서비스 라이브러리
 
-IoT 서비스 라이브러리를 사용하여 장치를 등록하고, 클라우드에서 등록된 장치로 메시지를 보냅니다.
+IoT 서비스 라이브러리를 사용하여 디바이스를 등록하고, 클라우드에서 등록된 디바이스로 메시지를 보냅니다.
 
 `pom.xml` Maven 파일에 [종속성을 추가](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)하여 프로젝트에서 클라이언트 라이브러리를 사용합니다.  
 
@@ -37,9 +37,9 @@ IoT 서비스 라이브러리를 사용하여 장치를 등록하고, 클라우�
 </dependency>
 ```   
 
-## <a name="iot-device-library"></a>Iot 장치 라이브러리
+## <a name="iot-device-library"></a>Iot 디바이스 라이브러리
 
-IoT 장치 라이브러리를 사용하여 클라우드로 메시지를 보내고 장치에서 메시지를 받습니다.
+IoT 디바이스 라이브러리를 사용하여 클라우드로 메시지를 보내고 디바이스에서 메시지를 받습니다.
 
 `pom.xml` Maven 파일에 [종속성을 추가](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)하여 프로젝트에서 클라이언트 라이브러리를 사용합니다.  
 
@@ -56,7 +56,7 @@ IoT 장치 라이브러리를 사용하여 클라우드로 메시지를 보내�
 
 ## <a name="example"></a>예
 
-Azure IoT Hub에서 장치로 메시지를 보냅니다.
+Azure IoT Hub에서 디바이스로 메시지를 보냅니다.
 
 ```java
 Message messageToSend = new Message(messageText);
