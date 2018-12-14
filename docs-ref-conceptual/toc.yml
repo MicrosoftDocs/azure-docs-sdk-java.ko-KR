@@ -94,7 +94,7 @@ items:
       - name: 원격 분석 전송
         href: /azure/iot-hub/quickstart-send-telemetry-java
         maintainContext: true
-      - name: 장치 제어
+      - name: 디바이스 제어
         href: /azure/iot-hub/quickstart-control-device-java
         maintainContext: true
     - name: Azure Search
