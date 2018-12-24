@@ -23,7 +23,7 @@ ms.locfileid: "48893010"
 ---
 # <a name="install-the-azure-toolkit-for-eclipse"></a>Eclipse용 Azure 도구 키트 설치
 
-Eclipse용 Azure 도구 키트는 Eclipse 개발 환경에서 클라우드 응용 프로그램을 쉽게 작성, 개발, 테스트 및 Azure에 배포할 수 있는 템플릿과 기능을 제공합니다.
+Azure Toolkit for Eclipse는 Eclipse 개발 환경에서 클라우드 애플리케이션을 쉽게 작성, 개발, 테스트 및 Azure에 배포할 수 있는 템플릿과 기능을 제공합니다.
 
 > [!NOTE] 
 > 
@@ -54,7 +54,7 @@ Eclipse용 Azure 도구 키트는 Eclipse 개발 환경에서 클라우드 응�
 
    | 기능 | 설명 | 
    |---|---| 
-   | **Java용 Application Insights 플러그 인** | 응용 프로그램 및 서버 인스턴스에 Azure 원격 분석 로깅 및 분석 서비스를 사용할 수 있게 해줍니다. | 
+   | **Java용 Application Insights 플러그 인** | 애플리케이션 및 서버 인스턴스에 Azure 원격 분석 로깅 및 분석 서비스를 사용할 수 있게 해줍니다. | 
    | **Azure 공통 플러그 인** | 다른 도구 키트 구성 요소에 필요한 공통 기능을 제공합니다. | 
    | **Eclipse용 Azure Container 도구** | .WAR을 docker 컴퓨터의 Docker 컨테이너로 빌드 및 배포할 수 있게 해줍니다. | 
    | **Eclipse용 Azure 컨테이너** | .WAR 또는 .JAR 아티팩트를 Azure 가상 머신에 Docker 컨테이너로 배포할 수 있게 해줍니다. | 

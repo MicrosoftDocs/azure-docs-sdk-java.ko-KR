@@ -88,7 +88,7 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
 
    ![Azure Active Directory ID 복사][create-directory-05]
 
-### <a name="add-an-application-registration-for-your-spring-boot-app"></a>Spring Boot 앱에 대한 응용 프로그램 등록 추가
+### <a name="add-an-application-registration-for-your-spring-boot-app"></a>Spring Boot 앱에 대한 애플리케이션 등록 추가
 
 1. 포털 메뉴에서 **Azure Active Directory**를 선택하고 **앱 등록**, **새 응용 프로그램 등록**을 차례로 클릭합니다.
 
@@ -321,7 +321,7 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
    mvn spring-boot:run
    ```
 
-   ![사용 중인 응용 프로그램 빌드][build-application]
+   ![사용 중인 애플리케이션 빌드][build-application]
 
 1. 응용프로그램이 Maven에서 빌드 및 시작되고 나면, <http://localhost:8080>을 웹 브라우저에서 엽니다. 사용자 이름 및 암호 입력 메시지가 나타납니다.
 

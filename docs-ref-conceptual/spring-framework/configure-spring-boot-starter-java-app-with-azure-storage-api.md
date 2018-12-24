@@ -179,7 +179,7 @@ ms.locfileid: "52339057"
    }
    ```
 
-## <a name="configure-and-compile-your-spring-boot-application"></a>Spring Boot 응용 프로그램 구성 및 컴파일
+## <a name="configure-and-compile-your-spring-boot-application"></a>Spring Boot 애플리케이션 구성 및 컴파일
 
 1. 디렉터리에 다운로드한 프로젝트 아카이브에서 파일을 추출합니다.
 

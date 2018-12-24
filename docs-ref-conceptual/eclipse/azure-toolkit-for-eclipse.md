@@ -23,7 +23,7 @@ ms.locfileid: "48893464"
 ---
 # <a name="azure-toolkit-for-eclipse"></a>Eclipse용 Azure 도구 키트
 
-Eclipse용 Azure 도구 키트는 Eclipse IDE(통합 개발 환경) 내부에서 클라우드 응용 프로그램을 쉽게 작성, 개발, 테스트 및 Azure에 배포할 수 있는 템플릿과 기능을 제공합니다.
+Azure Toolkit for Eclipse는 Eclipse IDE(통합 개발 환경) 내부에서 클라우드 애플리케이션을 쉽게 작성, 개발, 테스트 및 Azure에 배포할 수 있는 템플릿과 기능을 제공합니다.
 
 > [!NOTE]
 > 

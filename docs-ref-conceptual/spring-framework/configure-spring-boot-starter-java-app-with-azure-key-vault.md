@@ -176,7 +176,7 @@ ms.locfileid: "52339157"
    |---|---|
    | `name` | 앞의 키 자격 증명 모음 이름을 지정합니다. |
    | `secret-permission` | 키 자격 증명 모음에 대해 [보안 정책](https://docs.microsoft.com/cli/azure/keyvault)을 지정합니다. |
-   | `spn` | 앞의 응용 프로그램 등록에서 GUID를 지정합니다. |
+   | `spn` | 앞의 애플리케이션 등록에서 GUID를 지정합니다. |
 
    Azure CLI가 다음 예제처럼 보안 정책 만들기 결과를 표시합니다.  
 
@@ -287,7 +287,7 @@ ms.locfileid: "52339157"
 
 1. Spring Boot 앱에 대한 *pom.xml* 파일이 있는 디렉터리로 이동합니다.
 
-1. Maven을 사용하여 Spring Boot 응용 프로그램을 빌드합니다. 예를 들어 다음과 같습니다.
+1. Maven을 사용하여 Spring Boot 애플리케이션을 빌드합니다. 예를 들어 다음과 같습니다.
 
    ```bash
    mvn clean package
@@ -295,7 +295,7 @@ ms.locfileid: "52339157"
 
    Maven이 빌드의 결과를 표시합니다.
 
-   ![Spring Boot 응용 프로그램 빌드 상태][build-application-01]
+   ![Spring Boot 애플리케이션 빌드 상태][build-application-01]
 
 1. Maven에서 Spring Boot 응용 프로그램을 실행합니다. 응용 프로그램이 키 자격 증명 모음의 연결 문자열을 표시합니다. 예: 
 
