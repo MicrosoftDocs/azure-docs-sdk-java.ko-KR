@@ -1,6 +1,6 @@
 ---
 title: Azure Cosmos DB SQL API에서 Spring Boot Starter를 사용하는 방법
-description: Azure Cosmos DB SQL API에서 Spring Boot Initializer를 사용하여 만든 응용 프로그램을 구성하는 방법에 대해 알아봅니다.
+description: Azure Cosmos DB SQL API에서 Spring Boot Initializer를 사용하여 만든 애플리케이션을 구성하는 방법에 대해 알아봅니다.
 services: cosmos-db
 documentationcenter: java
 author: rmcmurray
@@ -25,9 +25,9 @@ ms.locfileid: "52339107"
 
 ## <a name="overview"></a>개요
 
-Azure Cosmos DB는 개발자가 SQL, MongoDB, Graph 및 Table API와 같은 표준 API를 사용하여 데이터를 사용할 수 있도록 하는 전역 분산 데이터베이스 서비스입니다. Microsoft의 Spring Boot Starter를 사용하면 개발자가 SQL API를 사용하여 Azure Cosmos DB와 쉽게 통합하는 Spring Boot 응용 프로그램을 사용할 수 있습니다.
+Azure Cosmos DB는 개발자가 SQL, MongoDB, Graph 및 Table API와 같은 표준 API를 사용하여 데이터를 사용할 수 있도록 하는 전역 분산 데이터베이스 서비스입니다. Microsoft의 Spring Boot Starter를 사용하면 개발자가 SQL API를 사용하여 Azure Cosmos DB와 쉽게 통합하는 Spring Boot 애플리케이션을 사용할 수 있습니다.
 
-이 문서에서는 Azure Portal을 사용하여 Azure Cosmos DB를 만들고, **[Spring Initializr]** 를 사용하여 사용자 지정 java 응용 프로그램을 만들고, Spring Boot Starter 기능을 사용자 지정 응용 프로그램에 추가하여 데이터를 저장하고 SQL API를 사용하여 Azure Cosmos DB에서 데이터를 검색하는 방법을 보여줍니다.
+이 문서에서는 Azure Portal을 사용하여 Azure Cosmos DB를 만들고, **[Spring Initializr]** 를 사용하여 사용자 지정 java 애플리케이션을 만들고, Spring Boot Starter 기능을 사용자 지정 애플리케이션에 추가하여 데이터를 저장하고 SQL API를 사용하여 Azure Cosmos DB에서 데이터를 검색하는 방법을 보여줍니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
