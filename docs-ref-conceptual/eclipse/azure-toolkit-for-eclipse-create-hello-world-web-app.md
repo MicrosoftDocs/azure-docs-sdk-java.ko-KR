@@ -23,7 +23,7 @@ ms.locfileid: "48893094"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-eclipse"></a>Eclipse를 사용하여 Azure용 Hello World 웹앱 만들기
 
-이 자습서에서는 [Eclipse용 Azure 도구 키트 설치]를 사용하여 기본 Hello World 응용 프로그램을 만들고 Azure에 웹앱으로 배포하는 방법을 보여 줍니다.
+이 자습서에서는 [Eclipse용 Azure 도구 키트 설치]를 사용하여 기본 Hello World 애플리케이션을 만들고 Azure에 웹앱으로 배포하는 방법을 보여 줍니다.
 
 > [!NOTE]
 >

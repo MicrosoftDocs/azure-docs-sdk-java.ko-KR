@@ -25,7 +25,7 @@ ms.locfileid: "52338837"
 
 **[Fabric8]** 은 개발자들이 Linux 컨테이너에서 응용 프로그램을 만들 수 있게 지원하는 **[Kubernetes]** 기반 오픈 소스 솔루션입니다.
 
-이 자습서에서는 Maven용 Fabric8 플러그인을 사용하여 [AKS(Azure Container Service)]에서 응용 프로그램을 개발하고 Linux 호스트에 배포하는 방법을 설명합니다.
+이 자습서에서는 Maven용 Fabric8 플러그인을 사용하여 [AKS(Azure Container Service)]에서 애플리케이션을 개발하고 Linux 호스트에 배포하는 방법을 설명합니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -260,7 +260,7 @@ ms.locfileid: "52338837"
    |---|---|
    | `wingtiptoys-kubernetes` | 이 문서의 앞부분에 나온 리소스 그룹의 이름을 지정합니다. |
    | `wingtiptoysregistry` | 개인 레지스트리에 고유한 이름을 지정합니다. |
-   | `westeurope` | 응용 프로그램의 적합한 지리적 위치를 지정합니다. |
+   | `westeurope` | 애플리케이션의 적합한 지리적 위치를 지정합니다. |
 
    Azure CLI가 다음 예제처럼 레지스트리 만들기 결과를 표시합니다.  
 
