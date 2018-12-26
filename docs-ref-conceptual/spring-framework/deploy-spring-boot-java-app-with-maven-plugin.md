@@ -48,7 +48,7 @@ Azure CLI를 사용하여 Azure 계정에 로그인합니다.
 
 ## <a name="clone-the-sample-app"></a>샘플 앱 복제
 
-이 섹션에서는 완료된 Spring Boot 응용 프로그램을 복제하고 로컬로 테스트합니다.
+이 섹션에서는 완료된 Spring Boot 애플리케이션을 복제하고 로컬로 테스트합니다.
 
 1. 명령 프롬프트 또는 터미널 창을 열고 Spring Boot 응용 프로그램을 저장할 로컬 디렉터리를 만들고 해당 디렉터리로 변경합니다. 예:
    ```shell

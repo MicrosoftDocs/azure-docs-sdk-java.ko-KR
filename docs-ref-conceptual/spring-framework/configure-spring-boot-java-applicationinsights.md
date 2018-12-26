@@ -1,6 +1,6 @@
 ---
 title: Azure Application Insights SpringBoot Starter를 사용하도록 Spring Boot 이니셜라이져 앱 구성
-description: Appliaction Insights SpringBoot Starter를 사용하도록 Spring Initializer를 사용하여 만든 Spring Boot 응용프로그램을 구성합니다.
+description: Appliaction Insights SpringBoot Starter를 사용하도록 Spring Initializer를 사용하여 만든 Spring Boot 애플리케이션을 구성합니다.
 services: Application-Insights
 documentationcenter: java
 author: dhaval24
@@ -23,7 +23,7 @@ ms.locfileid: "52338737"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-application-insights"></a>Application Insights를 사용하도록 Spring Boot Initializer 앱 구성
 
-이 문서에서는 **[Spring Initializr]** 를 사용하여 Spring Boot 응용프로그램을 만드는 과정을 보여줍니다. 이는 클라우드에서 Java 응용 프로그램의 종단 간 모니터링을 위해 Azure Application Insights Spring Boot Starter를 사용합니다.
+이 문서에서는 **[Spring Initializr]** 를 사용하여 Spring Boot 애플리케이션을 만드는 과정을 보여줍니다. 이는 클라우드에서 Java 애플리케이션의 종단 간 모니터링을 위해 Azure Application Insights Spring Boot Starter를 사용합니다.
 
 > [!NOTE]
 > 
@@ -71,7 +71,7 @@ ms.locfileid: "52338737"
 1. **새 Application Insights 리소스** 페이지에서 다음 정보를 지정합니다.
 
    * Application Insights 리소스 **이름**을 입력하세요.
-   * Java 웹 응용 프로그램에 대한 **응용 프로그램 종류**를 설정합니다.
+   * Java 웹 애플리케이션에 대한 **애플리케이션 종류**를 설정합니다.
    * **구독**, **리소스 그룹** 및 **위치**를 선택합니다.
    * Azure Portal에서 리소스를 고정하려면 대시보드 옵션에 고정을 선택하십시오.
 
@@ -83,7 +83,7 @@ ms.locfileid: "52338737"
 
    ![Azure portal][AZ04]
 
-## <a name="configure-your-downloaded-spring-boot-application-to-use-application-insights"></a>Application Insights를 사용하여 다운로드한 Spring Boot 응용 프로그램 구성
+## <a name="configure-your-downloaded-spring-boot-application-to-use-application-insights"></a>Application Insights를 사용하여 다운로드한 Spring Boot 애플리케이션 구성
 
 1. 앱의 루트 디렉터리에 *POM.xml* 파일 찾고, 해당 종속성 섹션에서 다음 종속성을 추가합니다. 
 
@@ -187,7 +187,7 @@ ms.locfileid: "52338737"
 
    ![Azure Portal][AZ05]
 
-   응용 프로그램 맵 타일을 클릭하면 고급 구성 요소와 상호 작용을 볼 수 있습니다. 이는 전체 응용 프로그램의 고급 개요를 볼 수 있는 권장되는 방법입니다. 각 Spring Boot 마이크로서비스는 spring 응용 프로그램 이름으로 인식됩니다. 따라서 설정하도록 합니다.
+   애플리케이션 맵 타일을 클릭하면 고급 구성 요소와 상호 작용을 볼 수 있습니다. 이는 전체 애플리케이션의 고급 개요를 볼 수 있는 권장되는 방법입니다. 각 Spring Boot 마이크로서비스는 spring 애플리케이션 이름으로 인식됩니다. 따라서 설정하도록 합니다.
 
    ![Azure Portal][AZ08] 
 
@@ -260,7 +260,7 @@ ms.locfileid: "52338737"
   </Loggers>
 </Configuration>
 ```
-4. Spring Boot 응용 프로그램을 위와 같이 다시 빌드하고 실행합니다. 
+4. Spring Boot 애플리케이션을 위와 같이 다시 빌드하고 실행합니다. 
 
 몇 초 내로 모든 spring 로그가 Azure 포털에서 사용가능한 것으로 나타납니다. 
 

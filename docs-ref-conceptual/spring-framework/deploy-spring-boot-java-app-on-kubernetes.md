@@ -22,11 +22,11 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/27/2018
 ms.locfileid: "52338727"
 ---
-# <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Azure Kubernetes Service의 Kubernetes 클러스터에 Spring Boot 응용 프로그램 배포
+# <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Azure Kubernetes Service의 Kubernetes 클러스터에 Spring Boot 애플리케이션 배포
 
 **[Kubernetes]** 및  **[Docker]** 는 개발자가 컨테이너에서 실행 중인 응용 프로그램의 배포, 확장 및 관리를 자동화하는 데 도움이 되는 오픈 소스 솔루션입니다.
 
-이 자습서에서는 이러한 두 가지 인기 있는 오픈 소스 기술을 결합하여 Spring Boot 응용 프로그램을 개발하고 Microsoft Azure에 배포하는 과정을 안내합니다. 좀 더 구체적으로 말하면 응용 프로그램 개발을 위해 *[Spring Boot]*, 컨테이너 배포를 위해 *[Kubernetes]* 및 응용 프로그램을 호스트하기 위해 [AKS(Azure Kubernetes Service)]를 사용합니다.
+이 자습서에서는 이러한 두 가지 인기 있는 오픈 소스 기술을 결합하여 Spring Boot 애플리케이션을 개발하고 Microsoft Azure에 배포하는 과정을 안내합니다. 좀 더 구체적으로 말하면 애플리케이션 개발을 위해 *[Spring Boot]*, 컨테이너 배포를 위해 *[Kubernetes]* 및 애플리케이션을 호스트하기 위해 [AKS(Azure Kubernetes Service)]를 사용합니다.
 
 ### <a name="prerequisites"></a>필수 조건
 
@@ -317,7 +317,7 @@ Spring Boot on Docker 샘플 프로젝트에 대한 자세한 내용은 [Spring 
 
 다음 링크는 Spring Boot 응용 프로그램을 만드는 방법에 대한 추가 정보를 제공합니다.
 
-* 간단한 Spring Boot 응용 프로그램 만들기에 대한 자세한 내용은 https://start.spring.io/에서 Spring Initializr를 참조하세요.
+* 간단한 Spring Boot 애플리케이션 만들기에 대한 자세한 내용은 https://start.spring.io/에서 Spring Initializr를 참조하세요.
 
 다음 링크는 Azure에서 Kubernetes를 사용하는 방법에 대한 추가 정보를 제공합니다.
 
