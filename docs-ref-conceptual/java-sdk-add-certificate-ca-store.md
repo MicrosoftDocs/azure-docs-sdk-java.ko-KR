@@ -22,7 +22,7 @@ ms.locfileid: "52339047"
 ---
 # <a name="adding-a-root-certificate-to-the-java-ca-certificates-store"></a>Java CA 인증서 저장소에 루트 인증서 추가
 
-Azure 서비스(예: Azure Service Bus)를 사용하는 응용 프로그램은 Baltimore CyberTrust Root 인증서를 신뢰해야 합니다. 이 인증서는 시스템에 이미 설치되어 있을 수도 있지만, 이 자습서의 단계에서는 오라클의  **keytool**을 사용하여 Java CA(cacerts) 저장소에 Azure 서비스에 사용할 필요한 CA(인증 기관) 루트 인증서를 추가하는 방법을 보여줍니다.
+Azure 서비스(예: Azure Service Bus)를 사용하는 애플리케이션은 Baltimore CyberTrust Root 인증서를 신뢰해야 합니다. 이 인증서는 시스템에 이미 설치되어 있을 수도 있지만, 이 자습서의 단계에서는 오라클의  **keytool**을 사용하여 Java CA(cacerts) 저장소에 Azure 서비스에 사용할 필요한 CA(인증 기관) 루트 인증서를 추가하는 방법을 보여줍니다.
 
 오라클의 keytool 유틸리티는 _키 및 인증서 관리 도구_이며, 개발자는 Java에서 사용할 신뢰할 수 있는 인증서 목록을 관리할 수 있습니다. JDK를 압축하고 Azure 프로젝트의 **approot** 폴더에 추가하기 전에 keytool을 사용하여 CA 인증서를 추가하거나 keytool을 사용하여 인증서를 추가하는 Azure 시작 작업을 실행할 수 있습니다.
 

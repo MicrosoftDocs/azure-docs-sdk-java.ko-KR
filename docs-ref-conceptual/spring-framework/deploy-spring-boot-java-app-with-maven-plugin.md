@@ -36,7 +36,7 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [무료 계정](https:/
 
 ## <a name="install-and-sign-in-to-azure-cli"></a>Azure CLI 설치 및 로그인
 
-Maven Plugin이 Spring Boot 응용프로그램을 배포하도록 하는 가장 간단하고 쉬운 방법은 [ Azure CLI](https://docs.microsoft.com/cli/azure/)를 사용하는 것입니다.
+Maven Plugin이 Spring Boot 애플리케이션을 배포하도록 하는 가장 간단하고 쉬운 방법은 [ Azure CLI](https://docs.microsoft.com/cli/azure/)를 사용하는 것입니다.
 
 Azure CLI를 사용하여 Azure 계정에 로그인합니다.
    

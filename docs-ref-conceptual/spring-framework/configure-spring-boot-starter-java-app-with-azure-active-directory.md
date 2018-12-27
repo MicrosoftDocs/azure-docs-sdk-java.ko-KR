@@ -207,7 +207,7 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
    | 매개 변수 | 설명 |
    |---|---|
    | `azure.activedirectory.tenant-id` | 앞에 나온 Active Directory의 **디렉터리 ID** 포함합니다. |
-   | `spring.security.oauth2.client.registration.azure.client-id` | 앞에서 완료한 앱 등록의 **응용프로그램 ID**를 포함합니다. |
+   | `spring.security.oauth2.client.registration.azure.client-id` | 앞에서 완료한 앱 등록의 **애플리케이션 ID**를 포함합니다. |
    | `spring.security.oauth2.client.registration.azure.client-secret` | 앞에서 완료한 앱 등록 키의 **값**을 포함합니다. |
    | `azure.activedirectory.active-directory-groups` | 권한 부여에 사용할 Active Directory 그룹 목록을 포함합니다. |
 
@@ -323,9 +323,9 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
 
    ![사용 중인 애플리케이션 빌드][build-application]
 
-1. 응용프로그램이 Maven에서 빌드 및 시작되고 나면, <http://localhost:8080>을 웹 브라우저에서 엽니다. 사용자 이름 및 암호 입력 메시지가 나타납니다.
+1. 애플리케이션이 Maven에서 빌드 및 시작되고 나면, <http://localhost:8080>을 웹 브라우저에서 엽니다. 사용자 이름 및 암호 입력 메시지가 나타납니다.
 
-   ![응용프로그램에 로그인][application-login]
+   ![애플리케이션에 로그인][application-login]
 
    > [!NOTE]
    > 
