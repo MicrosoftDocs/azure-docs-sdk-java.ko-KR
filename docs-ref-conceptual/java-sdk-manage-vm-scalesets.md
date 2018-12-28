@@ -17,7 +17,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/09/2018
 ms.locfileid: "48893494"
 ---
-# <a name="manage-azure-virtual-machine-scale-sets-from-your-java-applications"></a>Java 응용 프로그램에서 Azure 가상 머신 확장 집합 관리
+# <a name="manage-azure-virtual-machine-scale-sets-from-your-java-applications"></a>Java 애플리케이션에서 Azure 가상 머신 확장 세트 관리
 
 [이 샘플](https://github.com/Azure-Samples/compute-java-manage-virtual-machine-scale-sets)에서는 [Java 관리 라이브러리](https://github.com/Azure/azure-sdk-for-java)를 사용하여 [가상 머신 확장 집합](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-overview)을 만듭니다. 
 

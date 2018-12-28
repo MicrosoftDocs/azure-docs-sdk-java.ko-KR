@@ -74,7 +74,7 @@ Azure Batch 관리 라이브러리를 사용하여 Batch 계정을 만들고 삭
 
 ### <a name="example"></a>예
 
-Azure Batch 계정을 만들고, 새 응용 프로그램 및 Azure 저장소 계정을 구성합니다.
+Azure Batch 계정을 만들고, 새 애플리케이션 및 Azure Storage 계정을 구성합니다.
 
 ```java
 BatchAccount batchAccount = azure.batchAccounts().define("newBatchAcct")

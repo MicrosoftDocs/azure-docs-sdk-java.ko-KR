@@ -20,6 +20,6 @@ ms.locfileid: "48893644"
 ---
 # <a name="java-samples-for-azure-container-service"></a>Azure Container Service용 Java 샘플
 
-다음 표는 컨테이너에서 실행 중인 응용 프로그램을 만들고 구성하는 데 사용할 수 있는 Java 소스에 연결됩니다.
+다음 표는 컨테이너에서 실행 중인 애플리케이션을 만들고 구성하는 데 사용할 수 있는 Java 소스에 연결됩니다.
 
 [!INCLUDE [java-container-samples](includes/java-container-samples.md)]

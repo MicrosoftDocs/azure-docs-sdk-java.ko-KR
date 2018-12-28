@@ -42,7 +42,7 @@ ms.locfileid: "48899458"
 컴퓨팅  | 가상 머신 및 VM 확장, 가상 머신 확장 집합, 관리 디스크   | Azure 컨테이너 서비스, Azure 컨테이너 레지스트리 
 Storage   |  Storage 계정       |    암호화     
 SQL Database  | 데이터베이스, 방화벽, 탄력적 풀              
-네트워킹    |  가상 네트워크, 네트워크 인터페이스, IP 주소, 라우팅 테이블, 네트워크 보안 그룹, DNS, Traffic Manager, 응용 프로그램 게이트웨이  |    부하 분산 장치, 네트워크 피어링, Virtual Network 게이트웨이, 네트워크 감시자 
+네트워킹    |  가상 네트워크, 네트워크 인터페이스, IP 주소, 라우팅 테이블, 네트워크 보안 그룹, DNS, Traffic Manager, 애플리케이션 게이트웨이  |    부하 분산 장치, 네트워크 피어링, Virtual Network 게이트웨이, 네트워크 감시자 
 더 많은 서비스    |  리소스 관리자, Key Vault, Redis, CDN, Batch       |  웹앱, 함수 앱, Service Bus, Graph RBAC, Cosmos DB, 검색  
 기본 사항     |   인증 - 코어, 비동기 메서드, 관리되는 서비스 ID      |      |
 

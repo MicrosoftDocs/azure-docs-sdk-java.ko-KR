@@ -16,7 +16,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/09/2018
 ms.locfileid: "48893214"
 ---
-# <a name="create-virtual-machines-across-multiple-regions-from-your-java-applications"></a>Java 응용 프로그램에서 여러 지역에 가상 머신 만들기
+# <a name="create-virtual-machines-across-multiple-regions-from-your-java-applications"></a>Java 애플리케이션에서 여러 지역에 가상 머신 만들기
 
 [이 샘플](https://github.com/Azure-Samples/compute-java-create-virtual-machines-across-regions-in-parallel)에서는 [Java용 Azure 관리 라이브러리](https://github.com/Azure/azure-sdk-for-java)를 사용하여 서로 다른 Azure 지역에서 동시에 가상 머신을 만듭니다.
 

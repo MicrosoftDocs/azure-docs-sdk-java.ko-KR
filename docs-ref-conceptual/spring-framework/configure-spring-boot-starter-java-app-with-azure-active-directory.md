@@ -314,7 +314,7 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
 
 1. 명령 프롬프트를 열고 디렉터리를 앱의 *pom.xml* 파일이 위치한 폴더로 변경합니다. 
 
-1. Maven을 사용하여 Spring Boot 응용 프로그램을 빌드하고 실행합니다. 예:
+1. Maven을 사용하여 Spring Boot 애플리케이션을 빌드하고 실행합니다. 예:
 
    ```shell
    mvn clean package

@@ -28,7 +28,7 @@ Azure App Service를 시작하려면 [Azure에서 첫 번째 Java 웹앱 만들�
 
 ## <a name="management-api"></a>관리 API
 
-관리 API를 사용하여 Azure App Service에서 응용 프로그램을 배포, 크기 조정 및 구성합니다.
+관리 API를 사용하여 Azure App Service에서 애플리케이션을 배포, 크기 조정 및 구성합니다.
 
 `pom.xml` Maven 파일에 [종속성을 추가](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)하여 프로젝트에서 관리 API를 사용합니다.
 

@@ -56,7 +56,7 @@ JsonWebKey jsonKey = returnedKeyBundle.key();
 
 ## <a name="management-api"></a>관리 API
 
-Azure Key Vault 관리 라이브러리를 사용하여 키 자격 증명 모음을 만들고, 응용 프로그램에 권한을 부여하고, 권한을 관리합니다. 
+Azure Key Vault 관리 라이브러리를 사용하여 키 자격 증명 모음을 만들고, 애플리케이션에 권한을 부여하고, 권한을 관리합니다. 
 
 `pom.xml` Maven 파일에 [종속성을 추가](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)하여 프로젝트에서 관리 API를 사용합니다.  
 

@@ -17,7 +17,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/09/2018
 ms.locfileid: "48893614"
 ---
-# <a name="manage-azure-virtual-machines-from-your-java-applications"></a>Java 응용 프로그램에서 Azure 가상 머신 관리
+# <a name="manage-azure-virtual-machines-from-your-java-applications"></a>Java 애플리케이션에서 Azure 가상 머신 관리
 
 [이 샘플](https://github.com/Azure-Samples/compute-java-manage-vm/)에서는 [Java용 Azure 관리 라이브러리](https://github.com/Azure/azure-sdk-for-java)를 사용하여 Azure 가상 머신을 만들고 작동합니다.
 

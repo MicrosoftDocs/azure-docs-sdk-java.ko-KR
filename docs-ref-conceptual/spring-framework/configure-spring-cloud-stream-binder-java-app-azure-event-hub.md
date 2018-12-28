@@ -102,7 +102,7 @@ ms.locfileid: "52338897"
 
 1. 위에 열거된 이러한 옵션을 지정한 경우 **만들기**를 클릭하여 저장소 계정을 만듭니다.
 
-## <a name="create-a-simple-spring-boot-application-with-the-spring-initializr"></a>Spring Initializr를 사용하여 간단한 Spring Boot 응용 프로그램 만들기
+## <a name="create-a-simple-spring-boot-application-with-the-spring-initializr"></a>Spring Initializr를 사용하여 간단한 Spring Boot 애플리케이션 만들기
 
 1. <https://start.spring.io/>로 이동합니다.
 
@@ -269,7 +269,7 @@ ms.locfileid: "52338897"
 
 이 섹션에서는 이벤트를 이벤트 허브에 보내는 데 필요한 Java 클래스를 만듭니다.
 
-### <a name="modify-the-main-application-class"></a>기본 응용 프로그램 클래스 수정
+### <a name="modify-the-main-application-class"></a>기본 애플리케이션 클래스 수정
 
 1. 앱의 패키지 디렉터리에서 기본 응용 프로그램 Java 파일을 찾습니다. 예:
 
@@ -279,7 +279,7 @@ ms.locfileid: "52338897"
 
    `/users/example/home/eventhub/src/main/java/com/wingtiptoys/eventhub/EventhubApplication.java`
 
-1. 텍스트 편집기에서 응용 프로그램 Java 파일을 열고 다음 줄을 파일에 추가합니다.
+1. 텍스트 편집기에서 애플리케이션 Java 파일을 열고 다음 줄을 파일에 추가합니다.
 
    ```java
    package com.wingtiptoys.eventhub;
@@ -295,7 +295,7 @@ ms.locfileid: "52338897"
    }
    ```
 
-1. 기본 응용 프로그램 Java 파일을 저장하고 닫습니다.
+1. 기본 애플리케이션 Java 파일을 저장하고 닫습니다.
 
 ### <a name="create-a-new-class-for-the-source-connector"></a>원본 커넥터에 대한 새 클래스 만들기
 
@@ -374,7 +374,7 @@ ms.locfileid: "52338897"
 
    `cd /users/example/home/eventhub`
 
-1. Maven을 사용하여 Spring Boot 응용 프로그램을 빌드하고 실행합니다. 예:
+1. Maven을 사용하여 Spring Boot 애플리케이션을 빌드하고 실행합니다. 예:
 
    ```shell
    mvn clean package
@@ -405,7 +405,7 @@ Event Hub 스트림 바인더에 대한 Azure 지원에 대한 자세한 내용�
 
 Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 개발자용 Azure] 및 [Visual Studio Team Services용 Java 도구]를 참조하세요.
 
-**[Spring Framework]** 는 Java 개발자가 엔터프라이즈 수준의 응용 프로그램을 만드는 데 도움이 되는 오픈 소스 솔루션입니다. 해당 플랫폼을 기반으로 하여 빌드되는 인기 있는 프로젝트 중 하나가 [Spring Boot]입니다. 이 프로젝트는 독립 실행형 Java 응용 프로그램을 만드는 간단한 방법을 제공합니다. Spring Boot을 시작하는 개발자를 도우려면 <https://github.com/spring-guides/>에서 몇 가지 샘플 Spring Boot 패키지를 사용할 있습니다. 기본 Spring Boot 프로젝트 목록에서 선택하는 것 외에도 **[Spring Initializr]** 를 통해 사용자 지정 Spring Boot 응용 프로그램을 만들기 시작하는 개발자에게 도움을 줍니다.
+**[Spring Framework]** 는 Java 개발자가 엔터프라이즈 수준의 응용 프로그램을 만드는 데 도움이 되는 오픈 소스 솔루션입니다. 해당 플랫폼을 기반으로 하여 빌드되는 인기 있는 프로젝트 중 하나가 [Spring Boot]입니다. 이 프로젝트는 독립 실행형 Java 애플리케이션을 만드는 간단한 방법을 제공합니다. Spring Boot을 시작하는 개발자를 도우려면 <https://github.com/spring-guides/>에서 몇 가지 샘플 Spring Boot 패키지를 사용할 있습니다. 기본 Spring Boot 프로젝트 목록에서 선택하는 것 외에도 **[Spring Initializr]** 를 통해 사용자 지정 Spring Boot 애플리케이션을 만들기 시작하는 개발자에게 도움을 줍니다.
 
 <!-- URL List -->
 

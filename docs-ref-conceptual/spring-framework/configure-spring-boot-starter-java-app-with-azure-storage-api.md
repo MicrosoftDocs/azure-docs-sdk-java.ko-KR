@@ -36,7 +36,7 @@ ms.locfileid: "52339057"
 * 지원되는 JDK(Java Development Kit) Azure에서 개발하는 경우 사용할 수 있는 JDK에 대한 자세한 내용은 <https://aka.ms/azure-jdks>를 참조하세요.
 * [Apache Maven](http://maven.apache.org/), 버전 3.0 이상
 
-## <a name="create-a-custom-application-using-the-spring-initializr"></a>Spring Initializr를 사용하여 사용자 지정 응용 프로그램 만들기
+## <a name="create-a-custom-application-using-the-spring-initializr"></a>Spring Initializr를 사용하여 사용자 지정 애플리케이션 만들기
 
 1. <https://start.spring.io/>로 이동합니다.
 

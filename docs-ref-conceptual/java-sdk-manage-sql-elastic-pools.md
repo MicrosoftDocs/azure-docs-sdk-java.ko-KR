@@ -17,7 +17,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/09/2018
 ms.locfileid: "48893574"
 ---
-# <a name="manage-azure-sql-databases-in-elastic-pools-from-your-java-applications"></a>Java 응용 프로그램에서 탄력적 풀의 Azure SQL 데이터베이스 관리
+# <a name="manage-azure-sql-databases-in-elastic-pools-from-your-java-applications"></a>Java 애플리케이션에서 탄력적 풀의 Azure SQL 데이터베이스 관리
 
 [이 샘플](https://github.com/Azure-Samples/sql-database-java-manage-sql-dbs-in-elastic-pool)에서는 단일 계획에서 여러 데이터베이스의 리소스를 관리하고 크기 조정할 수 있는 [탄력적 풀](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool)이 있는 SQL 데이터베이스 서버를 만듭니다.
 

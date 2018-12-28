@@ -34,7 +34,7 @@ String url = "jdbc:sqlserver://myazuredb.database.windows.net:1433;" +
         Connection conn = DriverManager.getConnection(url);
 ```
 
-Azure Storage는 저장소 키를 사용하여 응용 프로그램에 권한을 부여합니다.
+Azure Storage는 스토리지 키를 사용하여 애플리케이션에 권한을 부여합니다.
 
 ```java
 final String storageConnection = "DefaultEndpointsProtocol=https;"
@@ -59,13 +59,13 @@ final String storageConnection = "DefaultEndpointsProtocol=https;"
         + ";EndpointSuffix=core.windows.net";
 ```
 
-다른 라이브러리에서는 권한이 부여된 자격 증명을 사용하여 응용 프로그램 실행 권한을 부여하는 [서비스 사용자](https://docs.microsoft.com/azure/active-directory/develop/active-directory-application-objects)를 통해 응용 프로그램을 실행해야 합니다. 이 구성은 아래에서 나열하는 관리 라이브러리에 대한 개체 기반 인증 단계와 비슷합니다.
+다른 라이브러리에서는 권한이 부여된 자격 증명을 사용하여 애플리케이션 실행 권한을 부여하는 [서비스 사용자](https://docs.microsoft.com/azure/active-directory/develop/active-directory-application-objects)를 통해 애플리케이션을 실행해야 합니다. 이 구성은 아래에서 나열하는 관리 라이브러리에 대한 개체 기반 인증 단계와 비슷합니다.
 
 <a name="mgmt-auth"></a>
 
 ##  <a name="authenticate-with-the-azure-management-libraries-for-java"></a>Java용 Azure 관리 라이브러리를 사용하여 인증
 
-Java 관리 라이브러리를 사용하여 리소스를 만들고 관리할 때 Azure를 통해 응용 프로그램을 인증하는 데에는 두 가지 옵션을 사용할 수 있습니다.
+Java 관리 라이브러리를 사용하여 리소스를 만들고 관리할 때 Azure를 통해 애플리케이션을 인증하는 데에는 두 가지 옵션을 사용할 수 있습니다.
 
 ### <a name="authenticate-with-an-applicationtokencredentials-object"></a>ApplicationTokenCredentials 개체를 사용하여 인증
 
@@ -112,7 +112,7 @@ graphURL=https\://graph.windows.net/
 ```
 
 - subscription: Azure CLI 2.0에서 `az account show`의 *id* 값을 사용합니다.
-- client: 응용 프로그램을 실행하기 위해 만든 서비스 사용자에서 가져온 출력의 *appId* 값을 사용합니다. 앱에 대한 서비스 사용자가 없는 경우 [Azure CLI 2.0을 사용하여 서비스 사용자를 만듭니다](https://docs.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli).
+- client: 애플리케이션을 실행하기 위해 만든 서비스 사용자에서 가져온 출력의 *appId* 값을 사용합니다. 앱에 대한 서비스 사용자가 없는 경우 [Azure CLI 2.0을 사용하여 서비스 사용자를 만듭니다](https://docs.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli).
 - key: 서비스 사용자 만들기 CLI 출력의 *password* 값을 사용합니다. 
 - tenant: 서비스 사용자 만들기 CLI 출력의 *tenant* 값을 사용합니다.
 

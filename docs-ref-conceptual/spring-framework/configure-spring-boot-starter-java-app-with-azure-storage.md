@@ -73,7 +73,7 @@ ms.locfileid: "52338877"
 
    ![Blob 컨테이너 목록 검토][IMG05]
 
-## <a name="create-a-simple-spring-boot-application-with-the-spring-initializr"></a>Spring Initializr를 사용하여 간단한 Spring Boot 응용 프로그램 만들기
+## <a name="create-a-simple-spring-boot-application-with-the-spring-initializr"></a>Spring Initializr를 사용하여 간단한 Spring Boot 애플리케이션 만들기
 
 1. <https://start.spring.io/>로 이동합니다.
 
@@ -231,7 +231,7 @@ ms.locfileid: "52338877"
 
 이 섹션에서는 Azure 저장소 계정에서 Blob를 저장하는 데 필요한 Java 클래스를 만듭니다.
 
-### <a name="modify-the-main-application-class"></a>기본 응용 프로그램 클래스 수정
+### <a name="modify-the-main-application-class"></a>기본 애플리케이션 클래스 수정
 
 1. 앱의 패키지 디렉터리에서 기본 응용 프로그램 Java 파일을 찾습니다. 예:
 
@@ -241,7 +241,7 @@ ms.locfileid: "52338877"
 
    `/users/example/home/storage/src/main/java/com/wingtiptoys/storage/StorageApplication.java`
 
-1. 텍스트 편집기에서 응용 프로그램 Java 파일을 열고 다음 줄을 파일에 추가합니다.
+1. 텍스트 편집기에서 애플리케이션 Java 파일을 열고 다음 줄을 파일에 추가합니다.
 
    ```java
    package com.wingtiptoys.storage;
@@ -257,7 +257,7 @@ ms.locfileid: "52338877"
    }
    ```
 
-1. 기본 응용 프로그램 Java 파일을 저장하고 닫습니다.
+1. 기본 애플리케이션 Java 파일을 저장하고 닫습니다.
 
 ### <a name="add-a-web-controller-class"></a>웹 컨트롤러 클래스 추가
 
@@ -322,7 +322,7 @@ ms.locfileid: "52338877"
 
    `cd /users/example/home/storage`
 
-1. Maven을 사용하여 Spring Boot 응용 프로그램을 빌드하고 실행합니다. 예:
+1. Maven을 사용하여 Spring Boot 애플리케이션을 빌드하고 실행합니다. 예:
 
    ```shell
    mvn clean package

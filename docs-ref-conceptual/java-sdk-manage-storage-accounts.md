@@ -17,7 +17,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/09/2018
 ms.locfileid: "48893065"
 ---
-# <a name="manage-azure-storage-accounts-from-your-java-applications"></a>Java 응용 프로그램에서 Azure 저장소 계정 관리
+# <a name="manage-azure-storage-accounts-from-your-java-applications"></a>Java 애플리케이션에서 Azure 스토리지 계정 관리
 
 [이 샘플](https://github.com/Azure-Samples/storage-java-manage-storage-accounts)에서는 [Azure Storage](https://docs.microsoft.com/azure/storage/storage-introduction) 계정을 만들고 [Java 관리 라이브러리](https://github.com/Azure/azure-sdk-for-java)를 사용하여 계정 액세스 키를 통해 작동합니다. 
 
@@ -68,7 +68,7 @@ List<StorageAccountKey> updatedStorageAccountKeys =
     storageAccount.regenerateKey(storageAccountKeys.get(0).keyName());
 ```
 
-새 키를 생성한 후에는 모든 Azure 리소스 및 응용 프로그램을 새 키로 업데이트해야 합니다.
+새 키를 생성한 후에는 모든 Azure 리소스 및 애플리케이션을 새 키로 업데이트해야 합니다.
 
 ## <a name="list-all-storage-accounts-in-a-resource-group"></a>리소스 그룹의 모든 저장소 계정 나열
 ```java

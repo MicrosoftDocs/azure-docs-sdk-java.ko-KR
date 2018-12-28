@@ -16,7 +16,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/09/2018
 ms.locfileid: "48893144"
 ---
-# <a name="configure-azure-app-service-deployment-sources-from-your-java-applications"></a>Java 응용 프로그램에서 Azure App Service 배포 원본 구성
+# <a name="configure-azure-app-service-deployment-sources-from-your-java-applications"></a>Java 애플리케이션에서 Azure App Service 배포 원본 구성
 
 [이 샘플 ](https://github.com/Azure-Samples/compute-java-create-virtual-machines-across-regions-in-parallel)에서는 각각 서로 다른 배포 원본을 사용하는 단일 [ Azure App Service ](https://docs.microsoft.com/azure/app-service/) 계획에서 네 가지 응용 프로그램에 코드를 배포합니다.
 
@@ -52,7 +52,7 @@ WebApp app1 = azure.webApps().define(app1Name)
 
 `withJavaVersion()` 및 `withWebContainer()`는 Tomcat 8을 사용하여 HTTP 요청을 처리하도록 App Service를 구성합니다.
 
-## <a name="deploy-a-java-application-using-ftp"></a>FTP를 사용하여 Java 응용 프로그램 배포
+## <a name="deploy-a-java-application-using-ftp"></a>FTP를 사용하여 Java 애플리케이션 배포
 ```java
 // pass the PublishingProfile that contains FTP information to a helper method 
 uploadFileToFtp(app1.getPublishingProfile(), "helloworld.war", 
@@ -79,7 +79,7 @@ private static void uploadFileToFtp(PublishingProfile profile, String fileName, 
 
 이 코드는 WAR 파일을 `/site/wwwroot/webapps` 디렉터리에 업로드합니다. Tomcat은 기본적으로 App Service에서 이 디렉터리에 배치된 WAR 파일을 배포합니다.
 
-## <a name="deploy-a-java-application-from-a-local-git-repo"></a>로컬 Git 리포지토리에서 Java 응용 프로그램 배포
+## <a name="deploy-a-java-application-from-a-local-git-repo"></a>로컬 Git 리포지토리에서 Java 애플리케이션 배포
 
 ```java
 // get the publishing profile from the App Service webapp
@@ -108,7 +108,7 @@ command.call();
 >[!NOTE]
 > 리포지토리에 있는 파일의 레이아웃은 Azure App Service에서 `/site/wwwroot/` 디렉터리 아래에 배포된 파일을 원하는 방식과 정확히 일치해야 합니다.
 
-## <a name="deploy-an-application-from-a-public-git-repo"></a>공용 Git 리포지토리에서 응용 프로그램 배포
+## <a name="deploy-an-application-from-a-public-git-repo"></a>공용 Git 리포지토리에서 애플리케이션 배포
 
 ```java
 // deploy a .NET sample app from a public GitHub repo into a new webapp
@@ -147,13 +147,13 @@ WebApp app4 = azure.webApps()
 
 ## <a name="sample-explanation"></a>샘플 설명
 
-샘플에서는 새로 만든 [표준](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview) App Service 계획에서 실행되는 Java 8 및 Tomcat 8을 사용하여 첫 번째 응용 프로그램을 만듭니다. 그런 다음 코드에서 `PublishingProfile` 개체의 정보를 사용하여 WAR 파일을 FTP로 보내고, Tomcat에서 이를 배포합니다.
+샘플에서는 새로 만든 [표준](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview) App Service 계획에서 실행되는 Java 8 및 Tomcat 8을 사용하여 첫 번째 애플리케이션을 만듭니다. 그런 다음 코드에서 `PublishingProfile` 개체의 정보를 사용하여 WAR 파일을 FTP로 보내고, Tomcat에서 이를 배포합니다.
 
-두 번째 응용 프로그램은 첫 번째 응용 프로그램과 동일한 계획에서 사용되며 Java 8/Tomcat 8 응용 프로그램으로도 구성됩니다. JGit 라이브러리에서 App Service에 매핑되는 디렉터리 구조에 압축되지 않은 Java 웹 응용 프로그램을 포함하는 폴더에 새 Git 리포지토리를 만듭니다. 새 커밋에서 새 Git 리포지토리에 폴더의 파일들을 추가하고, Git에서는 웹앱의 `PublishingProfile`에서 제공하는 원격 URL과 사용자 이름/암호를 사용하여 커밋을 Azure로 푸시합니다.
+두 번째 애플리케이션은 첫 번째 애플리케이션과 동일한 계획에서 사용되며 Java 8/Tomcat 8 애플리케이션으로도 구성됩니다. JGit 라이브러리에서 App Service에 매핑되는 디렉터리 구조에 압축되지 않은 Java 웹 애플리케이션을 포함하는 폴더에 새 Git 리포지토리를 만듭니다. 새 커밋에서 새 Git 리포지토리에 폴더의 파일들을 추가하고, Git에서는 웹앱의 `PublishingProfile`에서 제공하는 원격 URL과 사용자 이름/암호를 사용하여 커밋을 Azure로 푸시합니다.
 
-세 번째 응용 프로그램은 Java 및 Tomcat용으로 구성되지 않습니다. 대신 공용 GitHub 리포지토리의 .NET 샘플은 원본에서 직접 배포됩니다.
+세 번째 애플리케이션은 Java 및 Tomcat용으로 구성되지 않습니다. 대신 공용 GitHub 리포지토리의 .NET 샘플은 원본에서 직접 배포됩니다.
 
-네 번째 응용 프로그램은 변경 내용을 푸시하거나 GitHub 리포지토리의 마스터 분기로 끌어오기 요청을 병합할 때마다 마스터 분기에 코드를 배포합니다.
+네 번째 애플리케이션은 변경 내용을 푸시하거나 GitHub 리포지토리의 마스터 분기로 끌어오기 요청을 병합할 때마다 마스터 분기에 코드를 배포합니다.
 
 | 샘플에 사용되는 클래스 | 메모
 |-------|-------|

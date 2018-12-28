@@ -69,7 +69,7 @@ Spring 데이터 Gremlin Starter는 개발자가 Gremlin 호환 데이터 저장
 
    ![모든 리소스][AZ04]
 
-1. 데이터베이스에 대한 속성 페이지가 표시되면 **액세스 키**를 클릭하고 데이터베이스에 대한 URI 및 액세스 키를 복사합니다. 이러한 값은 Spring Boot 응용 프로그램에서 사용하게 됩니다.
+1. 데이터베이스에 대한 속성 페이지가 표시되면 **액세스 키**를 클릭하고 데이터베이스에 대한 URI 및 액세스 키를 복사합니다. 이러한 값은 Spring Boot 애플리케이션에서 사용하게 됩니다.
 
    ![액세스 키][AZ05]
 
@@ -94,7 +94,7 @@ Spring 데이터 Gremlin Starter는 개발자가 Gremlin 호환 데이터 저장
 
    ![Graph 속성 표시][AZ08]
 
-## <a name="create-a-simple-spring-boot-application-with-the-spring-initializr"></a>Spring Initializr를 사용하여 간단한 Spring Boot 응용 프로그램 만들기
+## <a name="create-a-simple-spring-boot-application-with-the-spring-initializr"></a>Spring Initializr를 사용하여 간단한 Spring Boot 애플리케이션 만들기
 
 1. <https://start.spring.io/>로 이동합니다.
 
@@ -180,7 +180,7 @@ Spring 데이터 Gremlin Starter는 개발자가 Gremlin 호환 데이터 저장
 
 이 섹션에서는 데이터베이스에서 데이터를 저장 하는 데 필요한 Java 클래스를 만듭니다.
 
-### <a name="modify-the-main-application-class"></a>기본 응용 프로그램 클래스 수정
+### <a name="modify-the-main-application-class"></a>기본 애플리케이션 클래스 수정
 
 1. 앱의 패키지 디렉터리에서 기본 응용 프로그램 Java 파일을 찾습니다. 예:
 
@@ -192,7 +192,7 @@ Spring 데이터 Gremlin Starter는 개발자가 Gremlin 호환 데이터 저장
 
    ![응용 프로그램 Java 파일 찾기][JV01]
 
-1. 텍스트 편집기에서 응용 프로그램 Java 파일을 열고 다음 줄을 파일에 추가합니다.
+1. 텍스트 편집기에서 애플리케이션 Java 파일을 열고 다음 줄을 파일에 추가합니다.
 
    ```java
    package com.example.wingtiptoysdata;
@@ -275,7 +275,7 @@ Spring 데이터 Gremlin Starter는 개발자가 Gremlin 호환 데이터 저장
    }
    ```
 
-1. 기본 응용 프로그램 Java 파일을 저장하고 닫습니다.
+1. 기본 애플리케이션 Java 파일을 저장하고 닫습니다.
 
 ### <a name="define-a-basic-class-for-storing-configuration-information"></a>구성 정보를 저장하기 위한 기본 클래스를 정의 합니다.
 
@@ -497,7 +497,7 @@ Spring 데이터 Gremlin Starter는 개발자가 Gremlin 호환 데이터 저장
 
    `cd /users/example/home/wingtiptoysdata`
 
-1. Maven을 사용하여 Spring Boot 응용 프로그램을 빌드하고 실행합니다. 예:
+1. Maven을 사용하여 Spring Boot 애플리케이션을 빌드하고 실행합니다. 예:
 
    ```shell
    mvn clean package
@@ -530,7 +530,7 @@ Azure Cosmos DB 및 Java를 사용하는 방법에 대한 자세한 내용은 �
 
 * [Azure Cosmos DB SQL API용 Spring 데이터]
 
-Azure에서 Spring Boot 응용 프로그램을 사용 하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
+Azure에서 Spring Boot 애플리케이션을 사용 하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
 
 * [Azure App Service에 Spring Boot 응용 프로그램 배포](deploy-spring-boot-java-web-app-on-azure.md)
 
@@ -538,7 +538,7 @@ Azure에서 Spring Boot 응용 프로그램을 사용 하는 방법에 대한 �
 
 Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 개발자용 Azure] 및 [Visual Studio Team Services용 Java 도구]를 참조하세요.
 
-**[Spring Framework]** 는 Java 개발자가 엔터프라이즈 수준의 응용 프로그램을 만드는 데 도움이 되는 오픈 소스 솔루션입니다. 해당 플랫폼을 기반으로 하여 빌드되는 인기 있는 프로젝트 중 하나가 [Spring Boot]입니다. 이 프로젝트는 독립 실행형 Java 응용 프로그램을 만드는 간단한 방법을 제공합니다. Spring Boot을 시작하는 개발자를 도우려면 <https://github.com/spring-guides/>에서 몇 가지 샘플 Spring Boot 패키지를 사용할 있습니다. 기본 Spring Boot 프로젝트 목록에서 선택하는 것 외에도 **[Spring Initializr]** 를 통해 사용자 지정 Spring Boot 응용 프로그램을 만들기 시작하는 개발자에게 도움을 줍니다.
+**[Spring Framework]** 는 Java 개발자가 엔터프라이즈 수준의 응용 프로그램을 만드는 데 도움이 되는 오픈 소스 솔루션입니다. 해당 플랫폼을 기반으로 하여 빌드되는 인기 있는 프로젝트 중 하나가 [Spring Boot]입니다. 이 프로젝트는 독립 실행형 Java 애플리케이션을 만드는 간단한 방법을 제공합니다. Spring Boot을 시작하는 개발자를 도우려면 <https://github.com/spring-guides/>에서 몇 가지 샘플 Spring Boot 패키지를 사용할 있습니다. 기본 Spring Boot 프로젝트 목록에서 선택하는 것 외에도 **[Spring Initializr]** 를 통해 사용자 지정 Spring Boot 애플리케이션을 만들기 시작하는 개발자에게 도움을 줍니다.
 
 
 <!-- URL List -->

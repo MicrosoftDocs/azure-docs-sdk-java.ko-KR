@@ -32,7 +32,7 @@ ms.locfileid: "44040261"
 
 ## <a name="set-up-authentication"></a>인증 설정
 
-이 자습서에서 샘플 코드를 실행하려면 Azure 구독에 대한 읽기 및 만들기 권한이 Java 응용 프로그램에 필요합니다. 서비스 사용자를 만들고 해당 자격 증명을 사용하여 실행되도록 응용 프로그램을 구성합니다. 서비스 사용자는 앱에서 실행하는 데 필요한 권한만 부여하는 ID와 연결되는 비대화형 계정을 만드는 방법을 제공합니다.
+이 자습서에서 샘플 코드를 실행하려면 Azure 구독에 대한 읽기 및 만들기 권한이 Java 애플리케이션에 필요합니다. 서비스 사용자를 만들고 해당 자격 증명을 사용하여 실행되도록 애플리케이션을 구성합니다. 서비스 사용자는 앱에서 실행하는 데 필요한 권한만 부여하는 ID와 연결되는 비대화형 계정을 만드는 방법을 제공합니다.
 
 [Azure CLI 2.0을 사용하여 서비스 사용자를 만들고](/cli/azure/create-an-azure-service-principal-azure-cli) 출력을 캡처합니다. 암호 인수에 `MY_SECURE_PASSWORD` 대신 [보안 암호](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy)를 제공합니다. 암호는 8~16자이고 다음 4개 기준 중 3개 이상에 부합해야 합니다.
 
@@ -255,7 +255,7 @@ az group delete --name sampleVmResourceGroup
 
 ## <a name="deploy-a-web-app-from-a-github-repo"></a>GitHub 리포지토리에서 웹앱 배포
 
-`AzureApp.java`의 main 메서드를 아래 코드로 바꾸고, 이 코드를 실행하기 전에 `appName` 변수를 고유한 값으로 업데이트합니다. 이 코드에서는 공용 GitHub 리포지토리의 `master` 분기에 있는 웹 응용 프로그램을 체험 가격 책정 계층에서 실행되는 새 [Azure App Service 웹앱](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview)으로 배포합니다.
+`AzureApp.java`의 main 메서드를 아래 코드로 바꾸고, 이 코드를 실행하기 전에 `appName` 변수를 고유한 값으로 업데이트합니다. 이 코드에서는 공용 GitHub 리포지토리의 `master` 분기에 있는 웹 애플리케이션을 체험 가격 책정 계층에서 실행되는 새 [Azure App Service 웹앱](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview)으로 배포합니다.
 
 ```java
     public static void main(String[] args) {
@@ -293,7 +293,7 @@ Maven을 사용하기 전에 다음 코드를 실행합니다.
 mvn clean compile exec:java
 ```
 
-CLI를 사용하여 응용 프로그램을 가리키는 브라우저를 엽니다.
+CLI를 사용하여 애플리케이션을 가리키는 브라우저를 엽니다.
 
 ```azurecli-interactive
 az appservice web browse --resource-group sampleWebResourceGroup --name YOUR_APP_NAME

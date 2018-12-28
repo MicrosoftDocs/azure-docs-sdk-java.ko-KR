@@ -41,7 +41,7 @@ Azure AD를 시작하려면 [Azure AD에서 Java 웹앱 로그인 및 로그아�
 
 ### <a name="example"></a>예
 
-Azure Active Directory의 [Graph API](https://docs.microsoft.com/azure/active-directory/develop/active-directory-graph-api)를 사용하여 Active Directory 테넌트에서 사용자에 대한 JWT(JSON Web Token)를 검색합니다. 그런 다음 이 토큰을 사용하여 응용 프로그램 또는 API를 통해 해당 사용자를 인증할 수 있습니다.
+Azure Active Directory의 [Graph API](https://docs.microsoft.com/azure/active-directory/develop/active-directory-graph-api)를 사용하여 Active Directory 테넌트에서 사용자에 대한 JWT(JSON Web Token)를 검색합니다. 그런 다음, 이 토큰을 사용하여 애플리케이션 또는 API를 통해 해당 사용자를 인증할 수 있습니다.
 
 ```java
 ExecutorService service = Executors.newFixedThreadPool(1);

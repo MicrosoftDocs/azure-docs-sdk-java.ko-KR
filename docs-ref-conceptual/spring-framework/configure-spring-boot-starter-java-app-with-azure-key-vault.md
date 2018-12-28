@@ -315,7 +315,7 @@ Azure Key Vaults를 사용하는 방법에 대한 자세한 내용은 다음 문
 
 * [Azure Key Vault 시작]
 
-Azure에서 Spring Boot 응용 프로그램을 사용 하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
+Azure에서 Spring Boot 애플리케이션을 사용 하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
 
 * [Azure App Service에 Spring Boot 응용 프로그램 배포](deploy-spring-boot-java-web-app-on-azure.md)
 

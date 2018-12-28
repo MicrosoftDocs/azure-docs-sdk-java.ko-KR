@@ -23,7 +23,7 @@ ms.locfileid: "48893654"
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>IntelliJ용 Azure 도구 키트를 사용하여 웹앱을 Docker 컨테이너로 게시
 
-Docker 컨테이너는 웹 응용 프로그램을 배포하는 데 널리 사용되는 방법입니다. 개발자는 Docker 컨테이너를 통해 모든 프로젝트 파일과 종속성을 서버에 배포할 단일 패키지로 통합할 수 있습니다. IntelliJ용 Azure 도구 키트는 Microsoft Azure에 배포를 위한 *Docker 컨테이너로 게시* 기능을 추가함으로써 Java 개발자들을 위해 이 프로세스를 간소화합니다. 이 문서에서는 Azure에 응용 프로그램을 Docker 컨테이너로 게시하는 데 필요한 단계를 안내합니다.
+Docker 컨테이너는 웹 응용 프로그램을 배포하는 데 널리 사용되는 방법입니다. 개발자는 Docker 컨테이너를 통해 모든 프로젝트 파일과 종속성을 서버에 배포할 단일 패키지로 통합할 수 있습니다. IntelliJ용 Azure 도구 키트는 Microsoft Azure에 배포를 위한 *Docker 컨테이너로 게시* 기능을 추가함으로써 Java 개발자들을 위해 이 프로세스를 간소화합니다. 이 문서에서는 Azure에 애플리케이션을 Docker 컨테이너로 게시하는 데 필요한 단계를 안내합니다.
 
 > [!NOTE]
 >

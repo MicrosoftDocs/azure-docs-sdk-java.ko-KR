@@ -23,17 +23,17 @@ ms.locfileid: "52338707"
 ---
 # <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>IntelliJ용 Azure 도구 키트를 사용하여 Spring Boot 앱을 Docker 컨테이너로 게시
 
-[Spring Framework]는 Java 개발자가 엔터프라이즈 수준의 응용 프로그램을 만드는 데 도움이 되는 오픈 소스 솔루션입니다. 해당 플랫폼을 기반으로 하여 빌드되는 인기 있는 프로젝트 중 하나가 [Spring Boot]입니다. 이 프로젝트는 독립 실행형 Java 응용 프로그램을 만드는 간단한 방법을 제공합니다.
+[Spring Framework]는 Java 개발자가 엔터프라이즈 수준의 응용 프로그램을 만드는 데 도움이 되는 오픈 소스 솔루션입니다. 해당 플랫폼을 기반으로 하여 빌드되는 인기 있는 프로젝트 중 하나가 [Spring Boot]입니다. 이 프로젝트는 독립 실행형 Java 애플리케이션을 만드는 간단한 방법을 제공합니다.
 
 [Docker]는 개발자가 컨테이너에서 실행되는 응용 프로그램의 배포, 크기 조정 및 관리를 자동화하는 데 도움이 되는 오픈 소스 솔루션입니다.
 
-이 자습서에서는 IntelliJ용 Azure 도구 키트를 사용하여 Microsoft Azure에 Docker 컨테이너로 Spring Boot 응용 프로그램을 배포하는 단계를 안내합니다.
+이 자습서에서는 Azure Toolkit for IntelliJ를 사용하여 Microsoft Azure에 Docker 컨테이너로 Spring Boot 애플리케이션을 배포하는 단계를 안내합니다.
 
 [!INCLUDE [azure-toolkit-for-intellij-prerequisites](../includes/azure-toolkit-for-intellij-prerequisites.md)]
 
 ## <a name="clone-the-default-spring-boot-docker-repo"></a>기본 Spring Boot Docker 리포지토리 복제
 
-다음 단계는 IntelliJ를 사용하여 Spring Boot Docker 리포지토리를 복제하는 방법을 설명합니다. 명령줄을 사용하려면 [Azure Container Service에서 Linux에 Spring Boot 응용 프로그램 배포][Deploy Spring Boot on Linux in AKS]를 참조하세요.
+다음 단계는 IntelliJ를 사용하여 Spring Boot Docker 리포지토리를 복제하는 방법을 설명합니다. 명령줄을 사용하려면 [Azure Container Service에서 Linux에 Spring Boot 애플리케이션 배포][Deploy Spring Boot on Linux in AKS]를 참조하세요.
 
 1. IntelliJ를 엽니다.
 
