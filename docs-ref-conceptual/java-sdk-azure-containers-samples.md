@@ -18,8 +18,8 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/09/2018
 ms.locfileid: "48893644"
 ---
-# <a name="java-samples-for-azure-container-service"></a><span data-ttu-id="98b94-104">Azure Container Service용 Java 샘플</span><span class="sxs-lookup"><span data-stu-id="98b94-104">Java samples for Azure Container Service</span></span>
+# <a name="java-samples-for-azure-container-service"></a><span data-ttu-id="28f01-104">Azure Container Service용 Java 샘플</span><span class="sxs-lookup"><span data-stu-id="28f01-104">Java samples for Azure Container Service</span></span>
 
-<span data-ttu-id="98b94-105">다음 표는 컨테이너에서 실행 중인 응용 프로그램을 만들고 구성하는 데 사용할 수 있는 Java 소스에 연결됩니다.</span><span class="sxs-lookup"><span data-stu-id="98b94-105">The following table links to Java source you can use to create and configure applications running in containers.</span></span>
+<span data-ttu-id="28f01-105">다음 표는 컨테이너에서 실행 중인 애플리케이션을 만들고 구성하는 데 사용할 수 있는 Java 소스에 연결됩니다.</span><span class="sxs-lookup"><span data-stu-id="28f01-105">The following table links to Java source you can use to create and configure applications running in containers.</span></span>
 
 [!INCLUDE [java-container-samples](includes/java-container-samples.md)]
