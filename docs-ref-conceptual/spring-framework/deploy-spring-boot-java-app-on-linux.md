@@ -1,6 +1,6 @@
 ---
 title: Azure Container Service에서 Linux에 Spring Boot Web App 배포
-description: 이 자습서에서는 Microsoft Azure에서 Linux Web App으로 Spring Boot 응용 프로그램을 배포하는 단계를 설명합니다.
+description: 이 자습서에서는 Microsoft Azure에서 Linux Web App으로 Spring Boot 애플리케이션을 배포하는 단계를 설명합니다.
 services: container-service
 documentationcenter: java
 author: rmcmurray
@@ -46,7 +46,7 @@ ms.locfileid: "52339147"
 
 다음 단계에서는 간단한 Spring Boot 웹 응용 프로그램을 만들어 로컬로 테스트하는 데 필요한 단계를 안내합니다.
 
-1. 명령 프롬프트를 열고 응용 프로그램을 저장할 로컬 디렉터리를 만들고 해당 디렉터리로 변경합니다. 예:
+1. 명령 프롬프트를 열고 애플리케이션을 저장할 로컬 디렉터리를 만들고 해당 디렉터리로 변경합니다. 예를 들면 다음과 같습니다.
    ```
    md C:\SpringBoot
    cd C:\SpringBoot
@@ -263,7 +263,7 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 
 ## <a name="next-steps"></a>다음 단계
 
-Azure에서 Spring Boot 응용 프로그램을 사용 하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
+Azure에서 Spring Boot 애플리케이션을 사용 하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
 
 * [Azure App Service에 Spring Boot 응용 프로그램 배포](deploy-spring-boot-java-web-app-on-azure.md)
 * [Azure Container Service의 Kubernetes 클러스터에 Spring Boot 응용 프로그램 배포](deploy-spring-boot-java-app-on-kubernetes.md)

@@ -37,7 +37,7 @@ ms.locfileid: "52338737"
 * 지원되는 JDK(Java Development Kit) Azure에서 개발하는 경우 사용할 수 있는 JDK에 대한 자세한 내용은 <https://aka.ms/azure-jdks>를 참조하세요.
 * [Apache Maven](http://maven.apache.org/), 버전 3.0 이상
 
-## <a name="create-a-custom-application-using-the-spring-initializr"></a>Spring Initializr를 사용하여 사용자 지정 응용 프로그램 만들기
+## <a name="create-a-custom-application-using-the-spring-initializr"></a>Spring Initializr를 사용하여 사용자 지정 애플리케이션 만들기
 
 1. [https://start.spring.io/](https://start.spring.io/)으로 이동합니다.
 
@@ -54,7 +54,7 @@ ms.locfileid: "52338737"
 
 1. 메시지가 표시되면 로컬 컴퓨터의 경로에 프로젝트를 다운로드합니다.
 
-1. 로컬 시스템에서 파일의 압축을 푼 후에 사용자 지정 Spring Boot 응용 프로그램을 편집할 준비를 합니다.
+1. 로컬 시스템에서 파일의 압축을 푼 후에 사용자 지정 Spring Boot 애플리케이션을 편집할 준비를 합니다.
 
    ![사용자 지정 Spring Boot 프로젝트 파일][SI02]
 
@@ -168,7 +168,7 @@ ms.locfileid: "52338737"
 
 1. *TestController.java* 파일을 저장 후 닫습니다.
 
-1. Maven을 사용하여 Spring Boot 응용 프로그램을 빌드하고 실행합니다. 예:
+1. Maven을 사용하여 Spring Boot 애플리케이션을 빌드하고 실행합니다. 예:
 
    ```shell
    mvn clean package
@@ -272,7 +272,7 @@ Analytics 포털에서 상세한 로그 메시지를 보고 분석할 수도 있
 
 ## <a name="next-steps"></a>다음 단계
 
-Azure에서 Spring Boot 응용 프로그램을 사용 하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
+Azure에서 Spring Boot 애플리케이션을 사용 하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
 
 * [Azure App Service에 Spring Boot 응용 프로그램 배포](deploy-spring-boot-java-web-app-on-azure.md)
 
@@ -288,7 +288,7 @@ Application Insights Spring Boot Starter의 추가 구성 정보에 대한 자�
 
 Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 개발자용 Azure] 및 [Visual Studio Team Services용 Java 도구]를 참조하세요.
 
-**[Spring Framework]** 는 Java 개발자가 엔터프라이즈 수준의 응용 프로그램을 만드는 데 도움이 되는 오픈 소스 솔루션입니다. 해당 플랫폼을 기반으로 하여 빌드되는 인기 있는 프로젝트 중 하나가 [Spring Boot]입니다. 이 프로젝트는 독립 실행형 Java 응용 프로그램을 만드는 간단한 방법을 제공합니다. Spring Boot을 시작하는 개발자를 도우려면 [https://github.com/spring-guides/](https://github.com/spring-guides/)에서 몇 가지 샘플 Spring Boot 패키지를 사용할 있습니다. 기본 Spring Boot 프로젝트 목록에서 선택하는 것 외에도 **[Spring Initializr]** 를 통해 사용자 지정 Spring Boot 응용 프로그램을 만들기 시작하는 개발자에게 도움을 줍니다.
+**[Spring Framework]** 는 Java 개발자가 엔터프라이즈 수준의 응용 프로그램을 만드는 데 도움이 되는 오픈 소스 솔루션입니다. 해당 플랫폼을 기반으로 하여 빌드되는 인기 있는 프로젝트 중 하나가 [Spring Boot]입니다. 이 프로젝트는 독립 실행형 Java 애플리케이션을 만드는 간단한 방법을 제공합니다. Spring Boot을 시작하는 개발자를 도우려면 [https://github.com/spring-guides/](https://github.com/spring-guides/)에서 몇 가지 샘플 Spring Boot 패키지를 사용할 있습니다. 기본 Spring Boot 프로젝트 목록에서 선택하는 것 외에도 **[Spring Initializr]** 를 통해 사용자 지정 Spring Boot 애플리케이션을 만들기 시작하는 개발자에게 도움을 줍니다.
 
 <!-- URL List -->
 

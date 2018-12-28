@@ -23,7 +23,7 @@ ms.locfileid: "48892864"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-intellij"></a>IntelliJ를 사용하여 Azure용 Hello World 웹앱 만들기
 
-이 자습서에서는 [IntelliJ용 Azure 도구 키트]를 사용하여 기본 Hello World 응용 프로그램을 만들고 Azure에 웹앱으로 배포하는 방법을 보여 줍니다.
+이 자습서에서는 [IntelliJ용 Azure 도구 키트]를 사용하여 기본 Hello World 애플리케이션을 만들고 Azure에 웹앱으로 배포하는 방법을 보여줍니다.
 
 > [!NOTE]
 >
@@ -103,7 +103,7 @@ ms.locfileid: "48892864"
 
    ![웹앱 찾아보기][browse-web-app]
 
-1. 웹앱을 게시한 후 설정은 기본값으로 저장되고 도구 모음에서 녹색 화살표 아이콘을 클릭하여 Azure에서 응용 프로그램을 실행할 수 있습니다. 웹앱에 대한 드롭다운 메뉴를 클릭하여 설정을 수정하고 **구성 편집**을 클릭할 수 있습니다.
+1. 웹앱을 게시한 후 설정은 기본값으로 저장되고 도구 모음에서 녹색 화살표 아이콘을 클릭하여 Azure에서 애플리케이션을 실행할 수 있습니다. 웹앱에 대한 드롭다운 메뉴를 클릭하여 설정을 수정하고 **구성 편집**을 클릭할 수 있습니다.
 
    ![[구성 편집] 메뉴][edit-configuration-menu]
 

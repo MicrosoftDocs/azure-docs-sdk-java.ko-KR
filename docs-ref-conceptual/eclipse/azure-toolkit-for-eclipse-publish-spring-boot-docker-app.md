@@ -35,7 +35,7 @@ ms.locfileid: "48899179"
 
 ### <a name="import-the-public-repository"></a>공용 리포지토리 가져오기
 
-다음 단계는 IntelliJ를 사용하여 Spring Boot Docker 리포지토리를 로컬 컴퓨터로 복제하는 방법을 안내합니다. 명령줄을 사용하려면 [Azure Container Service에서 Linux에 Spring Boot 응용 프로그램 배포][Deploy Spring Boot on Linux in AKS]를 참조하세요.
+다음 단계는 IntelliJ를 사용하여 Spring Boot Docker 리포지토리를 로컬 컴퓨터로 복제하는 방법을 안내합니다. 명령줄을 사용하려면 [Azure Container Service에서 Linux에 Spring Boot 애플리케이션 배포][Deploy Spring Boot on Linux in AKS]를 참조하세요.
 
 1. Eclipse를 엽니다.
 

@@ -50,9 +50,9 @@ ms.locfileid: "52339087"
 
 ## <a name="clone-the-sample-spring-boot-on-docker-web-app"></a>Docker 웹앱에 샘플 Spring Boot 복제
 
-이 섹션에서는 컨테이너화된 Spring Boot 응용 프로그램을 복제하고 로컬로 테스트합니다.
+이 섹션에서는 컨테이너화된 Spring Boot 애플리케이션을 복제하고 로컬로 테스트합니다.
 
-1. 명령 프롬프트 또는 터미널 창을 열고 Spring Boot 응용 프로그램을 저장할 로컬 디렉터리를 만들고 해당 디렉터리로 변경합니다. 예:
+1. 명령 프롬프트 또는 터미널 창을 열고 Spring Boot 애플리케이션을 저장할 로컬 디렉터리를 만들고 해당 디렉터리로 변경합니다. 예:
    ```shell
    md C:\SpringBoot
    cd C:\SpringBoot
@@ -172,7 +172,7 @@ ms.locfileid: "52339087"
 
 Docker 계정이 있는 경우 Docker 컨테이너 이미지를 로컬에서 빌드하고 Docker 허브에 푸시할 수 있습니다. 이렇게 하려면 다음 단계를 수행합니다.
 
-1. 텍스트 편집기에서 Spring Boot 응용 프로그램에 대한 `pom.xml` 파일을 엽니다.
+1. 텍스트 편집기에서 Spring Boot 애플리케이션에 대한 `pom.xml` 파일을 엽니다.
 
 1. `<containerSettings>` 요소의 `<imageName>` 자식 요소를 찾습니다.
 
@@ -198,7 +198,7 @@ Docker 계정이 있는 경우 Docker 컨테이너 이미지를 로컬에서 빌
 
 ## <a name="optional-customize-your-pomxml-before-deploying-your-container-to-azure"></a>선택 사항: 컨테이너를 Azure에 배포하기 전에 pom.xml 사용자 지정
 
-텍스트 편집기에서 Spring Boot 응용 프로그램에 대한 `pom.xml` 파일을 열고 `azure-webapp-maven-plugin`에 대한 `<plugin>` 요소를 찾습니다. 이 요소는 다음 예제와 유사합니다.
+텍스트 편집기에서 Spring Boot 애플리케이션에 대한 `pom.xml` 파일을 연 다음, `azure-webapp-maven-plugin`에 대한 `<plugin>` 요소를 찾습니다. 이 요소는 다음 예제와 유사합니다.
 
    ```xml
    <plugin>
@@ -273,7 +273,7 @@ Maven은 Azure에 웹앱을 배포합니다. 웹앱이 아직 없는 경우 생�
 > [ERROR] Failed to execute goal com.microsoft.azure:azure-webapp-maven-plugin:0.1.3:deploy (default-cli) on project gs-spring-boot-docker: null: MojoExecutionException: CloudException: OnError while emitting onNext value: retrofit2.Response.class
 > ```
 >
-> 이 경우에 다른 지역을 지정하고 Maven 명령을 다시 실행하여 응용 프로그램을 배포할 수 있습니다.
+> 이 경우에 다른 지역을 지정하고 Maven 명령을 다시 실행하여 애플리케이션을 배포할 수 있습니다.
 >
 >
 

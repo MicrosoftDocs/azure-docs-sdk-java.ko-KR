@@ -45,9 +45,9 @@ ms.locfileid: "52338837"
 
 ## <a name="create-the-spring-boot-on-docker-getting-started-web-app"></a>Spring Boot on Docker 시작 웹앱 만들기
 
-다음 단계에서는 Spring Boot 웹 응용 프로그램을 빌드하고 로컬로 테스트하는 과정을 안내합니다.
+다음 단계에서는 Spring Boot 웹 애플리케이션을 빌드하고 로컬로 테스트하는 과정을 안내합니다.
 
-1. 명령 프롬프트를 열고 응용 프로그램을 저장할 로컬 디렉터리를 만들고 해당 디렉터리로 변경합니다. 예를 들면 다음과 같습니다.
+1. 명령 프롬프트를 열고 애플리케이션을 저장할 로컬 디렉터리를 만들고 해당 디렉터리로 변경합니다. 예를 들면 다음과 같습니다.
    ```shell
    md /home/GenaSoto/SpringBoot
    cd /home/GenaSoto/SpringBoot
@@ -507,7 +507,7 @@ Kubernetes 클러스터가 더 이상 필요하지 않게 되면 `az group delet
 
 ## <a name="next-steps"></a>다음 단계
 
-Azure에서 Spring Boot 응용 프로그램을 사용 하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
+Azure에서 Spring Boot 애플리케이션을 사용 하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
 
 * [Azure App Service에 Spring Boot 응용 프로그램 배포](deploy-spring-boot-java-web-app-on-azure.md)
 * [Azure Container Service에서 Linux에 Spring Boot 응용 프로그램 배포](deploy-spring-boot-java-app-on-linux.md)

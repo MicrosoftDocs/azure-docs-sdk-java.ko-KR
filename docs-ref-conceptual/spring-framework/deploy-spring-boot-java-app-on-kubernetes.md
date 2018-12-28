@@ -1,6 +1,6 @@
 ---
 title: Azure Kubernetes Service에서 Kubernetes에 Spring Boot 앱 배포
-description: 이 자습서에서는 Microsoft Azure에서 Kubernetes 클러스터에 Spring Boot 응용 프로그램을 배포하는 단계를 안내합니다.
+description: 이 자습서에서는 Microsoft Azure에서 Kubernetes 클러스터에 Spring Boot 애플리케이션을 배포하는 단계를 안내합니다.
 services: container-service
 documentationcenter: java
 author: rmcmurray
@@ -44,9 +44,9 @@ ms.locfileid: "52338727"
 
 ## <a name="create-the-spring-boot-on-docker-getting-started-web-app"></a>Spring Boot on Docker 시작 웹앱 만들기
 
-다음 단계에서는 Spring Boot 웹 응용 프로그램을 빌드하고 로컬로 테스트하는 과정을 안내합니다.
+다음 단계에서는 Spring Boot 웹 애플리케이션을 빌드하고 로컬로 테스트하는 과정을 안내합니다.
 
-1. 명령 프롬프트를 열고 응용 프로그램을 저장할 로컬 디렉터리를 만들고 해당 디렉터리로 변경합니다. 예를 들면 다음과 같습니다.
+1. 명령 프롬프트를 열고 애플리케이션을 저장할 로컬 디렉터리를 만들고 해당 디렉터리로 변경합니다. 예를 들면 다음과 같습니다.
    ```
    md C:\SpringBoot
    cd C:\SpringBoot
@@ -136,7 +136,7 @@ ms.locfileid: "52338727"
    </servers>
    ```
 
-1. Spring Boot 응용 프로그램에 대해 완료된 프로젝트 디렉터리로 이동하고(예: "*C:\SpringBoot\gs-spring-boot-docker\complete*"또는"*/users/robert/SpringBoot/gs-spring-boot-docker/complete*") 텍스트 편집기를 사용하여 *pom.xml* 파일을 엽니다.
+1. Spring Boot 애플리케이션에 대해 완료된 프로젝트 디렉터리로 이동하고(예: "*C:\SpringBoot\gs-spring-boot-docker\complete*"또는"*/users/robert/SpringBoot/gs-spring-boot-docker/complete*") 텍스트 편집기를 사용하여 *pom.xml* 파일을 엽니다.
 
 1. *pom.xml* 파일의 `<properties>` 컬렉션을 Azure Container Registry의 로그인 서버 값으로 업데이트합니다.
 
@@ -174,7 +174,7 @@ ms.locfileid: "52338727"
    </plugin>
    ```
 
-1. Spring Boot 응용 프로그램에 대한 완성된 프로젝트 디렉터리로 이동한 후 다음 명령을 실행하여 Docker 컨테이너를 빌드하고 레지스트리에 이미지를 푸시합니다.
+1. Spring Boot 애플리케이션에 대한 완성된 프로젝트 디렉터리로 이동한 후 다음 명령을 실행하여 Docker 컨테이너를 빌드하고 레지스트리에 이미지를 푸시합니다.
 
    ```
    mvn package docker:build -DpushImage
@@ -254,7 +254,7 @@ ms.locfileid: "52338727"
 
    ![Kubernetes 배포][KB05]
 
-1. 응용 프로그램이 배포되면 **Services** 아래에 Spring Boot 응용 프로그램이 표시됩니다.
+1. 애플리케이션이 배포되면 **Services** 아래에 Spring Boot 애플리케이션이 표시됩니다.
 
    ![Kubernetes 서비스][KB06]
 
@@ -315,7 +315,7 @@ Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 
 
 Spring Boot on Docker 샘플 프로젝트에 대한 자세한 내용은 [Spring Boot on Docker 시작] 을 참조하세요.
 
-다음 링크는 Spring Boot 응용 프로그램을 만드는 방법에 대한 추가 정보를 제공합니다.
+다음 링크는 Spring Boot 애플리케이션을 만드는 방법에 대한 추가 정보를 제공합니다.
 
 * 간단한 Spring Boot 애플리케이션 만들기에 대한 자세한 내용은 https://start.spring.io/에서 Spring Initializr를 참조하세요.
 
