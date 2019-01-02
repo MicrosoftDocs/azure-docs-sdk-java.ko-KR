@@ -25,7 +25,7 @@ ms.locfileid: "52338877"
 
 ## <a name="overview"></a>개요
 
-이 문서에서는 **Spring Initializr**을 사용하여 사용자 정의 응용 프로그램을 만든 다음 응용 프로그램에 Azure 저장소 스타터를 추가하고 응용 프로그램을 사용하여 Azure 저장소 계정에 BLOB를 업로드하는 방법을 안내합니다.
+이 문서에서는 **Spring Initializr**을 사용하여 사용자 정의 애플리케이션을 만든 다음 애플리케이션에 Azure 저장소 스타터를 추가하고 애플리케이션을 사용하여 Azure 저장소 계정에 BLOB를 업로드하는 방법을 안내합니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -41,7 +41,7 @@ ms.locfileid: "52338877"
 > 이 문서의 단계를 완료하려면 Spring Boot 버전 2.0 이상이 필요합니다.
 >
 
-## <a name="create-an-azure-storage-account-and-blob-container-for-your-application"></a>응용 프로그램에 대 한 Azure Storage 계정 및 Blob 컨테이너 만들기
+## <a name="create-an-azure-storage-account-and-blob-container-for-your-application"></a>애플리케이션에 대 한 Azure Storage 계정 및 Blob 컨테이너 만들기
 
 1. <https://portal.azure.com/>에서 Azure Portal을 찾아 로그인합니다.
 
@@ -81,7 +81,7 @@ ms.locfileid: "52338877"
 
    * **Java**를 사용하는 **Maven** 프로젝트를 생성합니다.
    * 2.0 이상의 **Spring Boot** 버전을 지정합니다.
-   * 응용 프로그램에 대한 **그룹** 및 **아티팩트** 이름을 지정합니다.
+   * 애플리케이션에 대한 **그룹** 및 **아티팩트** 이름을 지정합니다.
    * **Web** 종속성 추가
 
       ![기본 Spring Initializr 옵션][SI01]
@@ -97,7 +97,7 @@ ms.locfileid: "52338877"
 
    ![Spring 프로젝트 다운로드][SI02]
 
-1. 로컬 시스템에서 파일의 압축을 푼 후에 단순한 Spring Boot 응용 프로그램을 편집할 준비를 합니다.
+1. 로컬 시스템에서 파일의 압축을 푼 후에 단순한 Spring Boot 애플리케이션을 편집할 준비를 합니다.
 
 ## <a name="configure-your-spring-boot-app-to-use-the-azure-storage-starter"></a>Azure Storage Starter를 사용하도록 Spring Boot 앱 구성
 
@@ -233,7 +233,7 @@ ms.locfileid: "52338877"
 
 ### <a name="modify-the-main-application-class"></a>기본 애플리케이션 클래스 수정
 
-1. 앱의 패키지 디렉터리에서 기본 응용 프로그램 Java 파일을 찾습니다. 예:
+1. 앱의 패키지 디렉터리에서 기본 애플리케이션 Java 파일을 찾습니다. 예:
 
    `C:\SpringBoot\storage\src\main\java\com\wingtiptoys\storage\StorageApplication.java`
 
@@ -329,7 +329,7 @@ ms.locfileid: "52338877"
    mvn spring-boot:run
    ```
 
-1. 응용 프로그램이 실행되면, 응용 프로그램을 테스트하기 위해 *curl*을 사용할 수 있습니다. 예:
+1. 애플리케이션이 실행되면, 애플리케이션을 테스트하기 위해 *curl*을 사용할 수 있습니다. 예:
 
    a. 파일의 내용을 업데이트하려면 POST 요청을 보냅니다.
 
@@ -351,9 +351,9 @@ ms.locfileid: "52338877"
 
 Microsoft Azure에서 사용할 수 있는 다른 Spring Boot Starter에 대한 자세한 내용은 [Azure용 Spring Boot Starter](spring-boot-starters-for-azure.md)를 참조하세요.
 
-Azure 기능과 Spring 기반 응용 프로그램 통합에 대한 다른 정보는 [Azure의 Spring 프레임워크](/java/azure/spring-framework/)를 참조하세요.
+Azure 기능과 Spring 기반 애플리케이션 통합에 대한 다른 정보는 [Azure의 Spring 프레임워크](/java/azure/spring-framework/)를 참조하세요.
 
-Spring Boot 응용 프로그램에서 호출할 수 있는 다른 Azure Storage API에 관한 상세 정보는 다음 문서를 참조하세요.
+Spring Boot 애플리케이션에서 호출할 수 있는 다른 Azure Storage API에 관한 상세 정보는 다음 문서를 참조하세요.
 * [Java에서 Azure Blob Storage를 사용하는 방법](/azure/storage/blobs/storage-java-how-to-use-blob-storage)
 * [Java에서 Azure Queue Storage를 사용하는 방법](/azure/storage/queues/storage-java-how-to-use-queue-storage)
 * [Java에서 Azure Table Storage를 사용하는 방법](/azure/cosmos-db/table-storage-how-to-use-java)

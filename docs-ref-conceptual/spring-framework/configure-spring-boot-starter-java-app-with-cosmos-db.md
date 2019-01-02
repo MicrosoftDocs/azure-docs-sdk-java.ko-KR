@@ -89,7 +89,7 @@ Azure Cosmos DB는 개발자가 SQL, MongoDB, Graph 및 Table API와 같은 표�
 
    ![사용자 지정 Spring Boot 프로젝트 다운로드][SI02]
 
-1. 로컬 시스템에서 파일의 압축을 푼 후에 단순한 Spring Boot 응용 프로그램을 편집할 준비를 합니다.
+1. 로컬 시스템에서 파일의 압축을 푼 후에 단순한 Spring Boot 애플리케이션을 편집할 준비를 합니다.
 
    ![사용자 지정 Spring Boot 프로젝트 파일][SI03]
 
@@ -129,7 +129,7 @@ Azure Cosmos DB는 개발자가 SQL, MongoDB, Graph 및 Table API와 같은 표�
    > </dependency>
    > ```
 
-1. Spring Boot 버전이 Spring Initializr를 사용하여 응용 프로그램을 만들 때 선택한 버전인지 확인합니다. 예:
+1. Spring Boot 버전이 Spring Initializr를 사용하여 애플리케이션을 만들 때 선택한 버전인지 확인합니다. 예:
 
    ```xml
    <parent>
@@ -257,7 +257,7 @@ Azure Cosmos DB는 개발자가 SQL, MongoDB, Graph 및 Table API와 같은 표�
 
 ### <a name="modify-the-main-application-class"></a>기본 애플리케이션 클래스 수정
 
-1. 앱의 패키지 디렉터리에서 기본 응용 프로그램 Java 파일을 찾습니다. 예:
+1. 앱의 패키지 디렉터리에서 기본 애플리케이션 Java 파일을 찾습니다. 예:
 
    `C:\SpringBoot\wingtiptoysdata\src\main\java\com\example\wingtiptoysdata\WingtiptoysdataApplication.java`
 
@@ -265,7 +265,7 @@ Azure Cosmos DB는 개발자가 SQL, MongoDB, Graph 및 Table API와 같은 표�
 
    `/users/example/home/wingtiptoysdata/src/main/java/com/example/wingtiptoysdata/WingtiptoysdataApplication.java`
 
-   ![응용 프로그램 Java 파일 찾기][JV01]
+   ![애플리케이션 Java 파일 찾기][JV01]
 
 1. 텍스트 편집기에서 애플리케이션 Java 파일을 열고 다음 줄을 파일에 추가합니다.
 

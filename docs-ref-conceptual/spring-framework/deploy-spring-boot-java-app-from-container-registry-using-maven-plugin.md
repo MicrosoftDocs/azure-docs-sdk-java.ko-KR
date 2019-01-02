@@ -23,7 +23,7 @@ ms.locfileid: "52338947"
 ---
 # <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a>Azure Web Apps의 Maven 플러그 인을 사용하여 Azure Container Registry의 Spring Boot 앱을 Azure App Service에 배포하는 방법
 
-이 문서에서는 Azure Container Registry에 샘플 [Spring Boot] 응용 프로그램을 배포하고 Azure Web Apps용 Maven 플러그인을 사용하여 Azure App Service에 응용 프로그램을 배포하는 방법을 보여줍니다.
+이 문서에서는 Azure Container Registry에 샘플 [Spring Boot] 애플리케이션을 배포하고 Azure Web Apps용 Maven 플러그인을 사용하여 Azure App Service에 애플리케이션을 배포하는 방법을 보여줍니다.
 
 > [!NOTE]
 > 

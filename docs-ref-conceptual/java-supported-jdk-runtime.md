@@ -1,6 +1,6 @@
 ---
 title: Azure 개발에 대한 Java JDK 및 장기 지원
-description: Java 응용 프로그램을 개발하고 실행하는 Azure 지원의 다운로드 및 설명입니다.
+description: Java 애플리케이션을 개발하고 실행하는 Azure 지원의 다운로드 및 설명입니다.
 author: rloutlaw
 manager: angerobe
 ms.devlang: java
@@ -16,7 +16,7 @@ ms.locfileid: "52339037"
 ---
 # <a name="get-java-jdk-downloads-and-support-when-developing-for-azure"></a>Azure에 대해 개발하는 경우 Java JDK 다운로드 및 지원 가져오기
 
-Azure 및 Azure Stack의 Java 개발자는 추가 지원 비용 없이 [Azul Zulu Enterprise for Azure](https://www.azul.com/downloads/azure-only/zulu/)를 사용하여 프로덕션 Java 응용 프로그램을 빌드하고 실행할 수 있습니다. Azure에서 원하는 모든 Java 런타임을 사용할 수 있지만 Zulu를 사용하는 경우 [정규화된 Azure 지원 계획](https://azure.microsoft.com/support/plans/)을 사용하여 무료 유지 관리 업데이트를 가져오고 Microsoft와 관련된 지원 문제를 만들 수 있습니다.
+Azure 및 Azure Stack의 Java 개발자는 추가 지원 비용 없이 [Azul Zulu Enterprise for Azure](https://www.azul.com/downloads/azure-only/zulu/)를 사용하여 프로덕션 Java 애플리케이션을 빌드하고 실행할 수 있습니다. Azure에서 원하는 모든 Java 런타임을 사용할 수 있지만 Zulu를 사용하는 경우 [정규화된 Azure 지원 계획](https://azure.microsoft.com/support/plans/)을 사용하여 무료 유지 관리 업데이트를 가져오고 Microsoft와 관련된 지원 문제를 만들 수 있습니다.
 
 개발자는 Oracle JDK 및 Red Hat JDK를 포함하여 자신의 고유 Java 런타임을 사용하여 Azure에서 앱을 실행하고 Azure 서비스 및 기능에 연결할 수 있습니다. Azure Windows 또는 Linux 가상 머신에서 워크로드를 실행하는 Java 개발자는 Oracle Java SE의 프로덕션 버전을 계속 사용할 수 있습니다.
 
@@ -41,7 +41,7 @@ Azure 또는 Azure Stack용으로 개발할 때는 [정규화된 Azure 지원 �
 
 선택한 배포판에서 OpenJDK의 Zulu Enterprise 빌드를 사용하여 무제한 Docker 이미지를 빌드할 수 있습니다. Azure JDK용 Azul Zulu Enterprise를 기반으로 하는 Zulu Docker 이미지는 [Microsoft의 공용 Docker 리포지토리](https://hub.docker.com/r/microsoft/java-jdk/)에서 지원됩니다. 이러한 이미지를 빌드하는 데 사용되는 Dockerfile은 [Microsoft의 Java GitHub 리포지토리](https://github.com/Microsoft/java/tree/master/docker)에서 지원됩니다.
 
-이러한 이미지를 사용하여 앱을 컨테이너화하려면 Dockerfile에서 `FROM` 문을 설정한 다음, 응용 프로그램의 종속성을 사용하여 컨테이너를 구성해야 합니다. 예를 들어, 포트 8080에 바인딩되는 JAR 파일 패키지 Java SE 응용 프로그램을 실행하려면:
+이러한 이미지를 사용하여 앱을 컨테이너화하려면 Dockerfile에서 `FROM` 문을 설정한 다음, 애플리케이션의 종속성을 사용하여 컨테이너를 구성해야 합니다. 예를 들어, 포트 8080에 바인딩되는 JAR 파일 패키지 Java SE 애플리케이션을 실행하려면:
 
 ```Dockerfile
 FROM  microsoft/java-jdk:<tag>

@@ -1,6 +1,6 @@
 ---
 title: IntelliJ용 Azure 도구 키트 설치
-description: IntelliJ용 Azure 도구 키트 플러그 인을 설치하여 클라우드 응용 프로그램을 만들어 Azure에 배포하는 방법에 대해 알아봅니다.
+description: Azure Toolkit for IntelliJ 플러그 인을 설치하여 클라우드 애플리케이션을 만들어 Azure에 배포하는 방법에 대해 알아봅니다.
 services: ''
 documentationcenter: java
 author: rmcmurray
@@ -23,7 +23,7 @@ ms.locfileid: "48892884"
 ---
 # <a name="installing-the-azure-toolkit-for-intellij"></a>IntelliJ용 Azure 도구 키트 설치
 
-IntelliJ용 Azure 도구 키트는 IntelliJ IDEA 개발 환경을 사용하여 클라우드 응용 프로그램을 쉽게 작성, 개발, 테스트 및 Azure에 배포할 수 있는 템플릿과 기능을 제공합니다.
+Azure Toolkit for IntelliJ는 IntelliJ IDEA 개발 환경을 사용하여 클라우드 애플리케이션을 쉽게 작성, 개발, 테스트 및 Azure에 배포할 수 있는 템플릿과 기능을 제공합니다.
 
 > [!NOTE] 
 > 

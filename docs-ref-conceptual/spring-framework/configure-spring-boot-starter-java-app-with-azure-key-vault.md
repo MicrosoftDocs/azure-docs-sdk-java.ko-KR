@@ -122,7 +122,7 @@ ms.locfileid: "52339157"
    }
    ```
 
-2. 응용 프로그램 등록에서 Azure 서비스 주체를 만듭니다. 예를 들어 다음과 같습니다.
+2. 애플리케이션 등록에서 Azure 서비스 주체를 만듭니다. 예를 들어 다음과 같습니다.
    ```shell
    az ad sp create-for-rbac --name "wingtiptoysuser"
    ```
@@ -254,7 +254,7 @@ ms.locfileid: "52339157"
 
 4. 프로젝트의 기본 소스 코드 파일로 이동합니다. 예를 들어 */src/main/java/com/wingtiptoys/secrets*입니다.
 
-5. 텍스트 편집기의 파일에서 *SecretsApplication.java* 같은 응용 프로그램의 기본 Java 파일을 열고 다음 줄을 파일에 추가합니다.
+5. 텍스트 편집기의 파일에서 *SecretsApplication.java* 같은 애플리케이션의 기본 Java 파일을 열고 다음 줄을 파일에 추가합니다.
 
    ```java
    package com.wingtiptoys.secrets;
@@ -297,7 +297,7 @@ ms.locfileid: "52339157"
 
    ![Spring Boot 애플리케이션 빌드 상태][build-application-01]
 
-1. Maven에서 Spring Boot 응용 프로그램을 실행합니다. 응용 프로그램이 키 자격 증명 모음의 연결 문자열을 표시합니다. 예: 
+1. Maven에서 Spring Boot 애플리케이션을 실행합니다. 애플리케이션이 키 자격 증명 모음의 연결 문자열을 표시합니다. 예: 
 
    ```bash
    mvn spring-boot:run

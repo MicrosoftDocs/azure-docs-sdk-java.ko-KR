@@ -45,7 +45,7 @@ sections:
       href: configure-microprofile-with-keyvault.md
     - image:
         src: https://docs.microsoft.com/azure/devops/_img/index/devopssuite.png
-      text: Azure DevOps를 사용하는 MicroProfile 응용 프로그램의 CI/CD
+      text: Azure DevOps를 사용하는 MicroProfile 애플리케이션의 CI/CD
       href: cicd-microprofile-vsts.md
 - title: Azure에 대한 예제
   items:

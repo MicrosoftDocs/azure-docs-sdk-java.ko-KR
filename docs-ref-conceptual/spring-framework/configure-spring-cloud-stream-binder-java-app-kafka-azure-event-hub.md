@@ -1,6 +1,6 @@
 ---
 title: Azure Event Hub를 사용하여 Apache Kafka에 대한 Spring Boot Starter를 사용하는 방법
-description: Azure Event Hub를 사용하는 Azure Kafka를 사용하도록 Spring Boot Initializer를 사용하여 만든 응용 프로그램을 구성하는 방법에 대해 알아봅니다.
+description: Azure Event Hub를 사용하는 Azure Kafka를 사용하도록 Spring Boot Initializer를 사용하여 만든 애플리케이션을 구성하는 방법에 대해 알아봅니다.
 services: event-hubs
 documentationcenter: java
 author: rmcmurray
@@ -91,7 +91,7 @@ ms.locfileid: "52339117"
 
    * **Java**를 사용하는 **Maven** 프로젝트를 생성합니다.
    * 2.0 이상의 **Spring Boot** 버전을 지정합니다.
-   * 응용 프로그램에 대한 **그룹** 및 **아티팩트** 이름을 지정합니다.
+   * 애플리케이션에 대한 **그룹** 및 **아티팩트** 이름을 지정합니다.
    * **Web** 종속성 추가
 
       ![기본 Spring Initializr 옵션][SI01]
@@ -107,7 +107,7 @@ ms.locfileid: "52339117"
 
    ![Spring 프로젝트 다운로드][SI02]
 
-1. 로컬 시스템에서 파일의 압축을 푼 후에 단순한 Spring Boot 응용 프로그램을 편집할 준비를 합니다.
+1. 로컬 시스템에서 파일의 압축을 푼 후에 단순한 Spring Boot 애플리케이션을 편집할 준비를 합니다.
 
 ## <a name="configure-your-spring-boot-app-to-use-the-spring-cloud-kafka-stream-and-azure-event-hub-starters"></a>Cloud Kafka Stream 및 Azure Event Hub starter를 사용하도록 Spring Boot 앱 구성
 
@@ -256,7 +256,7 @@ ms.locfileid: "52339117"
 
 ### <a name="modify-the-main-application-class"></a>기본 애플리케이션 클래스 수정
 
-1. 앱의 패키지 디렉터리에서 기본 응용 프로그램 Java 파일을 찾습니다. 예:
+1. 앱의 패키지 디렉터리에서 기본 애플리케이션 Java 파일을 찾습니다. 예:
 
    `C:\SpringBoot\kafka\src\main\java\com\wingtiptoys\kafka\KafkaApplication.java`
 
@@ -341,7 +341,7 @@ ms.locfileid: "52339117"
 
 1. *KafkaSink.java* 파일을 저장 후 닫습니다.
 
-## <a name="build-and-test-your-application"></a>응용 프로그램 빌드 및 테스트
+## <a name="build-and-test-your-application"></a>애플리케이션 빌드 및 테스트
 
 1. 명령 프롬프트를 열고 디렉터리를 *pom.xml* 파일이 위치한 폴더로 변경합니다. 예:
 
@@ -358,12 +358,12 @@ ms.locfileid: "52339117"
    mvn spring-boot:run
    ```
 
-1. 응용 프로그램이 실행되면, 응용 프로그램을 테스트하기 위해 *curl*을 사용할 수 있습니다. 예:
+1. 애플리케이션이 실행되면, 애플리케이션을 테스트하기 위해 *curl*을 사용할 수 있습니다. 예:
 
    ```shell
    curl -X POST -H "Content-Type: text/plain" -d "hello" http://localhost:8080/messages
    ```
-   응용 프로그램 로그에 "hello"가 표시됩니다. 예: 
+   애플리케이션 로그에 "hello"가 표시됩니다. 예: 
 
    ```shell
    [http-nio-8080-exec-2] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka version : 1.0.2
@@ -412,13 +412,13 @@ ms.locfileid: "52339117"
 > }
 > ```
 > 
-> 이렇게 하면 웹 브라우저를 사용하여 응용 프로그램을 테스트할 수 있습니다.
+> 이렇게 하면 웹 브라우저를 사용하여 애플리케이션을 테스트할 수 있습니다.
 > 
-> ![웹 브라우저를 사용하여 응용 프로그램 테스트][TB01]
+> ![웹 브라우저를 사용하여 애플리케이션 테스트][TB01]
 > 
-> 폼을 제출할 때 응용 프로그램에 결과가 표시됩니다.
+> 폼을 제출할 때 애플리케이션에 결과가 표시됩니다.
 > 
-> ![웹 브라우저 내 응용 프로그램 응답][TB02]
+> ![웹 브라우저 내 애플리케이션 응답][TB02]
 > 
 
 ## <a name="next-steps"></a>다음 단계

@@ -1,6 +1,6 @@
 ---
 title: Eclipse용 Azure 도구 키트
-description: Eclipse용 Azure 도구 키트 플러그 인을 통해 클라우드 응용 프로그램을 만들어 Azure에 배포하는 방법에 대해 알아봅니다.
+description: Azure Toolkit for Eclipse 플러그 인을 통해 클라우드 애플리케이션을 만들어 Azure에 배포하는 방법에 대해 알아봅니다.
 services: ''
 documentationcenter: java
 author: rmcmurray

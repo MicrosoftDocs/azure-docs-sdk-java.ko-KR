@@ -26,7 +26,7 @@ ms.locfileid: "52339027"
 
 Spring 데이터 Gremlin Starter는 개발자가 Gremlin 호환 데이터 저장소에서 사용할 수 있는 Apache의 Gremlin 쿼리 언어에 대한 Spring 데이터 지원을 제공합니다.
 
-이 문서에서는 Gremlin API와 함께 사용할 Azure Portal을 사용하여 Azure Cosmos DB를 만들고, **[Spring Initializr]** 를 사용하여 사용자 지정 java 응용 프로그램을 만들고, Spring Data Gremlin Starter 기능을 사용자 지정 응용 프로그램에 추가하여 데이터를 저장하고 Gremlin을 사용하여 Azure Cosmos DB에서 데이터를 검색하는 방법을 보여줍니다.
+이 문서에서는 Gremlin API와 함께 사용할 Azure Portal을 사용하여 Azure Cosmos DB를 만들고, **[Spring Initializr]** 를 사용하여 사용자 지정 java 애플리케이션을 만들고, Spring Data Gremlin Starter 기능을 사용자 지정 애플리케이션에 추가하여 데이터를 저장하고 Gremlin을 사용하여 Azure Cosmos DB에서 데이터를 검색하는 방법을 보여줍니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -111,7 +111,7 @@ Spring 데이터 Gremlin Starter는 개발자가 Gremlin 호환 데이터 저장
 
    ![사용자 지정 Spring Boot 프로젝트 다운로드][SI02]
 
-1. 로컬 시스템에서 파일의 압축을 푼 후에 단순한 Spring Boot 응용 프로그램을 편집할 준비를 합니다.
+1. 로컬 시스템에서 파일의 압축을 푼 후에 단순한 Spring Boot 애플리케이션을 편집할 준비를 합니다.
 
    ![사용자 지정 Spring Boot 프로젝트 파일][SI03]
 
@@ -182,7 +182,7 @@ Spring 데이터 Gremlin Starter는 개발자가 Gremlin 호환 데이터 저장
 
 ### <a name="modify-the-main-application-class"></a>기본 애플리케이션 클래스 수정
 
-1. 앱의 패키지 디렉터리에서 기본 응용 프로그램 Java 파일을 찾습니다. 예:
+1. 앱의 패키지 디렉터리에서 기본 애플리케이션 Java 파일을 찾습니다. 예:
 
    `C:\SpringBoot\wingtiptoysdata\src\main\java\com\example\wingtiptoysdata\WingtiptoysdataApplication.java`
 
@@ -190,7 +190,7 @@ Spring 데이터 Gremlin Starter는 개발자가 Gremlin 호환 데이터 저장
 
    `/users/example/home/wingtiptoysdata/src/main/java/com/example/wingtiptoysdata/WingtiptoysdataApplication.java`
 
-   ![응용 프로그램 Java 파일 찾기][JV01]
+   ![애플리케이션 Java 파일 찾기][JV01]
 
 1. 텍스트 편집기에서 애플리케이션 Java 파일을 열고 다음 줄을 파일에 추가합니다.
 
@@ -504,7 +504,7 @@ Spring 데이터 Gremlin Starter는 개발자가 Gremlin 호환 데이터 저장
    mvn spring-boot:run
    ```
 
-1. 응용 프로그램에 여러 런타임 메시지가 표시되고 오류가 없는 경우 Azure 포털을 사용하여 Azure Cosmos DB의 내용을 볼 수 있습니다. 이렇게 하려면 데이터베이스의 속성 페이지에서 **데이터 탐색기**를 클릭하고 **Gremlin 쿼리 실행**을 클릭한 다음, 결과 목록에서 항목을 선택하여 데이터를 봅니다.
+1. 애플리케이션에 여러 런타임 메시지가 표시되고 오류가 없는 경우 Azure 포털을 사용하여 Azure Cosmos DB의 내용을 볼 수 있습니다. 이렇게 하려면 데이터베이스의 속성 페이지에서 **데이터 탐색기**를 클릭하고 **Gremlin 쿼리 실행**을 클릭한 다음, 결과 목록에서 항목을 선택하여 데이터를 봅니다.
 
    ![문서 탐색기를 사용하여 데이터 보기][JV03]
 

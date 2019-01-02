@@ -23,7 +23,7 @@ ms.locfileid: "43240826"
 ---
 # <a name="configure-microprofile-with-azure-key-vault"></a>Azure Key Vault를 사용하여 MicroProfile 구성
 
-이 자습서는 Azure Key Vault에 직접 연결을 생성하기 위해 [MicroProfile Config API](https://microprofile.io/project/eclipse/microprofile-config)를 사용하여 [Azure Key Vault ](https://azure.microsoft.com/services/key-vault/)에서 비밀을 검색하도록 [MicroProfile](http://microprofile.io) 응용 프로그램을 구성하는 방법을 보여줍니다. MicroProfile Config API를 사용하여 개발자는 구성 데이터를 검색하고 마이크로 서비스에 주입하는 데 있어서의 표준 API의 이점을 누릴 수 있습니다.
+이 자습서는 Azure Key Vault에 직접 연결을 생성하기 위해 [MicroProfile Config API](https://microprofile.io/project/eclipse/microprofile-config)를 사용하여 [Azure Key Vault ](https://azure.microsoft.com/services/key-vault/)에서 비밀을 검색하도록 [MicroProfile](http://microprofile.io) 애플리케이션을 구성하는 방법을 보여줍니다. MicroProfile Config API를 사용하여 개발자는 구성 데이터를 검색하고 마이크로 서비스에 주입하는 데 있어서의 표준 API의 이점을 누릴 수 있습니다.
 
 들어가기 전에, Azure Key Vault와 MicroProfile Config API의 조합을 통해 우리가 작성할 수 있는 코드를 신속하게 살펴보도록 합니다. 다음은 `@Inject` 및 `@ConfigProperty`로 주석 처리 된 클래스 필드의 코드 조각입니다. 주석에 지정된 `name`은 Azure Key Vault에서 조회 할 속성의 이름이고 `defaultValue`는 키가 발견되지 않은 경우 설정되는 것입니다. 결과적으로 Azure Key Vault에 저장된 값 또는 기본값은 런타임 시 필드에 자동으로 주입되어 개발자가 더 이상 constuctors 및 setter 메서드에서 값을 전달할 필요가 없으며 MicroProfile에서 처리하게 하므로 개발자의 작업을 단순화합니다.
 
@@ -119,7 +119,7 @@ az keyvault secret set --name demo-key      \
 
 ## <a name="getting-up-and-running-locally"></a>시작하여 로컬로 실행
 
-이 예제는 GitHub에서 사용할 수 있는 예제 응용 프로그램을 기반으로 하므로, 코드를 복제한 다음 코드 단계를 따릅니다. 컴퓨터에 코드를 복제하려면 다음 단계를 수행합니다.
+이 예제는 GitHub에서 사용할 수 있는 예제 애플리케이션을 기반으로 하므로, 코드를 복제한 다음, 코드 단계를 따릅니다. 컴퓨터에 코드를 복제하려면 다음 단계를 수행합니다.
 
 1. `git clone https://github.com/Azure-Samples/microprofile-configsource-keyvault.git`
 
@@ -133,4 +133,4 @@ az keyvault secret set --name demo-key      \
 
 ## <a name="summary"></a>요약
 
-이 응용 프로그램 예제는 MicroProfile 구성 API, Azure Key Vault 및 무료 및 오픈 소스 [microprofile-config-keyvault](https://github.com/Azure/azure-microprofile/tree/master/microprofile-config-keyvault) 라이브러리를 함께 사용하여 MicroProfile 웹 서비스에 구성 데이터와 비밀 정보를 쉽게 주입할 수 있도록 합니다.
+이 애플리케이션 예제는 MicroProfile 구성 API, Azure Key Vault 및 무료 및 오픈 소스 [microprofile-config-keyvault](https://github.com/Azure/azure-microprofile/tree/master/microprofile-config-keyvault) 라이브러리를 함께 사용하여 MicroProfile 웹 서비스에 구성 데이터와 비밀 정보를 쉽게 주입할 수 있도록 합니다.

@@ -229,7 +229,7 @@ ms.locfileid: "48893504"
 
 ## <a name="next-steps"></a>다음 단계
 
-Azure에서 [Spring Boot] 응용 프로그램을 사용하는 방법에 대한 자세한 내용은 [Azure의 Spring]을 참조하세요.
+Azure에서 [Spring Boot] 애플리케이션을 사용하는 방법에 대한 자세한 내용은 [Azure의 Spring]을 참조하세요.
 
 Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 개발자용 Azure] 및 [Visual Studio Team Services용 Java 도구]를 참조하세요.
 

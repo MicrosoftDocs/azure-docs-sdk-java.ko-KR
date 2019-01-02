@@ -1,6 +1,6 @@
 ---
 title: Java용 Azure 라이브러리 시작
-description: Azure 클라우드 리소스를 만들어 연결하여 Java 응용 프로그램에서 사용하는 방법에 대해 알아봅니다.
+description: Azure 클라우드 리소스를 만들어 연결하여 Java 애플리케이션에서 사용하는 방법에 대해 알아봅니다.
 keywords: Azure, Java, SDK, API, 인증, 시작
 author: rloutlaw
 ms.author: routlaw
@@ -21,7 +21,7 @@ ms.locfileid: "44040261"
 ---
 # <a name="get-started-with-cloud-development-using-java-on-azure"></a>Azure 에서 Java를 이용하여 클라우드 개발 시작
 
-이 가이드에서는 Java에서 Azure 개발을 위한 개발 환경 설정을 안내합니다. 그런 다음 몇 가지 Azure 리소스를 만들고 연결하여 파일 업로드, 웹 응용 프로그램 배포 같은 기본 작업을 수행합니다. 마치고 나면 자체 Java 응용 프로그램에서 Azure Services를 사용할 수 있습니다.
+이 가이드에서는 Java에서 Azure 개발을 위한 개발 환경 설정을 안내합니다. 그런 다음, 몇 가지 Azure 리소스를 만들고 연결하여 파일 업로드, 웹 애플리케이션 배포 같은 기본 작업을 수행합니다. 마치고 나면 자체 Java 애플리케이션에서 Azure Services를 사용할 수 있습니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -79,7 +79,7 @@ graphURL=https\://graph.windows.net/
 - key: 서비스 사용자 출력의 *password* 값을 사용합니다.
 - tenant: 서비스 사용자 출력의 *tenant* 값을 사용합니다.
 
-코드에서 읽을 수 있는 시스템의 안전한 위치에 JSON 파일을 저장합니다. 향후 코드에서 이 파일을 사용할 수 있으므로 이 문서에서 응용 프로그램의 외부에 저장해 두는 것이 좋습니다.
+코드에서 읽을 수 있는 시스템의 안전한 위치에 JSON 파일을 저장합니다. 향후 코드에서 이 파일을 사용할 수 있으므로 이 문서에서 애플리케이션의 외부에 저장해 두는 것이 좋습니다.
 
 셸에서 인증 파일의 전체 경로가 포함된 `AZURE_AUTH_LOCATION` 환경 변수를 설정합니다.   
 

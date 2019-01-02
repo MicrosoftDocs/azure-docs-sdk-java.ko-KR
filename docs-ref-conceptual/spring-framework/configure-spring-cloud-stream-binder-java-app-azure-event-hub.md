@@ -1,6 +1,6 @@
 ---
-title: Azure Event Hub를 사용하여 Spring Cloud 스트림 바인더 응용 프로그램을 만드는 방법
-description: Azure Event Hub와 함께 Spring Boot Initializer로 만든 Java 기반 Spring Cloud Stream Binder응용 프로그램을 구성하는 방법을 알아보세요.
+title: Azure Event Hub를 사용하여 Spring Cloud 스트림 바인더 애플리케이션을 만드는 방법
+description: Azure Event Hub와 함께 Spring Boot Initializer로 만든 Java 기반 Spring Cloud Stream Binder애플리케이션을 구성하는 방법을 알아보세요.
 services: event-hubs
 documentationcenter: java
 author: rmcmurray
@@ -21,11 +21,11 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/27/2018
 ms.locfileid: "52338897"
 ---
-# <a name="how-to-create-a-spring-cloud-stream-binder-application-with-azure-event-hubs"></a>Azure Event Hub를 사용하여 Spring Cloud 스트림 바인더 응용 프로그램을 만드는 방법
+# <a name="how-to-create-a-spring-cloud-stream-binder-application-with-azure-event-hubs"></a>Azure Event Hub를 사용하여 Spring Cloud 스트림 바인더 애플리케이션을 만드는 방법
 
 ## <a name="overview"></a>개요
 
-이 문서는 Azure Event Hub와 함께 Spring Boot Initializer로 만든 Java 기반 Spring Cloud Stream Binder응용 프로그램을 구성하는 방법을 설명합니다.
+이 문서는 Azure Event Hub와 함께 Spring Boot Initializer로 만든 Java 기반 Spring Cloud Stream Binder애플리케이션을 구성하는 방법을 설명합니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -110,7 +110,7 @@ ms.locfileid: "52338897"
 
    * **Java**를 사용하는 **Maven** 프로젝트를 생성합니다.
    * 2.0 이상의 **Spring Boot** 버전을 지정합니다.
-   * 응용 프로그램에 대한 **그룹** 및 **아티팩트** 이름을 지정합니다.
+   * 애플리케이션에 대한 **그룹** 및 **아티팩트** 이름을 지정합니다.
    * **Web** 종속성 추가
 
       ![기본 Spring Initializr 옵션][SI01]
@@ -126,7 +126,7 @@ ms.locfileid: "52338897"
 
    ![Spring 프로젝트 다운로드][SI02]
 
-1. 로컬 시스템에서 파일의 압축을 푼 후에 단순한 Spring Boot 응용 프로그램을 편집할 준비를 합니다.
+1. 로컬 시스템에서 파일의 압축을 푼 후에 단순한 Spring Boot 애플리케이션을 편집할 준비를 합니다.
 
 ## <a name="configure-your-spring-boot-app-to-use-the-azure-event-hub-starter"></a>Azure Event Hub starter를 사용하도록 Spring Boot 앱 구성
 
@@ -271,7 +271,7 @@ ms.locfileid: "52338897"
 
 ### <a name="modify-the-main-application-class"></a>기본 애플리케이션 클래스 수정
 
-1. 앱의 패키지 디렉터리에서 기본 응용 프로그램 Java 파일을 찾습니다. 예:
+1. 앱의 패키지 디렉터리에서 기본 애플리케이션 Java 파일을 찾습니다. 예:
 
    `C:\SpringBoot\eventhub\src\main\java\com\wingtiptoys\eventhub\EventhubApplication.java`
 
@@ -364,7 +364,7 @@ ms.locfileid: "52338897"
 
 1. *EventhubSink.java* 파일을 저장 후 닫습니다.
 
-## <a name="build-and-test-your-application"></a>응용 프로그램 빌드 및 테스트
+## <a name="build-and-test-your-application"></a>애플리케이션 빌드 및 테스트
 
 1. 명령 프롬프트를 열고 디렉터리를 *pom.xml* 파일이 위치한 폴더로 변경합니다. 예:
 
@@ -381,12 +381,12 @@ ms.locfileid: "52338897"
    mvn spring-boot:run
    ```
 
-1. 응용 프로그램이 실행되면, 응용 프로그램을 테스트하기 위해 *curl*을 사용할 수 있습니다. 예:
+1. 애플리케이션이 실행되면, 애플리케이션을 테스트하기 위해 *curl*을 사용할 수 있습니다. 예:
 
    ```shell
    curl -X POST -H "Content-Type: text/plain" -d "hello" http://localhost:8080/messages
    ```
-   응용 프로그램 로그에 "hello"가 표시됩니다. 예: 
+   애플리케이션 로그에 "hello"가 표시됩니다. 예: 
 
    ```shell
    [Thread-13] INFO com.wingtiptoys.eventhub.EventhubSink - New message received: 'hello'

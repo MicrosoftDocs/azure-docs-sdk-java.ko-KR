@@ -21,9 +21,9 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/27/2018
 ms.locfileid: "52338787"
 ---
-# <a name="deploy-a-microprofile-application-to-the-cloud-with-docker-and-azure"></a>Docker 및 Azure를 사용하여 클라우드로 MicroProfile 응용 프로그램 배포
+# <a name="deploy-a-microprofile-application-to-the-cloud-with-docker-and-azure"></a>Docker 및 Azure를 사용하여 클라우드로 MicroProfile 애플리케이션 배포
 
-이 문서에서는 [MicroProfile.io] 응용 프로그램을 Docker 컨테이너에 압축하고 Azure 컨테이너 인스턴스에서 실행하는 방법을 설명합니다.
+이 문서에서는 [MicroProfile.io] 애플리케이션을 Docker 컨테이너에 압축하고 Azure 컨테이너 인스턴스에서 실행하는 방법을 설명합니다.
 
 > [!NOTE]
 >
@@ -66,7 +66,7 @@ Hello, Azure!
 
 ## <a name="deploy-to-azure"></a>Deploy to Azure
 
-이제 [Azure Container Instances] 및 [Azure Container Registry] 서비스를 사용하여 클라우드에 이 응용 프로그램을 배포해 보겠습니다.
+이제 [Azure Container Instances] 및 [Azure Container Registry] 서비스를 사용하여 클라우드에 이 애플리케이션을 배포해 보겠습니다.
 
 ### <a name="build-a-docker-image"></a>Docker 이미지 빌드
 
@@ -139,15 +139,15 @@ export ACI_INSTANCE=myapp`date +"%m%d%y$RANDOM"`
 az container create --resource-group $ARG --name $ACR --image $ACR_REPO/$IMG_NAME --cpu 1 --memory 1 --registry-login-server $ACR_REPO --registry-username $ACR --registry-password $ACR_PASS --dns-name-label $ACI_INSTANCE --ports 8080
 ```
 
-#### <a name="test-your-deployed-microprofile-application"></a>배포된 MicroProfile 응용 프로그램 테스트
+#### <a name="test-your-deployed-microprofile-application"></a>배포된 MicroProfile 애플리케이션 테스트
 
-이제 응용 프로그램이 실행됩니다. 명령줄 테스트하려면 다음 명령을 실행합니다.
+이제 애플리케이션이 실행됩니다. 명령줄 테스트하려면 다음 명령을 실행합니다.
 
 ```bash
 curl http://$ACI_INSTANCE.$ADCL.azurecontainer.io:8080/api/hello
 ````
 
-축하합니다! Microsoft Azure에 Docker 컨테이너로 MicroProfile 응용 프로그램을 성공적으로 구축하고 배포했습니다.
+축하합니다! Microsoft Azure에 Docker 컨테이너로 MicroProfile 애플리케이션을 성공적으로 구축하고 배포했습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

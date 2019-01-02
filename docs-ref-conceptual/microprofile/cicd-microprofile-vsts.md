@@ -1,6 +1,6 @@
 ---
-title: Azure DevOps를 사용하는 MicroProfile 응용 프로그램의 CI/CD
-description: Azure DevOps를 사용하여 MicroProfile 응용 프로그램을 컨테이너 인스턴스용 Azure 웹 앱에 배포하기 위해 CI/CD 릴리스 주기를 설정하는 방법에 대해 알아봅니다.
+title: Azure DevOps를 사용하는 MicroProfile 애플리케이션의 CI/CD
+description: Azure DevOps를 사용하여 MicroProfile 애플리케이션을 컨테이너 인스턴스용 Azure 웹 앱에 배포하기 위해 CI/CD 릴리스 주기를 설정하는 방법에 대해 알아봅니다.
 services: Azure DevOps
 documentationcenter: MicroProfile
 author: ruyakubu
@@ -21,9 +21,9 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/23/2018
 ms.locfileid: "49799939"
 ---
-# <a name="cicd-for-microprofile-applications-using-azure-devops"></a>Azure DevOps를 사용하는 MicroProfile 응용 프로그램의 CI/CD
+# <a name="cicd-for-microprofile-applications-using-azure-devops"></a>Azure DevOps를 사용하는 MicroProfile 애플리케이션의 CI/CD
 
-이 자습서에서는 Java EE 개발자가 Azure DevOps(공식적으로는 VSTS라고 함)를 사용하는 컨테이너 용 Azure 웹 앱에 [MicroProfile](http://microprofile.io) 응용 프로그램을 배포하기 위해 CI/CD 릴리스 주기를 쉽게 설정하는 방법을 보여줍니다.  이 예제에서는 [Payara Micro](https://www.payara.fish/payara_micro)를 기본 이미지로 사용하는 MicroProfile 응용 프로그램을 사용합니다.   
+이 자습서에서는 Java EE 개발자가 Azure DevOps(공식적으로는 VSTS라고 함)를 사용하는 컨테이너 용 Azure 웹 앱에 [MicroProfile](http://microprofile.io) 애플리케이션을 배포하기 위해 CI/CD 릴리스 주기를 쉽게 설정하는 방법을 보여줍니다.  이 예제에서는 [Payara Micro](https://www.payara.fish/payara_micro)를 기본 이미지로 사용하는 MicroProfile 애플리케이션을 사용합니다.   
 
 ```Dockerfile
 FROM payara/micro:5.182
@@ -45,7 +45,7 @@ Docker 이미지를 만들고 컨테이너 이미지를 Azure 컨테이너 레�
 
 ## <a name="create-a-build-definition"></a>빌드 정의 만들기
 
-Azure DevOps의 빌드 정의는 Java EE 응용 프로그램 소스 응용 프로그램에서 커밋이 있을 때마다 빌드의 모든 작업을 자동으로 실행합니다.  이 예제에서는 Azure DevOps는 MicroProfile Java 프로젝트를 빌드하기 위해 Maven을 사용합니다.
+Azure DevOps의 빌드 정의는 Java EE 애플리케이션 소스 애플리케이션에서 커밋이 있을 때마다 빌드의 모든 작업을 자동으로 실행합니다.  이 예제에서는 Azure DevOps는 MicroProfile Java 프로젝트를 빌드하기 위해 Maven을 사용합니다.
 
 1. Azure DevOps 프로젝트 페이지 위쪽에서 "빌드 및 릴리스" 탭을 클릭합니다.  그런 다음, **빌드** 링크를 선택합니다. 
 
@@ -93,7 +93,7 @@ Azure DevOps의 빌드 정의는 Java EE 응용 프로그램 소스 응용 프�
 
 ## <a name="push-docker-image-to-acr"></a>ACR에 Docker 이미지 푸시
 
-이 작업에서 Azure DevOps는 Azure Container Registry로 Docker 이미지를 푸시합니다.  이는 MicroProfile API 응용 프로그램을 컨테이너화된 Java 웹 앱으로 실행하는 데 사용됩니다.
+이 작업에서 Azure DevOps는 Azure Container Registry로 Docker 이미지를 푸시합니다.  이는 MicroProfile API 애플리케이션을 컨테이너화된 Java 웹 앱으로 실행하는 데 사용됩니다.
 
 1. Azure DevOps에서 Docker를 사용하고 있으므로 **Docker Build Image 만들기** 섹션에서 위의 1 - 7 단계를 반복하여 새 Docker 템플릿을 만듭니다.
 2. **명령** 드롭다운 메뉴에서 **푸시**를 선택합니다.
@@ -173,7 +173,7 @@ Azure DevOps의 릴리스 파이프라인은 빌드 프로세스가 성공적으
 8. Azure에 배포 프로세스를 시작하려면 팝업 창에서 <strong>배포</strong> 단추를 클릭합니다.
 
 
-## <a name="test-the-java-web-application"></a>Java 웹 응용 프로그램 테스트하기
+## <a name="test-the-java-web-application"></a>Java 웹 애플리케이션 테스트하기
 1. 웹 브라우저에서 웹 앱 url을 실행합니다.  
    https://{your-app-service-name}.azurewebsites.net/api/hello
 

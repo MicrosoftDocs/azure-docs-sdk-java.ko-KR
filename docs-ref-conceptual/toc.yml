@@ -68,7 +68,7 @@ items:
       - name: Reliable Services 배포
         href: /azure/service-fabric/service-fabric-quickstart-java-reliable-services
         maintainContext: true
-    - name: 메시지 응용 프로그램
+    - name: 메시지 애플리케이션
       items:
       - name: Service Bus 메시징
         items:

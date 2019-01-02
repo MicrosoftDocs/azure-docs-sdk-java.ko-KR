@@ -25,7 +25,7 @@ ms.locfileid: "52339057"
 
 ## <a name="overview"></a>개요
 
-이 문서에서는 **Spring Initializr**를 사용하여 사용자 지정 응용 프로그램을 만든 다음 해당 응용 프로그램을 사용하여 Azure Storage API를 사용하여 Azure Storage에 액세스하는 방법을 살펴봅니다.
+이 문서에서는 **Spring Initializr**를 사용하여 사용자 지정 애플리케이션을 만든 다음 해당 애플리케이션을 사용하여 Azure Storage API를 사용하여 Azure Storage에 액세스하는 방법을 살펴봅니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -267,21 +267,21 @@ ms.locfileid: "52339057"
    ```
    > [!NOTE]
    >
-   > 위의 예제는 *application.properties* 파일에서 정의된 저장소 계정 설정을 자동으로 연결합니다.
+   > 위의 예제는 *application.properties* 파일에서 정의된 스토리지 계정 설정을 자동으로 연결합니다.
    >
 
-1. 응용 프로그램 컴파일 및 실행:
+1. 애플리케이션 컴파일 및 실행:
    ```shell
    mvn clean package spring-boot:run
    ```
 
-   응용 프로그램이 컨테이너를 만들고 텍스트 파일을 Blob 형태로 컨테이너에 업로드합니다. 이것은 [Azure Portal](https://portal.azure.com)의 저장소 계정 아래 나열됩니다.
+   애플리케이션이 컨테이너를 만들고 텍스트 파일을 Blob 형태로 컨테이너에 업로드합니다. 이것은 [Azure Portal](https://portal.azure.com)의 스토리지 계정 아래 나열됩니다.
 
    ![Azure Portal에서 blob 나열](media/configure-spring-boot-starter-java-app-with-azure-storage/list-blobs-in-portal.png)
 
    > [!NOTE]
    > 
-   > 응용 프로그램을 컴파일할 때 다음 오류 메시지가 표시될 수 있습니다.
+   > 애플리케이션을 컴파일할 때 다음 오류 메시지가 표시될 수 있습니다.
    > 
    > `[INFO] ------------------------------------------------------------------------`<br/>
    > `[INFO] BUILD FAILURE`<br/>
@@ -319,9 +319,9 @@ ms.locfileid: "52339057"
 
 Microsoft Azure에서 사용할 수 있는 다른 Spring Boot Starter에 대한 자세한 내용은 [Azure용 Spring Boot Starter](spring-boot-starters-for-azure.md)를 참조하세요.
 
-Azure 기능과 Spring 기반 응용 프로그램 통합에 대한 다른 정보는 [Azure의 Spring 프레임워크](/java/azure/spring-framework/)를 참조하세요.
+Azure 기능과 Spring 기반 애플리케이션 통합에 대한 다른 정보는 [Azure의 Spring 프레임워크](/java/azure/spring-framework/)를 참조하세요.
 
-Spring Boot 응용 프로그램에서 호출할 수 있는 다른 Azure Storage API에 관한 상세 정보는 다음 문서를 참조하세요.
+Spring Boot 애플리케이션에서 호출할 수 있는 다른 Azure Storage API에 관한 상세 정보는 다음 문서를 참조하세요.
 * [Java에서 Azure Blob Storage를 사용하는 방법](/azure/storage/blobs/storage-java-how-to-use-blob-storage)
 * [Java에서 Azure Queue Storage를 사용하는 방법](/azure/storage/queues/storage-java-how-to-use-queue-storage)
 * [Java에서 Azure Table Storage를 사용하는 방법](/azure/cosmos-db/table-storage-how-to-use-java)

@@ -22,9 +22,9 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/27/2018
 ms.locfileid: "52339147"
 ---
-# <a name="deploy-a-spring-boot-application-on-linux-in-the-azure-container-service"></a>Azure Container Service에서 Linux에 Spring Boot 응용 프로그램 배포
+# <a name="deploy-a-spring-boot-application-on-linux-in-the-azure-container-service"></a>Azure Container Service에서 Linux에 Spring Boot 애플리케이션 배포
 
-이 자습서에서는 [Docker]를 사용하여 [AKS(Azure Container Service)]에서 [Spring Boot] 응용 프로그램을 개발하고 Linux 호스트에 배포하는 방법을 설명합니다.
+이 자습서에서는 [Docker]를 사용하여 [AKS(Azure Container Service)]에서 [Spring Boot] 애플리케이션을 개발하고 Linux 호스트에 배포하는 방법을 설명합니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -44,7 +44,7 @@ ms.locfileid: "52339147"
 
 ## <a name="create-the-spring-boot-on-docker-getting-started-web-app"></a>Spring Boot on Docker 시작 웹앱 만들기
 
-다음 단계에서는 간단한 Spring Boot 웹 응용 프로그램을 만들어 로컬로 테스트하는 데 필요한 단계를 안내합니다.
+다음 단계에서는 간단한 Spring Boot 웹 애플리케이션을 만들어 로컬로 테스트하는 데 필요한 단계를 안내합니다.
 
 1. 명령 프롬프트를 열고 애플리케이션을 저장할 로컬 디렉터리를 만들고 해당 디렉터리로 변경합니다. 예를 들면 다음과 같습니다.
    ```
@@ -132,7 +132,7 @@ ms.locfileid: "52339147"
    </servers>
    ```
 
-1. Spring Boot 응용 프로그램의 완성된 프로젝트 디렉터리로 이동하고(예: “*C:\SpringBoot\gs-spring-boot-docker\complete*” 또는 “*/users/robert/SpringBoot/gs-spring-boot-docker/complete*”) 텍스트 편집기를 사용하여 *pom.xml* 파일을 엽니다.
+1. Spring Boot 애플리케이션의 완성된 프로젝트 디렉터리로 이동하고(예: “*C:\SpringBoot\gs-spring-boot-docker\complete*” 또는 “*/users/robert/SpringBoot/gs-spring-boot-docker/complete*”) 텍스트 편집기를 사용하여 *pom.xml* 파일을 엽니다.
 
 1. *pom.xml* 파일의 `<properties>` 컬렉션을 이 자습서의 이전 섹션에서 사용한 Azure Container Registry의 로그인 서버 값으로 업데이트합니다. 예:
 
@@ -166,7 +166,7 @@ ms.locfileid: "52339147"
    </plugin>
    ```
 
-1. Spring Boot 응용 프로그램의 완성된 프로젝트 디렉터리로 이동하고 다음 명령을 실행하여 응용 프로그램을 다시 빌드하고 Azure Container Registry에 컨테이너를 푸시합니다.
+1. Spring Boot 애플리케이션의 완성된 프로젝트 디렉터리로 이동하고 다음 명령을 실행하여 애플리케이션을 다시 빌드하고 Azure Container Registry에 컨테이너를 푸시합니다.
 
    ```
    mvn package docker:build -DpushImage 
