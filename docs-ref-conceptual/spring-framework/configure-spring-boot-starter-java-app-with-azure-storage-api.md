@@ -8,18 +8,18 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: storage
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: storage
-ms.openlocfilehash: 94f7b1148d9282d33bc67da0e0d97a284a81d4d4
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: 984a3edb89608c806537f991b42e309f31130896
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52339057"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991447"
 ---
 # <a name="how-to-use-the-spring-boot-starter-with-the-azure-storage-api"></a>Azure Storage API에서 Spring Boot Starter를 사용하는 방법
 
@@ -40,7 +40,7 @@ ms.locfileid: "52339057"
 
 1. <https://start.spring.io/>로 이동합니다.
 
-1. **Java**에서 **Maven** 프로젝트를 생성한다고 지정하고, 응용 프로그램에 대한 **그룹** 및 **아티팩트** 이름을 입력한 다음 Spring Initializr의 **정식 버전으로 전환**하는 링크를 클릭합니다.
+1. **Java**에서 **Maven** 프로젝트를 생성한다고 지정하고, 애플리케이션에 대한 **그룹** 및 **아티팩트** 이름을 입력한 다음, Spring Initializr의 **정식 버전으로 전환**하는 링크를 클릭합니다.
 
    ![기본 Spring Initializr 옵션](media/configure-spring-boot-starter-java-app-with-azure-storage/spring-initializr-basic.png)
 
@@ -316,6 +316,13 @@ ms.locfileid: "52339057"
    > 
 
 ## <a name="next-steps"></a>다음 단계
+
+Spring과 Azure에 대한 자세한 사항은 Azure의 Spring 설명서 센터를 참조합니다.
+
+> [!div class="nextstepaction"]
+> [Azure의 Spring](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>추가 리소스
 
 Microsoft Azure에서 사용할 수 있는 다른 Spring Boot Starter에 대한 자세한 내용은 [Azure용 Spring Boot Starter](spring-boot-starters-for-azure.md)를 참조하세요.
 

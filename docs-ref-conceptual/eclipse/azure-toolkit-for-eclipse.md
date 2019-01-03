@@ -7,19 +7,19 @@ author: rmcmurray
 manager: routlaw
 editor: ''
 ms.assetid: ef2f3839-2549-4471-9b53-0deb7f4c128b
-ms.author: robmcm;asirveda
-ms.date: 02/01/2018
+ms.author: robmcm
+ms.date: 12/12/2018
 ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: d8ab3de791d1a4893efb77a51418c437f81c86ff
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 88d92cfd82244d5df2ad34304155d41c5aab0ee9
+ms.sourcegitcommit: 8e530a2ce58ea0e2bf5c136e427a9be863231a1b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893464"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53638962"
 ---
 # <a name="azure-toolkit-for-eclipse"></a>Eclipse용 Azure 도구 키트
 
@@ -46,7 +46,7 @@ Azure Toolkit for Eclipse는 Eclipse IDE(통합 개발 환경) 내부에서 클�
 
 * [Eclipse용 Azure 도구 키트를 사용하여 웹앱을 Docker 컨테이너로 게시](azure-toolkit-for-eclipse-publish-as-docker-container.md)
 
-* [Eclipse용 HDInsight 도구 플러그 인을 사용하여 HDInsight Spark Linux 클러스터용 Spark 응용 프로그램 만들기](/azure/hdinsight/hdinsight-apache-spark-eclipse-tool-plugin)
+* [Eclipse용 HDInsight 도구 플러그 인을 사용하여 HDInsight Spark Linux 클러스터용 Spark 애플리케이션 만들기](/azure/hdinsight/hdinsight-apache-spark-eclipse-tool-plugin)
 
 * [Eclipse에서 Java용 Azure 라이브러리 패키지의 Javadoc 콘텐츠 표시](azure-toolkit-for-eclipse-displaying-javadoc-content-for-azure-libraries.md)
 
@@ -67,7 +67,7 @@ Eclipse용 Azure 도구 키트에 대한 자세한 내용은 다음 페이지를
 
 * [Eclipse Marketplace의 Eclipse용 Azure 도구 키트](http://marketplace.eclipse.org/content/azure-toolkit-eclipse)
 
-Azure에서 Java를 사용하는 방법에 대한 자세한 내용은 [Java 개발자용 Azure](https://docs.microsoft.com/java/azure/) 및 [Visual Studio Team Services용 Java 도구](https://java.visualstudio.com/)를 참조하세요.
+Azure에서 Java를 사용하는 방법에 대한 자세한 내용은 [Java 개발자용 Azure](https://docs.microsoft.com/java/azure/) 및 [Visual Studio Team Services용 Java 도구](/azure/devops/java/)를 참조하세요.
 
 <!-- [!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)] -->
 
@@ -79,7 +79,6 @@ Azure에서 Java를 사용하는 방법에 대한 자세한 내용은 [Java 개�
 <!-- URL List -->
 
 [Azure for Java Developers]: https://docs.microsoft.com/java/azure
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 
 <!-- Temporarily Deprecated URLs -->
 
