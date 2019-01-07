@@ -24,7 +24,7 @@ ms.locfileid: "51285673"
 
 [Azure Storage](/azure/storage/storage-introduction)를 사용하여 Java 응용 프로그램의 Blob(개체) 데이터, 파일 및 메시지를 읽고 씁니다.
 
-Azure Storage를 시작하려면 [Java에서 Blob 저장소를 사용하는 방법](/azure/storage/blobs/storage-quickstart-blobs-java-v10)을 참조하세요.
+Azure Storage를 시작하려면 [Java에서 Blob 스토리지를 사용하는 방법](/azure/storage/blobs/storage-quickstart-blobs-java-v10)을 참조하세요.
 
 ## <a name="client-library"></a>클라이언트 라이브러리
 

@@ -385,7 +385,7 @@ az group delete --name sampleSqlResourceGroup
 
 ## <a name="write-a-blob-into-a-new-storage-account"></a>새 저장소 계정에 Blob 쓰기
 
-`AzureApp.java`의 현재 main 메서드를 아래 코드로 바꿉니다. 이 코드에서는 [Azure 저장소 계정](https://docs.microsoft.com/azure/storage/storage-introduction)을 만든 다음 Java용 Azure Storage 라이브러리를 사용하여 클라우드에 새 텍스트 파일을 만듭니다.
+`AzureApp.java`의 현재 main 메서드를 아래 코드로 바꿉니다. 이 코드에서는 [Azure 스토리지 계정](https://docs.microsoft.com/azure/storage/storage-introduction)을 만든 다음 Java용 Azure Storage 라이브러리를 사용하여 클라우드에 새 텍스트 파일을 만듭니다.
 
 ```java
 public static void main(String[] args) {
@@ -444,7 +444,7 @@ public static void main(String[] args) {
 mvn clean compile exec:java
 ```
 
-Azure Portal 또는 [Azure Storage 탐색기](https://docs.microsoft.com/azure/vs-azure-tools-storage-explorer-blobs)를 사용하여 저장소 계정에서 `helloazure.txt` 파일을 찾아볼 수 있습니다.
+Azure Portal 또는 [Azure Storage 탐색기](https://docs.microsoft.com/azure/vs-azure-tools-storage-explorer-blobs)를 사용하여 스토리지 계정에서 `helloazure.txt` 파일을 찾아볼 수 있습니다.
 
 CLI를 사용하여 저장소 계정을 정리합니다.
 
