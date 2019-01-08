@@ -97,7 +97,7 @@ ms.locfileid: "52338717"
 
 6. 이전에 Azure 웹앱 컨테이너를 만들지 않은 경우 또는 애플리케이션을 새 컨테이너에 게시하려는 경우 다음 단계를 사용합니다. 그렇지 않으면 기존 웹앱 컨테이너를 선택하고 아래의 7단계로 건너뜁니다.
    
-   a.  **새로 만들기...**
+   a. **새로 만들기...**
       
       ![Azure 웹앱 컨테이너에 배포 대화 상자][15]
 
@@ -117,7 +117,7 @@ ms.locfileid: "52338717"
       
       기존 리소스 그룹(있는 경우)을 선택하고 아래 g 단계로 건너뛰거나 이들 단계를 통해 새 리소스 그룹을 만들 수 있습니다.
       
-   *  **새로 만들기...**
+   * **새로 만들기...**
    * **새 리소스 그룹** 대화 상자가 표시됩니다.
         
        ![새 리소스 그룹 대화 상자][08]
@@ -136,7 +136,7 @@ ms.locfileid: "52338717"
       
        You can select an existing App Service Plan (if you have any) and skip to step h below, or use the following these steps to create a new App Service Plan:
       
-      *  **새로 만들기...**
+      * **새로 만들기...**
       * **새 App Service 계획** 대화 상자가 표시됩니다.
         
           ![새 App Service 계획 대화 상자][09]
