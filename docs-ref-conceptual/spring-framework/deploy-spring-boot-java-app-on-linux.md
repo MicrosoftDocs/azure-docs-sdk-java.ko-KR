@@ -8,19 +8,19 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: container-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: 30be16aebb18e3c9e18f9a023ea9b82e5d614e94
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: aa8fa6d15d868e55b252483993d001d19746244b
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52339147"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991507"
 ---
 # <a name="deploy-a-spring-boot-application-on-linux-in-the-azure-container-service"></a>Azure Container Service에서 Linux에 Spring Boot 애플리케이션 배포
 
@@ -83,7 +83,7 @@ ms.locfileid: "52339147"
    curl http://localhost
    ```
 
-1. **Hello Docker World!** 라는 메시지가 표시되어야 합니다.
+1. 다음 메시지가 표시되어야 합니다. **Hello Docker World!**
 
    ![로컬로 샘플 앱 찾아보기][SB01]
 
@@ -132,7 +132,7 @@ ms.locfileid: "52339147"
    </servers>
    ```
 
-1. Spring Boot 애플리케이션의 완성된 프로젝트 디렉터리로 이동하고(예: “*C:\SpringBoot\gs-spring-boot-docker\complete*” 또는 “*/users/robert/SpringBoot/gs-spring-boot-docker/complete*”) 텍스트 편집기를 사용하여 *pom.xml* 파일을 엽니다.
+1. Spring Boot 애플리케이션의 완성된 프로젝트 디렉터리(예: "*C:\SpringBoot\gs-spring-boot-docker\complete*" 또는 "*/users/robert/SpringBoot/gs-spring-boot-docker/complete*") 텍스트 편집기를 사용하여 *pom.xml* 파일을 엽니다.
 
 1. *pom.xml* 파일의 `<properties>` 컬렉션을 이 자습서의 이전 섹션에서 사용한 Azure Container Registry의 로그인 서버 값으로 업데이트합니다. 예:
 
@@ -209,11 +209,11 @@ ms.locfileid: "52339147"
 
    * **개인 레지스트리**를 선택합니다.
 
-   * **이미지 및 선택적 태그**: 이전에 사용한 컨테이너 이름을 지정합니다. 예: "*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*"
+   * **이미지 및 옵션 태그**: 이전 컨테이너 이름을 지정합니다. 예: "*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*"
 
-   * **서버 URL**: 이전의 레지스트리 URL을 지정합니다. 예: "*<https://wingtiptoysregistry.azurecr.io>*"
+   * **서버 URL**: 이전 레지스트리 URL을 지정합니다. 예: "*<https://wingtiptoysregistry.azurecr.io>*"
 
-   * **로그인 사용자 이름** 및 **암호**: 이전 단계에서 사용한 **액세스 키**의 로그인 자격 증명을 지정합니다.
+   * **로그인 사용자 이름** 및 **암호**: 이전 단계에서 사용한 **액세스 키**로 로그인 자격 증명을 지정합니다.
    
    e. 위의 정보를 모두 입력하면 **확인**을 클릭합니다.
 
@@ -231,7 +231,7 @@ ms.locfileid: "52339147"
 >
 > 3. 목록에서 웹앱을 선택합니다. (아래 이미지에서 항목 #2)
 >
-> 4. **응용 프로그램 설정**을 클릭합니다. (아래 이미지에서 항목 #3)
+> 4. **애플리케이션 설정**을 클릭합니다. (아래 이미지에서 항목 #3)
 >
 > 5. **앱 설정** 섹션에서 **PORT**라는 새 환경 변수를 추가하고 값에 사용자 지정 포트 번호를 입력합니다. (아래 이미지에서 항목 #4)
 >
@@ -263,12 +263,19 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 
 ## <a name="next-steps"></a>다음 단계
 
+Spring과 Azure에 대한 자세한 사항은 Azure의 Spring 설명서 센터를 참조합니다.
+
+> [!div class="nextstepaction"]
+> [Azure의 Spring](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>추가 리소스
+
 Azure에서 Spring Boot 애플리케이션을 사용 하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
 
-* [Azure App Service에 Spring Boot 응용 프로그램 배포](deploy-spring-boot-java-web-app-on-azure.md)
-* [Azure Container Service의 Kubernetes 클러스터에 Spring Boot 응용 프로그램 배포](deploy-spring-boot-java-app-on-kubernetes.md)
+* [Azure App Service에 Spring Boot 애플리케이션 배포](deploy-spring-boot-java-web-app-on-azure.md)
+* [Azure Container Service의 Kubernetes 클러스터에 Spring Boot 애플리케이션 배포](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 개발자용 Azure] 및 [Visual Studio Team Services용 Java 도구]를 참조하세요.
+Java와 함께 Azure를 사용하는 방법에 관한 자세한 정보는 [Java 개발자용 Azure]와 [Azure DevOps 및 Java 사용하기]를 참조하세요.
 
 Spring Boot on Docker 샘플 프로젝트에 대한 자세한 정보는 [Spring Boot on Docker 시작]을 참조하세요.
 
@@ -282,14 +289,14 @@ Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대�
 
 [Azure CLI(명령줄 인터페이스)]: /cli/azure/overview
 [AKS(Azure Container Service)]: https://azure.microsoft.com/services/container-service/
-[Java 개발자용 Azure]: https://docs.microsoft.com/java/azure/
+[Java 개발자용 Azure]: /java/azure/
 [Azure Portal]: https://portal.azure.com/
 [Azure Portal을 사용하여 개인 Docker 컨테이너 레지스트리 만들기]: /azure/container-registry/container-registry-get-started-portal
 [Azure Web App on Linux에 대한 사용자 지정 Docker 이미지 사용]: /azure/app-service-web/app-service-linux-using-custom-docker-image
 [Docker]: https://www.docker.com/
 [체험판 Azure 계정]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[Visual Studio Team Services용 Java 도구]: https://java.visualstudio.com/
+[Azure DevOps 및 Java 사용하기]: /azure/devops/java/
 [Maven]: http://maven.apache.org/
 [MSDN 구독자 혜택]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/

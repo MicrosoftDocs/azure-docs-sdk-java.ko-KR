@@ -8,20 +8,20 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: active-directory
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 89e294fa739b59f87667f901e914fd5f050b5b8c
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: b3d97917deffa75bfab5f0d9ded64affd90139e1
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52338777"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991397"
 ---
-# <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory"></a>자습서: Azure Active Directory용 Spring Boot Starter를 사용하여 Java 웹앱 보호
+# <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory"></a>자습서: Azure Active Directory용 Spring Boot Starter를 사용하여 Java 웹앱 보호하기
 
 ## <a name="overview"></a>개요
 
@@ -48,7 +48,7 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
 
 1. <https://start.spring.io/>로 이동합니다.
 
-1. **Java**에서 **Maven** 프로젝트를 생성한다고 지정하고, 응용 프로그램에 대한 **그룹** 및 **아티팩트** 이름을 입력한 다음 Spring Initializr의 **정식 버전으로 전환**하는 링크를 클릭합니다.
+1. **Java**에서 **Maven** 프로젝트를 생성한다고 지정하고, 애플리케이션에 대한 **그룹** 및 **아티팩트** 이름을 입력한 다음, Spring Initializr의 **정식 버전으로 전환**하는 링크를 클릭합니다.
 
    ![그룹 및 아티팩트 이름 지정][create-spring-app-01]
 
@@ -102,7 +102,7 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
 
    ![앱 등록 키 만들기][create-app-registration-03]
 
-5. **설명**을 추가하고 새 키에 대해 **기간**을 지정한 다음 **저장**을 클릭합니다. **저장** 아이콘을 클릭하면 키 값이 자동으로 입력되며, 나중에 이 자습서의 뒷부분에서 *application.properties* 파일을 구성하기 위해 키 값을 복사해 두어야 합니다. 이 값은 나중에 검색할 수 없습니다.
+5. **설명**을 추가하고 새 키에 대해 **기간**을 지정한 다음, **저장**을 클릭합니다. **저장** 아이콘을 클릭하면 키 값이 자동으로 입력되며, 나중에 이 자습서의 뒷부분에서 *application.properties* 파일을 구성하기 위해 키 값을 복사해 두어야 합니다. 이 값은 나중에 검색할 수 없습니다.
 
    ![앱 등록 키 매개 변수 지정][create-app-registration-04]
 
@@ -136,7 +136,7 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
 
     > [!NOTE]
     > 
-    > `oauth2AllowImplicitFlow` 매개 변수 및 다른 응용 프로그램 설정에 대한 자세한 내용은 [Azure Active Directory 응용 프로그램 매니페스트][AAD app manifest]를 참조하세요. 
+    > `oauth2AllowImplicitFlow` 매개 변수 및 다른 애플리케이션 설정에 대한 자세한 내용은 [Azure Active Directory 애플리케이션 매니페스트][AAD app manifest]를 참조하세요. 
     >
 
 ### <a name="add-a-user-account-to-your-directory-and-add-that-account-to-a-group"></a>디렉터리에 사용자 계정을 추가하고 해당 계정을 그룹에 추가합니다
@@ -156,11 +156,11 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
    > `wingtipuser@wingtiptoysdirectory.onmicrosoft.com`
    > 
 
-1. **그룹**을 클릭하고, 응용 프로그램에서 권한 부여를 위해 사용할 그룹을 선택한 다음 **선택**을 클릭합니다. (이 자습서의 목적에 따라 _사용자_ 그룹에 계정을 추가합니다.)
+1. **그룹**을 클릭하고, 애플리케이션에서 권한 부여를 위해 사용할 그룹을 선택한 다음, **선택**을 클릭합니다. (이 자습서의 목적에 따라 _사용자_ 그룹에 계정을 추가합니다.)
 
    ![사용자의 그룹을 선택합니다.][create-user-03]
 
-1. **암호 표시**를 클릭하여 암호를 복사합니다. 이는 이 자습서의 뒷부분에서 응용 프로그램에 로그인할 때 사용됩니다. 암호를 복사한 다음, **만들기**를 클릭하여 디렉터리에 새 사용자 계정을 추가합니다.
+1. **암호 표시**를 클릭하여 암호를 복사합니다. 이는 이 자습서의 뒷부분에서 애플리케이션에 로그인할 때 사용됩니다. 암호를 복사한 다음, **만들기**를 클릭하여 디렉터리에 새 사용자 계정을 추가합니다.
 
    ![암호 표시][create-user-04]
 
@@ -361,7 +361,7 @@ Spring과 Azure에 대한 자세한 사항은 Azure의 Spring 설명서 센터�
 [Get started with Azure AD]: /azure/active-directory/get-started-azure-ad
 [Azure for Java Developers]: /java/azure/
 [free Azure account]: https://azure.microsoft.com/pricing/free-trial/
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[Working with Azure DevOps and Java]: /azure/devops/
 [MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/

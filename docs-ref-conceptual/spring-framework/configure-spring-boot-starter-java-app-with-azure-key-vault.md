@@ -8,18 +8,18 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: key-vault
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: fcb18de809f4465239f1f360a755624a5095e03a
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: 78dadcf93bfc57ab669271495393fa9ba164c89d
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52339157"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991367"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>Azure Key Vault에 Spring Boot Starter를 사용하는 방법
 
@@ -39,7 +39,7 @@ ms.locfileid: "52339157"
 
 1. <https://start.spring.io/>로 이동합니다.
 
-1. **Java**에서 **Maven** 프로젝트를 생성한다고 지정하고, 응용 프로그램에 대한 **그룹** 및 **아티팩트** 이름을 입력한 다음 Spring Initializr의 **정식 버전으로 전환**하는 링크를 클릭합니다.
+1. **Java**에서 **Maven** 프로젝트를 생성한다고 지정하고, 애플리케이션에 대한 **그룹** 및 **아티팩트** 이름을 입력한 다음 Spring Initializr의 **정식 버전으로 전환**하는 링크를 클릭합니다.
 
    ![그룹 및 아티팩트 이름 지정][secrets-01]
 
@@ -154,10 +154,10 @@ ms.locfileid: "52339157"
    |---|---|
    | `name` | 키 자격 증명 모음의 고유한 이름을 지정합니다. |
    | `location` | 리소스 그룹을 호스팅할 [Azure 지역](https://azure.microsoft.com/regions/)을 지정합니다. |
-   | `enabled-for-deployment` | [키 자격 증명 모음 배포 옵션](https://docs.microsoft.com/cli/azure/keyvault)을 지정합니다. |
-   | `enabled-for-disk-encryption` | [키 자격 증명 모음 암호화 옵션](https://docs.microsoft.com/cli/azure/keyvault)을 지정합니다. |
-   | `enabled-for-template-deployment` | [키 자격 증명 모음 암호화 옵션](https://docs.microsoft.com/cli/azure/keyvault)을 지정합니다. |
-   | `sku` | [키 자격 증명 모음 SKU 옵션](https://docs.microsoft.com/cli/azure/keyvault)을 지정합니다. |
+   | `enabled-for-deployment` | [키 자격 증명 모음 배포 옵션](/cli/azure/keyvault)을 지정합니다. |
+   | `enabled-for-disk-encryption` | [키 자격 증명 모음 암호화 옵션](/cli/azure/keyvault)을 지정합니다. |
+   | `enabled-for-template-deployment` | [키 자격 증명 모음 암호화 옵션](/cli/azure/keyvault)을 지정합니다. |
+   | `sku` | [키 자격 증명 모음 SKU 옵션](/cli/azure/keyvault)을 지정합니다. |
    | `query` | 이 자습서를 완료하는 데 필요한 키 자격 증명 모은 URI인 값을 응답에서 검색합니다. |
 
    Azure CLI가 나중에 사용하게 되는 키 자격 증명 모음의 URI를 표시합니다. 예를 들어 다음과 같습니다.  
@@ -175,7 +175,7 @@ ms.locfileid: "52339157"
    | 매개 변수 | 설명 |
    |---|---|
    | `name` | 앞의 키 자격 증명 모음 이름을 지정합니다. |
-   | `secret-permission` | 키 자격 증명 모음에 대해 [보안 정책](https://docs.microsoft.com/cli/azure/keyvault)을 지정합니다. |
+   | `secret-permission` | 키 자격 증명 모음에 대해 [보안 정책](/cli/azure/keyvault)을 지정합니다. |
    | `spn` | 앞의 애플리케이션 등록에서 GUID를 지정합니다. |
 
    Azure CLI가 다음 예제처럼 보안 정책 만들기 결과를 표시합니다.  
@@ -254,7 +254,7 @@ ms.locfileid: "52339157"
 
 4. 프로젝트의 기본 소스 코드 파일로 이동합니다. 예를 들어 */src/main/java/com/wingtiptoys/secrets*입니다.
 
-5. 텍스트 편집기의 파일에서 *SecretsApplication.java* 같은 애플리케이션의 기본 Java 파일을 열고 다음 줄을 파일에 추가합니다.
+5. 텍스트 편집기에서 애플리케이션의 메인 Java 파일(예: *SecretsApplication.java*)을 열어 다음 줄을 추가합니다.
 
    ```java
    package com.wingtiptoys.secrets;
@@ -307,7 +307,16 @@ ms.locfileid: "52339157"
 
 ## <a name="summary"></a>요약
 
-이 자습서에서는 **[Spring Initializr]** 을 사용하여 새 Java 웹 애플리케이션을 만들고 민감한 정보를 저장하기 위해 Azure Key Vault를 만든 다음 Key Vault에서 정보를 검색하도록 애플리케이션을 구성했습니다.
+이 자습서에서는 **[Spring Initializr]** 를 사용하여 새 Java 웹 애플리케이션을 만들었으며, 민감한 정보를 저장하기 위해 Azure Key Vault를 만들었고 Azure Key Vault를 통해 정보를 검색하도록 애플리케이션을 구성했습니다.
+
+## <a name="next-steps"></a>다음 단계
+
+Spring과 Azure에 대한 자세한 사항은 Azure의 Spring 설명서 센터를 참조합니다.
+
+> [!div class="nextstepaction"]
+> [Azure의 Spring](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>추가 리소스
 
 Azure Key Vaults를 사용하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
 
@@ -317,26 +326,19 @@ Azure Key Vaults를 사용하는 방법에 대한 자세한 내용은 다음 문
 
 Azure에서 Spring Boot 애플리케이션을 사용 하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
 
-* [Azure App Service에 Spring Boot 응용 프로그램 배포](deploy-spring-boot-java-web-app-on-azure.md)
+* [Azure App Service에 Spring Boot 애플리케이션 배포](deploy-spring-boot-java-web-app-on-azure.md)
 
-* [Azure Container Service의 Kubernetes 클러스터에 Spring Boot 응용 프로그램 실행](deploy-spring-boot-java-app-on-kubernetes.md)
+* [Azure Container Service의 Kubernetes 클러스터에 Spring Boot 애플리케이션 실행](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 개발자용 Azure] 및 [Visual Studio Team Services용 Java 도구]를 참조하세요.
-
-## <a name="next-steps"></a>다음 단계
-
-Spring과 Azure에 대한 자세한 사항은 Azure의 Spring 설명서 센터를 참조합니다.
-
-> [!div class="nextstepaction"]
-> [Azure의 Spring](/java/azure/spring-framework)
+Java와 함께 Azure를 사용하는 방법에 관한 자세한 정보는 [Java 개발자용 Azure]와 [Azure DevOps 및 Java 사용하기]를 참조하세요.
 
 <!-- URL List -->
 
 [Key Vault 설명서]: /azure/key-vault/
 [Azure Key Vault 시작]: /azure/key-vault/key-vault-get-started
-[Java 개발자용 Azure]: https://docs.microsoft.com/java/azure/
+[Java 개발자용 Azure]: /java/azure/
 [체험판 Azure 계정]: https://azure.microsoft.com/pricing/free-trial/
-[Visual Studio Team Services용 Java 도구]: https://java.visualstudio.com/
+[Azure DevOps 및 Java 사용하기]: /azure/devops/
 [MSDN 구독자 혜택]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/

@@ -1,6 +1,6 @@
 ---
 title: Fabric8 Maven 플러그인을 사용하여 Spring Boot 앱 배포
-description: 이 자습서에서는 Apache Maven용 Fabric8 플러그인을 사용하여 Microsoft Azure에 Spring Boot 응용 프로그램을 배포하는 단계를 설명합니다.
+description: 이 자습서에서는 Apache Maven용 Fabric8 플러그인을 사용하여 Microsoft Azure에 Spring Boot 애플리케이션을 배포하는 단계를 설명합니다.
 services: container-service
 documentationcenter: java
 author: rmcmurray
@@ -8,22 +8,22 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: ab3babf358cf4899709a9a9d2d7917cb2c6d220e
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: 72eb49a764bdf15339e6cd17c6a7f997495dcf09
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52338837"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991607"
 ---
 # <a name="deploy-a-spring-boot-app-using-the-fabric8-maven-plugin"></a>Fabric8 Maven 플러그인을 사용하여 Spring Boot 앱 배포
 
-**[Fabric8]** 은 개발자들이 Linux 컨테이너에서 응용 프로그램을 만들 수 있게 지원하는 **[Kubernetes]** 기반 오픈 소스 솔루션입니다.
+**[Fabric8]** 은 개발자들이 Linux 컨테이너에서 애플리케이션을 만들 수 있게 지원하는 **[Kubernetes]** 기반 오픈 소스 솔루션입니다.
 
 이 자습서에서는 Maven용 Fabric8 플러그인을 사용하여 [AKS(Azure Container Service)]에서 애플리케이션을 개발하고 Linux 호스트에 배포하는 방법을 설명합니다.
 
@@ -84,7 +84,7 @@ ms.locfileid: "52338837"
 
    **Hello Docker World**라는 메시지가 표시되어야 합니다.
 
-   ![샘플 응용 프로그램을 로컬로 찾아보기][SB01]
+   ![샘플 애플리케이션을 로컬로 찾아보기][SB01]
 
 
 ## <a name="install-the-kubernetes-command-line-interface-and-create-an-azure-resource-group-using-the-azure-cli"></a>Kubernetes 명령줄 인터페이스를 설치하고 Azure CLI를 사용하여 Azure 리소스 그룹 만들기
@@ -144,7 +144,7 @@ ms.locfileid: "52338837"
    ```
    위치:  
       * *wingtiptoys-kubernetes*는 리소스 그룹의 고유한 이름입니다.  
-      * *westeurope*은 응용 프로그램의 적합한 지리적 위치입니다.  
+      * *westeurope*은 애플리케이션의 적합한 지리적 위치입니다.  
 
    Azure CLI가 다음 에제처럼 리소스 그룹 만들기 결과를 표시합니다.  
 
@@ -171,7 +171,7 @@ ms.locfileid: "52338837"
    위치:  
       * *wingtiptoys kubernetes*는 이 문서의 앞부분에 나온 리소스 그룹의 이름입니다.  
       * *wingtiptoys-cluster*는 Kubernetes클러스터의 고유한 이름입니다.
-      * *wingtiptoys*는 응용 프로그램의 고유한 DNS 이름입니다.
+      * *wingtiptoys*는 애플리케이션의 고유한 DNS 이름입니다.
 
    Azure CLI가 다음 예제처럼 클러스터 만들기 결과를 표시합니다.  
 
@@ -315,7 +315,7 @@ ms.locfileid: "52338837"
    </servers>
    ```
 
-5. Spring Boot 응용 프로그램에 대해 완료된 프로젝트 디렉터리로 이동하고(예: "*C:\SpringBoot\gs-spring-boot-docker\complete*" 또는 "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*") 텍스트 편집기를 사용하여 *pom.xml* 파일을 엽니다.
+5. Spring Boot 애플리케이션에 대해 완료된 프로젝트 디렉터리로 이동하고(예: "*C:\SpringBoot\gs-spring-boot-docker\complete*" 또는 "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*") 텍스트 편집기를 사용하여 *pom.xml* 파일을 엽니다.
 
 6. *pom.xml* 파일의 `<properties>` 컬렉션을 Azure Container Registry의 로그인 서버 값으로 업데이트합니다.
 
@@ -341,7 +341,7 @@ ms.locfileid: "52338837"
    </plugin>
    ```
 
-8. Spring Boot 응용 프로그램에 대한 완성된 프로젝트 디렉터리로 이동한 후 다음 Maven 명령을 실행하여 Docker 컨테이너를 빌드하고 레지스트리에 이미지를 푸시합니다.
+8. Spring Boot 애플리케이션에 대한 완성된 프로젝트 디렉터리로 이동한 후에 다음 Maven 명령을 실행하여 Docker 컨테이너를 빌드하고 레지스트리에 이미지를 푸시합니다.
 
    ```shell
    mvn package dockerfile:build -DpushImage
@@ -362,7 +362,7 @@ ms.locfileid: "52338837"
 
 ## <a name="configure-your-spring-boot-app-to-use-the-fabric8-maven-plugin"></a>Fabric8 Maven 플러그인을 사용하도록 Spring Boot 앱 구성
 
-1. Spring Boot 응용 프로그램에 대해 완료된 프로젝트 디렉터리로 이동하고(예: "*C:\SpringBoot\gs-spring-boot-docker\complete*" 또는 "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*") 텍스트 편집기를 사용하여 *pom.xml* 파일을 엽니다.
+1. Spring Boot 애플리케이션의 완성된 프로젝트 디렉터리(예: "*C:\SpringBoot\gs-spring-boot-docker\complete*" 또는 "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*")로 이동하여 텍스트 편집기로 *pom.xml* 파일을 엽니다.
 
 1. *pom.xml* 파일의 `<plugins>` 컬렉션을 업데이트하여 Fabric8 Maven 플러그인을 추가합니다.
 
@@ -378,7 +378,7 @@ ms.locfileid: "52338837"
    </plugin>
    ```
 
-1. Spring Boot 응용 프로그램의 기본 원본 디렉터리로 이동하고(예: "*C:\SpringBoot\gs-spring-boot-docker\complete\src\main*" 또는 "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete/src/main*") 이름이 "*fabric8*"인 새 폴더를 만듭니다.
+1. Spring Boot 애플리케이션의 완료된 프로젝트 디렉터리(예: "*C:\SpringBoot\gs-spring-boot-docker\complete\src\main*" 또는 "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete/src/main*")로 이동하여 이름이 "*fabric8*"인 새 폴더를 만듭니다.
 
 1. 새 *fabric8* 폴더에 3개의 YAML 조각 파일을 만듭니다.
 
@@ -480,7 +480,7 @@ ms.locfileid: "52338837"
    [INFO] ----------------------------------------------------
    ```
 
-1. 앱이 클러스터에 배포되면 다음 예제처럼 `kubectl` 응용 프로그램을 사용하여 외부 IP 주소를 쿼리합니다.
+1. 앱이 클러스터에 배포되면 다음 예제처럼 `kubectl` 애플리케이션을 사용하여 외부 IP 주소를 쿼리합니다.
    ```shell
    kubectl get svc -w
    ```
@@ -493,9 +493,9 @@ ms.locfileid: "52338837"
    gs-spring-boot-docker   10.0.242.8   13.65.196.3   80:31215/TCP   3m
    ```
 
-   외부 IP 주소를 사용하여 웹 브라우저에 응용 프로그램을 열 수 있습니다.
+   외부 IP 주소를 사용하여 웹 브라우저에 애플리케이션을 열 수 있습니다.
 
-   ![샘플 응용 프로그램을 외부로 찾아보기][SB02]
+   ![샘플 애플리케이션을 외부로 찾아보기][SB02]
 
 ## <a name="delete-your-kubernetes-cluster"></a>Kubernetes 클러스터 삭제
 
@@ -507,13 +507,20 @@ Kubernetes 클러스터가 더 이상 필요하지 않게 되면 `az group delet
 
 ## <a name="next-steps"></a>다음 단계
 
+Spring과 Azure에 대한 자세한 사항은 Azure의 Spring 설명서 센터를 참조합니다.
+
+> [!div class="nextstepaction"]
+> [Azure의 Spring](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>추가 리소스
+
 Azure에서 Spring Boot 애플리케이션을 사용 하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
 
-* [Azure App Service에 Spring Boot 응용 프로그램 배포](deploy-spring-boot-java-web-app-on-azure.md)
-* [Azure Container Service에서 Linux에 Spring Boot 응용 프로그램 배포](deploy-spring-boot-java-app-on-linux.md)
-* [Azure Container Service의 Kubernetes 클러스터에 Spring Boot 응용 프로그램 배포](deploy-spring-boot-java-app-on-kubernetes.md)
+* [Azure App Service에 Spring Boot 애플리케이션 배포](deploy-spring-boot-java-web-app-on-azure.md)
+* [Azure Container Service에서 Linux에 Spring Boot 애플리케이션 배포](deploy-spring-boot-java-app-on-linux.md)
+* [Azure Container Service의 Kubernetes 클러스터에 Spring Boot 애플리케이션 배포](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 개발자용 Azure] 및 [Visual Studio Team Services용 Java 도구]를 참조하세요.
+Java와 함께 Azure를 사용하는 방법에 관한 자세한 정보는 [Java 개발자용 Azure]와 [Azure DevOps 및 Java 사용하기]를 참조하세요.
 
 Spring Boot on Docker 샘플 프로젝트에 대한 자세한 정보는 [Spring Boot on Docker 시작]을 참조하세요.
 
@@ -527,7 +534,7 @@ Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대�
 
 [Azure CLI(명령줄 인터페이스)]: /cli/azure/overview
 [AKS(Azure Container Service)]: https://azure.microsoft.com/services/container-service/
-[Java 개발자용 Azure]: https://docs.microsoft.com/java/azure/
+[Java 개발자용 Azure]: /java/azure/
 [Azure portal]: https://portal.azure.com/
 [Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal
 [Azure Web App on Linux에 대한 사용자 지정 Docker 이미지 사용]: /azure/app-service-web/app-service-linux-using-custom-docker-image
@@ -535,7 +542,7 @@ Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대�
 [Fabric8]: https://fabric8.io/
 [체험판 Azure 계정]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[Visual Studio Team Services용 Java 도구]: https://java.visualstudio.com/
+[Azure DevOps 및 Java 사용하기]: /azure/devops/java/
 [Kubernetes]: https://kubernetes.io/
 [Maven]: http://maven.apache.org/
 [MSDN 구독자 혜택]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/

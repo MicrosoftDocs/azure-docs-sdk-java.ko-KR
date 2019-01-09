@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 310d95436189af09f794154f4c9f0e71c47d88c8
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: dc39298d88f2fb0b2f56d6fbc0071b68b8d27989
+ms.sourcegitcommit: 24f037d133875f86761ec893dfa74e723de040b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48899445"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53636659"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-eclipse"></a>Eclipse용 Azure Explorer를 사용하여 저장소 계정 관리
 
@@ -43,21 +43,21 @@ Azure Explorer를 사용하여 저장소 계정을 만들려면 다음을 수행
 
    ![새 Storage 계정 만들기 대화 상자][CS02]
 
-   * **이름**: 새 저장소 계정의 이름을 지정합니다.
+   * **이름**: 새 스토리지 계정의 이름을 지정합니다.
 
-   * **구독**: 새 저장소 계정에 사용할 Azure 구독을 지정합니다.
+   * **구독**: 새 스토리지 계정에 사용할 Azure 구독을 지정합니다.
 
-   * **리소스 그룹**: 가상 컴퓨터에 사용할 리소스 그룹을 지정합니다. 다음 옵션 중 하나를 선택합니다.
+   * **리소스 그룹**: 가상 머신용 리소스 그룹을 지정합니다. 다음 옵션 중 하나를 선택합니다.
       * **새로 만들기**: 새 리소스 그룹을 만들도록 지정합니다.
-      * **기존 그룹 사용**: Azure 계정에 연결된 리소스 그룹 목록에서 선택하도록 지정합니다.
+      * **기존 리소스 사용**: Azure 계정에 연결된 리소스 그룹 목록에서 선택하도록 지정합니다.
 
-   * **지역**: 저장소 계정을 만들 위치(예: “미국 서부”)를 지정합니다.
+   * **지역**: 스토리지 계정을 만들 위치(예: “미국 서부”)를 지정합니다.
 
-   * **계정 종류**: 만들려는 저장소 계정의 형식을 지정합니다(예: “Blob Storage”). 자세한 내용은 [Azure 저장소 계정 정보]를 참조하세요.
+   * **계정 종류**: 만들려는 스토리지 계정의 형식을 지정합니다(예: “BLOB 스토리지”). 자세한 내용은 [Azure 저장소 계정 정보]를 참조하세요.
 
-   * **성능**: 선택한 게시자에서 사용할 저장소 계정 제품을 지정합니다(예: “프리미엄”). 자세한 내용은 [Azure Storage 확장성 및 성능 목표]를 참조하세요.
+   * **성능**: 선택한 게시자에서 사용할 스토리지 계정 제품을 지정합니다(예: “프리미엄”). 자세한 내용은 [Azure Storage 확장성 및 성능 목표]를 참조하세요.
 
-   * **복제**: 저장소 계정에 대한 복제를 지정합니다(예: “영역 중복”). 자세한 내용은 [Azure Storage 복제]를 참조하세요.
+   * **복제**: 스토리지 계정의 복제를 지정합니다(예: “영역 중복”). 자세한 내용은 [Azure Storage 복제]를 참조하세요.
 
 1. 위의 옵션을 모두 지정했으면 **만들기**를 클릭합니다.
 
@@ -122,8 +122,8 @@ Azure Storage 계정, 크기 및 가격 책정에 대한 자세한 내용은 다
 
 [Azure의 Windows 저장소 계정 크기]: /azure/virtual-machines/virtual-machines-windows-sizes
 [Azure의 Linux 저장소 계정 크기]: /azure/virtual-machines/virtual-machines-linux-sizes
-[Windows 저장소 계정 가격 책정]: /pricing/details/virtual-machines/windows/
-[Linux 저장소 계정 가격 책정]: /pricing/details/virtual-machines/linux/
+[Windows 저장소 계정 가격 책정]: https://azure.microsoft.com/pricing/details/virtual-machines/windows/
+[Linux 저장소 계정 가격 책정]: https://azure.microsoft.com/pricing/details/virtual-machines/linux/
 
 <!-- IMG List -->
 

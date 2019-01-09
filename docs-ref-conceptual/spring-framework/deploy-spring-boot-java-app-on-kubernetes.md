@@ -8,23 +8,23 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.custom: mvc
-ms.openlocfilehash: d5ebfb7fc7279c745f77848dae397509662f0c0d
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: 89a7a6900e5e0a544b4dc3fde960f62aeab6ebef
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52338727"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991477"
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Azure Kubernetes Service의 Kubernetes 클러스터에 Spring Boot 애플리케이션 배포
 
-**[Kubernetes]** 및  **[Docker]** 는 개발자가 컨테이너에서 실행 중인 응용 프로그램의 배포, 확장 및 관리를 자동화하는 데 도움이 되는 오픈 소스 솔루션입니다.
+**[Kubernetes]** 및 **[Docker]** 는 개발자가 컨테이너에서 실행 중인 애플리케이션의 배포, 확장 및 관리를 자동화하는 데 도움이 되는 오픈 소스 솔루션입니다.
 
 이 자습서에서는 이러한 두 가지 인기 있는 오픈 소스 기술을 결합하여 Spring Boot 애플리케이션을 개발하고 Microsoft Azure에 배포하는 과정을 안내합니다. 좀 더 구체적으로 말하면 애플리케이션 개발을 위해 *[Spring Boot]*, 컨테이너 배포를 위해 *[Kubernetes]* 및 애플리케이션을 호스트하기 위해 [AKS(Azure Kubernetes Service)]를 사용합니다.
 
@@ -78,7 +78,7 @@ ms.locfileid: "52338727"
    curl http://localhost:8080
    ```
 
-1. **Hello Docker World** 메시지가 표시됩니다.
+1. 다음 메시지가 표시되어야 합니다. **Hello Docker World**
 
    ![로컬로 샘플 앱 찾아보기][SB01]
 
@@ -239,7 +239,7 @@ ms.locfileid: "52338727"
 
    a. **앱 만들기**를 선택합니다.
 
-   b. **App name**에 Spring Boot 응용 프로그램 이름을 입력합니다(예: "*gs-spring-boot-docker*").
+   b. **App name**에 Spring Boot 애플리케이션 이름을 입력합니다(예: "*gs-spring-boot-docker*").
 
    다. **Container image**에 대해 이전의 로그인 서버 및 컨테이너 이미지를 입력합니다(예: "*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*").
 
@@ -258,7 +258,7 @@ ms.locfileid: "52338727"
 
    ![Kubernetes 서비스][KB06]
 
-1. **External endpoints**에 대한 링크를 클릭하면 Azure에서 Spring Boot 응용 프로그램이 실행되는 것을 볼 수 있습니다.
+1. **External endpoints**에 대한 링크를 클릭하면 Azure에서 Spring Boot 애플리케이션이 실행되는 것을 볼 수 있습니다.
 
    ![Kubernetes 서비스][KB07]
 
@@ -304,14 +304,21 @@ ms.locfileid: "52338727"
 
 ## <a name="next-steps"></a>다음 단계
 
+Spring과 Azure에 대한 자세한 사항은 Azure의 Spring 설명서 센터를 참조합니다.
+
+> [!div class="nextstepaction"]
+> [Azure의 Spring](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>추가 리소스
+
 Azure에서 Spring Boot를 사용 하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
 
-* [Azure App Service에 Spring Boot 응용 프로그램 배포](deploy-spring-boot-java-web-app-on-azure.md)
-* [Azure Container Service에서 Linux에 Spring Boot 응용 프로그램 배포](deploy-spring-boot-java-app-on-linux.md)
+* [Azure App Service에 Spring Boot 애플리케이션 배포](deploy-spring-boot-java-web-app-on-azure.md)
+* [Azure Container Service에서 Linux에 Spring Boot 애플리케이션 배포](deploy-spring-boot-java-app-on-linux.md)
 
-Java와 함께 Azure를 사용하는 방법에 대한 자세한 내용은 [Java 개발자용 Azure] 및 [Visual Studio Team Services용 Java 도구]를 참조하세요.
+Java와 함께 Azure를 사용하는 방법에 관한 자세한 정보는 [Java 개발자용 Azure]와 [Azure DevOps 및 Java 사용하기]를 참조하세요.
 
-<!-- Newly added -->Visual Studio Code를 사용하여 Kubernetes에 Java 응용 프로그램을 배포하는 방법에 대한 자세한 내용은 [Visual Studio Code Java 자습서]를 참조합니다.
+Visual Studio Code를 사용하여 Kubernetes에 Java 애플리케이션을 배포하는 방법에 관한 자세한 정보는 [Visual Studio Code Java 자습서]를 참조하세요.
 
 Spring Boot on Docker 샘플 프로젝트에 대한 자세한 내용은 [Spring Boot on Docker 시작] 을 참조하세요.
 
@@ -321,7 +328,7 @@ Spring Boot on Docker 샘플 프로젝트에 대한 자세한 내용은 [Spring 
 
 다음 링크는 Azure에서 Kubernetes를 사용하는 방법에 대한 추가 정보를 제공합니다.
 
-* [Azure Kubernetes Service에서 Kubernetes 클러스터 시작하기](https://docs.microsoft.com/azure/aks/intro-kubernetes)
+* [Azure Kubernetes Service에서 Kubernetes 클러스터 시작하기](/azure/aks/intro-kubernetes)
 
 Kubernetes 명령줄 인터페이스를 사용하는 방법에 대한 자세한 내용은 <https://kubernetes.io/docs/user-guide/kubectl/>의 **kubectl** 사용자 가이드에서 사용할 수 있습니다.
 
@@ -337,14 +344,14 @@ Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대�
 
 [Azure CLI(명령줄 인터페이스)]: /cli/azure/overview
 [AKS(Azure Kubernetes Service)]: https://azure.microsoft.com/services/kubernetes-service/
-[Java 개발자용 Azure]: https://docs.microsoft.com/java/azure/
+[Java 개발자용 Azure]: /java/azure/
 [Azure portal]: https://portal.azure.com/
 [Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal
 [Azure Web App on Linux에 대한 사용자 지정 Docker 이미지 사용]: /azure/app-service-web/app-service-linux-using-custom-docker-image
 [Docker]: https://www.docker.com/
 [체험판 Azure 계정]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[Visual Studio Team Services용 Java 도구]: https://java.visualstudio.com/
+[Azure DevOps 및 Java 사용하기]: /azure/devops/java/
 [Kubernetes]: https://kubernetes.io/
 [Kubernetes Command-Line Interface (kubectl)]: https://kubernetes.io/docs/user-guide/kubectl-overview/
 [Maven]: http://maven.apache.org/
@@ -360,7 +367,7 @@ Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대�
 <!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
 
 <!-- Newly added -->
-[Azure Kubernetes Service의 Azure Container Registry를 사용하여 인증]: https://docs.microsoft.com/azure/container-registry/container-registry-auth-aks/
+[Azure Kubernetes Service의 Azure Container Registry를 사용하여 인증]: /azure/container-registry/container-registry-auth-aks/
 [Visual Studio Code Java 자습서]: https://code.visualstudio.com/docs/java/java-kubernetes/
 
 <!-- IMG List -->

@@ -8,18 +8,18 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: cc14ac8dfd393d60924c39be0870c3caedc9741c
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: bcc56a92e2fd6891cdccb92c5541787f227d828a
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52339087"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991497"
 ---
 # <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-containerized-spring-boot-app-to-azure"></a>Azure Web Apps의 Maven 플러그 인을 사용하여 컨테이너화된 Spring Boot 앱을 Azure에 배포하는 방법
 
@@ -88,7 +88,7 @@ ms.locfileid: "52339087"
    curl http://localhost:8080
    ```
 
-1. **Hello Docker World** 메시지가 표시됩니다.
+1. 다음 메시지가 표시되어야 합니다. **Hello Docker World**
 
 ## <a name="create-an-azure-service-principal"></a>Azure 서비스 주체 만들기
 
@@ -196,7 +196,7 @@ Docker 계정이 있는 경우 Docker 컨테이너 이미지를 로컬에서 빌
       mvn clean package docker:build -DpushImage
       ```
 
-## <a name="optional-customize-your-pomxml-before-deploying-your-container-to-azure"></a>선택 사항: 컨테이너를 Azure에 배포하기 전에 pom.xml 사용자 지정
+## <a name="optional-customize-your-pomxml-before-deploying-your-container-to-azure"></a>선택 사항: 컨테이너를 Azure에 배포하기 전 pom.xml 사용자 지정
 
 텍스트 편집기에서 Spring Boot 애플리케이션에 대한 `pom.xml` 파일을 연 다음, `azure-webapp-maven-plugin`에 대한 `<plugin>` 요소를 찾습니다. 이 요소는 다음 예제와 유사합니다.
 
@@ -310,6 +310,13 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 
 ## <a name="next-steps"></a>다음 단계
 
+Spring과 Azure에 대한 자세한 사항은 Azure의 Spring 설명서 센터를 참조합니다.
+
+> [!div class="nextstepaction"]
+> [Azure의 Spring](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>추가 리소스
+
 이 문서에서 설명하는 다양한 기술에 대한 자세한 내용은 다음 문서를 참조하세요.
 
 * [Azure Web Apps의 Maven 플러그 인]
@@ -324,16 +331,18 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 
 * [Maven의 Docker 플러그 인]
 
+Java와 함께 Azure를 사용하는 방법에 관한 자세한 정보는 [Java 개발자용 Azure]와 [Azure DevOps 및 Java 사용하기]를 참조하세요.
+
 <!-- URL List -->
 
 [Azure CLI(명령줄 인터페이스)]: /cli/azure/overview
-[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
+[Java 개발자용 Azure]: /java/azure/
 [Azure Portal]: https://portal.azure.com/
 [Docker]: https://www.docker.com/
 [Maven의 Docker 플러그 인]: https://github.com/spotify/docker-maven-plugin
 [체험판 Azure 계정]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[Azure DevOps 및 Java 사용하기]: /azure/devops/
 [Maven]: http://maven.apache.org/
 [MSDN 구독자 혜택]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
