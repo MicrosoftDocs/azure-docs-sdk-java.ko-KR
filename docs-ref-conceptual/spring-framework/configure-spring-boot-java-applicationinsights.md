@@ -14,12 +14,12 @@ ms.service: Azure Monitor
 ms.tgt_pltfrm: application-insights
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: f69cdcc5b479e83b230f23a8a76f96284a1b785b
-ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
+ms.openlocfilehash: bf4f7e51f3108d684503465050d69461240f17e3
+ms.sourcegitcommit: 9df42bd342ef2d25d56a6045f1ab1baf6f2c250e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991437"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54237294"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-application-insights"></a>Application Insights를 사용하도록 Spring Boot Initializer 앱 구성
 
@@ -32,6 +32,7 @@ ms.locfileid: "53991437"
 * Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정]에 등록할 수 있습니다.
 * 지원되는 JDK(Java Development Kit) Azure에서 개발하는 경우 사용할 수 있는 JDK에 대한 자세한 내용은 <https://aka.ms/azure-jdks>를 참조하세요.
 * [Apache Maven](http://maven.apache.org/), 버전 3.0 이상
+* Web Flux와 Netty API는 Application Insights Spring Boot Starter로는 **현재 지원되지 않습니다**.
 
 ## <a name="create-a-custom-application-using-the-spring-initializr"></a>Spring Initializr를 사용하여 사용자 지정 애플리케이션 만들기
 
@@ -281,7 +282,7 @@ Azure에서 Spring Boot 애플리케이션을 사용 하는 방법에 대한 자
 
 * [Azure Container Service의 Kubernetes 클러스터에 Spring Boot 애플리케이션 실행](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Application Insight는 외부 종속성 및 들어오는 요청과의 상관 관계의 자동 컬렉션을 지원합니다. 이제 Oracle, MsSQL, MySQL, Redis의 자동 컬렉션을 지원합니다. 자동 컬렉션 활성화에 대한 자세한 내용은 [ Application Insights Java 에이전트 사용 방법](/azure/application-insights/app-insights-java-agent) 을 참조하십시오.
+Application Insight는 외부 종속성 및 들어오는 요청과의 상관 관계의 자동 컬렉션을 지원합니다. 이제 Oracle, MsSQL, MySQL, Redis의 자동 컬렉션을 지원합니다. 자동 컬렉션 활성화에 대한 자세한 내용은 [Application Insights Java 에이전트 사용 방법](/azure/application-insights/app-insights-java-agent) 을 참조하십시오.
 
 Azure Application Insights 및 모니터링 기능에 대한 자세한 내용은 **[Application Insights]** 홈페이지를 참조하십시오.
 
@@ -289,13 +290,13 @@ Application Insights Spring Boot Starter의 추가 구성 정보에 대한 자�
 
 기능 요청 및 잠재적 버그에 대해서는 [GitHub](https://github.com/Microsoft/ApplicationInsights-Java/issues) 리포지토리에서 문제를 제기하십시오.
 
-Java와 함께 Azure를 사용하는 방법에 관한 자세한 정보는 [Java 개발자용 Azure]와 [Azure DevOps 및 Java 사용하기]를 참조하세요.
+Java와 함께 Azure를 사용하는 방법에 관한 자세한 정보는 [Java 개발자를 위한 Azure]와 [Azure DevOps 및 Java 사용하기]를 참조하세요.
 
 **[Spring Framework]** 는 Java 개발자가 엔터프라이즈 수준의 애플리케이션을 만드는 데 도움이 되는 오픈 소스 솔루션입니다. 해당 플랫폼을 기반으로 하여 빌드되는 인기 있는 프로젝트 중 하나가 [Spring Boot]입니다. 이 프로젝트는 독립 실행형 Java 애플리케이션을 만드는 간단한 방법을 제공합니다. Spring Boot을 시작하는 개발자를 도우려면 [https://github.com/spring-guides/](https://github.com/spring-guides/)에서 몇 가지 샘플 Spring Boot 패키지를 사용할 있습니다. 기본 Spring Boot 프로젝트 목록에서 선택하는 것 외에도 **[Spring Initializr]** 를 통해 사용자 지정 Spring Boot 애플리케이션을 만들기 시작하는 개발자에게 도움을 줍니다.
 
 <!-- URL List -->
 
-[Java 개발자용 Azure]: /java/azure/
+[Java 개발자를 위한 Azure]: /java/azure/
 [체험판 Azure 계정]: https://azure.microsoft.com/pricing/free-trial/
 [Azure DevOps 및 Java 사용하기]: /azure/devops/
 [MSDN 구독자 혜택]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
