@@ -8,22 +8,21 @@ manager: routlaw
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 02/01/2018
+ms.date: 12/20/2018
 ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.workload: na
-ms.openlocfilehash: d281f37b027d4011ea2e3106990c5e45b69ebc88
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: fdff8dc2bd7a29473314d5c0bc99b7bcda369156
+ms.sourcegitcommit: 54e7f077d694a5b1dd7fa6c8870b7d476af9829c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892594"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55648727"
 ---
 # <a name="deploy-a-hello-world-web-app-to-a-linux-container-in-the-cloud-using-the-azure-toolkit-for-intellij"></a>IntelliJ용 Azure 도구 키트를 사용하는 클라우드 내의 Linux 컨테이너에 Hello World 웹앱 배포
 
-[Docker] 컨테이너는 웹 응용 프로그램을 배포하는 데 널리 사용되는 방법입니다. 개발자는 Docker 컨테이너를 통해 모든 프로젝트 파일과 종속성을 서버에 배포할 단일 패키지로 통합할 수 있습니다. IntelliJ용 Azure 도구 키트는 Microsoft Azure에 컨테이너 배포를 위한 기능을 추가함으로써 Java 개발자들을 위해 이 프로세스를 간소화합니다.
+[Docker] 컨테이너는 웹 애플리케이션을 배포하는 데 널리 사용되는 방법입니다. 개발자는 Docker 컨테이너를 통해 모든 프로젝트 파일과 종속성을 서버에 배포할 단일 패키지로 통합할 수 있습니다. IntelliJ용 Azure 도구 키트는 Microsoft Azure에 컨테이너 배포를 위한 기능을 추가함으로써 Java 개발자들을 위해 이 프로세스를 간소화합니다.
 
 이 문서에서는 기본 Hello World 웹앱을 만들고 IntelliJ용 Azure 도구 키트를 사용하여 Linux 컨테이너의 웹앱을 Azure에 게시하는 데 필요한 단계를 보여 줍니다.
 
@@ -74,21 +73,13 @@ ms.locfileid: "48892594"
 
    Azure Portal에서 사용자의 계정에 로그인한 다음, [Azure Portal을 사용하여 개인 Docker 컨테이너 레지스트리 만들기] 문서의 단계를 수행할 수 있습니다. 편의상 다음 단계에서 다시 설명합니다.
 
-1. **+ 새로 만들기**의 메뉴 아이콘을 클릭하고 **컨테이너**를 클릭한 다음, **Azure Container Registry**를 클릭합니다.
+1. **+리소스 만들기**의 메뉴 아이콘을 클릭하고 **컨테이너**를 클릭한 다음, **Container Registry**를 클릭합니다.
    
-   ![새로운 Azure Container Registry 만들기][AR01]
-
-1. Azure Container Registry 템플릿에 대한 정보 페이지가 표시되면 **만들기**를 클릭합니다. 
-
-   ![새로운 Azure Container Registry 만들기][AR02]
+   ![새로운 Azure Container Registry 만들기][create-container-registry-01]
 
 1. **컨테이너 레지스트리 만들기** 페이지가 표시되면 **레지스트리 이름** 및 **리소스 그룹**을 입력하고 **관리 사용자**에 대해 **사용**을 선택한 다음, **만들기**를 클릭합니다.
 
-   ![Azure Container Registry 설정 구성][AR03]
-
-1. 컨테이너 레지스트리를 만들면 Azure Portal에서 컨테이너 레지스트리를 탐색한 다음, **선택키**를 클릭합니다. 다음 단계에서 사용하기 위해 사용자 이름과 암호를 적어둡니다.
-
-   ![Azure Container Registry 선택키][AR04]
+   ![Azure Container Registry 설정 구성][create-container-registry-02]
 
 ## <a name="deploy-your-web-app-in-a-docker-container"></a>Docker 컨테이너에서 웹앱 배포
 
@@ -98,31 +89,37 @@ ms.locfileid: "48892594"
 
    ![Docker 지원 추가][add-docker-support]
 
-1. Docker 지원을 추가한 후 프로젝트 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **Azure**를 선택한 다음 **웹앱 실행(Linux)** 을 클릭합니다.
+1. Docker 지원을 추가한 후 프로젝트 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **Azure**를 선택한 다음 **Web App for Containers에서 실행**을 클릭합니다.
 
-   ![웹앱 실행(Linux)][run-on-web-app-linux]
+   ![Web App for Containers에서 실행][run-on-web-app-for-containers]
 
-1. **웹앱 실행(Linux)** 대화 상자가 표시되면 필수 정보를 입력합니다.
+1. **Web App for Containers에서 실행** 대화 상자가 표시되면 필수 정보를 입력합니다.
 
    * **이름**: Azure 도구 키트에 표시되는 친숙한 이름을 지정합니다. 
 
-   * **서버 URL**: 이 문서의 이전 섹션에서 컨테이너 레지스트리에 대한 URL을 지정합니다. 일반적으로 다음 구문: "*registry*.azurecr.io"를 사용합니다. 
-
-   * **사용자 이름** 및 **암호**: 이 문서의 이전 섹션에서 컨테이너 레지스트리에 대한 액세스 키를 지정합니다. 
+   * **Container Registry**: 이 문서의 이전 섹션에서 만든 드롭다운 메뉴에서 컨테이너 레지스트리를 선택합니다. **서버 URL**, **사용자 이름**, **암호** 필드는 자동으로 채워집니다.
 
    * **이미지 및 태그**: 컨테이너 이미지 이름을 지정합니다. 일반적으로 다음 구문: "*registry*.azurecr.io/*appname*:latest"를 사용합니다. 여기에서 
       * *registry*는 이 문서의 이전 섹션에서 컨테이너 레지스트리이며 
       * *appname*은 웹앱의 이름입니다. 
 
-   * **기존 웹앱 사용** 또는 **새 웹앱 만들기**: 컨테이너를 기존 웹앱에 배포할지 새 웹앱을 만들지 여부를 지정합니다. 
+   * **기존 웹앱 사용** 또는 **새 웹앱 만들기**: 컨테이너를 기존 웹앱에 배포할지 새 웹앱을 만들지 여부를 지정합니다. **앱 이름**을 지정하면 웹앱에 대한 URL이 만들어집니다. 예: *wingtiptoys.azurewebsites.net*
 
    * **리소스 그룹**: 기존 리소스 그룹을 사용할지 새 리소스 그룹을 만들지 여부를 지정합니다. 
 
-   * **App Service 계획**: 기존 App Service 계획을 사용할지 새 앱 서비스 계획을 만들지 여부를 지정합니다. 
+   * **App Service 계획**: 기존 앱 서비스 플랜을 사용할지 새로 만들지 여부를 지정합니다. 
 
-1. 위에 나열된 설정을 구성했으면 **실행**을 클릭합니다.
+   ![Web App for Containers에서 실행][run-on-web-app-linux]
 
-   ![웹앱 만들기][create-web-app]
+1. 위에 나열된 설정을 구성했으면 **실행**을 클릭합니다. 웹앱이 성공적으로 배포된 경우 상태가 **실행** 창에 표시됩니다.
+
+   ![성공적으로 웹앱을 배포했습니다.][successfully-deployed]
+
+1. 웹앱이 게시된 후에는 웹앱에 대해 이전에 지정한 URL로 이동할 수 있습니다. 예: *wingtiptoys.azurewebsites.net*
+
+   ![웹앱 검색][browsing-to-web-app]
+
+## <a name="optional-modify-your-web-app-publish-settings"></a>선택 사항: 웹 앱 게시 설정 수정
 
 1. 웹앱을 게시한 후 설정은 기본값으로 저장되고 도구 모음에서 녹색 화살표 아이콘을 클릭하여 Azure에서 애플리케이션을 실행할 수 있습니다. 웹앱에 대한 드롭다운 메뉴를 클릭하여 이러한 설정을 수정하고 **구성 편집**을 클릭할 수 있습니다.
 
@@ -151,20 +148,18 @@ Docker의 추가 리소스는 공식 [Docker 웹 사이트][Docker]를 참조하
 
 <!-- IMG List -->
 
-[AR01]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/AR01.png
-[AR02]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/AR02.png
-[AR03]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/AR03.png
-[AR04]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/AR04.png
-
+[add-docker-support]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/add-docker-support.png
+[browsing-to-web-app]:  media/azure-toolkit-for-intellij-hello-world-web-app-linux/browsing-to-web-app.png
+[create-container-registry-01]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/create-container-registry-01.png
+[create-container-registry-02]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/create-container-registry-02.png
 [docker-settings-menu]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/docker-settings-menu.png
+[edit-configuration-dialog]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/edit-configuration-dialog.png
+[edit-configuration-menu]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/edit-configuration-menu.png
 [file-new-project]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/file-new-project.png
-[maven-archetype-webapp]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/maven-archetype-webapp.png
 [groupid-and-artifactid]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/groupid-and-artifactid.png
+[maven-archetype-webapp]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/maven-archetype-webapp.png
 [maven-options]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/maven-options.png
 [project-name]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/project-name.png
-[add-docker-support]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/add-docker-support.png
+[run-on-web-app-for-containers]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/run-on-web-app-for-containers.png
 [run-on-web-app-linux]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/run-on-web-app-linux.png
-[create-web-app]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/create-web-app.png
-[edit-configuration-menu]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/edit-configuration-menu.png
-[edit-configuration-dialog]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/edit-configuration-dialog.png
 [successfully-deployed]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/successfully-deployed.png
