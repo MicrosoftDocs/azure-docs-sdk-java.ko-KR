@@ -15,12 +15,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.custom: mvc
-ms.openlocfilehash: 89a7a6900e5e0a544b4dc3fde960f62aeab6ebef
-ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
+ms.openlocfilehash: 87bbf46fe5b22c4a147d6010d3813334caa774fb
+ms.sourcegitcommit: 1c1412ad5d8960975c3fc7fd3d1948152ef651ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991477"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335416"
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Azure Kubernetes Service의 Kubernetes 클러스터에 Spring Boot 애플리케이션 배포
 
@@ -177,7 +177,7 @@ ms.locfileid: "53991477"
 1. Spring Boot 애플리케이션에 대한 완성된 프로젝트 디렉터리로 이동한 후 다음 명령을 실행하여 Docker 컨테이너를 빌드하고 레지스트리에 이미지를 푸시합니다.
 
    ```
-   mvn package docker:build -DpushImage
+   mvn package dockerfile:build -DpushImage
    ```
 
 > [!NOTE]
@@ -316,7 +316,7 @@ Azure에서 Spring Boot를 사용 하는 방법에 대한 자세한 내용은 �
 * [Azure App Service에 Spring Boot 애플리케이션 배포](deploy-spring-boot-java-web-app-on-azure.md)
 * [Azure Container Service에서 Linux에 Spring Boot 애플리케이션 배포](deploy-spring-boot-java-app-on-linux.md)
 
-Java와 함께 Azure를 사용하는 방법에 관한 자세한 정보는 [Java 개발자용 Azure]와 [Azure DevOps 및 Java 사용하기]를 참조하세요.
+Java와 함께 Azure를 사용하는 방법에 관한 자세한 정보는 [Java 개발자를 위한 Azure]와 [Azure DevOps 및 Java 사용하기]를 참조하세요.
 
 Visual Studio Code를 사용하여 Kubernetes에 Java 애플리케이션을 배포하는 방법에 관한 자세한 정보는 [Visual Studio Code Java 자습서]를 참조하세요.
 
@@ -344,7 +344,7 @@ Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대�
 
 [Azure CLI(명령줄 인터페이스)]: /cli/azure/overview
 [AKS(Azure Kubernetes Service)]: https://azure.microsoft.com/services/kubernetes-service/
-[Java 개발자용 Azure]: /java/azure/
+[Java 개발자를 위한 Azure]: /java/azure/
 [Azure portal]: https://portal.azure.com/
 [Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal
 [Azure Web App on Linux에 대한 사용자 지정 Docker 이미지 사용]: /azure/app-service-web/app-service-linux-using-custom-docker-image
