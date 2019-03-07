@@ -11,24 +11,24 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: storage
-ms.openlocfilehash: fba48dfa04f223dce72a0ee54da967565ebd3687
-ms.sourcegitcommit: 67b3542b174e8448f9ca3e7c9506f1216ea6a8fe
+ms.openlocfilehash: ee54e92ee0084cd2fc5e827764cfe094434ea784
+ms.sourcegitcommit: 1c1412ad5d8960975c3fc7fd3d1948152ef651ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51285673"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335376"
 ---
 # <a name="azure-storage-libraries-for-java"></a>Java용 Azure Storage 라이브러리
 
 ## <a name="overview"></a>개요
 
-[Azure Storage](/azure/storage/storage-introduction)를 사용하여 Java 응용 프로그램의 Blob(개체) 데이터, 파일 및 메시지를 읽고 씁니다.
+[Azure Storage](/azure/storage/storage-introduction)를 사용하여 Java 애플리케이션의 Blob(개체) 데이터, 파일 및 메시지를 읽고 씁니다.
 
 Azure Storage를 시작하려면 [Java에서 Blob 스토리지를 사용하는 방법](/azure/storage/blobs/storage-quickstart-blobs-java-v10)을 참조하세요.
 
 ## <a name="client-library"></a>클라이언트 라이브러리
 
-Azure Active Directory의 공유 키, SAS 토큰 또는 OAuth 토큰을 사용하여 Azure Storage 서비스에서 권한을 부여합니다. 그런 다음, 클라이언트 라이브러리의 클래스 및 메서드를 사용하여 Blob, 파일 또는 큐 저장소를 사용합니다. 
+Azure Active Directory의 공유 키, SAS 토큰 또는 OAuth 토큰을 사용하여 Azure Storage 서비스에서 권한을 부여합니다. 그런 다음, 클라이언트 라이브러리의 클래스 및 메서드를 사용하여 Blob, 파일 또는 Queue Storage를 사용합니다. 
 
 `pom.xml` Maven 파일에 [종속성을 추가](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)하여 프로젝트에서 클라이언트 라이브러리를 사용합니다.   
 
@@ -79,7 +79,7 @@ TransferManager.uploadFileToBlockBlob(fileChannel, blobURL,0, null).blockingGet(
 
 ## <a name="management-api"></a>관리 API
 
-관리 API를 사용하여 Azure Storage 계정 및 연결 키를 만들고 및 관리합니다.
+관리 API를 사용하여 Azure Storage 계정 및 연결 키를 만들고 관리합니다.
 
 `pom.xml` Maven 파일에 [종속성을 추가](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)하여 프로젝트에서 관리 API를 사용합니다.  
 
@@ -115,5 +115,5 @@ for(StorageAccountKey key : storageAccountKeys)    {
 ## <a name="samples"></a>샘플
 
 [Java용 Azure Storage SDK](https://github.com/azure/azure-storage-java)
-[개체 읽기 및 Blob 저장소에 쓰기](https://github.com/Azure-Samples/storage-blobs-java-v10-quickstart)   
+[개체 읽기 및 Blob 스토리지에 쓰기](https://github.com/Azure-Samples/storage-blobs-java-v10-quickstart)   
 [큐를 사용하여 메시지 읽기 및 쓰기](https://github.com/Azure-Samples/storage-queue-java-getting-started)   

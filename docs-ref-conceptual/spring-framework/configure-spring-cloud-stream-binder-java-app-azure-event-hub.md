@@ -14,12 +14,12 @@ ms.service: event-hubs
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 98b3dc1243bf293ede121eafd51b041649d165db
-ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
+ms.openlocfilehash: 9223cc425fcef28369431fa1c7a7b93062a210c2
+ms.sourcegitcommit: 1c1412ad5d8960975c3fc7fd3d1948152ef651ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991427"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335406"
 ---
 # <a name="how-to-create-a-spring-cloud-stream-binder-application-with-azure-event-hubs"></a>Azure Event Hub를 사용하여 Spring Cloud 스트림 바인더 애플리케이션을 만드는 방법
 
@@ -143,12 +143,10 @@ ms.locfileid: "53991427"
    ```xml
    <dependency>
       <groupId>com.microsoft.azure</groupId>
-      <artifactId>spring-cloud-azure-eventhub-stream-binder</artifactId>
-      <version>1.0.0.M2</version>
+      <artifactId>spring-cloud-azure-eventhubs-stream-binder</artifactId>
+      <version>1.1.0.RC2</version>
    </dependency>
    ```
-
-   ![pom.xml 파일을 편집합니다.][SI03]
 
 1. *pom.xml* 파일을 저장하고 닫습니다.
 
@@ -197,6 +195,7 @@ ms.locfileid: "53991427"
      }
    ]
    ```
+   
 1. Azure에 사용하려는 구독에 대한 GUID를 지정합니다. 예:
 
    ```azurecli
@@ -417,6 +416,7 @@ Java와 함께 Azure를 사용하는 방법에 관한 자세한 정보는 [Java 
 <!-- URL List -->
 
 [체험판 Azure 계정]: https://azure.microsoft.com/pricing/free-trial/
+[Java 개발자를 위한 Azure]: https://docs.microsoft.com/java/azure/
 [Azure DevOps 및 Java 사용하기]: /azure/devops/
 [MSDN 구독자 혜택]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
