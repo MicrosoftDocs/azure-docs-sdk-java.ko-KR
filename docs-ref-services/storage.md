@@ -11,28 +11,28 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: storage
-ms.openlocfilehash: fba48dfa04f223dce72a0ee54da967565ebd3687
-ms.sourcegitcommit: 67b3542b174e8448f9ca3e7c9506f1216ea6a8fe
+ms.openlocfilehash: ee54e92ee0084cd2fc5e827764cfe094434ea784
+ms.sourcegitcommit: 1c1412ad5d8960975c3fc7fd3d1948152ef651ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51285673"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335376"
 ---
-# <a name="azure-storage-libraries-for-java"></a><span data-ttu-id="3820c-103">Java용 Azure Storage 라이브러리</span><span class="sxs-lookup"><span data-stu-id="3820c-103">Azure Storage libraries for Java</span></span>
+# <a name="azure-storage-libraries-for-java"></a><span data-ttu-id="3a4b8-103">Java용 Azure Storage 라이브러리</span><span class="sxs-lookup"><span data-stu-id="3a4b8-103">Azure Storage libraries for Java</span></span>
 
-## <a name="overview"></a><span data-ttu-id="3820c-104">개요</span><span class="sxs-lookup"><span data-stu-id="3820c-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="3a4b8-104">개요</span><span class="sxs-lookup"><span data-stu-id="3a4b8-104">Overview</span></span>
 
-<span data-ttu-id="3820c-105">[Azure Storage](/azure/storage/storage-introduction)를 사용하여 Java 응용 프로그램의 Blob(개체) 데이터, 파일 및 메시지를 읽고 씁니다.</span><span class="sxs-lookup"><span data-stu-id="3820c-105">Read and write blob (object) data, files, and messages from your Java applications with [Azure Storage](/azure/storage/storage-introduction).</span></span>
+<span data-ttu-id="3a4b8-105">[Azure Storage](/azure/storage/storage-introduction)를 사용하여 Java 애플리케이션의 Blob(개체) 데이터, 파일 및 메시지를 읽고 씁니다.</span><span class="sxs-lookup"><span data-stu-id="3a4b8-105">Read and write blob (object) data, files, and messages from your Java applications with [Azure Storage](/azure/storage/storage-introduction).</span></span>
 
-<span data-ttu-id="3820c-106">Azure Storage를 시작하려면 [Java에서 Blob 스토리지를 사용하는 방법](/azure/storage/blobs/storage-quickstart-blobs-java-v10)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="3820c-106">To get started with Azure Storage, see [How to use Blob storage from Java](/azure/storage/blobs/storage-quickstart-blobs-java-v10).</span></span>
+<span data-ttu-id="3a4b8-106">Azure Storage를 시작하려면 [Java에서 Blob 스토리지를 사용하는 방법](/azure/storage/blobs/storage-quickstart-blobs-java-v10)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="3a4b8-106">To get started with Azure Storage, see [How to use Blob storage from Java](/azure/storage/blobs/storage-quickstart-blobs-java-v10).</span></span>
 
-## <a name="client-library"></a><span data-ttu-id="3820c-107">클라이언트 라이브러리</span><span class="sxs-lookup"><span data-stu-id="3820c-107">Client library</span></span>
+## <a name="client-library"></a><span data-ttu-id="3a4b8-107">클라이언트 라이브러리</span><span class="sxs-lookup"><span data-stu-id="3a4b8-107">Client library</span></span>
 
-<span data-ttu-id="3820c-108">Azure Active Directory의 공유 키, SAS 토큰 또는 OAuth 토큰을 사용하여 Azure Storage 서비스에서 권한을 부여합니다.</span><span class="sxs-lookup"><span data-stu-id="3820c-108">Use a Shared Key, SAS token or an OAuth token from the Azure Active Directory to authorize with Azure Storage services.</span></span> <span data-ttu-id="3820c-109">그런 다음, 클라이언트 라이브러리의 클래스 및 메서드를 사용하여 Blob, 파일 또는 큐 저장소를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="3820c-109">Then use the client libraries' classes and methods to work with blob, file, or queue storage.</span></span> 
+<span data-ttu-id="3a4b8-108">Azure Active Directory의 공유 키, SAS 토큰 또는 OAuth 토큰을 사용하여 Azure Storage 서비스에서 권한을 부여합니다.</span><span class="sxs-lookup"><span data-stu-id="3a4b8-108">Use a Shared Key, SAS token or an OAuth token from the Azure Active Directory to authorize with Azure Storage services.</span></span> <span data-ttu-id="3a4b8-109">그런 다음, 클라이언트 라이브러리의 클래스 및 메서드를 사용하여 Blob, 파일 또는 Queue Storage를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="3a4b8-109">Then use the client libraries' classes and methods to work with blob, file, or queue storage.</span></span> 
 
-<span data-ttu-id="3820c-110">`pom.xml` Maven 파일에 [종속성을 추가](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)하여 프로젝트에서 클라이언트 라이브러리를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="3820c-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the client library in your project.</span></span>   
+<span data-ttu-id="3a4b8-110">`pom.xml` Maven 파일에 [종속성을 추가](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)하여 프로젝트에서 클라이언트 라이브러리를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="3a4b8-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the client library in your project.</span></span>   
 
-<span data-ttu-id="3820c-111">**Blob 서비스에 대한 종속성**</span><span class="sxs-lookup"><span data-stu-id="3820c-111">**Dependency for Blob service**:</span></span>
+<span data-ttu-id="3a4b8-111">**Blob 서비스에 대한 종속성**</span><span class="sxs-lookup"><span data-stu-id="3a4b8-111">**Dependency for Blob service**:</span></span>
 ```XML
 <dependency>
     <groupId>com.microsoft.azure</groupId>
@@ -41,7 +41,7 @@ ms.locfileid: "51285673"
 </dependency>
 ```
 
-<span data-ttu-id="3820c-112">**큐 서비스에 대한 종속성**</span><span class="sxs-lookup"><span data-stu-id="3820c-112">**Dependency for Queue service**:</span></span>
+<span data-ttu-id="3a4b8-112">**큐 서비스에 대한 종속성**</span><span class="sxs-lookup"><span data-stu-id="3a4b8-112">**Dependency for Queue service**:</span></span>
 ```XML
 <dependency>
     <groupId>com.microsoft.azure</groupId>
@@ -51,9 +51,9 @@ ms.locfileid: "51285673"
 ```
 
 
-### <a name="example"></a><span data-ttu-id="3820c-113">예</span><span class="sxs-lookup"><span data-stu-id="3820c-113">Example</span></span>
+### <a name="example"></a><span data-ttu-id="3a4b8-113">예</span><span class="sxs-lookup"><span data-stu-id="3a4b8-113">Example</span></span>
 
-<span data-ttu-id="3820c-114">로컬 파일 시스템의 이미지 파일을 기존 Azure Storage Blob 컨테이너의 새 Blob에 씁니다.</span><span class="sxs-lookup"><span data-stu-id="3820c-114">Write an image file from the local file system into a new blob in an existing Azure Storage blob container.</span></span>
+<span data-ttu-id="3a4b8-114">로컬 파일 시스템의 이미지 파일을 기존 Azure Storage Blob 컨테이너의 새 Blob에 씁니다.</span><span class="sxs-lookup"><span data-stu-id="3a4b8-114">Write an image file from the local file system into a new blob in an existing Azure Storage blob container.</span></span>
 
 
 ```java
@@ -75,13 +75,13 @@ TransferManager.uploadFileToBlockBlob(fileChannel, blobURL,0, null).blockingGet(
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="3820c-115">클라이언트 API 탐색</span><span class="sxs-lookup"><span data-stu-id="3820c-115">Explore the Client APIs</span></span>](/java/api/overview/azure/storage/client)
+> [<span data-ttu-id="3a4b8-115">클라이언트 API 탐색</span><span class="sxs-lookup"><span data-stu-id="3a4b8-115">Explore the Client APIs</span></span>](/java/api/overview/azure/storage/client)
 
-## <a name="management-api"></a><span data-ttu-id="3820c-116">관리 API</span><span class="sxs-lookup"><span data-stu-id="3820c-116">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="3a4b8-116">관리 API</span><span class="sxs-lookup"><span data-stu-id="3a4b8-116">Management API</span></span>
 
-<span data-ttu-id="3820c-117">관리 API를 사용하여 Azure Storage 계정 및 연결 키를 만들고 및 관리합니다.</span><span class="sxs-lookup"><span data-stu-id="3820c-117">Crete and manage Azure Storage accounts and connection keys with the management API.</span></span>
+<span data-ttu-id="3a4b8-117">관리 API를 사용하여 Azure Storage 계정 및 연결 키를 만들고 관리합니다.</span><span class="sxs-lookup"><span data-stu-id="3a4b8-117">Create and manage Azure Storage accounts and connection keys with the management API.</span></span>
 
-<span data-ttu-id="3820c-118">`pom.xml` Maven 파일에 [종속성을 추가](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)하여 프로젝트에서 관리 API를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="3820c-118">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>  
+<span data-ttu-id="3a4b8-118">`pom.xml` Maven 파일에 [종속성을 추가](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)하여 프로젝트에서 관리 API를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="3a4b8-118">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>  
 
 ```XML
 <dependency>
@@ -91,9 +91,9 @@ TransferManager.uploadFileToBlockBlob(fileChannel, blobURL,0, null).blockingGet(
 </dependency
 ```   
 
-### <a name="example"></a><span data-ttu-id="3820c-119">예</span><span class="sxs-lookup"><span data-stu-id="3820c-119">Example</span></span>
+### <a name="example"></a><span data-ttu-id="3a4b8-119">예</span><span class="sxs-lookup"><span data-stu-id="3a4b8-119">Example</span></span>
 
-<span data-ttu-id="3820c-120">구독에 새 Azure Storage 계정을 만들고 액세스 키를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="3820c-120">Create a new Azure Storage account in your subscription and retrieve its access keys.</span></span>
+<span data-ttu-id="3a4b8-120">구독에 새 Azure Storage 계정을 만들고 액세스 키를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="3a4b8-120">Create a new Azure Storage account in your subscription and retrieve its access keys.</span></span>
 
 ```java
 StorageAccount storageAccount = azure.storageAccounts().define(storageAccountName)
@@ -109,12 +109,12 @@ for(StorageAccountKey key : storageAccountKeys)    {
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="3820c-121">관리 API 탐색</span><span class="sxs-lookup"><span data-stu-id="3820c-121">Explore the Management APIs</span></span>](/java/api/overview/azure/storage/management)
+> [<span data-ttu-id="3a4b8-121">관리 API 탐색</span><span class="sxs-lookup"><span data-stu-id="3a4b8-121">Explore the Management APIs</span></span>](/java/api/overview/azure/storage/management)
 
 
-## <a name="samples"></a><span data-ttu-id="3820c-122">샘플</span><span class="sxs-lookup"><span data-stu-id="3820c-122">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="3a4b8-122">샘플</span><span class="sxs-lookup"><span data-stu-id="3a4b8-122">Samples</span></span>
 
-<span data-ttu-id="3820c-123">[Java용 Azure Storage SDK](https://github.com/azure/azure-storage-java)
-[개체 읽기 및 Blob 저장소에 쓰기](https://github.com/Azure-Samples/storage-blobs-java-v10-quickstart) </span><span class="sxs-lookup"><span data-stu-id="3820c-123">[Azure Storage SDK for Java](https://github.com/azure/azure-storage-java)
+<span data-ttu-id="3a4b8-123">[Java용 Azure Storage SDK](https://github.com/azure/azure-storage-java)
+[개체 읽기 및 Blob 스토리지에 쓰기](https://github.com/Azure-Samples/storage-blobs-java-v10-quickstart) </span><span class="sxs-lookup"><span data-stu-id="3a4b8-123">[Azure Storage SDK for Java](https://github.com/azure/azure-storage-java)
 [Read and write objects to blob storage](https://github.com/Azure-Samples/storage-blobs-java-v10-quickstart) </span></span>  
-[<span data-ttu-id="3820c-124">큐를 사용하여 메시지 읽기 및 쓰기</span><span class="sxs-lookup"><span data-stu-id="3820c-124">Read and write messages with queues</span></span>](https://github.com/Azure-Samples/storage-queue-java-getting-started)   
+[<span data-ttu-id="3a4b8-124">큐를 사용하여 메시지 읽기 및 쓰기</span><span class="sxs-lookup"><span data-stu-id="3a4b8-124">Read and write messages with queues</span></span>](https://github.com/Azure-Samples/storage-queue-java-getting-started)   
