@@ -13,18 +13,18 @@ ms.devlang: java
 ms.service: postgresql
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 371a8c686f7ad045443328d02a32a4e65af55981
-ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
+ms.openlocfilehash: 29f3c957dd0ccd754eedef12e3fc01c3484dddf3
+ms.sourcegitcommit: 1c1412ad5d8960975c3fc7fd3d1948152ef651ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53992337"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335396"
 ---
 # <a name="how-to-use-spring-data-jdbc-with-azure-postgresql"></a>Azure PostgreSQL에서 Spring Data JDBC를 사용하는 방법
 
 ## <a name="overview"></a>개요
 
-이 문서는 [Spring Data]를 사용하는 샘플 애플리케이션을 만들어 [JDBC(Java Database Connectivity)](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/)를 사용하여 Azure [PostgreSQL]https://www.postgresql.org/ 데이터베이스에서 정보를 저장 및 검색하는 것을 보여줍니다.
+이 문서는 [Spring Data]를 사용하는 샘플 애플리케이션을 만들어 [JDBC(Java Database Connectivity)](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/)를 사용하여 Azure [PostgreSQL](https://www.postgresql.org/) 데이터베이스에서 정보를 저장 및 검색하는 것을 보여줍니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -228,11 +228,11 @@ Spring과 Azure에 대한 자세한 사항은 Azure의 Spring 설명서 센터�
 
 ### <a name="additional-resources"></a>추가 리소스
 
-Java와 함께 Azure를 사용하는 방법에 관한 자세한 정보는 [Java 개발자용 Azure]와 [Azure DevOps 및 Java 사용하기]를 참조하세요.
+Java와 함께 Azure를 사용하는 방법에 관한 자세한 정보는 [Java 개발자를 위한 Azure]와 [Azure DevOps 및 Java 사용하기]를 참조하세요.
 
 <!-- URL List -->
 
-[Java 개발자용 Azure]: /java/azure/
+[Java 개발자를 위한 Azure]: /java/azure/
 [체험판 Azure 계정]: https://azure.microsoft.com/pricing/free-trial/
 [Azure DevOps 및 Java 사용하기]: /azure/devops/
 [MSDN 구독자 혜택]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/

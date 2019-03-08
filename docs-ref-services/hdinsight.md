@@ -8,12 +8,12 @@ ms.service: hdinsight
 ms.topic: reference
 ms.devlang: java
 ms.date: 11/21/2018
-ms.openlocfilehash: 96ecbedc90706775a80b97c42f0d55a46a45b8ac
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: 3827b5744a5d08c53cbbff1db29eca34194c1625
+ms.sourcegitcommit: 1c1412ad5d8960975c3fc7fd3d1948152ef651ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52338687"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335436"
 ---
 # <a name="hdinsight-java-management-sdk-preview"></a>HDInsight Java 관리 SDK 미리 보기
 
@@ -47,7 +47,6 @@ HDInsight Java SDK는 Maven [여기](https://mvnrepository.com/artifact/com.micr
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-client-authentication</artifactId>
     <version>1.6.2</version>
-    <scope>test</scope>
   </dependency>
   ```
 
@@ -60,12 +59,12 @@ HDInsight Java SDK는 Maven [여기](https://mvnrepository.com/artifact/com.micr
   </dependency>
   ```
 
-## <a name="authentication"></a>인증
+## <a name="authentication"></a>Authentication
 
 Azure 구독을 사용해서 SDK를 먼저 인증해야 합니다.  아래 예제에 따라 서비스 주체를 만들고 이를 인증에 사용합니다. 완료되었으면 관리 작업 수행을 위해 사용할 수 있는 여러 메서드(아래 섹션 참조)가 포함된 `HDInsightManagementClientImpl` 인스턴스가 준비됩니다.
 
 > [!NOTE]
-> 아래 설명된 예제 외에도 사용자 요구에 더 적합할 수 있는 다른 인증 방법이 있습니다. 모든 메서드는 여기에 설명되어 있습니다: [Java용 Azure 관리 라이브러리로 인증](https://docs.microsoft.com/en-us/java/azure/java-sdk-azure-authenticate?view=azure-java-stable)
+> 아래 설명된 예제 외에도 사용자 요구에 더 적합할 수 있는 다른 인증 방법이 있습니다. 모든 메서드는 여기에 설명되어 있습니다. [Java용 Azure 관리 라이브러리를 사용하여 인증](https://docs.microsoft.com/en-us/java/azure/java-sdk-azure-authenticate?view=azure-java-stable)
 
 ### <a name="authentication-example-using-a-service-principal"></a>서비스 주체를 사용한 인증 예제
 
@@ -150,7 +149,8 @@ public class Main {
                 CLIENT_SECRET,
                 AzureEnvironment.AZURE);
 
-        HDInsightManagementClientImpl client = new HDInsightManagementClientImpl(credentials);
+        HDInsightManagementClientImpl client = new HDInsightManagementClientImpl(credentials)
+                .withSubscriptionId(SUBSCRIPTION_ID);
 ```
 
 
@@ -355,7 +355,7 @@ client.clusters.resize("<Resource Group Name>", "<Cluster Name>", <Num of Worker
 ### <a name="enable-oms-monitoring"></a>OMS 모니터링 사용
 
 > [!NOTE]
-> OMS 모니터링을 사용하려면 기존 Log Analytics 작업 영역이 있어야 합니다. 아직 만들지 않았으면 [Azure Portal에서 Log Analytics 작업 영역 만들기](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-quick-create-workspace)에서 이를 수행하는 방법을 확인할 수 있습니다.
+> OMS 모니터링을 사용하려면 기존 Log Analytics 작업 영역이 있어야 합니다. 아직 작업 영역을 만들지 않은 경우 다음에서 작업 영역을 만드는 방법을 알아볼 수 있습니다. [Azure Portal에서 Log Analytics 작업 영역 만들기](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-quick-create-workspace).
 
 클러스터에서 OMS 모니터링을 사용하려면:
 
@@ -383,7 +383,7 @@ client.extensions().disableMonitoring("<Resource Group Name>", "<Cluster Name>")
 
 HDInsight는 클러스터 사용자 지정을 위해 사용자 지정 스크립트를 호출하는 스크립트 작업이라고 부르는 구성 메서드를 제공합니다.
 > [!NOTE]
-> 스크립트 작업 사용 방법에 대한 자세한 내용은 [스크립트 작업을 사용하여 Linux 기반 HDInsight 클러스터 사용자 지정](https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)에서 확인할 수 있습니다.
+> 스크립트 작업을 사용하는 방법에 대한 자세한 내용은 다음에서 찾을 수 있습니다. [스크립트 작업을 사용하여 Linux 기반 HDInsight 클러스터 사용자 지정](https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux).
 
 ### <a name="execute-script-actions"></a>스크립트 작업 실행
 
