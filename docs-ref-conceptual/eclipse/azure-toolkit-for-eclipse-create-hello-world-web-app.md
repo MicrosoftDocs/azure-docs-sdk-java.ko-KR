@@ -14,12 +14,12 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 5e025c90c2619ec72ffddf5815fd49c3ac59c00f
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: c98f966eb17e3fbde877451c8f8fefb21e6bf686
+ms.sourcegitcommit: dca98b953fa3149fb2e6aa49e27e843b6df0c6c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893094"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57786892"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-eclipse"></a>Eclipse를 사용하여 Azure용 Hello World 웹앱 만들기
 
@@ -92,6 +92,8 @@ ms.locfileid: "48893094"
       ![App Service 만들기][create-app-service]
 
       **App Service 만들기** 대화 상자에서 웹앱에 대한 필수 정보를 지정한 후 **만들기**를 클릭합니다.
+
+      여기서 런타임 환경, 앱 설정, 서비스 계획 및 리소스 그룹을 구성할 수 있습니다.
 
       ![App Service 만들기 대화 상자][create-app-service-dialog]
 
