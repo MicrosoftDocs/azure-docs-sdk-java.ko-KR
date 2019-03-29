@@ -232,7 +232,7 @@ ms.locfileid: "54237294"
 
 2. *pom.xml* 파일을 저장하고 닫습니다.
 
-3. \Src\main\resources 폴더에 새 파일 *log4j2.xml*을 만들고 구성합니다. 예: 
+3. \Src\main\resources 폴더에 새 파일 *log4j2.xml*을 만들고 구성합니다. 예를 들면 다음과 같습니다.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>

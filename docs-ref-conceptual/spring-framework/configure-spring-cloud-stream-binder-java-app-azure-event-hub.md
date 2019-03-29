@@ -385,7 +385,7 @@ ms.locfileid: "57335406"
    ```shell
    curl -X POST -H "Content-Type: text/plain" -d "hello" http://localhost:8080/messages
    ```
-   애플리케이션 로그에 "hello"가 표시됩니다. 예: 
+   애플리케이션 로그에 "hello"가 표시됩니다. 예를 들면 다음과 같습니다.
 
    ```shell
    [Thread-13] INFO com.wingtiptoys.eventhub.EventhubSink - New message received: 'hello'

@@ -363,7 +363,7 @@ ms.locfileid: "53991538"
    ```shell
    curl -X POST -H "Content-Type: text/plain" -d "hello" http://localhost:8080/messages
    ```
-   애플리케이션 로그에 "hello"가 표시됩니다. 예: 
+   애플리케이션 로그에 "hello"가 표시됩니다. 예를 들면 다음과 같습니다.
 
    ```shell
    [http-nio-8080-exec-2] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka version : 1.0.2
