@@ -14,12 +14,12 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: cc68e16a6940a1f0f2b08f0b63c90c58ec6dbc4e
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 7055751d1b1c37e019ef4ed59f1710ce6905e9f8
+ms.sourcegitcommit: a108a82414bd35be896e3c4e7047f5eb7b1518cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892864"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58489641"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-intellij"></a>IntelliJ를 사용하여 Azure용 Hello World 웹앱 만들기
 
@@ -91,7 +91,7 @@ ms.locfileid: "48892864"
 
       ![[웹앱 실행] 대화 상자][run-on-web-app-dialog]
 
-   * **새 웹앱 만들기**를 클릭합니다. 새 웹앱 만들기를 선택한 경우 웹앱에 대한 필수 정보를 지정한 후 **실행**을 클릭합니다.
+   * WebApp 드롭다운에서 **새 웹앱 만들기**를 클릭합니다. 새 웹앱 만들기를 선택한 경우 웹앱에 대한 필수 정보를 지정하고 웹앱 생성 후 **실행**을 클릭합니다.
 
       ![새 웹앱 만들기][create-new-web-app-dialog]
 

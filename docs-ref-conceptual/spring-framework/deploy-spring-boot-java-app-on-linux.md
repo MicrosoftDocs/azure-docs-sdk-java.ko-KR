@@ -1,7 +1,7 @@
 ---
-title: Azure Container Service에서 Linux에 Spring Boot Web App 배포
+title: Azure App Service for Container에서 Spring Boot 웹앱 배포
 description: 이 자습서에서는 Microsoft Azure에서 Linux Web App으로 Spring Boot 애플리케이션을 배포하는 단계를 설명합니다.
-services: container-service
+services: azure app service
 documentationcenter: java
 author: rmcmurray
 manager: mbaldwin
@@ -10,21 +10,21 @@ ms.assetid: ''
 ms.author: robmcm
 ms.date: 12/19/2018
 ms.devlang: java
-ms.service: container-service
+ms.service: azure app service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: aa8fa6d15d868e55b252483993d001d19746244b
-ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
+ms.openlocfilehash: a9d4bd5a1677078431b5502b276b17cd973cbea0
+ms.sourcegitcommit: a108a82414bd35be896e3c4e7047f5eb7b1518cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991507"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58489661"
 ---
-# <a name="deploy-a-spring-boot-application-on-linux-in-the-azure-container-service"></a>Azure Container Service에서 Linux에 Spring Boot 애플리케이션 배포
+# <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>Azure App Service for Container에서 Spring Boot 애플리케이션 배포
 
-이 자습서에서는 [Docker]를 사용하여 [AKS(Azure Container Service)]에서 [Spring Boot] 애플리케이션을 개발하고 Linux 호스트에 배포하는 방법을 설명합니다.
+이 자습서에서는 [Docker]를 사용하여 [Azure App Service](https://docs.microsoft.com/azure/app-service/containers/app-service-linux-intro)에서 [Spring Boot] 애플리케이션을 컨테이너화하고 Linux 호스트로 Docker 이미지를 배포하는 방법을 설명합니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -275,7 +275,7 @@ Azure에서 Spring Boot 애플리케이션을 사용 하는 방법에 대한 자
 * [Azure App Service에 Spring Boot 애플리케이션 배포](deploy-spring-boot-java-web-app-on-azure.md)
 * [Azure Container Service의 Kubernetes 클러스터에 Spring Boot 애플리케이션 배포](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Java와 함께 Azure를 사용하는 방법에 관한 자세한 정보는 [Java 개발자용 Azure]와 [Azure DevOps 및 Java 사용하기]를 참조하세요.
+Java와 함께 Azure를 사용하는 방법에 관한 자세한 정보는 [Java 개발자를 위한 Azure]와 [Azure DevOps 및 Java 사용하기]를 참조하세요.
 
 Spring Boot on Docker 샘플 프로젝트에 대한 자세한 정보는 [Spring Boot on Docker 시작]을 참조하세요.
 
@@ -288,8 +288,8 @@ Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대�
 <!-- URL List -->
 
 [Azure CLI(명령줄 인터페이스)]: /cli/azure/overview
-[AKS(Azure Container Service)]: https://azure.microsoft.com/services/container-service/
-[Java 개발자용 Azure]: /java/azure/
+[Azure Container Service (AKS)]: https://azure.microsoft.com/services/container-service/
+[Java 개발자를 위한 Azure]: /java/azure/
 [Azure Portal]: https://portal.azure.com/
 [Azure Portal을 사용하여 개인 Docker 컨테이너 레지스트리 만들기]: /azure/container-registry/container-registry-get-started-portal
 [Azure Web App on Linux에 대한 사용자 지정 Docker 이미지 사용]: /azure/app-service-web/app-service-linux-using-custom-docker-image

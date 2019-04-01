@@ -297,7 +297,7 @@ ms.locfileid: "53991367"
 
    ![Spring Boot 애플리케이션 빌드 상태][build-application-01]
 
-1. Maven에서 Spring Boot 애플리케이션을 실행합니다. 애플리케이션이 키 자격 증명 모음의 연결 문자열을 표시합니다. 예: 
+1. Maven에서 Spring Boot 애플리케이션을 실행합니다. 애플리케이션이 키 자격 증명 모음의 연결 문자열을 표시합니다. 예를 들면 다음과 같습니다.
 
    ```bash
    mvn spring-boot:run
