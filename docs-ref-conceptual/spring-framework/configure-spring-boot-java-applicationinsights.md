@@ -259,7 +259,7 @@ ms.locfileid: "54237294"
 ```
 4. Spring Boot 애플리케이션을 위와 같이 다시 빌드하고 실행합니다. 
 
-몇 초 내로 모든 spring 로그가 Azure 포털에서 사용가능한 것으로 나타납니다. 
+몇 초 내로 모든 spring 로그가 Azure Portal에서 사용가능한 것으로 나타납니다. 
 
 ![Azure Portal][AZ06]
 
