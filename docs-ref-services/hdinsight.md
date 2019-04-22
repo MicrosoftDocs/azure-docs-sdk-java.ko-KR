@@ -1,25 +1,25 @@
 ---
-title: Azure HDInsight Java SDK
-description: Azure HDInsight Java SDK 참조 HDInsight Java SDK는 HDInsight 클러스터 관리를 위한 클래스 및 메서드를 제공합니다.
+title: Java용 Azure HDInsight SDK
+description: Java용 Azure HDInsight SDK에 대한 참조입니다. Java용 HDInsight SDK는 HDInsight 클러스터를 관리할 수 있는 클래스와 메서드를 제공합니다.
 author: tylerfox
 ms.author: tyfox
 ms.reviewer: jasonh
 ms.service: hdinsight
 ms.topic: reference
 ms.devlang: java
-ms.date: 11/21/2018
-ms.openlocfilehash: 0ae8d78a0618c4dbcc5e734fce311f7c2e5684bd
-ms.sourcegitcommit: a108a82414bd35be896e3c4e7047f5eb7b1518cb
+ms.date: 04/15/2019
+ms.openlocfilehash: fe87c9214e2a620230cf2f1f52261fd66a2b8857
+ms.sourcegitcommit: f33befab25a66a252b4c91c7aeb1b77cb32821bb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58489651"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59705121"
 ---
-# <a name="hdinsight-java-management-sdk-preview"></a>HDInsight Java 관리 SDK 미리 보기
+# <a name="hdinsight-sdk-for-java"></a>Java용 HDInsight SDK
 
 ## <a name="overview"></a>개요
 
-HDInsight Java SDK는 HDInsight 클러스터 관리를 위한 클래스 및 메서드를 제공합니다. 여기에는 HDInsight 클러스터의 속성 만들기, 삭제, 업데이트, 나열, 크기 조정, 스크립트 작업 실행, 모니터링, 가져오기 작업을 포함합니다.
+Java용 HDInsight SDK는 HDInsight 클러스터를 관리할 수 있는 클래스와 메서드를 제공합니다. 여기에는 HDInsight 클러스터의 속성 만들기, 삭제, 업데이트, 나열, 크기 조정, 스크립트 작업 실행, 모니터링, 가져오기 작업을 포함합니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -29,7 +29,7 @@ HDInsight Java SDK는 HDInsight 클러스터 관리를 위한 클래스 및 메�
 
 ## <a name="sdk-installation"></a>SDK 설치
 
-HDInsight Java SDK는 Maven [여기](https://mvnrepository.com/artifact/com.microsoft.azure.hdinsight.v2018_06_01_preview/azure-mgmt-hdinsight)을 통해 사용할 수 있습니다. pom.xml에 다음 종속성을 추가합니다.
+Java용 HDInsight SDK는 Maven [여기](https://search.maven.org/artifact/com.microsoft.azure.hdinsight.v2018_06_01_preview/azure-mgmt-hdinsight)를 통해 사용할 수 있습니다. pom.xml에 다음 종속성을 추가합니다.
 
 ```
 <dependency>
@@ -41,21 +41,21 @@ HDInsight Java SDK는 Maven [여기](https://mvnrepository.com/artifact/com.micr
 
 또한 pom.xml 파일에 다음 종속성을 추가합니다.
 
-* [Azure 클라이언트 인증 라이브러리:](https://mvnrepository.com/artifact/com.microsoft.azure/azure-client-authentication/1.6.2)
+* [Azure 클라이언트 인증 라이브러리:](https://search.maven.org/artifact/com.microsoft.azure/azure-client-authentication)
   ```
   <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-client-authentication</artifactId>
-    <version>1.6.2</version>
+    <version>1.6.5</version>
   </dependency>
   ```
 
-* [ARM용 Azure Java 클라이언트 런타임:](https://mvnrepository.com/artifact/com.microsoft.azure/azure-arm-client-runtime/1.6.2)
+* [ARM용 Azure Java 클라이언트 런타임:](https://search.maven.org/artifact/com.microsoft.azure/azure-arm-client-runtime)
   ```
   <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-arm-client-runtime</artifactId>
-    <version>1.6.2</version>
+    <version>1.6.5</version>
   </dependency>
   ```
 
@@ -153,7 +153,6 @@ public class Main {
                 .withSubscriptionId(SUBSCRIPTION_ID);
 ```
 
-
 ## <a name="cluster-management"></a>클러스터 관리
 
 > [!NOTE]
@@ -162,6 +161,10 @@ public class Main {
 ### <a name="create-a-cluster"></a>클러스터 만들기
 
 `client.clusters().create()`을(를) 호출하여 새 클러스터를 만들 수 있습니다.
+
+#### <a name="samples"></a>샘플
+
+몇 가지 일반적인 유형의 HDInsight 클러스터를 만드는 [HDInsight Java 샘플](https://github.com/Azure-Samples/hdinsight-java-sdk-samples)과 같은 코드 샘플을 사용할 수 있습니다.
 
 #### <a name="example"></a>예
 
