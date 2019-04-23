@@ -37,7 +37,7 @@ Javadoc 콘텐츠를 Java용 Azure 라이브러리 패키지에 연결하면 Jav
 
 1. **Javadoc URL** 또는 **보관 중인 Javadoc**을 지정할 수 있습니다.
 
-   * **Javadoc URL**을 지정하려면 **http://dl.windowsazure.com/javadoc** 또는 **http://dl.windowsazure.com/storage/javadoc**과 같은 URL을 사용하세요.
+   * **Javadoc URL** 을 지정하려면 **http://dl.windowsazure.com/javadoc** 또는 **http://dl.windowsazure.com/storage/javadoc** 과 같은 URL을 사용하세요.
 
    * **Javadoc in archive**(보관 중인 Javadoc)를 사용하도록 선택하는 경우 외부 파일 또는 작업 영역 파일을 지정할 수 있습니다.
 
