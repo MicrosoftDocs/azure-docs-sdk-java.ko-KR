@@ -1,6 +1,6 @@
 ---
 title: Java용 Azure SQL Database 라이브러리
-description: 관리 API를 사용하여 JDBC 드라이버 또는 Azure SQL Database 관리 인스턴스를 사용하는 Azure SQL Database에 연결합니다.
+description: 관리 API를 사용하여 JDBC 드라이버 또는 Azure SQL 데이터베이스 관리 인스턴스를 사용하는 Azure SQL 데이터베이스에 연결합니다.
 keywords: Azure, Java, SDK, API, SQL, 데이터베이스, JDBC
 author: rloutlaw
 ms.author: routlaw

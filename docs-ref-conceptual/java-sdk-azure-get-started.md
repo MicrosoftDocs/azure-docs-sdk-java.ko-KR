@@ -305,7 +305,7 @@ az appservice web browse --resource-group sampleWebResourceGroup --name YOUR_APP
 az group delete --name sampleWebResourceGroup
 ```
 
-## <a name="connect-to-an-azure-sql-database"></a>Azure SQL Database에 연결
+## <a name="connect-to-an-azure-sql-database"></a>Azure SQL 데이터베이스에 연결
 
 `AzureApp.java`의 현재 main 메서드를 `dbPassword` 변수에 대한 실제 값을 설정하는 아래 코드로 바꿉니다.
 이 코드에서는 원격 액세스를 허용하는 방화벽 규칙이 있는 새 SQL 데이터베이스를 만든 다음 SQL Database JBDC 드라이버를 사용하여 연결합니다. 
