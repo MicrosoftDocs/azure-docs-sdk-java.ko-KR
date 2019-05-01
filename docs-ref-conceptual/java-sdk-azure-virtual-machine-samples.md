@@ -12,15 +12,15 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: 1eeb166f-8253-4fde-82d2-43997fda7819
-ms.openlocfilehash: f514ff8fed79e9e440590efc8ffec5516939f3dc
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: bb1ad4f8fc5fabd10b4f29e77b4c90415a5664ef
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61592611"
 ---
-# <a name="azure-management-libraries-for-java-samples-for-virtual-machines"></a><span data-ttu-id="d481f-104">Java 가상 머신 샘플용 Azure 관리 라이브러리</span><span class="sxs-lookup"><span data-stu-id="d481f-104">Azure management libraries for Java samples for virtual machines</span></span>
+# <a name="azure-management-libraries-for-java-samples-for-virtual-machines"></a><span data-ttu-id="6c864-104">Java 가상 머신 샘플용 Azure 관리 라이브러리</span><span class="sxs-lookup"><span data-stu-id="6c864-104">Azure management libraries for Java samples for virtual machines</span></span>
 
-<span data-ttu-id="d481f-105">다음 표는 Azure 가상 머신을 만들고 구성하는 데 사용할 수 있는 Java 소스에 연결됩니다.</span><span class="sxs-lookup"><span data-stu-id="d481f-105">The following table links to Java source you can use to create and configure Azure virtual machines.</span></span>
+<span data-ttu-id="6c864-105">다음 표는 Azure 가상 머신을 만들고 구성하는 데 사용할 수 있는 Java 소스에 연결됩니다.</span><span class="sxs-lookup"><span data-stu-id="6c864-105">The following table links to Java source you can use to create and configure Azure virtual machines.</span></span>
 
 [!INCLUDE [java-vm-samples](includes/java-vm-samples.md)]

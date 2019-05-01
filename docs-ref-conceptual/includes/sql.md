@@ -1,7 +1,15 @@
-<span data-ttu-id="b1dfa-101">[관리 API를 사용하여 Azure SQL Database 구성][1] </span><span class="sxs-lookup"><span data-stu-id="b1dfa-101">[Configure Azure SQL Database with the management API][1] </span></span>  
-<span data-ttu-id="b1dfa-102">[SQL Database로 구동되는 WordPress 배포][4] </span><span class="sxs-lookup"><span data-stu-id="b1dfa-102">[Deploy WordPress powered by SQL Database][4] </span></span>  
-<span data-ttu-id="b1dfa-103">[여러 Azure 지역에서 SQL Database 크기 조정][2] </span><span class="sxs-lookup"><span data-stu-id="b1dfa-103">[Scale SQL Database across multiple Azure regions][2] </span></span>  
-<span data-ttu-id="b1dfa-104">[탄력적 풀을 사용하여 공유 SQL Database 워크로드 관리][3]</span><span class="sxs-lookup"><span data-stu-id="b1dfa-104">[Manage shared SQL database workloads with elastic pools][3]</span></span>
+---
+ms.openlocfilehash: 7b344fcc60c89af1867f65abe8c22e56d00de1d8
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61593391"
+---
+<span data-ttu-id="b8d48-101">[관리 API를 사용하여 Azure SQL Database 구성][1] </span><span class="sxs-lookup"><span data-stu-id="b8d48-101">[Configure Azure SQL Database with the management API][1] </span></span>  
+<span data-ttu-id="b8d48-102">[SQL Database로 구동되는 WordPress 배포][4] </span><span class="sxs-lookup"><span data-stu-id="b8d48-102">[Deploy WordPress powered by SQL Database][4] </span></span>  
+<span data-ttu-id="b8d48-103">[여러 Azure 지역에서 SQL Database 크기 조정][2] </span><span class="sxs-lookup"><span data-stu-id="b8d48-103">[Scale SQL Database across multiple Azure regions][2] </span></span>  
+<span data-ttu-id="b8d48-104">[탄력적 풀을 사용하여 공유 SQL Database 워크로드 관리][3]</span><span class="sxs-lookup"><span data-stu-id="b8d48-104">[Manage shared SQL database workloads with elastic pools][3]</span></span>
 
 [1]: https://github.com/Azure-Samples/sql-database-java-manage-db
 [2]: https://github.com/Azure-Samples/sql-database-java-manage-sql-databases-across-regions
