@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 4d7e328272401f51ca645028f1e4a52500afe1f3
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61590491"
+---
 ## <a name="launch-azure-cloud-shell"></a>Azure Cloud Shell 시작
 
 Azure Cloud Shell은 Azure Portal에서 직접 실행할 수 있는 평가판 bash 셸입니다. Azure CLI가 사전 설치되어 계정에서 사용하도록 구성되어 있습니다. [Azure Portal](https://portal.azure.com)의 오른쪽 위 모서리에 있는 메뉴에서 **Cloud Shell** 단추를 클릭합니다.

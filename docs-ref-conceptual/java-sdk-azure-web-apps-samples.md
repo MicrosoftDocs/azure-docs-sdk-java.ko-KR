@@ -12,12 +12,12 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: 43633e5c-9fb1-4807-ba63-e24c126754e2
-ms.openlocfilehash: 2f1e43f3835ffcdb138bf7e29a1656b7ee381281
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: be4031059587ceb88f6824356f677c37a198de80
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61592588"
 ---
 # <a name="azure-management-libraries-for-java-samples-for-web-apps"></a>Java 웹앱 샘플용 Azure 관리 라이브러리
 

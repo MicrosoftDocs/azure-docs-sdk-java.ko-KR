@@ -11,18 +11,18 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: event-hub
-ms.openlocfilehash: b6646ef27edace4247090e749c9a52cd6a33a82c
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 9e2ae18f98083cb35bb076a5f84726b669cbf81e
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61593364"
 ---
 # <a name="azure-event-hub-libraries-for-java"></a>Java용 Azure Event Hub 라이브러리
 
 ## <a name="overview"></a>개요
 
-[Azure Event Hubs](/azure/event-hubs/event-hubs-what-is-event-hubs)를 사용하여 연결된 IoT 장치 및 응용 프로그램에서 초당 수백만 개의 이벤트를 수집하고 관리합니다.
+[Azure Event Hubs](/azure/event-hubs/event-hubs-what-is-event-hubs)를 사용하여 연결된 IoT 디바이스 및 애플리케이션에서 초당 수백만 개의 이벤트를 수집하고 관리합니다.
 
 Azure Event Hubs를 시작하려면 [Java를 사용하여 Azure Event Hubs에서 이벤트 수신](/azure/event-hubs/event-hubs-java-get-started-receive-eph)을 참조하세요.
 

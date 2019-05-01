@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: networking
-ms.openlocfilehash: bb74ccd8826df7b627e0b5f4e4ffd2da44b2642d
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 4eb4f583da686508db9fb0c4346f2525502f669d
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61593328"
 ---
 # <a name="azure-network-libraries-for-java"></a>Java용 Azure Network 라이브러리
 
@@ -62,7 +62,7 @@ Network virtualNetwork1 = azure.networks().define(vnetName1)
 
 [가상 네트워크 관리(영문)](https://github.com/Azure-Samples/network-java-manage-virtual-network)   
 [네트워크 인터페이스 관리(영문)](https://github.com/Azure-Samples/network-java-manage-network-interface)   
-[Application Gateway 관리(영문)](https://github.com/Azure-Samples/application-gateway-java-manage-simple-application-gateways)   
+[Application Gateway 관리](https://github.com/Azure-Samples/application-gateway-java-manage-simple-application-gateways)   
 [인터넷 연결 부하 분산 장치 관리(영문)](https://github.com/Azure-Samples/network-java-manage-internet-facing-load-balancers)   
 
 앱에서 사용할 수 있는 [Azure Networking용 Java 샘플 코드](https://azure.microsoft.com/resources/samples/?platform=java&term=network)을 추가로 탐색합니다.

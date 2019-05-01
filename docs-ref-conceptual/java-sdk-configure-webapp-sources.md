@@ -9,16 +9,16 @@ ms.devlang: java
 ms.topic: article
 ms.date: 03/30/2017
 ms.author: routlaw;asirveda
-ms.openlocfilehash: 910d1e43c9942d6402aeccb8757ba819b7453dab
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: c416cb871ac8264cd6da2045d1ffdd50607fb092
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61592628"
 ---
 # <a name="configure-azure-app-service-deployment-sources-from-your-java-applications"></a>Java 애플리케이션에서 Azure App Service 배포 원본 구성
 
-[이 샘플 ](https://github.com/Azure-Samples/compute-java-create-virtual-machines-across-regions-in-parallel)에서는 각각 서로 다른 배포 원본을 사용하는 단일 [ Azure App Service ](https://docs.microsoft.com/azure/app-service/) 계획에서 네 가지 응용 프로그램에 코드를 배포합니다.
+[이 샘플 ](https://github.com/Azure-Samples/compute-java-create-virtual-machines-across-regions-in-parallel)에서는 각각 서로 다른 배포 원본을 사용하는 단일 [ Azure App Service ](https://docs.microsoft.com/azure/app-service/) 계획에서 네 가지 애플리케이션에 코드를 배포합니다.
 
 ## <a name="run-the-sample"></a>샘플 실행
 

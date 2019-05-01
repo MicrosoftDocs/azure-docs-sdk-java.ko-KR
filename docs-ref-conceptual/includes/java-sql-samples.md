@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 8d8ca00d6707927c0664908f1e79deddf63d80d7
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61592651"
+---
 |  |  |
 |---------|---------|
 | [JDBC를 사용하여 Azure SQL Database에서 데이터 연결 및 쿼리][4] | 샘플 데이터베이스를 구성한 다음 select, insert, update 및 delete 명령을 실행합니다. |
