@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 6f1edcc1411e8ec716dbfe41271d21d2397515c5
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: bfed1a879bacf82436b71654c0ceca2826381eed
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61590621"
 ---
 # <a name="displaying-javadoc-content-in-eclipse-for-the-azure-libraries-package-for-java"></a>Eclipse에서 Java용 Azure 라이브러리 패키지의 Javadoc 콘텐츠 표시
 
@@ -45,7 +45,7 @@ Javadoc 콘텐츠를 Java용 Azure 라이브러리 패키지에 연결하면 Jav
 
    ![Javadoc 콘텐츠를 표시합니다.][ic553487]
 
-1. *옵션 단계*: **유효성 검사**를 클릭합니다. Javadoc JAR의 잠재적 문제가 여기에 표시될 수 있습니다.
+1. *선택적 단계*: **유효성 검사**를 클릭합니다. Javadoc JAR의 잠재적 문제가 여기에 표시될 수 있습니다.
 
 1. **확인**을 클릭합니다.
 

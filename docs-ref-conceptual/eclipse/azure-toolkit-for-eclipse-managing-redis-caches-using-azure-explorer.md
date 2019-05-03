@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 2d3f2363bd0b41808cd409417327b924cb86d85b
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 00f363e5dacc9c494b01eaa479db7e9e1aff6952
+ms.sourcegitcommit: 4f1acf05e3bbb7eb6bca9b65300c1c5b9772185a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48899558"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63456050"
 ---
 # <a name="managing-redis-caches-using-the-azure-explorer-for-eclipse"></a>Eclipse용 Azure 탐색기를 사용하여 Redis Cache 관리
 
@@ -49,13 +49,13 @@ Eclipse용 Azure 도구 키트의 일부인 Azure 탐색기는 Eclipse IDE 내�
 
    다. **리소스 그룹**: Redis Cache에 대한 리소스 그룹을 지정합니다. 다음 옵션 중 하나를 선택해야 합니다.
       * **새로 만들기**: 새 리소스 그룹을 만들도록 지정합니다.
-      * **기존 그룹 사용**: Azure 계정과 연결된 리소스 그룹 목록에서 선택하도록 지정합니다.
+      * **기존 리소스 사용**: Azure 계정과 연결된 리소스 그룹 목록에서 선택하도록 지정합니다.
 
    d. **위치**: Redis Cache를 만들 위치를 지정합니다(예: *미국 서부*).
 
    e. **가격 책정 계층**: Redis Cache에서 사용하는 가격 책정 계층을 지정합니다. 이 설정은 클라이언트 연결 수를 결정합니다. 자세한 내용은 [Redis Cache 가격]을 참조하세요.
 
-   f. **비SSL 포트**: Redis Cache에서 비SSL 연결을 허용하는지 여부를 지정합니다. 기본적으로 SSL 연결만 허용됩니다.
+   f. **비 SSL 포트**: Redis Cache에서 비SSL 연결을 허용하는지 여부를 지정합니다. 기본적으로 SSL 연결만 허용됩니다.
 
 1. 모든 Redis Cache 설정을 지정한 후 **확인**을 클릭합니다.
 
