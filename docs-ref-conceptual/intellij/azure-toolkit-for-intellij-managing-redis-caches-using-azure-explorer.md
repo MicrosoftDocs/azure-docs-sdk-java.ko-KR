@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 046ae0428d50a7f173f5ad15be53ffd8e66c11c5
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: ee5d286f3c5979b3a10e3e3be08a68caa6eef31d
+ms.sourcegitcommit: 420fcd58e3a907d629c9c15fda56ad818d9dfe7c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892524"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65470189"
 ---
 # <a name="managing-redis-caches-using-the-azure-explorer-for-intellij"></a>IntelliJ용 Azure 탐색기를 사용하여 Redis Cache 관리
 
@@ -49,13 +49,13 @@ IntelliJ용 Azure 도구 키트의 일부인 Azure 탐색기는 IntelliJ IDE 내
 
    다. **리소스 그룹**: Redis Cache에 대한 리소스 그룹을 지정합니다. 다음 옵션 중 하나를 선택해야 합니다. 
       * **새로 만들기**: 새 리소스 그룹을 만들도록 지정합니다. 
-      * **기존 그룹 사용**: Azure 계정과 연결된 리소스 그룹 목록에서 선택하도록 지정합니다. 
+      * **기존 리소스 사용**: Azure 계정과 연결된 리소스 그룹 목록에서 선택하도록 지정합니다. 
 
    d. **위치**: Redis Cache를 만들 위치를 지정합니다(예: *미국 서부*).
 
    e. **가격 책정 계층**: Redis Cache에서 사용하는 가격 책정 계층을 지정합니다. 이 설정은 클라이언트 연결 수를 결정합니다. 자세한 내용은 [Redis Cache 가격]을 참조하세요.
 
-   f. **비SSL 포트**: Redis Cache에서 비SSL 연결을 허용하는지 여부를 지정합니다. 기본적으로 SSL 연결만 허용됩니다.
+   f. **비 SSL 포트**: Redis Cache에서 비SSL 연결을 허용하는지 여부를 지정합니다. 기본적으로 SSL 연결만 허용됩니다.
 
 1. 모든 Redis Cache 설정을 지정한 후 **확인**을 클릭합니다.
 
