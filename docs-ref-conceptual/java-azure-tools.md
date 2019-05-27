@@ -46,8 +46,8 @@ Azure 2.0 CLI는 Azure 리소스를 관리하는 명령줄 환경을 제공합�
 
 [Azure CLI 2.0 시작](https://docs.microsoft.com/cli/azure/get-started-with-azure-cli)
 
-## <a name="azure-storage-explorer"></a>Azure Storage 탐색기 
+## <a name="azure-storage-explorer"></a>Azure Storage Explorer 
 
-바탕 화면에서 Azure 저장소 계정, 컨테이너 및 Blob/파일을 관리합니다. Azure Storage 탐색기는 현재 미리 보기로 있으며 Windows, macOS 및 Linux에서 작동합니다.
+바탕 화면에서 Azure 저장소 계정, 컨테이너 및 Blob/파일을 관리합니다. Azure Storage Explorer는 현재 미리 보기로 있으며 Windows, macOS 및 Linux에서 작동합니다.
 
 [Azure Storage 탐색기 시작](https://docs.microsoft.com/azure/vs-azure-tools-storage-manage-with-storage-explorer)

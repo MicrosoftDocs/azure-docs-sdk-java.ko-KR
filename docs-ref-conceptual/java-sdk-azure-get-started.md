@@ -444,7 +444,7 @@ public static void main(String[] args) {
 mvn clean compile exec:java
 ```
 
-Azure Portal 또는 [Azure Storage 탐색기](https://docs.microsoft.com/azure/vs-azure-tools-storage-explorer-blobs)를 사용하여 스토리지 계정에서 `helloazure.txt` 파일을 찾아볼 수 있습니다.
+Azure Portal 또는 [Azure Storage Explorer](https://docs.microsoft.com/azure/vs-azure-tools-storage-explorer-blobs)를 사용하여 스토리지 계정에서 `helloazure.txt` 파일을 찾아볼 수 있습니다.
 
 CLI를 사용하여 저장소 계정을 정리합니다.
 
