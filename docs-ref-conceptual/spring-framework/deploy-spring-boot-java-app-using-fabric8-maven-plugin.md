@@ -164,7 +164,7 @@ ms.locfileid: "53991607"
 
 ## <a name="create-a-kubernetes-cluster-using-the-azure-cli"></a>Azure CLI를 사용하여 Kubernetes 클러스터 만들기
 
-1. 다음 예제처럼 새 리소스 그룹에서 Kubernetes 클러스터를 만듭니다.   
+1. 다음 예제처럼 새 리소스 그룹에서 Kubernetes 클러스터를 만듭니다.  
    ```azurecli 
    az acs create --orchestrator-type kubernetes --resource-group wingtiptoys-kubernetes --name wingtiptoys-cluster --generate-ssh-keys --dns-prefix=wingtiptoys
    ```
@@ -248,9 +248,9 @@ ms.locfileid: "53991607"
    ```
 
 
-## <a name="create-a-private-azure-container-registry-using-the-azure-cli"></a>Azure CLI를 사용하여 개인 Azure Container Registry 만들기
+## <a name="create-a-private-azure-container-registry-using-the-azure-cli"></a>Azure CLI를 사용하여 프라이빗 Azure Container Registry 만들기
 
-1. 다음 예제처럼 리소스 그룹에서 Docker 이미지를 호스팅할 개인 Azure Container Registry를 만듭니다.
+1. 다음 예제처럼 리소스 그룹에서 Docker 이미지를 호스팅할 프라이빗 Azure Container Registry를 만듭니다.
    ```azurecli
    az acr create --admin-enabled --resource-group wingtiptoys-kubernetes --location westeurope --name wingtiptoysregistry --sku Basic
    ```
@@ -259,7 +259,7 @@ ms.locfileid: "53991607"
    | 매개 변수 | 설명 |
    |---|---|
    | `wingtiptoys-kubernetes` | 이 문서의 앞부분에 나온 리소스 그룹의 이름을 지정합니다. |
-   | `wingtiptoysregistry` | 개인 레지스트리에 고유한 이름을 지정합니다. |
+   | `wingtiptoysregistry` | 프라이빗 레지스트리에 고유한 이름을 지정합니다. |
    | `westeurope` | 애플리케이션의 적합한 지리적 위치를 지정합니다. |
 
    Azure CLI가 다음 예제처럼 레지스트리 만들기 결과를 표시합니다.  
@@ -315,7 +315,7 @@ ms.locfileid: "53991607"
    </servers>
    ```
 
-5. Spring Boot 애플리케이션에 대해 완료된 프로젝트 디렉터리로 이동하고(예: "*C:\SpringBoot\gs-spring-boot-docker\complete*" 또는 "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*") 텍스트 편집기를 사용하여 *pom.xml* 파일을 엽니다.
+5. Spring Boot 애플리케이션에 대해 완료된 프로젝트 디렉터리로 이동하고(예: "*C:\SpringBoot\gs-spring-boot-docker\complete*" 또는 " */home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*") 텍스트 편집기를 사용하여 *pom.xml* 파일을 엽니다.
 
 6. *pom.xml* 파일의 `<properties>` 컬렉션을 Azure Container Registry의 로그인 서버 값으로 업데이트합니다.
 
@@ -362,7 +362,7 @@ ms.locfileid: "53991607"
 
 ## <a name="configure-your-spring-boot-app-to-use-the-fabric8-maven-plugin"></a>Fabric8 Maven 플러그인을 사용하도록 Spring Boot 앱 구성
 
-1. Spring Boot 애플리케이션의 완성된 프로젝트 디렉터리(예: "*C:\SpringBoot\gs-spring-boot-docker\complete*" 또는 "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*")로 이동하여 텍스트 편집기로 *pom.xml* 파일을 엽니다.
+1. Spring Boot 애플리케이션의 완성된 프로젝트 디렉터리(예: "*C:\SpringBoot\gs-spring-boot-docker\complete*" 또는 " */home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*")로 이동하여 텍스트 편집기로 *pom.xml* 파일을 엽니다.
 
 1. *pom.xml* 파일의 `<plugins>` 컬렉션을 업데이트하여 Fabric8 Maven 플러그인을 추가합니다.
 
@@ -378,7 +378,7 @@ ms.locfileid: "53991607"
    </plugin>
    ```
 
-1. Spring Boot 애플리케이션의 완료된 프로젝트 디렉터리(예: "*C:\SpringBoot\gs-spring-boot-docker\complete\src\main*" 또는 "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete/src/main*")로 이동하여 이름이 "*fabric8*"인 새 폴더를 만듭니다.
+1. Spring Boot 애플리케이션의 완료된 프로젝트 디렉터리(예: "*C:\SpringBoot\gs-spring-boot-docker\complete\src\main*" 또는 " */home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete/src/main*")로 이동하여 이름이 "*fabric8*"인 새 폴더를 만듭니다.
 
 1. 새 *fabric8* 폴더에 3개의 YAML 조각 파일을 만듭니다.
 

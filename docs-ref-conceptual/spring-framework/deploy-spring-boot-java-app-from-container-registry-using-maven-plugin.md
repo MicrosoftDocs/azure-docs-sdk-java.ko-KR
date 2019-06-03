@@ -154,7 +154,7 @@ ms.locfileid: "53991377"
    ```
    이 예제에서 `wingtiptoysresources`를 리소스 그룹의 고유 이름으로 바꿉니다.
 
-1. Spring Boot 앱의 리소스 그룹에서 개인 Azure Container Registry를 만듭니다. 
+1. Spring Boot 앱의 리소스 그룹에서 프라이빗 Azure Container Registry를 만듭니다. 
    ```azurecli
    az acr create --admin-enabled --resource-group wingtiptoysresources --location westus --name wingtiptoysregistry --sku Basic
    ```
@@ -194,8 +194,8 @@ ms.locfileid: "53991377"
 
    |   요소    |                                 설명                                  |
    |--------------|------------------------------------------------------------------------------|
-   |    `<id>`    |         개인 Azure Container Registry 이름을 포함합니다.          |
-   | `<username>` |         개인 Azure Container Registry 이름을 포함합니다.          |
+   |    `<id>`    |         프라이빗 Azure Container Registry 이름을 포함합니다.          |
+   | `<username>` |         프라이빗 Azure Container Registry 이름을 포함합니다.          |
    | `<password>` | 이 문서의 이전 섹션에서 검색된 암호를 포함합니다. |
 
 
@@ -229,7 +229,7 @@ ms.locfileid: "53991377"
 
 ## <a name="build-your-docker-container-image-and-push-it-to-your-azure-container-registry"></a>Docker 컨테이너 이미지 빌드 및 Azure Container Registry에 푸시
 
-1. Spring Boot 애플리케이션의 완료된 프로젝트 디렉터리로 이동합니다. (예: "*C:\SpringBoot\gs-spring-boot-docker\complete*" 또는 "*/users/robert/SpringBoot/gs-spring-boot-docker/complete*") 텍스트 편집기를 사용하여 *pom.xml* 파일을 엽니다.
+1. Spring Boot 애플리케이션의 완료된 프로젝트 디렉터리로 이동합니다. (예: "*C:\SpringBoot\gs-spring-boot-docker\complete*" 또는 " */users/robert/SpringBoot/gs-spring-boot-docker/complete*") 텍스트 편집기를 사용하여 *pom.xml* 파일을 엽니다.
 
 2. *pom.xml* 파일의 `<properties>` 컬렉션을 이 자습서의 이전 섹션에서 사용한 Azure Container Registry의 로그인 서버 값으로 업데이트합니다. 예:
 
@@ -245,8 +245,8 @@ ms.locfileid: "53991377"
 
    |           요소           |                                                                       설명                                                                       |
    |-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-   | `<azure.containerRegistry>` |                                              개인 Azure Container Registry의 이름을 지정합니다.                                               |
-   |   `<docker.image.prefix>`   | 개인 컨테이너 레지스트리의 이름에 ".azurecr.io"를 추가하여 파생되는 개인 Azure Container Registry의 URL을 추가합니다. |
+   | `<azure.containerRegistry>` |                                              프라이빗 Azure Container Registry의 이름을 지정합니다.                                               |
+   |   `<docker.image.prefix>`   | 프라이빗 컨테이너 레지스트리의 이름에 ".azurecr.io"를 추가하여 파생되는 프라이빗 Azure Container Registry의 URL을 추가합니다. |
 
 
 3. *pom.xml* 파일에서 Docker 플러그 인의 `<plugin>`이 이 자습서의 이전 단계에서 로그인 서버 주소 및 레지스트리 이름에 대한 올바른 속성을 포함하는지 확인합니다. 예를 들면 다음과 같습니다.
@@ -275,8 +275,8 @@ ms.locfileid: "53991377"
 
    |     요소     |                                       설명                                       |
    |-----------------|-----------------------------------------------------------------------------------------|
-   |  `<serverId>`   |  개인 Azure Container Registry의 이름을 포함하는 속성을 지정합니다.   |
-   | `<registryUrl>` | 개인 Azure Container Registry의 URL을 포함하는 속성을 지정합니다. |
+   |  `<serverId>`   |  프라이빗 Azure Container Registry의 이름을 포함하는 속성을 지정합니다.   |
+   | `<registryUrl>` | 프라이빗 Azure Container Registry의 URL을 포함하는 속성을 지정합니다. |
 
 
 4. Spring Boot 애플리케이션의 완성된 프로젝트 디렉터리로 이동하고 다음 명령을 실행하여 애플리케이션을 다시 빌드하고 Azure Container Registry에 컨테이너를 푸시합니다.

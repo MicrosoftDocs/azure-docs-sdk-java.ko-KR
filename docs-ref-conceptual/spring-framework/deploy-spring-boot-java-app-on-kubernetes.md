@@ -26,7 +26,7 @@ ms.locfileid: "59745161"
 
 **[Kubernetes]** 및 **[Docker]** 는 개발자가 컨테이너에서 실행 중인 애플리케이션의 배포, 확장 및 관리를 자동화하는 데 도움이 되는 오픈 소스 솔루션입니다.
 
-이 자습서에서는 이러한 두 가지 인기 있는 오픈 소스 기술을 결합하여 Spring Boot 애플리케이션을 개발하고 Microsoft Azure에 배포하는 과정을 안내합니다. 좀 더 구체적으로 말하면 애플리케이션 개발을 위해 *[Spring Boot]*, 컨테이너 배포를 위해 *[Kubernetes]* 및 애플리케이션을 호스트하기 위해 [AKS(Azure Kubernetes Service)]를 사용합니다.
+이 자습서에서는 이러한 두 가지 인기 있는 오픈 소스 기술을 결합하여 Spring Boot 애플리케이션을 개발하고 Microsoft Azure에 배포하는 과정을 안내합니다. 좀 더 구체적으로 말하면 애플리케이션 개발을 위해 *[Spring Boot]* , 컨테이너 배포를 위해 *[Kubernetes]* 및 애플리케이션을 호스트하기 위해 [AKS(Azure Kubernetes Service)]를 사용합니다.
 
 ### <a name="prerequisites"></a>필수 조건
 
@@ -101,7 +101,7 @@ ms.locfileid: "59745161"
    az group create --name=wingtiptoys-kubernetes --location=eastus
    ```
 
-1. 리소스 그룹에서 개인 Azure Container Registry를 만듭니다. 이 자습서는 이후 단계에서 샘플 앱을 이 레지스트리에 Docker 이미지로 푸시합니다. `wingtiptoysregistry`를 레지스트리의 고유한 이름으로 바꿉니다.
+1. 리소스 그룹에서 프라이빗 Azure Container Registry를 만듭니다. 이 자습서는 이후 단계에서 샘플 앱을 이 레지스트리에 Docker 이미지로 푸시합니다. `wingtiptoysregistry`를 레지스트리의 고유한 이름으로 바꿉니다.
    ```azurecli
    az acr create --resource-group wingtiptoys-kubernetes --location eastus \
     --name wingtiptoysregistry --sku Basic
@@ -116,7 +116,7 @@ ms.locfileid: "59745161"
    az acr login
    ```
 
-1. Spring Boot 애플리케이션에 대해 완료된 프로젝트 디렉터리로 이동하고(예: "*C:\SpringBoot\gs-spring-boot-docker\complete*"또는"*/users/robert/SpringBoot/gs-spring-boot-docker/complete*") 텍스트 편집기를 사용하여 *pom.xml* 파일을 엽니다.
+1. Spring Boot 애플리케이션에 대해 완료된 프로젝트 디렉터리로 이동하고(예: "*C:\SpringBoot\gs-spring-boot-docker\complete*"또는" */users/robert/SpringBoot/gs-spring-boot-docker/complete*") 텍스트 편집기를 사용하여 *pom.xml* 파일을 엽니다.
 
 1. *pom.xml* 파일의 `<properties>` 컬렉션을 Azure Container Registry의 레지스트리 이름과 최신 버전의 [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin)으로 업데이트합니다.
 
@@ -205,7 +205,7 @@ ms.locfileid: "59745161"
 
 1. 명령 프롬프트를 엽니다.
 
-1. `kubectl run` 명령을 사용하여 Kubernetes 클러스터에서 컨테이너를 실행합니다. Kubernetes의 앱에 대한 서비스 이름 및 전체 이미지 이름을 지정합니다. 예: 
+1. `kubectl run` 명령을 사용하여 Kubernetes 클러스터에서 컨테이너를 실행합니다. Kubernetes의 앱에 대한 서비스 이름 및 전체 이미지 이름을 지정합니다. 예:
    ```
    kubectl run gs-spring-boot-docker --image=wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest
    ```
@@ -215,7 +215,7 @@ ms.locfileid: "59745161"
 
    * `--image` 매개 변수는 결합된 로그인 서버 및 이미지 이름을 `wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest`로 지정합니다.
 
-1. `kubectl expose` 명령을 사용하여 Kubernetes 클러스터를 외부에 노출합니다. 서비스 이름, 앱에 액세스하는 데 사용되는 공용 TCP 포트 및 앱이 수신 대기하는 내부 대상 포트를 지정합니다. 예: 
+1. `kubectl expose` 명령을 사용하여 Kubernetes 클러스터를 외부에 노출합니다. 서비스 이름, 앱에 액세스하는 데 사용되는 공용 TCP 포트 및 앱이 수신 대기하는 내부 대상 포트를 지정합니다. 예:
    ```
    kubectl expose deployment gs-spring-boot-docker --type=LoadBalancer --port=80 --target-port=8080
    ```
@@ -310,7 +310,7 @@ Spring Boot on Docker 샘플 프로젝트에 대한 자세한 내용은 [Spring 
 
 Kubernetes 명령줄 인터페이스를 사용하는 방법에 대한 자세한 내용은 <https://kubernetes.io/docs/user-guide/kubectl/>의 **kubectl** 사용자 가이드에서 사용할 수 있습니다.
 
-Kubernetes 웹 사이트에는 개인 레지스트리에서 이미지를 사용하는 방법을 설명하는 일부 문서가 포함되어 있습니다.
+Kubernetes 웹 사이트에는 프라이빗 레지스트리에서 이미지를 사용하는 방법을 설명하는 일부 문서가 포함되어 있습니다.
 
 * [Pod에 대한 서비스 계정 구성]
 * [네임스페이스]
