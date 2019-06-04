@@ -13,12 +13,12 @@ ms.devlang: java
 ms.service: sql-database
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 7119283bec250a4ab0854ba2c29b0906624448e9
-ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
+ms.openlocfilehash: 02b6eff059c8b7dff1c7473d0460ca44e76f6f2e
+ms.sourcegitcommit: 04cff6e3c6d3a9c15f7d88d5d3c238f0bdc787fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53992336"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64673962"
 ---
 # <a name="how-to-use-spring-data-jpa-with-azure-sql-database"></a>Azure SQL Database에서 Spring Data JPA를 사용하는 방법
 
@@ -36,7 +36,7 @@ ms.locfileid: "53992336"
 * [Curl](https://curl.haxx.se/) 또는 기능을 테스트하는 유사한 HTTP 유틸리티.
 * [Git](https://git-scm.com/downloads) 클라이언트
 
-## <a name="create-an-azure-sql-satabase"></a>Azure SQL Database 만들기
+## <a name="create-an-azure-sql-database"></a>Azure SQL Database 만들기
 
 ### <a name="create-a-sql-database-server-using-the-azure-portal"></a>Azure Portal을 사용하여 SQL 데이터베이스 서버 만들기
 
@@ -184,11 +184,11 @@ Spring과 Azure에 대한 자세한 사항은 Azure의 Spring 설명서 센터�
 
 ### <a name="additional-resources"></a>추가 리소스
 
-Java와 함께 Azure를 사용하는 방법에 관한 자세한 정보는 [Java 개발자용 Azure]와 [Azure DevOps 및 Java 사용하기]를 참조하세요.
+Java와 함께 Azure를 사용하는 방법에 관한 자세한 정보는 [Java 개발자를 위한 Azure]와 [Azure DevOps 및 Java 사용하기]를 참조하세요.
 
 <!-- URL List -->
 
-[Java 개발자용 Azure]: /java/azure/
+[Java 개발자를 위한 Azure]: /java/azure/
 [체험판 Azure 계정]: https://azure.microsoft.com/pricing/free-trial/
 [Azure DevOps 및 Java 사용하기]: /azure/devops/
 [MSDN 구독자 혜택]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
