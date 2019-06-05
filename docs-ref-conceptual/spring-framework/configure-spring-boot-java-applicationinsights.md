@@ -23,7 +23,7 @@ ms.locfileid: "54237294"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-application-insights"></a>Application Insights를 사용하도록 Spring Boot Initializer 앱 구성
 
-이 문서에서는 **[Spring Initializr]** 를 사용하여 Spring Boot 애플리케이션을 만드는 과정을 보여줍니다. 이는 클라우드에서 Java 애플리케이션의 종단 간 모니터링을 위해 Azure Application Insights Spring Boot Starter를 사용합니다.
+이 문서에서는 **[Spring Initializr]** 를 사용하여 Spring Boot 애플리케이션을 만드는 과정을 보여줍니다. 이는 클라우드에서 Java 애플리케이션의 엔드투엔드 모니터링을 위해 Azure Application Insights Spring Boot Starter를 사용합니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
