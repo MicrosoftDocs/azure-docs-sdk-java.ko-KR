@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 0f3df5c8cf3c83c1ce9a4ca32c753b5fc39ab1df
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 86cef07873ae7a2ba75aab1044fe4d241cd5b13e
+ms.sourcegitcommit: 394521c47ac9895d00d9f97535cc9d1e27d08fe9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892884"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270877"
 ---
 # <a name="installing-the-azure-toolkit-for-intellij"></a>IntelliJ용 Azure 도구 키트 설치
 
@@ -34,7 +34,30 @@ Azure Toolkit for IntelliJ는 IntelliJ IDEA 개발 환경을 사용하여 클라
 
 IntelliJ용 Azure 도구 키트를 설치하는 두 가지 방법이 있는데, 하나는 **설정** 대화 상자를 사용하는 것이고 다른 하나는 시작 화면의 **구성** 메뉴를 사용하는 것입니다. 두 설치 방법 모두 다음 단계에서 소개합니다.
 
-[!INCLUDE [azure-toolkit-for-IntelliJ-prerequisites](../includes/azure-toolkit-for-intellij-prerequisites.md)]
+## <a name="prerequisites"></a>필수 조건
+
+Azure Toolkit for IntelliJ에는 다음 소프트웨어 구성 요소가 필요합니다.
+
+* JDK(Java Development Kit) 8 이상 설치, 예: [OpenJDK](https://openjdk.java.net/) 또는 [Oracle JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* [IntelliJ IDEA](https://www.jetbrains.com/idea/download/) Ultimate Edition 또는 Community Edition 설치
+
+> [!NOTE]
+> 
+> JetBrains 플러그인 리포지토리에 있는 [IntelliJ용 Azure Toolkit](https://plugins.jetbrains.com/plugin/8053) 페이지는 툴킷과 호환되는 빌드를 나열합니다.
+> 
+
+<!--
+> [!IMPORTANT]
+> 
+> If you are using the Azure Toolkit for IntelliJ on Windows, the toolkit requires installing the Azure SDK 2.9.6 or later in order to use the Azure emulator. You have two options for installing the Azure SDK:
+> 
+> * You can download and install the Azure SDK by using the [Web Platform Installer (WebPI)](http://go.microsoft.com/fwlink/?LinkID=252838).
+> * If you do not have the Azure SDK installed when you create your first Azure deployment project, you will be prompted to automatically download install the requisite version of the Azure SDK.
+> 
+> Note that the Azure SDK is only required on Windows.
+> 
+-->
+
 
 ## <a name="to-install-the-azure-toolkit-for-intellij-from-the-settings-dialog-box"></a>설정 대화 상자에서 IntelliJ용 Azure 도구 키트를 설치하려면
 

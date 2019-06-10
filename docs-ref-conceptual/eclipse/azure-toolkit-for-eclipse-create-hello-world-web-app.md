@@ -1,7 +1,8 @@
 ---
-title: Eclipse를 사용하여 Azure용 Hello World 웹앱 만들기
+title: Eclipse를 사용하여 Azure App Service용 Hello World 웹앱 만들기
 description: 이 자습서에서는Eclipse용 Azure 도구 키트를 사용하여 Azure용 Hello World 웹앱을 만드는 방법을 보여 줍니다.
 services: app-service
+keywords: Java, Eclipse, 웹앱, Azure App Service, Hello World, 빠른 시작
 documentationcenter: java
 author: selvasingh
 manager: routlaw
@@ -14,36 +15,54 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: c98f966eb17e3fbde877451c8f8fefb21e6bf686
-ms.sourcegitcommit: dca98b953fa3149fb2e6aa49e27e843b6df0c6c2
+ms.openlocfilehash: 7e88298afaf0b4601d85d6063b7096c79e677421
+ms.sourcegitcommit: 733115fe0a7b5109b511b4a32490f8264cf91217
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57786892"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65625828"
 ---
-# <a name="create-a-hello-world-web-app-for-azure-using-eclipse"></a>Eclipse를 사용하여 Azure용 Hello World 웹앱 만들기
+# <a name="create-a-hello-world-web-app-for-azure-app-service-using-eclipse"></a>Eclipse를 사용하여 Azure App Service용 Hello World 웹앱 만들기
 
-이 자습서에서는 [Eclipse용 Azure 도구 키트 설치]를 사용하여 기본 Hello World 애플리케이션을 만들고 Azure에 웹앱으로 배포하는 방법을 보여 줍니다.
+오픈 소스형 [Azure Toolkit for Eclipse](https://marketplace.eclipse.org/content/azure-toolkit-eclipse) 플러그인을 사용하여 몇 분 만에 기본 Hello World 애플리케이션을 만들고 Azure App Service에 웹앱으로 배포할 수 있습니다.
 
 > [!NOTE]
 >
-> [IntelliJ용 Azure 도구 키트]를 사용하는 이 문서의 버전에 대한 내용은 [IntelliJ를 사용하여 Azure용 Hello World 웹앱 만들기][intellij-hello-world]를 참조하세요.
+> IntelliJ IDEA 사용을 선호하는 경우 [유사한 IntelliJ 자습서][intellij-hello-world]를 참조하세요.
+>
+>[!INCLUDE [quickstarts-free-trial-note](../includes/quickstarts-free-trial-note.md)]
+>
+> 이 자습서를 완료한 후 반드시 리소스를 정리해야 합니다. 이 경우 이 가이드 실행은 체험 계정 할당량을 초과하지 않습니다.
 >
 
-> [!IMPORTANT]
-> 
-> Eclipse용 Azure 도구 키트는 2017년 8월에 다른 워크플로로 업데이트되었습니다. 이 문서에서는 Eclipse용 Azure 도구 키트 버전 3.0.7 이상을 사용하여 Hello World 웹앱을 만드는 방법을 설명합니다. 도구 키트 버전 3.0.6 이하를 사용하는 경우 [레거시 도구 키트를 사용하여 Eclipse에서 Azure용 Hello World 웹앱 만들기][Legacy Version]의 단계를 수행해야 합니다.
-> 
+[!INCLUDE [azure-toolkit-for-intellij-basic-prerequisites](../includes/azure-toolkit-for-eclipse-basic-prerequisites.md)]
 
-이 자습서를 완료한 경우 웹 브라우저에서 애플리케이션을 보면 다음 그림과 같이 표시됩니다.
+## <a name="installation-and-sign-in"></a>설치 및 로그인
 
-![Hello World 앱의 미리 보기][browse-web-app]
+1. 다음 단추를 실행 중인 Eclipse 작업 영역으로 끌어와서 Azure Toolkit for Eclipse 플러그인([다른 설치 옵션](azure-toolkit-for-eclipse-installation.md))을 설치합니다.
 
-[!INCLUDE [azure-toolkit-for-eclipse-prerequisites](../includes/azure-toolkit-for-eclipse-prerequisites.md)]
+    [![실행 중인 Eclipse* 작업 영역으로 끌어옵니다. *Eclipse Marketplace 클라이언트가 필요합니다.](https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png)](http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1919278 "실행 중인 Eclipse* 작업 영역으로 끌어옵니다. *Eclipse Marketplace 클라이언트가 필요합니다.")
 
-## <a name="create-a-new-web-app-project"></a>새 웹앱 프로젝트 만들기
+1. Azure 계정에 로그인하려면 **도구**, **Azure**, **로그인**을 차례로 클릭합니다.
+   ![Azure 로그인을 위한 Eclipse 메뉴][I01]
 
-1. Eclipse를 시작하고, [Eclipse용 Azure 도구 키트에 대한 Azure 로그인 지침][eclipse-sign-in-instructions] 문서의 지침을 사용하여 Azure 계정에 로그인합니다.
+1. **Azure 로그인** 창에서 **디바이스 로그인**을 선택하고 **로그인**([다른 로그인 옵션](azure-toolkit-for-eclipse-sign-in-instructions.md))을 클릭합니다.
+
+   ![디바이스 로그인을 선택한 Azure 로그인 창][I02]
+
+1. **Azure 디바이스 로그인** 대화 상자에서 **복사 및 열기**를 클릭합니다.
+
+   ![Azure 로그인 대화 상자 창][I03]
+
+1. 브라우저에서, 마지막 단계에서 **복사 및 열기**를 클릭할 때 복사한 디바이스 코드를 붙여넣은 후 **다음**을 클릭합니다.
+
+   ![디바이스 로그인 브라우저][I04]
+
+1. 끝으로 **구독 선택** 대화 상자에서 사용하려는 구독을 선택한 다음, **확인**을 클릭합니다.
+
+   ![구독 선택 대화 상자][I05]
+
+## <a name="creating-web-app-project"></a>웹앱 프로젝트 만들기
 
 1. **파일**, **새로 만들기**, **동적 웹 프로젝트**를 차례로 클릭합니다. (**File**, **New**를 차례로 클릭한 후 **Dynamic Web Project**가 사용 가능한 프로젝트로 표시되지 않는 경우 **File**, **New**, **Project...** 를 차례로 클릭한 후 **Web**을 확장하고 **Dynamic Web Project**를 클릭한 후 **Next**를 클릭합니다.)
 
@@ -75,7 +94,7 @@ ms.locfileid: "57786892"
 
 8. index.jsp를 저장합니다.
 
-## <a name="deploy-your-web-app-to-azure"></a>Azure에 웹앱 배포
+## <a name="deploying-web-app-to-azure"></a>Azure에 웹앱 배포
 
 1. Eclipse의 Project Explorer 보기 내에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **Azure**, **Azure Web App으로 게시**를 차례로 선택합니다.
    
@@ -109,7 +128,11 @@ ms.locfileid: "57786892"
 
    ![웹앱 찾아보기][browse-web-app]
 
-1. Azure에 웹앱을 게시한 후에는 마우스 오른쪽 단추로 앱을 클릭하고 상황에 맞는 메뉴에서 옵션 중 하나를 선택하여 앱을 관리할 수 있습니다. 예를 들어 웹앱을 **시작**, **중지** 또는 **삭제**할 수 있습니다.
+[!INCLUDE [azure-toolkit-for-eclipse-show-azure-explorer](../includes/azure-toolkit-for-eclipse-show-azure-explorer.md)]
+
+## <a name="cleaning-up-resources"></a>리소스 정리
+
+1. Azure에 웹앱을 게시한 후에는 Azure Explorer에서 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 옵션 중 하나를 선택하여 웹앱을 관리할 수 있습니다. 예를 들어 여기서 웹앱을 **삭제**하여 이 자습서의 리소스를 정리할 수 있습니다.
 
    ![앱 서비스 관리][manage-app-service]
 
@@ -121,8 +144,8 @@ Azure Web Apps 만들기에 대한 자세한 내용은 [Web Apps 개요]를 참�
 
 <!-- URL List -->
 
-[Eclipse용 Azure 도구 키트 설치]: azure-toolkit-for-eclipse.md
-[IntelliJ용 Azure 도구 키트]: ../intellij/azure-toolkit-for-intellij.md
+[Azure Toolkit for Eclipse]: azure-toolkit-for-eclipse.md
+[Azure Toolkit for IntelliJ]: ../intellij/azure-toolkit-for-intellij.md
 [intellij-hello-world]: ../intellij/azure-toolkit-for-intellij-create-hello-world-web-app.md
 [Web Apps 개요]: /azure/app-service/app-service-web-overview
 [Apache Tomcat]: http://tomcat.apache.org/
@@ -130,6 +153,11 @@ Azure Web Apps 만들기에 대한 자세한 내용은 [Web Apps 개요]를 참�
 [Legacy Version]: azure-toolkit-for-eclipse-create-hello-world-web-app-legacy-version.md
 
 <!-- IMG List -->
+[I01]: media/azure-toolkit-for-eclipse-sign-in-instructions/I01.png
+[I02]: media/azure-toolkit-for-eclipse-sign-in-instructions/I02.png
+[I03]: media/azure-toolkit-for-eclipse-sign-in-instructions/I03.png
+[I04]: media/azure-toolkit-for-eclipse-sign-in-instructions/I04.png
+[I05]: media/azure-toolkit-for-eclipse-sign-in-instructions/I05.png
 
 [browse-web-app]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/browse-web-app.png
 [file-new-dynamic-web-project]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/file-new-dynamic-web-project.png

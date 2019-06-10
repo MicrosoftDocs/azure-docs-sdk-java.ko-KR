@@ -12,12 +12,12 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
-ms.openlocfilehash: fdf0334a8796d636a1968943cc34d7ae98d6361c
-ms.sourcegitcommit: c2019ba6da6c7c28b17b5a85f89e49bb5e570ba4
+ms.openlocfilehash: 22389ce7346a1d97c072dcc82162c9286f21f178
+ms.sourcegitcommit: 04d0d92c46399976b58a9dfa107ba644378bf171
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44040261"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65986195"
 ---
 # <a name="get-started-with-cloud-development-using-java-on-azure"></a>Azure 에서 Java를 이용하여 클라우드 개발 시작
 
@@ -147,23 +147,23 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp  \
 
 ### <a name="install-the-azure-toolkit-for-intellij"></a>IntelliJ용 Azure 도구 키트 설치
 
-[Azure 도구 키트](intellij/azure-toolkit-for-intellij-installation.md)는 웹앱이나 API를 프로그래밍 방식으로 설치하지만 현재 다른 개발 유형에는 사용하고 있지 않은 경우에 필요합니다. 다음은 설치 프로세스에 대한 요약입니다. 자세한 절차는 [IntelliJ용 Azure 도구 키트 설치](intellij/azure-toolkit-for-intellij-installation.md)를 참조하세요.
+[Azure 도구 키트](intellij/azure-toolkit-for-intellij-installation.md)는 웹앱이나 API를 프로그래밍 방식으로 설치하지만 현재 다른 개발 유형에는 사용하고 있지 않은 경우에 필요합니다. 다음은 설치 프로세스에 대한 요약입니다. 빠른 시작을 원하는 경우 [Azure Toolkit for IntelliJ 빠른 시작](intellij/azure-toolkit-for-intellij-create-hello-world-web-app.md)을 방문하세요.
 
-**파일** 메뉴를 선택한 다음 **설정...** 을 선택합니다. 
+- **파일** 메뉴를 선택한 다음 **설정...** 을 선택합니다. 
 
-**저장소 찾아보기...** 를 선택하고 “Azure”를 검색한 다음 **Intellij용 Azure 도구 키트**를 설치합니다.
+- **저장소 찾아보기...** 를 선택하고 “Azure”를 검색한 다음 **Intellij용 Azure 도구 키트**를 설치합니다.
 
-Intellij를 다시 시작합니다.
+- Intellij를 다시 시작합니다.
 
 ### <a name="install-the-azure-toolkit-for-eclipse"></a>Eclipse용 Azure 도구 키트 설치
 
-[Azure 도구 키트](eclipse/azure-toolkit-for-eclipse.md)는 웹앱이나 API를 프로그래밍 방식으로 설치하지만 현재 다른 개발 유형에는 사용하고 있지 않은 경우에 필요합니다. 다음은 설치 프로세스에 대한 요약입니다. 자세한 절차는 [Eclipse용 Azure 도구 키트 설치](eclipse/azure-toolkit-for-eclipse.md)를 참조하세요.
+[Azure 도구 키트](eclipse/azure-toolkit-for-eclipse.md)는 웹앱이나 API를 프로그래밍 방식으로 설치하지만 현재 다른 개발 유형에는 사용하고 있지 않은 경우에 필요합니다. 다음은 설치 프로세스에 대한 요약입니다. 빠른 시작을 원하는 경우 [Azure Toolkit for Eclipse 빠른 시작](eclipse/azure-toolkit-for-eclipse-create-hello-world-web-app.md)을 방문하세요.
 
-**도움말** 메뉴를 선택하고 **새 소프트웨어 설치**를 선택합니다.
+- **도움말** 메뉴를 선택하고 **새 소프트웨어 설치**를 선택합니다.
 
-**작업:** 필드에 `http://dl.microsoft.com/eclipse`를 입력하고 Enter를 누릅니다.
+- **작업:** 필드에 `http://dl.microsoft.com/eclipse`를 입력하고 Enter를 누릅니다.
 
-그런 다음 **Java용 Azure 도구 키트** 옆의 확인란을 선택하고 **필요한 소프트웨어를 설치하는 동안 모든 업데이트 사이트 문의** 확인란의 선택을 취소합니다. 이제 다음을 선택합니다.
+- 그런 다음 **Java용 Azure 도구 키트** 옆의 확인란을 선택하고 **필요한 소프트웨어를 설치하는 동안 모든 업데이트 사이트 문의** 확인란의 선택을 취소합니다. 이제 다음을 선택합니다.
 
 ## <a name="create-a-linux-virtual-machine"></a>Linux 가상 머신 만들기
 

@@ -1,19 +1,19 @@
 - name: Eclipse용 Azure 도구 키트
   href: azure-toolkit-for-eclipse.md
   items:
-    - name: 설치
-      href: azure-toolkit-for-eclipse-installation.md
     - name: 시작
       href: azure-toolkit-for-eclipse-create-hello-world-web-app.md
     - name: 자습서
       items:
         - name: Azure VM에 컨테이너 배포
           href: azure-toolkit-for-eclipse-publish-as-docker-container.md
-        - name: Azure App Service에 웹앱 배포
+        - name: Spring Boot 앱을 Docker 컨테이너로 게시
           href: azure-toolkit-for-eclipse-publish-spring-boot-docker-app.md
     - name: 사용 방법
       items:
-        - name: 인증 설정
+        - name: 도구 키트 설치
+          href: azure-toolkit-for-eclipse-installation.md
+        - name: Azure 계정에 로그인
           href: azure-toolkit-for-eclipse-sign-in-instructions.md
         - name: Azure 리소스 관리
           items:
@@ -25,3 +25,5 @@
               href: azure-toolkit-for-eclipse-managing-redis-caches-using-azure-explorer.md
     - name: 릴리스 정보
       href: 'https://github.com/Microsoft/azure-tools-for-java/releases'
+    - name: Marketplace
+      href: 'https://marketplace.eclipse.org/content/azure-toolkit-eclipse'

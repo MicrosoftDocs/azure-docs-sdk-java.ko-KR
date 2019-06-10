@@ -15,12 +15,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: a9d4bd5a1677078431b5502b276b17cd973cbea0
-ms.sourcegitcommit: a108a82414bd35be896e3c4e7047f5eb7b1518cb
+ms.openlocfilehash: 407b852e24ef88d2fb075bd064f1acf2b107ddc1
+ms.sourcegitcommit: 394521c47ac9895d00d9f97535cc9d1e27d08fe9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58489661"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270859"
 ---
 # <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>Azure App Service for Container에서 Spring Boot 애플리케이션 배포
 
@@ -98,7 +98,7 @@ ms.locfileid: "58489661"
 
 1. [Azure Portal]을 찾아 로그인합니다.
 
-   Azure Portal에서 사용자의 계정에 로그인하면 [Azure Portal을 사용하여 개인 Docker 컨테이너 레지스트리 만들기] 문서의 단계를 수행할 수 있습니다. 편의상 다음 단계에서 다시 설명합니다.
+   Azure Portal에서 사용자의 계정에 로그인하면 [Azure Portal을 사용하여 프라이빗 Docker 컨테이너 레지스트리 만들기] 문서의 단계를 수행할 수 있습니다. 편의상 다음 단계에서 다시 설명합니다.
 
 1. **+ 새로 만들기**의 메뉴 아이콘을 클릭하고 **컨테이너**를 클릭한 다음, **Azure Container Registry**를 클릭합니다.
    
@@ -118,104 +118,86 @@ ms.locfileid: "58489661"
 
 ## <a name="configure-maven-to-use-your-azure-container-registry-access-keys"></a>Azure Container Registry 선택키를 사용하도록 Maven 구성
 
-1. Maven 설치를 위해 구성 디렉터리로 이동한 후 텍스트 편집기를 사용하여 *settings.xml* 파일을 엽니다.
-
-1. 이 자습서의 이전 섹션에서 *settings.xml* 파일의 `<servers>` 컬렉션에 Azure Container Registry 액세스 설정을 추가합니다. 예:
-
-   ```xml
-   <servers>
-      <server>
-         <id>wingtiptoysregistry</id>
-         <username>wingtiptoysregistry</username>
-         <password>AbCdEfGhIjKlMnOpQrStUvWxYz</password>
-      </server>
-   </servers>
-   ```
-
 1. Spring Boot 애플리케이션의 완성된 프로젝트 디렉터리(예: "*C:\SpringBoot\gs-spring-boot-docker\complete*" 또는 " */users/robert/SpringBoot/gs-spring-boot-docker/complete*") 텍스트 편집기를 사용하여 *pom.xml* 파일을 엽니다.
 
-1. *pom.xml* 파일의 `<properties>` 컬렉션을 이 자습서의 이전 섹션에서 사용한 Azure Container Registry의 로그인 서버 값으로 업데이트합니다. 예:
+1. 최신 버전의 [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin) 및 로그인 서버 값을 사용하여 *pom.xml* 파일의 `<properties>` 컬렉션을 업데이트하고 이 자습서의 이전 섹션에서 Azure Container Registry에 대한 설정에 액세스할 수 있습니다. 예:
 
    ```xml
    <properties>
+      <jib-maven-plugin.version>1.2.0</jib-maven-plugin.version>
       <docker.image.prefix>wingtiptoysregistry.azurecr.io</docker.image.prefix>
       <java.version>1.8</java.version>
+      <username>wingtiptoysregistry</username>
+      <password>{put your Azure Container Registry access key here}</password>
    </properties>
    ```
 
-1. *pom.xml* 파일의 `<plugins>` 컬렉션을 업데이트하여 `<plugin>`에 이 자습서의 이전 섹션에서 사용한 Azure Container Registry의 로그인 서버 주소 및 레지스트리 이름이 포함되도록 합니다. 예:
+1. *pom.xml* 파일의 `<plugins>` 컬렉션에 [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin)을 추가하고 `<from>/<image>`에서 기본 이미지 및 최종 이미지 이름 `<to>/<image>`를 지정하고 `<to>/<auth>`의 이전 섹션에서 사용자 이름 및 암호를 지정합니다. 예:
 
    ```xml
    <plugin>
-      <groupId>com.spotify</groupId>
-      <artifactId>docker-maven-plugin</artifactId>
-      <version>0.4.11</version>
-      <configuration>
-         <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-         <dockerDirectory>src/main/docker</dockerDirectory>
-         <resources>
-            <resource>
-               <targetPath>/</targetPath>
-               <directory>${project.build.directory}</directory>
-               <include>${project.build.finalName}.jar</include>
-            </resource>
-         </resources>
-         <serverId>wingtiptoysregistry</serverId>
-         <registryUrl>https://wingtiptoysregistry.azurecr.io</registryUrl>
-      </configuration>
+     <artifactId>jib-maven-plugin</artifactId>
+     <groupId>com.google.cloud.tools</groupId>
+     <version>${jib-maven-plugin.version}</version>
+     <configuration>
+        <from>
+            <image>openjdk:8-jre-alpine</image>
+        </from>
+        <to>
+            <image>${docker.image.prefix}/${project.artifactId}</image>
+            <auth>
+               <username>${username}</username>
+               <password>${password}</password>
+            </auth>
+        </to>
+     </configuration>
    </plugin>
    ```
 
 1. Spring Boot 애플리케이션의 완성된 프로젝트 디렉터리로 이동하고 다음 명령을 실행하여 애플리케이션을 다시 빌드하고 Azure Container Registry에 컨테이너를 푸시합니다.
 
-   ```
-   mvn package docker:build -DpushImage 
+   ```cmd
+   mvn compile jib:build
    ```
 
 > [!NOTE]
 >
-> Azure에 Docker 컨테이너를 푸시할 때 Docker 컨테이너를 성공적으로 만들었더라도 다음 중 하나와 비슷한 오류 메시지가 표시될 수 있습니다.
->
-> * `[ERROR] Failed to execute goal com.spotify:docker-maven-plugin:0.4.11:build (default-cli) on project gs-spring-boot-docker: Exception caught: no basic auth credentials`
->
-> * `[ERROR] Failed to execute goal com.spotify:docker-maven-plugin:0.4.11:build (default-cli) on project gs-spring-boot-docker: Exception caught: Incomplete Docker registry authorization credentials. Please provide all of username, password, and email or none.`
->
-> 이런 경우 Docker 명령줄에서 Azure 계정에 로그인해야 합니다. 예:
->
-> `docker login -u wingtiptoysregistry -p "AbCdEfGhIjKlMnOpQrStUvWxYz" wingtiptoysregistry.azurecr.io`
->
-> 그런 다음, 명령줄에서 컨테이너를 푸시할 수 있습니다. 예:
->
-> `docker push wingtiptoysregistry.azurecr.io/gs-spring-boot-docker`
+> 지브를 사용하여 이미지를 Azure Container Registry에 푸시하는 경우 이미지는 *Dockerfile*을 유지하지 않습니다. 자세한 내용은 [이](https://cloudplatform.googleblog.com/2018/07/introducing-jib-build-java-docker-images-better.html) 문서를 참조하세요.
 >
 
 ## <a name="create-a-web-app-on-linux-on-azure-app-service-using-your-container-image"></a>컨테이너 이미지를 사용하여 Azure App Service에서 Linux에 웹앱 만들기
 
 1. [Azure Portal]을 찾아 로그인합니다.
 
-2. **+ 새로 만들기**의 메뉴 아이콘을 클릭하고 **웹 + 모바일**을 클릭한 다음 **}Web App on Linux**를 클릭합니다.
+2. **+ 리소스 만들기**에 대한 아이콘, **웹**, **Web App for Containers**를 차례로 클릭합니다.
    
    ![Azure Portal에서 새로운 웹앱 만들기][LX01]
 
 3. **Web App on Linux** 페이지가 표시되면 다음 정보를 입력합니다.
 
-   a. **앱 이름**에 고유한 이름을 입력합니다. 예: "*wingtiptoyslinux*."
+   a. **앱 이름**에 고유한 이름을 입력합니다. 예: "*wingtiptoyslinux*"
 
    b. 드롭다운 목록에서 **구독**을 선택합니다.
 
    다. 기존 **리소스 그룹**을 선택하거나 새 리소스 그룹을 만들기 위해 이름을 지정합니다.
 
-   d. **컨테이너 구성**을 클릭하고 다음 정보를 입력합니다.
+   d. **OS**로 *Linux*를 선택합니다.
 
-   * **개인 레지스트리**를 선택합니다.
+   e. **App Service 플랜/위치**를 클릭하고 기존 앱 서비스 플랜을 선택하거나 **새로 만들기**를 클릭하여 새 앱 서비스 플랜을 만듭니다.
 
-   * **이미지 및 옵션 태그**: 이전 컨테이너 이름을 지정합니다. 예: "*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*"
+   f. **컨테이너 구성**을 클릭하고 다음 정보를 입력합니다.
 
-   * **서버 URL**: 이전 레지스트리 URL을 지정합니다. 예: " *<https://wingtiptoysregistry.azurecr.io>* "
+   * **단일 컨테이너** 및 **Azure Container Registry**를 선택합니다.
 
-   * **로그인 사용자 이름** 및 **암호**: 이전 단계에서 사용한 **액세스 키**로 로그인 자격 증명을 지정합니다.
+   * **레지스트리**: 이전에 만든 컨테이너 이름을 선택합니다. 예: "*wingtiptoysregistry*"
+
+   * **이미지**: 이미지 이름을 선택합니다. 예: "*gs-spring-boot-docker*"
    
-   e. 위의 정보를 모두 입력하면 **확인**을 클릭합니다.
+   * **태그**: 이미지에 대한 태그를 선택합니다. 예: "*latest*"
+   
+   * **시작 파일**: 이미지에 시작 명령이 이미 있으므로 공백으로 유지합니다.
+   
+   e. 위의 정보를 모두 입력한 후 **적용**을 클릭합니다.
 
    ![웹앱 설정 구성][LX02]
 
@@ -227,13 +209,11 @@ ms.locfileid: "58489661"
 >
 > 1. [Azure Portal]을 찾아 로그인합니다.
 > 
-> 2. **App Services** 아이콘을 클릭합니다. (아래 이미지에서 항목 #1 참조)
+> 2. **App Services**에 대한 아이콘을 클릭하고 목록에서 웹앱을 선택합니다.
 >
-> 3. 목록에서 웹앱을 선택합니다. (아래 이미지에서 항목 #2)
+> 4. **구성**을 클릭합니다. (아래 이미지에서 항목 #1)
 >
-> 4. **애플리케이션 설정**을 클릭합니다. (아래 이미지에서 항목 #3)
->
-> 5. **앱 설정** 섹션에서 **PORT**라는 새 환경 변수를 추가하고 값에 사용자 지정 포트 번호를 입력합니다. (아래 이미지에서 항목 #4)
+> 5. **애플리케이션 설정** 섹션에서 **PORT**라는 새 설정을 추가하고 값에 대한 사용자 지정 포트 번호를 입력합니다. (아래 이미지에서 항목 #2, #3, #4)
 >
 > 6. **저장**을 클릭합니다. (아래 이미지에서 항목 #5)
 >
@@ -291,7 +271,7 @@ Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대�
 [Azure Container Service (AKS)]: https://azure.microsoft.com/services/container-service/
 [Java 개발자를 위한 Azure]: /java/azure/
 [Azure Portal]: https://portal.azure.com/
-[Azure Portal을 사용하여 개인 Docker 컨테이너 레지스트리 만들기]: /azure/container-registry/container-registry-get-started-portal
+[Azure Portal을 사용하여 프라이빗 Docker 컨테이너 레지스트리 만들기]: /azure/container-registry/container-registry-get-started-portal
 [Azure Web App on Linux에 대한 사용자 지정 Docker 이미지 사용]: /azure/app-service-web/app-service-linux-using-custom-docker-image
 [Docker]: https://www.docker.com/
 [체험판 Azure 계정]: https://azure.microsoft.com/pricing/free-trial/

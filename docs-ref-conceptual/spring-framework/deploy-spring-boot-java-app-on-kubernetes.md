@@ -15,12 +15,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.custom: mvc
-ms.openlocfilehash: 42bb030a916cc5aaf1e20242518a0a400b8baa88
-ms.sourcegitcommit: f33befab25a66a252b4c91c7aeb1b77cb32821bb
+ms.openlocfilehash: 9ab781d27e8968ab867efc65f3ac422ac6253a6a
+ms.sourcegitcommit: 394521c47ac9895d00d9f97535cc9d1e27d08fe9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59745161"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270854"
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Azure Kubernetes Service의 Kubernetes 클러스터에 Spring Boot 애플리케이션 배포
 
@@ -123,7 +123,7 @@ ms.locfileid: "59745161"
    ```xml
    <properties>
       <docker.image.prefix>wingtiptoysregistry.azurecr.io</docker.image.prefix>
-      <jib-maven-plugin.version>1.0.2</jib-maven-plugin.version>
+      <jib-maven-plugin.version>1.2.0</jib-maven-plugin.version>
       <java.version>1.8</java.version>
    </properties>
    ```
@@ -136,10 +136,10 @@ ms.locfileid: "59745161"
      <groupId>com.google.cloud.tools</groupId>
      <version>${jib-maven-plugin.version}</version>
      <configuration>
-        <from>              
+        <from>
             <image>openjdk:8-jre-alpine</image>
         </from>
-        <to>                
+        <to>
             <image>${docker.image.prefix}/${project.artifactId}</image>
         </to>
      </configuration>
@@ -148,9 +148,14 @@ ms.locfileid: "59745161"
 
 1. Spring Boot 애플리케이션에 대한 완성된 프로젝트 디렉터리로 이동하고, 다음 명령을 실행하여 이미지를 빌드하고 레지스트리로 푸시합니다.
 
-   ```
+   ```cmd
    mvn compile jib:build
    ```
+
+> [!NOTE]
+>
+> Azure Cli 및 Azure Container Registry의 보안 문제 때문에 `az acr login`에 의해 만들어진 자격 증명은 *401 권한이 없음* 오류가 발생하면 1시간 동안 유효하며 `az acr login -n <your registry name>` 명령을 다시 실행하여 다시 인증할 수 있습니다.
+>
 
 ## <a name="create-a-kubernetes-cluster-on-aks-using-the-azure-cli"></a>Azure CLI를 사용하여 AKS에서 Kubernetes 클러스터 만들기
 
@@ -314,7 +319,7 @@ Kubernetes 웹 사이트에는 프라이빗 레지스트리에서 이미지를 �
 
 * [Pod에 대한 서비스 계정 구성]
 * [네임스페이스]
-* [개인 레지스트리에서 이미지 끌어오기]
+* [프라이빗 레지스트리에서 이미지 끌어오기]
 
 Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대한 추가 예제를 보려면 [Azure Web App on Linux에 대한 사용자 지정 Docker 이미지 사용]을 참조하세요.
 
@@ -341,7 +346,7 @@ Azure Dev Spaces가 있는 AKS(Azure Kubernetes Service)에서 직접 컨테이�
 [Spring Framework]: https://spring.io/
 [Pod에 대한 서비스 계정 구성]: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
 [네임스페이스]: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
-[개인 레지스트리에서 이미지 끌어오기]: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
+[프라이빗 레지스트리에서 이미지 끌어오기]: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
 
 [Java Development Kit (JDK)]: https://aka.ms/azure-jdks
 <!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
