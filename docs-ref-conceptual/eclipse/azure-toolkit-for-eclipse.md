@@ -14,73 +14,52 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 88d92cfd82244d5df2ad34304155d41c5aab0ee9
-ms.sourcegitcommit: 8e530a2ce58ea0e2bf5c136e427a9be863231a1b
+ms.openlocfilehash: 5bec0af1a17b87d24f29bc856691870d4d697888
+ms.sourcegitcommit: 733115fe0a7b5109b511b4a32490f8264cf91217
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53638962"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65625761"
 ---
-# <a name="azure-toolkit-for-eclipse"></a><span data-ttu-id="1b88c-103">Eclipse용 Azure 도구 키트</span><span class="sxs-lookup"><span data-stu-id="1b88c-103">Azure Toolkit for Eclipse</span></span>
+# <a name="azure-toolkit-for-eclipse"></a><span data-ttu-id="97956-103">Eclipse용 Azure 도구 키트</span><span class="sxs-lookup"><span data-stu-id="97956-103">Azure Toolkit for Eclipse</span></span>
 
-<span data-ttu-id="1b88c-104">Azure Toolkit for Eclipse는 Eclipse IDE(통합 개발 환경) 내부에서 클라우드 애플리케이션을 쉽게 작성, 개발, 테스트 및 Azure에 배포할 수 있는 템플릿과 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="1b88c-104">The Azure Toolkit for Eclipse provides templates and functionality that you can use to easily create, develop, test, and deploy cloud applications to Azure from inside the Eclipse integrated development environment (IDE).</span></span>
-
-> [!NOTE]
-> 
-> <span data-ttu-id="1b88c-105">IntelliJ IDE용 Azure 도구 키트도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1b88c-105">There is also an Azure Toolkit for the IntelliJ IDE.</span></span> <span data-ttu-id="1b88c-106">자세한 내용은 [IntelliJ용 Azure 도구 키트](../intellij/azure-toolkit-for-intellij.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1b88c-106">For more information, see [Azure Toolkit for IntelliJ](../intellij/azure-toolkit-for-intellij.md).</span></span>
-> 
-
-## <a name="get-started-with-the-azure-toolkit-for-eclipse"></a><span data-ttu-id="1b88c-107">Eclipse용 Azure 도구 키트 시작</span><span class="sxs-lookup"><span data-stu-id="1b88c-107">Get started with the Azure Toolkit for Eclipse</span></span>
-<span data-ttu-id="1b88c-108">다음은 Eclipse용 Azure 도구 키트 사용을 시작할 때 유용한 문서입니다.</span><span class="sxs-lookup"><span data-stu-id="1b88c-108">The following articles will help you start using the Azure Toolkit for Eclipse:</span></span>
-
-* [<span data-ttu-id="1b88c-109">Eclipse용 Azure 도구 키트 설치</span><span class="sxs-lookup"><span data-stu-id="1b88c-109">Installing the Azure Toolkit for Eclipse</span></span>](azure-toolkit-for-eclipse-installation.md)
-
-* [<span data-ttu-id="1b88c-110">Eclipse용 Azure 도구 키트에 대한 로그인 지침</span><span class="sxs-lookup"><span data-stu-id="1b88c-110">Sign-in instructions for the Azure Toolkit for Eclipse</span></span>](azure-toolkit-for-eclipse-sign-in-instructions.md)
-
-* [<span data-ttu-id="1b88c-111">Eclipse에서 Azure용 Hello World 웹앱 만들기</span><span class="sxs-lookup"><span data-stu-id="1b88c-111">Create a Hello World web app for Azure in Eclipse</span></span>](azure-toolkit-for-eclipse-create-hello-world-web-app.md)
-
-## <a name="use-the-azure-toolkit-for-eclipse-with-your-java-projects"></a><span data-ttu-id="1b88c-112">Java 프로젝트와 함께 Eclipse 용 Azure 도구 키트 사용</span><span class="sxs-lookup"><span data-stu-id="1b88c-112">Use the Azure Toolkit for Eclipse with your Java Projects</span></span>
-<span data-ttu-id="1b88c-113">다음 문서는 Eclipse용 Azure 도구 키트를 사용하여 Java 프로젝트에 Azure 기능을 추가하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="1b88c-113">The following articles demonstrate using the Azure Toolkit for Eclipse to add Azure functionality to your Java projects:</span></span>
-
-* [<span data-ttu-id="1b88c-114">Eclipse용 Azure 도구 키트를 사용하여 Spring Boot 앱을 Docker 컨테이너로 게시</span><span class="sxs-lookup"><span data-stu-id="1b88c-114">Publish a Spring Boot app as a Docker container by using the Azure Toolkit for Eclipse</span></span>](azure-toolkit-for-eclipse-publish-spring-boot-docker-app.md)
-
-* [<span data-ttu-id="1b88c-115">Eclipse용 Azure 도구 키트를 사용하여 웹앱을 Docker 컨테이너로 게시</span><span class="sxs-lookup"><span data-stu-id="1b88c-115">Publish a web app as a Docker container by using the Azure Toolkit for Eclipse</span></span>](azure-toolkit-for-eclipse-publish-as-docker-container.md)
-
-* [<span data-ttu-id="1b88c-116">Eclipse용 HDInsight 도구 플러그 인을 사용하여 HDInsight Spark Linux 클러스터용 Spark 애플리케이션 만들기</span><span class="sxs-lookup"><span data-stu-id="1b88c-116">Use HDInsight Tools Plugin for Eclipse to create Spark applications for an HDInsight Spark Linux cluster</span></span>](/azure/hdinsight/hdinsight-apache-spark-eclipse-tool-plugin)
-
-* [<span data-ttu-id="1b88c-117">Eclipse에서 Java용 Azure 라이브러리 패키지의 Javadoc 콘텐츠 표시</span><span class="sxs-lookup"><span data-stu-id="1b88c-117">Displaying Javadoc content in Eclipse for the Package for Azure Libraries for Java</span></span>](azure-toolkit-for-eclipse-displaying-javadoc-content-for-azure-libraries.md)
-
-## <a name="manage-azure-resources-using-the-azure-toolkit-for-eclipse"></a><span data-ttu-id="1b88c-118">Eclipse용 Azure 도구 키트를 사용하여 Azure 리소스 관리</span><span class="sxs-lookup"><span data-stu-id="1b88c-118">Manage Azure resources using the Azure Toolkit for Eclipse</span></span>
-<span data-ttu-id="1b88c-119">다음 문서는 Eclipse용 Azure 도구 키트를 사용하여 Azure 리소스를 관리하는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="1b88c-119">The following articles demonstrate using the Azure Toolkit for Eclipse to manage your Azure resources:</span></span>
-
-* [<span data-ttu-id="1b88c-120">Eclipse용 Azure 탐색기를 사용하여 Redis Cache 관리</span><span class="sxs-lookup"><span data-stu-id="1b88c-120">Manage redis caches by using the Azure Explorer for Eclipse</span></span>](azure-toolkit-for-eclipse-managing-redis-caches-using-azure-explorer.md)
-
-* [<span data-ttu-id="1b88c-121">Eclipse용 Azure Explorer를 사용하여 저장소 계정 관리</span><span class="sxs-lookup"><span data-stu-id="1b88c-121">Manage storage accounts by using the Azure Explorer for Eclipse</span></span>](azure-toolkit-for-eclipse-managing-storage-accounts-using-azure-explorer.md)
-
-* [<span data-ttu-id="1b88c-122">Eclipse용 Azure Explorer를 사용하여 가상 머신 관리</span><span class="sxs-lookup"><span data-stu-id="1b88c-122">Manage virtual machines by using the Azure Explorer for Eclipse</span></span>](azure-toolkit-for-eclipse-managing-virtual-machines-using-azure-explorer.md)
-
-## <a name="next-steps"></a><span data-ttu-id="1b88c-123">다음 단계</span><span class="sxs-lookup"><span data-stu-id="1b88c-123">Next steps</span></span>
-
-<span data-ttu-id="1b88c-124">Eclipse용 Azure 도구 키트에 대한 자세한 내용은 다음 페이지를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1b88c-124">For more information about the Azure Toolkit for Eclipse, see the following pages:</span></span>
-
-* [<span data-ttu-id="1b88c-125">Azure 도구 키트 릴리스 정보</span><span class="sxs-lookup"><span data-stu-id="1b88c-125">Azure Toolkit Release Notes</span></span>](https://github.com/Microsoft/azure-tools-for-java/releases)
-
-* [<span data-ttu-id="1b88c-126">Eclipse Marketplace의 Eclipse용 Azure 도구 키트</span><span class="sxs-lookup"><span data-stu-id="1b88c-126">Azure Toolkit for Eclipse in the Eclipse Marketplace</span></span>](http://marketplace.eclipse.org/content/azure-toolkit-eclipse)
-
-<span data-ttu-id="1b88c-127">Azure에서 Java를 사용하는 방법에 대한 자세한 내용은 [Java 개발자용 Azure](https://docs.microsoft.com/java/azure/) 및 [Visual Studio Team Services용 Java 도구](/azure/devops/java/)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1b88c-127">For more information about using Java with Azure, see the [Azure for Java Developers](https://docs.microsoft.com/java/azure/) and the [Java Tools for Visual Studio Team Services](/azure/devops/java/).</span></span>
-
-<!-- [!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)] -->
+<span data-ttu-id="97956-104">Azure Toolkit for Eclipse는 Eclipse IDE 내부에서 클라우드 애플리케이션을 쉽게 작성, 개발, 테스트 및 Azure에 배포할 수 있는 템플릿과 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="97956-104">The Azure Toolkit for Eclipse provides templates and functionality that you can use to easily create, develop, test, and deploy cloud applications to Azure from inside the Eclipse IDE.</span></span>
 
 > [!NOTE]
 > 
-> <span data-ttu-id="1b88c-128">Eclipse용 Azure 도구 키트는 [프로젝트 사이트의 MIT 라이선스](https://github.com/microsoft/azure-tools-for-java)에 따라 소스 코드 사용이 허가된 오픈 소스 프로젝트입니다.</span><span class="sxs-lookup"><span data-stu-id="1b88c-128">The Azure Toolkit for Eclipse is an open-source project whose source code is available under the [MIT license from the project's site](https://github.com/microsoft/azure-tools-for-java).</span></span>
+> <span data-ttu-id="97956-105">IntelliJ IDEA용 Azure 도구 키트도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="97956-105">There is also an Azure Toolkit for the IntelliJ IDEA.</span></span> <span data-ttu-id="97956-106">자세한 내용은 [IntelliJ용 Azure 도구 키트](../intellij/azure-toolkit-for-intellij.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="97956-106">For more information, see [Azure Toolkit for IntelliJ](../intellij/azure-toolkit-for-intellij.md).</span></span>
 > 
 
-<!-- URL List -->
+## <a name="get-started-in-10-minutes"></a><span data-ttu-id="97956-107">10분 만에 시작</span><span class="sxs-lookup"><span data-stu-id="97956-107">Get Started in 10 minutes</span></span>
 
-[Azure for Java Developers]: https://docs.microsoft.com/java/azure
+* [<span data-ttu-id="97956-108">Azure App Service용 Hello World 웹앱 만들기</span><span class="sxs-lookup"><span data-stu-id="97956-108">Create a Hello World web app for Azure App Service</span></span>](azure-toolkit-for-eclipse-create-hello-world-web-app.md)
 
-<!-- Temporarily Deprecated URLs -->
+## <a name="step-by-step-tutorials"></a><span data-ttu-id="97956-109">단계별 자습서</span><span class="sxs-lookup"><span data-stu-id="97956-109">Step-by-Step tutorials</span></span>
+
+* [<span data-ttu-id="97956-110">Spring Boot 앱을 Docker 컨테이너로 게시</span><span class="sxs-lookup"><span data-stu-id="97956-110">Publish a Spring Boot app as a Docker container</span></span>](azure-toolkit-for-eclipse-publish-spring-boot-docker-app.md)
+
+* [<span data-ttu-id="97956-111">웹앱을 Docker 컨테이너로 게시</span><span class="sxs-lookup"><span data-stu-id="97956-111">Publish a web app as a Docker container</span></span>](azure-toolkit-for-eclipse-publish-as-docker-container.md)
+
+* [<span data-ttu-id="97956-112">Eclipse용 HDInsight 도구 플러그 인을 사용하여 HDInsight Spark Linux 클러스터용 Spark 애플리케이션 만들기</span><span class="sxs-lookup"><span data-stu-id="97956-112">Use HDInsight Tools Plugin for Eclipse to create Spark applications for an HDInsight Spark Linux cluster</span></span>](/azure/hdinsight/hdinsight-apache-spark-eclipse-tool-plugin)
+
+* [<span data-ttu-id="97956-113">Eclipse에서 Java용 Azure 라이브러리 패키지의 Javadoc 콘텐츠 표시</span><span class="sxs-lookup"><span data-stu-id="97956-113">Displaying Javadoc content in Eclipse for the Package for Azure Libraries for Java</span></span>](azure-toolkit-for-eclipse-displaying-javadoc-content-for-azure-libraries.md)
+
+## <a name="managing-azure-resources"></a><span data-ttu-id="97956-114">Azure 리소스 관리</span><span class="sxs-lookup"><span data-stu-id="97956-114">Managing Azure resources</span></span>
+
+* [<span data-ttu-id="97956-115">Redis 캐시</span><span class="sxs-lookup"><span data-stu-id="97956-115">Redis caches</span></span>](azure-toolkit-for-eclipse-managing-redis-caches-using-azure-explorer.md)
+
+* [<span data-ttu-id="97956-116">Storage 계정</span><span class="sxs-lookup"><span data-stu-id="97956-116">Storage accounts</span></span>](azure-toolkit-for-eclipse-managing-storage-accounts-using-azure-explorer.md)
+
+* [<span data-ttu-id="97956-117">가상 머신</span><span class="sxs-lookup"><span data-stu-id="97956-117">Virtual machines</span></span>](azure-toolkit-for-eclipse-managing-virtual-machines-using-azure-explorer.md)
+
+## <a name="whats-more"></a><span data-ttu-id="97956-118">추가 정보</span><span class="sxs-lookup"><span data-stu-id="97956-118">What's more</span></span>
+
+[!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
+
+> [!NOTE]
+> 
+> <span data-ttu-id="97956-119">Eclipse용 Azure 도구 키트는 [프로젝트 사이트의 MIT 라이선스](https://github.com/microsoft/azure-tools-for-java)에 따라 소스 코드 사용이 허가된 오픈 소스 프로젝트입니다.</span><span class="sxs-lookup"><span data-stu-id="97956-119">The Azure Toolkit for Eclipse is an open-source project whose source code is available under the [MIT license from the project's site](https://github.com/microsoft/azure-tools-for-java).</span></span>
+> 
 
 <!-- [Deploying large deployments](azure-toolkit-for-eclipse-deploying-large-deployments.md) -->
 <!-- [How to Maintain Session Data with Session Affinity]: http://go.microsoft.com/fwlink/?LinkID=699539 -->
