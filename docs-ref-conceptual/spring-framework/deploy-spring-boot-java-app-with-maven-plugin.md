@@ -11,12 +11,12 @@ ms.date: 12/19/2018
 ms.devlang: java
 ms.service: app-service
 ms.topic: article
-ms.openlocfilehash: 5df4ca6ae9f307d937d7dfa0f2c1765f2efde1a1
-ms.sourcegitcommit: 733115fe0a7b5109b511b4a32490f8264cf91217
+ms.openlocfilehash: b133290d1f14429cbf36d6ed5a67d27e1a637593
+ms.sourcegitcommit: 599405a9ce892d75073ef0776befa2fa22407b4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65625698"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67237602"
 ---
 # <a name="deploy-a-spring-boot-jar-file-web-app-to-azure-app-service-on-linux"></a>Linux에 Azure App Service에 Spring Boot JAR 파일 웹앱 배포
 
@@ -100,38 +100,79 @@ Azure CLI를 사용하여 Azure 계정에 로그인합니다.
    <plugin>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-webapp-maven-plugin</artifactId>
-    <version>1.5.4</version>
-    <configuration>
-      <deploymentType>jar</deploymentType>
-
-      <!-- configure app to run on port 80, required by App Service -->
-      <appSettings>
-        <property> 
-          <name>JAVA_OPTS</name> 
-          <value>-Dserver.port=80</value> 
-        </property> 
-      </appSettings>
-
-      <!-- Web App information -->
-      <resourceGroup>${RESOURCEGROUP_NAME}</resourceGroup>
-      <appName>${WEBAPP_NAME}</appName>
-      <region>${REGION}</region>  
-
-      <!-- Java Runtime Stack for Web App on Linux-->
-      <linuxRuntime>jre8</linuxRuntime>
-    </configuration>
+    <version>1.6.0</version>
    </plugin>
    ```
 
-3. 플러그인 구성에서 다음 자리 표시자를 업데이트합니다.
+3. 그런 다음 배포를 구성하고 명령 프롬프트에서 maven 명령 `mvn azure-webapp:config`를 실행하고 **번호**를 사용하여 프롬프트에서 다음 옵션을 선택할 수 있습니다.
+    * **OS**: linux  
+    * **javaVersion**: jre8
+    * **runtimeStack**: jre8
 
-| Placeholder | 설명 |
-| ----------- | ----------- |
-| `RESOURCEGROUP_NAME` | 웹앱을 만들 새 리소스 그룹의 이름입니다. 앱의 모든 리소스를 한 그룹에 배치하여 다 함께 관리할 수 있습니다. 예를 들어 리소스 그룹을 삭제하면 앱과 연결된 모든 리소스가 삭제됩니다. 이 값을 고유한 새 리소스 그룹(예: *TestResources*)으로 업데이트합니다. 이 리소스 그룹 이름을 사용하여 이후 섹션에서 모든 Azure 리소스를 정리합니다. |
-| `WEBAPP_NAME` | 앱 이름은 Azure(WEBAPP_NAME.azurewebsites.net)에 배포할 때 웹앱에 대한 호스트 이름의 일부가 됩니다. 이 값을 Java 앱을 호스팅할 새 Azure 웹앱의 고유 이름(예: *contoso*)으로 업데이트합니다. |
-| `REGION` | 웹앱이 호스팅되는 Azure 지역입니다(예: `westus2`). `az account list-locations` 명령을 사용하여 Cloud Shell 또는 CLI에서 지역 목록을 가져올 수 있습니다. |
+**확인(Y/N)** 프롬프트가 표시되면 **'y'** 키를 누르면 구성이 완료됩니다.
 
-구성 옵션의 전체 목록을 [GitHub의 Maven 플러그 인 참조](https://github.com/Microsoft/azure-maven-plugins/tree/develop/azure-webapp-maven-plugin)에서 찾을 수 있습니다.
+```cmd
+~@Azure:~/gs-spring-boot/complete$ mvn azure-webapp:config
+[INFO] Scanning for projects...
+[INFO]
+[INFO] -----------------< org.springframework:gs-spring-boot >-----------------
+[INFO] Building gs-spring-boot 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- azure-webapp-maven-plugin:1.6.0:config (default-cli) @ gs-spring-boot ---
+[WARNING] The plugin may not work if you change the os of an existing webapp.
+Define value for OS(Default: Linux):
+1. linux [*]
+2. windows
+3. docker
+Enter index to use:
+Define value for javaVersion(Default: jre8):
+1. jre8 [*]
+2. java11
+Enter index to use:
+Define value for runtimeStack(Default: TOMCAT 8.5):
+1. TOMCAT 9.0
+2. jre8
+3. TOMCAT 8.5 [*]
+4. WILDFLY 14
+Enter index to use: 2
+Please confirm webapp properties
+AppName : gs-spring-boot-1559091271202
+ResourceGroup : gs-spring-boot-1559091271202-rg
+Region : westeurope
+PricingTier : Premium_P1V2
+OS : Linux
+RuntimeStack : JAVA 8-jre8
+Deploy to slot : false
+Confirm (Y/N)? : Y
+```
+
+4. `<azure-webapp-maven-plugin>`의 `<configuration>` 섹션에 `<appSettings>` 섹션을 추가하여 *80* 포트에서 수신 대기합니다.
+
+    ```xml
+   <plugin>
+       <groupId>com.microsoft.azure</groupId>
+       <artifactId>azure-webapp-maven-plugin</artifactId>
+       <version>1.6.0</version>
+       <configuration>
+          <schemaVersion>V2</schemaVersion>
+          <resourceGroup>gs-spring-boot-1559091271202-rg</resourceGroup>
+          <appName>gs-spring-boot-1559091271202</appName>
+          <region>westeurope</region>
+          <pricingTier>P1V2</pricingTier>
+
+          <!-- Begin of App Settings  -->
+          <appSettings>
+             <property>
+                   <name>JAVA_OPTS</name>
+                   <value>-Dserver.port=80</value>
+             </property>
+          </appSettings>
+          <!-- End of App Settings  -->
+          ...
+         </configuration>
+   </plugin>
+   ```
 
 ## <a name="deploy-the-app-to-azure"></a>Azure에 앱 배포
 
